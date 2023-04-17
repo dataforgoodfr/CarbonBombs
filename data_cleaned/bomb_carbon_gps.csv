@@ -1,426 +1,426 @@
 Name,Country,Potential emissions (Gt CO2),Fuel,Latitude,Longitude,Partial_match
-Tannezuft Shale,Algeria,2.3478668370693265,Oil&Gas,28.033886,1.659626,True
-Hassi R'Mel (Domestic),Algeria,2.271542343028474,Oil&Gas,32.9276121,3.2712646,True
-Hassi Messaoud,Algeria,1.2159234081532277,Oil&Gas,31.7039214,6.0553895,False
-Vaca Muerta Shale,Argentina,5.1777820012388815,Oil&Gas,-38.416097,-63.61667199999999,True
-Red Hill Coal Project,Australia,4.5644689199999995,Coal,-27.4525313,153.0044563,True
-Goldwyer Shale,Australia,4.468806417198375,Oil&Gas,-32.1825606,115.8492401,True
-Loy Yang Coal Mine,Australia,3.0513671999999996,Coal,-38.250316,146.5769024,True
-Wards Well Coal Mine,Australia,2.6677199999999996,Coal,-26.7,120.2,True
-Alpha North Coal Mine,Australia,2.5428059999999997,Coal,-25.274398,133.775136,True
-Peak Downs Coal Mine,Australia,2.31824868,Coal,-22.2548999,148.1796569,True
-Goonyella-Riverside Coal Mine,Australia,2.18219496,Coal,-25.274398,133.775136,True
-Carmichael Coal Project,Australia,2.1068963999999997,Coal,-25.274398,133.775136,True
-Valeria Coal Mine,Australia,2.03280264,Coal,-25.274398,133.775136,True
-Gorgon LNG T1-T3,Australia,1.9310001753636372,Oil&Gas,-25.274398,133.775136,True
-Wilton and Fairhill Coal Projects,Australia,1.8674039999999998,Coal,-25.274398,133.775136,True
-Byerwen Coal Mine,Australia,1.8407267999999999,Coal,-21.08033,147.927597,True
-Galilee Coal Mine,Australia,1.8162899999999997,Coal,-22.4349671,145.9581354,True
-Hunter Valley North Coal Mine,Australia,1.7340179999999998,Coal,-32.4821351,151.1473757,True
-Hutton Coal Mine,Australia,1.6859990399999998,Coal,-25.274398,133.775136,True
-Olive Downs Coal Mine,Australia,1.37120808,Coal,-25.274398,133.775136,True
-Saraji East Coal Mine,Australia,1.33919544,Coal,-22.4216009,148.2808862,True
-Ensham Coal Mine,Australia,1.3149939599999998,Coal,-23.4687067,148.5006467,True
-Hunter Valley South Coal Mine,Australia,1.1737967999999999,Coal,-32.1932173,151.700565,True
-Yallourn,Australia,1.13003484,Coal,-38.1801052,146.3186974,False
-Mount Pleasant Coal Mine,Australia,1.1202721199999999,Coal,-34.3954026,150.8676626,True
-Velkerri Shale,Australia,1.0580311833284468,Oil&Gas,-25.274398,133.775136,True
-Blackwater Coal Mine,Australia,1.000395,Coal,-23.6868712,148.8003546,True
-ACG (Azeri-Chirag-Guneshli Deep Water),Azerbaijan,1.66026569488,Oil&Gas,40.6328096,48.4997133,True
-Central Arabian Offshore,Bahrain,1.41144478488,Oil&Gas,26.0667,50.5577,True
-Phulbari Coal Mine,Bangladesh,1.3960689599999998,Coal,25.4962932,88.9533563,True
-Project Motheo,Botswana,2.1795479999999996,Coal,-22.328474,24.684866,True
-Santos Offshore,Brazil,4.3398410276,Oil&Gas,-23.9592201,-46.3317787,True
-Llandovery Shale,Brazil,4.273465064999537,Oil&Gas,51.997395,-3.797508,True
-Buzios (x-Franco),Brazil,3.6382331405902653,Oil&Gas,-22.7553281,-41.8833455,True
-Irati Shale,Brazil,2.6952785851444854,Oil&Gas,-25.477559,-50.6489558,True
-Lula (X-Tupi),Brazil,2.54577517376,Oil&Gas,-14.235004,-51.92528,True
-Parnaiba Onshore,Brazil,1.99857296912,Oil&Gas,-2.9096093,-41.7537178,True
-Libra,Brazil,1.8917315551072615,Oil&Gas,-14.235004,-51.92528,True
-Candeias Shale,Brazil,1.6417978651761618,Oil&Gas,-12.6726284,-38.5431855,True
-Campos Offshore,Brazil,1.56095129944,Oil&Gas,-14.235004,-51.92528,True
-Mero (Libra NW),Brazil,1.2870240552,Oil&Gas,-14.235004,-51.92528,True
-Maritsa Coal Mines,Bulgaria,2.5191824,Coal,41.52190611005914,25.11409260707004,True
-Montney Play,Canada,13.688489100862306,Oil&Gas,56.450045,-120.926468,True
-Murray River Coal Mine,Canada,8.483349599999999,Coal,46.0137253,-62.61073949999999,True
-"Spirit River (Notikewin, Falher, Wilrich)",Canada,2.9762031145275705,Oil&Gas,55.723241,-117.1928859,True
-Gething Coal Mine,Canada,2.0808215999999997,Coal,56.130366,-106.346771,True
-Horizon Oil Sands Project,Canada,1.9897907057600004,Oil&Gas,57.3391674,-111.7577988,True
-Kearl,Canada,1.90118177392,Oil&Gas,57.3862589,-111.0705452,True
-Duvernay,Canada,1.8713692958613048,Oil&Gas,53.773217,-111.68797,False
-Athabasca Oil Sands Project,Canada,1.35585326448,Oil&Gas,56.130366,-106.346771,True
-Christina Lake,Canada,1.2321289437600003,Oil&Gas,49.041715,-118.212072,False
-Liard Shale,Canada,1.201818384,Oil&Gas,60.56947577543112,-126.3375365686522,True
-Syncrude Mildred Lake/Aurora,Canada,1.1840500443200002,Oil&Gas,56.130366,-106.346771,True
-Fording River,Canada,1.0348086,Coal,49.8832913,-114.8834408,False
-Tashan Coal Mine,China,9.003554999999999,Coal,35.86166,104.195397,True
-Hongshaquan No.1 Coal Mine,China,8.971939679999998,Coal,35.86166,104.195397,True
-Dahaize Coal Mine,China,7.993471067999999,Coal,37.67828,108.79308,True
-Jiangjun Gebi No.2 Coal Mine,China,7.8394641599999995,Coal,35.86166,104.195397,True
-Dananhu No.1 Coal Mine,China,7.165836479999999,Coal,28.822721,112.00005,True
-Balasu Coal Mine,China,6.4011714359999985,Coal,35.86166,104.195397,True
-Hongqinghe Coal Mine,China,5.707042044,Coal,39.383883,109.553183,True
-Longmaxi Shale,China,5.691701534651861,Oil&Gas,30.93634,110.825372,True
-Baijia Haizi Coal Mine,China,4.961658372,Coal,38.1985999,109.50742,True
-Changqing,China,4.939920283423099,Oil&Gas,29.5656843,106.5511838,False
-Xiaojihan Coal Mine,China,4.62142758,Coal,38.3593253,109.6969337,True
-Shengli East No.2 Coal Mine,China,4.5936618000000005,Coal,35.86166,104.195397,True
-Buertai Coal Mine,China,4.515257999999999,Coal,35.86166,104.195397,True
-Xinwen Ili No.1 Coal Mine,China,4.488654587999999,Coal,35.86166,104.195397,True
-Chahasu Coal Mine,China,4.208464523999999,Coal,35.86166,104.195397,True
-Ningtiaota Coal Mine,China,4.0149186,Coal,39.047218,110.233755,True
-Hulusu Coal Mine,China,3.9631761839999995,Coal,43.49149999999999,115.10385,True
-Shilawusu Coal Mine,China,3.884098152,Coal,35.86166,104.195397,True
-Jinjie Coal Mine,China,3.8513930399999996,Coal,38.74322000000001,110.17375,True
-Xiaobaodang No.1 Coal Mine,China,3.783542136,Coal,35.86166,104.195397,True
-Yingpanhao Coal Mine,China,3.7598675399999997,Coal,41.230996,110.046948,True
-Menkeqing Coal Mine,China,3.6859149359999996,Coal,35.86166,104.195397,True
-Dananhu No. 7 Coal Mine,China,3.6317318399999996,Coal,35.86166,104.195397,True
-Zhundong Surface Mine,China,3.5316639599999995,Coal,44.150519,87.894127,True
-Meihuajing Coal Mine,China,3.4974944399999996,Coal,35.86166,104.195397,True
-Qinghua No.7 Coal Mine,China,3.3754604399999995,Coal,48.24725,126.52946,True
-Shaanxi Caojiatan Coal Mine,China,3.336897696,Coal,34.2648599,108.95424,True
-Wucaiwan No.1 Coal Mine,China,3.3361654919999997,Coal,44.76045999999999,89.18083999999999,True
-Majialiang Coal Mine,China,3.1704433199999995,Coal,35.86166,104.195397,True
-Hongliulin Coal Mine,China,3.0899008799999996,Coal,41.25481,109.018182,True
-Hetaoyu Coal Mine,China,3.0008160599999996,Coal,35.86166,104.195397,True
-Taran Gaole Coal Mine,China,2.928816,Coal,35.86166,104.195397,True
-Ningxia Hongliu Coal Mine,China,2.8997719079999995,Coal,36.858778,105.640452,True
-Dalaihushuo Coal Mine,China,2.8756091759999998,Coal,45.53859,119.662203,True
-Yushuwan Coal Mine,China,2.82630744,Coal,38.5613,109.90876,True
-Dananhu West No.2 Coal Mine,China,2.7480467699999997,Coal,35.86166,104.195397,True
-Wangjialing Coal Mine,China,2.72374212,Coal,35.86166,104.195397,True
-Shenhua Heidaigou Surface Coal Mine,China,2.7208024199999996,Coal,39.7303799,111.27758,True
-Pingshuo East Coal Mine,China,2.6499671099999995,Coal,35.86166,104.195397,True
-Daqing,China,2.601815791641047,Oil&Gas,46.58757989999999,125.10307,False
-Yili No.4 Coal Mine,China,2.5823529599999997,Coal,43.91688990000001,81.32415999999999,True
-Shitoumei No.1 Coal Mine,China,2.4168345564,Coal,35.86166,104.195397,True
-Cambrian/Silurian Marine Shale,China,2.3675304405065956,Oil&Gas,35.86166,104.195397,True
-Xinzhuang Coal Mine,China,2.2995110688,Coal,33.9249993,116.626253,True
-Sandaogou Coal Mine,China,2.2622662919999996,Coal,35.86166,104.195397,True
-Huangyuchuan Coal Mine,China,2.2610215451999998,Coal,35.86166,104.195397,True
-Inner Mongolia Erlintu Coal Mine,China,2.2289266031999997,Coal,39.808175,110.958244,True
-Shenhua Bulianta Coal Mine,China,2.2231389599999996,Coal,39.36022,110.1759,True
-Longmaxi Shale (Sichuan/Changyu),China,2.209899919742701,Oil&Gas,30.6508899,104.07572,True
-Zhangji Coal Mine,China,2.1939329279999997,Coal,34.35981,117.026241,True
-Jinjitan Coal Mine,China,2.1924628439999996,Coal,35.86166,104.195397,True
-Pangpangta Coal Mine,China,2.1807719868,Coal,15.079409,120.6199895,True
-Guojiatan Coal Mine,China,2.1613850999999995,Coal,35.86166,104.195397,True
-Dongzhouyao Coal Mine,China,2.1529482347999997,Coal,35.86166,104.195397,True
-Haerwusu Surface Mine,China,2.0804889,Coal,35.86166,104.195397,True
-Suancigou Coal Mine,China,2.0779949519999996,Coal,35.86166,104.195397,True
-Yimin Surface Coal Mine,China,2.0336148,Coal,35.86166,104.195397,True
-Guqiao Coal Mine,China,2.0291813519999997,Coal,34.23015,114.02166,True
-Boli Coal Mine,China,2.0209497,Coal,35.86166,104.195397,True
-Gaojialiang No.1 Coal Mine,China,2.0125847279999998,Coal,35.86166,104.195397,True
-Hongqingliang Coal Mine,China,1.9776341903999997,Coal,35.86166,104.195397,True
-Tarim (CNPC),China,1.9598838506846001,Oil&Gas,35.86166,104.195397,True
-Xiaobaodang No.2 Coal Mine,China,1.9340436455999996,Coal,35.86166,104.195397,True
-Zhaoshipan Coal Mine,China,1.9337507639999998,Coal,35.86166,104.195397,True
-Longwanggou Coal Mine,China,1.9226700767999998,Coal,35.86166,104.195397,True
-Guojiawan Coal Mine,China,1.87688292,Coal,42.135575,117.976544,True
-Gaotouyao Coal Mine,China,1.8705371519999998,Coal,35.86166,104.195397,True
-Madaotou Coal Mine,China,1.8353013000000002,Coal,35.86166,104.195397,True
-Qingshuiying Coal Mine,China,1.8280693199999998,Coal,38.201629,106.716115,True
-Buliangou Coal Mine,China,1.820015076,Coal,35.86166,104.195397,True
-Shanxi Lu'an Gucheng Coal Mine,China,1.8113506619999997,Coal,31.478043,116.954521,True
-Shangwan Coal Mine,China,1.78657776,Coal,35.86166,104.195397,True
-Hanglaiwan Coal Mine,China,1.780964196,Coal,38.465097,109.876356,True
-Xiaojiawa Coal Mine,China,1.7692733387999997,Coal,35.86166,104.195397,True
-Southeast Uplift Onshore Heilongjiang Province,China,1.7505364513069903,Oil&Gas,45.7420799,126.66285,True
-Chagannur No.1 Coal Mine,China,1.7365051200000001,Coal,9.318327499999999,76.61108449999999,True
-Muduchaideng Coal Mine,China,1.7194834667999999,Coal,38.87546,109.43828,True
-Qiyuan Coal Mine,China,1.71387033,Coal,35.86166,104.195397,True
-Weijiamao Open Pit Mine,China,1.6865098799999998,Coal,35.86166,104.195397,True
-Nalin River No.2 Coal Mine,China,1.6747213955999998,Coal,35.86166,104.195397,True
-Dingji Coal Mine,China,1.6673249999999997,Coal,35.86166,104.195397,True
-Baode Coal Mine,China,1.6584420599999998,Coal,38.9083899,111.2184,True
-Wangjiata Coal Mine,China,1.61328948,Coal,35.86166,104.195397,True
-Wudong Coal Mine,China,1.61328948,Coal,26.6295899,106.75208,True
-Shengli No.1 Open-Pit Coal Mine,China,1.6129498000000002,Coal,35.86166,104.195397,True
-Baiyinhua No.3 Surface Mine,China,1.5792966000000002,Coal,35.86166,104.195397,True
-Tongxin Coal Mine,China,1.5686193599999998,Coal,36.98063990000001,105.91448,True
-Shenhua Baorixile Surface Coal Mine,China,1.5660757,Coal,49.348096,119.79423,True
-Sijiazhuang Coal Mine,China,1.5598057229999998,Coal,38.0427599,114.5143,True
-Gaohe Coal Mine,China,1.533939,Coal,30.723869,116.829861,True
-Xiwan Surface Coal Mine,China,1.5295985628,Coal,24.46419,111.49268,True
-Liuzhuang Coal Mine,China,1.5205436399999999,Coal,35.86166,104.195397,True
-Shengli,China,1.505781359576504,Oil&Gas,29.59272,103.50967,False
-Yadian Coal Mine,China,1.49064531,Coal,26.794564,106.161867,True
-Lijiahao Coal Mine,China,1.4790520799999998,Coal,35.86166,104.195397,True
-Shicaocun Coal Mine,China,1.4563781627999999,Coal,35.86166,104.195397,True
-Shangyuquan Coal Mine,China,1.4287740719999997,Coal,29.518124,118.684104,True
-Qingchunta Coal Mine,China,1.4235022032,Coal,39.63943,111.22446,True
-Taohe Coal Mine,China,1.4134954151999999,Coal,35.86166,104.195397,True
-Xiaozhuang Coal Mine,China,1.4107130399999999,Coal,25.13871,109.06302,True
-Wucaiwan No.1 Surface Mine,China,1.3896979676999999,Coal,44.76045999999999,89.18083999999999,True
-Shaqu No.1 Coal Mine,China,1.38630624,Coal,35.86166,104.195397,True
-Oil shale China,China,1.3854614488,Oil&Gas,35.86166,104.195397,True
-Sanjiao No.1 Coal Mine,China,1.3845733571999999,Coal,35.86166,104.195397,True
-Zhong Yu Coal Mine,China,1.3716082379999999,Coal,35.86166,104.195397,True
-Mengcun Coal Mine,China,1.3630709663999998,Coal,38.0534099,117.10418,True
-Huangling No.2 Coal Mine,China,1.36189944,Coal,35.5793699,109.26291,True
-Dafosi Coal Mine,China,1.3600201163999999,Coal,35.86166,104.195397,True
-Xinjiang (CNPC),China,1.3564203084451338,Oil&Gas,43.7934299,87.6271,True
-Zhangjiamao Coal Mine,China,1.3243129679999999,Coal,35.86166,104.195397,True
-Talahao Coal Mine,China,1.2974898948,Coal,39.79517,110.11175,True
-Baishihu Surface Mine,China,1.2935603999999998,Coal,35.86166,104.195397,True
-Halagou Coal Mine,China,1.2593908799999998,Coal,31.301584,94.894179,True
-Wenjiazhuang Coal Mine,China,1.2551685035999998,Coal,35.86166,104.195397,True
-Yuwang No.1 Coal Mine,China,1.2525688764,Coal,36.7892565,119.2677946,True
-Baiyanghe Coal Mine,China,1.23986544,Coal,35.86166,104.195397,True
-Yangquan No.1 Coal Mine,China,1.2109950539999998,Coal,37.8539811,113.590035,True
-Daliuta Coal Mine,China,1.2071603279999998,Coal,35.86166,104.195397,True
-Xinjiang Hongshan Coal Mine,China,1.2048172752,Coal,43.7934299,87.6271,True
-Antaibao Surface Mine,China,1.19837388,Coal,27.95244,116.30684,True
-Shahaiji No.1 Coal Mine,China,1.1959331999999998,Coal,35.86166,104.195397,True
-Shigetai Coal Mine,China,1.1933025299999998,Coal,35.86166,104.195397,True
-Fengjiata Coal Mine,China,1.18617048,Coal,35.86166,104.195397,True
-Gaojiabao Coal Mine,China,1.1471196,Coal,35.86166,104.195397,True
-Shajihai No.2 Coal Mine,China,1.1471196,Coal,46.64035,86.55462,True
-Talike District No. 2 Coal Mine,China,1.1349162,Coal,35.86166,104.195397,True
-Huojitu Well Of Daliuta Coal Mine,China,1.1333649599999998,Coal,39.25832,110.1627,True
-Changcheng No.3 Coal Mine,China,1.12311012,Coal,40.15441,118.31659,True
-Yangjiacun Coal Mine,China,1.07878056,Coal,35.86166,104.195397,True
-Yangchangwan No.1 Well Coal Mine,China,1.0738991999999998,Coal,30.10105,115.19158,True
-Wangwa Coal Mine,China,1.072190724,Coal,35.74542,106.473979,True
-Ba Leng Coal Mine,China,1.0713608927999998,Coal,35.86166,104.195397,True
-Zaoquan Coal Mine,China,1.05925512,Coal,37.9345,106.5417,True
-Anjialing Open-Pit Mine,China,1.04461104,Coal,35.86166,104.195397,True
-Central Uplift Onshore Xinjiang Uygur Autonomous Region,China,1.04432646968,Oil&Gas,43.7934299,87.6271,True
-Longwan Coal Mine,China,1.0358548287,Coal,27.9325199,120.8130299,True
-Shanxi Dongda Coal Mine,China,1.0299669599999999,Coal,37.7591899,112.67453,True
-Kouzi East Coal Mine,China,1.01906904,Coal,32.83635,116.07007,True
-Hongshuliang Coal Mine,China,1.0139316924,Coal,34.149373,110.468368,True
-West Well of Faer Second Coal Mine,China,1.00573044,Coal,35.86166,104.195397,True
-Sihe Coal Mine,China,1.00522563,Coal,30.40474,107.25564,True
-El Descanso Coal Mine,Colombia,4.149156,Coal,4.570868,-74.297333,True
-Cerrejón Coal Mine,Colombia,2.40895116,Coal,4.570868,-74.297333,True
-San Juan Coal Mine,Colombia,1.6401369599999998,Coal,4.570868,-74.297333,True
-La Luna Shale,Colombia,1.6167888359506832,Oil&Gas,4.570868,-74.297333,True
-Pribbenow Coal Mine,Colombia,1.3692214799999998,Coal,4.570868,-74.297333,True
-Kronprins Christian Offshore,Denmark,2.23244534032,Oil&Gas,56.26392,9.501785,True
-Hambach Coal Mine,Germany,1.7054961000000002,Coal,50.8985922,6.444761600000001,True
-Garzweiler Coal Mine,Germany,1.3220900000000002,Coal,51.064717,6.497042,True
-West Macedonia Lignite Centre (WMLC),Greece,2.1634200000000003,Coal,40.3004058,21.7903559,True
-Greater Turbot (Stabroek),Guyana,1.1144236752480001,Oil&Gas,6.8082536,-58.1629544,True
-Greater Liza (Liza),Guyana,1.002783934256,Oil&Gas,4.860416,-58.93018,True
-Rajmahal Coal Mine,India,5.832107189999999,Coal,25.0379784,87.3537738,False
-Gevra Coal Mine,India,2.4301960199999995,Coal,22.349639,82.54109930000001,True
-Barail Shale,India,2.141583711135788,Oil&Gas,25.2744444,93.34777779999999,True
-Siarmal Coal Mine,India,1.8605412000000001,Coal,22.044164,83.7331954,True
-Kerandari BC,India,1.83304,Coal,20.593684,78.96288,True
-Bankui,India,1.6,Coal,23.6411989,87.94940969999999,False
-Talaipalli Coal Mine,India,1.5329487599999998,Coal,22.2339333,83.5016887,False
-Lakhanpur Coal Mine,India,1.5179997,Coal,21.7643724,83.7710329,True
-"Integrated Belpahar, Lakhanpur, Lilari Coal Mine",India,1.5167978000000002,Coal,21.7824533,83.84907079999999,True
-Balaram Coal Mine,India,1.3731152399999997,Coal,20.593684,78.96288,True
-Gare Pelma Sector II,India,1.3103,Coal,22.5913113,88.4234245,True
-Mandakini B,India,1.31316,Coal,30.5112978452367,79.03057057490572,True
-Kaniha Coal Mine,India,1.1969351099999999,Coal,21.094016,85.0534191,True
-Dipka Coal Mine,India,1.1718525000000002,Coal,22.3528577,82.5452224,True
-Kusmunda Coal Mine,India,1.1502183000000001,Coal,22.3525009,82.6411459,True
-Banhardih,India,1.106,Coal,21.2735036,83.1126209,False
-Saharpur Jamarpani,India,1.048,Coal,29.9680035,77.55520659999999,True
-Moher Amlohri Coal Mine,India,1.0443667499999998,Coal,20.593684,78.96288,True
-PTBA Coal Mines,Indonesia,8.894178479999999,Coal,-0.789275,113.921327,True
-KPC Operation Coal Mine,Indonesia,3.0945552,Coal,-0.789275,113.921327,True
-East Natuna (x-Natuna D-Alpha),Indonesia,2.158541117777679,Oil&Gas,4.0,108.25,True
-GAM Coal Mine,Indonesia,1.31552652,Coal,-0.789275,113.921327,True
-Indexim Coalindo Coal Mine,Indonesia,1.1133857699999998,Coal,-6.210848400000001,106.818483,True
-Pakar North Coal Mine,Indonesia,1.0949309,Coal,-0.789275,113.921327,True
-Tutupan Coal Mine,Indonesia,1.09340658,Coal,-0.789275,113.921327,True
-MHU Coal Mine,Indonesia,1.0752436799999998,Coal,-6.2110506,106.8160971,True
-BIB Coal Mine,Indonesia,1.0734273899999998,Coal,-0.789275,113.921327,True
-Pasir Coal Mine,Indonesia,0.9753477299999999,Coal,-0.789275,113.921327,True
-Marun,Iran,2.4085438848627354,Oil&Gas,28.7099273,55.2340641,False
-Azadegan,Iran,2.278016459436294,Oil&Gas,32.6820417,50.4812243,False
-Ahwaz Asmari,Iran,2.23828440612034,Oil&Gas,31.3183272,48.6706187,True
-Central Arabian Offshore,Iran,2.12214287376,Oil&Gas,32.427908,53.688046,True
-Gachsaran,Iran,1.7392968773440003,Oil&Gas,30.3659761,50.79363009999999,False
-Agha Jari,Iran,1.5631102313914453,Oil&Gas,30.6997632,49.8277382,False
-Ahwaz Bangestan,Iran,1.433911709079079,Oil&Gas,31.3183272,48.6706187,True
-Pazanan,Iran,1.3584091667848317,Oil&Gas,30.5393433,51.691469,False
-South Pars (Phases 9-10) dry gas,Iran,1.26500630256,Oil&Gas,35.7516655,51.7708507,True
-Kish Gas Project,Iran,1.1936325984933431,Oil&Gas,26.5324775,53.9867949,True
-Pars Southwest,Iran,1.1092643000104647,Oil&Gas,29.1043813,53.045893,False
-South Pars (Phases 4-5) dry gas,Iran,1.1009755224,Oil&Gas,32.427908,53.688046,True
-Mansouri Bangestan,Iran,1.0458388876,Oil&Gas,31.2877365,49.645006,True
-South Pars (Phases 22-24),Iran,1.0427308097560606,Oil&Gas,32.427908,53.688046,True
-South Pars (Phases 20-21),Iran,1.0171732264459443,Oil&Gas,27.5055422,52.60926440000001,False
-South Pars (Phases 2-3) dry gas,Iran,1.01627422416,Oil&Gas,32.427908,53.688046,True
-Rumaila North & South,Iraq,7.7616094254400005,Oil&Gas,30.2304687,47.4110886,True
-Qurna West,Iraq,3.9828289324324806,Oil&Gas,30.8843923,47.291159,True
-Baghdad East,Iraq,2.7424609247360006,Oil&Gas,33.315241,44.3660671,False
-Central Arabian Onshore,Iraq,2.60742363232,Oil&Gas,33.223191,43.679291,True
-Majnoon,Iraq,2.4683423180000004,Oil&Gas,31.08416699999999,47.454167,False
-Zubair,Iraq,1.679304398928,Oil&Gas,30.3769669,47.7007956,False
-Qurna West-2,Iraq,1.5987232813760002,Oil&Gas,30.8843923,47.291159,True
-Halfayah,Iraq,1.4090438562720002,Oil&Gas,31.8279267,47.42239559999999,True
-Nahr bin Umar,Iraq,1.2776434311264002,Oil&Gas,33.223191,43.679291,True
-Ratawi,Iraq,1.065138743552,Oil&Gas,33.223191,43.679291,True
-Basrah Gas project,Iraq,1.0411542907760492,Oil&Gas,30.5257657,47.77379699999999,True
-Leviathan,Israel,1.0602417720564168,Oil&Gas,31.046051,34.851612,True
-Bogatyr Coal Mine,Kazakhstan,7.322039999999999,Coal,51.6504957,75.42752899999999,True
-Kashagan,Kazakhstan,5.08616126130123,Oil&Gas,48.019573,66.923684,True
-Tengiz,Kazakhstan,3.357866129472396,Oil&Gas,46.1484308,53.3912354,True
-Carboniferous Shale,Kazakhstan,1.287218514595456,Oil&Gas,48.019573,66.923684,True
-Karachaganak,Kazakhstan,1.2077343746547762,Oil&Gas,51.4523372,53.3882396,False
-Borly Coal Mines,Kazakhstan,1.0226449199999998,Coal,48.019573,66.923684,True
-Shubarkol Coal Mine,Kazakhstan,0.9909160799999999,Coal,48.9762618,68.79142399999999,True
-Greater Burgan,Kuwait,8.341919008384002,Oil&Gas,29.0027053,47.9614096,True
-Project Kuwait,Kuwait,4.409493298080001,Oil&Gas,29.31166,47.481766,True
-Central Arabian Onshore,Kuwait,3.59752295136,Oil&Gas,29.31166,47.481766,True
-Khafji,Kuwait-Saudi-Arabia-Neutral Zone,1.439897188912,Oil&Gas,28.4256618,48.4887224,True
-Sirte Shale,Libya,1.703281911431699,Oil&Gas,31.189689,16.5701927,True
-El Sharara,Libya,1.0078460698384,Oil&Gas,26.574962,12.2247021,True
-Eagle Ford Shale,Mexico,5.068029399764671,Oil&Gas,23.634501,-102.552784,True
-Gulf Deepwater Offshore,Mexico,2.204840846,Oil&Gas,23.634501,-102.552784,True
-Ku-Maloob-Zaap Project,Mexico,1.960224742512694,Oil&Gas,,,True
-Yucatan Platform Offshore,Mexico,1.02579831536,Oil&Gas,20.7098786,-89.0943377,True
-Tavan Tolgoi Coal Mine,Mongolia,16.03032948,Coal,43.66518869999999,105.4434192,True
-Zambezi Coal Mine,Mozambique,4.149156,Coal,-14.98188331479953,29.52373671029859,True
-Chirodzi Coal Mine,Mozambique,2.928816,Coal,-15.8576212,32.9916478,True
-Revuboe Coal Mine,Mozambique,1.38454668,Coal,-16.14488325351667,33.63575928774708,True
-MZLNG Joint Development (T1-T2),Mozambique,1.3101757227075046,Oil&Gas,-18.665695,35.529562,True
-Area-1 Future Phases,Mozambique,1.0227243558541261,Oil&Gas,-18.665695,35.529562,True
-Area 1 LNG (T1&T2),Mozambique,1.0066545972020167,Oil&Gas,,,True
-NLNG Base Project,Nigeria,1.0334113520575974,Oil&Gas,9.081999,8.675277,True
-Saebyol Coal Mining Complex,North Korea,3.2282702999999997,Coal,42.8598779,130.1993717,True
-Troll,Norway,1.7721044298996784,Oil&Gas,60.47202399999999,8.468945999999999,True
-Johan Sverdrup,Norway,1.0738719824297533,Oil&Gas,60.47202399999999,8.468945999999999,True
-Sembar Shale,Pakistan,2.8402368525480353,Oil&Gas,30.375321,69.34511599999999,True
-Thar Coal Mine,Pakistan,1.886983,Coal,30.375321,69.34511599999999,True
-Lublin Basin Silurian Shale,Poland,5.647084841026989,Oil&Gas,51.2464536,22.5684463,True
-North Field,Qatar,11.612750764405785,Oil&Gas,25.354826,51.183884,True
-North Field C LNG,Qatar,7.768105079287002,Oil&Gas,25.354826,51.183884,True
-North Field E,Qatar,4.594474423024538,Oil&Gas,25.354826,51.183884,True
-QatarGas LNG T8-T11 (NFE-East),Qatar,3.3949753195368304,Oil&Gas,25.354826,51.183884,True
-Barzan,Qatar,3.0940951084095216,Oil&Gas,25.2439661,51.4547023,True
-Central Arabian Onshore,Qatar,2.2172316192,Oil&Gas,25.354826,51.183884,True
-Qatargas 2 LNG T4-T5,Qatar,1.8280354311219043,Oil&Gas,25.354826,51.183884,True
-QatarGas LNG T12-T13 (NFE-South),Qatar,1.7852105812840446,Oil&Gas,25.354826,51.183884,True
-Dolphin,Qatar,1.5502358762213548,Oil&Gas,25.354826,51.183884,True
-Rasgas 2 LNG T3-T5,Qatar,1.509806372305485,Oil&Gas,25.354826,51.183884,True
-Rasgas 3 LNG T6-T7,Qatar,1.490692040585981,Oil&Gas,25.354826,51.183884,True
-QatarGas 1 LNG T1-T3,Qatar,1.2832725581705358,Oil&Gas,25.354826,51.183884,True
-Al Khaleej Gas project,Qatar,1.1353073492309076,Oil&Gas,25.0654325,51.1095275,True
-Bovanenkovo Zone (Yamal Megaproject),Russian Federation,11.158636248803424,Oil&Gas,70.0,70.0,True
-Gazprom dobycha Yamburg,Russian Federation,8.863793695013307,Oil&Gas,66.738333,79.548611,True
-Tunguska Basin CBM,Russian Federation,8.8438218336,Oil&Gas,61.97252179438821,92.4992847228499,True
-Shtokman,Russian Federation,6.135874131518798,Oil&Gas,68.93641339999999,33.1098265,True
-Urengoyskoye,Russian Federation,5.199312831838382,Oil&Gas,66.0653057,76.9345193,True
-Kuznetsk Depression (Kuzbass) CBM,Russian Federation,4.906095479999999,Oil&Gas,54.7574648,87.4055288,True
-Elga Coal Mine,Russian Federation,4.528609427759999,Coal,66.7613451,124.123753,True
-Yuganskneftegaz,Russian Federation,4.3451933152618665,Oil&Gas,61.52401,105.318756,True
-Eastern Gas Program,Russian Federation,4.274058366198339,Oil&Gas,52.0055148,37.95874939999999,True
-Stepnoy Coal Mine,Russian Federation,3.5585114399999997,Coal,61.52401,105.318756,True
-West Siberia Offshore,Russian Federation,2.85640366752,Oil&Gas,61.01370970000001,99.1966559,True
-Lensky Basin CBM,Russian Federation,2.73771576,Oil&Gas,61.52401,105.318756,True
-Timan - Pechora Basin Offshore,Russian Federation,2.4814388903199998,Oil&Gas,61.52401,105.318756,True
-Tambey Zone (Yamal Megaproject),Russian Federation,2.4749092361929286,Oil&Gas,71.4747469,71.813416,True
-Beisky-Zapadniy Coal Mine,Russian Federation,2.4338285999999996,Coal,54.4559036,56.37895529999999,True
-Raspadskaya Coal Mine,Russian Federation,2.41672222836,Coal,61.52401,105.318756,True
-Listvianskaya Coal Mine,Russian Federation,2.3876093999999997,Coal,61.52401,105.318756,True
-Timan - Pechora Basin Onshore,Russian Federation,2.3516496920800005,Oil&Gas,61.52401,105.318756,True
-Elegest Coal Mine,Russian Federation,2.281434144,Coal,51.45645471214638,94.06806347329982,True
-Taldinsky Coal Mine,Russian Federation,2.1966119999999996,Coal,54.1686443,87.0615658,True
-Ulug-Khem Project,Russian Federation,2.1528500399999997,Coal,51.4793511,92.8951659,True
-Samotlorneftegaz (TNK-BP),Russian Federation,1.867807240981859,Oil&Gas,60.93758439999999,76.5510204,True
-Sugodinsk-Ogodzhinsky Coal Mine,Russian Federation,1.8158659199999998,Coal,61.52401,105.318756,True
-Leningradskoye (Kara Sea),Russian Federation,1.8006198833061018,Oil&Gas,61.52401,105.318756,True
-Arshanovsky Coal Mine,Russian Federation,1.7084759999999999,Coal,61.52401,105.318756,True
-Usinsk-1 Coal Mine,Russian Federation,1.6566541199999998,Coal,65.9940081,57.55701060000001,True
-Pereyaslovskiy Coal Mine,Russian Federation,1.6346609999999997,Coal,61.52401,105.318756,True
-Gazprom dobycha Orenburg,Russian Federation,1.5933132221116892,Oil&Gas,51.7779513,55.14667129999999,True
-Pervomaisky Coal Mine,Russian Federation,1.53518772,Coal,61.52401,105.318756,True
-Arctic LNG 2 T1-3,Russian Federation,1.4755790891378633,Oil&Gas,61.52401,105.318756,True
-Volga - Urals Onshore,Russian Federation,1.3676370801600002,Oil&Gas,55.72547549999999,48.8732886,True
-Romashkino,Russian Federation,1.3386049352,Oil&Gas,56.152778,52.489722,False
-Rusanovskoye (Kara Sea),Russian Federation,1.3161239491611803,Oil&Gas,52.0907923,35.8299388,True
-Inaglinskaya-2 Mine,Russian Federation,1.2966,Coal,61.52401,105.318756,True
-Gazprom dobycha Nadym,Russian Federation,1.286567712273437,Oil&Gas,65.53826529999999,72.5141606,True
-Taymyr Basin CBM,Russian Federation,1.23332178528,Oil&Gas,74.49145737464434,102.5220223650551,True
-North Kara Sea Offshore,Russian Federation,1.17696009392,Oil&Gas,61.52401,105.318756,True
-West Siberia Onshore,Russian Federation,1.16451320024,Oil&Gas,61.01370970000001,99.1966559,True
-SeverEnergia Project,Russian Federation,1.099534928769511,Oil&Gas,61.52401,105.318756,True
-Erkovetskiy Coal Mine,Russian Federation,1.0389178799999998,Coal,61.52401,105.318756,True
-Shurapskaya Coal Mine,Russian Federation,1.03240764,Coal,61.52401,105.318756,True
-Ghawar Uthmaniyah,Saudi-Arabia,19.22190525051364,Oil&Gas,25.193738,49.309497,True
-Safaniya,Saudi-Arabia,11.926143554624,Oil&Gas,26.7505337,51.6834275,True
-Khurais project,Saudi-Arabia,7.634938271719794,Oil&Gas,25.0846171,48.0395761,True
-Ghawar Haradh,Saudi-Arabia,6.96682782850095,Oil&Gas,24.1353686,49.0817124,True
-Central Arabian Offshore,Saudi-Arabia,6.860051660800001,Oil&Gas,23.885942,45.079162,True
-Ghawar Shedgum,Saudi-Arabia,5.6950029434408265,Oil&Gas,25.5972222,49.42,True
-Qatif project,Saudi-Arabia,5.066814884197363,Oil&Gas,26.5764917,49.998236,True
-Manifa (redevelop),Saudi-Arabia,5.000284718448019,Oil&Gas,23.885942,45.079162,True
-Ghawar Hawiyah,Saudi-Arabia,4.649714459398611,Oil&Gas,21.4230945,40.4770912,True
-Central Arabian Onshore,Saudi-Arabia,4.35997371264,Oil&Gas,23.885942,45.079162,True
-Shaybah,Saudi-Arabia,4.2685896715125295,Oil&Gas,22.5248367,54.0085616,False
-Berri,Saudi-Arabia,3.557107776918784,Oil&Gas,23.885942,45.079162,True
-Zuluf (CR in field),Saudi-Arabia,3.5350522292800006,Oil&Gas,23.885942,45.079162,True
-Zuluf,Saudi-Arabia,2.449978205742121,Oil&Gas,23.885942,45.079162,True
-Khursaniyah,Saudi-Arabia,2.4132555576827786,Oil&Gas,27.183455,49.1887734,False
-Ghawar Ain Dar N,Saudi-Arabia,2.088574938528698,Oil&Gas,25.9461111,49.4191667,True
-Marjan,Saudi-Arabia,1.8899260747557556,Oil&Gas,24.01,44.94,False
-Safaniya YTF Concession,Saudi-Arabia,1.8428718673923543,Oil&Gas,26.7505337,51.6834275,True
-Zuluf (expansion),Saudi-Arabia,1.8332133470399974,Oil&Gas,23.885942,45.079162,True
-Abqaiq,Saudi-Arabia,1.5928277695368342,Oil&Gas,25.9326464,49.6640184,False
-Ghawar Ain Dar S,Saudi-Arabia,1.4346445302213289,Oil&Gas,25.9461111,49.4191667,False
-Sudair Shale,Saudi-Arabia,1.0328931229372316,Oil&Gas,27.1355472,49.56358179999999,True
-Harmaliyah,Saudi-Arabia,1.0280955230608393,Oil&Gas,24.557215,49.4694825,False
-Kolubara Mine Complex,Serbia,2.5239900000000004,Coal,44.4611502789004,20.09957550924858,True
-Grootegeluk Coal Mine,South Africa,6.872046719999999,Coal,-23.6572439,27.566491,True
-Greater Soutpansberg Coal Project,South Africa,2.8037737199999997,Coal,-30.559482,22.937506,True
-Boikarabelo Coal Mine,South Africa,2.4284765999999998,Coal,-25.930962,27.4664126,True
-Collingham Shale,South Africa,1.8498882064136324,Oil&Gas,-29.65,26.75,True
-Paardekop Coal Mine,South Africa,1.6962726,Coal,-33.8713889,22.7997222,True
-New Largo Coal Mine,South Africa,1.4277977999999998,Coal,-25.966667,28.966667,True
-Bernice-Cygnus Coal Mine,South Africa,1.07242344,Coal,-30.559482,22.937506,True
-Tanf Shale,Syria,1.3636553261184028,Oil&Gas,34.80207499999999,38.996815,True
-Tanzanian Coastal Offshore,Tanzania,1.0311981669599999,Oil&Gas,-6.369028,34.888822,True
-Afşin-Elbistan Coal Mine,Turkey,4.086460000000001,Coal,38.206537,37.193076,True
-Yolotan (Iolotan) South,Turkmenistan,9.548227901020114,Oil&Gas,37.2944409,62.3682506,False
-Yashlar Vostochnyy (East),Turkmenistan,2.1291453311858777,Oil&Gas,,,True
-Dovletabad-Donmez,Turkmenistan,1.5780942876174249,Oil&Gas,38.969719,59.556278,True
-Menilite Shale,Ukraine,1.6666733906470088,Oil&Gas,48.379433,31.16558,True
-Upper Zakum,United Arab Emirates,6.440382519584,Oil&Gas,23.424076,53.847818,True
-Bu Hasa,United Arab Emirates,4.9157785248,Oil&Gas,23.5507876,53.30904229999999,False
-Bab,United Arab Emirates,4.19703305528,Oil&Gas,23.424076,53.847818,True
-Lower Zakum,United Arab Emirates,2.43441954184,Oil&Gas,23.424076,53.847818,True
-Umm Shaif/Nasr,United Arab Emirates,1.9392527325600002,Oil&Gas,25.1327715,55.2052085,True
-Bab (Gasco),United Arab Emirates,1.674389775421935,Oil&Gas,23.424076,53.847818,True
-Asab,United Arab Emirates,1.3732313337600002,Oil&Gas,23.287914,54.22928899999999,False
-Bowland Shale,United Kingdom,1.4760825938272615,Oil&Gas,54.0054069,-2.5040348,True
-Permian Delaware Tight,United States,27.804431085129913,Oil&Gas,38.9108325,-75.52766989999999,True
-Marcellus Shale,United States,26.71441286378078,Oil&Gas,42.9828438,-76.3404867,True
-Permian Midland Tight,United States,16.628818211959153,Oil&Gas,31.9978817,-102.1288379,True
-Haynesville/Bossier Shale,United States,13.204131177322234,Oil&Gas,32.7551322,-93.66232389999999,True
-Utica Shale,United States,7.713186850505922,Oil&Gas,43.100903,-75.232664,True
-Bakken Shale,United States,5.948592837899685,Oil&Gas,37.09024,-95.712891,True
-Eagle Ford Shale,United States,5.924247946649453,Oil&Gas,37.09024,-95.712891,True
-DJ Basin Tight Oil,United States,5.852116216215233,Oil&Gas,37.09024,-95.712891,True
-Western Gulf Province_Texas,United States,5.061653121234896,Oil&Gas,31.9685988,-99.9018131,True
-Woodford Shale,United States,3.377142984689252,Oil&Gas,34.3387006,-97.28446369999999,True
-North Antelope Rochelle Coal Mine,United States,2.9242268999999994,Coal,37.09024,-95.712891,True
-MC #1 Coal Mine,United States,2.8775617199999997,Coal,,,True
-PRB Tight Oil,United States,2.770946452861687,Oil&Gas,37.09024,-95.712891,True
-Chukchi Sea Offshore,United States,2.53927748672,Oil&Gas,69.47131639999999,-171.6902766,True
-Meramec Shale,United States,2.4395776108206624,Oil&Gas,38.26932509037501,-90.85194761025953,True
-Permian Conventional_Texas,United States,2.061829878097165,Oil&Gas,31.8865757,-102.3578201,True
-North Slope Onshore,United States,2.0359511588,Oil&Gas,69.05787579999999,-152.8628274,True
-Cumberland Coal Mine,United States,1.8939676799999998,Coal,37.09024,-95.712891,True
-Anadarko Shelf_Oklahoma,United States,1.8178260724192359,Oil&Gas,35.072562,-98.2436625,True
-Baltimore Canyon Offshore,United States,1.6485116991200002,Oil&Gas,37.9318778,-122.5355235,True
-Austin Chalk Tight,United States,1.3928280650692542,Oil&Gas,37.09024,-95.712891,True
-Barnett Shale,United States,1.3608799636973585,Oil&Gas,37.09024,-95.712891,True
-Black Thunder Coal Mine,United States,1.3580400329999998,Coal,43.69849010000001,-105.2365264,True
-Beaufort Sea Offshore,United States,1.25481059912,Oil&Gas,37.09024,-95.712891,True
-Hamilton County Mine No.1,United States,1.1847792923999998,Coal,39.2355447,-84.56414699999999,True
-Gulf Coast Centre Offshore,United States,1.10620091296,Oil&Gas,37.09024,-95.712891,True
-Youngs Creek Coal Mine,United States,1.08842976,Coal,38.4767229,-86.4955425,True
-West Florida Offshore,United States,1.06926148888,Oil&Gas,27.6648274,-81.5157535,True
-Angren Coal Mine,Uzbekistan,2.4038000000000004,Coal,41.0084382,70.07413199999999,True
-Orinoco Joint Ventures,Venezuela,6.703396161976542,Oil&Gas,5.459619310406225,-65.01373140261339,True
-La Luna Shale,Venezuela,1.0905220150267299,Oil&Gas,6.42375,-66.58973,True
-Sengwe Colliery,Zimbabwe,1.0,Coal,-22.313482,31.211428,True
+Tannezuft Shale,Algeria,2.3478668370693265,Oil&Gas,,,False
+Hassi R'Mel (Domestic),Algeria,2.271542343028474,Oil&Gas,,,False
+Hassi Messaoud,Algeria,1.2159234081532277,Oil&Gas,,,False
+Vaca Muerta Shale,Argentina,5.1777820012388815,Oil&Gas,,,False
+Red Hill Coal Project,Australia,4.5644689199999995,Coal,,,False
+Goldwyer Shale,Australia,4.468806417198375,Oil&Gas,,,False
+Loy Yang Coal Mine,Australia,3.0513671999999996,Coal,,,False
+Wards Well Coal Mine,Australia,2.6677199999999996,Coal,,,False
+Alpha North Coal Mine,Australia,2.5428059999999997,Coal,,,False
+Peak Downs Coal Mine,Australia,2.31824868,Coal,,,False
+Goonyella-Riverside Coal Mine,Australia,2.18219496,Coal,,,False
+Carmichael Coal Project,Australia,2.1068963999999997,Coal,,,False
+Valeria Coal Mine,Australia,2.03280264,Coal,,,False
+Gorgon LNG T1-T3,Australia,1.9310001753636372,Oil&Gas,,,False
+Wilton and Fairhill Coal Projects,Australia,1.8674039999999998,Coal,,,False
+Byerwen Coal Mine,Australia,1.8407267999999999,Coal,,,False
+Galilee Coal Mine,Australia,1.8162899999999997,Coal,,,False
+Hunter Valley North Coal Mine,Australia,1.7340179999999998,Coal,,,False
+Hutton Coal Mine,Australia,1.6859990399999998,Coal,,,False
+Olive Downs Coal Mine,Australia,1.37120808,Coal,,,False
+Saraji East Coal Mine,Australia,1.33919544,Coal,,,False
+Ensham Coal Mine,Australia,1.3149939599999998,Coal,,,False
+Hunter Valley South Coal Mine,Australia,1.1737967999999999,Coal,,,False
+Yallourn,Australia,1.13003484,Coal,,,False
+Mount Pleasant Coal Mine,Australia,1.1202721199999999,Coal,,,False
+Velkerri Shale,Australia,1.0580311833284468,Oil&Gas,,,False
+Blackwater Coal Mine,Australia,1.000395,Coal,,,False
+ACG (Azeri-Chirag-Guneshli Deep Water),Azerbaijan,1.66026569488,Oil&Gas,,,False
+Central Arabian Offshore,Bahrain,1.41144478488,Oil&Gas,,,False
+Phulbari Coal Mine,Bangladesh,1.3960689599999998,Coal,,,False
+Project Motheo,Botswana,2.1795479999999996,Coal,,,False
+Santos Offshore,Brazil,4.3398410276,Oil&Gas,,,False
+Llandovery Shale,Brazil,4.273465064999537,Oil&Gas,,,False
+Buzios (x-Franco),Brazil,3.6382331405902653,Oil&Gas,,,False
+Irati Shale,Brazil,2.6952785851444854,Oil&Gas,,,False
+Lula (X-Tupi),Brazil,2.54577517376,Oil&Gas,,,False
+Parnaiba Onshore,Brazil,1.99857296912,Oil&Gas,,,False
+Libra,Brazil,1.8917315551072615,Oil&Gas,,,False
+Candeias Shale,Brazil,1.6417978651761618,Oil&Gas,,,False
+Campos Offshore,Brazil,1.56095129944,Oil&Gas,,,False
+Mero (Libra NW),Brazil,1.2870240552,Oil&Gas,,,False
+Maritsa Coal Mines,Bulgaria,2.5191824,Coal,,,False
+Montney Play,Canada,13.688489100862306,Oil&Gas,,,False
+Murray River Coal Mine,Canada,8.483349599999999,Coal,,,False
+"Spirit River (Notikewin, Falher, Wilrich)",Canada,2.9762031145275705,Oil&Gas,,,False
+Gething Coal Mine,Canada,2.0808215999999997,Coal,,,False
+Horizon Oil Sands Project,Canada,1.9897907057600004,Oil&Gas,,,False
+Kearl,Canada,1.90118177392,Oil&Gas,,,False
+Duvernay,Canada,1.8713692958613048,Oil&Gas,,,False
+Athabasca Oil Sands Project,Canada,1.35585326448,Oil&Gas,,,False
+Christina Lake,Canada,1.2321289437600003,Oil&Gas,,,False
+Liard Shale,Canada,1.201818384,Oil&Gas,,,False
+Syncrude Mildred Lake/Aurora,Canada,1.1840500443200002,Oil&Gas,,,False
+Fording River,Canada,1.0348086,Coal,,,False
+Tashan Coal Mine,China,9.003554999999999,Coal,,,False
+Hongshaquan No.1 Coal Mine,China,8.971939679999998,Coal,,,False
+Dahaize Coal Mine,China,7.993471067999999,Coal,,,False
+Jiangjun Gebi No.2 Coal Mine,China,7.8394641599999995,Coal,,,False
+Dananhu No.1 Coal Mine,China,7.165836479999999,Coal,,,False
+Balasu Coal Mine,China,6.4011714359999985,Coal,,,False
+Hongqinghe Coal Mine,China,5.707042044,Coal,,,False
+Longmaxi Shale,China,5.691701534651861,Oil&Gas,,,False
+Baijia Haizi Coal Mine,China,4.961658372,Coal,,,False
+Changqing,China,4.939920283423099,Oil&Gas,,,False
+Xiaojihan Coal Mine,China,4.62142758,Coal,,,False
+Shengli East No.2 Coal Mine,China,4.5936618000000005,Coal,,,False
+Buertai Coal Mine,China,4.515257999999999,Coal,,,False
+Xinwen Ili No.1 Coal Mine,China,4.488654587999999,Coal,,,False
+Chahasu Coal Mine,China,4.208464523999999,Coal,,,False
+Ningtiaota Coal Mine,China,4.0149186,Coal,,,False
+Hulusu Coal Mine,China,3.9631761839999995,Coal,,,False
+Shilawusu Coal Mine,China,3.884098152,Coal,,,False
+Jinjie Coal Mine,China,3.8513930399999996,Coal,,,False
+Xiaobaodang No.1 Coal Mine,China,3.783542136,Coal,,,False
+Yingpanhao Coal Mine,China,3.7598675399999997,Coal,,,False
+Menkeqing Coal Mine,China,3.6859149359999996,Coal,,,False
+Dananhu No. 7 Coal Mine,China,3.6317318399999996,Coal,,,False
+Zhundong Surface Mine,China,3.5316639599999995,Coal,,,False
+Meihuajing Coal Mine,China,3.4974944399999996,Coal,,,False
+Qinghua No.7 Coal Mine,China,3.3754604399999995,Coal,,,False
+Shaanxi Caojiatan Coal Mine,China,3.336897696,Coal,,,False
+Wucaiwan No.1 Coal Mine,China,3.3361654919999997,Coal,,,False
+Majialiang Coal Mine,China,3.1704433199999995,Coal,,,False
+Hongliulin Coal Mine,China,3.0899008799999996,Coal,,,False
+Hetaoyu Coal Mine,China,3.0008160599999996,Coal,,,False
+Taran Gaole Coal Mine,China,2.928816,Coal,,,False
+Ningxia Hongliu Coal Mine,China,2.8997719079999995,Coal,,,False
+Dalaihushuo Coal Mine,China,2.8756091759999998,Coal,,,False
+Yushuwan Coal Mine,China,2.82630744,Coal,,,False
+Dananhu West No.2 Coal Mine,China,2.7480467699999997,Coal,,,False
+Wangjialing Coal Mine,China,2.72374212,Coal,,,False
+Shenhua Heidaigou Surface Coal Mine,China,2.7208024199999996,Coal,,,False
+Pingshuo East Coal Mine,China,2.6499671099999995,Coal,,,False
+Daqing,China,2.601815791641047,Oil&Gas,,,False
+Yili No.4 Coal Mine,China,2.5823529599999997,Coal,,,False
+Shitoumei No.1 Coal Mine,China,2.4168345564,Coal,,,False
+Cambrian/Silurian Marine Shale,China,2.3675304405065956,Oil&Gas,,,False
+Xinzhuang Coal Mine,China,2.2995110688,Coal,,,False
+Sandaogou Coal Mine,China,2.2622662919999996,Coal,,,False
+Huangyuchuan Coal Mine,China,2.2610215451999998,Coal,,,False
+Inner Mongolia Erlintu Coal Mine,China,2.2289266031999997,Coal,,,False
+Shenhua Bulianta Coal Mine,China,2.2231389599999996,Coal,,,False
+Longmaxi Shale (Sichuan/Changyu),China,2.209899919742701,Oil&Gas,,,False
+Zhangji Coal Mine,China,2.1939329279999997,Coal,,,False
+Jinjitan Coal Mine,China,2.1924628439999996,Coal,,,False
+Pangpangta Coal Mine,China,2.1807719868,Coal,,,False
+Guojiatan Coal Mine,China,2.1613850999999995,Coal,,,False
+Dongzhouyao Coal Mine,China,2.1529482347999997,Coal,,,False
+Haerwusu Surface Mine,China,2.0804889,Coal,,,False
+Suancigou Coal Mine,China,2.0779949519999996,Coal,,,False
+Yimin Surface Coal Mine,China,2.0336148,Coal,,,False
+Guqiao Coal Mine,China,2.0291813519999997,Coal,,,False
+Boli Coal Mine,China,2.0209497,Coal,,,False
+Gaojialiang No.1 Coal Mine,China,2.0125847279999998,Coal,,,False
+Hongqingliang Coal Mine,China,1.9776341903999997,Coal,,,False
+Tarim (CNPC),China,1.9598838506846001,Oil&Gas,,,False
+Xiaobaodang No.2 Coal Mine,China,1.9340436455999996,Coal,,,False
+Zhaoshipan Coal Mine,China,1.9337507639999998,Coal,,,False
+Longwanggou Coal Mine,China,1.9226700767999998,Coal,,,False
+Guojiawan Coal Mine,China,1.87688292,Coal,,,False
+Gaotouyao Coal Mine,China,1.8705371519999998,Coal,,,False
+Madaotou Coal Mine,China,1.8353013000000002,Coal,,,False
+Qingshuiying Coal Mine,China,1.8280693199999998,Coal,,,False
+Buliangou Coal Mine,China,1.820015076,Coal,,,False
+Shanxi Lu'an Gucheng Coal Mine,China,1.8113506619999997,Coal,,,False
+Shangwan Coal Mine,China,1.78657776,Coal,,,False
+Hanglaiwan Coal Mine,China,1.780964196,Coal,,,False
+Xiaojiawa Coal Mine,China,1.7692733387999997,Coal,,,False
+Southeast Uplift Onshore Heilongjiang Province,China,1.7505364513069903,Oil&Gas,,,False
+Chagannur No.1 Coal Mine,China,1.7365051200000001,Coal,,,False
+Muduchaideng Coal Mine,China,1.7194834667999999,Coal,,,False
+Qiyuan Coal Mine,China,1.71387033,Coal,,,False
+Weijiamao Open Pit Mine,China,1.6865098799999998,Coal,,,False
+Nalin River No.2 Coal Mine,China,1.6747213955999998,Coal,,,False
+Dingji Coal Mine,China,1.6673249999999997,Coal,,,False
+Baode Coal Mine,China,1.6584420599999998,Coal,,,False
+Wangjiata Coal Mine,China,1.61328948,Coal,,,False
+Wudong Coal Mine,China,1.61328948,Coal,,,False
+Shengli No.1 Open-Pit Coal Mine,China,1.6129498000000002,Coal,,,False
+Baiyinhua No.3 Surface Mine,China,1.5792966000000002,Coal,,,False
+Tongxin Coal Mine,China,1.5686193599999998,Coal,,,False
+Shenhua Baorixile Surface Coal Mine,China,1.5660757,Coal,,,False
+Sijiazhuang Coal Mine,China,1.5598057229999998,Coal,,,False
+Gaohe Coal Mine,China,1.533939,Coal,,,False
+Xiwan Surface Coal Mine,China,1.5295985628,Coal,,,False
+Liuzhuang Coal Mine,China,1.5205436399999999,Coal,,,False
+Shengli,China,1.505781359576504,Oil&Gas,,,False
+Yadian Coal Mine,China,1.49064531,Coal,,,False
+Lijiahao Coal Mine,China,1.4790520799999998,Coal,,,False
+Shicaocun Coal Mine,China,1.4563781627999999,Coal,,,False
+Shangyuquan Coal Mine,China,1.4287740719999997,Coal,,,False
+Qingchunta Coal Mine,China,1.4235022032,Coal,,,False
+Taohe Coal Mine,China,1.4134954151999999,Coal,,,False
+Xiaozhuang Coal Mine,China,1.4107130399999999,Coal,,,False
+Wucaiwan No.1 Surface Mine,China,1.3896979676999999,Coal,,,False
+Shaqu No.1 Coal Mine,China,1.38630624,Coal,,,False
+Oil shale China,China,1.3854614488,Oil&Gas,,,False
+Sanjiao No.1 Coal Mine,China,1.3845733571999999,Coal,,,False
+Zhong Yu Coal Mine,China,1.3716082379999999,Coal,,,False
+Mengcun Coal Mine,China,1.3630709663999998,Coal,,,False
+Huangling No.2 Coal Mine,China,1.36189944,Coal,,,False
+Dafosi Coal Mine,China,1.3600201163999999,Coal,,,False
+Xinjiang (CNPC),China,1.3564203084451338,Oil&Gas,,,False
+Zhangjiamao Coal Mine,China,1.3243129679999999,Coal,,,False
+Talahao Coal Mine,China,1.2974898948,Coal,,,False
+Baishihu Surface Mine,China,1.2935603999999998,Coal,,,False
+Halagou Coal Mine,China,1.2593908799999998,Coal,,,False
+Wenjiazhuang Coal Mine,China,1.2551685035999998,Coal,,,False
+Yuwang No.1 Coal Mine,China,1.2525688764,Coal,,,False
+Baiyanghe Coal Mine,China,1.23986544,Coal,,,False
+Yangquan No.1 Coal Mine,China,1.2109950539999998,Coal,,,False
+Daliuta Coal Mine,China,1.2071603279999998,Coal,,,False
+Xinjiang Hongshan Coal Mine,China,1.2048172752,Coal,,,False
+Antaibao Surface Mine,China,1.19837388,Coal,,,False
+Shahaiji No.1 Coal Mine,China,1.1959331999999998,Coal,,,False
+Shigetai Coal Mine,China,1.1933025299999998,Coal,,,False
+Fengjiata Coal Mine,China,1.18617048,Coal,,,False
+Gaojiabao Coal Mine,China,1.1471196,Coal,,,False
+Shajihai No.2 Coal Mine,China,1.1471196,Coal,,,False
+Talike District No. 2 Coal Mine,China,1.1349162,Coal,,,False
+Huojitu Well Of Daliuta Coal Mine,China,1.1333649599999998,Coal,,,False
+Changcheng No.3 Coal Mine,China,1.12311012,Coal,,,False
+Yangjiacun Coal Mine,China,1.07878056,Coal,,,False
+Yangchangwan No.1 Well Coal Mine,China,1.0738991999999998,Coal,,,False
+Wangwa Coal Mine,China,1.072190724,Coal,,,False
+Ba Leng Coal Mine,China,1.0713608927999998,Coal,,,False
+Zaoquan Coal Mine,China,1.05925512,Coal,,,False
+Anjialing Open-Pit Mine,China,1.04461104,Coal,,,False
+Central Uplift Onshore Xinjiang Uygur Autonomous Region,China,1.04432646968,Oil&Gas,,,False
+Longwan Coal Mine,China,1.0358548287,Coal,,,False
+Shanxi Dongda Coal Mine,China,1.0299669599999999,Coal,,,False
+Kouzi East Coal Mine,China,1.01906904,Coal,,,False
+Hongshuliang Coal Mine,China,1.0139316924,Coal,,,False
+West Well of Faer Second Coal Mine,China,1.00573044,Coal,,,False
+Sihe Coal Mine,China,1.00522563,Coal,,,False
+El Descanso Coal Mine,Colombia,4.149156,Coal,,,False
+Cerrejón Coal Mine,Colombia,2.40895116,Coal,,,False
+San Juan Coal Mine,Colombia,1.6401369599999998,Coal,,,False
+La Luna Shale,Colombia,1.6167888359506832,Oil&Gas,,,False
+Pribbenow Coal Mine,Colombia,1.3692214799999998,Coal,,,False
+Kronprins Christian Offshore,Denmark,2.23244534032,Oil&Gas,,,False
+Hambach Coal Mine,Germany,1.7054961000000002,Coal,,,False
+Garzweiler Coal Mine,Germany,1.3220900000000002,Coal,,,False
+West Macedonia Lignite Centre (WMLC),Greece,2.1634200000000003,Coal,,,False
+Greater Turbot (Stabroek),Guyana,1.1144236752480001,Oil&Gas,,,False
+Greater Liza (Liza),Guyana,1.002783934256,Oil&Gas,,,False
+Rajmahal Coal Mine,India,5.832107189999999,Coal,,,False
+Gevra Coal Mine,India,2.4301960199999995,Coal,,,False
+Barail Shale,India,2.141583711135788,Oil&Gas,,,False
+Siarmal Coal Mine,India,1.8605412000000001,Coal,,,False
+Kerandari BC,India,1.83304,Coal,,,False
+Bankui,India,1.6,Coal,,,False
+Talaipalli Coal Mine,India,1.5329487599999998,Coal,,,False
+Lakhanpur Coal Mine,India,1.5179997,Coal,,,False
+"Integrated Belpahar, Lakhanpur, Lilari Coal Mine",India,1.5167978000000002,Coal,,,False
+Balaram Coal Mine,India,1.3731152399999997,Coal,,,False
+Gare Pelma Sector II,India,1.3103,Coal,,,False
+Mandakini B,India,1.31316,Coal,,,False
+Kaniha Coal Mine,India,1.1969351099999999,Coal,,,False
+Dipka Coal Mine,India,1.1718525000000002,Coal,,,False
+Kusmunda Coal Mine,India,1.1502183000000001,Coal,,,False
+Banhardih,India,1.106,Coal,,,False
+Saharpur Jamarpani,India,1.048,Coal,,,False
+Moher Amlohri Coal Mine,India,1.0443667499999998,Coal,,,False
+PTBA Coal Mines,Indonesia,8.894178479999999,Coal,,,False
+KPC Operation Coal Mine,Indonesia,3.0945552,Coal,,,False
+East Natuna (x-Natuna D-Alpha),Indonesia,2.158541117777679,Oil&Gas,,,False
+GAM Coal Mine,Indonesia,1.31552652,Coal,,,False
+Indexim Coalindo Coal Mine,Indonesia,1.1133857699999998,Coal,,,False
+Pakar North Coal Mine,Indonesia,1.0949309,Coal,,,False
+Tutupan Coal Mine,Indonesia,1.09340658,Coal,,,False
+MHU Coal Mine,Indonesia,1.0752436799999998,Coal,,,False
+BIB Coal Mine,Indonesia,1.0734273899999998,Coal,,,False
+Pasir Coal Mine,Indonesia,0.9753477299999999,Coal,,,False
+Marun,Iran,2.4085438848627354,Oil&Gas,,,False
+Azadegan,Iran,2.278016459436294,Oil&Gas,,,False
+Ahwaz Asmari,Iran,2.23828440612034,Oil&Gas,,,False
+Central Arabian Offshore,Iran,2.12214287376,Oil&Gas,,,False
+Gachsaran,Iran,1.7392968773440003,Oil&Gas,,,False
+Agha Jari,Iran,1.5631102313914453,Oil&Gas,,,False
+Ahwaz Bangestan,Iran,1.433911709079079,Oil&Gas,,,False
+Pazanan,Iran,1.3584091667848317,Oil&Gas,,,False
+South Pars (Phases 9-10) dry gas,Iran,1.26500630256,Oil&Gas,,,False
+Kish Gas Project,Iran,1.1936325984933431,Oil&Gas,,,False
+Pars Southwest,Iran,1.1092643000104647,Oil&Gas,,,False
+South Pars (Phases 4-5) dry gas,Iran,1.1009755224,Oil&Gas,,,False
+Mansouri Bangestan,Iran,1.0458388876,Oil&Gas,,,False
+South Pars (Phases 22-24),Iran,1.0427308097560606,Oil&Gas,,,False
+South Pars (Phases 20-21),Iran,1.0171732264459443,Oil&Gas,,,False
+South Pars (Phases 2-3) dry gas,Iran,1.01627422416,Oil&Gas,,,False
+Rumaila North & South,Iraq,7.7616094254400005,Oil&Gas,,,False
+Qurna West,Iraq,3.9828289324324806,Oil&Gas,,,False
+Baghdad East,Iraq,2.7424609247360006,Oil&Gas,,,False
+Central Arabian Onshore,Iraq,2.60742363232,Oil&Gas,,,False
+Majnoon,Iraq,2.4683423180000004,Oil&Gas,,,False
+Zubair,Iraq,1.679304398928,Oil&Gas,,,False
+Qurna West-2,Iraq,1.5987232813760002,Oil&Gas,,,False
+Halfayah,Iraq,1.4090438562720002,Oil&Gas,,,False
+Nahr bin Umar,Iraq,1.2776434311264002,Oil&Gas,,,False
+Ratawi,Iraq,1.065138743552,Oil&Gas,,,False
+Basrah Gas project,Iraq,1.0411542907760492,Oil&Gas,,,False
+Leviathan,Israel,1.0602417720564168,Oil&Gas,,,False
+Bogatyr Coal Mine,Kazakhstan,7.322039999999999,Coal,,,False
+Kashagan,Kazakhstan,5.08616126130123,Oil&Gas,,,False
+Tengiz,Kazakhstan,3.357866129472396,Oil&Gas,,,False
+Carboniferous Shale,Kazakhstan,1.287218514595456,Oil&Gas,,,False
+Karachaganak,Kazakhstan,1.2077343746547762,Oil&Gas,,,False
+Borly Coal Mines,Kazakhstan,1.0226449199999998,Coal,,,False
+Shubarkol Coal Mine,Kazakhstan,0.9909160799999999,Coal,,,False
+Greater Burgan,Kuwait,8.341919008384002,Oil&Gas,,,False
+Project Kuwait,Kuwait,4.409493298080001,Oil&Gas,,,False
+Central Arabian Onshore,Kuwait,3.59752295136,Oil&Gas,,,False
+Khafji,Kuwait-Saudi-Arabia-Neutral Zone,1.439897188912,Oil&Gas,,,False
+Sirte Shale,Libya,1.703281911431699,Oil&Gas,,,False
+El Sharara,Libya,1.0078460698384,Oil&Gas,,,False
+Eagle Ford Shale,Mexico,5.068029399764671,Oil&Gas,,,False
+Gulf Deepwater Offshore,Mexico,2.204840846,Oil&Gas,,,False
+Ku-Maloob-Zaap Project,Mexico,1.960224742512694,Oil&Gas,,,False
+Yucatan Platform Offshore,Mexico,1.02579831536,Oil&Gas,,,False
+Tavan Tolgoi Coal Mine,Mongolia,16.03032948,Coal,,,False
+Zambezi Coal Mine,Mozambique,4.149156,Coal,,,False
+Chirodzi Coal Mine,Mozambique,2.928816,Coal,,,False
+Revuboe Coal Mine,Mozambique,1.38454668,Coal,,,False
+MZLNG Joint Development (T1-T2),Mozambique,1.3101757227075046,Oil&Gas,,,False
+Area-1 Future Phases,Mozambique,1.0227243558541261,Oil&Gas,,,False
+Area 1 LNG (T1&T2),Mozambique,1.0066545972020167,Oil&Gas,,,False
+NLNG Base Project,Nigeria,1.0334113520575974,Oil&Gas,,,False
+Saebyol Coal Mining Complex,North Korea,3.2282702999999997,Coal,,,False
+Troll,Norway,1.7721044298996784,Oil&Gas,,,False
+Johan Sverdrup,Norway,1.0738719824297533,Oil&Gas,,,False
+Sembar Shale,Pakistan,2.8402368525480353,Oil&Gas,,,False
+Thar Coal Mine,Pakistan,1.886983,Coal,,,False
+Lublin Basin Silurian Shale,Poland,5.647084841026989,Oil&Gas,,,False
+North Field,Qatar,11.612750764405785,Oil&Gas,,,False
+North Field C LNG,Qatar,7.768105079287002,Oil&Gas,,,False
+North Field E,Qatar,4.594474423024538,Oil&Gas,,,False
+QatarGas LNG T8-T11 (NFE-East),Qatar,3.3949753195368304,Oil&Gas,,,False
+Barzan,Qatar,3.0940951084095216,Oil&Gas,,,False
+Central Arabian Onshore,Qatar,2.2172316192,Oil&Gas,,,False
+Qatargas 2 LNG T4-T5,Qatar,1.8280354311219043,Oil&Gas,,,False
+QatarGas LNG T12-T13 (NFE-South),Qatar,1.7852105812840446,Oil&Gas,,,False
+Dolphin,Qatar,1.5502358762213548,Oil&Gas,,,False
+Rasgas 2 LNG T3-T5,Qatar,1.509806372305485,Oil&Gas,,,False
+Rasgas 3 LNG T6-T7,Qatar,1.490692040585981,Oil&Gas,,,False
+QatarGas 1 LNG T1-T3,Qatar,1.2832725581705358,Oil&Gas,,,False
+Al Khaleej Gas project,Qatar,1.1353073492309076,Oil&Gas,,,False
+Bovanenkovo Zone (Yamal Megaproject),Russian Federation,11.158636248803424,Oil&Gas,,,False
+Gazprom dobycha Yamburg,Russian Federation,8.863793695013307,Oil&Gas,,,False
+Tunguska Basin CBM,Russian Federation,8.8438218336,Oil&Gas,,,False
+Shtokman,Russian Federation,6.135874131518798,Oil&Gas,,,False
+Urengoyskoye,Russian Federation,5.199312831838382,Oil&Gas,,,False
+Kuznetsk Depression (Kuzbass) CBM,Russian Federation,4.906095479999999,Oil&Gas,,,False
+Elga Coal Mine,Russian Federation,4.528609427759999,Coal,,,False
+Yuganskneftegaz,Russian Federation,4.3451933152618665,Oil&Gas,,,False
+Eastern Gas Program,Russian Federation,4.274058366198339,Oil&Gas,,,False
+Stepnoy Coal Mine,Russian Federation,3.5585114399999997,Coal,,,False
+West Siberia Offshore,Russian Federation,2.85640366752,Oil&Gas,,,False
+Lensky Basin CBM,Russian Federation,2.73771576,Oil&Gas,,,False
+Timan - Pechora Basin Offshore,Russian Federation,2.4814388903199998,Oil&Gas,,,False
+Tambey Zone (Yamal Megaproject),Russian Federation,2.4749092361929286,Oil&Gas,,,False
+Beisky-Zapadniy Coal Mine,Russian Federation,2.4338285999999996,Coal,,,False
+Raspadskaya Coal Mine,Russian Federation,2.41672222836,Coal,,,False
+Listvianskaya Coal Mine,Russian Federation,2.3876093999999997,Coal,,,False
+Timan - Pechora Basin Onshore,Russian Federation,2.3516496920800005,Oil&Gas,,,False
+Elegest Coal Mine,Russian Federation,2.281434144,Coal,,,False
+Taldinsky Coal Mine,Russian Federation,2.1966119999999996,Coal,,,False
+Ulug-Khem Project,Russian Federation,2.1528500399999997,Coal,,,False
+Samotlorneftegaz (TNK-BP),Russian Federation,1.867807240981859,Oil&Gas,,,False
+Sugodinsk-Ogodzhinsky Coal Mine,Russian Federation,1.8158659199999998,Coal,,,False
+Leningradskoye (Kara Sea),Russian Federation,1.8006198833061018,Oil&Gas,,,False
+Arshanovsky Coal Mine,Russian Federation,1.7084759999999999,Coal,,,False
+Usinsk-1 Coal Mine,Russian Federation,1.6566541199999998,Coal,,,False
+Pereyaslovskiy Coal Mine,Russian Federation,1.6346609999999997,Coal,,,False
+Gazprom dobycha Orenburg,Russian Federation,1.5933132221116892,Oil&Gas,,,False
+Pervomaisky Coal Mine,Russian Federation,1.53518772,Coal,,,False
+Arctic LNG 2 T1-3,Russian Federation,1.4755790891378633,Oil&Gas,,,False
+Volga - Urals Onshore,Russian Federation,1.3676370801600002,Oil&Gas,,,False
+Romashkino,Russian Federation,1.3386049352,Oil&Gas,,,False
+Rusanovskoye (Kara Sea),Russian Federation,1.3161239491611803,Oil&Gas,,,False
+Inaglinskaya-2 Mine,Russian Federation,1.2966,Coal,,,False
+Gazprom dobycha Nadym,Russian Federation,1.286567712273437,Oil&Gas,,,False
+Taymyr Basin CBM,Russian Federation,1.23332178528,Oil&Gas,,,False
+North Kara Sea Offshore,Russian Federation,1.17696009392,Oil&Gas,,,False
+West Siberia Onshore,Russian Federation,1.16451320024,Oil&Gas,,,False
+SeverEnergia Project,Russian Federation,1.099534928769511,Oil&Gas,,,False
+Erkovetskiy Coal Mine,Russian Federation,1.0389178799999998,Coal,,,False
+Shurapskaya Coal Mine,Russian Federation,1.03240764,Coal,,,False
+Ghawar Uthmaniyah,Saudi-Arabia,19.22190525051364,Oil&Gas,,,False
+Safaniya,Saudi-Arabia,11.926143554624,Oil&Gas,,,False
+Khurais project,Saudi-Arabia,7.634938271719794,Oil&Gas,,,False
+Ghawar Haradh,Saudi-Arabia,6.96682782850095,Oil&Gas,,,False
+Central Arabian Offshore,Saudi-Arabia,6.860051660800001,Oil&Gas,,,False
+Ghawar Shedgum,Saudi-Arabia,5.6950029434408265,Oil&Gas,,,False
+Qatif project,Saudi-Arabia,5.066814884197363,Oil&Gas,,,False
+Manifa (redevelop),Saudi-Arabia,5.000284718448019,Oil&Gas,,,False
+Ghawar Hawiyah,Saudi-Arabia,4.649714459398611,Oil&Gas,,,False
+Central Arabian Onshore,Saudi-Arabia,4.35997371264,Oil&Gas,,,False
+Shaybah,Saudi-Arabia,4.2685896715125295,Oil&Gas,,,False
+Berri,Saudi-Arabia,3.557107776918784,Oil&Gas,,,False
+Zuluf (CR in field),Saudi-Arabia,3.5350522292800006,Oil&Gas,,,False
+Zuluf,Saudi-Arabia,2.449978205742121,Oil&Gas,,,False
+Khursaniyah,Saudi-Arabia,2.4132555576827786,Oil&Gas,,,False
+Ghawar Ain Dar N,Saudi-Arabia,2.088574938528698,Oil&Gas,,,False
+Marjan,Saudi-Arabia,1.8899260747557556,Oil&Gas,,,False
+Safaniya YTF Concession,Saudi-Arabia,1.8428718673923543,Oil&Gas,,,False
+Zuluf (expansion),Saudi-Arabia,1.8332133470399974,Oil&Gas,,,False
+Abqaiq,Saudi-Arabia,1.5928277695368342,Oil&Gas,,,False
+Ghawar Ain Dar S,Saudi-Arabia,1.4346445302213289,Oil&Gas,,,False
+Sudair Shale,Saudi-Arabia,1.0328931229372316,Oil&Gas,,,False
+Harmaliyah,Saudi-Arabia,1.0280955230608393,Oil&Gas,,,False
+Kolubara Mine Complex,Serbia,2.5239900000000004,Coal,,,False
+Grootegeluk Coal Mine,South Africa,6.872046719999999,Coal,,,False
+Greater Soutpansberg Coal Project,South Africa,2.8037737199999997,Coal,,,False
+Boikarabelo Coal Mine,South Africa,2.4284765999999998,Coal,,,False
+Collingham Shale,South Africa,1.8498882064136324,Oil&Gas,,,False
+Paardekop Coal Mine,South Africa,1.6962726,Coal,,,False
+New Largo Coal Mine,South Africa,1.4277977999999998,Coal,,,False
+Bernice-Cygnus Coal Mine,South Africa,1.07242344,Coal,,,False
+Tanf Shale,Syria,1.3636553261184028,Oil&Gas,,,False
+Tanzanian Coastal Offshore,Tanzania,1.0311981669599999,Oil&Gas,,,False
+Afşin-Elbistan Coal Mine,Turkey,4.086460000000001,Coal,,,False
+Yolotan (Iolotan) South,Turkmenistan,9.548227901020114,Oil&Gas,,,False
+Yashlar Vostochnyy (East),Turkmenistan,2.1291453311858777,Oil&Gas,,,False
+Dovletabad-Donmez,Turkmenistan,1.5780942876174249,Oil&Gas,,,False
+Menilite Shale,Ukraine,1.6666733906470088,Oil&Gas,,,False
+Upper Zakum,United Arab Emirates,6.440382519584,Oil&Gas,,,False
+Bu Hasa,United Arab Emirates,4.9157785248,Oil&Gas,,,False
+Bab,United Arab Emirates,4.19703305528,Oil&Gas,,,False
+Lower Zakum,United Arab Emirates,2.43441954184,Oil&Gas,,,False
+Umm Shaif/Nasr,United Arab Emirates,1.9392527325600002,Oil&Gas,,,False
+Bab (Gasco),United Arab Emirates,1.674389775421935,Oil&Gas,,,False
+Asab,United Arab Emirates,1.3732313337600002,Oil&Gas,,,False
+Bowland Shale,United Kingdom,1.4760825938272615,Oil&Gas,,,False
+Permian Delaware Tight,United States,27.804431085129913,Oil&Gas,,,False
+Marcellus Shale,United States,26.71441286378078,Oil&Gas,,,False
+Permian Midland Tight,United States,16.628818211959153,Oil&Gas,,,False
+Haynesville/Bossier Shale,United States,13.204131177322234,Oil&Gas,,,False
+Utica Shale,United States,7.713186850505922,Oil&Gas,,,False
+Bakken Shale,United States,5.948592837899685,Oil&Gas,,,False
+Eagle Ford Shale,United States,5.924247946649453,Oil&Gas,,,False
+DJ Basin Tight Oil,United States,5.852116216215233,Oil&Gas,,,False
+Western Gulf Province_Texas,United States,5.061653121234896,Oil&Gas,,,False
+Woodford Shale,United States,3.377142984689252,Oil&Gas,,,False
+North Antelope Rochelle Coal Mine,United States,2.9242268999999994,Coal,,,False
+MC #1 Coal Mine,United States,2.8775617199999997,Coal,,,False
+PRB Tight Oil,United States,2.770946452861687,Oil&Gas,,,False
+Chukchi Sea Offshore,United States,2.53927748672,Oil&Gas,,,False
+Meramec Shale,United States,2.4395776108206624,Oil&Gas,,,False
+Permian Conventional_Texas,United States,2.061829878097165,Oil&Gas,,,False
+North Slope Onshore,United States,2.0359511588,Oil&Gas,,,False
+Cumberland Coal Mine,United States,1.8939676799999998,Coal,,,False
+Anadarko Shelf_Oklahoma,United States,1.8178260724192359,Oil&Gas,,,False
+Baltimore Canyon Offshore,United States,1.6485116991200002,Oil&Gas,,,False
+Austin Chalk Tight,United States,1.3928280650692542,Oil&Gas,,,False
+Barnett Shale,United States,1.3608799636973585,Oil&Gas,,,False
+Black Thunder Coal Mine,United States,1.3580400329999998,Coal,,,False
+Beaufort Sea Offshore,United States,1.25481059912,Oil&Gas,,,False
+Hamilton County Mine No.1,United States,1.1847792923999998,Coal,,,False
+Gulf Coast Centre Offshore,United States,1.10620091296,Oil&Gas,,,False
+Youngs Creek Coal Mine,United States,1.08842976,Coal,,,False
+West Florida Offshore,United States,1.06926148888,Oil&Gas,,,False
+Angren Coal Mine,Uzbekistan,2.4038000000000004,Coal,,,False
+Orinoco Joint Ventures,Venezuela,6.703396161976542,Oil&Gas,,,False
+La Luna Shale,Venezuela,1.0905220150267299,Oil&Gas,,,False
+Sengwe Colliery,Zimbabwe,1.0,Coal,,,False
