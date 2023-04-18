@@ -108,9 +108,46 @@ def get_coordinates_wikipedia_api(title):
         print(f'Error while making the API request. Status code: {response.status_code}')
         return None
     
-
+def urgewald_database():
+    file_path = "./data_sources/urgewald_GOGEL2022V1.xlsx"
+    df = pd.read_excel(file_path, sheet_name='UPSTREAM',\
+                    engine='openpyxl', skiprows = 3)
+    # Drop NaN rows
+    df.drop([0,1],axis=0, inplace = True)
+    
+    print(len(df["Project Names"].unique()))
+    
+def extract_carbon_bomb_from_research_project():
+    file_path = "./data_sources/1-s2.0-S0301421522001756-mmc2.xlsx"
+    df = pd.read_excel(file_path, sheet_name='Full Carbon Bombs List',\
+                    engine='openpyxl', skipfooter = 4)
+    df = df[["New","Name","Country","Potential emissions (Gt CO2)","Fuel"]]
+    # Make some adjustement on new project column
+    df.rename(columns={ df.columns[0]: "New_project" }, inplace = True)
+    df["New_project"].replace(np.nan, False, inplace= True)
+    df.loc[df['New_project']=='*', 'New_project']= True
+    # Define column types
+    dtype_d = {
+        "New_project": "bool",
+        "Name": "string",
+        "Country": "string",
+        "Potential emissions (Gt CO2)": "float",
+        "Fuel":"category"
+        }
+    df = df.astype(dtype_d)
+    # Reset index and sort Potential emissions in descending order
+    df.reset_index(inplace= True, names = "Original_index")
+    df.sort_values("Potential emissions (Gt CO2)",ascending = False,inplace= True)
+    df.reset_index(drop = True, inplace = True)
+    df.to_csv("data_cleaned/bomb_carbon_list_orderedby_CO2_emissions.csv",index=False)
+    return 
+    
     
 
 if __name__ == '__main__':
     # Main function
-    determine_gps_coordinates_bomb_carbon(engine = "Wikipedia")
+    #determine_gps_coordinates_bomb_carbon(engine = "Wikipedia")
+    # Urgewald database 
+    #urgewald_database()
+    # Kuhne database (research project)
+    extract_carbon_bomb_from_research_project()
