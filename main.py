@@ -110,12 +110,18 @@ def get_coordinates_wikipedia_api(title):
     
 def urgewald_database():
     file_path = "./data_sources/urgewald_GOGEL2022V1.xlsx"
-    df = pd.read_excel(file_path, sheet_name='UPSTREAM',\
+    df_upstream = pd.read_excel(file_path, sheet_name='UPSTREAM',\
                     engine='openpyxl', skiprows = 3)
+    df_midstream = pd.read_excel(file_path, sheet_name='MIDSTREAM Expansion',\
+                engine='openpyxl', skiprows = 3)
     # Drop NaN rows
-    df.drop([0,1],axis=0, inplace = True)
-    
-    print(len(df["Project Names"].unique()))
+    df_upstream.drop([0,1],axis=0, inplace = True)
+    df_midstream.drop([0,1],axis=0, inplace = True)
+    list_upstream = list(df_upstream["Company Name"])
+    list_midstream = list(df_midstream["Company Name"])
+    result_list = list_upstream + [x for x in list_midstream if x not in list_upstream]
+    print(len(result_list))
+
     
 def extract_carbon_bomb_from_research_project():
     file_path = "./data_sources/1-s2.0-S0301421522001756-mmc2.xlsx"
@@ -148,6 +154,6 @@ if __name__ == '__main__':
     # Main function
     #determine_gps_coordinates_bomb_carbon(engine = "Wikipedia")
     # Urgewald database 
-    #urgewald_database()
+    urgewald_database()
     # Kuhne database (research project)
-    extract_carbon_bomb_from_research_project()
+    # extract_carbon_bomb_from_research_project()
