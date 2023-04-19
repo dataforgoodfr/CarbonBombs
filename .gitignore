@@ -3,7 +3,9 @@ credentials.py
 venv
 temp.py
 data_sources/Global-Coal-Mine-Tracker-April-2023.xlsx
+data_sources/Global-Oil-and-Gas-Extraction-Tracker-Feb-2023.xlsx
 data_sources/Carbon_bomb_personalDB.csv
+data_cleaned/diffGPT_GEM_coal_only.csv
 
 # Editors
 .vscode/
