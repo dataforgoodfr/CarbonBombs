@@ -45,7 +45,7 @@ def load_urgewald_database_GOGEL(year, type = "UPSTREAM"):
                     "2022":"urgewald_GOGEL2022V1.xlsx",
                     }
     file_path = os.path.join("data_sources",file_version[str(year)])
-    df= pd.read_excel(file_path, sheet_name=type,\
+    df = pd.read_excel(file_path, sheet_name=type,\
                     engine='openpyxl', skiprows = 3)
     # Drop NaN rows
     df.drop([0,1],axis=0, inplace = True)
@@ -82,6 +82,12 @@ def load_coal_mine_gem_database():
     file_path = "./data_sources/Global-Coal-Mine-Tracker-April-2023.xlsx"
     df = pd.read_excel(file_path, sheet_name='Global Coal Mine Tracker',engine='openpyxl')
     return df
+
+def load_d4g_database():
+    file_path = "./data_sources/Carbon_bomb_personalDB.csv"
+    df = pd.read_csv(file_path,sep=";")
+    return df
+    
     
 def clean_coal_mine_gem_database():
     # Load coal mine database from gem

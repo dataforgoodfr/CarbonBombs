@@ -3,6 +3,7 @@ credentials.py
 venv
 temp.py
 data_sources/Global-Coal-Mine-Tracker-April-2023.xlsx
+data_sources/Carbon_bomb_personalDB.csv
 
 # Editors
 .vscode/
