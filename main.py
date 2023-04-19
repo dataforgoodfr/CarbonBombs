@@ -9,6 +9,7 @@ import os
 import pandas as pd
 import numpy as np
 import requests
+import warnings
 from credentials import API_KEY
 
     
@@ -81,6 +82,13 @@ def load_carbon_bomb_database():
 def load_coal_mine_gem_database():
     file_path = "./data_sources/Global-Coal-Mine-Tracker-April-2023.xlsx"
     df = pd.read_excel(file_path, sheet_name='Global Coal Mine Tracker',engine='openpyxl')
+    return df
+
+def load_gasoil_mine_gem_database():
+    file_path = "./data_sources/Global-Oil-and-Gas-Extraction-Tracker-Feb-2023.xlsx"
+    # Line that must be passed before in order to avoid useless warning
+    warnings.filterwarnings('ignore', category=UserWarning, module='openpyxl')
+    df = pd.read_excel(file_path, sheet_name='Main data',engine='openpyxl')
     return df
 
 def load_d4g_database():
