@@ -11,10 +11,6 @@ import numpy as np
 import requests
 from credentials import API_KEY
 
-
-
-
-    
     
 def get_coordinates_google_api(address, api_key = API_KEY):
     """Get coordinates of an adress through an API call to Google Maps
@@ -43,19 +39,19 @@ def get_coordinates_google_api(address, api_key = API_KEY):
     return latitude,longitude,partial_match
 
     
-def urgewald_database():
-    file_path = "./data_sources/urgewald_GOGEL2022V1.xlsx"
-    df_upstream = pd.read_excel(file_path, sheet_name='UPSTREAM',\
+def load_urgewald_database(year, type = "UPSTREAM"):
+    # Define file version in function of the year
+    file_version = {"2021":"urgewald_GOGEL2021V2.xlsx",
+                    "2022":"urgewald_GOGEL2022V1.xlsx",
+                    }
+    file_path = os.path.join("data_sources",file_version[str(year)])
+    df= pd.read_excel(file_path, sheet_name=type,\
                     engine='openpyxl', skiprows = 3)
-    df_midstream = pd.read_excel(file_path, sheet_name='MIDSTREAM Expansion',\
-                engine='openpyxl', skiprows = 3)
     # Drop NaN rows
-    df_upstream.drop([0,1],axis=0, inplace = True)
-    df_midstream.drop([0,1],axis=0, inplace = True)
-    list_upstream = list(df_upstream["Company Name"])
-    list_midstream = list(df_midstream["Company Name"])
-    result_list = list_upstream + [x for x in list_midstream if x not in list_upstream]
-    print(len(result_list))
+    df.drop([0,1],axis=0, inplace = True)
+    # Return dataframe
+    return df
+
 
     
 def extract_carbon_bomb_from_research_project():
