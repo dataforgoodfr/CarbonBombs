@@ -52,9 +52,8 @@ def load_urgewald_database(year, type = "UPSTREAM"):
     # Return dataframe
     return df
 
-
     
-def extract_carbon_bomb_from_research_project():
+def load_carbon_bomb_database():
     file_path = "./data_sources/1-s2.0-S0301421522001756-mmc2.xlsx"
     df = pd.read_excel(file_path, sheet_name='Full Carbon Bombs List',\
                     engine='openpyxl', skipfooter = 4)
@@ -72,12 +71,7 @@ def extract_carbon_bomb_from_research_project():
         "Fuel":"category"
         }
     df = df.astype(dtype_d)
-    # Reset index and sort Potential emissions in descending order
-    df.reset_index(inplace= True, names = "Original_index")
-    df.sort_values("Potential emissions (Gt CO2)",ascending = False,inplace= True)
-    df.reset_index(drop = True, inplace = True)
-    df.to_csv("data_cleaned/bomb_carbon_list_orderedby_CO2_emissions.csv",index=False)
-    return 
+    return df
     
     
 
