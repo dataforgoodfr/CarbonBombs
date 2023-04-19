@@ -2,6 +2,7 @@
 credentials.py
 venv
 temp.py
+data_sources/Global-Coal-Mine-Tracker-April-2023.xlsx
 
 # Editors
 .vscode/
