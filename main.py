@@ -39,7 +39,7 @@ def get_coordinates_google_api(address, api_key = API_KEY):
     return latitude,longitude,partial_match
 
     
-def load_urgewald_database(year, type = "UPSTREAM"):
+def load_urgewald_database_GOGEL(year, type = "UPSTREAM"):
     # Define file version in function of the year
     file_version = {"2021":"urgewald_GOGEL2021V2.xlsx",
                     "2022":"urgewald_GOGEL2022V1.xlsx",
@@ -52,6 +52,11 @@ def load_urgewald_database(year, type = "UPSTREAM"):
     # Return dataframe
     return df
 
+def load_urgewald_database_GCEL():
+    file_path = "./data_sources/urgewald_GCEL_2022_download_0.xlsx"
+    df = pd.read_excel(file_path, sheet_name = 'Output', engine='openpyxl')
+    # Return dataframe
+    return df
     
 def load_carbon_bomb_database():
     file_path = "./data_sources/1-s2.0-S0301421522001756-mmc2.xlsx"
@@ -73,7 +78,29 @@ def load_carbon_bomb_database():
     df = df.astype(dtype_d)
     return df
     
+def load_coal_mine_gem_database():
+    file_path = "./data_sources/Global-Coal-Mine-Tracker-April-2023.xlsx"
+    df = pd.read_excel(file_path, sheet_name='Global Coal Mine Tracker',engine='openpyxl')
+    return df
     
+def clean_coal_mine_gem_database():
+    # Load coal mine database from gem
+    df = load_coal_mine_gem_database()
+    # Filter dataframe based on Carbon bomb list 
+    df_cb = load_carbon_bomb_database()
+    # Only keep Carbon Bomb that corresponds to Coal in df_cb
+    df_cb = df_cb[df_cb["Fuel"]=="Coal"]
+    # Only keep Coal Mine which name corresponds to a Carbon Bomb
+    list_coal_carbon_bomb = list(df_cb["Name"])
+    print(len(list_coal_carbon_bomb))
+    # Filter df rows based on this list
+    df = df[df['Mine Name'].isin(list_coal_carbon_bomb)]
+    print(df.shape)
+    
+    return df
+
+
+
 
 if __name__ == '__main__':
     # Main function
