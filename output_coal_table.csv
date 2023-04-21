@@ -1,0 +1,231 @@
+New_project,Project Name,Country_x,Potential emissions (GtCO2),Fuel,Mine IDs,GEM Wiki Page (ENG),Latitude,Longitude
+False,Ensham Coal Mine,Australia,1.31499396,Coal,M0038,https://www.gem.wiki/Ensham_mine,-23.454464,148.497455
+False,Hunter Valley North Coal Mine,Australia,1.734018,Coal,M0049,https://www.gem.wiki/Hunter_Valley_North_coal_mine,-32.4657844,150.9734981
+False,Byerwen Coal Mine,Australia,1.8407268,Coal,M0018,https://www.gem.wiki/Byerwen_Coal_Project,-21.242828,147.835392
+False,Mount Pleasant Coal Mine,Australia,1.12027212,Coal,M0076,https://www.gem.wiki/Mount_Pleasant_coal_mine,-32.25591661,150.8499847
+False,Hunter Valley South Coal Mine,Australia,1.1737968,Coal,M0050,https://www.gem.wiki/Hunter_Valley_South_coal_mine,-32.5245107,150.9819012
+False,Peak Downs Coal Mine,Australia,2.31824868,Coal,M0087,https://www.gem.wiki/Peak_Downs_coal_mine,-22.2548999,148.1796569
+False,Blackwater Coal Mine,Australia,1.000395,Coal,M0011,https://www.gem.wiki/Blackwater_mine,-23.685585,148.807361
+False,Goonyella-Riverside Coal Mine,Australia,2.18219496,Coal,M0043,https://www.gem.wiki/Goonyella_Riverside_mine,-21.792321,147.962045
+False,Loy Yang Coal Mine,Australia,3.0513672,Coal,M0062,https://www.gem.wiki/Loy_Yang_mine,-38.2347,146.564
+False,Yallourn,Australia,1.13003484,Coal,,,,
+True,Red Hill Coal Project,Australia,4.56446892,Coal,M0092,https://www.gem.wiki/Red_Hill_coal_project,-21.764098,148.005592
+True,Wards Well Coal Mine,Australia,2.66772,Coal,M0114,https://www.gem.wiki/Wards_Well_-_Lancewood_coal_project,-21.598813,147.958654
+True,Alpha North Coal Mine,Australia,2.542806,Coal,,,,
+True,Carmichael Coal Project,Australia,2.1068964,Coal,M0023,https://www.gem.wiki/Carmichael_Coal_Project,-22.073611,146.329722
+True,Valeria Coal Mine,Australia,2.03280264,Coal,M0108,https://www.gem.wiki/Valeria_coal_project,-23.470142,148.033559
+True,Wilton and Fairhill Coal Projects,Australia,1.867404,Coal,M0118,https://www.gem.wiki/Wilton_and_Fairhill_coal_project,-23.41261,148.576971
+True,Galilee Coal Mine,Australia,1.81629,Coal,M0041,https://www.gem.wiki/Galilee_Coal_Project,-23.498536,145.94229
+True,Hutton Coal Mine,Australia,1.68599904,Coal,M0051,https://www.gem.wiki/Hutton_coking_coal_project,-25.951645,148.961201
+True,Olive Downs Coal Mine,Australia,1.37120808,Coal,M0086,https://www.gem.wiki/Olive_Downs_coal_mine,-22.2204628,148.4033203
+True,Saraji East Coal Mine,Australia,1.33919544,Coal,M0097,https://www.gem.wiki/Saraji_East_coal_mine,-22.371371,148.299848
+True,Phulbari Coal Mine,Bangladesh,1.39606896,Coal,M0124,https://www.gem.wiki/Phulbari_coal_mine,25.9468733,89.5532405
+True,Project Motheo,Botswana,2.179548,Coal,M0129,https://www.gem.wiki/Morupule_coal_mine,-22.515137,27.024339
+False,Maritsa Coal Mines,Bulgaria,2.5191824,Coal,,,,
+False,Fording River,Canada,1.034808588,Coal,,,,
+True,Murray River Coal Mine,Canada,8.4833496,Coal,M0152,https://www.gem.wiki/Murray_River,53.5226333,-118.8403882
+True,Gething Coal Mine,Canada,2.0808216,Coal,M0144,https://www.gem.wiki/Gething_coal_mine,56.038803,-122.305087
+False,Qingshuiying Coal Mine,China,1.82806932,Coal,M0311,https://www.gem.wiki/Qingshuiying_Coal_Mine_(Phase_1_Project),38.125694,106.728935
+False,Sijiazhuang Coal Mine,China,1.559805723,Coal,M0348,https://www.gem.wiki/Sijiazhuang_Coal_Mine,37.585557,113.621388
+False,Shangyuquan Coal Mine,China,1.428774072,Coal,M0327,https://www.gem.wiki/Shangyuquan_Coal_Mine,39.256901,111.22119
+False,Shaqu No.1 Coal Mine,China,1.38630624,Coal,M0335,https://www.gem.wiki/Shaqu_No.1_Mine,37.411799,110.861439
+False,Shahaiji No.1 Coal Mine,China,1.1959332,Coal,M0321,https://www.gem.wiki/Shahaiji_No.1_coal_mine,46.553039,86.205922
+False,Gaojiabao Coal Mine,China,1.1471196,Coal,M0219,https://www.gem.wiki/Gaojiabao_Coal_Mine,35.268672,107.818112
+False,Shajihai No.2 Coal Mine,China,1.1471196,Coal,M0322,https://www.gem.wiki/Shahaiji_No.1_coal_mine,46.553039,86.205922
+False,Yangjiacun Coal Mine,China,1.07878056,Coal,M0404,https://www.gem.wiki/Yangjiacun_Coal_Mine,39.8069,110.153087
+False,Kouzi East Coal Mine,China,1.01906904,Coal,M0271,https://www.gem.wiki/Kouzi_East_Coal_Mine,32.833342,116.162687
+False,Wangjialing Coal Mine,China,2.72374212,Coal,M0366,https://www.gem.wiki/Wangjialing_Coal_Mine,35.702102,110.686347
+False,Yili No.4 Coal Mine,China,2.58235296,Coal,M0408,https://www.gem.wiki/Yili_No.4_coal_mine,44.074228,81.141898
+False,Hongqingliang Coal Mine,China,1.97763419,Coal,M0244,https://www.gem.wiki/Hongqingliang_mine,39.875788,109.367767
+False,Weijiamao Open Pit Mine,China,1.68650988,Coal,M0370,https://www.gem.wiki/Weijiamao_Surface_Mine,39.534982,111.29515
+False,Dingji Coal Mine,China,1.667325,Coal,M0208,https://www.gem.wiki/Dingji_Coal_Mine,32.871396,116.631428
+False,Wudong Coal Mine,China,1.61328948,Coal,M0377,https://www.gem.wiki/Wudong_Coal_Mine,43.929294,87.745344
+False,Lijiahao Coal Mine,China,1.47905208,Coal,M0276,https://www.gem.wiki/Lijiahao_Coal_Mine,39.738114,110.024669
+False,Shicaocun Coal Mine,China,1.456378163,Coal,M0342,https://www.gem.wiki/Shicaocun_mine,37.943405,106.696881
+False,Qingchunta Coal Mine,China,1.423502203,Coal,M0309,https://www.gem.wiki/Qingchunta_mine,39.476108,111.32351
+False,Xiaozhuang Coal Mine,China,1.41071304,Coal,M0387,https://www.gem.wiki/Xiaozhuang_Coal_Mine,35.08346,107.983823
+False,Talahao Coal Mine,China,1.297489895,Coal,M0353,https://www.gem.wiki/Talahao_mine,39.79013,110.156685
+False,Baishihu Surface Mine,China,1.2935604,Coal,M0170,https://www.gem.wiki/Baishihu_Surface_Mine,43.917059,94.670358
+False,Fengjiata Coal Mine,China,1.18617048,Coal,M0213,https://www.gem.wiki/Fengjiata_Coal_Mine,39.196394,111.13213
+False,Wucaiwan No.1 Surface Mine,China,1.389697968,Coal,M0376,https://www.gem.wiki/Wucaiwan_No.1_open-pit_mine,44.933507,89.184722
+False,Gaojialiang No.1 Coal Mine,China,2.012584728,Coal,M0220,https://www.gem.wiki/Gaojialiang_No.1_coal_mine,39.724671,110.065041
+False,Gaohe Coal Mine,China,1.533939,Coal,M0218,https://www.gem.wiki/Gaohe_Coal_Mine,36.152253,112.990815
+False,Hongshaquan No.1 Coal Mine,China,8.97193968,Coal,,,,
+False,Ningxia Hongliu Coal Mine,China,2.899771908,Coal,M0302,https://www.gem.wiki/Ningxia_Hongliu_mine,37.883204,106.7576
+False,Guojiawan Coal Mine,China,1.87688292,Coal,M1128,https://www.gem.wiki/Fugu_Guojiawan_mine,39.278743,110.39397
+False,Gaotouyao Coal Mine,China,1.870537152,Coal,M0222,https://www.gem.wiki/Gaotouyao_Coal_Mine,40.019808,109.639961
+False,Shanxi Lu'an Gucheng Coal Mine,China,1.811350662,Coal,M0331,https://www.gem.wiki/Shanxi_Lu'an_Gucheng_mine,36.25626,112.918649
+False,Hanglaiwan Coal Mine,China,1.780964196,Coal,M0232,https://www.gem.wiki/Hanglaiwan_Coal_Mine,38.530798,109.871886
+False,Xiaojiawa Coal Mine,China,1.769273339,Coal,M0384,https://www.gem.wiki/Xiaojiawa_mine,38.394821,111.143913
+False,Wangjiata Coal Mine,China,1.61328948,Coal,M0367,https://www.gem.wiki/Wangjiata_coal_mine,39.676306,110.001415
+False,Huangling No.2 Coal Mine,China,1.36189944,Coal,,,,
+False,Dafosi Coal Mine,China,1.360020116,Coal,M0199,https://www.gem.wiki/Dafosi_Coal_Mine,35.062428,107.960069
+False,Zaoquan Coal Mine,China,1.05925512,Coal,M0424,https://www.gem.wiki/Zaoquan_Coal_Mine,37.926904,106.53365
+False,Yangquan No.1 Coal Mine,China,1.210995054,Coal,,,,
+False,Sandaogou Coal Mine,China,2.262266292,Coal,M1191,https://www.gem.wiki/Fugu_Sandaogou_Coal_Mine,39.218384,110.774205
+False,Guqiao Coal Mine,China,2.029181352,Coal,M0229,https://www.gem.wiki/Guqiao_Coal_Mine,32.821408,116.545709
+False,Sihe Coal Mine,China,1.00522563,Coal,,,,
+False,Dananhu No.1 Coal Mine,China,7.16583648,Coal,,,,
+False,Xiaojihan Coal Mine,China,4.62142758,Coal,M0385,https://www.gem.wiki/Xiaojihan_mine,38.4378,109.5059
+False,Shengli East No.2 Coal Mine,China,4.5936618,Coal,M0336,https://www.gem.wiki/Shengli_East_No.2_open-pit_mine,44.06697,116.22348
+False,Chahasu Coal Mine,China,4.208464524,Coal,M0190,https://www.gem.wiki/Chahasu_mine,39.302564,109.965281
+False,Majialiang Coal Mine,China,3.17044332,Coal,M0287,https://www.gem.wiki/Majialiang_Coal_Mine,39.179446,112.420825
+False,Yushuwan Coal Mine,China,2.82630744,Coal,M0419,https://www.gem.wiki/Yushuwan_Coal_Mine,38.557184,109.897685
+False,Huangyuchuan Coal Mine,China,2.261021545,Coal,M0253,https://www.gem.wiki/Huangyuchuan_mine,39.67209,111.183497
+False,Dongzhouyao Coal Mine,China,2.152948235,Coal,M0210,https://www.gem.wiki/Dongzhouyao_mine,40.020636,112.863555
+False,Longwanggou Coal Mine,China,1.922670077,Coal,M0282,https://www.gem.wiki/Longwanggou_mine,39.810538,111.214212
+False,Tongxin Coal Mine,China,1.56861936,Coal,M0363,https://www.gem.wiki/Tongxin_Coal_Mine,40.013182,113.103349
+False,Xiwan Surface Coal Mine,China,1.529598563,Coal,M0398,https://www.gem.wiki/Xiwan_surface_mine,38.6047,110.064
+False,Zhangjiamao Coal Mine,China,1.324312968,Coal,M0427,https://www.gem.wiki/Zhangjiamao_Coal_Mine,38.936832,110.402261
+False,Liuzhuang Coal Mine,China,1.52054364,Coal,M0280,https://www.gem.wiki/Liuzhuang_Coal_Mine,32.805365,116.285412
+False,Menkeqing Coal Mine,China,3.685914936,Coal,M0293,https://www.gem.wiki/Menkeqing_mine,38.901778,109.538887
+False,Meihuajing Coal Mine,China,3.49749444,Coal,M0291,https://www.gem.wiki/Meihuajing_Coal_Mine,38.096785,106.718029
+False,Shigetai Coal Mine,China,1.19330253,Coal,M0343,https://www.gem.wiki/Shigetai_Coal_Mine,39.412064,110.13213
+False,Yangchangwan No.1 Well Coal Mine,China,1.0738992,Coal,,,,
+False,Zhangji Coal Mine,China,2.193932928,Coal,M0426,https://www.gem.wiki/Zhangji_Coal_Mine,32.746348,116.515103
+False,Hulusu Coal Mine,China,3.963176184,Coal,M0255,https://www.gem.wiki/Hulusu_coal_mine,39.047968,109.500809
+False,Baode Coal Mine,China,1.65844206,Coal,M0178,https://www.gem.wiki/Baode_Coal_Mine,38.950871,111.089441
+False,Tashan Coal Mine,China,9.003555,Coal,M0358,https://www.gem.wiki/Tashan_Coal_Mine,39.924229,113.070254
+False,Hongqinghe Coal Mine,China,5.707042044,Coal,M0243,https://www.gem.wiki/Hongqinghe_coal_mine,39.292114,109.684071
+False,Xiaobaodang No.1 Coal Mine,China,3.783542136,Coal,M0382,https://www.gem.wiki/Xiaobaodang_No.1_mine,38.756195,109.893889
+False,Hongliulin Coal Mine,China,3.08990088,Coal,M0242,https://www.gem.wiki/Hongliulin_Coal_Mine,38.935223,110.400815
+False,Buliangou Coal Mine,China,1.820015076,Coal,M0187,https://www.gem.wiki/Buliangou_Coal_Mine,40.012229,111.336127
+False,Huojitu Well Of Daliuta Coal Mine,China,1.13336496,Coal,M0256,https://www.gem.wiki/Huojitu_Well_of_Daliuta_Coal_Mine,39.259312,110.224368
+False,Shangwan Coal Mine,China,1.78657776,Coal,M0326,https://www.gem.wiki/Shangwan_Coal_Mine,39.217545,110.007346
+False,Halagou Coal Mine,China,1.25939088,Coal,M0231,https://www.gem.wiki/Halagou_Coal_Mine,39.232488,110.076802
+False,Ningtiaota Coal Mine,China,4.0149186,Coal,M0301,https://www.gem.wiki/Ningtiaota_coal_mine,39.030282,110.250253
+False,Jinjie Coal Mine,China,3.85139304,Coal,M0267,https://www.gem.wiki/Jinjie_coal_mine,38.742365,110.171171
+False,Suancigou Coal Mine,China,2.077994952,Coal,M0351,https://www.gem.wiki/Suancigou_coal_mine,39.705785,111.205624
+False,Daliuta Coal Mine,China,1.207160328,Coal,M0202,https://www.gem.wiki/Shenhua_Daliuta_coal_mine,39.263103,110.234325
+False,Buertai Coal Mine,China,4.515258,Coal,M0186,https://www.gem.wiki/Buertai_Coal_Mine,39.495115,109.973302
+False,Pingshuo East Coal Mine,China,2.64996711,Coal,M0306,https://www.gem.wiki/Pingshuo_East_open-pit_mine,39.550649,112.442337
+False,Baiyinhua No.3 Surface Mine,China,1.5792966,Coal,M0176,https://www.gem.wiki/Baiyinhua_No.3_Surface_Mine,44.897826,118.615908
+False,Yimin Surface Coal Mine,China,2.0336148,Coal,,,,
+False,Antaibao Surface Mine,China,1.19837388,Coal,M0166,https://www.gem.wiki/Antaibao_open-pit_mine,39.474754,112.311939
+False,Shenhua Bulianta Coal Mine,China,2.22313896,Coal,M0340,https://www.gem.wiki/Shenhua_Bulianta_Coal_Mine,39.354814,110.168084
+False,Anjialing Open-Pit Mine,China,1.04461104,Coal,M0165,https://www.gem.wiki/Anjialing_open-pit_mine,39.449488,112.360569
+False,Shenhua Heidaigou Surface Coal Mine,China,2.72080242,Coal,M0341,https://www.gem.wiki/Shenhua_Heidaigou_Surface_Mine,39.794309,111.254573
+False,Haerwusu Surface Mine,China,2.0804889,Coal,M0230,https://www.gem.wiki/Haerwusu_Surface_Mine,39.731044,111.258324
+False,Shenhua Baorixile Surface Coal Mine,China,1.5660757,Coal,M0339,https://www.gem.wiki/Shenhua_Baorixile_Surface_Mine,49.391925,119.746017
+True,Dahaize Coal Mine,China,7.993471068,Coal,M0200,https://www.gem.wiki/Dahaize_coal_mine,38.422179,109.277001
+True,Jiangjun Gebi No.2 Coal Mine,China,7.83946416,Coal,,,,
+True,Balasu Coal Mine,China,6.401171436,Coal,M0177,https://www.gem.wiki/Balasu_mine,38.265057,109.208519
+True,Baijia Haizi Coal Mine,China,4.961658372,Coal,M0168,https://www.gem.wiki/Baijia_Haizi_coal_mine,38.356604,108.950826
+True,Xinwen Ili No.1 Coal Mine,China,4.488654588,Coal,,,,
+True,Shilawusu Coal Mine,China,3.884098152,Coal,M0344,https://www.gem.wiki/Shilawusu_mine,39.018006,109.621986
+True,Yingpanhao Coal Mine,China,3.75986754,Coal,M0410,https://www.gem.wiki/Yingpanhao_Coal_Mine,38.467484,108.945391
+True,Dananhu No. 7 Coal Mine,China,3.63173184,Coal,,,,
+True,Zhundong Surface Mine,China,3.53166396,Coal,M0438,https://www.gem.wiki/Zhundong_Surface_Mine_(Wucaiwan_No.3_Surface_Mine,44.836767,89.148398
+True,Qinghua No.7 Coal Mine,China,3.37546044,Coal,M0310,https://www.gem.wiki/Qinghua_No.7_coal_mine,44.004615,81.380651
+True,Shaanxi Caojiatan Coal Mine,China,3.336897696,Coal,M0319,https://www.gem.wiki/Shaanxi_Caojiatan_coal_mine,38.556704,109.898777
+True,Wucaiwan No.1 Coal Mine,China,3.336165492,Coal,M0375,https://www.gem.wiki/Wucaiwan_No.1_coal_mine,44.777239,89.098488
+True,Hetaoyu Coal Mine,China,3.00081606,Coal,M0238,https://www.gem.wiki/Hetaoyu_mine,35.269947,107.946376
+True,Taran Gaole Coal Mine,China,2.928816,Coal,M0357,https://www.gem.wiki/Taran_Gaole_coal_mine,39.996232,109.205991
+True,Dalaihushuo Coal Mine,China,2.875609176,Coal,M0201,https://www.gem.wiki/Dalaihushuo_coal_mine,45.382698,119.486564
+True,Dananhu West No.2 Coal Mine,China,2.74804677,Coal,,,,
+True,Shitoumei No.1 Coal Mine,China,2.416834556,Coal,M0345,https://www.gem.wiki/Shitoumei_No.1_open_pit_coal_mine,44.271559,93.057426
+True,Xinzhuang Coal Mine,China,2.299511069,Coal,M0397,https://www.gem.wiki/Xinzhuang_mine,35.265896,107.912029
+True,Inner Mongolia Erlintu Coal Mine,China,2.228926603,Coal,M0258,https://www.gem.wiki/Inner_Mongolia_Erlintu_mine,39.217439,110.006028
+True,Jinjitan Coal Mine,China,2.192462844,Coal,M0268,https://www.gem.wiki/Jinjitan_Coal_Mine,38.506707,109.819371
+True,Pangpangta Coal Mine,China,2.180771987,Coal,M0305,https://www.gem.wiki/Pangpangta_Coal_Mine,37.998811,111.13841
+True,Guojiatan Coal Mine,China,2.1613851,Coal,M0227,https://www.gem.wiki/Guojiatan_coal_mine,38.611469,109.809687
+True,Boli Coal Mine,China,2.0209497,Coal,M0184,https://www.gem.wiki/Boli_Coal_Mine,37.427284,113.576734
+True,Xiaobaodang No.2 Coal Mine,China,1.934043646,Coal,M0383,https://www.gem.wiki/Xiaobaodang_No.2_mine,38.756195,109.893889
+True,Zhaoshipan Coal Mine,China,1.933750764,Coal,M0429,https://www.gem.wiki/Zhaoshipan_coal_mine,37.909105,109.094503
+True,Madaotou Coal Mine,China,1.8353013,Coal,M0286,https://www.gem.wiki/Madaotou_coal_mine,39.840587,112.655069
+True,Chagannur No.1 Coal Mine,China,1.73650512,Coal,M0189,https://www.gem.wiki/Chagannur_No.1_coal_mine,43.553884,115.167883
+True,Muduchaideng Coal Mine,China,1.719483467,Coal,M0295,https://www.gem.wiki/Muduchaideng_Coal_Mine,38.837173,109.468665
+True,Qiyuan Coal Mine,China,1.71387033,Coal,M0313,https://www.gem.wiki/Qiyuan_coal_mine,37.887028,113.24403
+True,Nalin River No.2 Coal Mine,China,1.674721396,Coal,M0296,https://www.gem.wiki/Nalin_River_No.2_mine,38.060343,108.973298
+True,Shengli No.1 Open-Pit Coal Mine,China,1.6129498,Coal,M0337,https://www.gem.wiki/Shengli_No.1_open-pit_mine,44.002945,116.00678
+True,Yadian Coal Mine,China,1.49064531,Coal,M0401,https://www.gem.wiki/Yadian_Coal_Mine,35.217077,107.969668
+True,Taohe Coal Mine,China,1.413495415,Coal,M0356,https://www.gem.wiki/Taohe_coal_mine,46.798152,85.710006
+True,Sanjiao No.1 Coal Mine,China,1.384573357,Coal,M0316,https://www.gem.wiki/Sanjiao_No.1_Coal_Mine,37.786314,111.066045
+True,Zhong Yu Coal Mine,China,1.371608238,Coal,M0434,https://www.gem.wiki/Zhong_Yu_coal_mine,36.45315,112.238487
+True,Mengcun Coal Mine,China,1.363070966,Coal,M0292,https://www.gem.wiki/Mengcun_Coal_Mine,35.146834,107.933183
+True,Wenjiazhuang Coal Mine,China,1.255168504,Coal,M0372,https://www.gem.wiki/Wenjiazhuang_Coal_Mine,37.976647,113.182795
+True,Yuwang No.1 Coal Mine,China,1.252568876,Coal,M0420,https://www.gem.wiki/Yuwang_No.1_Coal_Mine,25.102178,104.615702
+True,Baiyanghe Coal Mine,China,1.23986544,Coal,M0172,https://www.gem.wiki/Baiyanghe_coal_mine,44.048539,88.529268
+True,Xinjiang Hongshan Coal Mine,China,1.204817275,Coal,M0393,https://www.gem.wiki/Xinjiang_Hongshan_Coal_Mine,46.501086,86.043581
+True,Talike District No. 2 Coal Mine,China,1.1349162,Coal,M0354,https://www.gem.wiki/Talike_District_No._2_Mine,41.979907,84.378789
+True,Changcheng No.3 Coal Mine,China,1.12311012,Coal,,,,
+True,Wangwa Coal Mine,China,1.072190724,Coal,M0368,https://www.gem.wiki/Wangwa_Coal_Mine,36.163732,106.616037
+True,Ba Leng Coal Mine,China,1.071360893,Coal,M0167,https://www.gem.wiki/Ba_Leng_coal_mine,38.474786,106.668299
+True,Longwan Coal Mine,China,1.035854829,Coal,M0281,https://www.gem.wiki/Longwan_coal_mine,35.581287,112.222324
+True,Shanxi Dongda Coal Mine,China,1.02996696,Coal,M0329,https://www.gem.wiki/Shanxi_Dongda_Coal_Mine,35.726066,112.424415
+True,Hongshuliang Coal Mine,China,1.013931692,Coal,M0248,https://www.gem.wiki/Hongshuliang_Coal_Mine,39.452624,111.290036
+True,West Well of Faer Second Coal Mine,China,1.00573044,Coal,M0374,https://www.gem.wiki/West_Well_of_Faer_Second_Mine,26.31898,104.753785
+False,Pribbenow Coal Mine,Colombia,1.36922148,Coal,M0443,https://www.gem.wiki/Pribbenow_coal_mine,9.575297,-73.484914
+False,El Descanso Coal Mine,Colombia,4.149156,Coal,M0441,https://www.gem.wiki/El_Descanso_mine,9.7050912,-73.5231884
+False,Cerrejón Coal Mine,Colombia,2.40895116,Coal,M0440,https://www.gem.wiki/Cerrejon_coal_mine,11.033968,-72.662926
+True,San Juan Coal Mine,Colombia,1.64013696,Coal,M0445,https://www.gem.wiki/San_Juan_Mine_(Colombia),10.7691665,-73.0183361
+False,Garzweiler Coal Mine,Germany,1.32209,Coal,M0452,https://www.gem.wiki/Garzweiler_mine,51.0839989,6.4529844
+False,Hambach Coal Mine,Germany,1.7054961,Coal,M0453,https://www.gem.wiki/Hambach_mine,50.891826,6.5734464
+False,West Macedonia Lignite Centre (WMLC),Greece,2.16342,Coal,M0462,https://www.gem.wiki/Western_Macedonia_Lignite_Centre,40.448222,21.783496
+False,Kaniha Coal Mine,India,1.19693511,Coal,,,,
+False,Rajmahal Coal Mine,India,5.83210719,Coal,M0617,https://www.gem.wiki/Rajmahal_coal_mines,25.038,87.3538
+False,Talaipalli Coal Mine,India,1.53294876,Coal,M0640,https://www.gem.wiki/Talaipalli_coal_mine,22.17758,83.355201
+False,Moher Amlohri Coal Mine,India,1.04436675,Coal,M0580,https://www.gem.wiki/Moher-Amlori_Extension_coal_mine,24.135,82.599444
+False,Lakhanpur Coal Mine,India,1.5179997,Coal,M0566,https://www.gem.wiki/Lakhanpur_coal_mine,21.7451,83.8401
+False,Dipka Coal Mine,India,1.1718525,Coal,M0513,https://www.gem.wiki/Dipka_coal_mine,22.345077,82.544192
+False,Gevra Coal Mine,India,2.43019602,Coal,M0527,https://www.gem.wiki/Gevra_coal_mine,22.336312,82.545748
+False,Kusmunda Coal Mine,India,1.1502183,Coal,M0564,https://www.gem.wiki/Kusmunda_coal_mine,22.332635,82.666666
+True,Siarmal Coal Mine,India,1.8605412,Coal,M0632,https://www.gem.wiki/Siarmal_coal_mine,22.043469,83.733619
+True,Kerandari BC,India,1.83304,Coal,,,,
+True,"Integrated Belpahar, Lakhanpur, Lilari Coal Mine",India,1.5167978,Coal,M0535,https://www.gem.wiki/Integrated_Belpahar-Lakhanpur-Lilari_Project,21.771004,83.854397
+True,Balaram Coal Mine,India,1.37311524,Coal,M0478,https://www.gem.wiki/Balaram_coal_mine,20.962009,85.178092
+True,Gare Pelma Sector II,India,1.3103,Coal,,,,
+True,Banhardih,India,1.106,Coal,,,,
+True,Bankui,India,1.6,Coal,,,,
+True,Mandakini B,India,1.31316,Coal,,,,
+True,Saharpur Jamarpani,India,1.048,Coal,,,,
+False,MHU Coal Mine,Indonesia,1.07524368,Coal,M0682,https://www.gem.wiki/Multi_Harapan_Utama_coal_mine,-0.534905,117.032835
+False,Indexim Coalindo Coal Mine,Indonesia,1.11338577,Coal,M0672,https://www.gem.wiki/Indexim_Coalindo_coal_mine,0.894663,117.80553
+False,PTBA Coal Mines,Indonesia,8.89417848,Coal,M0691,https://www.gem.wiki/Bukit_Asam_(Persero)_coal_mines,-3.739981,103.768323
+False,BIB Coal Mine,Indonesia,1.07342739,Coal,,,,
+False,Pasir Coal Mine,Indonesia,0.97534773,Coal,M0688,https://www.gem.wiki/Pasir_coal_mine,-1.890937,115.871586
+False,Tutupan Coal Mine,Indonesia,1.09340658,Coal,M0704,https://www.gem.wiki/Tutupan_coal_mine,-2.204484,115.527798
+False,KPC Operation Coal Mine,Indonesia,3.0945552,Coal,M0678,https://www.gem.wiki/KPC_Operation,0.823979,117.599032
+True,GAM Coal Mine,Indonesia,1.31552652,Coal,M0670,https://www.gem.wiki/Ganda_Alam_Makmur_(GAM)_coal_mine,1.142666,117.873624
+True,Pakar North Coal Mine,Indonesia,1.0949309,Coal,M0686,https://www.gem.wiki/Parkar_North_coal_mine,0.576564,116.019118
+False,Borly Coal Mines,Kazakhstan,1.02264492,Coal,,,,
+False,Shubarkol Coal Mine,Kazakhstan,0.99091608,Coal,,,,
+False,Bogatyr Coal Mine,Kazakhstan,7.32204,Coal,M0717,https://www.gem.wiki/Bogatyr_coal_mine,51.655495,75.4336006
+True,Tavan Tolgoi Coal Mine,Mongolia,16.03032948,Coal,M0736,https://www.gem.wiki/Tavan_Tolgoi_coal_deposit,43.625,105.474167
+True,Zambezi Coal Mine,Mozambique,4.149156,Coal,M0743,https://www.gem.wiki/Zambeze_Mine,-16.115037,33.602149
+True,Chirodzi Coal Mine,Mozambique,2.928816,Coal,M0739,https://www.gem.wiki/Chirodzi_coal_mine,-15.914093,33.013188
+True,Revuboe Coal Mine,Mozambique,1.38454668,Coal,M0742,https://www.gem.wiki/Revuboè_Mine,-16.234739,33.831034
+False,Saebyol Coal Mining Complex,North Korea,3.2282703,Coal,M0746,https://www.gem.wiki/Saebyol_Coal_Mining_Complex,42.860757,130.2001
+False,Thar Coal Mine,Pakistan,1.886983,Coal,M0750,https://www.gem.wiki/Thar_Mine,24.7755787,70.3982412
+False,Erkovetskiy Coal Mine,Russia,1.03891788,Coal,M0795,https://www.gem.wiki/Erkovetskiy_coal_mine,50.316,128.447
+False,Stepnoy Coal Mine,Russia,3.55851144,Coal,M0850,https://www.gem.wiki/Stepnoy_coal_mine,53.705548,91.087818
+False,Listvianskaya Coal Mine,Russia,2.3876094,Coal,,,,
+False,Raspadskaya Coal Mine,Russia,2.416722228,Coal,M0836,https://www.gem.wiki/Raspadskaya_coal_mine,53.784142,88.082391
+False,Pereyaslovskiy Coal Mine,Russia,1.634661,Coal,M0830,https://www.gem.wiki/Pereyaslovskiy_coal_mine,55.62819,94.70438
+False,Elegest Coal Mine,Russia,2.281434144,Coal,M0792,https://www.gem.wiki/Elegest_coal_mine,51.565237,94.112646
+False,Arshanovsky Coal Mine,Russia,1.708476,Coal,M0771,https://www.gem.wiki/Arshanovsky_coal_mine,53.398991,91.095886
+False,Taldinsky Coal Mine,Russia,2.196612,Coal,M0854,https://www.gem.wiki/Taldinsky_coal_mine,54.177222,87.190556
+True,Elga Coal Mine,Russia,4.528609428,Coal,,,,
+True,Beisky-Zapadniy Coal Mine,Russia,2.4338286,Coal,M0776,https://www.gem.wiki/Beisky-Zapadniy_coal_mine,53.36813093,91.15773622
+True,Ulug-Khem Project,Russia,2.15285004,Coal,,,,
+True,Sugodinsk-Ogodzhinsky Coal Mine,Russia,1.81586592,Coal,M0851,https://www.gem.wiki/Sugodinsk-Ogodzhinsky_coal_mine,52.750425,132.581978
+True,Usinsk-1 Coal Mine,Russia,1.65665412,Coal,M0863,https://www.gem.wiki/Usinsk-1_coal_mine,67.5027536,63.9918311
+True,Pervomaisky Coal Mine,Russia,1.53518772,Coal,M0832,https://www.gem.wiki/Pervomaisky_coal_mine,54.275148,86.882458
+True,Shurapskaya Coal Mine,Russia,1.03240764,Coal,M0845,https://www.gem.wiki/Shurapskaya_coal_mine,55.5959,86.1429
+True,Inaglinskaya-2 Mine,Russia,1.2966,Coal,,,,
+False,Kolubara Mine Complex,Serbia,2.52399,Coal,,,,
+False,Grootegeluk Coal Mine,South Africa,6.87204672,Coal,M0900,https://www.gem.wiki/Grootegeluk_coal_mine,-23.657141,27.566687
+True,Greater Soutpansberg Coal Project,South Africa,2.80377372,Coal,M0898,https://www.gem.wiki/Greater_Soutpansberg_Project,-22.881211,29.661589
+True,Boikarabelo Coal Mine,South Africa,2.4284766,Coal,M0889,https://www.gem.wiki/Boikarabelo_Coal_Mine,-26.0,27.545833
+True,Paardekop Coal Mine,South Africa,1.6962726,Coal,M0928,https://www.gem.wiki/Paardekop_coal_project,-27.23,29.72305556
+True,New Largo Coal Mine,South Africa,1.4277978,Coal,M0924,https://www.gem.wiki/New_Largo_coal_mine,-25.9052929,28.9732141
+True,Bernice-Cygnus Coal Mine,South Africa,1.07242344,Coal,,,,
+False,Afşin-Elbistan Coal Mine,Türkiye,4.08646,Coal,,,,
+False,Cumberland Coal Mine,United States,1.89396768,Coal,M1012,https://www.gem.wiki/Cumberland_Mine,39.81,-80.17
+False,Hamilton County Mine No.1,United States,1.184779292,Coal,,,,
+False,MC #1 Coal Mine,United States,2.87756172,Coal,M1045,https://www.gem.wiki/Sugar_Camp_Mine,38.0264,-88.7679
+False,Black Thunder Coal Mine,United States,1.358040033,Coal,M0994,https://www.gem.wiki/Black_Thunder_Mine,43.66,-105.3
+False,North Antelope Rochelle Coal Mine,United States,2.9242269,Coal,M1052,https://www.gem.wiki/North_Antelope_Rochelle_Mine,43.566667,-105.283333
+True,Youngs Creek Coal Mine,United States,1.08842976,Coal,M1082,https://www.gem.wiki/Youngs_Creek_mine,44.9947173,-106.9785339
+True,Angren Coal Mine,Uzbekistan,2.4038,Coal,M1083,https://www.gem.wiki/Angren_coal_mine,41.036101,70.180128
+False,Sengwe Colliery,Zimbabwe,1.0,Coal,,,,
