@@ -6,12 +6,14 @@ Created on Mon April 17 09:19:23 2023
 @author: Nicolle Mathieu
 """
 import os
+import logging
 import pandas as pd
 import numpy as np
 import requests
 import warnings
 from fuzzywuzzy import fuzz
 from credentials import API_KEY
+from manual_match import manual_match
 
     
 def get_coordinates_google_api(address, api_key = API_KEY):
@@ -161,11 +163,34 @@ def clean_coal_mine_gem_database():
     print(df.shape)
     return df
 
-def create_carbon_bombs_table():
+
+def create_carbon_bombs_gasoil_table():
+    ############### GAS & OIL MINES ONLY ####################
+    df_gasoil_carbon_bombs = load_carbon_bomb_gasoil_database()
+    df_gasoil_gem_mines = load_gasoil_mine_gem_database()
+    # Focus on merge for coal mines between GEM and CB database
+    # Filter columns of interest from GEM database (WARNING : very restrictive)
+    GEM_usefull_columns = [
+        'Unit ID',
+        'Unit name',
+        'Country',
+        'Wiki URL',
+        'Latitude',
+        'Longitude',
+        ]
+    df_coal_gem_mines = df_coal_gem_mines[GEM_usefull_columns]
+    
+
+
+
+    return df_gasoil_gem_mines
+
+
+def create_carbon_bombs_coal_table():
+    ############### COAL MINES ####################
     # Load Dataframe from different sources 
     df_coal_carbon_bombs = load_carbon_bomb_coal_database()
     df_coal_gem_mines = load_coal_mine_gem_database()
-    df_gasoil_carbon_bombs = load_carbon_bomb_gasoil_database()
     # Focus on merge for coal mines between GEM and CB database
     # Filter columns of interest from GEM database (WARNING : very restrictive)
     GEM_usefull_columns = [
@@ -177,7 +202,7 @@ def create_carbon_bombs_table():
         'Longitude',
         ]
     df_coal_gem_mines = df_coal_gem_mines[GEM_usefull_columns]
-    # Secondly only retain perfect match on Project Name between GEM & CB with a country verification
+    # Only retain perfect match on Project Name between GEM & CB with a country verification
     df_coal_carbon_bombs["temp"] = df_coal_carbon_bombs["Project Name"]+"/"+df_coal_carbon_bombs["Country"]
     df_coal_gem_mines["temp"] = df_coal_gem_mines["Mine Name"]+"/"+df_coal_gem_mines["Country"]
     list_coal_carbon_bomb = list(df_coal_carbon_bombs["temp"])
@@ -194,49 +219,61 @@ def create_carbon_bombs_table():
     # when mine name and country are the same
     print("Cleaning Operations to be set")
     partial_duplicates_cleaned = partial_duplicates
-    # WARNING We can setup a check for shape between full_duplicates and duplicates
-    
     # Once cleaning operation on partial duplicates are done, merge data
     # For filtering duplicates list we use the inverse of the mask (see ~) because when
     # duplicates is more than twice we would still have duplicates 
     # (see doc https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.duplicated.html)
     full_duplicates_filtered = duplicates[~(duplicates.duplicated(keep="first"))]
+    # Concat the different dataframe extract from GEM database :
+    # non_duplicates = Perfect match just on the name/country. No duplicates associated
+    # full_duplicates_filtered = Duplicates match of name/country. Duplicates are strictly identical on selected columns
+    # partial_duplicated_cleaned = Duplicates match of name/country. Duplicates have at least on difference
+    # but those difference where clean before merged. 
     df_coal_gem_mines_filtered = pd.concat([non_duplicates,full_duplicates_filtered,partial_duplicates_cleaned])
-    # Drop temp column from gem and cb dataframe
-    df_coal_gem_mines_filtered.drop('temp', axis=1,inplace=True)
-    df_coal_carbon_bombs.drop('temp', axis=1,inplace=True)
     
-    
-    
-    # TEMP DEV
+    # Second step add gem mines that has no perfect match with carbon bomb
     list_gem_match = list(df_coal_gem_mines_filtered["Mine Name"])
     df_carbon_bombs_no_match =  df_coal_carbon_bombs[~(df_coal_carbon_bombs['Project Name'].isin(list_gem_match))]
-
-
-    print(df_carbon_bombs_no_match.shape)
-    
     # Iteration over rows to find the right match
+    index_gem_no_match = list()
+    dict_gem_cb_names = dict()
+    df_carbon_bombs_no_match.to_csv("temp.csv")
+    # Setup a copy of df_coal_gem_mines in order to avoid match
+    # on the same project in GEM database (see Dananhu, China)
+    df_coal_gem_mines_copy = df_coal_gem_mines.copy()
     for index, row in df_carbon_bombs_no_match.iterrows():
-        name, country, status = row["Project Name"], row["Country"], row["New_project"]
-        match_name_gem = find_matching_name_for_GEM(name, country, status,df_coal_gem_mines)
+        name, country = row["Project Name"], row["Country"]
+        index_gem, name_gem = find_matching_name_for_GEM(name, country,df_coal_gem_mines_copy)
+        index_gem_no_match.append(index_gem)
+        dict_gem_cb_names[name_gem] = name
+        # Drop index_gem from df_coal_gem_mines_copy
+        df_coal_gem_mines_copy.drop(index_gem,axis=0,inplace=True)
+        
+    # Once index list is complete extract those line from df_coal_gem_mines
+    df_gem_no_match = df_coal_gem_mines.iloc[index_gem_no_match,:].copy()
+    # Replace name in df_gem_no_match by the one in carbon bomb
+    df_gem_no_match['Mine Name'] = df_gem_no_match['Mine Name'].replace(dict_gem_cb_names)
+    # Merge those rows with df_coal_gem_mines_filtered
+    df_coal_gem_mines_matched = pd.concat([df_coal_gem_mines_filtered,df_gem_no_match])
+    # Add pytest to check if df_coal_gem_mines_matched and df_coal_carbon_bombs have the same row number
 
-
-    
-    
-    
+    # Drop before merge temp column from gem cleaned and CB dataframe
+    df_coal_gem_mines_matched.drop('temp', axis=1,inplace=True)
+    df_coal_carbon_bombs.drop('temp', axis=1,inplace=True)
     # Merge dataframe based on column Mine Name for GEM and Project Name 
-    df_coal_merge = pd.merge(df_coal_carbon_bombs, df_coal_gem_mines_filtered, left_on='Project Name', right_on='Mine Name', how='left')
+    df_coal_merge = pd.merge(df_coal_carbon_bombs, df_coal_gem_mines_matched, left_on='Project Name', right_on='Mine Name', how='left')
     df_coal_merge.drop(["Mine Name","Country_y"],axis=1,inplace=True)
-    df_coal_merge.to_csv("output_coal_table.csv",index=False)
-    # WARNING Here add a pytest that will compare equality between df_coal_carbon_bombs.shape[0] and df_coal_merge[0]
-    # They should be equal even if we perform a left join because good cleaning on duplicates. 
+    df_coal_merge.to_csv("./data_cleaned/output_coal_table.csv",index=False)
+    return df_coal_merge
 
-    # Third step try to conciliate missing values 
+
+def create_carbon_bombs_table():
+    df_coal = create_carbon_bombs_coal_table()
+    df_gasoil = create_carbon_bombs_gasoil_table()
     
     
-    
-def find_matching_name_for_GEM(name, country, status, df_gem):
-    # WARNING To refactor because warning raise but not clean
+def find_matching_name_for_GEM(name, country, df_gem):
+    # Setup a copy to avoid warning 
     df_gem = df_gem.copy()
     # Filter line that correspond to the right country
     df_gem = df_gem[df_gem["Country"]==country]
@@ -244,27 +281,32 @@ def find_matching_name_for_GEM(name, country, status, df_gem):
     first_word_name = name.split()[0]
     df_gem["First_name"] = df_gem["Mine Name"].str.split().str[0]
     # Compare and look to how many match we have if we only look at the first word
-    df_gem = df_gem[df_gem["First_name"]==first_word_name]
+    df_gem_filtered = df_gem.loc[df_gem["First_name"]==first_word_name,:].copy()
     # Depending on df_gem.shape various case scenario
-    if df_gem.shape[0]==1:
-        # Perfect match we retrieve GEM match name
-        return df_gem["Mine Name"].iat[0]
-    elif df_gem.shape[0]>1:
-        df_gem["Fuzz_score"] = df_gem["Mine Name"].apply(lambda x: fuzz.ratio(x, name))
-        print(f"The initial name was :{name}")
-        print(df_gem[["Mine Name","Fuzz_score"]])
-        print("\n\n")
-
-
-
-        
-            
-    return "coucou"
-
-
-
+    if df_gem_filtered.shape[0]==1:
+        # Perfect match we retrieve GEM match index
+        index_gem = df_gem_filtered.index[0]
+        name_gem = df_gem_filtered.loc[index_gem,"Mine Name"]
+    elif df_gem_filtered.shape[0]>1:
+        # Numerous match, need to choose between them throught fuzzy wuzzy
+        # Calculate Fuzz_score for each line which as the same first word as the carbon bomb
+        df_gem_filtered["Fuzz_score"] = df_gem_filtered["Mine Name"].apply(lambda x: fuzz.ratio(x, name))
+        index_gem = df_gem_filtered['Fuzz_score'].idxmax()
+        name_gem = df_gem_filtered.loc[index_gem,"Mine Name"]
+    else:
+        # No match based on the first word, we use manual_match dictionary
+        mine_name_gem = manual_match[name]
+        index_gem = df_gem.loc[df_gem["Mine Name"]==mine_name_gem].index[0]
+        name_gem = df_gem.loc[index_gem,"Mine Name"]
+    return index_gem, name_gem
 
 
 if __name__ == '__main__':
+    # Configure logger
+    logging.basicConfig(filename='create_database.log',
+                        format='%(filename)s: %(message)s',
+                        level=logging.DEBUG)
     # Main function
-    create_carbon_bombs_table()
+    create_carbon_bombs_coal_table()
+    #create_carbon_bombs_gasoil_table()
+    #create_carbon_bombs_table()
