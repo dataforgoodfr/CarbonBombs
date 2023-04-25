@@ -6,6 +6,7 @@ Created on Mon April 17 09:19:23 2023
 @author: Nicolle Mathieu
 """
 import os
+import sys
 import logging
 import pandas as pd
 import numpy as np
@@ -13,7 +14,8 @@ import requests
 import warnings
 from fuzzywuzzy import fuzz
 from credentials import API_KEY
-from manual_match import manual_match
+from manual_match import manual_match_coal
+from manual_match import manual_match_gasoil
 
     
 def get_coordinates_google_api(address, api_key = API_KEY):
@@ -127,7 +129,12 @@ def load_carbon_bomb_gasoil_database():
         }
     df = df.astype(dtype_d)
     # Change country name to correspond to GEM database (only for Russia)
-    df['Country'] = df['Country'].replace({'Russian Federation': 'Russia', 'Turkey': 'Türkiye'})
+    df['Country'] = df['Country'].replace({
+        'Russian Federation': 'Russia',
+        'Turkey': 'Türkiye',
+        'Saudi-Arabia':'Saudi Arabia',
+        'Kuwait-Saudi-Arabia-Neutral Zone':'Kuwait-Saudi Arabia'
+        })
     return df
     
 def load_coal_mine_gem_database():
@@ -157,12 +164,9 @@ def clean_coal_mine_gem_database():
     df_cb = df_cb[df_cb["Fuel"]=="Coal"]
     # Only keep Coal Mine which name corresponds to a Carbon Bomb
     list_coal_carbon_bomb = list(df_cb["Name"])
-    print(len(list_coal_carbon_bomb))
     # Filter df rows based on this list
     df = df[df['Mine Name'].isin(list_coal_carbon_bomb)]
-    print(df.shape)
     return df
-
 
 def create_carbon_bombs_gasoil_table():
     ############### GAS & OIL MINES ONLY ####################
@@ -177,13 +181,116 @@ def create_carbon_bombs_gasoil_table():
         'Wiki URL',
         'Latitude',
         'Longitude',
+        'Operator',
+        'Owner',
+        'Parent',
         ]
-    df_coal_gem_mines = df_coal_gem_mines[GEM_usefull_columns]
+    df_gasoil_gem_mines = df_gasoil_gem_mines[GEM_usefull_columns]
+    # Only retain perfect match on Project Name between GEM & CB with a country verification
+    df_gasoil_carbon_bombs["temp"] = df_gasoil_carbon_bombs["Project Name"]+"/"+df_gasoil_carbon_bombs["Country"]
+    df_gasoil_gem_mines["temp"] = df_gasoil_gem_mines["Unit name"]+"/"+df_gasoil_gem_mines["Country"]
+    list_gasoil_carbon_bomb = list(df_gasoil_carbon_bombs["temp"])
+    df_gasoil_gem_perfect_match = df_gasoil_gem_mines[df_gasoil_gem_mines['temp'].isin(list_gasoil_carbon_bomb)]
+    # Add gem mines that has no perfect match with carbon bomb
+    list_gem_match = list(df_gasoil_gem_perfect_match['Unit name'])
+    df_carbon_bombs_no_match =  df_gasoil_carbon_bombs[~(df_gasoil_carbon_bombs['Project Name'].isin(list_gem_match))]
+    # Iteration over rows to find the right match
+    index_gem_single_match = list()
+    dict_gem_cb_names = dict()
+    # Initiate multi match dataframe with an additional column to store CarbonBombs names
+    GEM_multi_match_columns = GEM_usefull_columns + ["CarbonBombName"]
+    df_gasoil_gem_multi_match = pd.DataFrame(columns=GEM_multi_match_columns)
+    for index, row in df_carbon_bombs_no_match.iterrows():
+        name, country = row["Project Name"], row["Country"]
+        index_gem, name_gem = find_matching_name_for_GEM_gasoil(name, country,df_gasoil_gem_mines)
+        # 3 cases index_gem = 0 / value / list_values
+        if index_gem == 0:
+            continue
+        elif isinstance(index_gem, list):
+            concatenate_line = concatenate_multi_extraction_site(df_gasoil_gem_mines,GEM_multi_match_columns,index_gem, name)
+            df_gasoil_gem_multi_match.loc[df_gasoil_gem_multi_match.shape[0]]= concatenate_line
+        else:
+            index_gem_single_match.append(index_gem)
+            dict_gem_cb_names[name_gem] = name
+            
+    # Once index list is complete extract those line from df_coal_gem_mines
+    df_gasoil_gem_manual_match = df_gasoil_gem_mines.iloc[index_gem_single_match,:].copy()
+    # Replace name in df_gasoil_gem_manual_match by the one in carbon bomb
+    inverse_manual_match_gasoil = {value: key for key, value in manual_match_gasoil.items()}
+    df_gasoil_gem_manual_match['Unit name'] = df_gasoil_gem_manual_match['Unit name'].replace(inverse_manual_match_gasoil)
+    # Columns manipulation on df_multi_match to allow concatenation
+    unit_name_list = list(df_gasoil_gem_multi_match["Unit name"])
+    df_gasoil_gem_multi_match["Unit name"] = df_gasoil_gem_multi_match["CarbonBombName"]
+    df_gasoil_gem_multi_match.loc[:,"Unit_concerned"] = unit_name_list
+    # Add column "Unit_concerned" for the other df and drop useless columns
+    # WARNING raised on perfect match to be solved later
+    df_gasoil_gem_perfect_match["Unit_concerned"]=""
+    df_gasoil_gem_manual_match["Unit_concerned"]=""
+    df_gasoil_gem_perfect_match.drop("temp",axis=1,inplace=True)
+    df_gasoil_gem_manual_match.drop("temp",axis=1,inplace=True)
+    df_gasoil_carbon_bombs.drop("temp",axis=1,inplace=True)
+    df_gasoil_gem_multi_match.drop("CarbonBombName",axis=1,inplace=True)
+    # Concat dataframes from match perfect/multi/manual
+    df_gasoil_gem_matched = pd.concat([df_gasoil_gem_perfect_match,
+                                       df_gasoil_gem_manual_match,
+                                       df_gasoil_gem_multi_match,
+                                       ])
+    # Merge dataframe based on column Mine Name for GEM and Project Name 
+    df_gasoil_merge = pd.merge(df_gasoil_carbon_bombs, df_gasoil_gem_matched, left_on='Project Name', right_on='Unit name', how='left')
+    df_gasoil_merge.drop(["Unit name","Country_y"],axis=1,inplace=True)
+    df_gasoil_merge.to_csv("./data_cleaned/output_gasoil_table.csv",index=False)
+    return df_gasoil_merge
     
+def concatenate_multi_extraction_site(df_gem, list_columns, multi_index, project_name):
+    list_value_concat=list()
+    for elt in list_columns:
+        if elt == "Country":
+            value = df_gem.loc[multi_index[0],elt]
+            list_value_concat.append(value)
+        elif elt == "CarbonBombName":
+            list_value_concat.append(project_name)
+        elif elt in ["Latitude","Longitude"]:
+            value = df_gem.loc[multi_index[0],elt]
+            list_value_concat.append(value)
+        else:
+            value = [df_gem.loc[index,elt] for index in multi_index]
+            list_value_concat.append(value)
+    return list_value_concat
+            
+    
+def find_matching_name_for_GEM_gasoil(name, country, df_gem):  
+    # Setup a copy to avoid warning 
+    df_gem = df_gem.copy()
+    # Filter line that correspond to the right country
+    df_gem = df_gem[df_gem["Country"]==country]
+    # For Gas&Oil we mainly use manual matching dictionary due 
+    # to difficulties on matching Carbon Bombs and Extraction Site
+    if name in manual_match_gasoil.keys():
+        mine_name_gem = manual_match_gasoil[name]
+    else:
+        mine_name_gem = "None"
+    # Identify special case for mine_name_gem
+    if "$" in mine_name_gem:
+        # Case where shale where identified in a list of extraction site    
+        list_mine = mine_name_gem.split("$")
+        index_gem = [df_gem.loc[df_gem["Unit name"]==elt].index[0] for elt in list_mine]
+        name_gem = [df_gem.loc[elt,"Unit name"] for elt in index_gem]
+    elif mine_name_gem=="None":
+        # No match associated in manual dictionary 
+        index_gem = 0
+        name_gem = ""
+    elif mine_name_gem=="New":
+        # No match associated in gem database due to new projects
+        index_gem = 0
+        name_gem = ""
+    else:
+        # Only one carbon bomb associated to one extraction site
+        index_gem = df_gem.loc[df_gem["Unit name"]==mine_name_gem].index[0]
+        name_gem = df_gem.loc[index_gem,"Unit name"]
+    return index_gem, name_gem
 
 
-
-    return df_gasoil_gem_mines
+    
 
 
 def create_carbon_bombs_coal_table():
@@ -200,6 +307,9 @@ def create_carbon_bombs_coal_table():
         'GEM Wiki Page (ENG)',
         'Latitude',
         'Longitude',
+        'Operators',
+        'Owners',
+        'Parent Company',
         ]
     df_coal_gem_mines = df_coal_gem_mines[GEM_usefull_columns]
     # Only retain perfect match on Project Name between GEM & CB with a country verification
@@ -237,13 +347,12 @@ def create_carbon_bombs_coal_table():
     # Iteration over rows to find the right match
     index_gem_no_match = list()
     dict_gem_cb_names = dict()
-    df_carbon_bombs_no_match.to_csv("temp.csv")
     # Setup a copy of df_coal_gem_mines in order to avoid match
     # on the same project in GEM database (see Dananhu, China)
     df_coal_gem_mines_copy = df_coal_gem_mines.copy()
     for index, row in df_carbon_bombs_no_match.iterrows():
         name, country = row["Project Name"], row["Country"]
-        index_gem, name_gem = find_matching_name_for_GEM(name, country,df_coal_gem_mines_copy)
+        index_gem, name_gem = find_matching_name_for_GEM_coal(name, country,df_coal_gem_mines_copy)
         index_gem_no_match.append(index_gem)
         dict_gem_cb_names[name_gem] = name
         # Drop index_gem from df_coal_gem_mines_copy
@@ -267,38 +376,88 @@ def create_carbon_bombs_coal_table():
     return df_coal_merge
 
 
-def create_carbon_bombs_table():
-    df_coal = create_carbon_bombs_coal_table()
-    df_gasoil = create_carbon_bombs_gasoil_table()
+
+
     
-    
-def find_matching_name_for_GEM(name, country, df_gem):
+def find_matching_name_for_GEM_coal(name, country, df_gem):
     # Setup a copy to avoid warning 
     df_gem = df_gem.copy()
+    # Setup column name to use with coal and gasoil
+    if "Unit name" in df_gem.columns:
+        # Gas and Oil database from GEM
+        column_name = "Unit name"
+    elif "Mine Name" in df_gem.columns:
+        # Coal database from GEM
+        column_name = "Mine Name"
+    else:
+        print("Error while checking column name for function find_matching_name_for_GEM")
+        sys.exit()
     # Filter line that correspond to the right country
     df_gem = df_gem[df_gem["Country"]==country]
     # Only keep first word of the name we want to match and the column Mine Name of GEM Database
     first_word_name = name.split()[0]
-    df_gem["First_name"] = df_gem["Mine Name"].str.split().str[0]
+    df_gem["First_name"] = df_gem[column_name].str.split().str[0]
     # Compare and look to how many match we have if we only look at the first word
     df_gem_filtered = df_gem.loc[df_gem["First_name"]==first_word_name,:].copy()
     # Depending on df_gem.shape various case scenario
+    index_gem, name_gem = 0,0
+    
     if df_gem_filtered.shape[0]==1:
         # Perfect match we retrieve GEM match index
         index_gem = df_gem_filtered.index[0]
-        name_gem = df_gem_filtered.loc[index_gem,"Mine Name"]
+        name_gem = df_gem_filtered.loc[index_gem,column_name]  
     elif df_gem_filtered.shape[0]>1:
         # Numerous match, need to choose between them throught fuzzy wuzzy
         # Calculate Fuzz_score for each line which as the same first word as the carbon bomb
-        df_gem_filtered["Fuzz_score"] = df_gem_filtered["Mine Name"].apply(lambda x: fuzz.ratio(x, name))
+        df_gem_filtered["Fuzz_score"] = df_gem_filtered[column_name].apply(lambda x: fuzz.ratio(x, name))
         index_gem = df_gem_filtered['Fuzz_score'].idxmax()
-        name_gem = df_gem_filtered.loc[index_gem,"Mine Name"]
+        name_gem = df_gem_filtered.loc[index_gem,column_name]
     else:
         # No match based on the first word, we use manual_match dictionary
-        mine_name_gem = manual_match[name]
-        index_gem = df_gem.loc[df_gem["Mine Name"]==mine_name_gem].index[0]
-        name_gem = df_gem.loc[index_gem,"Mine Name"]
+        mine_name_gem = manual_match_coal[name]
+        index_gem = df_gem.loc[df_gem[column_name]==mine_name_gem].index[0]
+        name_gem = df_gem.loc[index_gem,column_name]
+    
     return index_gem, name_gem
+
+def create_carbon_bombs_table():
+    df_coal = create_carbon_bombs_coal_table()
+    df_gasoil = create_carbon_bombs_gasoil_table()
+    # Add multiple unit concerned column to Coal Table
+    df_coal["Multiple_unit_concerned"]=""
+    name_mapping_coal = {
+        "Project Name":"Carbon_Bomb_Name",
+        "Country_x":"Country",
+        "Potential emissions (GtCO2)" :"Potential_GtCO2",
+        "Fuel":"Fuel_type",
+        "Mine IDs":"GEM_ID",
+        "GEM Wiki Page (ENG)":"GEM_source",
+        "Operators":"Operators",
+        "Owners":"Owners",
+        "Parent Company":"Parent_Company",
+    }
+    name_mapping_gasoil = {
+        "Project Name":"Carbon_Bomb_Name",
+        "Country_x":"Country",
+        "Potential emissions (GtCO2)" :"Potential_GtCO2",
+        "Fuel":"Fuel_type",
+        "Unit ID":"GEM_ID",
+        "Wiki URL":"GEM_source",
+        "Operator":"Operators",
+        "Owner":"Owners",
+        "Parent":"Parent_Company",
+        "Unit_concerned":"Multiple_unit_concerned",
+    }
+    # Remap dataframe columns based on previous mapping
+    df_coal.rename(columns=name_mapping_coal,inplace=True)
+    df_gasoil.rename(columns=name_mapping_gasoil,inplace=True)
+    # Merge dataframes
+    df_carbon_bombs = pd.concat([df_coal,df_gasoil],axis=0)
+    df_carbon_bombs.to_csv("./data_cleaned/output_carbon_bombs.csv",index=False)
+    return df_carbon_bombs
+    
+    
+    
 
 
 if __name__ == '__main__':
@@ -307,6 +466,6 @@ if __name__ == '__main__':
                         format='%(filename)s: %(message)s',
                         level=logging.DEBUG)
     # Main function
-    create_carbon_bombs_coal_table()
+    #create_carbon_bombs_coal_table()
     #create_carbon_bombs_gasoil_table()
-    #create_carbon_bombs_table()
+    df = create_carbon_bombs_table()
