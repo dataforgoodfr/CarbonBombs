@@ -456,15 +456,8 @@ def create_carbon_bombs_table():
     df_carbon_bombs.to_csv("./data_cleaned/output_carbon_bombs.csv",index=False)
     return df_carbon_bombs
     
-    
-    
-
 
 if __name__ == '__main__':
-    # Configure logger
-    logging.basicConfig(filename='create_database.log',
-                        format='%(filename)s: %(message)s',
-                        level=logging.DEBUG)
     # Main function
     #create_carbon_bombs_coal_table()
     #create_carbon_bombs_gasoil_table()
