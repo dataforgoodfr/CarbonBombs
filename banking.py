@@ -10,7 +10,6 @@ import sys
 import logging
 import pandas as pd
 import numpy as np
-import recordlinkage
 from fuzzywuzzy import fuzz
 
 
@@ -44,7 +43,7 @@ def company_involvement_in_carbon_bombs():
     df_carbon_bombs_company_detailed['percentage'] = df_carbon_bombs_company_detailed['Parent_Company'].str.extract(r'(\d+)%', expand=False)
     # Remove the percentage and extra spaces from Parent Company column
     df_carbon_bombs_company_detailed['Parent_Company'] = df_carbon_bombs_company_detailed['Parent_Company'].str.replace(r'\s*\(\d+%\)','', regex=True).str.strip()
-    df_carbon_bombs_company_detailed.to_csv("output_company_carbon_bombs.csv", index = False)
+    df_carbon_bombs_company_detailed.to_csv("./data_cleaned/carbon_bomb_company_participation.csv", index = False)
     return df_carbon_bombs_company_detailed
 
 def test_link_record_BOCC_CB():
@@ -87,6 +86,6 @@ def link_record_BOCC_CB():
 
 if __name__ == '__main__':
     # Main function
-    #company_involvement_in_carbon_bombs()
+    company_involvement_in_carbon_bombs()
     #link_record_BOCC_CB()
-    test_link_record_BOCC_CB()
+    #test_link_record_BOCC_CB()
