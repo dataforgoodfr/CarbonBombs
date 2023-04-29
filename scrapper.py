@@ -16,6 +16,27 @@ from bs4 import BeautifulSoup, SoupStrainer
 URL = 'https://www.banktrack.org/banks'
 
 def scrapping_main_page_bank_track(url):
+    """
+    Scrapes the main page of bank track website and extracts URLs of individual 
+    bank description pages.
+
+    Args:
+        url (str): The URL of the main page to be scraped.
+
+    Returns:
+        list: A list of URLs (strings) pointing to individual bank description
+              pages.
+
+    Raises:
+        None: However, if the HTTP request fails, it prints an error message and
+              terminates the script.
+
+    Example:
+        >>> scrapping_main_page_bank_track("https://www.examplebanktrack.org")
+        ['https://www.examplebanktrack.org/bank/abc_bank',
+         'https://www.examplebanktrack.org/bank/def_bank',
+         'https://www.examplebanktrack.org/bank/ghi_bank']
+    """
     # Send an HTTP request to the target URL
     response = requests.get(url)
 
@@ -37,6 +58,31 @@ def scrapping_main_page_bank_track(url):
     return bank_description_url
 
 def scrapping_description_bank_page(url):
+    """
+    Scrapes the specified URL for bank information and returns the bank name
+    and a dictionary containing details from the About section.
+
+    Args:
+        url (str): The URL of the bank's page to be scraped.
+
+    Returns:
+        tuple: A tuple containing the bank name (str) and a dictionary with
+               information from the About section. The dictionary has keys
+               corresponding to the following categories: "Website",
+               "Headquarters", "CEO/chair", "Supervisor", and "Ownership".
+               If information is not available, the value is set to "None".
+
+    Raises:
+        None: However, if the HTTP request fails, it prints an error message and
+              terminates the script.
+
+    Example:
+        >>> fetch_bank_info("https://www.examplebank.org/bank/abc_bank")
+        ('ABC Bank', {'Website': 'www.abcbank.com',
+                      'Headquarters': 'New York, NY',
+                      'CEO/chair': 'John Doe', 'Supervisor': 'Jane Smith',
+                      'Ownership': 'Private'})
+    """
     # List of categories in section About
     list_info_about = [
         "Website",
@@ -73,8 +119,26 @@ def scrapping_description_bank_page(url):
         sys.exit()
     return bank_name, dict_about_section
  
-
+    
 def process_raw_info(dict_info):
+    """
+    Process a dictionary of raw information and return a cleaned dictionary.
+
+    Args:
+        dict_info (dict): A dictionary containing raw information.
+
+    Returns:
+        dict: A dictionary containing cleaned information.
+
+    Raises:
+        SystemExit: If the function cannot recognize the raw information.
+
+    Example:
+        >>> dict_info = {"Website": "<a href='https://www.example.com'>Example</a>"}
+        >>> process_raw_info(dict_info)
+        {'Bank Website': 'Example'}
+
+    """
     # Instanciate clean_dict that will contains info extracted from raw
     clean_dict = dict()
     for elt in dict_info.keys():
@@ -122,7 +186,26 @@ def process_raw_info(dict_info):
     return clean_dict
 
 def get_coordinates_google_api(address, api_key = API_KEY):
-    """Get coordinates of an address through an API call to Google Maps
+    """
+    Get the latitude and longitude coordinates of an address using Google Maps
+    API.
+
+    Args:
+        address (str): The address to look up.
+        api_key (str): The Google Maps API key.
+
+    Returns:
+        tuple: A tuple containing the latitude and longitude coordinates
+               of the address.
+
+    Raises:
+        SystemExit: If an error occurs with the API call.
+
+    Example:
+        >>> get_coordinates_google_api(
+        ...     "1600 Amphitheatre Parkway, Mountain View, CA")
+        (37.4224764, -122.0842499)
+
     """
     url = (f'https://maps.googleapis.com/maps/api/geocode/json?'
            f'address={address}&key={api_key}')
@@ -142,6 +225,24 @@ def get_coordinates_google_api(address, api_key = API_KEY):
     return latitude,longitude
 
 def main_scrapping_function(url):
+    """
+    Create a Pandas DataFrame from scraped information and return it.
+
+    Args:
+        url (str): The URL of the main page to scrape.
+
+    Returns:
+        pandas.DataFrame: A Pandas DataFrame containing information on bank
+        companies.
+
+    Example:
+        >>> url = "https://example.com"
+        >>> create_bank_dataframe(url)
+            Bank Name  Bank Website  Headquarters address  Headquarters country
+        0    Example Bank www.example.com 123 Main St, Anytown  USA
+        1    Another Bank www.anotherbank.com 456 Oak St, Anycity  USA
+        ...
+    """
     # Instanciate dataframe containing srapped info
     columns_dataframe = [
         "Bank Name",
