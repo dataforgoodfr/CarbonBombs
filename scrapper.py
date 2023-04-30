@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon April 25 09:19:23 2023
+This script scrapes the BankTrack website to collect information about banks and
+stores it in a Pandas DataFrame. It retrieves information such as the bank name,
+website, headquarters address and country, CEO name, board description,
+supervisor name and website, shareholder structure source, and the latitude and
+longitude coordinates of the headquarters. The resulting DataFrame is saved to a
+CSV file.
 
-@author: Nicolle Mathieu
+Examples:
+To use this script, simply run it from the command line:
+$ python script_name.py
 """
 import os
 import sys
