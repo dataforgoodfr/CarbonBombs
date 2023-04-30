@@ -7,45 +7,17 @@ Created on Mon April 17 09:19:23 2023
 """
 import os
 import sys
-import logging
+import re
 import pandas as pd
 import numpy as np
-import requests
 import warnings
 from fuzzywuzzy import fuzz
-from credentials import API_KEY
 from manual_match import manual_match_coal
 from manual_match import manual_match_gasoil
 
     
-def get_coordinates_google_api(address, api_key = API_KEY):
-    """Get coordinates of an adress through an API call to Google Maps
-    """
-    url = f'https://maps.googleapis.com/maps/api/geocode/json?address={address}&key={api_key}'
-    response = requests.get(url)
-    if response.status_code == 200:
-        data = response.json()
-        if data['status'] == 'OK':
-            latitude = data['results'][0]['geometry']['location']['lat']
-            longitude = data['results'][0]['geometry']['location']['lng']
-            if 'partial_match' in data["results"][0].keys():
-                partial_match = True
-            else:
-                partial_match = False
-        else:
-            print(f"API Error for {address}")
-            latitude=np.nan
-            longitude=np.nan
-            partial_match = True
-    else:
-        print(f"Request Error for {address}")
-        latitude=np.nan
-        longitude=np.nan
-        partial_match = True
-    return latitude,longitude,partial_match
-
-    
 def load_urgewald_database_GOGEL(year, type = "UPSTREAM"):
+
     # Define file version in function of the year
     file_version = {"2021":"urgewald_GOGEL2021V2.xlsx",
                     "2022":"urgewald_GOGEL2022V1.xlsx",
@@ -68,7 +40,7 @@ def load_carbon_bomb_list_database():
     file_path = "./data_sources/1-s2.0-S0301421522001756-mmc2.xlsx"
     df = pd.read_excel(file_path, sheet_name='Full Carbon Bombs List',\
                     engine='openpyxl', skipfooter = 4)
-    df = df[["New","Name","Country","Potential emissions (Gt CO2)","Fuel"]]
+    df=df.loc[:,["New","Name","Country","Potential emissions (Gt CO2)","Fuel"]]
     # Make some adjustement on new project column
     df.rename(columns={ df.columns[0]: "New_project" }, inplace = True)
     df["New_project"].replace(np.nan, False, inplace= True)
@@ -89,7 +61,7 @@ def load_carbon_bomb_coal_database():
     df = pd.read_excel(file_path, sheet_name='Coal',\
                     engine='openpyxl', skipfooter = 3)
     # Filtering columns of interest
-    df = df[["New","Project Name","Country","Potential emissions (GtCO2)","Fuel"]]
+    df = df.loc[:,["New","Project Name","Country","Potential emissions (GtCO2)","Fuel"]]
     # Make some adjustement on new project column
     df.rename(columns={ df.columns[0]: "New_project" }, inplace = True)
     df["New_project"].replace(np.nan, False, inplace= True)
@@ -104,15 +76,17 @@ def load_carbon_bomb_coal_database():
         }
     df = df.astype(dtype_d)
     # Change country name to correspond to GEM database (only for Russia)
-    df['Country'] = df['Country'].replace({'Russian Federation': 'Russia', 'Turkey': 'Türkiye'})
+    df['Country'] = df['Country'].replace({'Russian Federation': 'Russia',
+                                           'Turkey': 'Türkiye'})
     return df
 
 def load_carbon_bomb_gasoil_database():
     file_path = "./data_sources/1-s2.0-S0301421522001756-mmc2.xlsx"
     df = pd.read_excel(file_path, sheet_name='Oil&Gas',engine='openpyxl',
                      skipfooter = 4,skiprows=1)
-    # Filtering columns of interest and reorganize them in order to match coal columns
-    df = df[["New","Project","Country","Gt CO2"]]
+    # Filtering columns of interest and reorganize them in order to match 
+    # coal columns
+    df = df.loc[:,["New","Project","Country","Gt CO2"]]
     df.columns = ["New","Project Name","Country","Potential emissions (GtCO2)"]
     df["Fuel"] = "Oil&Gas"
     # Make some adjustement on new project column
@@ -139,7 +113,8 @@ def load_carbon_bomb_gasoil_database():
     
 def load_coal_mine_gem_database():
     file_path = "./data_sources/Global-Coal-Mine-Tracker-April-2023.xlsx"
-    df = pd.read_excel(file_path, sheet_name='Global Coal Mine Tracker',engine='openpyxl')
+    df = pd.read_excel(file_path, sheet_name='Global Coal Mine Tracker',
+                       engine='openpyxl')
     return df
 
 def load_gasoil_mine_gem_database():
@@ -200,7 +175,7 @@ def create_carbon_bombs_gasoil_table():
     # Initiate multi match dataframe with an additional column to store CarbonBombs names
     GEM_multi_match_columns = GEM_usefull_columns + ["CarbonBombName"]
     df_gasoil_gem_multi_match = pd.DataFrame(columns=GEM_multi_match_columns)
-    for index, row in df_carbon_bombs_no_match.iterrows():
+    for _, row in df_carbon_bombs_no_match.iterrows():
         name, country = row["Project Name"], row["Country"]
         index_gem, name_gem = find_matching_name_for_GEM_gasoil(name, country,df_gasoil_gem_mines)
         # 3 cases index_gem = 0 / value / list_values
@@ -230,6 +205,7 @@ def create_carbon_bombs_gasoil_table():
     df_gasoil_gem_manual_match.drop("temp",axis=1,inplace=True)
     df_gasoil_carbon_bombs.drop("temp",axis=1,inplace=True)
     df_gasoil_gem_multi_match.drop("CarbonBombName",axis=1,inplace=True)
+    
     # Concat dataframes from match perfect/multi/manual
     df_gasoil_gem_matched = pd.concat([df_gasoil_gem_perfect_match,
                                        df_gasoil_gem_manual_match,
@@ -240,7 +216,73 @@ def create_carbon_bombs_gasoil_table():
     df_gasoil_merge.drop(["Unit name","Country_y"],axis=1,inplace=True)
     df_gasoil_merge.to_csv("./data_cleaned/output_gasoil_table.csv",index=False)
     return df_gasoil_merge
-    
+
+def ponderate_percentage(dict_percentage):
+    # Calculate sum of percentage to ponderate
+    sum_percentage = sum(list(dict_percentage.values()))
+    # Calculate new percentage based on this sum
+    new_percentage = [elt/sum_percentage for elt in dict_percentage.values()]
+    companies = dict_percentage.keys()
+    # Round each element in the new_percentage list
+    rounded_percentage = [round(x * 100, 1) for x in new_percentage]
+    # Adjust the decimal of the last percentage in order to ensure a 100% sum
+    diff = 100 - sum(rounded_percentage)
+    rounded_percentage[-1] = round(rounded_percentage[-1] + diff,1)
+    # Build new dictionary
+    dict_percentage = dict()
+    for company, percentage in zip(companies, rounded_percentage):
+        dict_percentage[company] = percentage
+    # Return dict with ponderate percentage
+    return dict_percentage
+
+def compute_percentage_multi_sites(raw_line):
+    # With raw_line content 2 possibilities : Percentage are indicated or not
+    if "%" in raw_line:
+        # Case where percentage are indicated
+        companies = re.findall(r"([\w\s\.\-]+)\s\(", raw_line)
+        percentages = re.findall(r"\(([\d\.]+)%\)", raw_line)
+        # Merge percentage of same company into one
+        combined_percentages = {}
+        for company, percentage in zip(companies, percentages):
+            if company in combined_percentages:
+                combined_percentages[company] += float(percentage)
+            else:
+                combined_percentages[company] = float(percentage)
+        # Once percentage are merge 3 possibilities based on the sum 
+        sum_percentage = sum(list(combined_percentages.values()))
+        # Percentage less than 100 percent (We complete by "Others"):
+        if sum_percentage < 100.0 :
+            left_percentage = 100.0 - sum_percentage
+            combined_percentages["Others"] = left_percentage
+        # Percentage equal to 100 percent (No action needed):    
+        elif sum_percentage == 100.0:
+            pass
+        #Percentage more than 100 percent (We ponderate the results)
+        else:
+            combined_percentages = ponderate_percentage(combined_percentages)
+    else: 
+        # Case no percentage are indicated, we defined it based on number of 
+        # compagnies defined into 
+        companies = raw_line.split(";")
+        if companies == ['']:
+            companies = ['No informations on company']
+        # Compute percentage considering each company have the same involvement
+        percentages = [100.0/len(companies) for _ in companies]
+        # Merge percentage of same company into one
+        combined_percentages = {}
+        for company, percentage in zip(companies, percentages):
+            if company in combined_percentages:
+                combined_percentages[company] += float(percentage)
+            else:
+                combined_percentages[company] = float(percentage)
+    # Once combined percentage is defined for each case, defined a clean line
+    clean_line = ""
+    for keys in combined_percentages:
+        company_line = f"{keys} ({combined_percentages[keys]}%);"
+        clean_line = clean_line + company_line
+    clean_line = clean_line[:-1] # Delete last ;
+    return clean_line
+
 def concatenate_multi_extraction_site(df_gem, list_columns, multi_index, project_name):
     list_value_concat=list()
     for elt in list_columns:
@@ -252,7 +294,24 @@ def concatenate_multi_extraction_site(df_gem, list_columns, multi_index, project
         elif elt in ["Latitude","Longitude"]:
             value = df_gem.loc[multi_index[0],elt]
             list_value_concat.append(value)
+        elif elt in ["Unit ID","Unit name","Wiki URL"]:
+            value_concat = [df_gem.loc[index,elt] for index in multi_index]
+            value = ";".join(value_concat)
+            list_value_concat.append(value)
+        elif elt =="Operator":
+            # Ensure to delete all duplicate operator from this list
+            value_concat = [df_gem.loc[index,elt] for index in multi_index]
+            unique_list = list(set(value_concat))
+            value = ";".join(unique_list)
+            list_value_concat.append(value)
+        elif elt =="Parent":
+            value_concat = [df_gem.loc[index,elt] for index in multi_index]
+            # Filtered nan from raw_percentage list    
+            filtered_percentage = [x for x in value_concat if not isinstance(x,float)]
+            value = ";".join(filtered_percentage)
+            list_value_concat.append(value)
         else:
+            #print("coucouWARNING setup the right condition clause")
             value = [df_gem.loc[index,elt] for index in multi_index]
             list_value_concat.append(value)
     return list_value_concat
@@ -273,8 +332,17 @@ def find_matching_name_for_GEM_gasoil(name, country, df_gem):
     if "$" in mine_name_gem:
         # Case where shale where identified in a list of extraction site    
         list_mine = mine_name_gem.split("$")
-        index_gem = [df_gem.loc[df_gem["Unit name"]==elt].index[0] for elt in list_mine]
-        name_gem = [df_gem.loc[elt,"Unit name"] for elt in index_gem]
+        index_gem = list()
+        name_gem = list()
+        for elt in list_mine:
+            if df_gem.loc[df_gem["Unit name"]==elt].shape[0] > 0:
+            # Bloc IF/ELSE to prevent error for Carbon Bomb with the same name 
+            # but a different country (ex : Eagle Ford Shale in Mexico and US)
+                index_gem.append(df_gem.loc[df_gem["Unit name"]==elt].index[0])
+                name_gem.append(elt)
+            else:
+                index_gem = 0
+                name_gem = ""
     elif mine_name_gem=="None":
         # No match associated in manual dictionary 
         index_gem = 0
@@ -453,6 +521,12 @@ def create_carbon_bombs_table():
     df_gasoil.rename(columns=name_mapping_gasoil,inplace=True)
     # Merge dataframes
     df_carbon_bombs = pd.concat([df_coal,df_gasoil],axis=0)
+    # Clean percentage in column Parent_company
+    # Clean data into Parent company columns 
+    df_carbon_bombs["Parent_Company"].fillna("",inplace=True)
+    df_carbon_bombs["Parent_Company"] = df_carbon_bombs["Parent_Company"].apply(compute_percentage_multi_sites)
+    # Drop column Owners (next to decision taken during GEM interview)
+    df_carbon_bombs.drop("Owners", axis = 1)
     df_carbon_bombs.to_csv("./data_cleaned/output_carbon_bombs.csv",index=False)
     return df_carbon_bombs
     
@@ -460,5 +534,6 @@ def create_carbon_bombs_table():
 if __name__ == '__main__':
     # Main function
     #create_carbon_bombs_coal_table()
-    #create_carbon_bombs_gasoil_table()
-    df = create_carbon_bombs_table()
+    df = create_carbon_bombs_gasoil_table()
+    print(df.shape)
+    #df = create_carbon_bombs_table()
