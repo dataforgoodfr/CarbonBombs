@@ -1,3 +1,21 @@
+"""
+Script that define dictionnaries objects that allows to make correspondance
+between the differents database.\n
+It define 3 dictionnaries :\n
+manual_match_coal : Dictionnary that defined key-value pair to allow the
+correspondance between Climate Bombs name into K.Kuhne paper (dictionnary key)
+and Coal extraction site defined in GEM database (dictionnary value). This 
+correspondance is only applicable to Coal extraction sites.\n
+manual_match_gasoil: Dictionnary that defined key-value pair to allow the
+correspondance between Climate Bombs name into K.Kuhne paper (dictionnary key)
+and Gasoil extraction site defined in GEM database (dictionnary value). This 
+correspondance is only applicable to Gasoil extraction sites.\n
+manual_match_company: Dictionnary that defined key-value pair to allow the
+correspondance between fossil fuel company defined into Parent company column 
+of GEM database (dictionnary key) and fossil fuel company defined into 
+Banking on Climate Chaos (BOCC) database\n
+"""
+
 # Dictionnary for Coal Mine only
 manual_match_coal = {
     "Maritsa Coal Mines":"Troyanavo 3 Coal Mine",
@@ -173,21 +191,18 @@ manual_match_gasoil = {
     "Anadarko Shelf_Oklahoma":"Phantom (Wolfcamp) - Anadarko$Sandbar (Bone Spring) - Anadarko$Haley (Lwr. Wolfcamp-Penn Cons.) - Anadarko$Tahiti/Cae/Tong (GC640) - Anadarko$King/Horn Mt. (MC084) - Anadarko$Lucius (KC875) - Anadarko$K2 (GC562) - Anadarko$Holstein (GC644) - Anadarko$Hopkins (GC627) - Anadarko$Heidelberg (GC859) - Anadarko$Marlin (VK915) - Anadarko$Friesian (GC599) - Anadarko",
     "Baltimore Canyon Offshore":"None",
     "Austin Chalk Tight":"Sugarkane (Austin Chalk) - BHP Billiton$Sugarkane (Austin Chalk) - Blackbrush$Sugarkane (Austin Chalk) - BPX$Sugarkane (Austin Chalk) - Burlington$Double A Wells, N (Austin Chalk) - BXP$Giddings (Austin Chalk, Gas) - Chesapeake$Lorenzo (Austin Chalk) - Chesapeake$Giddings (Austin Chalk-3) - Chesapeake$Pearsall (Austin Chalk) - CML$Sugarkane (Austin Chalk) - Devon$Lorenzo (Austin Chalk) - El Toro$Sugarkane (Austin Chalk) - Encana$Sugarkane (Austin Chalk) - EOG$Giddings (Austin Chalk, Gas) - EOG$Hawkville (Austin Chalk) - EOG$Sugarkane (Austin Chalk) - Equinor$Giddings (Austin Chalk, Gas) - Geosouthern$Sugarkane (Austin Chalk) - Gulftex$Sugarkane (Austin Chalk) - Inpex Eagle Ford$Sugarkane (Austin Chalk) - Magnolia$Sugarkane (Austin Chalk) - Marathon$Lorenzo (Austin Chalk) - Matador$Sugarkane (Austin Chalk) - Murphy$Giddings (Austin Chalk, Gas) - Ramtex$Sugarkane (Austin Chalk) - Repsol$Brookeland (Austin Chalk, 8800) - RKI$Giddings (Austin Chalk-3) - Sheridan$Lorenzo (Austin Chalk) - SM Energy$Giddings (Austin Chalk-3) - Treadstone$Pearsall (Austin Chalk) - Trinity$Giddings (Austin Chalk-3) - U. S. Operating$Giddings (Austin Chalk, Gas) - Verdun$Giddings (Austin Chalk-3) - WCS$Giddings (Austin Chalk-3) - Wildhorse$Brookeland (Austin Chalk, 8800) - Zarvona$Magnolia Springs (Austin Chalk) - Zarvona$Double A Wells, N (Austin Chalk) - Zarvona",
-    "Barnett Shale":"Newark, East (Barnett Shale) - Arrowhead$Newark, East (Barnett Shale) - Bedrock$Newark, East (Barnett Shale) - Bluestone$Newark, East (Barnett Shale) - BRG Lone Star$Newark, East (Barnett Shale) - Crown Equipment$Newark, East (Barnett Shale) - Devon$Newark, East (Barnett Shale) - Eagleridge$Emma (Barnett Shale) - Elevation$Newark, East (Barnett Shale) - Endeavor$Newark, East (Barnett Shale) - Enervest-Newark, East (Barnett Shale) - EOG$Newark, East (Barnett Shale) - Faulconer, Vernon E.$Newark, East (Barnett Shale) - FDL$Newark, East (Barnett Shale) - Felderhoff Production$Newark, East (Barnett Shale) - Fuse$Newark, East (Barnett Shale) - GHA Barnett$Newark, East (Barnett Shale) - Hillwood$Newark, East (Barnett Shale) - Lakota$Newark, East (Barnett Shale) - Lime Rock$Newark, East (Barnett Shale) - Mccutchin Petroleum$Newark, East (Barnett Shale) - Merit$Newark, East (Barnett Shale) - Saddle$Newark, East (Barnett Shale) - Sage$Newark, East (Barnett Shale) - Scout$Newark, East (Barnett Shale) - TEP Barnett$Newark, East (Barnett Shale) - Texxol$Newark, East (Barnett Shale) - UPP$Newark, East (Barnett Shale) - XTO$Emma (Barnett Shale) - Zarvona$Newark, East (Barnett Shale) - 1849 Energy",
+    "Barnett Shale":"Newark, East (Barnett Shale) - Arrowhead$Newark, East (Barnett Shale) - Bedrock$Newark, East (Barnett Shale) - Bluestone$Newark, East (Barnett Shale) - BRG Lone Star$Newark, East (Barnett Shale) - Crown Equipment$Newark, East (Barnett Shale) - Devon$Newark, East (Barnett Shale) - Eagleridge$Emma (Barnett Shale) - Elevation$Newark, East (Barnett Shale) - Endeavor$Newark, East (Barnett Shale) - Enervest$Newark, East (Barnett Shale) - EOG$Newark, East (Barnett Shale) - Faulconer, Vernon E.$Newark, East (Barnett Shale) - FDL$Newark, East (Barnett Shale) - Felderhoff Production$Newark, East (Barnett Shale) - Fuse$Newark, East (Barnett Shale) - GHA Barnett$Newark, East (Barnett Shale) - Hillwood$Newark, East (Barnett Shale) - Lakota$Newark, East (Barnett Shale) - Lime Rock$Newark, East (Barnett Shale) - Mccutchin Petroleum$Newark, East (Barnett Shale) - Merit$Newark, East (Barnett Shale) - Saddle$Newark, East (Barnett Shale) - Sage$Newark, East (Barnett Shale) - Scout$Newark, East (Barnett Shale) - TEP Barnett$Newark, East (Barnett Shale) - Texxol$Newark, East (Barnett Shale) - UPP$Newark, East (Barnett Shale) - XTO$Emma (Barnett Shale) - Zarvona$Newark, East (Barnett Shale) - 1849 Energy",
     "Beaufort Sea Offshore":"None",
     "Gulf Coast Centre Offshore":"None",
     "West Florida Offshore":"None",
     "Orinoco Joint Ventures":"Carabobo-1$Carabobo-2",
     "La Luna Shale":"None",
     "Collingham Shale":"Luiperd$Brulpadda$Paddavissie Fairway",
-    
-    
 }
 
 # Dictionnary for company matching between GEM (Global Energy Monitor) (key)
 # and BOCC (Banking On Climate Chaos) (values)
-
-manual_match_gasoil_test = {
+manual_match_company_test = {
     "Thungela Resources Australia":"Thungela Resources Ltd",
     "Glencore":"Glencore PLC",
     "Integrated Energy Services Corporation":"BCE-Mach LLC",
@@ -228,7 +243,7 @@ manual_match_gasoil_test = {
     "ROSNEFTEGAZ JSC":"Rosneftegaz AO"
 }
 
-manual_match_gasoil = {
+manual_match_company = {
     "Thungela Resources Australia":"Thungela Resources Ltd",
     "Glencore":"Glencore PLC",
     "China Coal":"China Coal Xinji Energy Co Ltd",
@@ -251,3 +266,4 @@ manual_match_gasoil = {
     "Gazprom":"Gazprom PJSC",
     "ROSNEFTEGAZ JSC":"Rosneftegaz AO"
 }
+
