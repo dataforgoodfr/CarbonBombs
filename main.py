@@ -286,11 +286,6 @@ def create_carbon_bombs_gasoil_table():
     df_gasoil_carbon_bombs.drop("temp",axis=1,inplace=True)
     df_gasoil_gem_multi_match.drop("CarbonBombName",axis=1,inplace=True)
     # Concat dataframes from match perfect/multi/manual
-    """
-    df_gasoil_gem_manual_match.to_csv("./working_documents/manual.csv")
-    df_gasoil_gem_perfect_match.to_csv("./working_documents/perfect.csv")
-    df_gasoil_gem_multi_match.to_csv("./working_documents/multi.csv")
-    """
     df_gasoil_gem_matched = pd.concat([df_gasoil_gem_perfect_match,
                                        df_gasoil_gem_manual_match,
                                        df_gasoil_gem_multi_match,
@@ -302,7 +297,6 @@ def create_carbon_bombs_gasoil_table():
                                 right_on='Unit name',
                                 how='left')
     df_gasoil_merge.drop(["Unit name","Country_y"],axis=1,inplace=True)
-    df_gasoil_merge.to_csv("./data_cleaned/output_gasoil_table.csv",index=False)
     return df_gasoil_merge
 
 def ponderate_percentage(dict_percentage):
@@ -534,7 +528,6 @@ def create_carbon_bombs_coal_table():
                              right_on='Mine Name',
                              how='left')
     df_coal_merge.drop(["Mine Name","Country_y"],axis=1,inplace=True)
-    df_coal_merge.to_csv("./data_cleaned/output_coal_table.csv",index=False)
     return df_coal_merge
 
 def find_matching_name_for_GEM_coal(name, country, df_gem):
@@ -621,10 +614,10 @@ def create_carbon_bombs_table():
                                         .apply(compute_percentage_multi_sites)
     # Drop column Owners (next to decision taken during GEM interview)
     df_carbon_bombs.drop("Owners", axis = 1)
-    df_carbon_bombs.to_csv("./data_cleaned/output_carbon_bombs.csv",index=False)
     return df_carbon_bombs
     
 if __name__ == '__main__':
     # Main function
     df = create_carbon_bombs_table()
+    df.to_csv("./data_cleaned/carbon_bombs_informations.csv",index=False)
     print(df.shape)
