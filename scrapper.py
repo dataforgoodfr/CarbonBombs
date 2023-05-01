@@ -10,7 +10,7 @@ CSV file.
 
 Examples:
 To use this script, simply run it from the command line:
-$ python script_name.py
+$ python scrapper.py
 """
 import os
 import sys
