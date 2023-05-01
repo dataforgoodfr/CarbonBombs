@@ -50,8 +50,8 @@ def load_carbon_bombs_database():
       file path.
     - The CSV file must be separated by a semicolon (;).
     """
-    file_path = "./data_cleaned/output_carbon_bombs.csv"
-    df = pd.read_csv(file_path,sep=";")
+    file_path = "./data_cleaned/carbon_bombs_informations.csv"
+    df = pd.read_csv(file_path)
     return df 
 
 def split_column_parent_company(row):
@@ -78,7 +78,7 @@ def split_column_parent_company(row):
     - This function requires the pandas library to be installed.
     """
     instance = row['Carbon_Bomb_Name']
-    companies = row['Parent_Company'].split(',')
+    companies = row['Parent_Company'].split(';')
     carbon_bomb_list_company = ([{'Carbon_Bomb_Name': instance,
                                  'Parent_Company': company} 
                                  for company in companies])
@@ -111,19 +111,18 @@ def company_involvement_in_carbon_bombs():
                                                  astype("str"))
     split_rows = df_carbon_bombs_company.apply(split_column_parent_company,
                                                axis=1)
-    df_carbon_bombs_company_detailed = pd.concat(
-        [pd.DataFrame(rows) for rows in split_rows])
-    df_carbon_bombs_company_detailed.reset_index(drop=True, inplace=True)
-    df_carbon_bombs_company_detailed['percentage'] = \
-        df_carbon_bombs_company_detailed['Parent_Company']\
-            .str.extract(r'(\d+)%', expand=False)
-    # Remove the percentage and extra spaces from Parent Company column
-    df_carbon_bombs_company_detailed['Parent_Company'] = \
-        df_carbon_bombs_company_detailed['Parent_Company']\
-            .str.replace(r'\s*\(\d+%\)','', regex=True).str.strip()
-    df_carbon_bombs_company_detailed.to_csv(
-        "./data_cleaned/carbon_bomb_company_participation.csv", index = False)
-    return df_carbon_bombs_company_detailed
+    # Create a dataframe with duplicates carbon bombs  
+    df = pd.concat([pd.DataFrame(rows) for rows in split_rows])
+    df.reset_index(drop=True, inplace=True)
+    # Use str.extract() to create new columns
+    df['company'] = df['Parent_Company'].str.extract(r'^(.+?)\s+\(')
+    # Extract the percentage using a simple regular expression
+    df['percentage'] = df['Parent_Company'].str.extract(r'\(([\d.]+)%\)')
+    # Convert percentage column to float
+    df['percentage'] = df['percentage'].astype(float)
+    # Drop Parent_Company column
+    df.drop("Parent_Company", axis = 1, inplace = True)
+    return df
 
 def clean(text):
     """
@@ -210,4 +209,5 @@ def test_link_record_BOCC_CB():
 
 if __name__ == '__main__':
     # Main function
-    company_involvement_in_carbon_bombs()
+    df = company_involvement_in_carbon_bombs()
+    df.to_csv("./data_cleaned/connexion_carbonbombs_company.csv",index = False)
