@@ -179,7 +179,7 @@ def create_carbon_bombs_gasoil_table():
         'Owner',
         'Parent',
         ]
-    df_gasoil_gem_mines = df_gasoil_gem_mines[GEM_usefull_columns]
+    df_gasoil_gem_mines = df_gasoil_gem_mines.loc[:,GEM_usefull_columns]
     # Only retain perfect match on Project Name between GEM & CB with a 
     # country verification
     df_gasoil_carbon_bombs["temp"] = (df_gasoil_carbon_bombs["Project Name"]+
@@ -187,8 +187,8 @@ def create_carbon_bombs_gasoil_table():
     df_gasoil_gem_mines["temp"] = (df_gasoil_gem_mines["Unit name"]+"/"+
                                    df_gasoil_gem_mines["Country"])
     list_gasoil_carbon_bomb = list(df_gasoil_carbon_bombs["temp"])
-    df_gasoil_gem_perfect_match = (df_gasoil_gem_mines
-            [df_gasoil_gem_mines['temp'].isin(list_gasoil_carbon_bomb)])
+    df_gasoil_gem_perfect_match = (df_gasoil_gem_mines.loc
+        [df_gasoil_gem_mines['temp'].isin(list_gasoil_carbon_bomb),:].copy())
     # Add gem mines that has no perfect match with carbon bomb
     list_gem_match = list(df_gasoil_gem_perfect_match['Unit name'])
     df_carbon_bombs_no_match = (df_gasoil_carbon_bombs
@@ -278,7 +278,6 @@ def create_carbon_bombs_gasoil_table():
                                               ["CarbonBombName"])
     df_gasoil_gem_multi_match.loc[:,"Unit_concerned"] = unit_name_list
     # Add column "Unit_concerned" for the other df and drop useless columns
-    # WARNING raised on perfect match to be solved later
     df_gasoil_gem_perfect_match["Unit_concerned"]=""
     df_gasoil_gem_manual_match["Unit_concerned"]=""
     df_gasoil_gem_perfect_match.drop("temp",axis=1,inplace=True)
@@ -469,12 +468,12 @@ def create_carbon_bombs_coal_table():
     df_coal_gem_mines["temp"] = (df_coal_gem_mines["Mine Name"]+"/"+
                                  df_coal_gem_mines["Country"])
     list_coal_carbon_bomb = list(df_coal_carbon_bombs["temp"])
-    df_coal_gem_mines_perfect_match = df_coal_gem_mines[\
-        df_coal_gem_mines['temp'].isin(list_coal_carbon_bomb)]
+    df_coal_gem_mines_perfect_match = df_coal_gem_mines.loc[\
+        df_coal_gem_mines['temp'].isin(list_coal_carbon_bomb),:]
     # Check how many duplicate in the filtered GEM database and handle them
-    duplicates = df_coal_gem_mines_perfect_match\
+    duplicates = df_coal_gem_mines_perfect_match.loc\
         [df_coal_gem_mines_perfect_match.duplicated(subset=['Mine Name'],
-                                                   keep=False)]
+                                                   keep=False),:].copy()
     non_duplicates = df_coal_gem_mines_perfect_match\
         [~(df_coal_gem_mines_perfect_match.duplicated(subset=['Mine Name'],
                                                       keep=False))]
@@ -620,4 +619,3 @@ if __name__ == '__main__':
     # Main function
     df = create_carbon_bombs_table()
     df.to_csv("./data_cleaned/carbon_bombs_informations.csv",index=False)
-    print(df.shape)
