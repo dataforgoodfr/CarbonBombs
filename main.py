@@ -17,7 +17,21 @@ from manual_match import manual_match_gasoil
 
     
 def load_urgewald_database_GOGEL(year, type = "UPSTREAM"):
+    """
+    Load the UrgeWald database from the GOGEL report for a given year and type.
 
+    Args:
+    year (int): The year of the report to load, either 2021 or 2022.
+    type (str, optional): The type of data to load, either "UPSTREAM" or 
+    "MIDSTREAM". Default is "UPSTREAM".
+
+    Returns:
+    pandas.DataFrame: A dataframe containing the data from the specified report.
+
+    Raises:
+    FileNotFoundError: If the specified file path cannot be found.
+    ValueError: If an invalid year or type is specified.
+    """
     # Define file version in function of the year
     file_version = {"2021":"urgewald_GOGEL2021V2.xlsx",
                     "2022":"urgewald_GOGEL2022V1.xlsx",
@@ -31,12 +45,30 @@ def load_urgewald_database_GOGEL(year, type = "UPSTREAM"):
     return df
 
 def load_urgewald_database_GCEL():
+    """
+    Load the UrgeWald database from the GCEL report.
+
+    Returns:
+    pandas.DataFrame: A dataframe containing the data from the report.
+
+    Raises:
+    FileNotFoundError: If the specified file path cannot be found.
+    """
     file_path = "./data_sources/urgewald_GCEL_2022_download_0.xlsx"
     df = pd.read_excel(file_path, sheet_name = 'Output', engine='openpyxl')
     # Return dataframe
     return df
     
 def load_carbon_bomb_list_database():
+    """
+    Load the Carbon Bomb List database.
+
+    Returns:
+    pandas.DataFrame: A dataframe containing the data from the database.
+
+    Raises:
+    FileNotFoundError: If the specified file path cannot be found.
+    """
     file_path = "./data_sources/1-s2.0-S0301421522001756-mmc2.xlsx"
     df = pd.read_excel(file_path, sheet_name='Full Carbon Bombs List',\
                     engine='openpyxl', skipfooter = 4)
@@ -129,7 +161,7 @@ def load_d4g_database():
     df = pd.read_csv(file_path,sep=";")
     return df
 
-    
+"""
 def clean_coal_mine_gem_database():
     # Load coal mine database from gem
     df = load_coal_mine_gem_database()
@@ -142,6 +174,7 @@ def clean_coal_mine_gem_database():
     # Filter df rows based on this list
     df = df[df['Mine Name'].isin(list_coal_carbon_bomb)]
     return df
+"""
 
 def create_carbon_bombs_gasoil_table():
     ############### GAS & OIL MINES ONLY ####################
@@ -171,7 +204,6 @@ def create_carbon_bombs_gasoil_table():
     df_carbon_bombs_no_match =  df_gasoil_carbon_bombs[~(df_gasoil_carbon_bombs['Project Name'].isin(list_gem_match))]
     # Iteration over rows to find the right match
     index_gem_single_match = list()
-    dict_gem_cb_names = dict()
     # Initiate multi match dataframe with an additional column to store CarbonBombs names
     GEM_multi_match_columns = GEM_usefull_columns + ["CarbonBombName"]
     df_gasoil_gem_multi_match = pd.DataFrame(columns=GEM_multi_match_columns)
@@ -186,13 +218,85 @@ def create_carbon_bombs_gasoil_table():
             df_gasoil_gem_multi_match.loc[df_gasoil_gem_multi_match.shape[0]]= concatenate_line
         else:
             index_gem_single_match.append(index_gem)
-            dict_gem_cb_names[name_gem] = name
-            
     # Once index list is complete extract those line from df_coal_gem_mines
     df_gasoil_gem_manual_match = df_gasoil_gem_mines.iloc[index_gem_single_match,:].copy()
+    # Before replace name by the one in carbon bombs in the extracted dataframe
+    # in order to ensure join quality between GEM and CB database, we must make 
+    # specific manipulation on manual_match_gasoil dictionary in order to 
+    # separate dictionnary values that appears multiple time from the one that 
+    # only appeared once. This manipulation is only relative to gasoil database
+    # given the fact we had to associate the same GEM Mine to different carbon
+    # bombs due to the lack of information on GEM Gas&Oil Tracker. 
+    unique_values_dict = {}
+    non_unique_values_dict = {}
+    value_count = {}
+    # Loop through the items in the manual_match_gasoil dictionary
+    for key, value in manual_match_gasoil.items():
+        # Keep track of how many times each value appears
+        value_count[value] = value_count.get(value, 0) + 1
+    # Fulfill unique_values_dict and non_unique_values_dict dictionnaries based 
+    # on value_count dictionnary
+    for key, value in manual_match_gasoil.items():
+        # If the value has not been encountered before and only appears once,
+        # add it to the unique_values_dict
+        if value_count[value] == 1:
+            unique_values_dict[key] = value
+        # If the value has been encountered before, add it to the 
+        # non_unique_values_dict
+        else:
+            non_unique_values_dict[key] = value
+    
+
+
+    print("Non-unique values dict: ", non_unique_values_dict)    
+    #print("Unique values dict: ", unique_values_dict)
+    
+    
+    
     # Replace name in df_gasoil_gem_manual_match by the one in carbon bomb
-    inverse_manual_match_gasoil = {value: key for key, value in manual_match_gasoil.items()}
+    # First only for unique_values_dict because unique values so simple
+    inverse_manual_match_gasoil = {value: key for key, value in unique_values_dict.items()}
     df_gasoil_gem_manual_match['Unit name'] = df_gasoil_gem_manual_match['Unit name'].replace(inverse_manual_match_gasoil)
+    # Secondly for non_unique_values_dict, more manipulation needed when 
+    # inverting dictionnary and associated carbon bomb name to a site.
+    inverted_dict = {}
+    for key, value in non_unique_values_dict.items():
+        if value in inverted_dict:
+            if isinstance(inverted_dict[value], list):
+                inverted_dict[value].append(key)
+            else:
+                inverted_dict[value] = [inverted_dict[value], key]
+        else:
+            inverted_dict[value] = key
+    # Iterate throught all values of inverted_dict and remap each carbon bombs
+    # name one by one (quick solution might be rework later)
+    # Reset_index of df_gasoil_gem_manual_match before this operation
+    df_gasoil_gem_manual_match.reset_index(inplace = True,drop = True)
+    for gem_site in inverted_dict.keys():
+        for carbon_bomb in inverted_dict[gem_site]:
+            print(gem_site)
+            print(carbon_bomb)
+            print(df_gasoil_gem_manual_match.head())
+            # Retrieve first index that corresponds to gem_site
+            first_index = df_gasoil_gem_manual_match.loc[\
+                df_gasoil_gem_manual_match['Unit name']==gem_site,:].index[0]
+            # Modify only the first index of previous query with the carbon 
+            # bomb name
+            df_gasoil_gem_manual_match.loc[first_index,"Unit name"]=carbon_bomb
+            # On the next iteration, as Unit Name has been modify, this 
+            # instruction should modify the next one.            
+    df_gasoil_gem_manual_match.to_csv("temp.csv")
+    
+            
+    #print(inverted_dict)
+    
+    #print(df_gasoil_gem_manual_match['Unit name'].head())
+
+    #print(df_gasoil_gem_manual_match['Unit name'].head())
+    
+    
+    
+    
     # Columns manipulation on df_multi_match to allow concatenation
     unit_name_list = list(df_gasoil_gem_multi_match["Unit name"])
     df_gasoil_gem_multi_match["Unit name"] = df_gasoil_gem_multi_match["CarbonBombName"]
@@ -205,8 +309,12 @@ def create_carbon_bombs_gasoil_table():
     df_gasoil_gem_manual_match.drop("temp",axis=1,inplace=True)
     df_gasoil_carbon_bombs.drop("temp",axis=1,inplace=True)
     df_gasoil_gem_multi_match.drop("CarbonBombName",axis=1,inplace=True)
-    
     # Concat dataframes from match perfect/multi/manual
+    """
+    df_gasoil_gem_manual_match.to_csv("./working_documents/manual.csv")
+    df_gasoil_gem_perfect_match.to_csv("./working_documents/perfect.csv")
+    df_gasoil_gem_multi_match.to_csv("./working_documents/multi.csv")
+    """
     df_gasoil_gem_matched = pd.concat([df_gasoil_gem_perfect_match,
                                        df_gasoil_gem_manual_match,
                                        df_gasoil_gem_multi_match,
@@ -379,7 +487,7 @@ def create_carbon_bombs_coal_table():
         'Owners',
         'Parent Company',
         ]
-    df_coal_gem_mines = df_coal_gem_mines[GEM_usefull_columns]
+    df_coal_gem_mines = df_coal_gem_mines.loc[:,GEM_usefull_columns]
     # Only retain perfect match on Project Name between GEM & CB with a country verification
     df_coal_carbon_bombs["temp"] = df_coal_carbon_bombs["Project Name"]+"/"+df_coal_carbon_bombs["Country"]
     df_coal_gem_mines["temp"] = df_coal_gem_mines["Mine Name"]+"/"+df_coal_gem_mines["Country"]
@@ -388,11 +496,30 @@ def create_carbon_bombs_coal_table():
     # Check how many duplicate in the filtered GEM database and handle them
     duplicates = df_coal_gem_mines_perfect_match[df_coal_gem_mines_perfect_match.duplicated(subset=['Mine Name'],keep=False)]
     non_duplicates = df_coal_gem_mines_perfect_match[~(df_coal_gem_mines_perfect_match.duplicated(subset=['Mine Name'],keep=False))]
+    # For duplicates, drop duplicated line if data is the same on lat/long data
+    # Very simple approach, should be modified in the future. 
+    # No time to implement complex approach that gather results of duplicates
+    # We choose this approach beacause difference on duplicated records always 
+    # happened on Operator/Owner/Parent Company columns which is mainly due to 
+    # typo errors.
+    duplicates.drop_duplicates(subset=["Mine Name"],inplace = True)
+    """
+    
+    
+    
+    
+    
     # WARNING TO BE MODIFY
     # Simple approach, quality check if on selected columns for GEM DB
     # duplicate rows really are duplicated on all properties
+    
+    duplicates.to_csv("temp.csv")
+    
     full_duplicates = duplicates[duplicates.duplicated(keep=False)]
     partial_duplicates = duplicates[~(duplicates.duplicated(keep=False))]
+    
+    
+    print(partial_duplicates)
     # WARNING Operations on partial duplicates data in order to erase difference 
     # when mine name and country are the same
     print("Cleaning Operations to be set")
@@ -402,13 +529,26 @@ def create_carbon_bombs_coal_table():
     # duplicates is more than twice we would still have duplicates 
     # (see doc https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.duplicated.html)
     full_duplicates_filtered = duplicates[~(duplicates.duplicated(keep="first"))]
+    """
     # Concat the different dataframe extract from GEM database :
     # non_duplicates = Perfect match just on the name/country. No duplicates associated
     # full_duplicates_filtered = Duplicates match of name/country. Duplicates are strictly identical on selected columns
     # partial_duplicated_cleaned = Duplicates match of name/country. Duplicates have at least on difference
     # but those difference where clean before merged. 
-    df_coal_gem_mines_filtered = pd.concat([non_duplicates,full_duplicates_filtered,partial_duplicates_cleaned])
     
+    df_coal_gem_mines_filtered = pd.concat([non_duplicates,duplicates])
+    
+    #df_coal_gem_mines_filtered = pd.concat([non_duplicates,full_duplicates_filtered,partial_duplicates_cleaned])
+    
+    """
+    print(non_duplicates.shape)
+    print(full_duplicates_filtered.shape)
+    print(partial_duplicates_cleaned.shape)
+    print(df_coal_gem_mines_filtered.shape)
+    non_duplicates.to_csv("./working_documents/non_dupli.csv")
+    full_duplicates.to_csv("./working_documents/full_dupli.csv")
+    partial_duplicates.to_csv("./working_documents/partial_dupli.csv")
+    """
     # Second step add gem mines that has no perfect match with carbon bomb
     list_gem_match = list(df_coal_gem_mines_filtered["Mine Name"])
     df_carbon_bombs_no_match =  df_coal_carbon_bombs[~(df_coal_carbon_bombs['Project Name'].isin(list_gem_match))]
@@ -491,6 +631,8 @@ def find_matching_name_for_GEM_coal(name, country, df_gem):
 def create_carbon_bombs_table():
     df_coal = create_carbon_bombs_coal_table()
     df_gasoil = create_carbon_bombs_gasoil_table()
+    print(df_coal.shape)
+    print(df_gasoil.shape)
     # Add multiple unit concerned column to Coal Table
     df_coal["Multiple_unit_concerned"]=""
     name_mapping_coal = {
@@ -534,6 +676,6 @@ def create_carbon_bombs_table():
 if __name__ == '__main__':
     # Main function
     #create_carbon_bombs_coal_table()
-    df = create_carbon_bombs_gasoil_table()
+    #df = create_carbon_bombs_gasoil_table()
+    df = create_carbon_bombs_table()
     print(df.shape)
-    #df = create_carbon_bombs_table()
