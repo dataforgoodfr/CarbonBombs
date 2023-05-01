@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon April 17 09:19:23 2023
+This script deals with Carbon Bombs database from K.Kühne research paper and 
+GEM databasewebsite to build the csv file saved as 
+carbon_bombs_informations.csv
 
-@author: Nicolle Mathieu
+Examples:
+To use this script, simply run it from the command line:
+$ python main.py
 """
 import os
 import sys
@@ -89,6 +93,37 @@ def load_carbon_bomb_list_database():
     return df
 
 def load_carbon_bomb_coal_database():
+    """
+    Loads the carbon bomb coal database from an Excel file.
+
+    Returns
+    -------
+    pd.DataFrame:
+        A pandas dataframe with the following columns:
+        - New_project (bool): whether the project is new or not.
+        - Project Name (str): name of the project.
+        - Country (str): country where the project is located.
+        - Potential emissions (GtCO2) (float): potential emissions of the 
+        project.
+        - Fuel (category): type of fuel used in the project.
+
+    Raises
+    ------
+    FileNotFoundError:
+        If the data file is not found in the specified path.
+    ValueError:
+        If the data file does not contain the expected sheet.
+
+    Notes
+    -----
+    The data file is expected to be in the following path: 
+    "./data_sources/1-s2.0-S0301421522001756-mmc2.xlsx".
+    The sheet to be read is "Coal".
+    The function filters the columns of interest, renames the 'New' column to 
+    'New_project', changes its values to boolean and sets the desired data 
+    types for the dataframe columns. It also replaces some country names to 
+    correspond to GEM database.
+    """
     file_path = "./data_sources/1-s2.0-S0301421522001756-mmc2.xlsx"
     df = pd.read_excel(file_path, sheet_name='Coal',\
                     engine='openpyxl', skipfooter = 3)
@@ -114,6 +149,37 @@ def load_carbon_bomb_coal_database():
     return df
 
 def load_carbon_bomb_gasoil_database():
+    """
+    Loads the carbon bomb coal database from an Excel file.
+
+    Returns
+    -------
+    pd.DataFrame:
+        A pandas dataframe with the following columns:
+        - New_project (bool): whether the project is new or not.
+        - Project Name (str): name of the project.
+        - Country (str): country where the project is located.
+        - Potential emissions (GtCO2) (float): potential emissions of the 
+        project.
+        - Fuel (category): type of fuel used in the project.
+
+    Raises
+    ------
+    FileNotFoundError:
+        If the data file is not found in the specified path.
+    ValueError:
+        If the data file does not contain the expected sheet.
+
+    Notes
+    -----
+    The data file is expected to be in the following path: 
+    "./data_sources/1-s2.0-S0301421522001756-mmc2.xlsx".
+    The sheet to be read is "Coal".
+    The function filters the columns of interest, renames the 'New' column to 
+    'New_project', changes its values to boolean and sets the desired data 
+    types for the dataframe columns. It also replaces some country
+    names to correspond to GEM database.
+    """
     file_path = "./data_sources/1-s2.0-S0301421522001756-mmc2.xlsx"
     df = pd.read_excel(file_path, sheet_name='Oil&Gas',engine='openpyxl',
                      skipfooter = 4,skiprows=1)
@@ -145,12 +211,55 @@ def load_carbon_bomb_gasoil_database():
     return df
     
 def load_coal_mine_gem_database():
+    """
+    Loads the Global Coal Mine Tracker database from an Excel file.
+
+    Returns
+    -------
+    pd.DataFrame:
+        A pandas dataframe with the data from the "Global Coal Mine Tracker"
+        sheet.
+
+    Raises
+    ------
+    FileNotFoundError:
+        If the data file is not found in the specified path.
+    ValueError:
+        If the data file does not contain the expected sheet.
+
+    Notes
+    -----
+    The data file is expected to be in the following path: 
+    "./data_sources/Global-Coal-Mine-Tracker-April-2023.xlsx".
+    The sheet to be read is "Global Coal Mine Tracker".
+    """
     file_path = "./data_sources/Global-Coal-Mine-Tracker-April-2023.xlsx"
     df = pd.read_excel(file_path, sheet_name='Global Coal Mine Tracker',
                        engine='openpyxl')
     return df
 
 def load_gasoil_mine_gem_database():
+    """
+    Loads the Global Oil and Gas Extraction Tracker database from an Excel file.
+
+    Returns
+    -------
+    pd.DataFrame:
+        A pandas dataframe with the data from the "Main data" sheet.
+
+    Raises
+    ------
+    FileNotFoundError:
+        If the data file is not found in the specified path.
+    ValueError:
+        If the data file does not contain the expected sheet.
+
+    Notes
+    -----
+    The data file is expected to be in the following path: 
+    "./data_sources/Global-Oil-and-Gas-Extraction-Tracker-Feb-2023.xlsx".
+    The sheet to be read is "Main data".
+    """
     file_path = "./data_sources/Global-Oil-and-Gas-Extraction"\
                 "-Tracker-Feb-2023.xlsx"
     # Line that must be passed before in order to avoid useless warning
@@ -164,6 +273,33 @@ def load_d4g_database():
     return df
 
 def create_carbon_bombs_gasoil_table():
+    """
+    Combines data from the Global Oil and Gas Extraction Tracker and the Carbon
+    Bomb Oil and Gas database to create a table of oil and gas mines matched to
+    their corresponding carbon bombs.
+
+    Returns
+    -------
+    pd.DataFrame:
+        A pandas dataframe with columns for the oil and gas mine's name, 
+        country, potential emissions (GtCO2), fuel type, latitude, longitude, 
+        operator, owner, parent, and the corresponding carbon bomb name.
+
+    Raises
+    ------
+    FileNotFoundError:
+        If one of the data files is not found in the specified path.
+    ValueError:
+        If one of the data files does not contain the expected sheet.
+
+    Notes
+    -----
+    This function uses the load_carbon_bomb_gasoil_database() and
+    load_gasoil_mine_gem_database() functions to read data from two Excel files.
+    The expected file paths are:
+    - "./data_sources/Global-Oil-and-Gas-Extraction-Tracker-Feb-2023.xlsx"
+    - "./data_sources/1-s2.0-S0301421522001756-mmc2.xlsx"
+    """
     df_gasoil_carbon_bombs = load_carbon_bomb_gasoil_database()
     df_gasoil_gem_mines = load_gasoil_mine_gem_database()
     # Focus on merge for coal mines between GEM and CB database
@@ -299,6 +435,34 @@ def create_carbon_bombs_gasoil_table():
     return df_gasoil_merge
 
 def ponderate_percentage(dict_percentage):
+    """
+    Ponderates the percentages in a dictionary such that their sum equals 100%.
+
+    Parameters
+    ----------
+    dict_percentage : dict
+        A dictionary where keys are company names and values are percentages.
+
+    Returns
+    -------
+    dict:
+        A new dictionary with the same keys as `dict_percentage` but with values
+        that have been adjusted such that their sum equals 100%.
+
+    Raises
+    ------
+    ValueError:
+        If the values in `dict_percentage` do not add up to 100.
+
+    Notes
+    -----
+    This function takes a dictionary where the values are percentages that may
+    not add up to exactly 100. It calculates a new set of percentages that are
+    adjusted such that their sum equals 100. The adjusted percentages are then
+    rounded to one decimal point and added up to ensure that their sum equals
+    exactly 100. The function returns a new dictionary with the same keys as
+    the input dictionary but with adjusted percentages as values.
+    """
     # Calculate sum of percentage to ponderate
     sum_percentage = sum(list(dict_percentage.values()))
     # Calculate new percentage based on this sum
@@ -317,6 +481,47 @@ def ponderate_percentage(dict_percentage):
     return dict_percentage
 
 def compute_percentage_multi_sites(raw_line):
+    """
+    Compute the percentage of involvement of each company mentioned in a given 
+    line.
+
+    Args:
+        raw_line (str): A string that contains information about the companies 
+        and their involvement.
+
+    Returns:
+        str: A clean line that contains the name of each company and their 
+        corresponding percentage of involvement.
+
+    Raises:
+        TypeError: If the input `raw_line` is not a string.
+
+    Examples:
+        >>> compute_percentage_multi_sites("ABC (20%), XYZ (80%)")
+        'ABC (20%); XYZ (80%)'
+        
+        >>> compute_percentage_multi_sites("ABC; XYZ; PQR")
+        'ABC (33.33333333333333%); XYZ (33.33333333333333%); 
+        PQR (33.33333333333333%)'
+        
+        >>> compute_percentage_multi_sites("")
+        'No informations on company (100.0%)'
+
+    Notes:
+        The function can handle two possibilities:
+        1) When the raw_line contains percentages, it calculates and merges the 
+        percentage of involvement for each company and returns a clean line.
+        2) When the raw_line does not contain percentages, it assumes each 
+        company has an equal involvement and calculates the percentage 
+        accordingly.
+
+    The input raw_line should be in one of the following formats:
+        1) <company_1> (percentage_1%), <company_2> (percentage_2%), ...
+        2) <company_1>; <company_2>; <company_3>; ...
+
+    If there is no information about the company, the output line will be 
+    'No informations on company (100.0%)'.
+    """
     # With raw_line content 2 possibilities : Percentage are indicated or not
     if "%" in raw_line:
         # Case where percentage are indicated
@@ -366,6 +571,47 @@ def compute_percentage_multi_sites(raw_line):
 
 def concatenate_multi_extraction_site(df_gem, list_columns, multi_index,
                                       project_name):
+    """
+    Concatenate values from multiple rows of a Pandas DataFrame for a given set 
+    of columns.
+
+    Args:
+        df_gem (pandas.DataFrame): The Pandas DataFrame to extract values from.
+        list_columns (list): A list of column names to concatenate values from.
+        multi_index (tuple): A tuple of integer index values to use for row 
+        selection.
+        project_name (str): The name of the project to use for concatenation of 
+        CarbonBombName.
+
+    Returns:
+        list: A list of concatenated values, one per column in the list_columns 
+        parameter.
+
+    Raises:
+        SystemExit: If a column name in list_columns is not recognized for 
+        concatenation.
+
+    Example:
+        >>> df = pd.DataFrame({'Country': ['USA', 'USA', 'Canada', 'Canada'],
+        ...                    'CarbonBombName': ['Proj A', 'Proj A',
+                                                    'Proj B', 'Proj B'],
+        ...                    'Latitude': [34.05, 32.71, 45.50, 46.81],
+        ...                    'Longitude': [-118.24, -117.16, -73.57, -71.19],
+        ...                    'Unit ID': ['A1', 'A2', 'B1', 'B2'],
+        ...                    'Unit name': ['Unit A', 'Unit A', 'Unit B', 
+                                            'Unit B'],
+        ...                    'Wiki URL': ['http://A', 'http://A', 'http://B',
+                                            'http://B'],
+        ...                    'Operator': ['Op A', 'Op A', 'Op B', 'Op B'],
+        ...                    'Parent': ['P A', np.nan, np.nan, 'P B'],
+        ...                    'Owner': ['Owner A', 'Owner A', 'Owner B', 
+                                        'Owner B']})
+        >>> concatenate_multi_extraction_site(df, ['Country', 'CarbonBombName',
+        'Latitude', 'Longitude', 'Unit ID','Unit name', 'Wiki URL', 'Operator',
+        'Parent', 'Owner'], (0, 1), 'Proj A')
+        ['USA', 'Proj A', 34.05, -118.24, 'A1;A2', 'Unit A;Unit A',
+        'http://A;http://A', 'Op A', 'P A', ['Owner A', 'Owner A']]
+    """
     list_value_concat=list()
     for elt in list_columns:
         if elt == "Country":
@@ -403,7 +649,37 @@ def concatenate_multi_extraction_site(df_gem, list_columns, multi_index,
             sys.exit()
     return list_value_concat
             
-def find_matching_name_for_GEM_gasoil(name, country, df_gem):  
+def find_matching_name_for_GEM_gasoil(name, country, df_gem):
+    """
+    Find the matching name(s) for a given Gas&Oil project in the GEM database.
+
+    Args:
+        name (str): The name of the Gas&Oil project.
+        country (str): The country of the Gas&Oil project.
+        df_gem (pandas.DataFrame): The GEM database as a pandas DataFrame.
+
+    Returns:
+        Tuple[Union[int, List[int]], Union[str, List[str]]]: A tuple of 
+        index(es) and name(s) matching the Gas&Oil project in the GEM database. 
+        If no matching name is found, the index will be 0 and the name will be 
+        an empty string.
+
+    Raises:
+        None.
+
+    Notes:
+        - A copy of df_gem is made to avoid modification warnings.
+        - Filtering is based on the "Country" column of df_gem.
+        - For Gas&Oil projects, manual matching dictionary is mainly used due 
+        to difficulties on matching Carbon Bombs and
+          Extraction Site.
+        - "$" in mine_name_gem means shale was identified in a list of 
+        extraction sites.
+        - If no match is found in the manual matching dictionary, the index 
+        will be 0 and the name will be an empty string.
+        - If a new project has no match in the GEM database, the index will be 
+        0 and the name will be an empty string.
+    """
     # Setup a copy to avoid warning 
     df_gem = df_gem.copy()
     # Filter line that correspond to the right country
@@ -444,6 +720,41 @@ def find_matching_name_for_GEM_gasoil(name, country, df_gem):
     return index_gem, name_gem
 
 def create_carbon_bombs_coal_table():
+    """
+    Creates a pandas DataFrame of coal carbon bombs data matched with 
+    corresponding coal mines data from the GEM database.
+
+    Args:
+        None.
+
+    Returns:
+        pandas.DataFrame: A pandas DataFrame of coal carbon bombs data matched 
+        with corresponding coal mines data from the GEM database.
+
+    Raises:
+        None.
+
+    Notes:
+        - Loads two pandas DataFrames from different sources: 
+        df_coal_carbon_bombs and df_coal_gem_mines.
+        - Filters columns of interest from df_coal_gem_mines.
+        - Focuses on merge for coal mines between GEM and CB databases.
+        - Only retains perfect match on Project Name between GEM and CB with a 
+        country verification.
+        - Drops duplicates based on "Mine Name" column from 
+        df_coal_gem_mines_perfect_match DataFrame.
+        - Concatenates non-duplicates and duplicates DataFrames from 
+        df_coal_gem_mines_perfect_match.
+        - Adds GEM mines that have no perfect match with carbon bomb.
+        - Uses find_matching_name_for_GEM_coal function to find the right match 
+        for the previous step.
+        - Extracts lines from df_coal_gem_mines using the index list of 
+        df_carbon_bombs_no_match DataFrame.
+        - Replaces name in df_gem_no_match with the one in carbon bomb.
+        - Merges df_coal_carbon_bombs and df_coal_gem_mines_matched DataFrames 
+        based on "Project Name" and "Mine Name".
+        - Drops temporary columns created in previous steps.
+    """
     # Load Dataframe from different sources 
     df_coal_carbon_bombs = load_carbon_bomb_coal_database()
     df_coal_gem_mines = load_coal_mine_gem_database()
@@ -530,6 +841,36 @@ def create_carbon_bombs_coal_table():
     return df_coal_merge
 
 def find_matching_name_for_GEM_coal(name, country, df_gem):
+    """
+    Finds the matching name for a given coal project in the GEM database.
+
+    Args:
+        name (str): The name of the coal project.
+        country (str): The country of the coal project.
+        df_gem (pandas.DataFrame): The GEM database as a pandas DataFrame.
+
+    Returns:
+        Tuple[int, str]: A tuple of index and name matching the coal project 
+        in the GEM database.
+
+    Raises:
+        None.
+
+    Notes:
+        - A copy of df_gem is made to avoid modification warnings.
+        - Filters lines that correspond to the right country.
+        - Determines the column name to use based on df_gem.
+        - Only keeps the first word of the name we want to match and the column 
+        name of GEM Database.
+        - Compares and looks for how many matches we have if we only look at 
+        the first word.
+        - Depending on df_gem.shape various case scenarios:
+            - If only one match is found, retrieves GEM match index.
+            - If numerous matches are found, needs to choose between them 
+            through fuzzy wuzzy.
+            - If no match is found based on the first word, uses manual_match 
+            dictionary.
+    """
     # Setup a copy to avoid warning 
     df_gem = df_gem.copy()
     # Setup column name to use with coal and gasoil
@@ -574,6 +915,31 @@ def find_matching_name_for_GEM_coal(name, country, df_gem):
     return index_gem, name_gem
 
 def create_carbon_bombs_table():
+    """
+    Creates a pandas DataFrame of coal and gasoil carbon bombs data merged 
+    together.
+
+    Args:
+        None.
+
+    Returns:
+        pandas.DataFrame: A pandas DataFrame of coal and gasoil carbon bombs 
+        data merged together.
+
+    Raises:
+        None.
+
+    Notes:
+        - Calls create_carbon_bombs_coal_table and 
+        create_carbon_bombs_gasoil_table functions.
+        - Adds "Multiple_unit_concerned" column to Coal Table.
+        - Sets column name mapping for Coal and Gasoil tables.
+        - Renames dataframe columns based on previous mappings.
+        - Merges dataframes.
+        - Cleans percentage in the Parent_company column.
+        - Drops the Owners column (following a decision taken during GEM 
+        interview).
+    """
     df_coal = create_carbon_bombs_coal_table()
     df_gasoil = create_carbon_bombs_gasoil_table()
     # Add multiple unit concerned column to Coal Table
