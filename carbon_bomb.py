@@ -1118,4 +1118,3 @@ def create_carbon_bombs_table():
 if __name__ == '__main__':
     # Main function
     df = create_carbon_bombs_table()
-    df.to_csv("./data_cleaned/carbon_bombs_informations.csv",index=False)

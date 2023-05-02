@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon April 17 09:19:23 2023
-
-@author: Nicolle Mathieu
+Script that generated dataframe and associated csv file on bank side.
 """
 
 import re
 import pandas as pd
 from fuzzywuzzy import fuzz
+from manual_match import manual_match_company
 
 def load_banking_climate_chaos():
     """
@@ -107,9 +106,9 @@ def company_involvement_in_carbon_bombs():
         "Carbon_bomb_name_source_CB",
         "Parent_company_source_GEM"]]
     # Force type of column Parent_Company
-    df_carbon_bombs_company["Parent_company_source_GEM"] = (df_carbon_bombs_company.
-                                                 loc[:,"Parent_company_source_GEM"].
-                                                 astype("str"))
+    df_carbon_bombs_company["Parent_company_source_GEM"] = (
+        df_carbon_bombs_company.loc[:,"Parent_company_source_GEM"]
+        .astype("str"))
     split_rows = df_carbon_bombs_company.apply(split_column_parent_company,
                                                axis=1)
     # Create a dataframe with duplicates carbon bombs  
@@ -131,7 +130,9 @@ def company_involvement_in_carbon_bombs():
                             'company':'Company',
                             'percentage':'Percentage',
                             })
-
+    # Remap column Company with match obtain in BOCC database
+    company_cb_bocc = link_record_CB_BOCC()
+    df['Company'] = df['Company'].replace(company_cb_bocc)
     return df
 
 def clean(text):
@@ -185,8 +186,7 @@ def clean(text):
         text_cleaned = re.sub(r'\(\s*\d+(\.\d+)?%\s*\)', '', text_cleaned)
     return text_cleaned
 
-
-def test_link_record_BOCC_CB():
+def link_record_CB_BOCC():
     # Define threshold value
     threshold = 90
     # Extract unique values from bocc
@@ -194,30 +194,37 @@ def test_link_record_BOCC_CB():
     list_bocc = df_bocc["Company"].unique()
     # Extract unique values from carbon bombs details
     df_cb = company_involvement_in_carbon_bombs()
-    list_cb = df_cb["Parent_Company"].unique()
-
+    list_cb = df_cb["Company"].unique()
     df_list_bocc = pd.DataFrame()
     df_list_bocc["Company BOCC"] = list_bocc
-    df_list_bocc["Company BOCC_cleaned"]=df_list_bocc["Company BOCC"].apply(clean)
-    number = len(list_cb)
-    print(f"Number of company to match from GEM DB = {number}")
-    
-    dict_resume = dict()
+    print(list_bocc)
+    print(len(list_bocc))
+    df_list_bocc["Company BOCC_cleaned"]=(df_list_bocc["Company BOCC"]
+                                          .apply(clean))
+    dict_match = dict()
     for elt in list_cb:
         elt_cleaned = clean(elt)
-        df_list_bocc['fuzzy_score'] = df_list_bocc["Company BOCC_cleaned"].apply(lambda x: fuzz.ratio(x, elt_cleaned))
+        df_list_bocc['fuzzy_score'] = (df_list_bocc["Company BOCC_cleaned"]
+                                       .apply(
+                                        lambda x: fuzz.ratio(x, elt_cleaned)))
         max_fuzz = df_list_bocc['fuzzy_score'].max()
-        if max_fuzz < threshold:
-            print(f"Initial string was :{elt}")
-            print(f"Cleaned string was :{elt_cleaned}")
-            print(df_list_bocc.sort_values("fuzzy_score",ascending = False).head())
-        
-        #if max_fuzz > threshold:
-        #    dict_resume[elt] = df_list_bocc.loc[df_list_bocc['fuzzy_score']==max_fuzz,"Company BOCC"]
-    
-    #print(f"Number pos match = {len(dict_resume.keys())}")
+        if max_fuzz > threshold:
+            company_matched = (df_list_bocc.loc[df_list_bocc['fuzzy_score']
+                                        ==max_fuzz,"Company BOCC"].values[0])
+            dict_match[elt] = company_matched
+    # Now we have dictionnary with auto matching, we had the manual match and 
+    # be cautious about not erasing key present in auto matching dict.
+    for key, value in manual_match_company.items():
+        if key not in dict_match:
+            dict_match[key] = value
+    return dict_match
+
+def filter_BOCC_database():
+    print("coucou")
+
 
 if __name__ == '__main__':
-    # Main function
+    # Connexion between CarbonBombs and Company
     df = company_involvement_in_carbon_bombs()
-    df.to_csv("./data_cleaned/connexion_carbonbombs_company.csv",index = False)
+    # Connexion between Company and Bank
+    df = filter_BOCC_database()

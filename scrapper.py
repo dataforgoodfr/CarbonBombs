@@ -21,7 +21,7 @@ from bs4 import BeautifulSoup, SoupStrainer
 from manual_match import manual_match_bank
 
 # Define the target URL of Bank Track
-URL = 'https://www.banktrack.org/banks'
+# URL = 'https://www.banktrack.org/banks'
 
 def scrapping_main_page_bank_track(url):
     """
@@ -388,9 +388,5 @@ def add_column_carbon_bombs_connexion(df_company):
 if __name__ == '__main__':
     # Main function scrapping Bank Track informations
     df = main_scrapping_function(URL)
-    df.to_csv("./data_cleaned/bank_informations.csv",
-              encoding='utf-8-sig',index = False)
     # Main function scrapping company location
-    #df = scrapping_company_location()
-    #df.to_csv("./data_cleaned/company_informations.csv",
-    #          encoding='utf-8-sig',index = False)
+    df = scrapping_company_location()
