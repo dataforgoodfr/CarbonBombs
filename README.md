@@ -35,10 +35,10 @@ The files located in the "data_cleaned" folder constitute the database we use to
 - company_informations.csv: This file contains the approximative address, associated coordinates and the list of connected Carbon Bombs for each company. Approximative address has been generated with ChatGPT and verified manually.
     - Script that generated this file: scrapper.py
     - Source of the data: ./data_cleaned/Data_chatGPT_company_hq_adress.csv
-- connexion_bank_company.csv: This file contains the connections between each company and various Carbon Bombs, along with the associated percentages. The file only includes three columns: Carbon_Bomb_Name, company, and percentage.
+- connexion_carbonbombs_company.csv : This file contains the connections between each company and various Carbon Bombs, along with the associated percentages. The file only includes three columns: Carbon_Bomb_Name, company, and percentage.
     - Script that generated this file: banking.py
     - Source of the data: ./data_cleaned/connexion_carbonbombs_company.csv
-- connexion_carbonbombs_company.csv: This file contains information on the amount financed by each bank to companies involved in Carbon Bombs. It primarily consists of a filtered version of the BOCC database, including only companies present in the "Parent_company" field of the GEM database.
+- connexion_bank_company.csv : This file contains information on the amount financed by each bank to companies involved in Carbon Bombs. It primarily consists of a filtered version of the BOCC database, including only companies present in the "Parent_company" field of the GEM database.
     - Script that generated this file: banking.py
     - Source of the data: GROUP-Fossil_Fuel_Financing_by_Company_Banking_on_Climate_Chaos_2023.xlsx
 
