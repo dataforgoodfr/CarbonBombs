@@ -305,7 +305,7 @@ def load_chatGPT_database():
         })
     # Remap some column name to ensure correspondance
     mapping_column = {
-        "Operator":"Operators (GEM)",
+        "Operator":"Operators_source_GEM",
     }
     df.rename(columns=mapping_column,inplace=True)
     return df
@@ -985,9 +985,10 @@ def add_chat_GPT_data(df):
     # We must create a temp column to avoid matching same project name in 
     # different country
     df_chatgpt["temp"] = df_chatgpt["Name"]+"/"+df_chatgpt["Country"]
-    df["temp"] = (df["Carbon_Bomb_Name (CB)"]+"/"+df["Country(CB)"])
+    df["temp"] = (df["Carbon_bomb_name_source_CB"]+"/"+df["Country_source_CB"])
     # Filter df_chatgpt to only keep rows within list_na_carbon_bombs
-    list_na_carbon_bombs = (df[df['GEM_ID (GEM)'].isna()]["temp"].unique())
+    list_na_carbon_bombs = (df[df['GEM_id_source_GEM'].isna()]["temp"]
+                            .unique())
     df_chatgpt = df_chatgpt.loc[df_chatgpt["temp"].isin(list_na_carbon_bombs),:]
     # Order both dataframe columns based on temp column in ascending order
     df_chatgpt.sort_values("temp",ascending = True, inplace = True)
@@ -996,16 +997,18 @@ def add_chat_GPT_data(df):
     list_fulfill_columns =  [
         "Latitude",
         "Longitude",
-        "Operators (GEM)",
+        "Operators_source_GEM",
     ]
     for column in list_fulfill_columns:
         new_values = list(df_chatgpt[column])
         df.loc[df["temp"].isin(list_na_carbon_bombs),column] = new_values
     # Add columns lat/long/operator_source that define source either come from 
     # GEM database or ChatGPT
-    df["lat/long/operator_source"] = ""
-    df.loc[df['GEM_ID (GEM)'].isna(),"lat/long/operator_source"] = "Chat GPT"
-    df.loc[~(df['GEM_ID (GEM)'].isna()),"lat/long/operator_source"] = "GEM"
+    df["Latitude_longitude_operator_source"] = ""
+    df.loc[df['GEM_id_source_GEM'].isna(),\
+        "Latitude_longitude_operator_source"] = "Chat GPT"
+    df.loc[~(df['GEM_id_source_GEM'].isna()),\
+        "Latitude_longitude_operator_source"] = "GEM"
     # Drop temp column from df 
     df.drop("temp",axis = 1, inplace = True)
     return df
@@ -1100,35 +1103,52 @@ def create_carbon_bombs_table():
     # Remap dataframe columns to display data source
     # Not efficient might be rework (no time for that right now)
     name_mapping_source = {
-        "New_project":"New_project (CB)",
-        "Carbon_Bomb_Name":"Carbon_Bomb_Name (CB)",
-        "Country":"Country(CB)",
-        "Potential_GtCO2":"Potential_GtCO2 (CB)",
-        "Fuel_type":"Fuel_type (CB)",
-        "GEM_ID": "GEM_ID (GEM)",
-        "GEM_source": "GEM_source (GEM)",
+        "New_project":"New_project_source_CB",
+        "Carbon_Bomb_Name":"Carbon_bomb_name_source_CB",
+        "Country":"Country_source_CB",
+        "Potential_GtCO2":"Potential_GtCO2_source_CB",
+        "Fuel_type":"Fuel_type_source_CB",
+        "GEM_ID": "GEM_id_source_GEM",
+        "GEM_source": "GEM_url_source_GEM",
         "Latitude":"Latitude",
         "Longitude":"Longitude",
-        "Operators":"Operators (GEM)",
-        "Parent_Company":"Parent_Company",
-        "Multiple_unit_concerned":"Multiple_unit_concerned (manual_match)",
+        "Operators":"Operators_source_GEM",
+        "Parent_Company":"Parent_company_source_GEM",
+        "Multiple_unit_concerned":"Multiple_unit_concerned_source_GEM",
     }
     df_carbon_bombs.rename(columns=name_mapping_source,inplace=True)
     # Add chatPGT data for Carbon Bombs that have not data extracted from GEM
     df_carbon_bombs = add_chat_GPT_data(df_carbon_bombs)
+    # Reorganize column order after chatGPT 
+    new_column_order = [
+        "New_project_source_CB",
+        "Carbon_bomb_name_source_CB",
+        "Country_source_CB",
+        "Potential_GtCO2_source_CB",
+        "Fuel_type_source_CB",
+        "GEM_id_source_GEM",
+        "GEM_url_source_GEM",
+        "Latitude",
+        "Longitude",
+        "Latitude_longitude_operator_source",
+        "Operators_source_GEM",
+        "Parent_company_source_GEM",
+        "Multiple_unit_concerned_source_GEM",
+    ]
+    df_carbon_bombs = df_carbon_bombs[new_column_order]
     # Fulfill empty values for GEM_ID (GEM) and	GEM_source (GEM) columns
     # depending on project status defined in CB source
     # First need to fulfill empty values by np.NaN
     df_carbon_bombs.replace("", np.nan, inplace=True)
     # Secondly fulfill cell with New_project = True and empty GEM_ID value
-    df_carbon_bombs.loc[(df_carbon_bombs["New_project (CB)"]==True)\
-                         & (df_carbon_bombs['GEM_ID (GEM)'].isna()),\
-                         ["GEM_ID (GEM)","GEM_source (GEM)"]] = (
+    df_carbon_bombs.loc[(df_carbon_bombs["New_project_source_CB"]==True)\
+                         & (df_carbon_bombs['GEM_id_source_GEM'].isna()),\
+                         ["GEM_id_source_GEM","GEM_url_source_GEM"]] = (
                         "NEW PROJECT")
     # Thirdly fulfill cell with New_project = False and empty GEM_ID value
-    df_carbon_bombs.loc[(df_carbon_bombs["New_project (CB)"]==False)\
-                         & (df_carbon_bombs['GEM_ID (GEM)'].isna()),\
-                         ["GEM_ID (GEM)","GEM_source (GEM)"]] = (
+    df_carbon_bombs.loc[(df_carbon_bombs["New_project_source_CB"]==False)\
+                         & (df_carbon_bombs['GEM_id_source_GEM'].isna()),\
+                         ["GEM_id_source_GEM","GEM_url_source_GEM"]] = (
                         "No informations available on GEM")
     return df_carbon_bombs
     
