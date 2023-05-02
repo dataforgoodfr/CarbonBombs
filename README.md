@@ -32,7 +32,9 @@ The files located in the "data_cleaned" folder constitute the database we use to
         - Global-Oil-and-Gas-Extraction-Tracker-Feb-2023.xlsx (Oil & Gas Extraction site)
         - 1-s2.0-S0301421522001756-mmc2.xlsx (Carbon Bombs research paper)
         - Data_chatGPT_carbon_bombs.csv
-- company_informations.csv: ...
+- company_informations.csv: This file contains the approximative address, associated coordinates and the list of connected Carbon Bombs for each company. Approximative address has been generated with ChatGPT and verified manually.
+    - Script that generated this file: scrapper.py
+    - Source of the data: ./data_cleaned/Data_chatGPT_company_hq_adress.csv
 - connexion_bank_company.csv: This file contains the connections between each company and various Carbon Bombs, along with the associated percentages. The file only includes three columns: Carbon_Bomb_Name, company, and percentage.
     - Script that generated this file: banking.py
     - Source of the data: ./data_cleaned/connexion_carbonbombs_company.csv

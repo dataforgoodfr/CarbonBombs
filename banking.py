@@ -117,6 +117,8 @@ def company_involvement_in_carbon_bombs():
     df.reset_index(drop=True, inplace=True)
     # Use str.extract() to create new columns
     df['company'] = df['Parent_company_source_GEM'].str.extract(r'^(.+?)\s+\(')
+    # Clean extra space from company column
+    df['company'] = df['company'].str.strip()
     # Extract the percentage using a simple regular expression
     df['percentage'] = df['Parent_company_source_GEM']\
                             .str.extract(r'\(([\d.]+)%\)')

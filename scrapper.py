@@ -16,6 +16,7 @@ import os
 import sys
 from credentials import API_KEY
 import pandas as pd
+import numpy as np
 import requests
 from bs4 import BeautifulSoup, SoupStrainer
 
@@ -222,13 +223,12 @@ def get_coordinates_google_api(address, api_key = API_KEY):
         if data['status'] == 'OK':
             latitude = data['results'][0]['geometry']['location']['lat']
             longitude = data['results'][0]['geometry']['location']['lng']
-
         else:
             print(f"API Error for {address}. Please try again later")
-            sys.exit()
+            latitude, longitude = 0.0,0.0
     else:
         print(f"API Error for {address}. Please try again later")
-        sys.exit()
+        latitude, longitude = 0.0,0.0
     return latitude,longitude
 
 def main_scrapping_function(url):
@@ -285,8 +285,108 @@ def main_scrapping_function(url):
     # Return dataframe with all info on bank companies
     return df
 
+def scrapping_company_localisation():
+    """
+    Scrapes the address information of companies using chatGPT and retrieves 
+    their corresponding geographic coordinates using the Google Maps API.
+
+    Returns:
+        pandas.DataFrame: A DataFrame containing the following columns:
+        - Company_name (str): Name of the company
+        - Address_headquarters_source_chatGPT (str): Address of the company 
+            headquarters obtained from chatGPT
+        - Latitude (float): Latitude of the company headquarters obtained using 
+            Google Maps
+        - Longitude (float): Longitude of the company headquarters obtained 
+            using Google Maps
+
+    Raises:
+        Exception: If the file path for the chatGPT data is invalid.
+        Exception: If there is an error in obtaining coordinates from the 
+        Google Maps API.
+    """
+    # Initiate Dataframe that will gather informations
+    columns_dataframe = [
+        "Company_name",
+        "Address_headquarters_source_chatGPT",
+        "Latitude",
+        "Longitude",
+    ]
+    df_output = pd.DataFrame(columns = columns_dataframe)
+    # Load list company and adress generated with chatGPT
+    file_path = "./data_sources/Data_chatGPT_company_hq_adress.csv"
+    df = pd.read_csv(file_path,sep = ";")
+    for _,row in df.iterrows():
+        # Create dict relative to one company
+        company_info = dict()
+        # Construct Google maps request API
+        address_maps = row["Address_source_chatGPT"]
+        if address_maps == "N/A":
+            lat,long = 0.0,0.0
+        else :
+            # Get answer from Google maps
+            lat,long = get_coordinates_google_api(address_maps)
+        # Store info in company_info dict
+        company_info["Company_name"] = row["Company"]
+        company_info["Address_headquarters_source_chatGPT"] = row\
+                                                    ["Address_source_chatGPT"]
+        company_info["Latitude"] = lat
+        company_info["Longitude"] = long
+        # Convert dictionary into Dataframe
+        company_df = pd.DataFrame(company_info, index=[0])
+        # Concat dataframes
+        df_output = pd.concat([df_output, company_df], ignore_index=True)
+    # Add column Carbon_bombs_connexion
+    df_output = add_column_carbon_bombs_connexion(df_output)
+    return df_output
+
+def add_column_carbon_bombs_connexion(df_company):
+    """
+    Add a column to the input dataframe containing a comma-separated string of 
+    carbon bomb names.
+
+    This function reads a CSV file containing company names and their 
+    associated carbon bombs. It then creates a new column in the input 
+    dataframe, 'Carbon_bomb_connected', which contains the carbon bomb
+    names associated with each company as a comma-separated string.
+
+    Args:
+        df_company (pd.DataFrame): Input dataframe containing company names 
+        in a column called 'Company_name'.
+
+    Returns:
+        pd.DataFrame: The input dataframe with an additional column, 
+                    'Carbon_bomb_connected', containing the carbon bomb names 
+                    associated with each company as a comma-separated string.
+
+    """
+    # Load dataframe with carbon_bombs_connexion
+    df = pd.read_csv("./data_cleaned/connexion_carbonbombs_company.csv")
+    # Create a dictionary to store the Carbon_bomb_name for each company
+    company_bombs = {}
+    # Iterate through the rows of df
+    for _, row in df.iterrows():
+        company = row['Company']
+        bomb_name = row['Carbon_bomb_name']
+        if company not in company_bombs:
+            company_bombs[company] = [bomb_name]
+        else:
+            if bomb_name not in company_bombs[company]:
+                company_bombs[company].append(bomb_name)
+    # Create a new column in df_company to store the Carbon_bomb_names
+    df_company['Carbon_bomb_connected'] = (df_company['Company_name']
+                                           .map(company_bombs))
+    # Convert column format to a real string not a list
+    df_company['Carbon_bomb_connected'] = (df_company['Carbon_bomb_connected'].
+                                           apply(lambda x: ','.join(x)))
+    return df_company
+
+
 if __name__ == '__main__':
     # Main function
-    df = main_scrapping_function(URL)
-    df.to_csv("./data_cleaned/bank_informations.csv",
+    #df = main_scrapping_function(URL)
+    #df.to_csv("./data_cleaned/bank_informations.csv",
+    #          encoding='utf-8-sig',index = False)
+    df = scrapping_company_localisation()
+    df.to_csv("./data_cleaned/company_informations.csv",
               encoding='utf-8-sig',index = False)
