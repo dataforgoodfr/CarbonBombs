@@ -1107,6 +1107,12 @@ def create_carbon_bombs_table():
                          & (df_carbon_bombs['GEM_id_source_GEM'].isna()),\
                          ["GEM_id_source_GEM","GEM_url_source_GEM"]] = (
                         "No informations available on GEM")
+    # Add empty columns to receive info on Suppliers, Insurers and 
+    # Subcontractors that will be generated later by ChatGPT (@Lou&Oriane)
+    # No time to do it during mission time.
+    df_carbon_bombs["Suppliers_source_chatGPT"] = ""
+    df_carbon_bombs["Insurers_source_chatGPT"] = ""
+    df_carbon_bombs["Subcontractors_source_chatGPT"] = ""
     return df_carbon_bombs
     
 if __name__ == '__main__':
