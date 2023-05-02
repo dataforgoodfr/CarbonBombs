@@ -235,22 +235,27 @@ def link_record_CB_BOCC(df_cb):
             dict_match[key] = value
     return dict_match
 
-def filter_BOCC_database():
-    # Load BOCC Database
-    df = load_banking_climate_chaos()
-    df["Company"]
-    print("coucou")
-
 def main_connexion_function():
+    """
+    Loads the BOCC Database and filters it based on company involvement in 
+    carbon bombs.
+
+    Returns:
+        A tuple of two pandas DataFrames, `df` and `df_bocc`. 
+        `df` contains company involvement in carbon bombs and 
+        `df_bocc` contains filtered BOCC data for those companies.
+    """
+    # Load BOCC Database
+    df_bocc = load_banking_climate_chaos()
     df = company_involvement_in_carbon_bombs()
     company_cb_bocc = link_record_CB_BOCC(df)
     df['Company'] = df['Company'].replace(company_cb_bocc)
-    return df
+    filtered_company = list(company_cb_bocc.values())
+    df_bocc = df_bocc.loc[df_bocc["Company"].isin(filtered_company),:]
+    return df,df_bocc
 
 
 if __name__ == '__main__':
     # Connexion between CarbonBombs and Company
-    df = main_connexion_function()
-    # Connexion between Company and Bank
-    # df = filter_BOCC_database()
+    df, df_bocc = main_connexion_function()
 
