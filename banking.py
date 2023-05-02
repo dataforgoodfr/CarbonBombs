@@ -77,10 +77,10 @@ def split_column_parent_company(row):
     -----
     - This function requires the pandas library to be installed.
     """
-    instance = row['Carbon_Bomb_Name']
-    companies = row['Parent_Company'].split(';')
-    carbon_bomb_list_company = ([{'Carbon_Bomb_Name': instance,
-                                 'Parent_Company': company} 
+    instance = row['Carbon_bomb_name_source_CB']
+    companies = row["Parent_company_source_GEM"].split(';')
+    carbon_bomb_list_company = ([{'Carbon_bomb_name_source_CB': instance,
+                                 'Parent_company_source_GEM': company} 
                                  for company in companies])
     return carbon_bomb_list_company
 
@@ -103,11 +103,12 @@ def company_involvement_in_carbon_bombs():
     directory.
     """
     df_carbon_bombs = load_carbon_bombs_database()
-    df_carbon_bombs_company = df_carbon_bombs.loc[:,["Carbon_Bomb_Name",
-                                                     "Parent_Company"]]
+    df_carbon_bombs_company = df_carbon_bombs.loc[:,[
+        "Carbon_bomb_name_source_CB",
+        "Parent_company_source_GEM"]]
     # Force type of column Parent_Company
-    df_carbon_bombs_company["Parent_Company"] = (df_carbon_bombs_company.
-                                                 loc[:,"Parent_Company"].
+    df_carbon_bombs_company["Parent_company_source_GEM"] = (df_carbon_bombs_company.
+                                                 loc[:,"Parent_company_source_GEM"].
                                                  astype("str"))
     split_rows = df_carbon_bombs_company.apply(split_column_parent_company,
                                                axis=1)
@@ -115,13 +116,20 @@ def company_involvement_in_carbon_bombs():
     df = pd.concat([pd.DataFrame(rows) for rows in split_rows])
     df.reset_index(drop=True, inplace=True)
     # Use str.extract() to create new columns
-    df['company'] = df['Parent_Company'].str.extract(r'^(.+?)\s+\(')
+    df['company'] = df['Parent_company_source_GEM'].str.extract(r'^(.+?)\s+\(')
     # Extract the percentage using a simple regular expression
-    df['percentage'] = df['Parent_Company'].str.extract(r'\(([\d.]+)%\)')
+    df['percentage'] = df['Parent_company_source_GEM']\
+                            .str.extract(r'\(([\d.]+)%\)')
     # Convert percentage column to float
     df['percentage'] = df['percentage'].astype(float)
     # Drop Parent_Company column
-    df.drop("Parent_Company", axis = 1, inplace = True)
+    df.drop("Parent_company_source_GEM", axis = 1, inplace = True)
+    # Rename column name
+    df = df.rename(columns={'Carbon_bomb_name_source_CB': 'Carbon_bomb_name',
+                            'company':'Company',
+                            'percentage':'Percentage',
+                            })
+
     return df
 
 def clean(text):
