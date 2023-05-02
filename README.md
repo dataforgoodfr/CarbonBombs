@@ -7,7 +7,7 @@ This repository contains all informations needed to reproduce the data used on h
 
 # Acronym used in this repository
 - BOCC = Banking On Climate Chaos
-- CB = Carbon Bombs
+- CB = Carbon Bombs (also corresponds to Carbon Bombs research paper)
 - GEM = Global Energy Monitor
 
 # Data sources
