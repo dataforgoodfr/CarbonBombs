@@ -15,14 +15,19 @@ from scrapper import main_scrapping_function, scrapping_company_location
 
 
 if __name__ == '__main__':
+    
     # Step1 : Carbon bombs table
     df = create_carbon_bombs_table()
     df.to_csv("./data_cleaned/carbon_bombs_informations.csv",index=False)
     print("carbon_bombs_informations.csv : done\n")
-    # Step2 : Connexion between CarbonBombs and Company
-    df = main_connexion_function()
-    df.to_csv("./data_cleaned/connexion_carbonbombs_company.csv",index = False)
+    # Step2 : Connexion between CarbonBombs and Company & Company and Bank
+    df_cb,df_bank = main_connexion_function()
+    df_cb.to_csv("./data_cleaned/connexion_carbonbombs_company.csv",
+                 index = False)
     print("connexion_carbonbombs_company.csv : done\n")
+    df_bank.to_csv("./data_cleaned/connexion_bank_company.csv",
+              encoding='utf-8-sig',index = False)
+    print("connexion_bank_company.csv : done\n")
     if os.path.isfile("./credentials.py"):
         # Step3 : Scrape bank informations
         URL = 'https://www.banktrack.org/banks'
@@ -38,10 +43,3 @@ if __name__ == '__main__':
     else:
         print("Create your own Google MAPS API KEY to scrap GPS coordinates.\n"
               "Skipping Step3 and Step4\n")
-    # Step5 : Connexion between Company and Bank
-    """
-    df = filter_BOCC_database()
-    df.to_csv("./data_cleaned/connexion_bank_company.csv",
-              encoding='utf-8-sig',index = False)
-    print("connexion_bank_company.csv : done\n")
-    """
