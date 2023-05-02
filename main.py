@@ -1006,6 +1006,8 @@ def add_chat_GPT_data(df):
     df["lat/long/operator_source"] = ""
     df.loc[df['GEM_ID (GEM)'].isna(),"lat/long/operator_source"] = "Chat GPT"
     df.loc[~(df['GEM_ID (GEM)'].isna()),"lat/long/operator_source"] = "GEM"
+    # Drop temp column from df 
+    df.drop("temp",axis = 1, inplace = True)
     return df
 
 def create_carbon_bombs_table():
