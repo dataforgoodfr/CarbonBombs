@@ -19,50 +19,7 @@ from fuzzywuzzy import fuzz
 from manual_match import manual_match_coal
 from manual_match import manual_match_gasoil
 
-    
-def load_urgewald_database_GOGEL(year, type = "UPSTREAM"):
-    """
-    Load the UrgeWald database from the GOGEL report for a given year and type.
 
-    Args:
-    year (int): The year of the report to load, either 2021 or 2022.
-    type (str, optional): The type of data to load, either "UPSTREAM" or 
-    "MIDSTREAM". Default is "UPSTREAM".
-
-    Returns:
-    pandas.DataFrame: A dataframe containing the data from the specified report.
-
-    Raises:
-    FileNotFoundError: If the specified file path cannot be found.
-    ValueError: If an invalid year or type is specified.
-    """
-    # Define file version in function of the year
-    file_version = {"2021":"urgewald_GOGEL2021V2.xlsx",
-                    "2022":"urgewald_GOGEL2022V1.xlsx",
-                    }
-    file_path = os.path.join("data_sources",file_version[str(year)])
-    df = pd.read_excel(file_path, sheet_name=type,\
-                    engine='openpyxl', skiprows = 3)
-    # Drop NaN rows
-    df.drop([0,1],axis=0, inplace = True)
-    # Return dataframe
-    return df
-
-def load_urgewald_database_GCEL():
-    """
-    Load the UrgeWald database from the GCEL report.
-
-    Returns:
-    pandas.DataFrame: A dataframe containing the data from the report.
-
-    Raises:
-    FileNotFoundError: If the specified file path cannot be found.
-    """
-    file_path = "./data_sources/urgewald_GCEL_2022_download_0.xlsx"
-    df = pd.read_excel(file_path, sheet_name = 'Output', engine='openpyxl')
-    # Return dataframe
-    return df
-    
 def load_carbon_bomb_list_database():
     """
     Load the Carbon Bomb List database.
