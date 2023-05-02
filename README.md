@@ -1,5 +1,6 @@
 # CarbonBombs
 ![Screenshot](docs/Carbon_bombs.jpg)
+*(Image source = https://www.theguardian.com/environment/ng-interactive/2022/may/11/fossil-fuel-carbon-bombs-climate-breakdown-oil-gas)*
 
 425 fossil fuel projects around the world will generate more that 1 gigatonne of CO2 emissions during their lifetime.
 https://carbonbombs.webflow.io/ proposed a representation of those CarbonBombs and their link between Banks and Company that operate them.
