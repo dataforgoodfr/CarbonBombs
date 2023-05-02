@@ -189,3 +189,24 @@ manual_match_company = {
     "ROSNEFTEGAZ JSC":"Rosneftegaz AO"
 }
 
+# Dictionnary for bank matching between BankTrack (key)
+# and BOCC (Banking On Climate Chaos) (values)
+manual_match_bank = {
+    "Bank of Montreal (BMO)":"Bank of Montreal",
+    "Natixis":"BPCE/Natixis",
+    "Canadian Imperial Bank of Commerce (CIBC)":"CIBC",
+    "Industrial and Commercial Bank of China (ICBC)":"ICBC",
+    "KB Financial Group":"KB Financial",
+    "Lloyds Banking Group":"Lloyds",
+    "Mizuho Financial Group":"Mizuho",
+    "Mitsubishi UFJ Financial Group (MUFG)":"MUFG",
+    "National Australia Bank (NAB)":"NAB",
+    "NatWest Group":"NatWest",
+    "Nordea":"Nordea Bank",
+    "Ping An Bank":"Ping An Insurance Group",
+    "Royal Bank of Canada (RBC)":"RBC",
+    "Banco Santander":"Santander",
+    "Sumitomo Mitsui Financial Group":"SMBC Group",
+    "Toronto-Dominion Bank (TD Bank)":"TD",
+    "U.S. Bancorp":"US Bancorp",
+}

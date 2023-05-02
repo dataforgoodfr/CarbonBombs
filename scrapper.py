@@ -12,13 +12,13 @@ Examples:
 To use this script, simply run it from the command line:
 $ python scrapper.py
 """
-import os
+
 import sys
 from credentials import API_KEY
 import pandas as pd
-import numpy as np
 import requests
 from bs4 import BeautifulSoup, SoupStrainer
+from manual_match import manual_match_bank
 
 # Define the target URL of Bank Track
 URL = 'https://www.banktrack.org/banks'
@@ -282,10 +282,13 @@ def main_scrapping_function(url):
         bank_data_df = pd.DataFrame(clean_info, index=[0])
         # Concat dataframes
         df = pd.concat([df, bank_data_df], ignore_index=True)
+    # Make a remap of bank name based on manual_match_bank in order to have 
+    # coherent key values in BOCC and banking_informations.csv
+    df['Bank Name'] = df['Bank Name'].replace(manual_match_bank)
     # Return dataframe with all info on bank companies
     return df
 
-def scrapping_company_localisation():
+def scrapping_company_location():
     """
     Scrapes the address information of companies using chatGPT and retrieves 
     their corresponding geographic coordinates using the Google Maps API.
@@ -383,10 +386,11 @@ def add_column_carbon_bombs_connexion(df_company):
 
 
 if __name__ == '__main__':
-    # Main function
-    #df = main_scrapping_function(URL)
-    #df.to_csv("./data_cleaned/bank_informations.csv",
-    #          encoding='utf-8-sig',index = False)
-    df = scrapping_company_localisation()
-    df.to_csv("./data_cleaned/company_informations.csv",
+    # Main function scrapping Bank Track informations
+    df = main_scrapping_function(URL)
+    df.to_csv("./data_cleaned/bank_informations.csv",
               encoding='utf-8-sig',index = False)
+    # Main function scrapping company location
+    #df = scrapping_company_location()
+    #df.to_csv("./data_cleaned/company_informations.csv",
+    #          encoding='utf-8-sig',index = False)
