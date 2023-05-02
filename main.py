@@ -267,9 +267,47 @@ def load_gasoil_mine_gem_database():
     df = pd.read_excel(file_path, sheet_name='Main data',engine='openpyxl')
     return df
 
-def load_d4g_database():
-    file_path = "./data_sources/Carbon_bomb_personalDB.csv"
+def load_chatGPT_database():
+    """
+    Loads the ChatGPT database and returns a filtered and remapped DataFrame.
+
+    Returns:
+    --------
+    pandas.DataFrame
+        A DataFrame containing carbon bomb data from the ChatGPT database.
+
+    Notes:
+    ------
+    This function loads the ChatGPT database from a CSV file located at 
+    "./data_sources/Data_chatGPT_carbon_bombs.csv". It then filters the 
+    DataFrame to only keep columns that are useful for matching with the GEM 
+    database. The country names in the "Country" column are remapped to ensure 
+    consistency with the GEM database. Finally, the "Operator" column is 
+    remapped to "Operators (GEM)" to ensure consistency with the GEM database.
+    """
+    file_path = "./data_sources/Data_chatGPT_carbon_bombs.csv"
     df = pd.read_csv(file_path,sep=";")
+    # Filter dataframe usefull columns
+    chatGPT_usefull_columns = [
+        'Name',
+        'Country',
+        'Latitude',
+        'Longitude',
+        'Operator',
+        ]
+    df = df.loc[:,chatGPT_usefull_columns]
+    # Remap some country name to ensure correspondance
+    df['Country'] = df['Country'].replace({
+        'Russian Federation': 'Russia',
+        'Turkey': 'Türkiye',
+        'Saudi-Arabia':'Saudi Arabia',
+        'Kuwait-Saudi-Arabia-Neutral Zone':'Kuwait-Saudi Arabia'
+        })
+    # Remap some column name to ensure correspondance
+    mapping_column = {
+        "Operator":"Operators (GEM)",
+    }
+    df.rename(columns=mapping_column,inplace=True)
     return df
 
 def create_carbon_bombs_gasoil_table():
@@ -914,31 +952,109 @@ def find_matching_name_for_GEM_coal(name, country, df_gem):
         name_gem = df_gem.loc[index_gem,column_name]
     return index_gem, name_gem
 
-def create_carbon_bombs_table():
+def add_chat_GPT_data(df):
     """
-    Creates a pandas DataFrame of coal and gasoil carbon bombs data merged 
-    together.
+    Adds ChatGPT data to a DataFrame for rows that have no information from GEM.
 
-    Args:
-        None.
+    Parameters:
+    -----------
+    df : pandas.DataFrame
+        The DataFrame to which ChatGPT data will be added.
 
     Returns:
-        pandas.DataFrame: A pandas DataFrame of coal and gasoil carbon bombs 
-        data merged together.
-
-    Raises:
-        None.
+    --------
+    pandas.DataFrame
+        The original DataFrame with ChatGPT data added.
 
     Notes:
-        - Calls create_carbon_bombs_coal_table and 
-        create_carbon_bombs_gasoil_table functions.
-        - Adds "Multiple_unit_concerned" column to Coal Table.
-        - Sets column name mapping for Coal and Gasoil tables.
-        - Renames dataframe columns based on previous mappings.
-        - Merges dataframes.
-        - Cleans percentage in the Parent_company column.
-        - Drops the Owners column (following a decision taken during GEM 
-        interview).
+    ------
+    This function loads data from the ChatGPT database, and matches rows in the 
+    input DataFrame with rows in the ChatGPT DataFrame based on a temporary 
+    column created by concatenating the name of the carbon bomb with the 
+    country it is in. It then adds information from the ChatGPT DataFrame to 
+    the input DataFrame for rows that have no information from GEM, and adds a 
+    column to indicate the source of the added information (either GEM or 
+    ChatGPT).
+
+    The columns that are added from ChatGPT are "Latitude", "Longitude", and 
+    "Operators (GEM)".
+    """
+    df_chatgpt = load_chatGPT_database()
+    # Once data from chat GPT is loaded fulfill df for rows with
+    # no informations from GEM (i.e row with no value in GEM_ID (GEM) column)
+    # We must create a temp column to avoid matching same project name in 
+    # different country
+    df_chatgpt["temp"] = df_chatgpt["Name"]+"/"+df_chatgpt["Country"]
+    df["temp"] = (df["Carbon_Bomb_Name (CB)"]+"/"+df["Country(CB)"])
+    # Filter df_chatgpt to only keep rows within list_na_carbon_bombs
+    list_na_carbon_bombs = (df[df['GEM_ID (GEM)'].isna()]["temp"].unique())
+    df_chatgpt = df_chatgpt.loc[df_chatgpt["temp"].isin(list_na_carbon_bombs),:]
+    # Order both dataframe columns based on temp column in ascending order
+    df_chatgpt.sort_values("temp",ascending = True, inplace = True)
+    df.sort_values("temp",ascending = True, inplace = True)
+    # Fulfil column with ChatGPT informations
+    list_fulfill_columns =  [
+        "Latitude",
+        "Longitude",
+        "Operators (GEM)",
+    ]
+    for column in list_fulfill_columns:
+        new_values = list(df_chatgpt[column])
+        df.loc[df["temp"].isin(list_na_carbon_bombs),column] = new_values
+    # Add columns lat/long/operator_source that define source either come from 
+    # GEM database or ChatGPT
+    df["lat/long/operator_source"] = ""
+    df.loc[df['GEM_ID (GEM)'].isna(),"lat/long/operator_source"] = "Chat GPT"
+    df.loc[~(df['GEM_ID (GEM)'].isna()),"lat/long/operator_source"] = "GEM"
+    return df
+
+def create_carbon_bombs_table():
+    """
+    Creates a table of carbon bomb projects by merging coal and gas/oil tables,
+    remapping columns, cleaning data, and filling missing values.
+
+    Returns:
+    --------
+    pd.DataFrame:
+        A pandas DataFrame with the following columns:
+            - 'New_project (CB)': boolean indicating if the project is new or 
+            not.
+            - 'Carbon_Bomb_Name (CB)': name of the carbon bomb project.
+            - 'Country (CB)': country where the carbon bomb project is located.
+            - 'Potential_GtCO2 (CB)': potential emissions of the carbon bomb 
+            project
+              in gigatons of CO2.
+            - 'Fuel_type (CB)': type of fuel used by the carbon bomb project.
+            - 'GEM_ID (GEM)': identifier of the project in the Global Energy 
+            Monitor
+              (GEM) database.
+            - 'GEM_source (GEM)': URL of the project page on the GEM database.
+            - 'Latitude': geographic latitude of the project location.
+            - 'Longitude': geographic longitude of the project location.
+            - 'Operators (GEM)': operators of the project according to the GEM 
+            database.
+            - 'Parent_Company': parent company of the project, with percentage
+              of ownership if available.
+            - 'Multiple_unit_concerned (manual_match)': multiple unit concerned
+              for coal projects only.
+
+    Notes:
+    ------
+    This function relies on the following helper functions:
+    - create_carbon_bombs_coal_table: creates the coal table of carbon bomb 
+    projects.
+    - create_carbon_bombs_gasoil_table: creates the gas/oil table of carbon 
+    bomb projects.
+    - compute_percentage_multi_sites: computes the percentage of ownership for
+      parent companies that own several carbon bomb projects.
+    - add_chat_GPT_data: adds ChatGPT data to carbon bomb projects that are not
+      present in the GEM database.
+
+    This function also uses the following mapping dictionaries to rename 
+    columns:
+    - name_mapping_coal: maps column names for the coal table.
+    - name_mapping_gasoil: maps column names for the gas/oil table.
+    - name_mapping_source: maps column names for the final merged table.
     """
     df_coal = create_carbon_bombs_coal_table()
     df_gasoil = create_carbon_bombs_gasoil_table()
@@ -978,7 +1094,40 @@ def create_carbon_bombs_table():
     df_carbon_bombs["Parent_Company"] = df_carbon_bombs["Parent_Company"]\
                                         .apply(compute_percentage_multi_sites)
     # Drop column Owners (next to decision taken during GEM interview)
-    df_carbon_bombs.drop("Owners", axis = 1)
+    df_carbon_bombs.drop("Owners", axis = 1, inplace = True)
+    # Remap dataframe columns to display data source
+    # Not efficient might be rework (no time for that right now)
+    name_mapping_source = {
+        "New_project":"New_project (CB)",
+        "Carbon_Bomb_Name":"Carbon_Bomb_Name (CB)",
+        "Country":"Country(CB)",
+        "Potential_GtCO2":"Potential_GtCO2 (CB)",
+        "Fuel_type":"Fuel_type (CB)",
+        "GEM_ID": "GEM_ID (GEM)",
+        "GEM_source": "GEM_source (GEM)",
+        "Latitude":"Latitude",
+        "Longitude":"Longitude",
+        "Operators":"Operators (GEM)",
+        "Parent_Company":"Parent_Company",
+        "Multiple_unit_concerned":"Multiple_unit_concerned (manual_match)",
+    }
+    df_carbon_bombs.rename(columns=name_mapping_source,inplace=True)
+    # Add chatPGT data for Carbon Bombs that have not data extracted from GEM
+    df_carbon_bombs = add_chat_GPT_data(df_carbon_bombs)
+    # Fulfill empty values for GEM_ID (GEM) and	GEM_source (GEM) columns
+    # depending on project status defined in CB source
+    # First need to fulfill empty values by np.NaN
+    df_carbon_bombs.replace("", np.nan, inplace=True)
+    # Secondly fulfill cell with New_project = True and empty GEM_ID value
+    df_carbon_bombs.loc[(df_carbon_bombs["New_project (CB)"]==True)\
+                         & (df_carbon_bombs['GEM_ID (GEM)'].isna()),\
+                         ["GEM_ID (GEM)","GEM_source (GEM)"]] = (
+                        "NEW PROJECT")
+    # Thirdly fulfill cell with New_project = False and empty GEM_ID value
+    df_carbon_bombs.loc[(df_carbon_bombs["New_project (CB)"]==False)\
+                         & (df_carbon_bombs['GEM_ID (GEM)'].isna()),\
+                         ["GEM_ID (GEM)","GEM_source (GEM)"]] = (
+                        "No informations available on GEM")
     return df_carbon_bombs
     
 if __name__ == '__main__':
