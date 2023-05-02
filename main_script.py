@@ -9,7 +9,7 @@ $ python main.py
 
 import os
 from carbon_bomb import create_carbon_bombs_table
-from connexion import company_involvement_in_carbon_bombs,filter_BOCC_database
+from connexion import main_connexion_function,filter_BOCC_database
 from scrapper import main_scrapping_function, scrapping_company_location
 
 
@@ -20,7 +20,7 @@ if __name__ == '__main__':
     df.to_csv("./data_cleaned/carbon_bombs_informations.csv",index=False)
     print("carbon_bombs_informations.csv : done\n")
     # Step2 : Connexion between CarbonBombs and Company
-    df = company_involvement_in_carbon_bombs()
+    df = main_connexion_function()
     df.to_csv("./data_cleaned/connexion_carbonbombs_company.csv",index = False)
     print("connexion_carbonbombs_company.csv : done\n")
     if os.path.isfile("./credentials.py"):

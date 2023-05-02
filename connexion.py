@@ -130,9 +130,7 @@ def company_involvement_in_carbon_bombs():
                             'company':'Company',
                             'percentage':'Percentage',
                             })
-    # Remap column Company with match obtain in BOCC database
-    company_cb_bocc = link_record_CB_BOCC()
-    df['Company'] = df['Company'].replace(company_cb_bocc)
+
     return df
 
 def clean(text):
@@ -186,19 +184,37 @@ def clean(text):
         text_cleaned = re.sub(r'\(\s*\d+(\.\d+)?%\s*\)', '', text_cleaned)
     return text_cleaned
 
-def link_record_CB_BOCC():
+def link_record_CB_BOCC(df_cb):
+    """Link companies involved in carbon bombs with those in the banking 
+    sector.
+
+    Returns a dictionary with company names as keys and their corresponding 
+    matches as values.
+
+    The function works by comparing a list of companies involved in 
+    "carbon bombs". The function uses fuzzy string matching to match
+    company names in both lists and returns a dictionary of matched pairs.
+
+    Parameters:
+    None
+
+    Returns:
+    dict: A dictionary with company names as keys and their corresponding
+    matches as values.
+
+    Raises:
+    None
+    """
+    
     # Define threshold value
     threshold = 90
     # Extract unique values from bocc
     df_bocc = load_banking_climate_chaos()
     list_bocc = df_bocc["Company"].unique()
     # Extract unique values from carbon bombs details
-    df_cb = company_involvement_in_carbon_bombs()
     list_cb = df_cb["Company"].unique()
     df_list_bocc = pd.DataFrame()
     df_list_bocc["Company BOCC"] = list_bocc
-    print(list_bocc)
-    print(len(list_bocc))
     df_list_bocc["Company BOCC_cleaned"]=(df_list_bocc["Company BOCC"]
                                           .apply(clean))
     dict_match = dict()
@@ -220,11 +236,21 @@ def link_record_CB_BOCC():
     return dict_match
 
 def filter_BOCC_database():
+    # Load BOCC Database
+    df = load_banking_climate_chaos()
+    df["Company"]
     print("coucou")
+
+def main_connexion_function():
+    df = company_involvement_in_carbon_bombs()
+    company_cb_bocc = link_record_CB_BOCC(df)
+    df['Company'] = df['Company'].replace(company_cb_bocc)
+    return df
 
 
 if __name__ == '__main__':
     # Connexion between CarbonBombs and Company
-    df = company_involvement_in_carbon_bombs()
+    df = main_connexion_function()
     # Connexion between Company and Bank
-    df = filter_BOCC_database()
+    # df = filter_BOCC_database()
+
