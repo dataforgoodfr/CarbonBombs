@@ -15,7 +15,6 @@ from scrapper import main_scrapping_function, scrapping_company_location
 
 
 if __name__ == '__main__':
-    
     # Step1 : Carbon bombs table
     df = create_carbon_bombs_table()
     df.to_csv("./data_cleaned/carbon_bombs_informations.csv",index=False)
