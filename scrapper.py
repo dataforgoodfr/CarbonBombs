@@ -380,8 +380,10 @@ def add_column_carbon_bombs_connexion(df_company):
     df_company['Carbon_bomb_connected'] = (df_company['Company_name']
                                            .map(company_bombs))
     # Convert column format to a real string not a list
-    df_company['Carbon_bomb_connected'] = (df_company['Carbon_bomb_connected'].
-                                           apply(lambda x: ','.join(x)))
+    df_company['Carbon_bomb_connected'] = (\
+        df_company['Carbon_bomb_connected'].fillna(''))
+    df_company['Carbon_bomb_connected'] = (\
+        df_company['Carbon_bomb_connected'].apply(lambda x: ','.join(x)))
     return df_company
 
 
