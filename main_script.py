@@ -9,7 +9,7 @@ $ python main.py
 
 import os
 from carbon_bomb import create_carbon_bombs_table
-from connexion import main_connexion_function,filter_BOCC_database
+from connexion import main_connexion_function
 from scrapper import main_scrapping_function, scrapping_company_location
 
 
