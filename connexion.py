@@ -6,6 +6,7 @@ Script that generated dataframe and associated csv file on bank side.
 
 import re
 import pandas as pd
+import numpy as np
 from fuzzywuzzy import fuzz
 from manual_match import manual_match_company
 
@@ -152,7 +153,8 @@ def clean(text):
     -----
     - This function requires the re library to be installed.
     - The list of banned words can be modified as per requirement.
-    """
+    
+    """        
     # Define a list of word to be cleaned before comparing company names
     list_ban_word = [
         "Co",
@@ -205,8 +207,9 @@ def link_record_CB_BOCC(df_cb):
     Raises:
     None
     """
-    
-    # Define threshold value
+    # Fulfill NaN values in df_cb
+    df_cb.fillna("", inplace=True)
+    # Define threshold value in df_cb
     threshold = 90
     # Extract unique values from bocc
     df_bocc = load_banking_climate_chaos()
