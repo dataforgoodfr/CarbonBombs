@@ -20,7 +20,7 @@ Anjialing Open-Pit Mine,Others,13.0
 Antaibao Surface Mine,China Coal Xinji Energy Co Ltd,57.0
 Antaibao Surface Mine,HKSCC Nominees Limited,30.0
 Antaibao Surface Mine,Others,13.0
-Arctic LNG 2 T1-3,No informations on company,100.0
+Arctic LNG 2 T1-3,,
 Area 1 LNG (T1&T2),No informations on company,100.0
 Area-1 Future Phases,No informations on company,100.0
 Arshanovsky Coal Mine,Rutek Alliance,100.0
@@ -51,20 +51,20 @@ Baiyinhua No.3 Surface Mine,Others,1.0
 Bakken Shale,No informations on company,100.0
 Balaram Coal Mine,Coal India Ltd,100.0
 Balasu Coal Mine,Others,100.0
-Baltimore Canyon Offshore,No informations on company,100.0
+Baltimore Canyon Offshore,,
 Banhardih,Government of India,100.0
 Bankui,Coal India Ltd,100.0
 Baode Coal Mine,China Energy Investment Corp Ltd,69.0
 Baode Coal Mine,HKSCC Nominees Limited,17.0
 Baode Coal Mine,Others,14.0
-Barail Shale,No informations on company,100.0
+Barail Shale,,
 Barnett Shale,No informations on company,100.0
 Barzan,No informations on company,100.0
 Basrah Gas project,Eni S.P.A.,32.8
 Basrah Gas project,Korean Gas Corporation,18.8
 Basrah Gas project,Missan Oil Company,25.0
 Basrah Gas project,Basra Oil Company,23.4
-Beaufort Sea Offshore,No informations on company,100.0
+Beaufort Sea Offshore,,
 Beisky-Zapadniy Coal Mine,Private individuals,100.0
 Bernice-Cygnus Coal Mine,TerraCom Resources,50.0
 Bernice-Cygnus Coal Mine,Bono Lithihi Investments Group,50.0
@@ -79,7 +79,7 @@ Boli Coal Mine,Shanxi Huayang Group New Energy Company,70.0
 Boli Coal Mine,Shanxi Chuangrei New Energy Investment Company,30.0
 Borly Coal Mines,Kazakhmys Corporation,100.0
 Bovanenkovo Zone (Yamal Megaproject),Gazprom PJSC,100.0
-Bowland Shale,No informations on company,100.0
+Bowland Shale,,
 Bu Hasa,No informations on company,100.0
 Buertai Coal Mine,China Energy Investment Corp Ltd,69.0
 Buertai Coal Mine,HKSCC Nominees Limited,17.0
@@ -91,20 +91,20 @@ Buzios (x-Franco),Petróleo Brasileiro SA – Petrobras,50.0
 Buzios (x-Franco),Petróleo Brasileiro S.A.,50.0
 Byerwen Coal Mine,QCoal,85.0
 Byerwen Coal Mine,JFE Steel,15.0
-Cambrian/Silurian Marine Shale,No informations on company,100.0
-Campos Offshore,No informations on company,100.0
+Cambrian/Silurian Marine Shale,,
+Campos Offshore,,
 Candeias Shale,Petróleo Brasileiro SA – Petrobras,50.0
 Candeias Shale,Petróleo Brasileiro S.A.,50.0
-Carboniferous Shale,No informations on company,100.0
+Carboniferous Shale,,
 Carmichael Coal Project,Adani Group,100.0
-Central Arabian Offshore,No informations on company,100.0
-Central Arabian Offshore,No informations on company,100.0
-Central Arabian Offshore,No informations on company,100.0
-Central Arabian Onshore,No informations on company,100.0
-Central Arabian Onshore,No informations on company,100.0
-Central Arabian Onshore,No informations on company,100.0
-Central Arabian Onshore,No informations on company,100.0
-Central Uplift Onshore Xinjiang Uygur Autonomous Region,No informations on company,100.0
+Central Arabian Offshore,,
+Central Arabian Offshore,,
+Central Arabian Offshore,,
+Central Arabian Onshore,,
+Central Arabian Onshore,,
+Central Arabian Onshore,,
+Central Arabian Onshore,,
+Central Uplift Onshore Xinjiang Uygur Autonomous Region,,
 Cerrejón Coal Mine,Glencore PLC,100.0
 Chagannur No.1 Coal Mine,Jizhong Energy Group Co Ltd,48.0
 Chagannur No.1 Coal Mine,China Huarong Asset Management Company,2.0
@@ -120,7 +120,7 @@ Changcheng No.3 Coal Mine,Others,1.0
 Changqing,No informations on company,100.0
 Chirodzi Coal Mine,Jindal Group,100.0
 Christina Lake,No informations on company,100.0
-Chukchi Sea Offshore,No informations on company,100.0
+Chukchi Sea Offshore,,
 Collingham Shale,TotalEnergies SE,47.4
 Collingham Shale,QatarEnergy,26.3
 Collingham Shale,Canadian Natural Resources Limited,21.1
@@ -205,7 +205,7 @@ Ghawar Haradh,No informations on company,100.0
 Ghawar Hawiyah,No informations on company,100.0
 Ghawar Shedgum,No informations on company,100.0
 Ghawar Uthmaniyah,No informations on company,100.0
-Goldwyer Shale,No informations on company,100.0
+Goldwyer Shale,,
 Goonyella-Riverside Coal Mine,BHP Group Ltd,50.0
 Goonyella-Riverside Coal Mine,Mitsubishi Corp,50.0
 Gorgon LNG T1-T3,No informations on company,100.0
@@ -217,8 +217,8 @@ Greater Turbot (Stabroek),Exxon Mobil Corp,45.0
 Greater Turbot (Stabroek),Hess Corporation,30.0
 Greater Turbot (Stabroek),CNOOC International,25.0
 Grootegeluk Coal Mine,Exxaro Resources Ltd,100.0
-Gulf Coast Centre Offshore,No informations on company,100.0
-Gulf Deepwater Offshore,No informations on company,100.0
+Gulf Coast Centre Offshore,,
+Gulf Deepwater Offshore,,
 Guojiatan Coal Mine,Shaanxi Yulin Energy Group Co Ltd,100.0
 Guojiawan Coal Mine,China Energy Investment Corp Ltd,37.0
 Guojiawan Coal Mine,Shaanxi Coal and Chemical Industry Group Co Ltd,18.0
@@ -294,7 +294,7 @@ Inner Mongolia Erlintu Coal Mine,Shendong Tianlong Group,9.0
 Inner Mongolia Erlintu Coal Mine,Erdos Jiuyuan Investment Company,2.0
 Inner Mongolia Erlintu Coal Mine,Others,7.0
 "Integrated Belpahar, Lakhanpur, Lilari Coal Mine",Coal India Ltd,100.0
-Irati Shale,No informations on company,100.0
+Irati Shale,,
 Jiangjun Gebi No.2 Coal Mine,Tebian Electric Apparatus,86.0
 Jiangjun Gebi No.2 Coal Mine,Xinjiang Joinworld Company,14.0
 Jinjie Coal Mine,China Energy Investment Corp Ltd,49.0
@@ -338,15 +338,15 @@ Kouzi East Coal Mine,China Coal Xinji Energy Co Ltd,30.0
 Kouzi East Coal Mine,China Energy Investment Corp Ltd,7.0
 Kouzi East Coal Mine,Anhui Xinji Coal and Electricity Group,7.0
 Kouzi East Coal Mine,China COSCO Shipping Corp Ltd,56.0
-Kronprins Christian Offshore,No informations on company,100.0
+Kronprins Christian Offshore,,
 Ku-Maloob-Zaap Project,No informations on company,100.0
 Kusmunda Coal Mine,Coal India Ltd,100.0
-Kuznetsk Depression (Kuzbass) CBM,No informations on company,100.0
-La Luna Shale,No informations on company,100.0
-La Luna Shale,No informations on company,100.0
+Kuznetsk Depression (Kuzbass) CBM,,
+La Luna Shale,,
+La Luna Shale,,
 Lakhanpur Coal Mine,Coal India Ltd,100.0
 Leningradskoye (Kara Sea),Gazprom PJSC,100.0
-Lensky Basin CBM,No informations on company,100.0
+Lensky Basin CBM,,
 Leviathan,Chevron Corp,39.7
 Leviathan,Delek Group Ltd,45.4
 Leviathan,Ratio Petroleum,14.9
@@ -366,7 +366,7 @@ Liuzhuang Coal Mine,China Energy Investment Corp Ltd,7.0
 Liuzhuang Coal Mine,Anhui Xinji Coal and Electricity Group,7.0
 Liuzhuang Coal Mine,Others,55.0
 Liuzhuang Coal Mine,Others,1.0
-Llandovery Shale,No informations on company,100.0
+Llandovery Shale,,
 Longmaxi Shale (Sichuan/Changyu),No informations on company,100.0
 Longmaxi Shale,No informations on company,100.0
 Longwan Coal Mine,Jinneng Holding Group Co Ltd,44.0
@@ -391,7 +391,7 @@ Lula (X-Tupi),S.A.,5.5
 Lula (X-Tupi),Pré-Sal Petróleo S.A.,0.3
 MC #1 Coal Mine,Foresight Energy,100.0
 MHU Coal Mine,Private Resources Limited,100.0
-MZLNG Joint Development (T1-T2),No informations on company,100.0
+MZLNG Joint Development (T1-T2),,
 Madaotou Coal Mine,Jinneng Holding Group Co Ltd,100.0
 Majialiang Coal Mine,Jinneng Holding Group Co Ltd,88.0
 Majialiang Coal Mine,Others,12.0
@@ -408,7 +408,7 @@ Meihuajing Coal Mine,Ningxia State-Owned Capital Operation Group,49.0
 Mengcun Coal Mine,Shaanxi Coal and Chemical Industry Group Co Ltd,45.0
 Mengcun Coal Mine,China Development Bank,6.0
 Mengcun Coal Mine,Others,49.0
-Menilite Shale,No informations on company,100.0
+Menilite Shale,,
 Menkeqing Coal Mine,China Coal Xinji Energy Co Ltd,38.0
 Menkeqing Coal Mine,Sinopec,38.0
 Menkeqing Coal Mine,Shenergy Group Co Ltd,13.0
@@ -446,8 +446,8 @@ North Antelope Rochelle Coal Mine,Peabody Energy Corp,100.0
 North Field C LNG,No informations on company,100.0
 North Field E,QatarEnergy,100.0
 North Field,No informations on company,100.0
-North Kara Sea Offshore,No informations on company,100.0
-North Slope Onshore,No informations on company,100.0
+North Kara Sea Offshore,,
+North Slope Onshore,,
 Oil shale China,No informations on company,100.0
 Olive Downs Coal Mine,Pembroke Resources,100.0
 Orinoco Joint Ventures,PDVSA,60.0
@@ -464,8 +464,8 @@ Pangpangta Coal Mine,Shanxi Coking Coal Group Co Ltd,58.0
 Pangpangta Coal Mine,China Cinda Asset Management Company,36.0
 Pangpangta Coal Mine,China Construction Bank,4.0
 Pangpangta Coal Mine,Others,2.0
-Parnaiba Onshore,No informations on company,100.0
-Pars Southwest,No informations on company,100.0
+Parnaiba Onshore,,
+Pars Southwest,,
 Pasir Coal Mine,Indika Energy Tbk PT,100.0
 Pazanan,National Iranian Oil Company,100.0
 Peak Downs Coal Mine,BHP Group Ltd,50.0
@@ -521,7 +521,7 @@ Romashkino,No informations on company,100.0
 Rumaila North & South,BP P.L.C.,38.0
 Rumaila North & South,China National Petroleum Corporation (CNPC),37.0
 Rumaila North & South,Basra Oil Company,25.0
-Rusanovskoye (Kara Sea),No informations on company,100.0
+Rusanovskoye (Kara Sea),,
 Saebyol Coal Mining Complex,Government of North Korea,100.0
 Safaniya YTF Concession,No informations on company,100.0
 Safaniya,No informations on company,100.0
@@ -535,10 +535,10 @@ San Juan Coal Mine,Yildirim Holding AS,100.0
 Sandaogou Coal Mine,China Energy Investment Corp Ltd,70.0
 Sandaogou Coal Mine,Shaanxi Coal and Chemical Industry Group Co Ltd,30.0
 Sanjiao No.1 Coal Mine,Jinneng Holding Group Co Ltd,100.0
-Santos Offshore,No informations on company,100.0
+Santos Offshore,,
 Saraji East Coal Mine,BHP Group Ltd,50.0
 Saraji East Coal Mine,Mitsubishi Corp,50.0
-Sembar Shale,No informations on company,100.0
+Sembar Shale,,
 Sengwe Colliery,RioZim,100.0
 SeverEnergia Project,No informations on company,100.0
 Shaanxi Caojiatan Coal Mine,Shaanxi Coal and Chemical Industry Group Co Ltd,51.0
@@ -602,7 +602,7 @@ Sihe Coal Mine,Jinneng Holding Group Co Ltd,70.06
 Sihe Coal Mine,China Cinda Asset Management Company,13.65
 Sihe Coal Mine,Others,16.289999999999992
 Sijiazhuang Coal Mine,Huayang New Material Technology Group Co Ltd,100.0
-Sirte Shale,No informations on company,100.0
+Sirte Shale,,
 South Pars (Phases 2-3) dry gas,TotalEnergies SE,40.0
 South Pars (Phases 2-3) dry gas,Gazprom PJSC,30.0
 South Pars (Phases 2-3) dry gas,Petroliam Nasional Berhad,30.0
@@ -613,13 +613,13 @@ South Pars (Phases 4-5) dry gas,PPL Corp,8.0
 South Pars (Phases 4-5) dry gas,PPI,12.0
 South Pars (Phases 4-5) dry gas,National Iranian Oil Company,20.0
 South Pars (Phases 9-10) dry gas,No informations on company,100.0
-Southeast Uplift Onshore Heilongjiang Province,No informations on company,100.0
+Southeast Uplift Onshore Heilongjiang Province,,
 "Spirit River (Notikewin, Falher, Wilrich)",No informations on company,100.0
 Stepnoy Coal Mine,Octo Coal,100.0
 Suancigou Coal Mine,Inner Mongolia Yitai Investment Co Ltd,52.0
 Suancigou Coal Mine,Shanxi Yuedian Energy,24.0
 Suancigou Coal Mine,Beijing Jingneng Power Company,24.0
-Sudair Shale,No informations on company,100.0
+Sudair Shale,,
 Sugodinsk-Ogodzhinsky Coal Mine,A-Property,100.0
 Syncrude Mildred Lake/Aurora,Suncor Energy Inc,58.7
 Syncrude Mildred Lake/Aurora,Imperial Oil Resources Limited,25.0
@@ -637,9 +637,9 @@ Tambey Zone (Yamal Megaproject),Wutongshu Investment Platform Co.,6.4
 Tambey Zone (Yamal Megaproject),China Investment Co,1.5
 Tambey Zone (Yamal Megaproject),China Development Bank,0.5
 Tambey Zone (Yamal Megaproject),China Import-Export Bank,1.5
-Tanf Shale,No informations on company,100.0
-Tannezuft Shale,No informations on company,100.0
-Tanzanian Coastal Offshore,No informations on company,100.0
+Tanf Shale,,
+Tannezuft Shale,,
+Tanzanian Coastal Offshore,,
 Taohe Coal Mine,Shandong First Geological and Mineral Exploration Institute,100.0
 Taran Gaole Coal Mine,China Energy Investment Corp Ltd,100.0
 Tarim (CNPC),No informations on company,100.0
@@ -648,15 +648,15 @@ Tashan Coal Mine,China Datang Corp,9.0
 Tashan Coal Mine,HKSCC Nominees Limited,9.0
 Tashan Coal Mine,Others,41.0
 Tavan Tolgoi Coal Mine,Erdenes MGL,100.0
-Taymyr Basin CBM,No informations on company,100.0
+Taymyr Basin CBM,,
 Tengiz,National Bank of the Republic of Kazakhstan,18.1
 Tengiz,Chevron Corp,1.9
 Tengiz,Exxon Mobil Corp,50.0
 Tengiz,PJSC LUKOIL,25.0
 Tengiz,Others,5.0
 Thar Coal Mine,Sindh Engro Coal Mining Company,100.0
-Timan - Pechora Basin Offshore,No informations on company,100.0
-Timan - Pechora Basin Onshore,No informations on company,100.0
+Timan - Pechora Basin Offshore,,
+Timan - Pechora Basin Onshore,,
 Tongxin Coal Mine,Jinneng Holding Group Co Ltd,45.62
 Tongxin Coal Mine,China Energy Investment Corp Ltd,30.0
 Tongxin Coal Mine,China Cinda Asset Management Company,21.08
@@ -667,7 +667,7 @@ Troll,Shell PLC,8.1
 Troll,TotalEnergies SE,3.7
 Troll,ConocoPhillips,1.6
 Troll,Others,
-Tunguska Basin CBM,No informations on company,100.0
+Tunguska Basin CBM,,
 Tutupan Coal Mine,Adaro Energy,100.0
 Ulug-Khem Project,Severstal-Resource,100.0
 Umm Shaif/Nasr,Abu Dhabi National Oil Company,60.0
@@ -683,8 +683,8 @@ Usinsk-1 Coal Mine,Russkaya Energiya,100.0
 Utica Shale,No informations on company,100.0
 Vaca Muerta Shale,No informations on company,100.0
 Valeria Coal Mine,Glencore PLC,100.0
-Velkerri Shale,No informations on company,100.0
-Volga - Urals Onshore,No informations on company,100.0
+Velkerri Shale,,
+Volga - Urals Onshore,,
 Wangjialing Coal Mine,China Coal Xinji Energy Co Ltd,29.0
 Wangjialing Coal Mine,HKSCC Nominees Limited,15.0
 Wangjialing Coal Mine,Shanxi Coking Coal Group Co Ltd,25.0
@@ -708,10 +708,10 @@ Wenjiazhuang Coal Mine,Shanxi Boda Group,9.0
 Wenjiazhuang Coal Mine,Shanxi Provincial Coal Industry Agency Service Center,7.0
 Wenjiazhuang Coal Mine,Beijing Sunshine Ruita Investment Consulting Company,4.0
 Wenjiazhuang Coal Mine,Others,27.0
-West Florida Offshore,No informations on company,100.0
+West Florida Offshore,,
 West Macedonia Lignite Centre (WMLC),Public Power Corporation of Greece S.A,100.0
 West Siberia Offshore,No informations on company,100.0
-West Siberia Onshore,No informations on company,100.0
+West Siberia Onshore,,
 West Well of Faer Second Coal Mine,Guizhou Panjiang Coal and Electricity Group,58.0
 West Well of Faer Second Coal Mine,Shandong Energy Co Ltd,12.0
 West Well of Faer Second Coal Mine,Guizhou Coalfield Geology Bureau,10.0
@@ -760,7 +760,7 @@ Yangchangwan No.1 Well Coal Mine,China Energy Investment Corp Ltd,51.0
 Yangchangwan No.1 Well Coal Mine,Ningxia State-Owned Capital Operation Group,49.0
 Yangjiacun Coal Mine,Shandong Energy Co Ltd,100.0
 Yangquan No.1 Coal Mine,Huayang New Material Technology Group Co Ltd,100.0
-Yashlar Vostochnyy (East),No informations on company,100.0
+Yashlar Vostochnyy (East),,
 Yili No.4 Coal Mine,Shandong Energy Co Ltd,55.0
 Yili No.4 Coal Mine,Zhejiang Provincial Energy Group Co Ltd,45.0
 Yimin Surface Coal Mine,China Huaneng Group Co Ltd,100.0
@@ -805,6 +805,6 @@ Zubair,Eni S.P.A.,32.8
 Zubair,Korean Gas Corporation,18.8
 Zubair,Missan Oil Company,25.0
 Zubair,Basra Oil Company,23.4
-Zuluf (CR in field),No informations on company,100.0
-Zuluf (expansion),No informations on company,100.0
+Zuluf (CR in field),,
+Zuluf (expansion),,
 Zuluf,No informations on company,100.0
