@@ -1100,15 +1100,12 @@ def create_carbon_bombs_table():
     # Secondly fulfill cell with New_project = True and empty GEM_ID value
     df_carbon_bombs.loc[(df_carbon_bombs["New_project_source_CB"]==True)\
                          & (df_carbon_bombs['GEM_id_source_GEM'].isna()),\
-                         ["GEM_id_source_GEM",
-                          "GEM_url_source_GEM",
-                          "Parent_company_source_GEM"
-                          ]] = "New project"
-    # Same for column Parent_company_source_GEM
+                         ["Parent_company_source_GEM"]] = "New project (100%)"
     df_carbon_bombs.loc[(df_carbon_bombs["New_project_source_CB"]==True)\
                          & (df_carbon_bombs['GEM_id_source_GEM'].isna()),\
-                         ["GEM_id_source_GEM","GEM_url_source_GEM"]] = (
-                        "New project")
+                         ["GEM_id_source_GEM",
+                          "GEM_url_source_GEM",
+                          ]] = "New project"
     # Thirdly fulfill cell with New_project = False and empty GEM_ID value
     df_carbon_bombs.loc[(df_carbon_bombs["New_project_source_CB"]==False)\
                          & (df_carbon_bombs['GEM_id_source_GEM'].isna()),\

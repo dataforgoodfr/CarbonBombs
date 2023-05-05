@@ -253,8 +253,6 @@ def main_connexion_function():
     df = company_involvement_in_carbon_bombs()
     company_cb_bocc = link_record_CB_BOCC(df)
     df['Company'] = df['Company'].replace(company_cb_bocc)
-    df["Company"] = df["Company"].replace("","New project")
-    df.loc[df["Company"]=="New project","Percentage"] = 100.0
     filtered_company = list(company_cb_bocc.values())
     df_bocc = df_bocc.loc[df_bocc["Company"].isin(filtered_company),:]
     return df,df_bocc
