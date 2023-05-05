@@ -324,7 +324,7 @@ def scrapping_company_location():
         company_info = dict()
         # Construct Google maps request API
         address_maps = row["Address_source_chatGPT"]
-        if address_maps == "N/A":
+        if address_maps == "N/A" or address_maps != address_maps:
             lat,long = 0.0,0.0
         else :
             # Get answer from Google maps
