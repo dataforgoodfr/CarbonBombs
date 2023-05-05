@@ -124,46 +124,6 @@ manual_match_gasoil = {
 
 # Dictionnary for company matching between GEM (Global Energy Monitor) (key)
 # and BOCC (Banking On Climate Chaos) (values)
-manual_match_company_test = {
-    "Thungela Resources Australia":"Thungela Resources Ltd",
-    "Glencore":"Glencore PLC",
-    "Integrated Energy Services Corporation":"BCE-Mach LLC",
-    "China Coal":"China Coal Xinji Energy Co Ltd",
-    "Anhui Xinji Coal and Electricity Group China COSCO Shipping":"Anhui Province Wanbei Coal-Electricity Group Co Ltd",
-    "Zhejiang Energy Group":"Zhejiang Provincial Energy Group Co Ltd",
-    "China Securities Finance Corporation":"China National Coal Group Corp (ChinaCoal)",
-    "China Development Bank":"China Energy Investment Corp Ltd",
-    "Zhejiang Xinhu Group Holding Company":"Zhejiang Sinhoo Co Ltd",
-    "Xinjiang Energy Group":"Xinjiang Tianfu Energy Co Ltd",
-    "Beijing Lirui Investment Company":"Beijing Energy Holding Co Ltd",
-    "Hebei Construction & Investment Group":"Hebei Construction & Investment Group Co Ltd",
-    "Shaanxi Yanchang Petroleum and Mining Company":"Shaanxi Yanchang Petroleum Group Co Ltd",
-    "Anhui Xinji Coal and Electricity Group":"Anhui Province Energy Group Co Ltd",
-    "Inner Mongolia Guanglian Minzu Economic Development Company":"Inner Mongolia Energy Group Co Ltd",
-    "Beijing Jingneng Power Company":"Jinneng Holding Power Group Co Ltd",
-    "China National Petroleum Corporation":"China National Petroleum Corporation (CNPC)",
-    "Inner Mongolia Kaiyuan Shiye Group":"Inner Mongolia Energy Group Co Ltd",
-    "Shenmu County State-Owned Asset Management Company":"Shenmu City State-Owned Assets Operation Co",
-    "Jilin Province Coal Industry Group":"Jiangxi Province Investment Group Co Ltd",
-    "Inner Mongolia Kaiyuan Shiye Group":"Inner Mongolia Energy Group Co Ltd",
-    "Inner Mongolia Boyuan Holdings Group":"Inner Mongolia Energy Group Co Ltd",
-    "Shanxi Boda Group":"Shaanxi Huabin Coal Industry Co Ltd",
-    "State Grid Company":"State Grid Corp of China",
-    "Yangcheng County Yangtai Group":"Yangcheng County Yangtai Group Industrial Co Ltd",
-    "Kailuan Group":"Kailuan Group Ltd Liability Corp",
-    "Gujarat State Electricity Corporation":"Gujarat State Petroleum Corp Ltd",
-    "Jindal Group":"Jindal Coke Ltd",
-    "Nippon Steel & Sumitomo Metal":"Nippon Steel Corp",
-    "POSCO":"POSCO Holdings Inc",
-    "Evraz":"Evraz PLC",
-    "Euas Electricity Generation Company (Elektrik Üretim A.Ş, EÜAŞ)":"Electricity Generating PCL",
-    "Petrobras":"Petróleo Brasileiro SA – Petrobras",
-    "Suncor":"Suncor Energy Inc",
-    "Petroleos Mexicanos":"Petróleos Mexicanos (PEMEX)",
-    "Qatargas Operating Company Limited":"QatarEnergy",
-    "Gazprom":"Gazprom PJSC",
-    "ROSNEFTEGAZ JSC":"Rosneftegaz AO"
-}
 
 manual_match_company = {
     "Thungela Resources Australia":"Thungela Resources Ltd",
