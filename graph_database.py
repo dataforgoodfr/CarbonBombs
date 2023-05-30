@@ -52,6 +52,51 @@ def tutorial_movies_neo4j():
 
     driver.close()
 
+def load_renamed_columns():
+    # create a mapping dictionary for carbon bombs columns
+    carbon_bombs_new_column = {
+        'New_project_source_CB': 'New_project',
+        'Carbon_bomb_name_source_CB': 'Name',
+        'Country_source_CB': 'Country',
+        'Potential_GtCO2_source_CB':'Potential_GTCO2',
+        'Fuel_type_source_CB':'Fuel_type',
+        'GEM_id_source_GEM':'ID',
+        'GEM_url_source_GEM':'GEM_source',
+        'Latitude':'Latitude',
+        'Longitude':'Longitude',
+        'Latitude_longitude_operator_source':'SourceForLatLongAndOperator',
+        'Operators_source_GEM':'Operators',
+        'Parent_company_source_GEM':'Parent_company',
+        'Multiple_unit_concerned_source_GEM':'Multiple_unit',
+        'Suppliers_source_chatGPT':'Suppliers',
+        'Insurers_source_chatGPT':'Insurers',
+        'Subcontractors_source_chatGPT':'Subcontractors',
+    }
+    banks_new_column = {
+        'Bank Name':'Bank',
+        'Bank Website':'Website',
+        'Headquarters country':'Headquarters_country',
+        'Headquarters address':'Headquarters_address',
+        'CEO Name':'CEO_name',
+        'Board description':'Board',
+        'Supervisor Name':'Supervisor',
+        'Supervisor Website':'Supervisor_Website',
+        'Shareholder structure source':'Shareholder_source',
+        'Source BankTrack':'Source',
+        'Latitude':'Latitude',
+        'Longitude':'Longitude',
+    }
+    companies_new_column = {
+        'Company_name':'Name',
+        'Address_headquarters_source_chatGPT':'Headquarters_address',
+        'Latitude':'Latitude',
+        'Longitude':'Longitude',
+        'Carbon_bomb_connected':'Carbon_bomb_connected'
+    }
+    return carbon_bombs_new_column,companies_new_column,banks_new_column
+        
+        
+
 def purge_current_database():
     driver = GraphDatabase.driver(
         "bolt://localhost:7687",
@@ -107,54 +152,47 @@ def tutorial_got_neo4j():
     driver.close()
 
 def carbon_bombs_graph_database():
-    # Read list of Carbon Bombs / Banks / Company (nodes)
+    # Load Data Carbon Bombs / Banks / Company (nodes) and connexion (relations)
     carbon_bombs = pd.read_csv("./data_cleaned/carbon_bombs_informations.csv")
     banks = pd.read_csv("./data_cleaned/bank_informations.csv")
     companies = pd.read_csv("./data_cleaned/company_informations.csv")
-    # Read list of interactions (relationships)
-    #conn_banks_companies = pd.read_csv("./data_cleaned/connexion_bank_company.csv")
-    #conn_companies_cb = pd.read_csv("./data_cleaned/connexion_carbonbombs.csv")
+    # Replace NaN value by 'None' in order to avoid neo4j error in each df
+    carbon_bombs.fillna('None',inplace = True)
+    banks.fillna('None',inplace = True)
+    companies.fillna('None',inplace = True)
+    # Load dictionnary to remap column name and remap column name of each df
+    carbon_bombs_column, companies_column, banks_column = load_renamed_columns()
+    carbon_bombs.rename(columns=carbon_bombs_column, inplace=True)
+    companies.rename(columns=companies_column, inplace=True)
+    banks.rename(columns=banks_column, inplace=True)
+    # Define driver database from neo4j
     # Connect to the database
     driver = GraphDatabase.driver(
         "bolt://localhost:7687",
         auth=basic_auth("neo4j", "password"))
-    # Write carbon bombs nodes into DB
-    write_carbon_bombs_nodes(driver,carbon_bombs)
+    # Define dict to iterate over three types node creation
+    dict_nodes = {
+        "Carbon_Bombs":carbon_bombs,
+        "Companies":companies,
+        "Banks":banks,
+    }
+    for node_type, node_data in dict_nodes.items():
+        write_nodes(driver,node_type,node_data)
 
-
-def write_carbon_bombs_nodes(driver,carbon_bombs):
-    cypher_query_carbon_bombs = '''
-        MERGE (n:Carbon_Bombs {
-            New_project: $new_project,
-            Name: $name,
-            Country: $country,
-            Potential_GtCO2_emissions: $CO2_emissions,
-            Fuel_type: $fuel_type
-            })
-    '''
-    def create_carbon_bombs(tx, carbon_bombs_values):
-        tx.run(cypher_query_carbon_bombs,
-               new_project = carbon_bombs_values['New_project_source_CB'],
-               name = carbon_bombs_values['Carbon_bomb_name_source_CB'],
-               country = carbon_bombs_values['Country_source_CB'],
-               CO2_emissions = carbon_bombs_values['Potential_GtCO2_source_CB'],
-               fuel_type = carbon_bombs_values['Fuel_type_source_CB']
-               )
+            
+def write_nodes(driver,node_type,node_data):
+    def create_nodes(tx, node_type, node_data):
+        cypher_query_carbon_bombs = f"MERGE (n:{node_type} " + "{"
+        # Dynamically build the query string that sets the attributes
+        for key in node_data.keys():
+            cypher_query_carbon_bombs += f"{key}: ${key},"
+        # Remove the trailing comma and add closing brackets
+        cypher_query_carbon_bombs = cypher_query_carbon_bombs[:-1] + "})"
+        tx.run(cypher_query_carbon_bombs, **node_data)
+        
     with driver.session(database="neo4j") as session:
-        for i, row in carbon_bombs.iterrows():
-            session.execute_write(create_carbon_bombs, row)
-
-
-
-
-
-
-
-
-
-
-
-
+        for _, row in node_data.iterrows():
+            session.execute_write(create_nodes, node_type, row)
 
 
 if __name__ == '__main__':
