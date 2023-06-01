@@ -19,6 +19,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup, SoupStrainer
 from manual_match import manual_match_bank
+from uniform_company_name import uniform_company_name
 
 # Define the target URL of Bank Track
 # URL = 'https://www.banktrack.org/banks'
@@ -341,6 +342,9 @@ def scrapping_company_location():
         df_output = pd.concat([df_output, company_df], ignore_index=True)
     # Add column Carbon_bombs_connexion
     df_output = add_column_carbon_bombs_connexion(df_output)
+    # Rename company column with uniformed Name
+    df_output['Company_name'] = (df_output['Company_name'].
+                                 replace(uniform_company_name))
     return df_output
 
 def add_column_carbon_bombs_connexion(df_company):

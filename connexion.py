@@ -238,6 +238,14 @@ def link_record_CB_BOCC(df_cb):
             dict_match[key] = value
     return dict_match
 
+def save_dict_plain_text(dict_to_save):
+    file_path = './uniform_company_name.py'
+    with open(file_path, 'w') as file:
+        file.write("uniform_company_name = {\n")
+        for key, value in dict_to_save.items():
+            file.write(f'    "{key}":"{value}",\n')
+        file.write("}\n")
+
 def main_connexion_function():
     """
     Loads the BOCC Database and filters it based on company involvement in 
@@ -252,6 +260,8 @@ def main_connexion_function():
     df_bocc = load_banking_climate_chaos()
     df = company_involvement_in_carbon_bombs()
     company_cb_bocc = link_record_CB_BOCC(df)
+    # Save the dict company_cb_bocc in plain text doc
+    save_dict_plain_text(company_cb_bocc)
     df['Company'] = df['Company'].replace(company_cb_bocc)
     filtered_company = list(company_cb_bocc.values())
     df_bocc = df_bocc.loc[df_bocc["Company"].isin(filtered_company),:]
