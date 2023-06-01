@@ -35,6 +35,7 @@ Markdown==3.4.3
 MarkupSafe==2.1.2
 matplotlib==3.7.1
 ml-dtypes==0.1.0
+neo4j==5.9.0
 nltk==3.8.1
 numpy==1.23.5
 oauthlib==3.2.2
