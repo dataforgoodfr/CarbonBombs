@@ -73,7 +73,7 @@ def load_renamed_columns():
         'Subcontractors_source_chatGPT':'Subcontractors',
     }
     banks_new_column = {
-        'Bank Name':'Bank',
+        'Bank Name':'Name',
         'Bank Website':'Website',
         'Headquarters country':'Headquarters_country',
         'Headquarters address':'Headquarters_address',
@@ -95,8 +95,6 @@ def load_renamed_columns():
     }
     return carbon_bombs_new_column,companies_new_column,banks_new_column
         
-        
-
 def purge_current_database():
     driver = GraphDatabase.driver(
         "bolt://localhost:7687",
@@ -152,6 +150,11 @@ def tutorial_got_neo4j():
     driver.close()
 
 def carbon_bombs_graph_database():
+    # Define driver to connect to neo4j Database
+    driver = GraphDatabase.driver(
+        "bolt://localhost:7687",
+        auth=basic_auth("neo4j", "password"))
+    ### Nodes creation
     # Load Data Carbon Bombs / Banks / Company (nodes) and connexion (relations)
     carbon_bombs = pd.read_csv("./data_cleaned/carbon_bombs_informations.csv")
     banks = pd.read_csv("./data_cleaned/bank_informations.csv")
@@ -165,21 +168,54 @@ def carbon_bombs_graph_database():
     carbon_bombs.rename(columns=carbon_bombs_column, inplace=True)
     companies.rename(columns=companies_column, inplace=True)
     banks.rename(columns=banks_column, inplace=True)
-    # Define driver database from neo4j
-    # Connect to the database
-    driver = GraphDatabase.driver(
-        "bolt://localhost:7687",
-        auth=basic_auth("neo4j", "password"))
     # Define dict to iterate over three types node creation
     dict_nodes = {
-        "Carbon_Bombs":carbon_bombs,
-        "Companies":companies,
-        "Banks":banks,
+        "Carbon_bomb":carbon_bombs,
+        "Company":companies,
+        "Bank":banks,
     }
     for node_type, node_data in dict_nodes.items():
         write_nodes(driver,node_type,node_data)
+    ### Relationship creation between Carbon Bombs and Companies
+    carbonbombs_companies = pd.read_csv(
+        "./data_cleaned/connexion_carbonbombs_company.csv")
+    query_cb_company = '''
+        MATCH (cb:Carbon_bomb {Name: $carbon_bomb})
+        MATCH (c:Company {Name: $company})
+        MERGE (c)-[:OPERATES {weight: $weight}]->(cb)
+    '''
+    def create_interaction_cb_companies(tx,cb, company, weight):
+        tx.run(query_cb_company, carbon_bomb = cb, company = company,
+               weight = weight)
 
-            
+    with driver.session(database="neo4j") as session:
+        for _, row in carbonbombs_companies.iterrows():
+            carbon_bomb = row['Carbon_bomb_name']
+            company = row['Company']
+            weight = row['Percentage']
+            session.execute_write(create_interaction_cb_companies,
+                                  carbon_bomb, company, weight)                          
+    ### Relationship creation between Banks and Companies
+    banks_companies = pd.read_csv("./data_cleaned/connexion_bank_company.csv")
+    query_bank_company = '''
+        MATCH (c:Company {Name: $company})
+        MATCH (b:Bank {Name: $bank})
+        MERGE (b)-[:FINANCE {weight: $weight}]->(c)
+    '''
+    def create_interaction_banks_companies(tx, bank, company, weight):
+        tx.run(query_bank_company, bank = bank, company = company, weight = 1)
+
+    with driver.session(database="neo4j") as session:
+        for _, row in banks_companies.iterrows():
+            bank = row['Bank']
+            company = row['Company']
+            weight = row['Grand Total']
+            session.execute_write(create_interaction_banks_companies,
+                                  bank, company, weight)
+    # Close connection to database
+    driver.close()    
+    
+
 def write_nodes(driver,node_type,node_data):
     def create_nodes(tx, node_type, node_data):
         cypher_query_carbon_bombs = f"MERGE (n:{node_type} " + "{"
@@ -196,12 +232,14 @@ def write_nodes(driver,node_type,node_data):
 
 
 if __name__ == '__main__':
+
+    purge_current_database()
     #tutorial_movies_neo4j()
     #tutorial_got_neo4j()
-    purge_current_database()
     carbon_bombs_graph_database()
 
 
     """
-    MATCH (n:Carbon_Bombs) RETURN n LIMIT 25
+    MATCH (n:Carbon_bomb) RETURN n LIMIT 25
+    MATCH (n:Character) RETURN n LIMIT 25
     """
