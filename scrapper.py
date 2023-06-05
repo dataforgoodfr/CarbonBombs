@@ -24,6 +24,22 @@ from uniform_company_name import uniform_company_name
 # Define the target URL of Bank Track
 # URL = 'https://www.banktrack.org/banks'
 
+def get_url_from_banktrack_div(div) -> str:
+    """
+    Return the url given a div found into banktrack website
+    
+    With this input:
+    `<div class="bank-logo" style="background-image: url('https://www.banktrack.org/thumbimage.php?image=abn-logo.jpg;width=190');"></div>`
+
+    Return this:
+    https://www.banktrack.org/thumbimage.php?image=abn-logo.jpg&amp
+    """
+    div = str(div)
+    url = div.split("url('")[1]
+    url = url.split(";")[0]
+    
+    return url
+
 def scrapping_main_page_bank_track(url):
     """
     Scrapes the main page of bank track website and extracts URLs of individual 
@@ -35,6 +51,7 @@ def scrapping_main_page_bank_track(url):
     Returns:
         list: A list of URLs (strings) pointing to individual bank description
               pages.
+        list: A list of logo urls for each bank
 
     Raises:
         None: However, if the HTTP request fails, it prints an error message and
@@ -50,22 +67,21 @@ def scrapping_main_page_bank_track(url):
     response = requests.get(url)
 
     # Check if the request was successful (HTTP status code 200)
-    if response.status_code == 200:
-        # Parse the HTML content using BeautifulSoup
-        soup = BeautifulSoup(response.content, 'html.parser')
-        bank_description_url = list()
-        for link in BeautifulSoup(response.content,parse_only=SoupStrainer('a'),
-                                features="html.parser"):
-            # Only keep link corresponding to bank description link
-            if link.has_attr('href') and len(link['href'].split('/'))>=4:
-                if link['href'].split('/')[3]=="bank":
-                    bank_description_url.append(link['href'])
-    else:
+    if response.status_code != 200:
         print(f"Failed to fetch the page. HTTP status: {response.status_code} "
             "Please try again later")
         sys.exit()
-    return bank_description_url
+        
+    # Parse the HTML content using BeautifulSoup
+    soup = BeautifulSoup(response.content, 'html.parser')
+    banks = soup.find_all("a", {"class": "bankprofile"})
+    
+    logos = [b.find("div", {"class", "bank-logo"}) for b in banks]
+    logos = [get_url_from_banktrack_div(l) for l in logos]
+    
+    bank_description_url = [b.get("href") for b in banks]
 
+    return bank_description_url, logos
 def scrapping_description_bank_page(url):
     """
     Scrapes the specified URL for bank information and returns the bank name
@@ -267,7 +283,7 @@ def main_scrapping_function(url):
         "Longitude",
     ]
     df = pd.DataFrame(columns = columns_dataframe)
-    bank_list_url = scrapping_main_page_bank_track(url)
+    bank_list_url, bank_logos = scrapping_main_page_bank_track(url)
     for bank_url in bank_list_url:
         bank_name, raw_info = scrapping_description_bank_page(bank_url)
         clean_info = process_raw_info(raw_info)
@@ -286,6 +302,7 @@ def main_scrapping_function(url):
     # Make a remap of bank name based on manual_match_bank in order to have 
     # coherent key values in BOCC and banking_informations.csv
     df['Bank Name'] = df['Bank Name'].replace(manual_match_bank)
+    df["Bank logo"] = bank_logos
     # Return dataframe with all info on bank companies
     return df
 
