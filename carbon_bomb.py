@@ -16,8 +16,8 @@ import pandas as pd
 import numpy as np
 import warnings
 from fuzzywuzzy import fuzz
-from manual_match import manual_match_coal
-from manual_match import manual_match_gasoil
+from data_sources.manual_match import manual_match_coal
+from data_sources.manual_match import manual_match_gasoil
 
 
 def load_carbon_bomb_list_database():

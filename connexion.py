@@ -8,7 +8,7 @@ import re
 import pandas as pd
 import numpy as np
 from fuzzywuzzy import fuzz
-from manual_match import manual_match_company
+from data_sources.manual_match import manual_match_company
 
 def load_banking_climate_chaos():
     """
@@ -240,7 +240,9 @@ def link_record_CB_BOCC(df_cb):
 
 def save_dict_plain_text(dict_to_save):
     file_path = './uniform_company_name.py'
-    with open(file_path, 'w') as file:
+    #Added utf-8 encoding in open() to prevent the following error: 
+    #'charmap' codec can't encode character '\u015e' in position 60
+    with open(file_path, 'w', encoding="utf-8") as file: 
         file.write("uniform_company_name = {\n")
         for key, value in dict_to_save.items():
             file.write(f'    "{key}":"{value}",\n')
