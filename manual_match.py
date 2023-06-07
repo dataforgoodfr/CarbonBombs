@@ -142,7 +142,6 @@ manual_match_company = {
     "Evraz":"Evraz PLC",
     "Euas Electricity Generation Company (Elektrik Üretim A.Ş, EÜAŞ)":"Electricity Generating PCL",
     "Petrobras":"Petróleo Brasileiro SA – Petrobras",
-    "Suncor":"Suncor Energy Inc",
     "Petroleos Mexicanos":"Petróleos Mexicanos (PEMEX)",
     "Qatargas Operating Company Limited":"QatarEnergy",
     "Gazprom":"Gazprom PJSC",
