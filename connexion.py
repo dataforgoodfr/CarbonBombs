@@ -239,7 +239,7 @@ def link_record_CB_BOCC(df_cb):
     return dict_match
 
 def save_dict_plain_text(dict_to_save):
-    file_path = './uniform_company_name.py'
+    file_path = './data_sources/uniform_company_name.py'
     #Added utf-8 encoding in open() to prevent the following error: 
     #'charmap' codec can't encode character '\u015e' in position 60
     with open(file_path, 'w', encoding="utf-8") as file: 
