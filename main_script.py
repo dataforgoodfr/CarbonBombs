@@ -12,13 +12,17 @@ from carbon_bomb import create_carbon_bombs_table
 from connexion import main_connexion_function
 from scrapper import main_scrapping_function, scrapping_company_location
 
-
+from manual_update import manual_update_carbon_bombs
 
 if __name__ == '__main__':
+       
     # Step1 : Carbon bombs table
     df = create_carbon_bombs_table()
+    # Apply manual corrections : info from ChatGPT or other
+    df = manual_update_carbon_bombs(df)
     df.to_csv("./data_cleaned/carbon_bombs_informations.csv",index=False)
     print("carbon_bombs_informations.csv : done\n")
+    
     # Step2 : Connexion between CarbonBombs and Company & Company and Bank
     df_cb,df_bank = main_connexion_function()
     df_cb.to_csv("./data_cleaned/connexion_carbonbombs_company.csv",

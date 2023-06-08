@@ -1,0 +1,31 @@
+insurer_name,country,underwritting_total,underwritting_coal,underwritting_oil_gas,investment_total,investment_coal,investment_oil_gas,re_insurer
+Allianz,Germany,5.3,9.0,2.9,4.4,8.7,2.1,False
+AXA,France,4.8,9.0,1.9,4.8,8.7,1.9,False
+Aviva,United Kingdom,4.4,5.8,4.0,2.6,2.3,3.0,False
+Swiss Re,Switzerland,4.2,6.0,2.9,3.9,6.3,2.7,True
+Axis Capital,Bermuda,4.2,9.0,1.4,4.2,8.7,1.6,False
+Generali,Italy,3.8,5.5,2.8,4.6,7.7,2.7,False
+Zurich,Switzerland,3.8,7.0,1.4,3.3,5.0,1.6,False
+Hannover Re,Germany,3.7,5.3,1.9,2.9,4.5,1.6,True
+Munich Re,Germany,3.4,4.5,1.9,2.7,5.5,1.7,True
+Mapfre,Spain,3.2,5.5,1.4,2.6,5.0,1.6,False
+SCOR Re,France,2.6,4.5,1.9,2.6,4.5,1.6,True
+QBE,Australia,2.5,4.0,1.4,2.3,4.0,1.6,False
+HDI Global,Germany,2.3,3.3,2.3,2.1,3.7,2.0,False
+AIG,United States,2.0,3.0,1.4,1.7,3.0,1.6,False
+Sompo,Japan,1.6,2.0,1.4,1.6,3.0,1.6,False
+Tokio Marine,Japan,1.6,2.0,1.4,1.4,2.7,1.6,False
+The Hartford,United States,1.5,2.0,1.4,1.3,2.5,1.6,False
+MS&AD,Japan,1.5,3.0,1.4,1.2,2.5,1.6,False
+Travelers,United States,1.3,2.5,1.4,1.2,2.5,1.6,False
+Samsung FM,South Korea,1.1,2.5,1.4,1.1,2.5,1.6,False
+Convex,Bermuda,1.0,2.5,1.4,1.1,2.5,1.6,False
+Chubb,United States,0.5,1.3,0.9,1.0,1.3,0.9,False
+Ping An,China,0.5,1.3,0.9,0.7,1.3,0.9,False
+Liberty Mutual,United States,0.4,1.0,0.9,0.5,1.0,0.9,False
+Lloyd’s,United Kingdom,0.2,0.5,0.9,0.5,0.5,0.9,False
+Berkshire Hathaway,United States,0.0,0.5,0.9,0.5,0.5,0.9,False
+Everest Re,Bermuda,0.0,0.0,0.5,0.5,0.5,0.5,True
+PICC,China,0.0,0.0,0.5,0.5,0.5,0.5,False
+Sinosure,China,0.0,0.0,0.5,0.5,0.5,0.5,False
+Starr,United States,0.0,0.0,0.5,0.5,0.5,0.5,False
