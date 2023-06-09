@@ -970,6 +970,45 @@ def add_chat_GPT_data(df):
     df.drop("temp",axis = 1, inplace = True)
     return df
 
+def sort_agg_values_in_column(values: pd.Series, separator=";") -> pd.Series:
+    """Sort values in a string pandas Series that has some values
+    separated by a `separator`
+
+    Parameters
+    ----------
+    values : pd.Series
+        Pandas series with string values in each row
+    separator : str, optional
+        Separator to use when splitting string, by default ";"
+
+    Returns
+    -------
+    pd.Series
+        Pandas series with sorted values in each row
+
+    Examples
+    --------
+
+    >>> data = pd.Series(["A;B;C", "B;C;A"])
+    >>> sort_agg_values_in_column(data)
+    0    A;B;C
+    1    A;B;C
+    dtype: object
+    """
+
+    def sort_values_if_not_null(val):
+        """Sort values only if it's not null"""
+        if pd.notnull(val):
+            return separator.join(
+                list(
+                    sorted(val.split(separator))
+                )
+            )
+        return val
+
+    return values.apply(sort_values_if_not_null)
+
+
 def create_carbon_bombs_table():
     """
     Creates a table of carbon bomb projects by merging coal and gas/oil tables,
@@ -1117,6 +1156,18 @@ def create_carbon_bombs_table():
     df_carbon_bombs["Suppliers_source_chatGPT"] = ""
     df_carbon_bombs["Insurers_source_chatGPT"] = ""
     df_carbon_bombs["Subcontractors_source_chatGPT"] = ""
+
+    # Post process dataset to sort columns with aggregated values
+    agg_columns = [
+        "GEM_id_source_GEM",
+        "GEM_url_source_GEM",
+        "Operators_source_GEM",
+        "Parent_company_source_GEM",
+        "Multiple_unit_concerned_source_GEM"
+    ]
+    for c in agg_columns:
+        df_carbon_bombs[c] = sort_agg_values_in_column(df_carbon_bombs[c])
+
     return df_carbon_bombs
     
 if __name__ == '__main__':
