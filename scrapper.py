@@ -18,8 +18,8 @@ from credentials import API_KEY
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup, SoupStrainer
-from manual_match import manual_match_bank
-from uniform_company_name import uniform_company_name
+from data_sources.manual_match import manual_match_bank
+from data_sources.uniform_company_name import uniform_company_name
 
 # Define the target URL of Bank Track
 # URL = 'https://www.banktrack.org/banks'
