@@ -1165,8 +1165,7 @@ def create_carbon_bombs_table():
         "Parent_company_source_GEM",
         "Multiple_unit_concerned_source_GEM"
     ]
-    for c in agg_columns:
-        df_carbon_bombs[c] = sort_agg_values_in_column(df_carbon_bombs[c])
+    df_carbon_bombs[agg_columns] = df_carbon_bombs[agg_columns].apply(sort_agg_values_in_column)
 
     return df_carbon_bombs
     
