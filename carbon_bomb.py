@@ -970,44 +970,35 @@ def add_chat_GPT_data(df):
     df.drop("temp",axis = 1, inplace = True)
     return df
 
-def sort_agg_values_in_column(values: pd.Series, separator=";") -> pd.Series:
-    """Sort values in a string pandas Series that has some values
+def sort_values_if_not_null(value: str, separator=";") -> str:
+    """Sort values in a string that has some values
     separated by a `separator`
 
     Parameters
     ----------
-    values : pd.Series
-        Pandas series with string values in each row
+    value : str
+        string with values inside
     separator : str, optional
         Separator to use when splitting string, by default ";"
 
     Returns
     -------
-    pd.Series
-        Pandas series with sorted values in each row
+    str
+        String with sorted values in each row
 
     Examples
     --------
 
-    >>> data = pd.Series(["A;B;C", "B;C;A"])
-    >>> sort_agg_values_in_column(data)
-    0    A;B;C
-    1    A;B;C
-    dtype: object
+    >>> sort_agg_values_in_column("B;C;A")
+    A;B;C
     """
-
-    def sort_values_if_not_null(val):
-        """Sort values only if it's not null"""
-        if pd.notnull(val):
-            return separator.join(
-                list(
-                    sorted(val.split(separator))
-                )
+    if pd.notnull(value):
+        return separator.join(
+            list(
+                sorted(value.split(separator))
             )
-        return val
-
-    return values.apply(sort_values_if_not_null)
-
+        )
+    return value
 
 def create_carbon_bombs_table():
     """
@@ -1165,7 +1156,7 @@ def create_carbon_bombs_table():
         "Parent_company_source_GEM",
         "Multiple_unit_concerned_source_GEM"
     ]
-    df_carbon_bombs[agg_columns] = df_carbon_bombs[agg_columns].apply(sort_agg_values_in_column)
+    df_carbon_bombs[agg_columns] = df_carbon_bombs[agg_columns].applymap(sort_values_if_not_null)
 
     return df_carbon_bombs
     
