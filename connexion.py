@@ -262,6 +262,8 @@ def main_connexion_function():
     df_bocc = load_banking_climate_chaos()
     df = company_involvement_in_carbon_bombs()
     company_cb_bocc = link_record_CB_BOCC(df)
+    # sort dict to avoid change in the saved file
+    company_cb_bocc = dict(sorted(company_cb_bocc.items()))
     # Save the dict company_cb_bocc in plain text doc
     save_dict_plain_text(company_cb_bocc)
     df['Company'] = df['Company'].replace(company_cb_bocc)

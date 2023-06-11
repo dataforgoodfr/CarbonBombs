@@ -970,6 +970,36 @@ def add_chat_GPT_data(df):
     df.drop("temp",axis = 1, inplace = True)
     return df
 
+def sort_values_if_not_null(value: str, separator=";") -> str:
+    """Sort values in a string that has some values
+    separated by a `separator`
+
+    Parameters
+    ----------
+    value : str
+        string with values inside
+    separator : str, optional
+        Separator to use when splitting string, by default ";"
+
+    Returns
+    -------
+    str
+        String with sorted values in each row
+
+    Examples
+    --------
+
+    >>> sort_agg_values_in_column("B;C;A")
+    A;B;C
+    """
+    if pd.notnull(value):
+        return separator.join(
+            list(
+                sorted(value.split(separator))
+            )
+        )
+    return value
+
 def create_carbon_bombs_table():
     """
     Creates a table of carbon bomb projects by merging coal and gas/oil tables,
@@ -1117,6 +1147,17 @@ def create_carbon_bombs_table():
     df_carbon_bombs["Suppliers_source_chatGPT"] = ""
     df_carbon_bombs["Insurers_source_chatGPT"] = ""
     df_carbon_bombs["Subcontractors_source_chatGPT"] = ""
+
+    # Post process dataset to sort columns with aggregated values
+    agg_columns = [
+        "GEM_id_source_GEM",
+        "GEM_url_source_GEM",
+        "Operators_source_GEM",
+        "Parent_company_source_GEM",
+        "Multiple_unit_concerned_source_GEM"
+    ]
+    df_carbon_bombs[agg_columns] = df_carbon_bombs[agg_columns].applymap(sort_values_if_not_null)
+
     return df_carbon_bombs
     
 if __name__ == '__main__':
