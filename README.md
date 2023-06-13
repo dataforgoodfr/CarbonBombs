@@ -41,6 +41,7 @@ The files located in the "data_cleaned" folder constitute the database we use to
 - connexion_bank_company.csv : This file contains information on the amount financed by each bank to companies involved in Carbon Bombs. It primarily consists of a filtered version of the BOCC database, including only companies present in the "Parent_company" field of the GEM database.
     - Script that generated this file: banking.py
     - Source of the data: GROUP-Fossil_Fuel_Financing_by_Company_Banking_on_Climate_Chaos_2023.xlsx
+- carbon_bombs_all_datasets.xlsx : This file contains all previous files but stored into different tabs. Tabs name match the dataset name.
 
 # Code Documentation
 Code documentation has been generated using Sphinx Library. 
