@@ -87,3 +87,4 @@ tzdata==2023.3
 urllib3==1.26.15
 Werkzeug==2.3.0
 wrapt==1.14.1
+xlsxwriter
