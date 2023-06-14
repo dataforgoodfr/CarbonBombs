@@ -168,6 +168,11 @@ def load_carbon_bomb_gasoil_database():
         'Saudi-Arabia':'Saudi Arabia',
         'Kuwait-Saudi-Arabia-Neutral Zone':'Kuwait-Saudi Arabia'
         })
+    # In case of project that have same name, rename temporarily project name 
+    # with the format projectname_country
+    # Renaming Will be undone after the manual matching process
+    df.loc[df.duplicated(subset='Project Name', keep=False),"Project Name"] = (
+        df["Project Name"]+"_"+df["Country"])
     return df
     
 def load_coal_mine_gem_database():
@@ -1003,6 +1008,39 @@ def sort_values_if_not_null(value: str, separator=";") -> str:
         )
     return value
 
+def cancel_duplicated_rename(df):
+    """
+    Modifies the 'Project' column in a DataFrame to remove the _country
+    set up to avoid duplication. 
+
+    This function operates on rows where the 'Project' column matches the 
+    pattern '<ProjectName>_<Country>', and the '<Country>' substring matches 
+    the 'Country' column for that row. In these rows, it changes the 'Project' 
+    value to '<ProjectName>', removing the duplicated country information.
+
+    Args:
+        df (pandas.DataFrame): The input DataFrame, which should contain 
+            'Project' and 'Country' columns. 'Project' column values should 
+            be strings in the format '<ProjectName>_<Country>'.
+
+    Returns:
+        pandas.DataFrame: The modified DataFrame. It is the same as the input 
+            DataFrame, but in rows where the 'Project' and 'Country' matched 
+            the pattern and condition, the 'Project' value is replaced by 
+            '<ProjectName>'.
+    """
+    def match_pattern(row):
+        if '_' in row['Project Name']:
+            _, country = re.split('_', row['Project Name'])
+            return country == row['Country_x']
+        else:
+            return False
+    mask = df.apply(match_pattern, axis=1)
+    df.loc[mask, 'Project Name'] = (
+        df.loc[mask, 'Project Name'].apply(lambda x: x.split('_')[0]))
+    return df
+    
+
 
 def cleanhtml(raw_html):
     """This function cleans html tag to extract only text.
@@ -1187,6 +1225,10 @@ def create_carbon_bombs_table():
     """
     df_coal = create_carbon_bombs_coal_table()
     df_gasoil = create_carbon_bombs_gasoil_table()
+    # Cancel renaming of project that have the same name but are located in 
+    # different country (see function load_carbon_bomb_gasoil_database())
+    # Only apply for the moment to gasoil dataframe
+    df_gasoil = cancel_duplicated_rename(df_gasoil)
     # Add multiple unit concerned column to Coal Table
     df_coal["Multiple_unit_concerned"]=""
     name_mapping_coal = {
@@ -1293,7 +1335,8 @@ def create_carbon_bombs_table():
         "Parent_company_source_GEM",
         "Multiple_unit_concerned_source_GEM"
     ]
-    df_carbon_bombs[agg_columns] = df_carbon_bombs[agg_columns].applymap(sort_values_if_not_null)
+    df_carbon_bombs[agg_columns] = df_carbon_bombs[agg_columns].applymap(
+                                                    sort_values_if_not_null)
     
     df_carbon_bombs = get_information_from_GEM(df_carbon_bombs)
     df_carbon_bombs = complete_GEM_with_ChatGPT(df_carbon_bombs)
