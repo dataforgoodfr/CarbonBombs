@@ -134,8 +134,8 @@ def write_connexions(driver):
         encoding='utf-8-sig',
         index=False)
     query_cb_company = '''
-        MATCH (cb:Carbon_bomb {Name: $carbon_bomb})
-        MATCH (c:Company {Name: $company})
+        MATCH (cb:carbon_bomb {Name: $carbon_bomb})
+        MATCH (c:company {Name: $company})
         MERGE (c)-[:OPERATES {weight: $weight}]->(cb)
     '''
     def create_interaction_cb_companies(tx,cb, company, weight):
@@ -156,8 +156,8 @@ def write_connexions(driver):
         encoding='utf-8-sig',
         index=False)
     query_bank_company = '''
-        MATCH (c:Company {Name: $company})
-        MATCH (b:Bank {Name: $bank})
+        MATCH (c:company {Name: $company})
+        MATCH (b:bank {Name: $bank})
         MERGE (b)-[:FINANCES {
             Total: $total,
             year_2016: $year_2016,
@@ -219,8 +219,8 @@ def write_connexions(driver):
         encoding='utf-8-sig',
         index=False)
     query_cb_country = '''
-        MATCH (cb:Carbon_bomb {Name: $carbon_bomb})
-        MATCH (c:Country {Name: $country})
+        MATCH (cb:carbon_bomb {Name: $carbon_bomb})
+        MATCH (c:country {Name: $country})
         MERGE (cb)-[:IS_LOCATED]->(c)
     '''
     def create_interaction_cb_countries(tx, cb, country):
@@ -239,10 +239,10 @@ def update_neo4j():
         auth=basic_auth(NEO4J_USERNAME, NEO4J_PASSWORD))
     # Define dict to iterate over three types node creation
     dict_nodes = {
-        "Carbon_bomb":carbon_bombs,
-        "Company":companies,
-        "Bank":banks,
-        "Country":countries,
+        "carbon_bomb":carbon_bombs,
+        "company":companies,
+        "bank":banks,
+        "country":countries,
     }
     # Iterate throught dictionnary to create each node type
     for node_type, node_data in dict_nodes.items():
