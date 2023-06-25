@@ -15,6 +15,7 @@ from scrapper import main_scrapping_function, scrapping_company_location
 from countries import create_country_table
 
 CONCAT_DATA_FILE_PATH = "data_cleaned/carbon_bombs_all_datasets.xlsx"
+DATA_SOURCES_PATH = './data_sources/'
 
 
 def concat_dataframe_into_excel(fpath: str):
@@ -87,8 +88,8 @@ if __name__ == '__main__':
         print("Create your own Google MAPS API KEY to scrap GPS coordinates.\n"
               "Skipping Step3 and Step4\n")
 
-    # Step5 : Scrape country informations
-    df_countries = create_country_table()
+    # Step5 : Scrap countries informations
+    df_countries = create_country_table(DATA_SOURCES_PATH)
     df_countries.to_csv("./data_cleaned/country_informations.csv",
                         encoding='utf-8-sig', index=False)
     print("country_informations.csv : done\n")
