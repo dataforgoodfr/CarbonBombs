@@ -22,6 +22,8 @@ from fuzzywuzzy import fuzz
 from data_sources.manual_match import manual_match_coal
 from data_sources.manual_match import manual_match_gasoil
 
+from data_sources.manual_data import manual_data_to_add
+
 
 def load_carbon_bomb_list_database():
     """
@@ -1346,6 +1348,13 @@ def create_carbon_bombs_table():
     ] = "Kuwait"
     df_carbon_bombs = get_information_from_GEM(df_carbon_bombs)
     df_carbon_bombs = complete_GEM_with_ChatGPT(df_carbon_bombs)
+
+    # Add manualy EACOP carbon bomb
+    df_carbon_bombs["Bomb_type"] = "Extraction"
+    df_carbon_bombs = pd.concat(
+        [df_carbon_bombs,  pd.DataFrame.from_dict(manual_data_to_add)]
+    ).reset_index(drop=True)
+
     return df_carbon_bombs
     
 if __name__ == '__main__':
