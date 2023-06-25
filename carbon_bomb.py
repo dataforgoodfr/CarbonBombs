@@ -1200,6 +1200,13 @@ def create_carbon_bombs_table():
     ]
     df_carbon_bombs[agg_columns] = df_carbon_bombs[agg_columns].applymap(
                                                     sort_values_if_not_null)
+    
+    # Specific fix fort Khafji bomb that is set to Kuwait and Saudi Arabia
+    # -> attribute this carbon bomb to Kuwait to insure a better repartition 
+    # (Kuwait has 3 bombs and Saudi Arabia 23)
+    df_carbon_bombs.loc[
+        df_carbon_bombs.Carbon_bomb_name_source_CB == "Khafji", "Country_source_CB"
+    ] = "Kuwait"
 
     return df_carbon_bombs
     
