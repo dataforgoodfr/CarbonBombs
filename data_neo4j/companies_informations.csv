@@ -94,7 +94,7 @@ Russian Coal,"Moscow, Russia",55.755826,37.6173,"Erkovetskiy Coal Mine,Pereyaslo
 Shaanxi Investment Group Co Ltd,"No. 1, Yanta Road, Yanta District, Xi'an, Shaanxi, China",34.21824,108.94663,None
 Shaanxi Coal and Chemical Industry Group Co Ltd,"No. 1, Yanta Road, Yanta District, Xi'an, Shaanxi, China",34.21824,108.94663,None
 LG International,"20 Yoido-dong, Youngdungpo-gu, Seoul, South Korea",37.5278847,126.9292303,GAM Coal Mine
-Titan Infra Energy PT,"Sona Topas Tower, Level 25, Jl. Jend. Sudirman Kav. 26, Jakarta, Indonesia",-6.2179547,106.8137292,None
+Titan Infra Energy PT,"Sona Topas Tower, Level 25, Jl. Jend. Sudirman Kav. 26, Jakarta, Indonesia",-6.212499999999999,106.8204649,None
 Asian American Continental Coal Company,"Beijing, China",39.904211,116.407395,Gaohe Coal Mine
 Beijing Energy Holding Co Ltd,"Beijing, China",39.904211,116.407395,None
 Ordos Energy Investment and Development Company,"Beijing, China",39.904211,116.407395,Gaojialiang No.1 Coal Mine
@@ -107,7 +107,7 @@ CKD Mines,"Ottawa, Canada",45.4215296,-75.69719309999999,Gething Coal Mine
 MC Mining,"The Place, 1 Sandton Drive, Sandown, Sandton, South Africa",-26.1125086,28.0400093,Greater Soutpansberg Coal Project
 Rothe Investments,"Le Cap, South Africa",-33.9248685,18.4240553,Greater Soutpansberg Coal Project
 Exxon Mobil Corp,"5959 Las Colinas Blvd, Irving, TX 75039, USA",32.889883,-96.950202,None
-Hess Corporation,"1185 Avenue of the Americas, New York, NY 10036, USA",40.7583917,-73.98177480000001,Greater Turbot (Stabroek)
+Hess Corporation,"1185 Avenue of the Americas, New York, NY 10036, USA",40.7578513,-73.98233809999999,Greater Turbot (Stabroek)
 CNOOC International,"Floor 10, CNOOC Building, 20 Chaoyangmenwai Dajie, Chaoyang District, Beijing, China",39.91807,116.43901,Greater Turbot (Stabroek)
 Exxaro Resources Ltd,"The ConneXXion, 263B, West Avenue, Die Hoewes, Centurion, South Africa",-25.8532822,28.1895192,None
 Shaanxi Yulin Energy Group Co Ltd,"Beijing, China",39.904211,116.407395,None
@@ -157,7 +157,7 @@ Bumi Resources,"Bakrie Tower, 3rd Floor, Rasuna Epicentrum, Jl. H.R. Rasuna Said
 Shell PLC,"Shell Centre, London, SE1 7NA, United Kingdom",51.5039817,-0.1168152,None
 Chevron Corp,"6001 Bollinger Canyon Rd, San Ramon, CA 94583, USA",37.7589028,-121.9598973,None
 PJSC LUKOIL,"11 Sretensky Boulevard, Moscow, 101000, Russia",55.76664580000001,37.6359498,"Karachaganak,Qurna West-2,Tengiz"
-National Bank of the Republic of Kazakhstan,"21 ""K"" Kunayev str., 050051, Almaty, Kazakhstan",43.2572612,76.949915,"Karachaganak,Tengiz"
+National Bank of the Republic of Kazakhstan,"21 ""K"" Kunayev str., 050051, Almaty, Kazakhstan",43.2572612,76.949915,Tengiz
 JSC Samruk-Kazyna,"8, Mangilik El avenue, Nur-Sultan, Kazakhstan",51.125086,71.436193,Kashagan
 Cooperative KazMunayGaz,"19 Kabanbay Batyr Ave., Nur-Sultan, Kazakhstan",51.1315976,71.4119486,Kashagan
 Saudi Aramco,"Dhahran, Eastern Province, Saudi Arabia",26.2361248,50.0393017,Khafji
@@ -166,7 +166,7 @@ Anhui Xinji Coal and Electricity Group,"Beijing, China",39.904211,116.407395,"Ko
 China COSCO Shipping Corp Ltd,"No. 358, Dong Da Ming Road, Hongkou District, Shanghai, China",31.24589,121.49222,None
 Delek Group Ltd,"18 Giborei Israel St., Netanya, Israel",32.082057,34.8434887,None
 Ratio Petroleum,"18 Giborei Israel St., Netanya, Israel",32.082057,34.8434887,Leviathan
-CNOOC Limited,"Floor 10, CNOOC Building, 20 Chaoyangmenwai Dajie, Chaoyang District, Beijing, China",39.91807,116.43901,"Libra,Mero (Libra NW),Umm Shaif/Nasr"
+CNOOC Limited,"Floor 10, CNOOC Building, 20 Chaoyangmenwai Dajie, Chaoyang District, Beijing, China",39.91807,116.43901,"Libra,Mero (Libra NW),Umm Shaif/Nasr,EACOP"
 Siberian Business Union-Coal,"Moscow, Russia",55.755826,37.6173,"Listvianskaya Coal Mine,Pervomaisky Coal Mine,Shurapskaya Coal Mine"
 Huayang New Material Technology Group Co Ltd,"Beijing, China",39.904211,116.407395,None
 Yangcheng County Yangtai Group Industrial Co Ltd,"Beijing, China",39.904211,116.407395,None
@@ -181,7 +181,7 @@ AGL Energy Ltd,"200 George St, Sydney NSW 2000, Australia",-33.8625031,151.20779
 Pré-Sal Petróleo S.A.,"Rua Lauro Müller, 116, Sala 2301, Rio de Janeiro, Brazil",-22.9569089,-43.1761858,Lula (X-Tupi)
 Foresight Energy,"One Metropolitan Square, Suite 2600, St. Louis, MO 63102, USA",38.6275525,-90.1900027,MC #1 Coal Mine
 Jinneng Holding Group Co Ltd,"No. 1 Jinneng Road, Jinzhong, Shanxi, China",37.3582994,112.0082951,None
-National Thermal Power Corporation,"SCOPE Complex, Institutional Area, Lodhi Road, New Delhi, India",28.5910626,77.2280791,"Mandakini B,Talaipalli Coal Mine"
+National Thermal Power Corporation,"SCOPE Complex, Institutional Area, Lodhi Road, New Delhi, India",28.5902496,77.2255836,"Mandakini B,Talaipalli Coal Mine"
 Bulgarian Energy Holding EAD,"16 Veslets St., 1000 Sofia, Bulgaria",42.6997732,23.3257998,None
 Ningxia State-Owned Capital Operation Group,"Beijing, China",39.904211,116.407395,"Meihuajing Coal Mine,Ningxia Hongliu Coal Mine,Qingshuiying Coal Mine,Yangchangwan No.1 Well Coal Mine,Zaoquan Coal Mine"
 Reliance Power Ltd,"3rd Floor, Maker Chambers IV, 222, Nariman Point, Mumbai, India",18.9248307,72.8230219,None
@@ -190,7 +190,7 @@ Inner Mongolia Boyuan Holdings Group,"Beijing, China",39.904211,116.407395,"Mudu
 HD Mining International,"Ottawa, Canada",45.4215296,-75.69719309999999,Murray River Coal Mine
 Seriti,"Building 8, 90 Rivonia Rd, Sandton, Johannesburg, South Africa",-26.111623,28.053943,New Largo Coal Mine
 Industrial Development Corporation,"19 Fredman Dr, Sandown, Sandton, Johannesburg, South Africa",-26.10285,28.05291,New Largo Coal Mine
-Community Trusts,"Le Cap, South Africa",-33.9248685,18.4240553,New Largo Coal Mine
+Community Trusts,"Le Cap, South Africa",-33.9248685,18.4240553,None
 Yulin State-Owned Capital Operation and Management Company,"Beijing, China",39.904211,116.407395,Ningtiaota Coal Mine
 Shenmu City State-Owned Assets Operation Co,"Beijing, China",39.904211,116.407395,None
 Peabody Energy Corp,"701 Market St, St. Louis, MO 63101, USA",38.6266409,-90.1926536,None
@@ -203,7 +203,7 @@ Indian Oil Corp Ltd,"IndianOil Bhavan, G-9, Ali Yavar Jung Marg, Bandra (East), 
 Indonesia Asahan Aluminium Persero PT,"Jl. MH Thamrin No. 2-4, Jakarta, Indonesia",-6.1863542,106.8238987,None
 Bayan Resources Tbk PT,"Menara Bidakara 2, Jl. Jend. Gatot Subroto Kav. 71-73, Jakarta, Indonesia",-6.240633700000001,106.8409182,None
 Shanxi Coking Coal Group Co Ltd,"Taiyuan, Shanxi, China",37.8705899,112.55067,None
-China Cinda Asset Management Company,"4/F, 7 Financial Street, Xicheng District, Beijing, China",39.9072426,116.3565767,"Pangpangta Coal Mine,Shenhua Heidaigou Surface Coal Mine,Sihe Coal Mine,Tongxin Coal Mine,Zhangji Coal Mine,Zhong Yu Coal Mine"
+China Cinda Asset Management Company,"4/F, 7 Financial Street, Xicheng District, Beijing, China",39.9072426,116.3565767,"Pangpangta Coal Mine,Shenhua Heidaigou Surface Coal Mine,Tongxin Coal Mine,Zhangji Coal Mine,Zhong Yu Coal Mine"
 China Construction Bank,"No. 25, Financial Street, Xicheng District, Beijing, China",39.9072426,116.3565767,Pangpangta Coal Mine
 Indika Energy Tbk PT,"Indika Energy Building, Jl. Jend. Sudirman Kav. 52-53, Jakarta, Indonesia",-6.2262521,106.806356,None
 GCM Resources,"7th Floor, 33 Cavendish Square, London, W1G 0PW, United Kingdom",51.5157926,-0.1441488,Phulbari Coal Mine
@@ -218,13 +218,13 @@ Iraqi Oil Exploration Company,"Baghdad, Iraq",33.315241,44.3660671,Qurna West
 QatarEnergy,"P.O. Box 22666, Doha, Qatar",25.2854473,51.53103979999999,None
 Evraz PLC,"16th Floor, 29 Ludgate Hill, London, EC4M 7NX, United Kingdom",51.5137753,-0.1017615,None
 Talbot Group,"Washingthon, USA",47.7510741,-120.7401386,Revuboe Coal Mine
-Sumitomo Metal,"5-33, Kitahama 4-chome, Chuo-ku, Osaka, Japan",34.6917669,135.4989741,Revuboe Coal Mine
+Sumitomo Metal,"5-33, Kitahama 4-chome, Chuo-ku, Osaka, Japan",34.6917669,135.4989741,None
 POSCO Holdings Inc,"6261, Donghaean-ro, Nam-gu, Pohang, Gyeongsangbuk-do, South Korea",35.9983467,129.3822685,None
 Government of North Korea,"Pyongyang, North Korea",39.0392193,125.7625241,Saebyol Coal Mining Complex
 Uttar Pradesh Rajya Vidyut,"Shakti Bhawan, 14 Ashok Marg, Lucknow, Uttar Pradesh, India",26.8507088,80.9490742,Saharpur Jamarpani
 Rosneftegaz AO,"Sophiyskaya Embankment, 26, Moscow, Russia",55.7479451,37.619627,None
 QH Oil Investments LLC,"Moscow, Russia",55.755826,37.6173,Samotlorneftegaz (TNK-BP)
-Russian Federation Agency for State Property Management,"ul. Bolshaya Tatarskaya 35, Moscow, Russia",55.755826,37.6173,Samotlorneftegaz (TNK-BP)
+Russian Federation Agency for State Property Management,"ul. Bolshaya Tatarskaya 35, Moscow, Russia",55.7374962,37.6369929,Samotlorneftegaz (TNK-BP)
 Yildirim Holding AS,"Barbaros Mah. Halk Caddesi, Yıldırım Tower, No: 17, Istanbul, Turkey",40.991,29.10179,San Juan Coal Mine
 RioZim,"1 Kenilworth Rd, Newlands, Harare, Zimbabwe",-17.807955,31.0758792,Sengwe Colliery
 Shaanxi Financial Holding Group,"Beijing, China",39.904211,116.407395,Shaanxi Caojiatan Coal Mine
@@ -246,8 +246,8 @@ Jiutai Energy,"Beijing, China",39.904211,116.407395,Shilawusu Coal Mine
 Jinchengtai Limited Liability Company Of Chemical Industry of Ordos City,"Beijing, China",39.904211,116.407395,Shilawusu Coal Mine
 Xinjiang Energy Group,"No.128 Nanchang Road, Urumqi, Xinjiang, China",43.81342,87.57107,"Shitoumei No.1 Coal Mine,Wucaiwan No.1 Coal Mine,Wucaiwan No.1 Surface Mine"
 Joint Resources JSC,"Astana, Kazakhstan",51.16052269999999,71.4703558,Shubarkol Coal Mine
-FCI Management,"Astana, Kazakhstan",51.16052269999999,71.4703558,Shubarkol Coal Mine
-China Cinda Asset Management Company,"No. 8 Financial Street, Xicheng District, Beijing, China",39.9072426,116.3565767,"Pangpangta Coal Mine,Shenhua Heidaigou Surface Coal Mine,Sihe Coal Mine,Tongxin Coal Mine,Zhangji Coal Mine,Zhong Yu Coal Mine"
+FCI Management,"Astana, Kazakhstan",51.16052269999999,71.4703558,None
+China Cinda Asset Management Company,"No. 8 Financial Street, Xicheng District, Beijing, China",39.9072426,116.3565767,"Pangpangta Coal Mine,Shenhua Heidaigou Surface Coal Mine,Tongxin Coal Mine,Zhangji Coal Mine,Zhong Yu Coal Mine"
 PPL Corp,"Two North Ninth Street, Allentown, PA 18101, USA",40.6108129,-75.4800112,None
 PPI,None,0.0,0.0,South Pars (Phases 4-5) dry gas
 Octo Coal,"Moscow, Russia",55.755826,37.6173,Stepnoy Coal Mine
@@ -263,17 +263,17 @@ PAO NOVATEK,"16A Tverskoy Boulevard, Moscow, Russia",55.7601771,37.6014202,Tambe
 Wutongshu Investment Platform Co.,"Beijing, China",39.904211,116.407395,Tambey Zone (Yamal Megaproject)
 China Investment Co,"Beijing, China",39.904211,116.407395,Tambey Zone (Yamal Megaproject)
 China Development Bank,"No. 17 Financial Street, Xicheng District, Beijing, China",39.9072426,116.3565767,"Hongliulin Coal Mine,Mengcun Coal Mine,Tambey Zone (Yamal Megaproject),Xiaozhuang Coal Mine"
-China Import-Export Bank,"30-31F, China EXIM Building, 30 Fuxingmennei Street, Xicheng District, Beijing, China",39.9073,116.36566,Tambey Zone (Yamal Megaproject)
+China Import-Export Bank,"30-31F, China EXIM Building, 30 Fuxingmennei Street, Xicheng District, Beijing, China",39.9057834,116.3642259,Tambey Zone (Yamal Megaproject)
 Shandong First Geological and Mineral Exploration Institute,"Beijing, China",39.904211,116.407395,Taohe Coal Mine
 China Datang Corp,"No. 15, Yuetan North Street, Xicheng District, Beijing, China",39.9183563,116.345489,None
 Erdenes MGL,"Ulaanbaatar 14240, Mongolia",47.88639879999999,106.9057439,Tavan Tolgoi Coal Mine
-Sindh Engro Coal Mining Company,"16th Floor, The Harbor Front Building, Marine Drive, Block 4, Clifton, Karachi, Pakistan",24.8017823,67.03100719999999,Thar Coal Mine
-Adaro Energy,"Menara Karya, 23rd Floor, Jl. H.R. Rasuna Said, Block X-5, Kav. 1-2, Jakarta 12950, Indonesia",-6.233230900000001,106.8312564,Tutupan Coal Mine
+Sindh Engro Coal Mining Company,"16th Floor, The Harbor Front Building, Marine Drive, Block 4, Clifton, Karachi, Pakistan",24.8024608,67.0294947,Thar Coal Mine
+Adaro Energy,"Menara Karya, 23rd Floor, Jl. H.R. Rasuna Said, Block X-5, Kav. 1-2, Jakarta 12950, Indonesia",-6.222582999999999,106.7355118,Tutupan Coal Mine
 Severstal-Resource,"Cherepovets, Vologda Oblast, Russia",59.132333,37.9091811,Ulug-Khem Project
 Russkaya Energiya,"Moscow, Russia",55.755826,37.6173,Usinsk-1 Coal Mine
-ao Holding Investment Company,"Beijing, China",39.904211,116.407395,Wangjiata Coal Mine
+ao Holding Investment Company,"Beijing, China",39.904211,116.407395,None
 Hongchuang,"Beijing, China",39.904211,116.407395,Wangjiata Coal Mine
-Investment Center,None,0.0,0.0,Wangjiata Coal Mine
+Investment Center,None,0.0,0.0,None
 Langfang Heyuan Investment Center,"Beijing, China",39.904211,116.407395,Wangjiata Coal Mine
 Hebei Weiyuan Group,"Beijing, China",39.904211,116.407395,Wangjiata Coal Mine
 Ningxia Wangwa Coal Industry Company,"Beijing, China",39.904211,116.407395,Wangwa Coal Mine
@@ -283,7 +283,7 @@ Yang Quan Coal Industry Group,"Yangquan, Shanxi, China",37.8566799,113.58047,Wen
 Shanxi Boda Group,"Beijing, China",39.904211,116.407395,Wenjiazhuang Coal Mine
 Shanxi Provincial Coal Industry Agency Service Center,"Beijing, China",39.904211,116.407395,Wenjiazhuang Coal Mine
 Beijing Sunshine Ruita Investment Consulting Company,"Beijing, China",39.904211,116.407395,Wenjiazhuang Coal Mine
-Public Power Corporation of Greece S.A,"30, Halkokondyli Str., 104 32 Athens, Greece",37.9864325,23.7284856,West Macedonia Lignite Centre (WMLC)
+Public Power Corporation of Greece S.A,"30, Halkokondyli Str., 104 32 Athens, Greece",37.9861844,23.7289647,West Macedonia Lignite Centre (WMLC)
 Guizhou Panjiang Coal and Electricity Group,"Guiyang, Guizhou, China",26.6475899,106.63019,West Well of Faer Second Coal Mine
 Shandong Energy Co Ltd,"No. 27 Shanda South Road, Jinan, Shandong, China",36.67194,117.0571,None
 Guizhou Coalfield Geology Bureau,"Beijing, China",39.904211,116.407395,West Well of Faer Second Coal Mine
@@ -309,7 +309,7 @@ Bin County Coal Company,"Beijing, China",39.904211,116.407395,Yadian Coal Mine
 CLP Group,"8/F, Devon House, Taikoo Place, 979 King's Road, Quarry Bay, Hong Kong",22.2872229,114.2110848,Yallourn
 Zhejiang Provincial Energy Group Co Ltd,"No. 1, Xiaoying Road, Hangzhou, Zhejiang, China",30.08971,120.06194,None
 Navajo Nation,"Window Rock, AZ, United States",35.680573,-109.0525929,Youngs Creek Coal Mine
-Petróleos Mexicanos (PEMEX),"Av. Marina Nacional 329, Col. Petróleos Mexicanos, 11311 Mexico City, Mexico",19.4391882,-99.1757271,None
+Petróleos Mexicanos (PEMEX),"Av. Marina Nacional 329, Col. Petróleos Mexicanos, 11311 Mexico City, Mexico",19.441126,-99.1761256,None
 Shenmu Coal Company,"Beijing, China",39.904211,116.407395,Yushuwan Coal Mine
 Yulin Yuyang Coal Company,"Beijing, China",39.904211,116.407395,Yushuwan Coal Mine
 Yanchang Oil and Minerals Administration Hengshan Oil Drilling and Production Company,"Beijing, China",39.904211,116.407395,Yushuwan Coal Mine
@@ -317,7 +317,7 @@ Shanghua Investment Company,None,0.0,0.0,Yuwang No.1 Coal Mine
 Steel Authority of India,"Ispat Bhawan, Lodhi Road, New Delhi - 110 003, India",28.5924,77.23675,Zambezi Coal Mine
 Rashtriya Ispat Nigam,"Administrative Building, B-Block, Visakhapatnam Steel Plant, Visakhapatnam - 530031, India",17.6345641,83.1970511,Zambezi Coal Mine
 NMDC,"Khanij Bhavan, Masab Tank, Hyderabad - 500028, India",17.3981214,78.45001660000001,Zambezi Coal Mine
-NTPC Ltd,"NTPC Bhawan, SCOPE Complex, Institutional Area, Lodhi Road, New Delhi - 110003, India",28.5910626,77.2280791,None
+NTPC Ltd,"NTPC Bhawan, SCOPE Complex, Institutional Area, Lodhi Road, New Delhi - 110003, India",28.5902496,77.2255836,None
 Coal India Ltd,"Coal India Limited, Coal Bhawan, Premise No-04 MAR, Plot No-AF-III, Action Area-1A, Newtown, Rajarhat, Kolkata-700156, West Bengal, India",22.5841333,88.4512901,None
 Shenmu City State-Owned Assets Operation Co,"Beijing, China",39.904211,116.407395,None
 Yulin City Finance Investment Management Company,"Beijing, China",39.904211,116.407395,Zhaoshipan Coal Mine
