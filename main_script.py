@@ -12,7 +12,7 @@ import pandas as pd
 from carbon_bomb import create_carbon_bombs_table
 from connexion import main_connexion_function
 from scrapper import main_scrapping_function, scrapping_company_location
-from countries import create_country_table, scrapping_undata_file_url, saving_file
+from countries import create_country_table
 
 CONCAT_DATA_FILE_PATH = "data_cleaned/carbon_bombs_all_datasets.xlsx"
 DATA_SOURCES_PATH = './data_sources/'
