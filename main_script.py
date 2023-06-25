@@ -15,6 +15,7 @@ from scrapper import main_scrapping_function, scrapping_company_location
 from countries import create_country_table, scrapping_undata_file_url, saving_file
 
 CONCAT_DATA_FILE_PATH = "data_cleaned/carbon_bombs_all_datasets.xlsx"
+DATA_SOURCES_PATH = './data_sources/'
 
 
 def concat_dataframe_into_excel(fpath: str):
@@ -87,22 +88,8 @@ if __name__ == '__main__':
         print("Create your own Google MAPS API KEY to scrap GPS coordinates.\n"
               "Skipping Step3 and Step4\n")
 
-    # Step5 : Scrape country informations
-    url_undata = "https://data.un.org/"
-    undata_path = './data_sources/'
-    # Step 5.1 - Display available statistical datasets (optional)
-    #df_undata_file = scrapping_undata_file_url(url_undata)
-    # Step 5.2 - Download and save UN data CSV files (optional)
-    # Subcategories required for dataviz
-    #subcategory1 = "Population, surface area and density"
-    #subcategory2 = "GDP and GDP per capita"
-    #subcategory3 = "CO2 emissions estimates"
-    #subcategories = (subcategory1, subcategory2, subcategory3)
-    # for subcat in subcategories:
-    #    url = df_undata_file.query('subcategory == @subcat')['csv_url'][0]
-    #    saving_file(url, destination_path)
-    # Step 5.3 - Main function
-    df_countries = create_country_table(undata_path)
+    # Step5 : Scrap countries informations
+    df_countries = create_country_table(DATA_SOURCES_PATH)
     df_countries.to_csv("./data_cleaned/country_informations.csv",
                         encoding='utf-8-sig', index=False)
     print("country_informations.csv : done\n")

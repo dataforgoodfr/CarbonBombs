@@ -14,10 +14,11 @@ $ python main.py
 """
 import os
 import sys
+from pathlib import Path
+
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-from pathlib import Path
 
 
 def scrapping_undata_file_url(url):
@@ -52,13 +53,15 @@ def scrapping_undata_file_url(url):
 
     # Check if the request was successful (HTTP status code 200)
     if response.status_code != 200:
-        print(f"Failed to fetch the page. HTTP status: {response.status_code}"
-              "Please try again later")
+        print(
+            f"Failed to fetch the page. HTTP status: {response.status_code}"
+            "Please try again later"
+        )
         sys.exit()
 
     # Parse the HTML content using BeautifulSoup and focus on the part
     # containing relevant information
-    soup = BeautifulSoup(response.content, 'html.parser')
+    soup = BeautifulSoup(response.content, "html.parser")
     subsoup = soup.find("div", class_="DataSourceList")
 
     # Initiate dataframe to concatenate info
@@ -70,19 +73,16 @@ def scrapping_undata_file_url(url):
         category = subsoup.find_all("p")[category_i].text
 
         subsoup_category = subsoup.find_all("ul")[category_i]
-        nb_subcategory = len(
-            subsoup_category.find_all("li", class_="NoBullets"))
+        nb_subcategory = len(subsoup_category.find_all("li", class_="NoBullets"))
 
         # For each category...
         for subcategory_j in range(nb_subcategory):
             # ... search the subcategory ...
-            subcategory = subsoup_category.find_all("li")[subcategory_j*2] \
-                                          .text
+            subcategory = subsoup_category.find_all("li")[subcategory_j * 2].text
 
             # ... and search the 2nd URL (URL of the CSV)
-            subsoup_subcategory = subsoup_category.find_all("li")[
-                subcategory_j*2+1]
-            csv_url = subsoup_subcategory.find_all("a")[1].get('href')
+            subsoup_subcategory = subsoup_category.find_all("li")[subcategory_j * 2 + 1]
+            csv_url = subsoup_subcategory.find_all("a")[1].get("href")
             # Rebuilds the full URL
             csv_url = url + csv_url
 
@@ -91,6 +91,7 @@ def scrapping_undata_file_url(url):
             df_subcategory["subcategory"] = [subcategory]
             df_subcategory["csv_url"] = [csv_url]
             df_undata = pd.concat([df_undata, df_subcategory])
+
     return df_undata
 
 
@@ -115,15 +116,17 @@ def saving_file(url, folder_path):
 
     # Check if the request was successful (HTTP status code 200)
     if myfile.status_code != 200:
-        print(f"Failed to fetch the page. HTTP status: {myfile.status_code} "
-              "Please try again later")
+        print(
+            f"Failed to fetch the page. HTTP status: {myfile.status_code} "
+            "Please try again later"
+        )
         sys.exit()
 
     filename = os.path.basename(url)
-    path = folder_path + 'undata_' + filename
+    path = folder_path + "undata_" + filename
     url_content = myfile.content
     # write the contents to a csv file
-    csv_file = open(path, 'wb')
+    csv_file = open(path, "wb")
     csv_file.write(url_content)
     # close the file
     csv_file.close()
@@ -176,7 +179,7 @@ def scrapping_undata(file_paths):
         "Series",
         "Value",
         "Footnotes",
-        "Source"
+        "Source",
     ]
     df_output = pd.DataFrame()
     # Load csv files
@@ -184,7 +187,7 @@ def scrapping_undata(file_paths):
         df = pd.read_csv(file, sep=",", header=1)
         # Retrieve the category in the first row of the csv file
         df_firstrow = pd.read_csv(file, sep=",", header=None, nrows=1)
-        df.insert(3, 'Category', df_firstrow[1].values[0])
+        df.insert(3, "Category", df_firstrow[1].values[0])
         # Concat dataframes
         df_output = pd.concat([df_output, df], ignore_index=True)
     df_output.columns = columns_dataframe
@@ -211,13 +214,98 @@ def load_CB_countries_database():
     dtypes = {"Country": "string"}
     df = pd.read_csv(file_path, usecols=cols, dtype=dtypes)
     # Split mulitple countries, separated by '-', in multiple countries
-    df = df.assign(Country_source_CB=df.Country_source_CB.str.split("-")) \
-           .explode("Country_source_CB")
+    df = df.assign(Country_source_CB=df.Country_source_CB.str.split("-")).explode(
+        "Country_source_CB"
+    )
     # Remove duplicates
     df.drop_duplicates(inplace=True)
     # Sort by increasing values
     df.sort_values(by="Country_source_CB", ascending=True, inplace=True)
     return df
+
+
+def format_serie_values(val):
+    """Format string as interger or float"""
+    if not isinstance(val, str):
+        return val
+
+    val = val.replace(",", "")
+
+    if "." in val:
+        return float(val)
+
+    return int(val)
+
+
+def format_countries_df_with_wanted_series(df_countries: pd.DataFrame) -> pd.DataFrame:
+    """Format raw countries dataframe with a row by country
+    and wanted KPI series (see `columns_map` dict in function).
+
+    Parameters
+    ----------
+    df_countries : pd.DataFrame
+        Dataframe with country names, series value, year for each
+        serie. It's the merging of Country from CB data and
+        UN datasets
+
+    Returns
+    -------
+    pd.DataFrame
+        Countries dataframe with one row per country and
+        wanted KPI series as columns with a year column for
+        each KPI
+    """
+    columns_map = {
+        "Population mid-year estimates (millions)": "Population_in_millions",
+        "Surface area (thousand km2)": "Surface_thousand_km2",
+        "GDP in current prices (millions of US dollars)": "GDP_millions_US_dollars",
+        "GDP per capita (US dollars)": "GDP_per_capita_US_dollars",
+        "Emissions (thousand metric tons of carbon dioxide)": "Emissions_thousand_tons_CO2",
+        "Emissions per capita (metric tons of carbon dioxide)": "Emissions_per_capita_tons_CO2",
+    }
+
+    # Keep only some wanted KPI
+    df_countries_filtered = df_countries.loc[
+        df_countries["Series"].isin(columns_map.keys())
+    ]
+
+    # get max years by country and serie
+    country_year_max = df_countries_filtered.groupby(
+        ["Country_source_CB", "Series"]
+    ).agg(year_max=("Year", "max"))
+    country_year_max_df = country_year_max.merge(
+        df_countries,
+        left_on=["Country_source_CB", "Series", "year_max"],
+        right_on=["Country_source_CB", "Series", "Year"],
+    ).drop(columns=["year_max"])
+
+    # Change serie name to wanted format
+    country_year_max_df["Series"] = country_year_max_df["Series"].replace(columns_map)
+
+    # Init final countries df
+    final_countries_df = df_countries[["Country_source_CB"]].drop_duplicates()
+
+    for serie, serie_df in country_year_max_df.groupby("Series"):
+        # Pivot dataframe to get values and year into the same row
+        serie_df = serie_df.pivot(
+            index=["Country_source_CB"], columns=["Series"], values=["Value", "Year"]
+        ).reset_index()
+
+        # Format year dtype
+        serie_df["Year"] = serie_df["Year"].astype(int)
+
+        # Change columns name
+        serie_df.columns = ["Country_source_CB", serie, f"Year_{serie}"]
+
+        # Format values
+        serie_df[serie] = serie_df[serie].apply(format_serie_values)
+
+        # merge to add KPI for each countries with the last year available for this metric
+        final_countries_df = final_countries_df.merge(
+            serie_df, on=["Country_source_CB"]
+        )
+
+    return final_countries_df
 
 
 def create_country_table(undata_folder_path):
@@ -252,51 +340,46 @@ def create_country_table(undata_folder_path):
     pwd = os.getcwd()
     # 2- Changes the current working directory
     os.chdir(os.path.dirname(undata_folder_path))
-    files = 'undata_*.csv'
+    files = "undata_*.csv"
     file_paths = Path.cwd().glob(files)
     # 3- Back to the initial working directory
     os.chdir(pwd)
-    '''
+    """
     Alternative, without changing the working directory:
         file1 = r'undata_SYB65_1_202209_Population, Surface Area and Density.csv'
         file2 = r'undata_SYB65_230_202209_GDP and GDP Per Capita.csv'
         file3 = r'undata_SYB65_310_202209_Carbon Dioxide Emission Estimates.csv'
         file_paths = (destination_path+file1, destination_path+file2, destination_path+file3)
-    '''
+    """
     df_undata = scrapping_undata(file_paths)
 
     # Map country names to get uniform country names between all files.
     # Rem: This mapping uses a dictionary, working for the current perimeter.
     #      If updates occur, new countries might need to be included to this
     #      dictionary.
-    mapping_countries = {"Iran (Islamic Republic of)": "Iran",
-                         "Dem. People's Rep. Korea": "North Korea",
-                         "Russian Federation": "Russia",
-                         "Syrian Arab Republic": "Syria",
-                         "United Rep. of Tanzania": "Tanzania",
-                         "United States of America": "United States",
-                         "Venezuela (Boliv. Rep. of)": "Venezuela"
-                         }
-    df_undata['Region_Country_Area_name'].replace(
-        mapping_countries, inplace=True)
+    mapping_countries = {
+        "Iran (Islamic Republic of)": "Iran",
+        "Dem. People's Rep. Korea": "North Korea",
+        "Russian Federation": "Russia",
+        "Syrian Arab Republic": "Syria",
+        "United Rep. of Tanzania": "Tanzania",
+        "United States of America": "United States",
+        "Venezuela (Boliv. Rep. of)": "Venezuela",
+    }
+    df_undata["Region_Country_Area_name"].replace(mapping_countries, inplace=True)
 
     # Merge the 2 dataframes on country name column.
-    df_countries = pd.merge(df_CB_countries, df_undata,
-                            left_on='Country_source_CB',
-                            right_on='Region_Country_Area_name',
-                            how='inner',
-                            sort=True)
-    # Last cleaning: 2 columns removed
-    columns_dataframe = [
-        "Country_source_CB",
-        "Year",
-        "Category",
-        "Series",
-        "Value",
-        "Footnotes",
-        "Source"
-    ]
-    df_countries = df_countries.reindex(columns_dataframe, axis='columns')
+    df_countries = pd.merge(
+        df_CB_countries,
+        df_undata,
+        left_on="Country_source_CB",
+        right_on="Region_Country_Area_name",
+        how="inner",
+        sort=True,
+    )
+
+    # Format countries df to get on row per country
+    df_countries = format_countries_df_with_wanted_series(df_countries)
 
     # Return cleaned dataframe
     return df_countries
@@ -304,7 +387,7 @@ def create_country_table(undata_folder_path):
 
 if __name__ == "__main__":
     url_undata = "https://data.un.org/"
-    destination_path = './data_sources/'
+    destination_path = "./data_sources/"
     # Step 1 - Display available statistical datasets (optional)
     df_undata_file = scrapping_undata_file_url(url_undata)
     # Step 2 - Download and save UN data CSV files (optional)
@@ -314,7 +397,7 @@ if __name__ == "__main__":
     subcategory3 = "CO2 emissions estimates"
     subcategories = (subcategory1, subcategory2, subcategory3)
     for subcat in subcategories:
-        url = df_undata_file.query('subcategory == @subcat')['csv_url'][0]
+        url = df_undata_file.query("subcategory == @subcat")["csv_url"][0]
         saving_file(url, destination_path)
     # Step 3 - Main function
     df_countries = create_country_table(destination_path)
