@@ -525,7 +525,7 @@ def compute_percentage_multi_sites(raw_line):
     # With raw_line content 2 possibilities : Percentage are indicated or not
     if "%" in raw_line:
         # Case where percentage are indicated
-        companies = re.findall(r"([\w\s\.\-]+)\s\(", raw_line)
+        companies = ["(".join(x.split("(")[:-1]).strip() for x in re.split("[;|,]", raw_line)]    
         percentages = re.findall(r"\(([\d\.]+)%\)", raw_line)
         # Merge percentage of same company into one
         combined_percentages = {}
