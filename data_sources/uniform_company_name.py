@@ -34,6 +34,7 @@ uniform_company_name = {
     "Guangdong Hanjian Holding Company":"Guangdong Hanjian Investment Co Ltd",
     "Guangdong Hengjian Investment Holding Company":"Guangdong Hengjian Investment Holding Co Ltd",
     "Harbour Energy plc":"Harbour Energy PLC",
+    "HeBei Construction & Investment Group":"Hebei Construction & Investment Group Co Ltd",
     "Hebei Construction & Investment Group":"Hebei Construction & Investment Group Co Ltd",
     "Hess Corporation":"Hess Corporation",
     "Huayang New Material Technology Group":"Huayang New Material Technology Group Co Ltd",
