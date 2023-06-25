@@ -13,6 +13,7 @@ from carbon_bomb import create_carbon_bombs_table
 from connexion import main_connexion_function
 from scrapper import main_scrapping_function, scrapping_company_location
 from countries import create_country_table
+from graph_database import update_neo4j
 
 CONCAT_DATA_FILE_PATH = "data_cleaned/carbon_bombs_all_datasets.xlsx"
 DATA_SOURCES_PATH = './data_sources/'
@@ -93,5 +94,8 @@ if __name__ == '__main__':
     df_countries.to_csv("./data_cleaned/country_informations.csv",
                         encoding='utf-8-sig', index=False)
     print("country_informations.csv : done\n")
-
+    # Step6 : Concatenate all csv files into a main Excel file
     concat_dataframe_into_excel(CONCAT_DATA_FILE_PATH)
+    # Step7 : Update data into Neo4j folder and database
+    update_neo4j()
+    
