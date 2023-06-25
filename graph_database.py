@@ -102,7 +102,10 @@ def update_csv_nodes_neo4j():
     return carbon_bombs,companies,banks,countries
     
 def purge_database():
-    driver = GraphDatabase.driver(NEO4J_URI, auth=basic_auth(NEO4J_USERNAME, NEO4J_PASSWORD))
+    driver = GraphDatabase.driver(
+        NEO4J_URI,
+        auth=basic_auth(NEO4J_USERNAME, NEO4J_PASSWORD)
+        )
     def delete_all(tx):
         tx.run("MATCH (n) DETACH DELETE n")
     with driver.session() as session:
@@ -126,6 +129,10 @@ def write_connexions(driver):
     ### Carbon Bombs and Companies relationship
     carbonbombs_companies = pd.read_csv(
         "./data_cleaned/connexion_carbonbombs_company.csv")
+    carbonbombs_companies.to_csv(
+        "./data_neo4j/connexion_carbonbombs_company.csv",
+        encoding='utf-8-sig',
+        index=False)
     query_cb_company = '''
         MATCH (cb:Carbon_bomb {Name: $carbon_bomb})
         MATCH (c:Company {Name: $company})
@@ -140,47 +147,96 @@ def write_connexions(driver):
             company = row['Company']
             weight = row['Percentage']
             session.execute_write(create_interaction_cb_companies,
-                                  carbon_bomb, company, weight)                          
+                                  carbon_bomb, company, weight) 
+                            
     ### Banks and Companies relationship 
     banks_companies = pd.read_csv("./data_cleaned/connexion_bank_company.csv")
+    banks_companies.to_csv(
+        "./data_neo4j/connexion_bank_company.csv",
+        encoding='utf-8-sig',
+        index=False)
     query_bank_company = '''
         MATCH (c:Company {Name: $company})
         MATCH (b:Bank {Name: $bank})
-        MERGE (b)-[:FINANCES {weight: $weight}]->(c)
-    '''
-    def create_interaction_banks_companies(tx, bank, company, weight):
-        tx.run(query_bank_company, bank = bank, company = company, weight = 1)
+        MERGE (b)-[:FINANCES {
+            Total: $total,
+            year_2016: $year_2016,
+            year_2017: $year_2017,
+            year_2018: $year_2018,
+            year_2019: $year_2019,
+            year_2020: $year_2020,
+            year_2021: $year_2021,
+            year_2022: $year_2022
+            }]->(c)
+    '''   
+    def create_interaction_banks_companies(tx, bank, company,year_2016,
+                                           year_2017,year_2018,year_2019,
+                                           year_2020,year_2021,year_2022,total):
+        tx.run(
+            query_bank_company,
+            bank = bank,
+            company = company,
+            year_2016 = year_2016,
+            year_2017 = year_2017,
+            year_2018 = year_2018,
+            year_2019 = year_2019,
+            year_2020 = year_2020,
+            year_2021 = year_2021,
+            year_2022 = year_2022,
+            total = total,
+            )
     with driver.session(database="neo4j") as session:
         for _, row in banks_companies.iterrows():
             bank = row['Bank']
             company = row['Company']
-            weight = row['Grand Total']
+            year_2016 = row['2016']
+            year_2017 = row['2017']
+            year_2018 = row['2018']
+            year_2019 = row['2019']
+            year_2020 = row['2020']  
+            year_2021 = row['2021']
+            year_2022 = row['2022'] 
+            total = row['Grand Total']
             session.execute_write(create_interaction_banks_companies,
-                                  bank, company, weight)
+                                  bank,
+                                  company,
+                                  year_2016,
+                                  year_2017,
+                                  year_2018,
+                                  year_2019,
+                                  year_2020,
+                                  year_2021,
+                                  year_2022,
+                                  total)
     ### Carbon Bombs and Country relationship
     carbonbombs_informations = pd.read_csv(
         "./data_cleaned/carbon_bombs_informations.csv")
     filtered_columns = ['Carbon_bomb_name_source_CB','Country_source_CB']
     carbonbombs_countries = carbonbombs_informations[filtered_columns]
     carbonbombs_countries.columns = ["Carbon_bomb","Country"]
+    carbonbombs_countries.to_csv(
+        "./data_neo4j/connexion_carbonbombs_country.csv",
+        encoding='utf-8-sig',
+        index=False)
     query_cb_country = '''
         MATCH (cb:Carbon_bomb {Name: $carbon_bomb})
         MATCH (c:Country {Name: $country})
-        MERGE (cb)-[:IS_LOCATED {weight: $weight}]->(c)
+        MERGE (cb)-[:IS_LOCATED]->(c)
     '''
-    def create_interaction_cb_countries(tx, cb, country, weight):
-        tx.run(query_cb_country, carbon_bomb = cb, country = country, weight = 1)
+    def create_interaction_cb_countries(tx, cb, country):
+        tx.run(query_cb_country, carbon_bomb = cb, country = country)
     with driver.session(database="neo4j") as session:
         for _, row in carbonbombs_countries.iterrows():
             carbon_bomb = row['Carbon_bomb']
             country = row['Country']
-            weight = 1
             session.execute_write(create_interaction_cb_countries,
-                                  carbon_bomb, country, weight)
+                                  carbon_bomb, country)
     
 def update_neo4j():
     carbon_bombs, companies, banks, countries = update_csv_nodes_neo4j()
-    driver = GraphDatabase.driver(NEO4J_URI, auth=basic_auth(NEO4J_USERNAME, NEO4J_PASSWORD))
+    driver = GraphDatabase.driver(
+        NEO4J_URI,
+        auth=basic_auth(NEO4J_USERNAME, NEO4J_PASSWORD))
     # Define dict to iterate over three types node creation
     dict_nodes = {
         "Carbon_bomb":carbon_bombs,
