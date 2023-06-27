@@ -13,46 +13,46 @@ from credentials import NEO4J_URI, NEO4J_USERNAME, NEO4J_PASSWORD
 def load_renamed_columns():
     # create a mapping dictionary for carbon bombs columns
     carbon_bombs_new_column = {
-        'New_project_source_CB': 'New_project',
-        'Carbon_bomb_name_source_CB': 'Name',
-        'Country_source_CB': 'Country',
-        'Potential_GtCO2_source_CB':'Potential_GTCO2',
-        'Fuel_type_source_CB':'Fuel_type',
-        'GEM_id_source_GEM':'ID',
-        'GEM_url_source_GEM':'GEM_source',
-        'Latitude':'Latitude',
-        'Longitude':'Longitude',
-        'Latitude_longitude_operator_source':'SourceForLatLongAndOperator',
-        'Operators_source_GEM':'Operators',
-        'Parent_company_source_GEM':'Parent_company',
-        'Multiple_unit_concerned_source_GEM':'Multiple_unit',
-        'Suppliers_source_chatGPT':'Suppliers',
-        'Insurers_source_chatGPT':'Insurers',
-        'Subcontractors_source_chatGPT':'Subcontractors',
+        'New_project_source_CB': 'new_project',
+        'Carbon_bomb_name_source_CB': 'name',
+        'Country_source_CB': 'country',
+        'Potential_GtCO2_source_CB':'potential_gtco2',
+        'Fuel_type_source_CB':'fuel_type',
+        'GEM_id_source_GEM':'id',
+        'GEM_url_source_GEM':'gem_source',
+        'Latitude':'latitude',
+        'Longitude':'longitude',
+        'Latitude_longitude_operator_source':'source_for_lat_long_operator',
+        'Operators_source_GEM':'operators',
+        'Parent_company_source_GEM':'parent_company',
+        'Multiple_unit_concerned_source_GEM':'multiple_unit',
+        'Suppliers_source_chatGPT':'suppliers',
+        'Insurers_source_chatGPT':'insurers',
+        'Subcontractors_source_chatGPT':'subcontractors',
     }
     banks_new_column = {
-        'Bank Name':'Name',
-        'Bank Website':'Website',
-        'Headquarters country':'Headquarters_country',
-        'Headquarters address':'Headquarters_address',
-        'CEO Name':'CEO_name',
-        'Board description':'Board',
-        'Supervisor Name':'Supervisor',
-        'Supervisor Website':'Supervisor_Website',
-        'Shareholder structure source':'Shareholder_source',
-        'Source BankTrack':'Source',
-        'Latitude':'Latitude',
-        'Longitude':'Longitude',
+        'Bank Name':'name',
+        'Bank Website':'website',
+        'Headquarters country':'headquarters_country',
+        'Headquarters address':'headquarters_address',
+        'CEO Name':'ceo_name',
+        'Board description':'board',
+        'Supervisor Name':'supervisor',
+        'Supervisor Website':'supervisor_website',
+        'Shareholder structure source':'shareholder_source',
+        'Source BankTrack':'source',
+        'Latitude':'latitude',
+        'Longitude':'longitude',
     }
     companies_new_column = {
-        'Company_name':'Name',
-        'Address_headquarters_source_chatGPT':'Headquarters_address',
-        'Latitude':'Latitude',
-        'Longitude':'Longitude',
-        'Carbon_bomb_connected':'Carbon_bomb_connected'
+        'Company_name':'name',
+        'Address_headquarters_source_chatGPT':'headquarters_address',
+        'Latitude':'latitude',
+        'Longitude':'longitude',
+        'Carbon_bomb_connected':'carbon_bomb_connected'
     }
     country_new_column = {
-        'Country_source_CB':'Name',
+        'Country_source_CB':'name',
     }
     return (
         carbon_bombs_new_column,
@@ -134,8 +134,8 @@ def write_connexions(driver):
         encoding='utf-8-sig',
         index=False)
     query_cb_company = '''
-        MATCH (cb:carbon_bomb {Name: $carbon_bomb})
-        MATCH (c:company {Name: $company})
+        MATCH (cb:carbon_bomb {name: $carbon_bomb})
+        MATCH (c:company {name: $company})
         MERGE (c)-[:OPERATES {weight: $weight}]->(cb)
     '''
     def create_interaction_cb_companies(tx,cb, company, weight):
@@ -156,10 +156,10 @@ def write_connexions(driver):
         encoding='utf-8-sig',
         index=False)
     query_bank_company = '''
-        MATCH (c:company {Name: $company})
-        MATCH (b:bank {Name: $bank})
+        MATCH (c:company {name: $company})
+        MATCH (b:bank {name: $bank})
         MERGE (b)-[:FINANCES {
-            Total: $total,
+            total: $total,
             year_2016: $year_2016,
             year_2017: $year_2017,
             year_2018: $year_2018,
@@ -219,8 +219,8 @@ def write_connexions(driver):
         encoding='utf-8-sig',
         index=False)
     query_cb_country = '''
-        MATCH (cb:carbon_bomb {Name: $carbon_bomb})
-        MATCH (c:country {Name: $country})
+        MATCH (cb:carbon_bomb {name: $carbon_bomb})
+        MATCH (c:country {name: $country})
         MERGE (cb)-[:IS_LOCATED]->(c)
     '''
     def create_interaction_cb_countries(tx, cb, country):
