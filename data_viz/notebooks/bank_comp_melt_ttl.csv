@@ -1,0 +1,850 @@
+,Bank,Company,Grand Total,Amount
+0,Agricultural Bank of China,State Grid Corp of China,Grand Total,9679477550.00612
+1,Agricultural Bank of China,China National Petroleum Corporation (CNPC),Grand Total,10405324300.0
+2,Agricultural Bank of China,China Huadian Corp Ltd,Grand Total,4886421111.494894
+3,Agricultural Bank of China,Beijing Energy Holding Co Ltd,Grand Total,1201041613.19675
+4,Agricultural Bank of China,Shandong Energy Co Ltd,Grand Total,2036359206.06847
+5,Agricultural Bank of China,China Energy Investment Corp Ltd,Grand Total,3045828706.92936
+6,Agricultural Bank of China,China Huaneng Group Co Ltd,Grand Total,1864435662.129137
+7,Agricultural Bank of China,Jinneng Holding Group Co Ltd,Grand Total,1488244834.182292
+8,Agricultural Bank of China,China Datang Corp,Grand Total,932240302.1743696
+9,Agricultural Bank of China,Shenergy Group Co Ltd,Grand Total,197074281.6460693
+10,Agricultural Bank of China,Guangdong Hengjian Investment Holding Co Ltd,Grand Total,1030151862.53
+11,Agricultural Bank of China,Hebei Construction & Investment Group Co Ltd,Grand Total,329412531.0233705
+12,Agricultural Bank of China,Huayang New Material Technology Group Co Ltd,Grand Total,558957500.0
+13,Agricultural Bank of China,China ZhenHua Oil Co Ltd,Grand Total,247660875.0
+14,Agricultural Bank of China,Inner Mongolia Mengtai Group Co Ltd,Grand Total,43558611.5
+15,Agricultural Bank of China,Inpex Corp,Grand Total,455769230.0
+16,Agricultural Bank of China,Shaanxi Yanchang Petroleum Group Co Ltd,Grand Total,1713916589.396029
+17,Agricultural Bank of China,Jizhong Energy Group Co Ltd,Grand Total,188894048.16
+18,Agricultural Bank of China,Shougang Group Co Ltd,Grand Total,1622303.169886687
+19,Agricultural Bank of China,Lu'an Chemical Group Co Ltd,Grand Total,185950879.8
+20,Agricultural Bank of China,Zhejiang Provincial Energy Group Co Ltd,Grand Total,645444945.0
+21,Agricultural Bank of China,Hubei Yihua Chemical Industry Co Ltd,Grand Total,10218036.92
+22,ANZ,Inpex Corp,Grand Total,3612244230.0
+23,ANZ,Glencore PLC,Grand Total,424747395.3309328
+24,ANZ,BHP Group Ltd,Grand Total,60357142.88
+25,ANZ,Exxon Mobil Corp,Grand Total,400000000.0
+26,ANZ,Zhejiang Provincial Energy Group Co Ltd,Grand Total,50000000.0
+27,ANZ,Shell PLC,Grand Total,388000000.0
+28,ANZ,AGL Energy Ltd,Grand Total,116841312.6855469
+29,ANZ,State Grid Corp of China,Grand Total,358913613.4298513
+30,ANZ,TotalEnergies SE,Grand Total,341250503.2317707
+31,Bank of America,ConocoPhillips,Grand Total,4774896124.0
+32,Bank of America,Inpex Corp,Grand Total,110000000.0
+33,Bank of America,Delek Group Ltd,Grand Total,59741850.0
+34,Bank of America,Glencore PLC,Grand Total,673735352.8661208
+35,Bank of America,POSCO Holdings Inc,Grand Total,182600240.5519161
+36,Bank of America,Adani Group,Grand Total,184945295.8842909
+37,Bank of America,QatarEnergy,Grand Total,944444445.0
+38,Bank of America,Chevron Corp,Grand Total,4659453457.0
+39,Bank of America,Petróleo Brasileiro SA – Petrobras,Grand Total,4828527722.090447
+40,Bank of America,China Huaneng Group Co Ltd,Grand Total,165000000.0
+41,Bank of America,China National Petroleum Corporation (CNPC),Grand Total,133333333.0
+42,Bank of America,State Grid Corp of China,Grand Total,219741135.763945
+43,Bank of America,Petróleos Mexicanos (PEMEX),Grand Total,5924145989.2314
+44,Bank of America,Evraz PLC,Grand Total,334268.2063579558
+45,Bank of America,Repsol SA,Grand Total,413300504.5188018
+46,Bank of America,ITOCHU Corp,Grand Total,44166668.0
+47,Bank of America,Equinor ASA,Grand Total,2450420275.721993
+48,Bank of America,Peabody Energy Corp,Grand Total,108000000.0
+49,Bank of America,PPL Corp,Grand Total,1474126534.491241
+50,Bank of America,Mitsubishi Corp,Grand Total,20000000.0
+51,Bank of America,BHP Group Ltd,Grand Total,60357142.88
+52,Bank of America,Exxon Mobil Corp,Grand Total,15330564109.0
+53,Bank of America,Shell PLC,Grand Total,1742590001.0
+54,Bank of America,Teck Resources Ltd,Grand Total,53822916.83890001
+55,Bank of America,TotalEnergies SE,Grand Total,2085119899.98131
+56,Bank of America,Occidental Petroleum Corp,Grand Total,12015796069.47664
+57,Bank of China,State Grid Corp of China,Grand Total,5796964864.791008
+58,Bank of China,China Huaneng Group Co Ltd,Grand Total,4184287229.565833
+59,Bank of China,Petróleo Brasileiro SA – Petrobras,Grand Total,838692376.695231
+60,Bank of China,Pertamina Persero PT,Grand Total,325925926.0
+61,Bank of China,China Huadian Corp Ltd,Grand Total,4542689897.998722
+62,Bank of China,Jinneng Holding Group Co Ltd,Grand Total,2614619299.581139
+63,Bank of China,China National Petroleum Corporation (CNPC),Grand Total,10087671912.0
+64,Bank of China,Hebei Construction & Investment Group Co Ltd,Grand Total,209281384.4579719
+65,Bank of China,China Datang Corp,Grand Total,984330561.144938
+66,Bank of China,China Energy Investment Corp Ltd,Grand Total,2961799862.714994
+67,Bank of China,Shandong Energy Co Ltd,Grand Total,2781566595.550951
+68,Bank of China,Inpex Corp,Grand Total,349769230.0
+69,Bank of China,Lu'an Chemical Group Co Ltd,Grand Total,588814993.65
+70,Bank of China,Shaanxi Investment Group Co Ltd,Grand Total,242171850.0
+71,Bank of China,Guangdong Hengjian Investment Holding Co Ltd,Grand Total,643719754.4559786
+72,Bank of China,BHP Group Ltd,Grand Total,60357142.88
+73,Bank of China,Gazprom PJSC,Grand Total,258649375.0
+74,Bank of China,Guangdong Hanjian Investment Co Ltd,Grand Total,144016932.4647243
+75,Bank of China,Shaanxi Yulin Energy Group Co Ltd,Grand Total,73900396.79902755
+76,Bank of China,Shenergy Group Co Ltd,Grand Total,186162853.5786353
+77,Bank of China,Huayang New Material Technology Group Co Ltd,Grand Total,819980100.0
+78,Bank of China,Inner Mongolia Yitai Investment Co Ltd,Grand Total,386218500.0
+79,Bank of China,Shenmu City State-Owned Assets Operation Co,Grand Total,177088.944565824
+80,Bank of China,China COSCO Shipping Corp Ltd,Grand Total,2878203.407241891
+81,Bank of China,Beijing Energy Holding Co Ltd,Grand Total,242834533.9393962
+82,Bank of China,Jizhong Energy Group Co Ltd,Grand Total,3084440932.78
+83,Bank of China,Kailuan Group Ltd Liability Corp,Grand Total,166941900.0
+84,Bank of China,Shaanxi Coal and Chemical Industry Group Co Ltd,Grand Total,2905042812.968891
+85,Bank of China,Shaanxi Yanchang Petroleum Group Co Ltd,Grand Total,1221082595.976914
+86,Bank of China,Shanxi Coking Coal Group Co Ltd,Grand Total,1409784932.525458
+87,Bank of China,Shell PLC,Grand Total,388000000.0
+88,Bank of China,China ZhenHua Oil Co Ltd,Grand Total,114730875.0
+89,Bank of China,Tianjin Energy Investment Co Ltd,Grand Total,38666372.25
+90,Bank of China,Xin Jiang Guang Hui Industry Investment Group Co Ltd,Grand Total,11665187.22145962
+91,Bank of China,China Coal Xinji Energy Co Ltd,Grand Total,72789500.0
+92,Bank of China,Zhejiang Provincial Energy Group Co Ltd,Grand Total,545233230.0
+93,Bank of Communications,State Grid Corp of China,Grand Total,7031570250.0
+94,Bank of Communications,China Huadian Corp Ltd,Grand Total,1651786926.383177
+95,Bank of Communications,Shaanxi Yanchang Petroleum Group Co Ltd,Grand Total,2767042275.474897
+96,Bank of Communications,China Huaneng Group Co Ltd,Grand Total,579329825.5521103
+97,Bank of Communications,Shaanxi Coal and Chemical Industry Group Co Ltd,Grand Total,1316734698.49495
+98,Bank of Communications,Shenergy Group Co Ltd,Grand Total,1032923980.680304
+99,Bank of Communications,Shandong Energy Co Ltd,Grand Total,1031805522.799869
+100,Bank of Communications,Inpex Corp,Grand Total,70000000.0
+101,Bank of Communications,Shaanxi Investment Group Co Ltd,Grand Total,339059400.0
+102,Bank of Communications,Lu'an Chemical Group Co Ltd,Grand Total,290287362.3
+103,Bank of Communications,Kailuan Group Ltd Liability Corp,Grand Total,201553131.85
+104,Bank of Communications,China Energy Investment Corp Ltd,Grand Total,923220212.2668704
+105,Bank of Communications,Guangdong Hengjian Investment Holding Co Ltd,Grand Total,4119356.83899843
+106,Bank of Communications,Beijing Energy Holding Co Ltd,Grand Total,214348602.2244015
+107,Bank of Communications,Inner Mongolia Yitai Investment Co Ltd,Grand Total,151888000.0
+108,Bank of Communications,Jizhong Energy Group Co Ltd,Grand Total,2640935679.5
+109,Bank of Communications,Huayang New Material Technology Group Co Ltd,Grand Total,1067798875.0
+110,Bank of Communications,Hebei Construction & Investment Group Co Ltd,Grand Total,134627625.0
+111,Bank of Communications,Zhejiang Provincial Energy Group Co Ltd,Grand Total,174767270.0
+112,Bank of Communications,Jinneng Holding Group Co Ltd,Grand Total,2025139491.767491
+113,Bank of Communications,China National Petroleum Corporation (CNPC),Grand Total,1121871000.0
+114,Bank of Montreal,Glencore PLC,Grand Total,564006689.8483073
+115,Bank of Montreal,PPL Corp,Grand Total,67499999.73
+116,Bank of Montreal,Arch Resources Inc,Grand Total,128178572.0
+117,Bank of Montreal,Teck Resources Ltd,Grand Total,524019916.8389001
+118,Bank of Montreal,Peabody Energy Corp,Grand Total,275500000.0
+119,Bank of Montreal,Harbour Energy PLC,Grand Total,1125000000.0
+120,Bank of Montreal,ConocoPhillips,Grand Total,228571429.0
+121,Bank of Montreal,Chevron Corp,Grand Total,300000000.0
+122,Barclays,TotalEnergies SE,Grand Total,3266666388.531565
+123,Barclays,ConocoPhillips,Grand Total,1565502105.0
+124,Barclays,Glencore PLC,Grand Total,617933284.5599704
+125,Barclays,Occidental Petroleum Corp,Grand Total,4034682261.346275
+126,Barclays,Petróleos Mexicanos (PEMEX),Grand Total,1441435571.840682
+127,Barclays,Equinor ASA,Grand Total,2450090275.721993
+128,Barclays,NTPC Ltd,Grand Total,333014276.76
+129,Barclays,Evraz PLC,Grand Total,198969.1696552875
+130,Barclays,Exxon Mobil Corp,Grand Total,12997230776.0
+131,Barclays,Shell PLC,Grand Total,6736049182.5
+132,Barclays,Chevron Corp,Grand Total,3576120124.0
+133,Barclays,Harbour Energy PLC,Grand Total,38461538.0
+134,Barclays,PPL Corp,Grand Total,1843792732.262933
+135,Barclays,Repsol SA,Grand Total,370786330.7839388
+136,Barclays,BHP Group Ltd,Grand Total,60357142.88
+137,Barclays,Adani Group,Grand Total,640765354.6669874
+138,Barclays,Teck Resources Ltd,Grand Total,53822916.83890001
+139,BBVA,Petróleos Mexicanos (PEMEX),Grand Total,5041212288.918168
+140,BBVA,Glencore PLC,Grand Total,542201224.3097651
+141,BBVA,Occidental Petroleum Corp,Grand Total,161207213.8387928
+142,BBVA,Repsol SA,Grand Total,799400504.5188018
+143,BBVA,China Huadian Corp Ltd,Grand Total,45454545.0
+144,BBVA,TotalEnergies SE,Grand Total,581173181.4049288
+145,BNP Paribas,TotalEnergies SE,Grand Total,8862372921.736874
+146,BNP Paribas,Inpex Corp,Grand Total,3197244230.0
+147,BNP Paribas,Pertamina Persero PT,Grand Total,1164880952.0
+148,BNP Paribas,Glencore PLC,Grand Total,573399948.0687791
+149,BNP Paribas,Equinor ASA,Grand Total,1200090275.721994
+150,BNP Paribas,Exxon Mobil Corp,Grand Total,636120000.0
+151,BNP Paribas,Petróleos Mexicanos (PEMEX),Grand Total,3571359179.721732
+152,BNP Paribas,POSCO Holdings Inc,Grand Total,182600240.5519161
+153,BNP Paribas,Repsol SA,Grand Total,467779504.5188018
+154,BNP Paribas,Delek Group Ltd,Grand Total,327878072.878125
+155,BNP Paribas,Chevron Corp,Grand Total,1221954123.0
+156,BNP Paribas,Shell PLC,Grand Total,8119811437.382341
+157,BNP Paribas,Harbour Energy PLC,Grand Total,1163461538.0
+158,BNP Paribas,Indonesia Asahan Aluminium Persero PT,Grand Total,578451830.9557346
+159,BNP Paribas,Petróleo Brasileiro SA – Petrobras,Grand Total,2820234646.721015
+160,BNP Paribas,ITOCHU Corp,Grand Total,44166668.0
+161,BNP Paribas,PPL Corp,Grand Total,81000000.0
+162,BNP Paribas,Adani Group,Grand Total,49809160.30534352
+163,BNP Paribas,Kuwait Petroleum Corp,Grand Total,142857143.0
+164,BNP Paribas,Mitsubishi Corp,Grand Total,22675740.0
+165,BNP Paribas,AGL Energy Ltd,Grand Total,116841312.6855469
+166,BNP Paribas,BHP Group Ltd,Grand Total,60357142.88
+167,BPCE/Natixis,TotalEnergies SE,Grand Total,859673429.0577798
+168,BPCE/Natixis,Delek Group Ltd,Grand Total,199849492.04
+169,BPCE/Natixis,Shell PLC,Grand Total,821608000.0
+170,BPCE/Natixis,Petróleos Mexicanos (PEMEX),Grand Total,718084000.0
+171,BPCE/Natixis,Repsol SA,Grand Total,329647809.766093
+172,BPCE/Natixis,Gazprom PJSC,Grand Total,200000000.0
+173,BPCE/Natixis,Glencore PLC,Grand Total,22666666.61
+174,BPCE/Natixis,Harbour Energy PLC,Grand Total,38461538.0
+175,CaixaBank,Inpex Corp,Grand Total,43000000.0
+176,CaixaBank,Repsol SA,Grand Total,369641870.7922244
+177,China CITIC Bank,Jinneng Holding Group Co Ltd,Grand Total,5883659021.640965
+178,China CITIC Bank,China Huaneng Group Co Ltd,Grand Total,2770361183.988577
+179,China CITIC Bank,Beijing Energy Holding Co Ltd,Grand Total,990842211.6320438
+180,China CITIC Bank,China Datang Corp,Grand Total,957787417.690982
+181,China CITIC Bank,China Huadian Corp Ltd,Grand Total,8638466388.732302
+182,China CITIC Bank,Shaanxi Coal and Chemical Industry Group Co Ltd,Grand Total,538583630.0664495
+183,China CITIC Bank,Shandong Energy Co Ltd,Grand Total,789915858.3536717
+184,China CITIC Bank,Shaanxi Yanchang Petroleum Group Co Ltd,Grand Total,863846794.0473204
+185,China CITIC Bank,Jizhong Energy Group Co Ltd,Grand Total,1020178131.0
+186,China CITIC Bank,Lu'an Chemical Group Co Ltd,Grand Total,550676715.72
+187,China CITIC Bank,Shaanxi Investment Group Co Ltd,Grand Total,480327450.0
+188,China CITIC Bank,Guangdong Hengjian Investment Holding Co Ltd,Grand Total,175358460.8724661
+189,China CITIC Bank,Shaanxi Yulin Energy Group Co Ltd,Grand Total,112672954.8038898
+190,China CITIC Bank,China Energy Investment Corp Ltd,Grand Total,1742086902.608001
+191,China CITIC Bank,Kailuan Group Ltd Liability Corp,Grand Total,137487180.0
+192,China CITIC Bank,Shanxi Coking Coal Group Co Ltd,Grand Total,36238149.06925625
+193,China CITIC Bank,Huayang New Material Technology Group Co Ltd,Grand Total,55787625.0
+194,China CITIC Bank,Zhejiang Provincial Energy Group Co Ltd,Grand Total,175777110.0
+195,China CITIC Bank,China National Petroleum Corporation (CNPC),Grand Total,2160796278.0
+196,China CITIC Bank,Hebei Construction & Investment Group Co Ltd,Grand Total,225961665.4813423
+197,China CITIC Bank,State Grid Corp of China,Grand Total,1556681625.0
+198,China Construction Bank,China National Petroleum Corporation (CNPC),Grand Total,5232419133.0
+199,China Construction Bank,China Huadian Corp Ltd,Grand Total,5012621799.578665
+200,China Construction Bank,China Huaneng Group Co Ltd,Grand Total,2297434005.046359
+201,China Construction Bank,Jinneng Holding Group Co Ltd,Grand Total,5127415119.335449
+202,China Construction Bank,China Datang Corp,Grand Total,1130293870.293512
+203,China Construction Bank,Huayang New Material Technology Group Co Ltd,Grand Total,1877653850.0
+204,China Construction Bank,State Grid Corp of China,Grand Total,4972237158.558748
+205,China Construction Bank,Guangdong Hengjian Investment Holding Co Ltd,Grand Total,716149494.9525303
+206,China Construction Bank,Shaanxi Coal and Chemical Industry Group Co Ltd,Grand Total,1634957039.66299
+207,China Construction Bank,Shaanxi Yulin Energy Group Co Ltd,Grand Total,112672954.8038898
+208,China Construction Bank,China Energy Investment Corp Ltd,Grand Total,4000340675.144654
+209,China Construction Bank,Shandong Energy Co Ltd,Grand Total,727339522.1207619
+210,China Construction Bank,Hebei Construction & Investment Group Co Ltd,Grand Total,157802166.6319315
+211,China Construction Bank,Shaanxi Yanchang Petroleum Group Co Ltd,Grand Total,1563017998.495001
+212,China Construction Bank,Anhui Province Wanbei Coal-Electricity Group Co Ltd,Grand Total,16837705.0
+213,China Construction Bank,Shaanxi Investment Group Co Ltd,Grand Total,69246495.0
+214,China Construction Bank,Inpex Corp,Grand Total,230769230.0
+215,China Construction Bank,BHP Group Ltd,Grand Total,60357142.88
+216,China Construction Bank,China ZhenHua Oil Co Ltd,Grand Total,66888450.0
+217,China Construction Bank,Jizhong Energy Group Co Ltd,Grand Total,2475091553.62
+218,China Construction Bank,Elion Resources Group Ltd,Grand Total,111548000.0
+219,China Construction Bank,Shenergy Group Co Ltd,Grand Total,300592374.4298698
+220,China Construction Bank,Kailuan Group Ltd Liability Corp,Grand Total,179116800.0
+221,China Construction Bank,Lu'an Chemical Group Co Ltd,Grand Total,237180978.45
+222,China Construction Bank,Beijing Energy Holding Co Ltd,Grand Total,186247500.0
+223,China Construction Bank,Zhejiang Provincial Energy Group Co Ltd,Grand Total,1297567175.0
+224,China Everbright Bank,Jinneng Holding Group Co Ltd,Grand Total,7991117527.761551
+225,China Everbright Bank,State Grid Corp of China,Grand Total,4211464500.0
+226,China Everbright Bank,Huayang New Material Technology Group Co Ltd,Grand Total,3040587500.0
+227,China Everbright Bank,China Energy Investment Corp Ltd,Grand Total,416942664.398119
+228,China Everbright Bank,China Datang Corp,Grand Total,1438893994.016519
+229,China Everbright Bank,Beijing Energy Holding Co Ltd,Grand Total,1439895373.539676
+230,China Everbright Bank,Jizhong Energy Group Co Ltd,Grand Total,1296301296.0
+231,China Everbright Bank,China Huaneng Group Co Ltd,Grand Total,493962984.9152269
+232,China Everbright Bank,Lu'an Chemical Group Co Ltd,Grand Total,726783540.6
+233,China Everbright Bank,China Huadian Corp Ltd,Grand Total,3779865242.07832
+234,China Everbright Bank,Zhejiang Provincial Energy Group Co Ltd,Grand Total,45454545.0
+235,China Everbright Bank,Shandong Energy Co Ltd,Grand Total,262357718.7047069
+236,China Everbright Bank,Inner Mongolia Yitai Investment Co Ltd,Grand Total,291786000.0
+237,China Everbright Bank,Xin Jiang Guang Hui Industry Investment Group Co Ltd,Grand Total,16961745.67514458
+238,China Everbright Bank,Shaanxi Coal and Chemical Industry Group Co Ltd,Grand Total,46568672.07170913
+239,China Everbright Bank,Hebei Construction & Investment Group Co Ltd,Grand Total,39070250.0
+240,China Everbright Bank,Shaanxi Investment Group Co Ltd,Grand Total,34848225.0
+241,China Everbright Bank,Anhui Province Wanbei Coal-Electricity Group Co Ltd,Grand Total,35347250.0
+242,China Everbright Bank,China National Petroleum Corporation (CNPC),Grand Total,1419870000.0
+243,China Merchants Bank,China Huaneng Group Co Ltd,Grand Total,1910964621.226545
+244,China Merchants Bank,China Huadian Corp Ltd,Grand Total,5524667004.797451
+245,China Merchants Bank,Shenergy Group Co Ltd,Grand Total,574246044.019267
+246,China Merchants Bank,State Grid Corp of China,Grand Total,886284000.0
+247,China Merchants Bank,Beijing Energy Holding Co Ltd,Grand Total,2382553454.521473
+248,China Merchants Bank,Shandong Energy Co Ltd,Grand Total,769252213.2525488
+249,China Merchants Bank,Shaanxi Yanchang Petroleum Group Co Ltd,Grand Total,3745733470.044609
+250,China Merchants Bank,China Energy Investment Corp Ltd,Grand Total,1762001697.601762
+251,China Merchants Bank,Shaanxi Coal and Chemical Industry Group Co Ltd,Grand Total,687075056.2137834
+252,China Merchants Bank,China Datang Corp,Grand Total,2864811320.271606
+253,China Merchants Bank,Shaanxi Investment Group Co Ltd,Grand Total,230941200.0
+254,China Merchants Bank,Inner Mongolia Yitai Investment Co Ltd,Grand Total,43656900.0
+255,China Merchants Bank,Hebei Construction & Investment Group Co Ltd,Grand Total,34652500.0
+256,China Merchants Bank,Kailuan Group Ltd Liability Corp,Grand Total,29091279.7
+257,China Merchants Bank,Lu'an Chemical Group Co Ltd,Grand Total,868983719.4
+258,China Merchants Bank,Guangdong Hengjian Investment Holding Co Ltd,Grand Total,399981882.7710784
+259,China Merchants Bank,Huayang New Material Technology Group Co Ltd,Grand Total,72093500.0
+260,China Merchants Bank,Hubei Yihua Chemical Industry Co Ltd,Grand Total,10218036.92
+261,China Merchants Bank,Zhejiang Provincial Energy Group Co Ltd,Grand Total,340577145.0
+262,China Merchants Bank,China National Petroleum Corporation (CNPC),Grand Total,71405278.0
+263,China Merchants Bank,Jinneng Holding Group Co Ltd,Grand Total,3558116677.69351
+264,China Merchants Bank,Jizhong Energy Group Co Ltd,Grand Total,126396465.0
+265,China Merchants Bank,China ZhenHua Oil Co Ltd,Grand Total,66888450.0
+266,China Merchants Bank,Xin Jiang Guang Hui Industry Investment Group Co Ltd,Grand Total,340956107.9369203
+267,China Minsheng Bank,Huayang New Material Technology Group Co Ltd,Grand Total,884315125.0
+268,China Minsheng Bank,State Grid Corp of China,Grand Total,2016220750.0
+269,China Minsheng Bank,China Datang Corp,Grand Total,227825045.1738193
+270,China Minsheng Bank,Jinneng Holding Group Co Ltd,Grand Total,1378719132.671064
+271,China Minsheng Bank,Shaanxi Investment Group Co Ltd,Grand Total,43113300.0
+272,China Minsheng Bank,Lu'an Chemical Group Co Ltd,Grand Total,248984025.6
+273,China Minsheng Bank,Xin Jiang Guang Hui Industry Investment Group Co Ltd,Grand Total,23424183.58942033
+274,China Minsheng Bank,Hebei Construction & Investment Group Co Ltd,Grand Total,19603875.0
+275,China Minsheng Bank,China Huadian Corp Ltd,Grand Total,404159788.9135042
+276,China Minsheng Bank,China Huaneng Group Co Ltd,Grand Total,383570344.6557182
+277,China Minsheng Bank,Shaanxi Coal and Chemical Industry Group Co Ltd,Grand Total,426501899.9148909
+278,China Minsheng Bank,China National Petroleum Corporation (CNPC),Grand Total,13693685000.0
+279,China Minsheng Bank,Beijing Energy Holding Co Ltd,Grand Total,477050069.7031533
+280,China Minsheng Bank,Jizhong Energy Group Co Ltd,Grand Total,126731550.0
+281,China Minsheng Bank,Shandong Energy Co Ltd,Grand Total,352711335.2136236
+282,China Minsheng Bank,Shanxi Coking Coal Group Co Ltd,Grand Total,374238888.1835929
+283,China Minsheng Bank,China Coal Xinji Energy Co Ltd,Grand Total,72789500.0
+284,China Minsheng Bank,Zhejiang Provincial Energy Group Co Ltd,Grand Total,45454545.0
+285,China Minsheng Bank,Guangdong Hengjian Investment Holding Co Ltd,Grand Total,448421485.622509
+286,China Minsheng Bank,Kailuan Group Ltd Liability Corp,Grand Total,8537760.0
+287,CIBC,Glencore PLC,Grand Total,39741920.0
+288,CIBC,Equinor ASA,Grand Total,298899358.7219936
+289,CIBC,Teck Resources Ltd,Grand Total,4239092916.838901
+290,CIBC,BHP Group Ltd,Grand Total,60357142.88
+291,CIBC,PPL Corp,Grand Total,243000000.0
+292,Citi,Petróleos Mexicanos (PEMEX),Grand Total,7139733671.468018
+293,Citi,ConocoPhillips,Grand Total,2388636361.0
+294,Citi,Inpex Corp,Grand Total,545000000.0
+295,Citi,Hess Corporation,Grand Total,714285714.0
+296,Citi,TotalEnergies SE,Grand Total,2765002062.522599
+297,Citi,China Datang Corp,Grand Total,89710221.46000001
+298,Citi,Glencore PLC,Grand Total,665547682.7802929
+299,Citi,Shandong Energy Co Ltd,Grand Total,63144722.32786885
+300,Citi,Shenergy Group Co Ltd,Grand Total,35271222.85406535
+301,Citi,NTPC Ltd,Grand Total,496794823.5
+302,Citi,Alliance Resource Partners LP,Grand Total,348920833.0
+303,Citi,POSCO Holdings Inc,Grand Total,242899370.3687962
+304,Citi,Equinor ASA,Grand Total,1798899358.721994
+305,Citi,Bulgarian Energy Holding EAD,Grand Total,239247430.0
+306,Citi,Peabody Energy Corp,Grand Total,800000000.0
+307,Citi,Evraz PLC,Grand Total,677613.6043421046
+308,Citi,Petróleo Brasileiro SA – Petrobras,Grand Total,5648171937.234013
+309,Citi,Exxaro Resources Ltd,Grand Total,307276057.6375915
+310,Citi,Exxon Mobil Corp,Grand Total,15330564109.0
+311,Citi,Shell PLC,Grand Total,2771333333.0
+312,Citi,Occidental Petroleum Corp,Grand Total,11364724641.47664
+313,Citi,PPL Corp,Grand Total,1618058695.837004
+314,Citi,BHP Group Ltd,Grand Total,60357142.88
+315,Citi,Teck Resources Ltd,Grand Total,53822916.83890001
+316,Citi,Indian Oil Corp Ltd,Grand Total,178200000.0
+317,Citi,Xin Jiang Guang Hui Industry Investment Group Co Ltd,Grand Total,6802603.945534943
+318,Citi,Indika Energy Tbk PT,Grand Total,414968898.267
+319,Citi,Indonesia Asahan Aluminium Persero PT,Grand Total,510335048.8318794
+320,Citi,ITOCHU Corp,Grand Total,704384393.4
+321,Citi,Jinneng Holding Group Co Ltd,Grand Total,37693744.47533107
+322,Citi,Pertamina Persero PT,Grand Total,1221547619.0
+323,Citi,Adani Group,Grand Total,229644804.1597555
+324,Citi,QatarEnergy,Grand Total,1744444445.0
+325,Citi,Kuwait Petroleum Corp,Grand Total,142857143.0
+326,Citi,Repsol SA,Grand Total,535756306.7386871
+327,Citi,Arch Resources Inc,Grand Total,224928572.0
+328,Citi,Chevron Corp,Grand Total,5449329457.0
+329,Citi,State Grid Corp of China,Grand Total,360511278.1752198
+330,Citi,Mitsubishi Corp,Grand Total,333078652.7024406
+331,Citi,China Huadian Corp Ltd,Grand Total,36983433.43777198
+332,Citi,China Huaneng Group Co Ltd,Grand Total,148888656.219359
+333,Citi,China National Petroleum Corporation (CNPC),Grand Total,133333333.0
+334,Citi,Yangcheng County Yangtai Group Industrial Co Ltd,Grand Total,39513103.5816835
+335,Commerzbank,Glencore PLC,Grand Total,555194497.0370378
+336,Commerzbank,Repsol SA,Grand Total,113365880.5544933
+337,Commerzbank,Shell PLC,Grand Total,47690190.0
+338,Commerzbank,TotalEnergies SE,Grand Total,118360000.0
+339,Commerzbank,Gazprom PJSC,Grand Total,404654672.6379588
+340,Commerzbank,Inpex Corp,Grand Total,230769230.0
+341,Commerzbank,Mitsubishi Corp,Grand Total,22675740.0
+342,Commonwealth Bank,Glencore PLC,Grand Total,464489315.3309328
+343,Commonwealth Bank,State Grid Corp of China,Grand Total,196429742.5471841
+344,Commonwealth Bank,Inpex Corp,Grand Total,1050875000.0
+345,Crédit Agricole,TotalEnergies SE,Grand Total,9457456016.163162
+346,Crédit Agricole,Inpex Corp,Grand Total,1886644230.0
+347,Crédit Agricole,Pertamina Persero PT,Grand Total,1139206348.0
+348,Crédit Agricole,Glencore PLC,Grand Total,622866454.2580662
+349,Crédit Agricole,Petróleo Brasileiro SA – Petrobras,Grand Total,2721729597.983349
+350,Crédit Agricole,ConocoPhillips,Grand Total,375000000.0
+351,Crédit Agricole,Shell PLC,Grand Total,388000000.0
+352,Crédit Agricole,Equinor ASA,Grand Total,298899358.7219936
+353,Crédit Agricole,Gazprom PJSC,Grand Total,945024645.218948
+354,Crédit Agricole,Petróleos Mexicanos (PEMEX),Grand Total,2694468590.77105
+355,Crédit Agricole,Harbour Energy PLC,Grand Total,38461538.0
+356,Crédit Agricole,POSCO Holdings Inc,Grand Total,42266681.32394297
+357,Crédit Agricole,Repsol SA,Grand Total,236966142.766093
+358,Crédit Agricole,ITOCHU Corp,Grand Total,44166668.0
+359,Crédit Agricole,BHP Group Ltd,Grand Total,60357142.88
+360,Crédit Agricole,State Grid Corp of China,Grand Total,38201956.46988373
+361,Crédit Agricole,China National Petroleum Corporation (CNPC),Grand Total,133333333.0
+362,Crédit Agricole,Kuwait Petroleum Corp,Grand Total,142857143.0
+363,Credit Suisse,ConocoPhillips,Grand Total,1865241364.0
+364,Credit Suisse,Glencore PLC,Grand Total,688763894.7875963
+365,Credit Suisse,China Huadian Corp Ltd,Grand Total,198917832.9366802
+366,Credit Suisse,China Huaneng Group Co Ltd,Grand Total,255785206.4830106
+367,Credit Suisse,Peabody Energy Corp,Grand Total,1303961680.0
+368,Credit Suisse,QatarEnergy,Grand Total,944444445.0
+369,Credit Suisse,Chevron Corp,Grand Total,112629612.0
+370,Credit Suisse,Arch Resources Inc,Grand Total,128178572.0
+371,Credit Suisse,Adani Group,Grand Total,168461960.7288068
+372,Credit Suisse,Petróleo Brasileiro SA – Petrobras,Grand Total,596266121.31
+373,Credit Suisse,PPL Corp,Grand Total,374625000.0
+374,Credit Suisse,Evraz PLC,Grand Total,319469.0975300091
+375,Credit Suisse,Gazprom PJSC,Grand Total,136103750.0
+376,Credit Suisse,Petróleos Mexicanos (PEMEX),Grand Total,91615500.0
+377,Credit Suisse,Repsol SA,Grand Total,113365880.5544933
+378,Credit Suisse,Shell PLC,Grand Total,388000000.0
+379,Credit Suisse,Titan Infra Energy PT,Grand Total,135000000.0
+380,Credit Suisse,TotalEnergies SE,Grand Total,1400156359.216577
+381,Credit Suisse,State Grid Corp of China,Grand Total,219741135.763945
+382,Credit Suisse,Huayang New Material Technology Group Co Ltd,Grand Total,217896969.945
+383,Deutsche Bank,TotalEnergies SE,Grand Total,2091275110.286798
+384,Deutsche Bank,Hebei Construction & Investment Group Co Ltd,Grand Total,239639209.9612024
+385,Deutsche Bank,Electricity Generating PCL,Grand Total,104003337.6094426
+386,Deutsche Bank,Jinneng Holding Group Co Ltd,Grand Total,271541958.3815905
+387,Deutsche Bank,Glencore PLC,Grand Total,715363786.9173045
+388,Deutsche Bank,Petróleos Mexicanos (PEMEX),Grand Total,2325263625.27
+389,Deutsche Bank,ConocoPhillips,Grand Total,375000000.0
+390,Deutsche Bank,QatarEnergy,Grand Total,1744444445.0
+391,Deutsche Bank,Delek Group Ltd,Grand Total,78066207.828125
+392,Deutsche Bank,Chevron Corp,Grand Total,32343750.0
+393,Deutsche Bank,Teck Resources Ltd,Grand Total,53822916.83890001
+394,Deutsche Bank,Occidental Petroleum Corp,Grand Total,428571428.0
+395,Deutsche Bank,Pertamina Persero PT,Grand Total,525000000.0
+396,Deutsche Bank,BHP Group Ltd,Grand Total,60357142.88
+397,Deutsche Bank,State Grid Corp of China,Grand Total,344374134.8820747
+398,Deutsche Bank,Equinor ASA,Grand Total,631902358.7219937
+399,Deutsche Bank,Evraz PLC,Grand Total,358144.5068120955
+400,Deutsche Bank,Exxaro Resources Ltd,Grand Total,59119623.84232538
+401,Deutsche Bank,Exxon Mobil Corp,Grand Total,2997231111.0
+402,Deutsche Bank,Gazprom PJSC,Grand Total,1000905910.999391
+403,Deutsche Bank,NTPC Ltd,Grand Total,263658188.97
+404,Deutsche Bank,Peabody Energy Corp,Grand Total,188000000.0
+405,Deutsche Bank,Petróleo Brasileiro SA – Petrobras,Grand Total,132857142.99
+406,Deutsche Bank,Repsol SA,Grand Total,222481203.7922243
+407,Deutsche Bank,Huayang New Material Technology Group Co Ltd,Grand Total,217896969.945
+408,Deutsche Bank,Indika Energy Tbk PT,Grand Total,222304766.92875
+409,Deutsche Bank,Shandong Energy Co Ltd,Grand Total,626074989.0054029
+410,Deutsche Bank,Shanxi Coking Coal Group Co Ltd,Grand Total,121847273.73
+411,Deutsche Bank,Shell PLC,Grand Total,4036358749.0
+412,Deutsche Bank,Bayan Resources Tbk PT,Grand Total,200000000.0
+413,Deutsche Bank,Adani Group,Grand Total,230040744.996236
+414,Deutsche Bank,China National Petroleum Corporation (CNPC),Grand Total,174336000.0
+415,Deutsche Bank,Lu'an Chemical Group Co Ltd,Grand Total,54213985.5504
+416,DZ Bank,Indian Oil Corp Ltd,Grand Total,74969845.57638086
+417,DZ Bank,TotalEnergies SE,Grand Total,75000000.0
+418,Goldman Sachs,Hess Corporation,Grand Total,3528035714.0
+419,Goldman Sachs,Peabody Energy Corp,Grand Total,1110041667.0
+420,Goldman Sachs,Glencore PLC,Grand Total,114349353.14
+421,Goldman Sachs,Delek Group Ltd,Grand Total,59741850.0
+422,Goldman Sachs,China National Petroleum Corporation (CNPC),Grand Total,1123751711.0
+423,Goldman Sachs,China Energy Investment Corp Ltd,Grand Total,267157909.9802716
+424,Goldman Sachs,State Grid Corp of China,Grand Total,494459187.054012
+425,Goldman Sachs,ConocoPhillips,Grand Total,280112497.0
+426,Goldman Sachs,Arch Resources Inc,Grand Total,96750000.0
+427,Goldman Sachs,POSCO Holdings Inc,Grand Total,44518915.79542806
+428,Goldman Sachs,Repsol SA,Grand Total,638902261.4869344
+429,Goldman Sachs,Shandong Energy Co Ltd,Grand Total,199730423.4811788
+430,Goldman Sachs,Teck Resources Ltd,Grand Total,213999916.8389
+431,Goldman Sachs,Mitsubishi Corp,Grand Total,85972237.37474473
+432,Goldman Sachs,Shell PLC,Grand Total,3801418333.0
+433,Goldman Sachs,Chevron Corp,Grand Total,968181803.0
+434,Goldman Sachs,Equinor ASA,Grand Total,1450420275.721994
+435,Goldman Sachs,Petróleo Brasileiro SA – Petrobras,Grand Total,1277355566.837437
+436,Goldman Sachs,Petróleos Mexicanos (PEMEX),Grand Total,2776552300.7514
+437,Goldman Sachs,PPL Corp,Grand Total,278065322.1186396
+438,Goldman Sachs,QatarEnergy,Grand Total,1744444445.0
+439,Goldman Sachs,BHP Group Ltd,Grand Total,60357142.88
+440,Goldman Sachs,TotalEnergies SE,Grand Total,2204754467.799752
+441,HSBC,ConocoPhillips,Grand Total,1788636364.0
+442,HSBC,Pertamina Persero PT,Grand Total,1644166667.0
+443,HSBC,Delek Group Ltd,Grand Total,934741850.0
+444,HSBC,Glencore PLC,Grand Total,582319409.129357
+445,HSBC,Petróleos Mexicanos (PEMEX),Grand Total,7772220376.508041
+446,HSBC,China National Petroleum Corporation (CNPC),Grand Total,133333333.0
+447,HSBC,POSCO Holdings Inc,Grand Total,182600240.5519161
+448,HSBC,NTPC Ltd,Grand Total,93000000.0
+449,HSBC,Petróleo Brasileiro SA – Petrobras,Grand Total,2090340326.727781
+450,HSBC,Repsol SA,Grand Total,426640983.5009561
+451,HSBC,China Huadian Corp Ltd,Grand Total,36983433.43777198
+452,HSBC,Exxon Mobil Corp,Grand Total,7497230776.0
+453,HSBC,Occidental Petroleum Corp,Grand Total,4037340866.471045
+454,HSBC,Guangdong Hengjian Investment Holding Co Ltd,Grand Total,5886858.122508993
+455,HSBC,Harbour Energy PLC,Grand Total,38461538.0
+456,HSBC,QatarEnergy,Grand Total,1744444445.0
+457,HSBC,ITOCHU Corp,Grand Total,44166668.0
+458,HSBC,Shell PLC,Grand Total,5745957689.382341
+459,HSBC,State Grid Corp of China,Grand Total,937838952.5202717
+460,HSBC,China Huaneng Group Co Ltd,Grand Total,237417265.8711732
+461,HSBC,Chevron Corp,Grand Total,1189610373.0
+462,HSBC,TotalEnergies SE,Grand Total,1885635607.90002
+463,HSBC,Kuwait Petroleum Corp,Grand Total,142857143.0
+464,HSBC,Xin Jiang Guang Hui Industry Investment Group Co Ltd,Grand Total,918788.8743975832
+465,HSBC,Indonesia Asahan Aluminium Persero PT,Grand Total,370858035.8865595
+466,ICBC,State Grid Corp of China,Grand Total,20867896289.19395
+467,ICBC,China National Petroleum Corporation (CNPC),Grand Total,19600407911.0
+468,ICBC,China Huaneng Group Co Ltd,Grand Total,5729790394.775904
+469,ICBC,Shaanxi Yanchang Petroleum Group Co Ltd,Grand Total,4341726210.535794
+470,ICBC,Beijing Energy Holding Co Ltd,Grand Total,2109602451.464702
+471,ICBC,China Huadian Corp Ltd,Grand Total,7248869734.448806
+472,ICBC,China Energy Investment Corp Ltd,Grand Total,2810318554.692064
+473,ICBC,Hebei Construction & Investment Group Co Ltd,Grand Total,267180750.0
+474,ICBC,Shaanxi Coal and Chemical Industry Group Co Ltd,Grand Total,207520600.0
+475,ICBC,Shandong Energy Co Ltd,Grand Total,2771458994.761119
+476,ICBC,Inpex Corp,Grand Total,276769230.0
+477,ICBC,Guangdong Hengjian Investment Holding Co Ltd,Grand Total,500625012.0710695
+478,ICBC,Shaanxi Investment Group Co Ltd,Grand Total,21903150.0
+479,ICBC,Shell PLC,Grand Total,821608000.0
+480,ICBC,Huayang New Material Technology Group Co Ltd,Grand Total,277614375.0
+481,ICBC,China Datang Corp,Grand Total,1425595480.785094
+482,ICBC,Jinneng Holding Group Co Ltd,Grand Total,1168882345.504022
+483,ICBC,Kailuan Group Ltd Liability Corp,Grand Total,258729185.25
+484,ICBC,Shanxi Coking Coal Group Co Ltd,Grand Total,452827830.8983865
+485,ICBC,Zhejiang Provincial Energy Group Co Ltd,Grand Total,1476902835.0
+486,ICBC,Shenergy Group Co Ltd,Grand Total,356962086.1657483
+487,ICBC,Lu'an Chemical Group Co Ltd,Grand Total,386823442.1999999
+488,Industrial Bank,Jinneng Holding Group Co Ltd,Grand Total,10174482164.42526
+489,Industrial Bank,State Grid Corp of China,Grand Total,2308894875.0
+490,Industrial Bank,China Huadian Corp Ltd,Grand Total,1903080186.286846
+491,Industrial Bank,Shaanxi Yanchang Petroleum Group Co Ltd,Grand Total,8689577656.773602
+492,Industrial Bank,Huayang New Material Technology Group Co Ltd,Grand Total,2114830750.0
+493,Industrial Bank,Guangdong Hengjian Investment Holding Co Ltd,Grand Total,1966184498.306695
+494,Industrial Bank,China Huaneng Group Co Ltd,Grand Total,1075301302.887156
+495,Industrial Bank,Beijing Energy Holding Co Ltd,Grand Total,1013360945.331448
+496,Industrial Bank,Shaanxi Coal and Chemical Industry Group Co Ltd,Grand Total,2092856805.821134
+497,Industrial Bank,Shandong Energy Co Ltd,Grand Total,2539740322.051234
+498,Industrial Bank,China Energy Investment Corp Ltd,Grand Total,1865221056.336977
+499,Industrial Bank,Lu'an Chemical Group Co Ltd,Grand Total,408043110.15
+500,Industrial Bank,Shaanxi Investment Group Co Ltd,Grand Total,502022145.0
+501,Industrial Bank,Xin Jiang Guang Hui Industry Investment Group Co Ltd,Grand Total,300096462.1242527
+502,Industrial Bank,Zhejiang Provincial Energy Group Co Ltd,Grand Total,45454545.0
+503,Industrial Bank,China Datang Corp,Grand Total,2247411741.937876
+504,Industrial Bank,Jizhong Energy Group Co Ltd,Grand Total,3905712945.5
+505,Industrial Bank,Kailuan Group Ltd Liability Corp,Grand Total,42692100.0
+506,Industrial Bank,China National Petroleum Corporation (CNPC),Grand Total,947868300.0
+507,Industrial Bank,China ZhenHua Oil Co Ltd,Grand Total,67562550.0
+508,Industrial Bank,Shenergy Group Co Ltd,Grand Total,162305237.3030824
+509,Industrial Bank,Shanxi Coking Coal Group Co Ltd,Grand Total,450502143.3322518
+510,ING,Glencore PLC,Grand Total,1541539565.002332
+511,ING,Inpex Corp,Grand Total,43000000.0
+512,ING,Evraz PLC,Grand Total,533237.3760132433
+513,ING,TotalEnergies SE,Grand Total,118360000.0
+514,ING,Gazprom PJSC,Grand Total,91181052.55
+515,ING,Harbour Energy PLC,Grand Total,38461538.0
+516,ING,Kuwait Petroleum Corp,Grand Total,480833334.0
+517,ING,State Grid Corp of China,Grand Total,68314343.28154065
+518,ING,Delek Group Ltd,Grand Total,277915699.868125
+519,ING,Mitsubishi Corp,Grand Total,22675740.0
+520,Intesa Sanpaolo,TotalEnergies SE,Grand Total,873879325.0
+521,Intesa Sanpaolo,Adani Group,Grand Total,35524842.61989594
+522,Intesa Sanpaolo,Repsol SA,Grand Total,54479000.0
+523,Intesa Sanpaolo,Gazprom PJSC,Grand Total,974710443.6
+524,Intesa Sanpaolo,Bulgarian Energy Holding EAD,Grand Total,68773892.0
+525,Intesa Sanpaolo,Glencore PLC,Grand Total,39741920.0
+526,JPMorgan Chase,ConocoPhillips,Grand Total,4514646127.0
+527,JPMorgan Chase,Hess Corporation,Grand Total,3528035714.0
+528,JPMorgan Chase,TotalEnergies SE,Grand Total,2740681237.912616
+529,JPMorgan Chase,Glencore PLC,Grand Total,676658307.2041324
+530,JPMorgan Chase,Inpex Corp,Grand Total,46000000.0
+531,JPMorgan Chase,Occidental Petroleum Corp,Grand Total,8128075841.309839
+532,JPMorgan Chase,Shell PLC,Grand Total,5240341428.9
+533,JPMorgan Chase,Mitsubishi Corp,Grand Total,143154166.5335862
+534,JPMorgan Chase,Kuwait Petroleum Corp,Grand Total,142857143.0
+535,JPMorgan Chase,Shandong Energy Co Ltd,Grand Total,378329916.7560707
+536,JPMorgan Chase,Peabody Energy Corp,Grand Total,1058041667.0
+537,JPMorgan Chase,Petróleo Brasileiro SA – Petrobras,Grand Total,4493171709.783329
+538,JPMorgan Chase,Petróleos Mexicanos (PEMEX),Grand Total,6044869770.260682
+539,JPMorgan Chase,PPL Corp,Grand Total,1976802679.874294
+540,JPMorgan Chase,State Grid Corp of China,Grand Total,360511278.1752198
+541,JPMorgan Chase,QatarEnergy,Grand Total,1744444445.0
+542,JPMorgan Chase,Teck Resources Ltd,Grand Total,4089249916.8389
+543,JPMorgan Chase,Repsol SA,Grand Total,471057380.9324411
+544,JPMorgan Chase,Exxon Mobil Corp,Grand Total,15330564109.0
+545,JPMorgan Chase,Adani Group,Grand Total,175509465.9492292
+546,JPMorgan Chase,Chevron Corp,Grand Total,4659453457.0
+547,JPMorgan Chase,China Huadian Corp Ltd,Grand Total,72450170.49
+548,JPMorgan Chase,China Huaneng Group Co Ltd,Grand Total,148888656.219359
+549,JPMorgan Chase,China National Petroleum Corporation (CNPC),Grand Total,133333333.0
+550,JPMorgan Chase,BHP Group Ltd,Grand Total,60357142.88
+551,JPMorgan Chase,Equinor ASA,Grand Total,2450420275.721993
+552,JPMorgan Chase,Alliance Resource Partners LP,Grand Total,348920833.0
+553,JPMorgan Chase,Delek Group Ltd,Grand Total,1124811865.05
+554,JPMorgan Chase,Evraz PLC,Grand Total,891381.8828253389
+555,JPMorgan Chase,Gazprom PJSC,Grand Total,4588553791.545782
+556,JPMorgan Chase,Guangdong Hengjian Investment Holding Co Ltd,Grand Total,3098346.392008993
+557,JPMorgan Chase,Bulgarian Energy Holding EAD,Grand Total,149364093.2
+558,JPMorgan Chase,Harbour Energy PLC,Grand Total,38461538.0
+559,JPMorgan Chase,ITOCHU Corp,Grand Total,23479479.78
+560,JPMorgan Chase,Indika Energy Tbk PT,Grand Total,130912807.191375
+561,KB Financial,POSCO Holdings Inc,Grand Total,407497183.8758748
+562,Lloyds,Delek Group Ltd,Grand Total,78066207.828125
+563,Lloyds,Shell PLC,Grand Total,720377500.0
+564,Lloyds,Harbour Energy PLC,Grand Total,1304070538.0
+565,Mizuho,ConocoPhillips,Grand Total,1788636364.0
+566,Mizuho,Hess Corporation,Grand Total,2904285714.0
+567,Mizuho,Pertamina Persero PT,Grand Total,1527896825.0
+568,Mizuho,POSCO Holdings Inc,Grand Total,50910847.73752309
+569,Mizuho,Glencore PLC,Grand Total,591947222.6861026
+570,Mizuho,State Grid Corp of China,Grand Total,1419193337.528813
+571,Mizuho,PPL Corp,Grand Total,1374563764.491241
+572,Mizuho,Chevron Corp,Grand Total,1815677083.0
+573,Mizuho,Petróleos Mexicanos (PEMEX),Grand Total,3994588943.77546
+574,Mizuho,China Huadian Corp Ltd,Grand Total,82437978.43777198
+575,Mizuho,Inpex Corp,Grand Total,1156946500.0
+576,Mizuho,Shell PLC,Grand Total,688000000.0
+577,Mizuho,ITOCHU Corp,Grand Total,23479479.78
+578,Mizuho,China Huaneng Group Co Ltd,Grand Total,148888656.219359
+579,Mizuho,China National Petroleum Corporation (CNPC),Grand Total,133333333.0
+580,Mizuho,Adani Group,Grand Total,210093693.7031887
+581,Mizuho,Petróleo Brasileiro SA – Petrobras,Grand Total,2461729603.18335
+582,Mizuho,Mitsubishi Corp,Grand Total,228937103.1285436
+583,Mizuho,Repsol SA,Grand Total,254775451.7208413
+584,Mizuho,Sojitz Corp,Grand Total,38721647.42060851
+585,Mizuho,Gazprom PJSC,Grand Total,565447168.4964318
+586,Mizuho,TotalEnergies SE,Grand Total,1266273972.299336
+587,Mizuho,Teck Resources Ltd,Grand Total,160177000.0
+588,Mizuho,BHP Group Ltd,Grand Total,60357142.88
+589,Mizuho,Exxon Mobil Corp,Grand Total,1111111111.0
+590,Mizuho,NTPC Ltd,Grand Total,271161426.72
+591,Mizuho,Equinor ASA,Grand Total,881902358.7219937
+592,Mizuho,Occidental Petroleum Corp,Grand Total,1784548888.802356
+593,Morgan Stanley,Hess Corporation,Grand Total,3278035714.0
+594,Morgan Stanley,Delek Group Ltd,Grand Total,137808057.828125
+595,Morgan Stanley,Thungela Resources Ltd,Grand Total,51923907.0
+596,Morgan Stanley,Glencore PLC,Grand Total,560658284.250751
+597,Morgan Stanley,Petróleo Brasileiro SA – Petrobras,Grand Total,2178084158.017233
+598,Morgan Stanley,Bayan Resources Tbk PT,Grand Total,200000000.0
+599,Morgan Stanley,PPL Corp,Grand Total,472000270.27
+600,Morgan Stanley,Shandong Energy Co Ltd,Grand Total,377107595.0
+601,Morgan Stanley,Equinor ASA,Grand Total,548899358.7219937
+602,Morgan Stanley,China Huadian Corp Ltd,Grand Total,297410129.0725936
+603,Morgan Stanley,Occidental Petroleum Corp,Grand Total,428571428.0
+604,Morgan Stanley,Exxon Mobil Corp,Grand Total,9444444443.0
+605,Morgan Stanley,TotalEnergies SE,Grand Total,2196026933.252307
+606,Morgan Stanley,Arch Resources Inc,Grand Total,128178572.0
+607,Morgan Stanley,Petróleos Mexicanos (PEMEX),Grand Total,1644253129.340682
+608,Morgan Stanley,Repsol SA,Grand Total,1304210538.255577
+609,Morgan Stanley,Shell PLC,Grand Total,7299931251.0
+610,Morgan Stanley,Sojitz Corp,Grand Total,55068964.35097651
+611,Morgan Stanley,State Grid Corp of China,Grand Total,560809509.6198738
+612,Morgan Stanley,Chevron Corp,Grand Total,618181803.0
+613,Morgan Stanley,Teck Resources Ltd,Grand Total,53822916.83890001
+614,Morgan Stanley,China Datang Corp,Grand Total,190489566.522387
+615,Morgan Stanley,ConocoPhillips,Grand Total,228571429.0
+616,Morgan Stanley,China Energy Investment Corp Ltd,Grand Total,267157909.9802716
+617,Morgan Stanley,Mitsubishi Corp,Grand Total,255498956.1162321
+618,Morgan Stanley,Inpex Corp,Grand Total,46071500.0
+619,MUFG,ConocoPhillips,Grand Total,1642207793.0
+620,MUFG,Inpex Corp,Grand Total,1630675000.0
+621,MUFG,Hess Corporation,Grand Total,2904285714.0
+622,MUFG,Pertamina Persero PT,Grand Total,913492062.0
+623,MUFG,Petróleo Brasileiro SA – Petrobras,Grand Total,1035631966.314887
+624,MUFG,TotalEnergies SE,Grand Total,1270338115.590372
+625,MUFG,Glencore PLC,Grand Total,596967625.7381366
+626,MUFG,Sojitz Corp,Grand Total,5707647.537809568
+627,MUFG,Gazprom PJSC,Grand Total,200000000.0
+628,MUFG,PPL Corp,Grand Total,409316354.886947
+629,MUFG,Adani Group,Grand Total,304874706.3192255
+630,MUFG,Chevron Corp,Grand Total,3382343084.0
+631,MUFG,Equinor ASA,Grand Total,298899358.7219936
+632,MUFG,BHP Group Ltd,Grand Total,60357142.88
+633,MUFG,ITOCHU Corp,Grand Total,44166668.0
+634,MUFG,Petróleos Mexicanos (PEMEX),Grand Total,2241869769.470682
+635,MUFG,China Energy Investment Corp Ltd,Grand Total,3255830.117296706
+636,MUFG,QatarEnergy,Grand Total,944444445.0
+637,MUFG,Repsol SA,Grand Total,279480316.5009561
+638,MUFG,Mitsubishi Corp,Grand Total,96923843.55327807
+639,MUFG,State Grid Corp of China,Grand Total,150155679.1043932
+640,MUFG,NTPC Ltd,Grand Total,500654016.42
+641,MUFG,Occidental Petroleum Corp,Grand Total,4709007199.161045
+642,MUFG,Indonesia Asahan Aluminium Persero PT,Grand Total,275710577.1930302
+643,NAB,Glencore PLC,Grand Total,490060520.8671066
+644,NAB,BHP Group Ltd,Grand Total,60357142.88
+645,NAB,ITOCHU Corp,Grand Total,44166668.0
+646,NAB,State Grid Corp of China,Grand Total,122620993.0475166
+647,NatWest,Glencore PLC,Grand Total,553258517.9168749
+648,NatWest,TotalEnergies SE,Grand Total,170296302.6213821
+649,NatWest,Harbour Energy PLC,Grand Total,140609000.0
+650,NatWest,PPL Corp,Grand Total,94500270.0
+651,NatWest,Repsol SA,Grand Total,388595639.7386871
+652,NatWest,Delek Group Ltd,Grand Total,78066207.828125
+653,NatWest,Mitsubishi Corp,Grand Total,22675740.0
+654,Nordea Bank,Equinor ASA,Grand Total,298899358.7219936
+655,Ping An Insurance Group,Shaanxi Yanchang Petroleum Group Co Ltd,Grand Total,1751108740.934068
+656,Ping An Insurance Group,China Huadian Corp Ltd,Grand Total,1406548312.936623
+657,Ping An Insurance Group,Shaanxi Coal and Chemical Industry Group Co Ltd,Grand Total,339288867.290032
+658,Ping An Insurance Group,Shandong Energy Co Ltd,Grand Total,1657607557.744259
+659,Ping An Insurance Group,Jinneng Holding Group Co Ltd,Grand Total,1580561591.234588
+660,Ping An Insurance Group,Kailuan Group Ltd Liability Corp,Grand Total,78015073.5
+661,Ping An Insurance Group,Lu'an Chemical Group Co Ltd,Grand Total,116853757.8
+662,Ping An Insurance Group,China Energy Investment Corp Ltd,Grand Total,1086436445.995035
+663,Ping An Insurance Group,Beijing Energy Holding Co Ltd,Grand Total,168861470.0228307
+664,Ping An Insurance Group,Shenmu City State-Owned Assets Operation Co,Grand Total,349771.1839185149
+665,Ping An Insurance Group,State Grid Corp of China,Grand Total,1883766500.0
+666,Ping An Insurance Group,Huayang New Material Technology Group Co Ltd,Grand Total,433113375.0
+667,Ping An Insurance Group,China Datang Corp,Grand Total,3668762592.12894
+668,Ping An Insurance Group,Hebei Construction & Investment Group Co Ltd,Grand Total,194746000.0
+669,Ping An Insurance Group,China Huaneng Group Co Ltd,Grand Total,215036044.458845
+670,Ping An Insurance Group,Guangdong Hengjian Investment Holding Co Ltd,Grand Total,165475584.0
+671,Ping An Insurance Group,China National Petroleum Corporation (CNPC),Grand Total,722600000.0
+672,PNC,Arch Resources Inc,Grand Total,128178572.0
+673,PNC,Chevron Corp,Grand Total,300000000.0
+674,PNC,Alliance Resource Partners LP,Grand Total,91900000.0
+675,PNC,PPL Corp,Grand Total,171625000.0
+676,Postal Savings Bank of China,Jinneng Holding Group Co Ltd,Grand Total,1218339404.157022
+677,Postal Savings Bank of China,Shandong Energy Co Ltd,Grand Total,764716131.3477345
+678,Postal Savings Bank of China,Shaanxi Yanchang Petroleum Group Co Ltd,Grand Total,786806224.8445079
+679,Postal Savings Bank of China,China Huadian Corp Ltd,Grand Total,930927542.1205784
+680,Postal Savings Bank of China,China Huaneng Group Co Ltd,Grand Total,442253779.1938128
+681,Postal Savings Bank of China,Hebei Construction & Investment Group Co Ltd,Grand Total,37830000.0
+682,Postal Savings Bank of China,China Datang Corp,Grand Total,580316250.1184691
+683,Postal Savings Bank of China,Lu'an Chemical Group Co Ltd,Grand Total,12080969.55
+684,Postal Savings Bank of China,Shaanxi Coal and Chemical Industry Group Co Ltd,Grand Total,55167700.0
+685,Postal Savings Bank of China,Huayang New Material Technology Group Co Ltd,Grand Total,192664500.0
+686,Postal Savings Bank of China,Beijing Energy Holding Co Ltd,Grand Total,92309845.9170766
+687,Postal Savings Bank of China,Xin Jiang Guang Hui Industry Investment Group Co Ltd,Grand Total,135295487.2571004
+688,Postal Savings Bank of China,Guangdong Hengjian Investment Holding Co Ltd,Grand Total,191376420.0
+689,Postal Savings Bank of China,Shaanxi Investment Group Co Ltd,Grand Total,44376300.0
+690,Postal Savings Bank of China,China National Petroleum Corporation (CNPC),Grand Total,1549450278.0
+691,Postal Savings Bank of China,Shougang Group Co Ltd,Grand Total,418657.1974662162
+692,Postal Savings Bank of China,China Energy Investment Corp Ltd,Grand Total,508805119.2108417
+693,Postal Savings Bank of China,Zhejiang Provincial Energy Group Co Ltd,Grand Total,255638970.0
+694,Postal Savings Bank of China,Jizhong Energy Group Co Ltd,Grand Total,129299200.0
+695,Rabobank,Glencore PLC,Grand Total,108252336.61
+696,Rabobank,Mitsubishi Corp,Grand Total,22675740.0
+697,RBC,ConocoPhillips,Grand Total,461930679.0
+698,RBC,Glencore PLC,Grand Total,550033279.5634215
+699,RBC,PPL Corp,Grand Total,209678854.346947
+700,RBC,Teck Resources Ltd,Grand Total,524019916.8389001
+701,RBC,Harbour Energy PLC,Grand Total,38461538.0
+702,RBC,Shell PLC,Grand Total,3000500000.0
+703,RBC,TotalEnergies SE,Grand Total,1923362426.086837
+704,RBC,Occidental Petroleum Corp,Grand Total,3180903619.197483
+705,Santander,State Grid Corp of China,Grand Total,405935823.4958461
+706,Santander,Glencore PLC,Grand Total,596099497.6644292
+707,Santander,Petróleo Brasileiro SA – Petrobras,Grand Total,3722210927.333113
+708,Santander,TotalEnergies SE,Grand Total,1020647477.525889
+709,Santander,Repsol SA,Grand Total,493242133.0038241
+710,Santander,Equinor ASA,Grand Total,298899358.7219936
+711,Santander,Petróleos Mexicanos (PEMEX),Grand Total,3506839645.27
+712,Santander,Kuwait Petroleum Corp,Grand Total,480833334.0
+713,Santander,Shell PLC,Grand Total,5745957689.382341
+714,Santander,BHP Group Ltd,Grand Total,60357142.88
+715,Scotiabank,Petróleo Brasileiro SA – Petrobras,Grand Total,2104694332.675346
+716,Scotiabank,Petróleos Mexicanos (PEMEX),Grand Total,1516816732.788167
+717,Scotiabank,Glencore PLC,Grand Total,550986692.7385453
+718,Scotiabank,State Grid Corp of China,Grand Total,35275918.46179563
+719,Scotiabank,Indian Oil Corp Ltd,Grand Total,183666775.5763808
+720,Scotiabank,PPL Corp,Grand Total,309241354.6169471
+721,Scotiabank,Chevron Corp,Grand Total,350000000.0
+722,Scotiabank,Teck Resources Ltd,Grand Total,363842916.8389001
+723,Scotiabank,BHP Group Ltd,Grand Total,60357142.88
+724,Scotiabank,Occidental Petroleum Corp,Grand Total,1708734591.851298
+725,Shanghai Pudong Development Bank,Beijing Energy Holding Co Ltd,Grand Total,4208419097.148807
+726,Shanghai Pudong Development Bank,State Grid Corp of China,Grand Total,3009094750.0
+727,Shanghai Pudong Development Bank,China Datang Corp,Grand Total,1376729873.59616
+728,Shanghai Pudong Development Bank,Shandong Energy Co Ltd,Grand Total,1754596475.382813
+729,Shanghai Pudong Development Bank,China Huaneng Group Co Ltd,Grand Total,1844556839.6112
+730,Shanghai Pudong Development Bank,Shaanxi Coal and Chemical Industry Group Co Ltd,Grand Total,1498999532.467592
+731,Shanghai Pudong Development Bank,Guangdong Hengjian Investment Holding Co Ltd,Grand Total,705871853.8092544
+732,Shanghai Pudong Development Bank,Shenergy Group Co Ltd,Grand Total,687003573.6062636
+733,Shanghai Pudong Development Bank,Jinneng Holding Group Co Ltd,Grand Total,2294080578.320568
+734,Shanghai Pudong Development Bank,Shaanxi Yulin Energy Group Co Ltd,Grand Total,104079017.4554295
+735,Shanghai Pudong Development Bank,Huayang New Material Technology Group Co Ltd,Grand Total,1392787875.0
+736,Shanghai Pudong Development Bank,China Energy Investment Corp Ltd,Grand Total,2915040286.839303
+737,Shanghai Pudong Development Bank,Lu'an Chemical Group Co Ltd,Grand Total,269949564.9
+738,Shanghai Pudong Development Bank,Jizhong Energy Group Co Ltd,Grand Total,2827324894.0
+739,Shanghai Pudong Development Bank,China Huadian Corp Ltd,Grand Total,270918253.4109646
+740,Shanghai Pudong Development Bank,Shanxi Coking Coal Group Co Ltd,Grand Total,250118098.9433344
+741,Shanghai Pudong Development Bank,Shougang Group Co Ltd,Grand Total,425756.0179151262
+742,Shanghai Pudong Development Bank,China ZhenHua Oil Co Ltd,Grand Total,66024900.0
+743,Shanghai Pudong Development Bank,Shaanxi Investment Group Co Ltd,Grand Total,502331625.0
+744,Shanghai Pudong Development Bank,Shaanxi Yanchang Petroleum Group Co Ltd,Grand Total,5051153665.195217
+745,Shanghai Pudong Development Bank,China National Petroleum Corporation (CNPC),Grand Total,1415780000.0
+746,Shanghai Pudong Development Bank,Zhejiang Provincial Energy Group Co Ltd,Grand Total,953306145.0
+747,SMBC Group,Inpex Corp,Grand Total,3143105730.0
+748,SMBC Group,ConocoPhillips,Grand Total,1413636364.0
+749,SMBC Group,Hess Corporation,Grand Total,714285714.0
+750,SMBC Group,Pertamina Persero PT,Grand Total,1049603173.0
+751,SMBC Group,TotalEnergies SE,Grand Total,1934123908.219669
+752,SMBC Group,NTPC Ltd,Grand Total,787034247.0862217
+753,SMBC Group,Glencore PLC,Grand Total,511244772.7385453
+754,SMBC Group,State Grid Corp of China,Grand Total,136247346.4034523
+755,SMBC Group,Gazprom PJSC,Grand Total,1092297168.496432
+756,SMBC Group,Occidental Petroleum Corp,Grand Total,3417340866.161045
+757,SMBC Group,BHP Group Ltd,Grand Total,60357142.88
+758,SMBC Group,Petróleos Mexicanos (PEMEX),Grand Total,3789993934.735808
+759,SMBC Group,PPL Corp,Grand Total,97200000.0
+760,SMBC Group,Adani Group,Grand Total,57055943.04094857
+761,SMBC Group,Indian Oil Corp Ltd,Grand Total,573696930.33
+762,SMBC Group,Chevron Corp,Grand Total,618181803.0
+763,SMBC Group,Petróleo Brasileiro SA – Petrobras,Grand Total,1439900710.035231
+764,SMBC Group,Kuwait Petroleum Corp,Grand Total,847500001.0
+765,SMBC Group,Shell PLC,Grand Total,688000000.0
+766,SMBC Group,Mitsubishi Corp,Grand Total,230194234.6810486
+767,SMBC Group,Indonesia Asahan Aluminium Persero PT,Grand Total,241652186.1311027
+768,SMBC Group,ITOCHU Corp,Grand Total,67646147.78
+769,Société Générale,TotalEnergies SE,Grand Total,4731931971.786486
+770,Société Générale,Inpex Corp,Grand Total,1820444230.0
+771,Société Générale,Glencore PLC,Grand Total,785621278.0953401
+772,Société Générale,China National Petroleum Corporation (CNPC),Grand Total,133333333.0
+773,Société Générale,Pertamina Persero PT,Grand Total,271428571.0
+774,Société Générale,Equinor ASA,Grand Total,298899358.7219936
+775,Société Générale,Occidental Petroleum Corp,Grand Total,4203548079.999838
+776,Société Générale,Evraz PLC,Grand Total,198969.1696552875
+777,Société Générale,Exxon Mobil Corp,Grand Total,5913897444.0
+778,Société Générale,Petróleos Mexicanos (PEMEX),Grand Total,1240496100.0
+779,Société Générale,Repsol SA,Grand Total,390326084.3467177
+780,Société Générale,Rosneftegaz AO,Grand Total,500000000.0
+781,Société Générale,Chevron Corp,Grand Total,1189610373.0
+782,Société Générale,Shell PLC,Grand Total,388000000.0
+783,Société Générale,Kuwait Petroleum Corp,Grand Total,509523810.0
+784,Société Générale,Adani Group,Grand Total,97786293.00157532
+785,Société Générale,Mitsubishi Corp,Grand Total,22675740.0
+786,Standard Chartered,Glencore PLC,Grand Total,587899082.1651745
+787,Standard Chartered,China Huadian Corp Ltd,Grand Total,45454545.0
+788,Standard Chartered,China Huaneng Group Co Ltd,Grand Total,77500000.0
+789,Standard Chartered,China National Petroleum Corporation (CNPC),Grand Total,133333333.0
+790,Standard Chartered,Pertamina Persero PT,Grand Total,525000000.0
+791,Standard Chartered,China Energy Investment Corp Ltd,Grand Total,3255830.117296706
+792,Standard Chartered,NTPC Ltd,Grand Total,306892589.7
+793,Standard Chartered,POSCO Holdings Inc,Grand Total,182600240.5519161
+794,Standard Chartered,Equinor ASA,Grand Total,298899358.7219936
+795,Standard Chartered,TotalEnergies SE,Grand Total,244866917.4445396
+796,Standard Chartered,Indian Oil Corp Ltd,Grand Total,178200000.0
+797,Standard Chartered,Petróleo Brasileiro SA – Petrobras,Grand Total,914213736.4094404
+798,Standard Chartered,Indika Energy Tbk PT,Grand Total,506360858.004375
+799,Standard Chartered,Indonesia Asahan Aluminium Persero PT,Grand Total,275710577.1930302
+800,Standard Chartered,Shandong Energy Co Ltd,Grand Total,83005837.66810845
+801,Standard Chartered,Shell PLC,Grand Total,888000000.0
+802,Standard Chartered,Zhejiang Provincial Energy Group Co Ltd,Grand Total,95454545.0
+803,Standard Chartered,Adani Group,Grand Total,627240257.4666744
+804,State Bank of India,NTPC Ltd,Grand Total,1001472806.315373
+805,State Bank of India,Coal India Ltd,Grand Total,307630608.0
+806,State Bank of India,Indian Oil Corp Ltd,Grand Total,1418103323.79
+807,State Bank of India,Reliance Power Ltd,Grand Total,1654607088.0
+808,State Bank of India,Adani Group,Grand Total,116396788.5922057
+809,TD,ConocoPhillips,Grand Total,3013636364.0
+810,TD,Glencore PLC,Grand Total,564006689.8483073
+811,TD,Teck Resources Ltd,Grand Total,363842916.8389001
+812,TD,Chevron Corp,Grand Total,350000000.0
+813,TD,PPL Corp,Grand Total,97200000.0
+814,TD,Shell PLC,Grand Total,388000000.0
+815,TD,Occidental Petroleum Corp,Grand Total,356000000.0
+816,UBS,Glencore PLC,Grand Total,684976600.197411
+817,UBS,State Grid Corp of China,Grand Total,325804354.8091742
+818,UBS,China Energy Investment Corp Ltd,Grand Total,616723262.7255244
+819,UBS,Pertamina Persero PT,Grand Total,104166667.0
+820,UBS,Shell PLC,Grand Total,1138000000.0
+821,UBS,China Huadian Corp Ltd,Grand Total,765399846.3461423
+822,UBS,China National Petroleum Corporation (CNPC),Grand Total,307669333.0
+823,UBS,Adani Group,Grand Total,49809160.30534352
+824,UBS,Petróleo Brasileiro SA – Petrobras,Grand Total,565424293.2968892
+825,UBS,BHP Group Ltd,Grand Total,60357142.88
+826,UBS,Petróleos Mexicanos (PEMEX),Grand Total,637932320.0
+827,UBS,Evraz PLC,Grand Total,319469.0975300091
+828,UBS,Repsol SA,Grand Total,133820188.0178458
+829,UBS,Gazprom PJSC,Grand Total,602964163.2456094
+830,UBS,TotalEnergies SE,Grand Total,289506257.4796163
+831,UniCredit,Gazprom PJSC,Grand Total,2428222105.825814
+832,UniCredit,Glencore PLC,Grand Total,496299998.3515427
+833,UniCredit,Repsol SA,Grand Total,304942944.9859783
+834,UniCredit,TotalEnergies SE,Grand Total,900828333.9697838
+835,US Bancorp,PPL Corp,Grand Total,759272095.2033747
+836,US Bancorp,Occidental Petroleum Corp,Grand Total,236437246.9635628
+837,Wells Fargo,ConocoPhillips,Grand Total,2675541127.0
+838,Wells Fargo,Harbour Energy PLC,Grand Total,38461538.0
+839,Wells Fargo,Chevron Corp,Grand Total,1417191554.0
+840,Wells Fargo,Alliance Resource Partners LP,Grand Total,257020833.0
+841,Wells Fargo,PPL Corp,Grand Total,1516385179.604294
+842,Wells Fargo,Shell PLC,Grand Total,1742590001.0
+843,Wells Fargo,Delek Group Ltd,Grand Total,78066207.828125
+844,Wells Fargo,Occidental Petroleum Corp,Grand Total,5696285841.309837
+845,Westpac,Inpex Corp,Grand Total,521769230.0
+846,Westpac,State Grid Corp of China,Grand Total,247360194.8455613
+847,Westpac,BHP Group Ltd,Grand Total,60357142.88
+848,Westpac,Indian Oil Corp Ltd,Grand Total,1019700000.0
