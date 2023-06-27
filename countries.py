@@ -2,8 +2,11 @@
 # -*- coding: utf-8 -*-
 """
 This script deals with the list of countries extracted from the carbon bomb
-file previously created and UNSD databases website to build the csv file
-saved as country_informations.csv
+file previously created and with statistical tables from the UNSD databases
+website (https://data.un.org/) to build the csv file saved as
+country_informations.csv.
+To access all datamarts, they are available from this link:
+http://data.un.org/Explorer.aspx.
 
 Examples:
 To use this script, simply run it from the command line:
@@ -11,7 +14,8 @@ $ python main.py
 """
 import os
 import sys
-import re
+from pathlib import Path
+
 import pandas as pd
 from pathlib import Path
 import requests
@@ -226,7 +230,6 @@ def format_serie_values(val):
         return val
 
     val = val.replace(",", "")
-
     if "." in val:
         return float(val)
 
@@ -311,7 +314,8 @@ def create_country_table(undata_folder_path):
 
     Args:
     -----
-        None.
+        undata_folder_path (str): The folder path where csv files downloaded
+        from the UN data website are stored.
 
     Returns:
     --------
@@ -326,8 +330,55 @@ def create_country_table(undata_folder_path):
     ------
         None.
     """
-    # Loads Dataframe listing unique countries with identified carbon bombs
+    # Load Dataframe listing unique countries with identified carbon bombs
     df_CB_countries = load_CB_countries_database()
+    # Load Dataframe from different UNSD sources
+    # Change temporarily the working directory, to load 'undata_*.csv' files
+    # 1- Save the current working directory
+    pwd = os.getcwd()
+    # 2- Changes the current working directory
+    os.chdir(os.path.dirname(undata_folder_path))
+    files = "undata_*.csv"
+    file_paths = Path.cwd().glob(files)
+    # 3- Back to the initial working directory
+    os.chdir(pwd)
+    """
+    Alternative, without changing the working directory:
+        file1 = r'undata_SYB65_1_202209_Population, Surface Area and Density.csv'
+        file2 = r'undata_SYB65_230_202209_GDP and GDP Per Capita.csv'
+        file3 = r'undata_SYB65_310_202209_Carbon Dioxide Emission Estimates.csv'
+        file_paths = (destination_path+file1, destination_path+file2, destination_path+file3)
+    """
+    df_undata = scrapping_undata(file_paths)
+
+    # Map country names to get uniform country names between all files.
+    # Rem: This mapping uses a dictionary, working for the current perimeter.
+    #      If updates occur, new countries might need to be included to this
+    #      dictionary.
+    mapping_countries = {
+        "Iran (Islamic Republic of)": "Iran",
+        "Dem. People's Rep. Korea": "North Korea",
+        "Russian Federation": "Russia",
+        "Syrian Arab Republic": "Syria",
+        "United Rep. of Tanzania": "Tanzania",
+        "United States of America": "United States",
+        "Venezuela (Boliv. Rep. of)": "Venezuela",
+    }
+    df_undata["Region_Country_Area_name"].replace(mapping_countries, inplace=True)
+
+    # Merge the 2 dataframes on country name column.
+    df_countries = pd.merge(
+        df_CB_countries,
+        df_undata,
+        left_on="Country_source_CB",
+        right_on="Region_Country_Area_name",
+        how="inner",
+        sort=True,
+    )
+
+    # Format countries df to get on row per country
+    df_countries = format_countries_df_with_wanted_series(df_countries)
+
     # Load Dataframe from different UNSD sources
     # Change temporarily the working directory, to load 'undata_*.csv' files
     # 1- Save the current working directory

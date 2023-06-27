@@ -24,6 +24,7 @@ Files located in data_sources folder consitute the source data associated to the
 - GROUP-Fossil_Fuel_Financing_by_Company_Banking_on_Climate_Chaos_2023.xlsx : Data containing banking transaction for the financement of Climate Bombs. Data can freely be download at <https://www.bankingonclimatechaos.org/>. The download link is the following (it might change over time): <https://www.bankingonclimatechaos.org/wp-content/themes/bocc-2021/inc/bcc-data-2023/GROUP-Fossil_Fuel_Financing_by_Company_Banking_on_Climate_Chaos_2023.xlsx>
 - Global-Coal-Mine-Tracker-April-2023.xlsx : The Global Coal Mine Tracker (GCMT) is a worldwide dataset of coal mines and proposed projects. The tracker provides asset-level details on ownership structure, development stage and status, coal type, production, workforce size, reserves and resources, methane emissions, geolocation, and over 30 other categories. This data will not be tracked under this repository as it Distributed under a Creative Commons Attribution 4.0 International License. It can be freely download through this page : <https://globalenergymonitor.org/projects/global-coal-mine-tracker/download-data/>
 - Global-Oil-and-Gas-Extraction-Tracker-Feb-2023.xlsx : The Global Oil and Gas Extraction Tracker (GOGET) is a global dataset of oil and gas resources and their development. GOGET includes information on discovered, in-development, and operating oil and gas units worldwide, including both conventional and unconventional assets. This data will not be tracked under this repository as it Distributed under a Creative Commons Attribution 4.0 International License. It can be freely download through this page : <https://globalenergymonitor.org/projects/global-oil-gas-extraction-tracker/>
+- undata_*.csv : Statistical datasets downloaded from the UNSD databases website (<https://data.un.org/>)
 
 ## Output data
 
@@ -48,9 +49,11 @@ The files located in the "data_cleaned" folder constitute the database we use to
 - connexion_bank_company.csv : This file contains information on the amount financed by each bank to companies involved in Carbon Bombs. It primarily consists of a filtered version of the BOCC database, including only companies present in the "Parent_company" field of the GEM database.
   - Script that generated this file: banking.py
   - Source of the data: GROUP-Fossil_Fuel_Financing_by_Company_Banking_on_Climate_Chaos_2023.xlsx
-- country_informations.csv : This file contains the deduplicated list of countries where Carbon Bombs have been detected.
+- country_informations.csv : This file contains the deduplicated list of countries where Carbon Bombs have been detected. It includes also additional statistical data of each country, extracted from the UN data website (<https://data.un.org/>)
   - Script that generated this file: countries.py
-  - Source of the data: carbon_bombs_informations.csv (created hereabove and located in the data_cleaned folder)
+  - Source of the data:
+    - carbon_bombs_informations.csv (created hereabove and located in the data_cleaned folder)
+    - undata_*.csv
 - carbon_bombs_all_datasets.xlsx : This file contains all previous files but stored into different tabs. Tabs name match the dataset name.
 
 # Code Documentation

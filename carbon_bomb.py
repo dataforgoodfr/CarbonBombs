@@ -1042,8 +1042,6 @@ def cancel_duplicated_rename(df):
     df.loc[mask, 'Project Name'] = (
         df.loc[mask, 'Project Name'].apply(lambda x: x.split('_')[0]))
     return df
-    
-
 
 def cleanhtml(raw_html):
     """This function cleans html tag to extract only text.
@@ -1340,7 +1338,6 @@ def create_carbon_bombs_table():
     ]
     df_carbon_bombs[agg_columns] = df_carbon_bombs[agg_columns].applymap(
                                                     sort_values_if_not_null)
-
     # Specific fix fort Khafji bomb that is set to Kuwait and Saudi Arabia
     # -> attribute this carbon bomb to Kuwait to insure a better repartition 
     # (Kuwait has 3 bombs and Saudi Arabia 23)
@@ -1349,6 +1346,7 @@ def create_carbon_bombs_table():
     ] = "Kuwait"
     df_carbon_bombs = get_information_from_GEM(df_carbon_bombs)
     df_carbon_bombs = complete_GEM_with_ChatGPT(df_carbon_bombs)
+
 
     # Add manualy EACOP carbon bomb
     df_carbon_bombs["Bomb_type"] = "Extraction"
