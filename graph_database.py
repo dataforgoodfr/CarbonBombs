@@ -26,9 +26,6 @@ def load_renamed_columns():
         'Operators_source_GEM':'operators',
         'Parent_company_source_GEM':'parent_company',
         'Multiple_unit_concerned_source_GEM':'multiple_unit',
-        'Suppliers_source_chatGPT':'suppliers',
-        'Insurers_source_chatGPT':'insurers',
-        'Subcontractors_source_chatGPT':'subcontractors',
     }
     banks_new_column = {
         'Bank Name':'name',
