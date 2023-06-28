@@ -26,9 +26,6 @@ def load_renamed_columns():
         'Operators_source_GEM':'operators',
         'Parent_company_source_GEM':'parent_company',
         'Multiple_unit_concerned_source_GEM':'multiple_unit',
-        'Suppliers_source_chatGPT':'suppliers',
-        'Insurers_source_chatGPT':'insurers',
-        'Subcontractors_source_chatGPT':'subcontractors',
     }
     banks_new_column = {
         'Bank Name':'name',
@@ -53,7 +50,15 @@ def load_renamed_columns():
     }
     country_new_column = {
         'Country_source_CB':'name',
+        'Emissions_per_capita_tons_CO2':'emissions_per_capita_tons_co2',
+        'Emissions_thousand_tons_CO2':'emissions_thousand_tons_co2',
+        'GDP_millions_US_dollars':'gdp_millions_us_dollars',
+        'GDP_per_capita_US_dollars':'gdp_per_capita_us_dollars',
+        'Population_in_millions':'population_in_millions',
+        'Surface_thousand_km2':'surface_thousand_km2',
+        'Year_Surface_thousand_km2':'year_surface_thousand_km2',
     }
+    
     return (
         carbon_bombs_new_column,
         companies_new_column,
@@ -134,20 +139,24 @@ def write_connexions(driver):
         encoding='utf-8-sig',
         index=False)
     query_cb_company = '''
-        MATCH (cb:carbon_bomb {name: $carbon_bomb})
+        MATCH (cb:carbon_bomb {name: $carbon_bomb, country: $country})
         MATCH (c:company {name: $company})
         MERGE (c)-[:OPERATES {weight: $weight}]->(cb)
     '''
-    def create_interaction_cb_companies(tx,cb, company, weight):
-        tx.run(query_cb_company, carbon_bomb = cb, company = company,
+    def create_interaction_cb_companies(tx,cb, company, country, weight):
+        tx.run(query_cb_company,
+               carbon_bomb = cb,
+               company = company,
+               country = country,
                weight = weight)
     with driver.session(database="neo4j") as session:
         for _, row in carbonbombs_companies.iterrows():
             carbon_bomb = row['Carbon_bomb_name']
             company = row['Company']
+            country = row['Country']
             weight = row['Percentage']
             session.execute_write(create_interaction_cb_companies,
-                                  carbon_bomb, company, weight) 
+                                  carbon_bomb, company, country, weight) 
                             
     ### Banks and Companies relationship 
     banks_companies = pd.read_csv("./data_cleaned/connexion_bank_company.csv")
@@ -219,7 +228,7 @@ def write_connexions(driver):
         encoding='utf-8-sig',
         index=False)
     query_cb_country = '''
-        MATCH (cb:carbon_bomb {name: $carbon_bomb})
+        MATCH (cb:carbon_bomb {name: $carbon_bomb, country: $country})
         MATCH (c:country {name: $country})
         MERGE (cb)-[:IS_LOCATED]->(c)
     '''
