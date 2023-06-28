@@ -14,6 +14,7 @@ import re
 import pandas as pd
 import numpy as np
 import warnings
+import awoc
 from fuzzywuzzy import fuzz
 from data_sources.manual_match import manual_match_coal
 from data_sources.manual_match import manual_match_gasoil
@@ -1207,6 +1208,16 @@ def create_carbon_bombs_table():
     df_carbon_bombs = pd.concat(
         [df_carbon_bombs,  pd.DataFrame.from_dict(manual_data_to_add)]
     ).reset_index(drop=True)
+    
+    # Add World region column to the database
+    # First need to remap Turkey / Türkiye country
+    df_carbon_bombs.replace({'Türkiye': 'Turkey'},inplace = True)
+    # Add World Region associated to Headquarters country
+    world_region = awoc.AWOC()
+    df_carbon_bombs["World_region"]=df_carbon_bombs["Country_source_CB"].apply(
+        world_region.get_country_continent_name)
+    # Remap back Turkey / Türkiye country
+    df_carbon_bombs.replace({'Turkey':'Türkiye'},inplace = True)
 
     return df_carbon_bombs
     
