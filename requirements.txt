@@ -60,7 +60,6 @@ rsa==4.9
 scikit-learn==1.2.2
 scipy==1.10.1
 six==1.16.0
-sklearn==0.0.post4
 smart-open==6.3.0
 snowballstemmer==2.2.0
 soupsieve==2.4.1
