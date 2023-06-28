@@ -1,3 +1,4 @@
+a-world-of-countries==1.0.0
 absl-py==1.4.0
 alabaster==0.7.13
 astunparse==1.6.3
@@ -47,6 +48,7 @@ Pillow==9.5.0
 protobuf==4.22.3
 pyasn1==0.5.0
 pyasn1-modules==0.3.0
+pydash==7.0.4
 Pygments==2.15.1
 pyparsing==3.0.9
 python-dateutil==2.8.2
@@ -86,4 +88,4 @@ tzdata==2023.3
 urllib3==1.26.15
 Werkzeug==2.3.0
 wrapt==1.14.1
-xlsxwriter
+XlsxWriter==3.1.2

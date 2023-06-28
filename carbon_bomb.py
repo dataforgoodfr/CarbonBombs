@@ -9,7 +9,6 @@ Examples:
 To use this script, simply run it from the command line:
 $ python main.py
 """
-import os
 import sys
 import re
 import pandas as pd
@@ -18,7 +17,6 @@ import warnings
 from fuzzywuzzy import fuzz
 from data_sources.manual_match import manual_match_coal
 from data_sources.manual_match import manual_match_gasoil
-
 from data_sources.manual_data import manual_data_to_add
 
 
