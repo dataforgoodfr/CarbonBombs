@@ -53,7 +53,15 @@ def load_renamed_columns():
     }
     country_new_column = {
         'Country_source_CB':'name',
+        'Emissions_per_capita_tons_CO2':'emissions_per_capita_tons_co2',
+        'Emissions_thousand_tons_CO2':'emissions_thousand_tons_co2',
+        'GDP_millions_US_dollars':'gdp_millions_us_dollars',
+        'GDP_per_capita_US_dollars':'gdp_per_capita_us_dollars',
+        'Population_in_millions':'population_in_millions',
+        'Surface_thousand_km2':'surface_thousand_km2',
+        'Year_Surface_thousand_km2':'year_surface_thousand_km2',
     }
+    
     return (
         carbon_bombs_new_column,
         companies_new_column,
