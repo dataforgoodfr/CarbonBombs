@@ -19,6 +19,7 @@ import pandas as pd
 import awoc
 import requests
 from bs4 import BeautifulSoup, SoupStrainer
+from geopy.geocoders import Nominatim
 from data_sources.manual_match import manual_match_bank
 from data_sources.uniform_company_name import uniform_company_name
 
@@ -373,6 +374,24 @@ def scrapping_company_location():
     # Rename company column with uniformed Name
     df_output['Company_name'] = (df_output['Company_name'].
                                  replace(uniform_company_name))
+    # Add country associated to the coordinates
+    def get_country(lat, long):
+        if lat == 0 and long == 0:
+            pass
+        location = geolocator.reverse([lat, long],
+                                      exactly_one=True,
+                                      language='en')
+        address = location.raw['address']
+        country = address.get('country', '')
+        return country
+    
+    geolocator = Nominatim(user_agent="geoapiExercises")
+    df_output['Country'] = df_output.apply(lambda row: get_country(
+        row['Latitude'],row['Longitude']), axis=1)
+    # Add World Region associated to Headquarters country
+    world_region = awoc.AWOC()
+    df_output["World_region"]=df_output["Country"].apply(
+        world_region.get_country_continent_name)
     return df_output
 
 def add_column_carbon_bombs_connexion(df_company):
