@@ -78,8 +78,10 @@ def split_column_parent_company(row):
     - This function requires the pandas library to be installed.
     """
     instance = row['Carbon_bomb_name_source_CB']
+    country = row['Country_source_CB']
     companies = row["Parent_company_source_GEM"].split(';')
     carbon_bomb_list_company = ([{'Carbon_bomb_name_source_CB': instance,
+                                  'Country_source_CB':country,
                                  'Parent_company_source_GEM': company} 
                                  for company in companies])
     return carbon_bomb_list_company
@@ -105,6 +107,7 @@ def company_involvement_in_carbon_bombs():
     df_carbon_bombs = load_carbon_bombs_database()
     df_carbon_bombs_company = df_carbon_bombs.loc[:,[
         "Carbon_bomb_name_source_CB",
+        "Country_source_CB",
         "Parent_company_source_GEM"]]
     # Force type of column Parent_Company
     df_carbon_bombs_company["Parent_company_source_GEM"] = (
@@ -128,10 +131,10 @@ def company_involvement_in_carbon_bombs():
     df.drop("Parent_company_source_GEM", axis = 1, inplace = True)
     # Rename column name
     df = df.rename(columns={'Carbon_bomb_name_source_CB': 'Carbon_bomb_name',
+                            'Country_source_CB':'Country',
                             'company':'Company',
                             'percentage':'Percentage',
                             })
-
     return df
 
 def clean(text):
