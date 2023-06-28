@@ -142,8 +142,8 @@ def write_connexions(driver):
         encoding='utf-8-sig',
         index=False)
     query_cb_company = '''
-        MATCH (cb:carbon_bomb {name: $carbon_bomb})
-        MATCH (c:company {name: $company, country: $country})
+        MATCH (cb:carbon_bomb {name: $carbon_bomb, country: $country})
+        MATCH (c:company {name: $company})
         MERGE (c)-[:OPERATES {weight: $weight}]->(cb)
     '''
     def create_interaction_cb_companies(tx,cb, company, country, weight):
