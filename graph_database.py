@@ -40,6 +40,7 @@ def load_renamed_columns():
         'Source BankTrack':'source',
         'Latitude':'latitude',
         'Longitude':'longitude',
+        'World Region' : 'world_region'
     }
     companies_new_column = {
         'Company_name':'name',
