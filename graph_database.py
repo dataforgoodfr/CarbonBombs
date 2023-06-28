@@ -231,7 +231,7 @@ def write_connexions(driver):
         encoding='utf-8-sig',
         index=False)
     query_cb_country = '''
-        MATCH (cb:carbon_bomb {name: $carbon_bomb})
+        MATCH (cb:carbon_bomb {name: $carbon_bomb, country: $country})
         MATCH (c:country {name: $country})
         MERGE (cb)-[:IS_LOCATED]->(c)
     '''
