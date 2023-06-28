@@ -143,19 +143,23 @@ def write_connexions(driver):
         index=False)
     query_cb_company = '''
         MATCH (cb:carbon_bomb {name: $carbon_bomb})
-        MATCH (c:company {name: $company})
+        MATCH (c:company {name: $company, country: $country})
         MERGE (c)-[:OPERATES {weight: $weight}]->(cb)
     '''
-    def create_interaction_cb_companies(tx,cb, company, weight):
-        tx.run(query_cb_company, carbon_bomb = cb, company = company,
+    def create_interaction_cb_companies(tx,cb, company, country, weight):
+        tx.run(query_cb_company,
+               carbon_bomb = cb,
+               company = company,
+               country = country,
                weight = weight)
     with driver.session(database="neo4j") as session:
         for _, row in carbonbombs_companies.iterrows():
             carbon_bomb = row['Carbon_bomb_name']
             company = row['Company']
+            country = row['Country']
             weight = row['Percentage']
             session.execute_write(create_interaction_cb_companies,
-                                  carbon_bomb, company, weight) 
+                                  carbon_bomb, company, country, weight) 
                             
     ### Banks and Companies relationship 
     banks_companies = pd.read_csv("./data_cleaned/connexion_bank_company.csv")
