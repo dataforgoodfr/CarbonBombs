@@ -26,6 +26,7 @@ def load_renamed_columns():
         'Operators_source_GEM':'operators',
         'Parent_company_source_GEM':'parent_company',
         'Multiple_unit_concerned_source_GEM':'multiple_unit',
+        'World Region' : 'world_region'
     }
     banks_new_column = {
         'Bank Name':'name',
@@ -40,13 +41,16 @@ def load_renamed_columns():
         'Source BankTrack':'source',
         'Latitude':'latitude',
         'Longitude':'longitude',
+        'World Region' : 'world_region'
     }
     companies_new_column = {
         'Company_name':'name',
         'Address_headquarters_source_chatGPT':'headquarters_address',
         'Latitude':'latitude',
         'Longitude':'longitude',
-        'Carbon_bomb_connected':'carbon_bomb_connected'
+        'Carbon_bomb_connected':'carbon_bomb_connected',
+        'Country':'country',
+        'World Region':'world_region'
     }
     country_new_column = {
         'Country_source_CB':'name',
@@ -240,6 +244,53 @@ def write_connexions(driver):
             country = row['Country']
             session.execute_write(create_interaction_cb_countries,
                                   carbon_bomb, country)
+
+    ### Company and Country relationship
+    company_informations = pd.read_csv(
+        "./data_cleaned/company_informations.csv")
+    filtered_columns = ['Company_name','Country']
+    companies_countries = company_informations[filtered_columns]
+    companies_countries.columns = ["Company","Country"]
+    companies_countries.to_csv(
+        "./data_neo4j/connexion_company_country.csv",
+        encoding='utf-8-sig',
+        index=False)
+    query_company_country = '''
+        MATCH (cp:company {name: $company, country: $country})
+        MATCH (c:country {name: $country})
+        MERGE (cp)-[:IS_LOCATED]->(c)
+    '''
+    def create_interaction_companies_countries(tx, company, country):
+        tx.run(query_company_country, company = company, country = country)
+    with driver.session(database="neo4j") as session:
+        for _, row in companies_countries.iterrows():
+            company = row['Company']
+            country = row['Country']
+            session.execute_write(create_interaction_companies_countries,
+                                  company, country)
+    ### Bank and Country relationship
+    bank_informations = pd.read_csv(
+        "./data_cleaned/bank_informations.csv")
+    filtered_columns = ['Bank Name','Headquarters country']
+    banks_countries = bank_informations[filtered_columns]
+    banks_countries.columns = ["Bank","Country"]
+    banks_countries.to_csv(
+        "./data_neo4j/connexion_bank_country.csv",
+        encoding='utf-8-sig',
+        index=False)
+    query_bank_country = '''
+        MATCH (b:bank {name: $bank, country: $country})
+        MATCH (c:country {name: $country})
+        MERGE (b)-[:IS_LOCATED]->(c)
+    '''
+    def create_interaction_banks_countries(tx, bank, country):
+        tx.run(query_bank_country, bank = bank, country = country)
+    with driver.session(database="neo4j") as session:
+        for _, row in banks_countries.iterrows():
+            bank = row['Bank']
+            country = row['Country']
+            session.execute_write(create_interaction_banks_countries,
+                                  bank, country)
     
 def update_neo4j():
     carbon_bombs, companies, banks, countries = update_csv_nodes_neo4j()

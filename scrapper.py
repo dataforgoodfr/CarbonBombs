@@ -16,10 +16,13 @@ $ python scrapper.py
 import sys
 from credentials import API_KEY
 import pandas as pd
+import awoc
 import requests
 from bs4 import BeautifulSoup, SoupStrainer
+from geopy.geocoders import Nominatim
 from data_sources.manual_match import manual_match_bank
 from data_sources.uniform_company_name import uniform_company_name
+
 
 # Define the target URL of Bank Track
 # URL = 'https://www.banktrack.org/banks'
@@ -302,7 +305,16 @@ def main_scrapping_function(url):
     # Make a remap of bank name based on manual_match_bank in order to have 
     # coherent key values in BOCC and banking_informations.csv
     df['Bank Name'] = df['Bank Name'].replace(manual_match_bank)
+    # Create columns bank logos
     df["Bank logo"] = bank_logos
+    # Remap some country name
+    df['Headquarters country'].replace({'Taiwan, Republic of China': 'Taiwan',
+                                        'Russian Federation': 'Russia',
+                                        },inplace = True)
+    # Add World Region associated to Headquarters country
+    world_region = awoc.AWOC()
+    df["World Region"] = df["Headquarters country"].apply(
+        world_region.get_country_continent_name)
     # Return dataframe with all info on bank companies
     return df
 
@@ -362,6 +374,24 @@ def scrapping_company_location():
     # Rename company column with uniformed Name
     df_output['Company_name'] = (df_output['Company_name'].
                                  replace(uniform_company_name))
+    # Add country associated to the coordinates
+    def get_country(lat, long):
+        if lat == 0 and long == 0:
+            pass
+        location = geolocator.reverse([lat, long],
+                                      exactly_one=True,
+                                      language='en')
+        address = location.raw['address']
+        country = address.get('country', '')
+        return country
+    
+    geolocator = Nominatim(user_agent="geoapiExercises")
+    df_output['Country'] = df_output.apply(lambda row: get_country(
+        row['Latitude'],row['Longitude']), axis=1)
+    # Add World Region associated to Headquarters country
+    world_region = awoc.AWOC()
+    df_output["World_region"]=df_output["Country"].apply(
+        world_region.get_country_continent_name)
     return df_output
 
 def add_column_carbon_bombs_connexion(df_company):

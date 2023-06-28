@@ -6,7 +6,6 @@ Script that generated dataframe and associated csv file on bank side.
 
 import re
 import pandas as pd
-import numpy as np
 from fuzzywuzzy import fuzz
 from data_sources.manual_match import manual_match_company
 
