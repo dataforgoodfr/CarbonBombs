@@ -19,6 +19,9 @@ from fuzzywuzzy import fuzz
 from data_sources.manual_match import manual_match_coal
 from data_sources.manual_match import manual_match_gasoil
 from data_sources.manual_data import manual_data_to_add
+import time
+import requests
+from bs4 import BeautifulSoup
 
 
 def load_carbon_bomb_list_database():
@@ -1040,6 +1043,144 @@ def cancel_duplicated_rename(df):
     return df
     
 
+
+def cleanhtml(raw_html):
+    """This function cleans html tag to extract only text.
+
+    Args:
+        raw_html: html code
+
+    Returns:
+        Cleaned text without html tag"""
+    
+    CLEAN = re.compile('<.*?>') 
+    QUOTE = re.compile('\[[0-9]\]')
+    cleantext = re.sub(CLEAN, '', raw_html)
+    cleantext = re.sub(QUOTE, '', cleantext)
+    cleantext = cleantext.strip('\n')
+    return cleantext
+
+def cleanyear(string_year):
+    """This function cleans a string to extract only 4 digits years.
+
+    Args:
+        string_year: a string to clean
+
+    Returns:
+        Cleaned year with format YYYY"""
+    
+    YEAR = re.compile('[0-9]{4}')
+    # if several years are displayed, I take the first: 2020/2021 => 2020
+    string_year = re.findall(YEAR, string_year)[0]
+    if string_year:
+        return string_year
+    else: 
+        return 'No start year available'
+    
+def get_start_date_from_soup(soup):
+    """This function extract the year field from GEM.
+
+    Args:
+        soup: html page
+
+    Returns:
+        The project start year if available. Else, string 'No start year available'."""
+    
+    for item in soup.find_all('li'):
+        if 'start year' in str(item.text).lower() :
+            start_year=str(item.text).split(':')[1]
+            if start_year:
+                start_year=cleanhtml(start_year)
+            else:
+                start_year='No start year available'
+    return start_year
+
+def get_description_from_soup(soup):
+    """This function extract the year field from GEM.
+
+    Args:
+        soup: html page
+
+    Returns:
+        The project description if available. Else, string 'No description available'."""
+    description = str(soup.find_all('div', attrs={'class':'mw-parser-output'})[0].find_all('p')[0])
+    if description:
+        description = cleanhtml(description)
+    else:
+        description = 'No description available'
+    return description
+
+def get_information_from_GEM(df):
+    
+    description = list()
+    start_year = list()
+    
+    url = df['GEM_url_source_GEM'].tolist()
+    
+    for num, item in enumerate(url):
+        time.sleep(0.2)
+        if item in ['No informations available on GEM', 'New project']:
+            description_ = 'No description available'
+            start_year_  = 'No start year available'
+        else:
+            item = item.split(';')[0]
+            r = requests.get(item)
+            soup = BeautifulSoup(r.text, features="html.parser")
+            try:
+                description_ = get_description_from_soup(soup)
+            except:
+                description_ = 'No description available'
+            try:
+                start_year_ = get_start_date_from_soup(soup)
+                if start_year_ != 'No start year available':
+                    start_year_ = cleanyear(start_year_)
+            except:
+                start_year_   = 'No start year available'
+        description.append(description_)
+        start_year.append(start_year_)
+        
+    df['Carbon_bomb_description']=description
+    df['Carbon_bomb_start_year']=start_year
+    
+    return df
+
+def complete_GEM_with_ChatGPT(df):
+    dtypes = {
+        'Name':'string',
+        'Start year':'string',
+        'Description':'string',
+        "Country":"string"
+    }								
+
+    file_path = "./data_sources/Data_chatGPT_carbon_bombs.csv"
+    gpt_df = pd.read_csv(file_path, sep=';', usecols=[0,1,7,8], dtype=dtypes)
+    df = pd.merge(left=df, 
+                  right=gpt_df, 
+                  how='left', 
+                  left_on=['Carbon_bomb_name_source_CB', "Country_source_CB"],
+                  right_on=['Name', "Country"],
+                  suffixes=('', ''))
+    df['Carbon_bomb_description_source'] = df.apply(lambda row: 'ChatGPT' if \
+                                             (row['Carbon_bomb_description']=='No informations available on GEM'\
+                                              or row['Carbon_bomb_description']=='New project') \
+                                              else 'GEM', axis=1)
+    df['Carbon_bomb_start_year_source'] = df.apply(lambda row: 'ChatGPT' if \
+                                             row['Carbon_bomb_start_year'] == 'No start year available'\
+                                             else 'GEM', axis=1)
+    df['Carbon_bomb_start_year'] = df.apply(lambda row: row['Start year'] if \
+                                            row['Carbon_bomb_start_year'] == 'No start year available' \
+                                            else row['Carbon_bomb_start_year'], axis=1)
+    df['Carbon_bomb_description'] = df.apply(lambda row: row['Description'] if \
+                                             (row['Carbon_bomb_description']=='No informations available on GEM'\
+                                              or \
+                                              row['Carbon_bomb_description']=='New project') \
+                                             else row['Carbon_bomb_description'], axis=1)
+                                                    
+    df=df.drop(labels=['Name', 'Start year', 'Description'], axis=1)
+                                                    
+    return df        
+
+
 def create_carbon_bombs_table():
     """
     Creates a table of carbon bomb projects by merging coal and gas/oil tables,
@@ -1202,6 +1343,9 @@ def create_carbon_bombs_table():
     df_carbon_bombs.loc[
         df_carbon_bombs.Carbon_bomb_name_source_CB == "Khafji", "Country_source_CB"
     ] = "Kuwait"
+
+    df_carbon_bombs = get_information_from_GEM(df_carbon_bombs)
+    df_carbon_bombs = complete_GEM_with_ChatGPT(df_carbon_bombs)
 
     # Add manualy EACOP carbon bomb
     df_carbon_bombs["Bomb_type"] = "Extraction"
