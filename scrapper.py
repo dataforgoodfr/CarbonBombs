@@ -374,6 +374,9 @@ def scrapping_company_location():
     # Rename company column with uniformed Name
     df_output['Company_name'] = (df_output['Company_name'].
                                  replace(uniform_company_name))
+    # Drop uniformed companies (avoid duplicates)
+    df_output = df_output.drop_duplicates().reset_index(drop=True)
+
     # Add country associated to the coordinates
     def get_country(lat, long):
         if lat == 0 and long == 0:
