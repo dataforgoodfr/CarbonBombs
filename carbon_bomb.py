@@ -1116,10 +1116,10 @@ def get_information_from_GEM(df):
     start_year = list()
     
     url = df['GEM_url_source_GEM'].tolist()
-    
+
     for num, item in enumerate(url):
         time.sleep(0.2)
-        if item in ['No informations available on GEM', 'New project']:
+        if item in ['No informations available on GEM', 'New project','Qcoal']:
             description_ = 'No description available'
             start_year_  = 'No start year available'
         else:

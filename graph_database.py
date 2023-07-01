@@ -26,7 +26,7 @@ def load_renamed_columns():
         'Operators_source_GEM':'operators',
         'Parent_company_source_GEM':'parent_company',
         'Multiple_unit_concerned_source_GEM':'multiple_unit',
-        'World Region' : 'world_region'
+        'World_region' : 'world_region'
     }
     banks_new_column = {
         'Bank Name':'name',
@@ -50,7 +50,7 @@ def load_renamed_columns():
         'Longitude':'longitude',
         'Carbon_bomb_connected':'carbon_bomb_connected',
         'Country':'country',
-        'World Region':'world_region'
+        'World_region':'world_region'
     }
     country_new_column = {
         'Country_source_CB':'name',

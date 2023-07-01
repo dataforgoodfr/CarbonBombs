@@ -393,8 +393,12 @@ def scrapping_company_location():
         row['Latitude'],row['Longitude']), axis=1)
     # Add World Region associated to Headquarters country
     world_region = awoc.AWOC()
-    df_output["World_region"]=df_output["Country"].apply(
-        world_region.get_country_continent_name)
+    df_output["World_region"] = ""
+    for index, row in df_output.iterrows():
+        if row["Latitude"] == 0 and row["Longitude"] == 0:
+            continue
+        else:
+            df_output.at[index, 'World_region'] = world_region.get_country_continent_name(row['Country'])
     return df_output
 
 def add_column_carbon_bombs_connexion(df_company):
