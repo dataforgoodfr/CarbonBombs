@@ -66,7 +66,6 @@ if __name__ == '__main__':
     df_cb.to_csv("./data_cleaned/connexion_carbonbombs_company.csv",
                  index=False)
     print("connexion_carbonbombs_company.csv : done\n")
-
     df_bank.to_csv("./data_cleaned/connexion_bank_company.csv",
                    encoding='utf-8-sig', index=False)
     print("connexion_bank_company.csv : done\n")
@@ -75,6 +74,9 @@ if __name__ == '__main__':
         # Step3 : Scrape bank informations
         URL = 'https://www.banktrack.org/banks'
         df_bank_info = main_scrapping_function(URL)
+        # Filter Bank information based on unique values in BOCC
+        bank_list = df_bank["Bank"].unique()
+        df_bank_info = df_bank_info[df_bank_info['Bank Name'].isin(bank_list)]
         df_bank_info.to_csv("./data_cleaned/bank_informations.csv",
                             encoding='utf-8-sig', index=False)
         print("bank_informations.csv : done\n")
@@ -84,7 +86,6 @@ if __name__ == '__main__':
         df_comp_info.to_csv("./data_cleaned/company_informations.csv",
                             encoding='utf-8-sig', index=False)
         print("company_informations.csv : done\n")
-
     else:
         print("Create your own Google MAPS API KEY to scrap GPS coordinates.\n"
               "Skipping Step3 and Step4\n")
