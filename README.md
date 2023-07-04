@@ -25,6 +25,7 @@ Files located in data_sources folder consitute the source data associated to the
 - Global-Coal-Mine-Tracker-April-2023.xlsx : The Global Coal Mine Tracker (GCMT) is a worldwide dataset of coal mines and proposed projects. The tracker provides asset-level details on ownership structure, development stage and status, coal type, production, workforce size, reserves and resources, methane emissions, geolocation, and over 30 other categories. This data will not be tracked under this repository as it Distributed under a Creative Commons Attribution 4.0 International License. It can be freely download through this page : <https://globalenergymonitor.org/projects/global-coal-mine-tracker/download-data/>
 - Global-Oil-and-Gas-Extraction-Tracker-Feb-2023.xlsx : The Global Oil and Gas Extraction Tracker (GOGET) is a global dataset of oil and gas resources and their development. GOGET includes information on discovered, in-development, and operating oil and gas units worldwide, including both conventional and unconventional assets. This data will not be tracked under this repository as it Distributed under a Creative Commons Attribution 4.0 International License. It can be freely download through this page : <https://globalenergymonitor.org/projects/global-oil-gas-extraction-tracker/>
 - undata_*.csv : Statistical datasets downloaded from the UNSD databases website (<https://data.un.org/>)
+- company_url.csv : URLs of website and logos of companies found manually.
 
 ## Output data
 
@@ -55,6 +56,15 @@ The files located in the "data_cleaned" folder constitute the database we use to
     - carbon_bombs_informations.csv (created hereabove and located in the data_cleaned folder)
     - undata_*.csv
 - carbon_bombs_all_datasets.xlsx : This file contains all previous files but stored into different tabs. Tabs name match the dataset name.
+
+The 'img' folder stores all images, in particular:
+
+- bank logos in subfolder 'logo_bank'.
+  - Script that downloaded these files: scrapper.py
+  - Source of the data: <https://www.banktrack.org/>
+- company logos in subfolder 'logo_company'. The ID_tmp provides a temporary ID for each studied company. The list of companies is based on the file company_informations.csv.
+  - Script that downloaded these files: scrapper.py
+  - Source of the data: Official websites and Wikipedia. Additional sources can also be used and are referenced in the file company_url.csv
 
 # Code Documentation
 

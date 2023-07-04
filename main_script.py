@@ -11,7 +11,7 @@ import os
 import pandas as pd
 from carbon_bomb import create_carbon_bombs_table
 from connexion import main_connexion_function
-from scrapper import main_scrapping_function, scrapping_company_location
+from scrapper import main_scrapping_function, scrapping_company_location, saving_logos
 from countries import create_country_table
 from graph_database import purge_database, update_neo4j
 
@@ -90,14 +90,32 @@ if __name__ == '__main__':
         print("Create your own Google MAPS API KEY to scrap GPS coordinates.\n"
               "Skipping Step3 and Step4\n")
 
-    # Step5 : Scrap countries informations
+    # Step5 : Save companies' and banks' logos
+    csv_file_company = "./data_sources/company_url.csv"
+    company_url_field = ['Logo_OfficialWebsite',
+                         'Logo_Wikipedia_Large',
+                         'Logo_OtherSource'
+                        ]
+    company_name_field = 'Company_name'
+    company_logo_dest_folder = "./img/logo_company/"
+    saving_logos(csv_file_company, company_name_field, company_url_field, 
+                 company_logo_dest_folder)
+
+    csv_file_bank = "./data_cleaned/bank_informations.csv"
+    bank_url_field = 'Bank logo'
+    bank_name_field = 'Bank Name'
+    bank_logo_dest_folder = "./img/logo_bank/"
+    saving_logos(csv_file_bank, bank_name_field, bank_url_field, 
+                 bank_logo_dest_folder, file_extension='jpeg')
+
+    # Step6 : Scrap countries informations
     df_countries = create_country_table(DATA_SOURCES_PATH)
     df_countries.to_csv("./data_cleaned/country_informations.csv",
                         encoding='utf-8-sig', index=False)
     print("country_informations.csv : done\n")
-    # Step6 : Concatenate all csv files into a main Excel file
+    # Step7 : Concatenate all csv files into a main Excel file
     concat_dataframe_into_excel(CONCAT_DATA_FILE_PATH)
-    # Step7 : Update data into Neo4j folder and database
+    # Step8 : Update data into Neo4j folder and database
     purge_database()
     update_neo4j()
     
