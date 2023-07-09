@@ -374,9 +374,24 @@ def scrapping_company_location():
     # Rename company column with uniformed Name
     df_output['Company_name'] = (df_output['Company_name'].
                                  replace(uniform_company_name))
-    # Drop uniformed companies (avoid duplicates)
+    # Drop perfect duplicates companies
     df_output = df_output.drop_duplicates().reset_index(drop=True)
-
+    # Isolate duplicated companies that will be droped
+    duplicates = df_output.loc[df_output.duplicated('Company_name',
+                                                    keep=False)].copy()
+    # Calculates len of adress column
+    duplicates["column_len"]=(duplicates["Address_headquarters_source_chatGPT"]
+                              .apply(len))
+    # Order by Carbon_bomb_connected first (NaN will always be last record) and
+    # column_len (We keep the simpliest address as there is some doubt)
+    duplicates.sort_values(["Company_name","Carbon_bomb_connected","column_len"]
+                           ,inplace=True)
+    duplicates.reset_index(inplace=True)
+    # Get index of column to drop in the main dataframe df_output
+    drop_index = list(duplicates.drop_duplicates("Company_name",keep="last")
+                      ["index"])
+    # Drop those index from df_output
+    df_output.drop(drop_index,inplace = True)
     # Add country associated to the coordinates
     def get_country(lat, long):
         if lat == 0 and long == 0:
