@@ -1268,6 +1268,13 @@ def create_carbon_bombs_table():
     # Clean percentage in column Parent_company
     # Clean data into Parent company columns 
     df_carbon_bombs["Parent_Company"].fillna("",inplace=True)
+    df_carbon_bombs['Parent_Company'] = df_carbon_bombs.apply(
+        lambda row: row['Operators'] 
+        if row['Parent_Company'] == "" 
+        else row['Parent_Company'],
+        axis=1
+    )
+    df_carbon_bombs["Parent_Company"].fillna("",inplace=True)
     df_carbon_bombs["Parent_Company"] = df_carbon_bombs["Parent_Company"]\
                                         .apply(compute_percentage_multi_sites)
     # Drop column Owners (next to decision taken during GEM interview)
