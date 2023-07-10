@@ -8,6 +8,7 @@ data_sources/Carbon_bomb_personalDB.csv
 data_cleaned/diffGPT_GEM_coal_only.csv
 report_gasoil
 working_documents/*
+img/
 
 # Editors
 .vscode/

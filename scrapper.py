@@ -43,6 +43,130 @@ def get_url_from_banktrack_div(div) -> str:
     
     return url
 
+
+def select_logos(csv_file, url_field):
+    """
+    Select URL from URLs located in one or several column of the specified CSV
+    file. Keep only rows with existing URLs.
+    If URLs are located on several columns, this code prioritizes the URL of
+    the first column provided by url_field, then the 2nd column if URL is
+    missing in the first column, then the 3rd column...
+    Example for url_field = ['Logo_Col1','Logo_Col2','Logo_Col3']:
+    df['URL_logo'] = df['Logo_Col1'].fillna(df['Logo_Col2']) \
+                                    .fillna(df['Logo_Col3'])
+
+    Args:
+        csv_file (str): The path and name of the CSV file.
+        url_field (str or list): The column or list of columns
+                                 (in priority order) where URLs are located.
+
+    Returns:
+        Dataframe with columns from csv_file and an additional column Logo_URL
+        containing the selected URL of logos.
+
+    Raises:
+        None.
+    """
+    df = pd.read_csv(csv_file, sep=",")
+
+    # Identification of the URL
+    if len(url_field)==1 or isinstance(url_field, str):
+        df['Logo_URL'] = df.loc[:,url_field]
+    else:
+        df['Logo_URL'] = df.loc[:,url_field[0]]
+        for i in range(len(url_field)-1):
+            df['Logo_URL'] = df['Logo_URL'].fillna(df.loc[:,url_field[i+1]])
+
+    # Rows with missing URL removed
+    df.dropna(subset = ['Logo_URL'], inplace=True)
+    df.reset_index(drop=True, inplace=True)
+
+    return df
+
+##############################################################################
+# The 2 following def are currently not in use
+def saving_image(url, output_filename, output_folder_path):
+    """
+    Download and store an image located at a specific url.
+
+    Args:
+        url (str): The URL of the image.
+        output_filename (str): The filename of the image to be saved.
+        output_folder_path (str): The destination path to store the image.
+
+    Returns:
+        Image located in the defined folder.
+
+    Raises:
+        None: However, if the HTTP request fails, it prints an error message
+              and terminates the script.
+    """
+    # Send an HTTP request to the target URL (timeout is set to 60 seconds)
+    myfile = requests.get(url, timeout=60)
+
+    # Check if the request was successful (HTTP status code 200)
+    if myfile.status_code != 200:
+        print(
+            f"Failed to fetch the page. HTTP status: {myfile.status_code} "
+            "Please try again later"
+        )
+        sys.exit()
+
+    path = output_folder_path + output_filename
+    url_content = myfile.content
+    # write the contents to a csv file
+    output_file = open(path, "wb")
+    output_file.write(url_content)
+    # close the file
+    output_file.close()
+
+def saving_logos(csv_file, entity_name_field, url_field, destination_folder, 
+                 file_extension=""):
+    """
+    Download and store all images from URLs located in the specified CSV file.
+
+    Args:
+        csv_file (str): The path and name of the CSV file.
+        entity_name_field (str): The column providing entity names.
+        url_field (str or list): The column or list of columns
+                                 (in priority order) where URLs are located.
+        destination_folder (str): The destination path to store images.
+        file_extension (str): Extension of the output file.
+                              By default, extension of the downloaded file.
+
+    Returns:
+        Images located in the defined folder.
+        By convention, images will be saved with the following name:
+        entity_name.extension where:
+        - 'entity_name' is the entity name
+        - 'extension' is the file extension provided by the URL.
+
+    Raises:
+        None: However, if the HTTP request fails, it prints an error message
+              and terminates the script.
+    """
+    df = select_logos(csv_file, url_field)
+
+    for i in range(len(df)):
+        entity_logo_url = df.loc[i,'Logo_URL']
+        # File extension for record i
+        if file_extension == "":
+            #file_extension = df.loc[i,'File_extension']
+            file_extension_i = entity_logo_url.rsplit('.', 1)[-1] \
+                                              .split('?', 1)[0]
+        else:
+            file_extension_i = file_extension
+        # File name for record i
+        entity_filename = df.loc[i,entity_name_field].replace('/', '_') + '.' + file_extension_i
+        try:
+            saving_image(entity_logo_url, entity_filename, destination_folder)
+        except:
+            print(f"The image for the company {df.loc[i,entity_name_field]} "
+                  "couldn't be downloaded. "
+                  "URL: {entity_logo_url}")
+##############################################################################
+
+
 def scrapping_main_page_bank_track(url):
     """
     Scrapes the main page of bank track website and extracts URLs of individual 
@@ -414,6 +538,20 @@ def scrapping_company_location():
             continue
         else:
             df_output.at[index, 'World_region'] = world_region.get_country_continent_name(row['Country'])
+
+    # Add logo URLs
+    # Load list company and logo URL
+    csv_file_company = "./data_sources/company_url.csv"
+    company_url_field = ['Logo_OfficialWebsite',
+                         'Logo_Wikipedia_Large',
+                         'Logo_OtherSource'
+                        ]
+    df_logos = select_logos(csv_file_company, company_url_field)
+    # Add logo to the output dataframe
+    df_logos = df_logos.reindex(columns=['Company_name','Address_headquarters_source_chatGPT','Logo_URL'])
+    df_output = pd.merge(df_output, df_logos,
+                         on=['Company_name','Address_headquarters_source_chatGPT'],
+                         how='left')
     return df_output
 
 def add_column_carbon_bombs_connexion(df_company):
