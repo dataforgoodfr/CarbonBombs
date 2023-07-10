@@ -4,7 +4,7 @@ ACG (Azeri-Chirag-Guneshli Deep Water),Azerbaijan,BP P.L.C.,35.8
 ACG (Azeri-Chirag-Guneshli Deep Water),Azerbaijan,Equinor ASA,8.6
 ACG (Azeri-Chirag-Guneshli Deep Water),Azerbaijan,Inpex Corp,11.0
 ACG (Azeri-Chirag-Guneshli Deep Water),Azerbaijan,Others,33.0
-Abqaiq,Saudi Arabia,No informations on company,100.0
+Abqaiq,Saudi Arabia,Saudi Aramco,100.0
 Afşin-Elbistan Coal Mine,Türkiye,Euas Electricity Generation Company,100.0
 Agha Jari,Iran,National Iranian Oil Company,100.0
 Ahwaz Asmari,Iran,National Iranian Oil Company,100.0
@@ -12,7 +12,7 @@ Ahwaz Bangestan,Iran,National Iranian Oil Company,100.0
 Al Khaleej Gas project,Qatar,QatarEnergy,60.0
 Al Khaleej Gas project,Qatar,TotalEnergies SE,40.0
 Alpha North Coal Mine,Australia,GVK Group,100.0
-Anadarko Shelf_Oklahoma,United States,No informations on company,100.0
+Anadarko Shelf_Oklahoma,United States,Anadarko,100.0
 Angren Coal Mine,Uzbekistan,Ministry of Finance of Uzbekistan,100.0
 Anjialing Open-Pit Mine,China,China Coal Xinji Energy Co Ltd,57.0
 Anjialing Open-Pit Mine,China,HKSCC Nominees Limited,30.0
@@ -21,14 +21,44 @@ Antaibao Surface Mine,China,China Coal Xinji Energy Co Ltd,57.0
 Antaibao Surface Mine,China,HKSCC Nominees Limited,30.0
 Antaibao Surface Mine,China,Others,13.0
 Arctic LNG 2 T1-3,Russia,New project,100.0
-Area 1 LNG (T1&T2),Mozambique,No informations on company,100.0
-Area-1 Future Phases,Mozambique,No informations on company,100.0
+Area 1 LNG (T1&T2),Mozambique,TotalEnergies SE,100.0
+Area-1 Future Phases,Mozambique,Mozambique Rovuma Venture,100.0
 Arshanovsky Coal Mine,Russia,Rutek Alliance,100.0
 Asab,United Arab Emirates,No informations on company,100.0
 Athabasca Oil Sands Project,Canada,Suncor Energy Inc.,54.1
 Athabasca Oil Sands Project,Canada,Teck Resources Ltd,21.3
 Athabasca Oil Sands Project,Canada,TotalEnergies SE,24.6
-Austin Chalk Tight,United States,No informations on company,100.0
+Austin Chalk Tight,United States,BHP Billiton,3.225806451612903
+Austin Chalk Tight,United States,BPX Operating,3.225806451612903
+Austin Chalk Tight,United States,BXP Operating,3.225806451612903
+Austin Chalk Tight,United States,Blackbrush,3.225806451612903
+Austin Chalk Tight,United States,Burlington Resources,3.225806451612903
+Austin Chalk Tight,United States,CML Exploration,3.225806451612903
+Austin Chalk Tight,United States,Chesapeake Operating,3.225806451612903
+Austin Chalk Tight,United States,Devon Energy Corp,3.225806451612903
+Austin Chalk Tight,United States,EOG Resources Inc,3.225806451612903
+Austin Chalk Tight,United States,El Toro Resources,3.225806451612903
+Austin Chalk Tight,United States,Encana Oil & Gas,3.225806451612903
+Austin Chalk Tight,United States,Equinor Energy,3.225806451612903
+Austin Chalk Tight,United States,Geosouthern Energy,3.225806451612903
+Austin Chalk Tight,United States,Gulftex Energy,3.225806451612903
+Austin Chalk Tight,United States,Inpex Eagle Ford,3.225806451612903
+Austin Chalk Tight,United States,Magnolia Oil & Gas Operating,3.225806451612903
+Austin Chalk Tight,United States,Marathon Oil Corp,3.225806451612903
+Austin Chalk Tight,United States,Matador Production Company,3.225806451612903
+Austin Chalk Tight,United States,Murphy E&P. Company,3.225806451612903
+Austin Chalk Tight,United States,Ramtex Energy,3.225806451612903
+Austin Chalk Tight,United States,Repsol Oil & Gas,3.225806451612903
+Austin Chalk Tight,United States,Rki Energy Resources,3.225806451612903
+Austin Chalk Tight,United States,SM Energy Co,3.225806451612903
+Austin Chalk Tight,United States,Sheridan Production Company,3.225806451612903
+Austin Chalk Tight,United States,Treadstone Energy,3.225806451612903
+Austin Chalk Tight,United States,Trinity Operating,3.225806451612903
+Austin Chalk Tight,United States,U. S. Operating,3.225806451612903
+Austin Chalk Tight,United States,Verdun Oil & Gas,3.225806451612903
+Austin Chalk Tight,United States,WCS Oil & Gas Corporation,3.225806451612903
+Austin Chalk Tight,United States,Wildhorse Resources,3.225806451612903
+Austin Chalk Tight,United States,Zarvona Energy,3.225806451612903
 Azadegan,Iran,China National Petroleum Corporation (CNPC),100.0
 BIB Coal Mine,Indonesia,Golden Energy Mines,100.0
 Ba Leng Coal Mine,China,Jinneng Holding Group Co Ltd,100.0
@@ -48,7 +78,7 @@ Baiyinhua No.3 Surface Mine,China,Huolinhe Coal Industry Group,23.0
 Baiyinhua No.3 Surface Mine,China,Industrial and Commercial Bank of China,33.0
 Baiyinhua No.3 Surface Mine,China,Others,1.0
 Baiyinhua No.3 Surface Mine,China,State Power Investment Corporation,43.0
-Bakken Shale,United States,No informations on company,100.0
+Bakken Shale,United States,Hess Bakken Investments,100.0
 Balaram Coal Mine,India,Coal India Ltd,100.0
 Balasu Coal Mine,China,Others,100.0
 Baltimore Canyon Offshore,United States,New project,100.0
@@ -58,8 +88,37 @@ Baode Coal Mine,China,China Energy Investment Corp Ltd,69.0
 Baode Coal Mine,China,HKSCC Nominees Limited,17.0
 Baode Coal Mine,China,Others,14.0
 Barail Shale,India,New project,100.0
-Barnett Shale,United States,No informations on company,100.0
-Barzan,Qatar,No informations on company,100.0
+Barnett Shale,United States,1849 Energy,3.3333333333333335
+Barnett Shale,United States,Arrowhead Productions,3.3333333333333335
+Barnett Shale,United States,BRG Lone Star,3.3333333333333335
+Barnett Shale,United States,Bedrock Production,3.3333333333333335
+Barnett Shale,United States,Bluestone,3.3333333333333335
+Barnett Shale,United States,Crown Equipment Co.,3.3333333333333335
+Barnett Shale,United States,Devon Energy Corp,3.3333333333333335
+Barnett Shale,United States,EOG Resources Inc,3.3333333333333335
+Barnett Shale,United States,Eagleridge Operating,3.3333333333333335
+Barnett Shale,United States,Elevation Resources,3.3333333333333335
+Barnett Shale,United States,Endeavor Energy Resources LP,3.3333333333333335
+Barnett Shale,United States,Enervest Operating,3.3333333333333335
+Barnett Shale,United States,FDL Operating,3.3333333333333335
+Barnett Shale,United States,"Faulconer, Vernon E.",3.3333333333333335
+Barnett Shale,United States,Felderhoff Production,3.3333333333333335
+Barnett Shale,United States,Fuse Energy,3.3333333333333335
+Barnett Shale,United States,GHA Barnett,3.3333333333333335
+Barnett Shale,United States,Hillwood O & G Operating Co.,3.3333333333333335
+Barnett Shale,United States,Lakota Energy,3.3333333333333335
+Barnett Shale,United States,Lime Rock Resources,3.3333333333333335
+Barnett Shale,United States,Mccutchin Petroleum Corporation,3.3333333333333335
+Barnett Shale,United States,Merit Energy Company,3.3333333333333335
+Barnett Shale,United States,Saddle Operating,3.3333333333333335
+Barnett Shale,United States,Sage Natural Resources,3.3333333333333335
+Barnett Shale,United States,Scout Energy Management,3.3333333333333335
+Barnett Shale,United States,TEP Barnett USA,3.3333333333333335
+Barnett Shale,United States,Texxol Operating Company,3.3333333333333335
+Barnett Shale,United States,UPP Operating,3.3333333333333335
+Barnett Shale,United States,XTO Energy,3.3333333333333335
+Barnett Shale,United States,Zarvona Energy,3.3333333333333335
+Barzan,Qatar,Qatargas,100.0
 Basrah Gas project,Iraq,Basra Oil Company,23.4
 Basrah Gas project,Iraq,Eni S.P.A.,32.8
 Basrah Gas project,Iraq,Korean Gas Corporation,18.8
@@ -68,7 +127,7 @@ Beaufort Sea Offshore,United States,New project,100.0
 Beisky-Zapadniy Coal Mine,Russia,Private individuals,100.0
 Bernice-Cygnus Coal Mine,South Africa,Bono Lithihi Investments Group,50.0
 Bernice-Cygnus Coal Mine,South Africa,TerraCom Resources,50.0
-Berri,Saudi Arabia,No informations on company,100.0
+Berri,Saudi Arabia,Saudi Aramco,100.0
 Black Thunder Coal Mine,United States,Arch Resources Inc,100.0
 Blackwater Coal Mine,Australia,BHP Group Ltd,50.0
 Blackwater Coal Mine,Australia,Mitsubishi Corp,50.0
@@ -116,7 +175,7 @@ Changcheng No.3 Coal Mine,China,China Huadian Corp Ltd,16.0
 Changcheng No.3 Coal Mine,China,Others,1.0
 Changcheng No.3 Coal Mine,China,Shandong Energy Co Ltd,43.0
 Changcheng No.3 Coal Mine,China,State Grid Corp of China,10.0
-Changqing,China,No informations on company,100.0
+Changqing,China,CNPC,100.0
 Chirodzi Coal Mine,Mozambique,Jindal Group,100.0
 Christina Lake,Canada,No informations on company,100.0
 Chukchi Sea Offshore,United States,New project,100.0
@@ -155,13 +214,19 @@ Dongzhouyao Coal Mine,China,Jinneng Holding Group Co Ltd,100.0
 Dovletabad-Donmez,Turkmenistan,No informations on company,100.0
 Duvernay,Canada,No informations on company,100.0
 Eagle Ford Shale,Mexico,New project,100.0
-Eagle Ford Shale,United States,No informations on company,100.0
+Eagle Ford Shale,United States,Burlington Resources,14.285714285714286
+Eagle Ford Shale,United States,Devon Energy Corp,14.285714285714286
+Eagle Ford Shale,United States,Ensign Operating LLC,14.285714285714286
+Eagle Ford Shale,United States,Pioneer Natural Resources Co,14.285714285714286
+Eagle Ford Shale,United States,Rosetta Resources,14.285714285714286
+Eagle Ford Shale,United States,Teal Operating,14.285714285714286
+Eagle Ford Shale,United States,XTO Energy,14.285714285714286
 East Natuna (x-Natuna D-Alpha),Indonesia,Harbour Energy PLC,20.0
 East Natuna (x-Natuna D-Alpha),Indonesia,Kuwait Petroleum Corp,20.0
 East Natuna (x-Natuna D-Alpha),Indonesia,Pertamina Persero PT,20.0
 East Natuna (x-Natuna D-Alpha),Indonesia,PTT PLC,20.0
 East Natuna (x-Natuna D-Alpha),Indonesia,Petroliam Nasional Berhad,20.0
-Eastern Gas Program,Russia,No informations on company,100.0
+Eastern Gas Program,Russia,Novatek,100.0
 El Descanso Coal Mine,Colombia,Drummond Company,100.0
 El Sharara,Libya,National Oil Corporation,66.7
 El Sharara,Libya,OMV Aktiengesellschaft,10.0
@@ -197,12 +262,12 @@ Gazprom dobycha Orenburg,Russia,Gazprom PJSC,100.0
 Gazprom dobycha Yamburg,Russia,Gazprom PJSC,100.0
 Gething Coal Mine,Canada,CKD Mines,100.0
 Gevra Coal Mine,India,Coal India Ltd,100.0
-Ghawar Ain Dar N,Saudi Arabia,No informations on company,100.0
-Ghawar Ain Dar S,Saudi Arabia,No informations on company,100.0
-Ghawar Haradh,Saudi Arabia,No informations on company,100.0
-Ghawar Hawiyah,Saudi Arabia,No informations on company,100.0
-Ghawar Shedgum,Saudi Arabia,No informations on company,100.0
-Ghawar Uthmaniyah,Saudi Arabia,No informations on company,100.0
+Ghawar Ain Dar N,Saudi Arabia,Saudi Aramco,100.0
+Ghawar Ain Dar S,Saudi Arabia,Saudi Aramco,100.0
+Ghawar Haradh,Saudi Arabia,Saudi Aramco,100.0
+Ghawar Hawiyah,Saudi Arabia,Saudi Aramco,100.0
+Ghawar Shedgum,Saudi Arabia,Saudi Aramco,100.0
+Ghawar Uthmaniyah,Saudi Arabia,Saudi Aramco,100.0
 Goldwyer Shale,Australia,New project,100.0
 Goonyella-Riverside Coal Mine,Australia,BHP Group Ltd,50.0
 Goonyella-Riverside Coal Mine,Australia,Mitsubishi Corp,50.0
@@ -243,7 +308,24 @@ Hanglaiwan Coal Mine,China,Shaanxi Youser Group,62.4
 Harmaliyah,Saudi Arabia,No informations on company,100.0
 Hassi Messaoud,Algeria,Sonatrach SPA,100.0
 Hassi R'Mel (Domestic),Algeria,Sonatrach SPA,100.0
-Haynesville/Bossier Shale,United States,No informations on company,100.0
+Haynesville/Bossier Shale,United States,Amplify Energy Corp,5.555555555555555
+Haynesville/Bossier Shale,United States,BP,5.555555555555555
+Haynesville/Bossier Shale,United States,CCI,5.555555555555555
+Haynesville/Bossier Shale,United States,Chevron Corp,5.555555555555555
+Haynesville/Bossier Shale,United States,Comstock Oil & Gas,5.555555555555555
+Haynesville/Bossier Shale,United States,Covey Park Operating,5.555555555555555
+Haynesville/Bossier Shale,United States,Exco Operating Co.,5.555555555555555
+Haynesville/Bossier Shale,United States,Fortune Resources,5.555555555555555
+Haynesville/Bossier Shale,United States,R. Lacy Services,5.555555555555555
+Haynesville/Bossier Shale,United States,Rockcliff Energy Operating,5.555555555555555
+Haynesville/Bossier Shale,United States,Sabine Oil & Gas Corporation,5.555555555555555
+Haynesville/Bossier Shale,United States,Shelby Boswell Operator,5.555555555555555
+Haynesville/Bossier Shale,United States,Sheridan Production Company,5.555555555555555
+Haynesville/Bossier Shale,United States,Tanos Exploration,5.555555555555555
+Haynesville/Bossier Shale,United States,Urban Oil & Gas Group,5.555555555555555
+Haynesville/Bossier Shale,United States,Valence Operating Company,5.555555555555555
+Haynesville/Bossier Shale,United States,Weatherly Oil & Gas,5.555555555555555
+Haynesville/Bossier Shale,United States,XTO Energy,5.555555555555555
 Hetaoyu Coal Mine,China,China Huaneng Group Co Ltd,100.0
 Hongliulin Coal Mine,China,China Development Bank,19.0
 Hongliulin Coal Mine,China,Shaanxi Coal and Chemical Industry Group Co Ltd,32.0
@@ -328,8 +410,8 @@ Kearl,Canada,No informations on company,100.0
 Kerandari BC,India,Government of India,100.0
 Khafji,Kuwait,Kuwait Petroleum Corp,50.0
 Khafji,Kuwait,Saudi Aramco,50.0
-Khurais project,Saudi Arabia,No informations on company,100.0
-Khursaniyah,Saudi Arabia,No informations on company,100.0
+Khurais project,Saudi Arabia,Saudi Aramco,100.0
+Khursaniyah,Saudi Arabia,Saudi Aramco,100.0
 Kish Gas Project,Iran,National Iranian Oil Company,100.0
 Kolubara Mine Complex,Serbia,Elektroprivreda Srbije,100.0
 Kouzi East Coal Mine,China,Anhui Xinji Coal and Electricity Group,7.0
@@ -364,7 +446,7 @@ Liuzhuang Coal Mine,China,China Coal Xinji Energy Co Ltd,30.0
 Liuzhuang Coal Mine,China,China Energy Investment Corp Ltd,7.0
 Liuzhuang Coal Mine,China,Others,1.0
 Llandovery Shale,Brazil,New project,100.0
-Longmaxi Shale (Sichuan/Changyu),China,No informations on company,100.0
+Longmaxi Shale (Sichuan/Changyu),China,Sinopec,100.0
 Longmaxi Shale,China,No informations on company,100.0
 Longwan Coal Mine,China,Huayang New Material Technology Group Co Ltd,18.0
 Longwan Coal Mine,China,Jinneng Holding Group Co Ltd,44.0
@@ -380,7 +462,7 @@ Lower Zakum,United Arab Emirates,Inpex Corp,10.0
 Lower Zakum,United Arab Emirates,Oil and Natural Gas Corporation,10.0
 Lower Zakum,United Arab Emirates,Other,14.0
 Loy Yang Coal Mine,Australia,AGL Energy Ltd,100.0
-Lublin Basin Silurian Shale,Poland,No informations on company,100.0
+Lublin Basin Silurian Shale,Poland,Polskie Górnictwo Naftowe i Gazownictwo SA,100.0
 Lula (X-Tupi),Brazil,Galp Energia SGPS S.A.,5.5
 Lula (X-Tupi),Brazil,Petróleo Brasileiro SA – Petrobras,40.2
 Lula (X-Tupi),Brazil,Petróleo Brasileiro S.A.,40.2
@@ -394,11 +476,11 @@ Majialiang Coal Mine,China,Jinneng Holding Group Co Ltd,88.0
 Majialiang Coal Mine,China,Others,12.0
 Majnoon,Iraq,Basra Oil Company,100.0
 Mandakini B,India,National Thermal Power Corporation,100.0
-Manifa (redevelop),Saudi Arabia,No informations on company,100.0
+Manifa (redevelop),Saudi Arabia,Saudi Aramco,100.0
 Mansouri Bangestan,Iran,National Iranian Oil Company,100.0
-Marcellus Shale,United States,No informations on company,100.0
+Marcellus Shale,United States,Rockdale Marcellus,100.0
 Maritsa Coal Mines,Bulgaria,Bulgarian Energy Holding EAD,100.0
-Marjan,Saudi Arabia,No informations on company,100.0
+Marjan,Saudi Arabia,Saudi Aramco,100.0
 Marun,Iran,National Iranian Oil Company,100.0
 Meihuajing Coal Mine,China,China Energy Investment Corp Ltd,51.0
 Meihuajing Coal Mine,China,Ningxia State-Owned Capital Operation Group,49.0
@@ -469,8 +551,9 @@ Peak Downs Coal Mine,Australia,BHP Group Ltd,50.0
 Peak Downs Coal Mine,Australia,Mitsubishi Corp,50.0
 Pereyaslovskiy Coal Mine,Russia,Russian Coal,100.0
 Permian Conventional_Texas,United States,No informations on company,100.0
-Permian Delaware Tight,United States,No informations on company,100.0
-Permian Midland Tight,United States,No informations on company,100.0
+Permian Delaware Tight,United States,OXY USA,50.0
+Permian Delaware Tight,United States,Pitts Energy Co.,50.0
+Permian Midland Tight,United States,Occidental Permian,100.0
 Pervomaisky Coal Mine,Russia,Siberian Business Union-Coal,100.0
 Phulbari Coal Mine,Bangladesh,GCM Resources,100.0
 Pingshuo East Coal Mine,China,China Coal Xinji Energy Co Ltd,57.0
@@ -490,7 +573,7 @@ QatarGas LNG T8-T11 (NFE-East),Qatar,QatarEnergy,70.0
 Qatargas 2 LNG T4-T5,Qatar,Exxon Mobil Corp,33.333333333333336
 Qatargas 2 LNG T4-T5,Qatar,QatarEnergy,33.333333333333336
 Qatargas 2 LNG T4-T5,Qatar,TotalEnergies SE,33.333333333333336
-Qatif project,Saudi Arabia,No informations on company,100.0
+Qatif project,Saudi Arabia,Saudi Aramco,100.0
 Qingchunta Coal Mine,China,Guangdong Hanjian Investment Co Ltd,94.0
 Qingchunta Coal Mine,China,Shanghai Chengrui Investment Company,6.0
 Qinghua No.7 Coal Mine,China,China Kingho Energy Group,100.0
@@ -514,14 +597,14 @@ Red Hill Coal Project,Australia,Mitsubishi Corp,50.0
 Revuboe Coal Mine,Mozambique,Nippon Steel & Sumitomo Metal,33.0
 Revuboe Coal Mine,Mozambique,POSCO Holdings Inc,8.0
 Revuboe Coal Mine,Mozambique,Talbot Group,59.0
-Romashkino,Russia,No informations on company,100.0
+Romashkino,Russia,Tatneft,100.0
 Rumaila North & South,Iraq,BP P.L.C.,38.0
 Rumaila North & South,Iraq,Basra Oil Company,25.0
 Rumaila North & South,Iraq,China National Petroleum Corporation (CNPC),37.0
 Rusanovskoye (Kara Sea),Russia,New project,100.0
 Saebyol Coal Mining Complex,North Korea,Government of North Korea,100.0
-Safaniya YTF Concession,Saudi Arabia,No informations on company,100.0
-Safaniya,Saudi Arabia,No informations on company,100.0
+Safaniya YTF Concession,Saudi Arabia,Saudi Aramco,100.0
+Safaniya,Saudi Arabia,Saudi Aramco,100.0
 Saharpur Jamarpani,India,Uttar Pradesh Rajya Vidyut,100.0
 Samotlorneftegaz (TNK-BP),Russia,BP,20.0
 Samotlorneftegaz (TNK-BP),Russia,QH Oil Investments LLC,20.0
@@ -537,7 +620,7 @@ Saraji East Coal Mine,Australia,BHP Group Ltd,50.0
 Saraji East Coal Mine,Australia,Mitsubishi Corp,50.0
 Sembar Shale,Pakistan,New project,100.0
 Sengwe Colliery,Zimbabwe,RioZim,100.0
-SeverEnergia Project,Russia,No informations on company,100.0
+SeverEnergia Project,Russia,Gazprom dobycha Urengoy,100.0
 Shaanxi Caojiatan Coal Mine,China,Others,1.0
 Shaanxi Caojiatan Coal Mine,China,Shaanxi Coal and Chemical Industry Group Co Ltd,51.0
 Shaanxi Caojiatan Coal Mine,China,Shaanxi Financial Holding Group,23.0
@@ -556,7 +639,7 @@ Shanxi Lu'an Gucheng Coal Mine,China,Lu'an Chemical Group Co Ltd,100.0
 Shaqu No.1 Coal Mine,China,China Coal Xinji Energy Co Ltd,28.0
 Shaqu No.1 Coal Mine,China,Others,21.0
 Shaqu No.1 Coal Mine,China,Shanxi Coking Coal Group Co Ltd,51.0
-Shaybah,Saudi Arabia,No informations on company,100.0
+Shaybah,Saudi Arabia,Saudi Aramco,100.0
 Shengli East No.2 Coal Mine,China,Beijing Energy Holding Co Ltd,6.81
 Shengli East No.2 Coal Mine,China,China Datang Corp,35.34
 Shengli East No.2 Coal Mine,China,HKSCC Nominees Limited,32.9
@@ -611,7 +694,7 @@ South Pars (Phases 4-5) dry gas,Iran,Eni S.P.A.,60.0
 South Pars (Phases 4-5) dry gas,Iran,National Iranian Oil Company,20.0
 South Pars (Phases 4-5) dry gas,Iran,PPI,12.0
 South Pars (Phases 4-5) dry gas,Iran,PPL Corp,8.0
-South Pars (Phases 9-10) dry gas,Iran,No informations on company,100.0
+South Pars (Phases 9-10) dry gas,Iran,National Iranian Oil Company,100.0
 Southeast Uplift Onshore Heilongjiang Province,China,New project,100.0
 "Spirit River (Notikewin, Falher, Wilrich)",Canada,No informations on company,100.0
 Stepnoy Coal Mine,Russia,Octo Coal,100.0
@@ -641,7 +724,7 @@ Tannezuft Shale,Algeria,New project,100.0
 Tanzanian Coastal Offshore,Tanzania,New project,100.0
 Taohe Coal Mine,China,Shandong First Geological and Mineral Exploration Institute,100.0
 Taran Gaole Coal Mine,China,China Energy Investment Corp Ltd,100.0
-Tarim (CNPC),China,No informations on company,100.0
+Tarim (CNPC),China,PetroChina,100.0
 Tashan Coal Mine,China,China Datang Corp,9.0
 Tashan Coal Mine,China,HKSCC Nominees Limited,9.0
 Tashan Coal Mine,China,Jinneng Holding Group Co Ltd,41.0
@@ -709,7 +792,7 @@ Wenjiazhuang Coal Mine,China,Shanxi Provincial Coal Industry Agency Service Cent
 Wenjiazhuang Coal Mine,China,Yang Quan Coal Industry Group,32.0
 West Florida Offshore,United States,New project,100.0
 West Macedonia Lignite Centre (WMLC),Greece,Public Power Corporation of Greece S.A,100.0
-West Siberia Offshore,Russia,No informations on company,100.0
+West Siberia Offshore,Russia,Surgutneftegas,100.0
 West Siberia Onshore,Russia,New project,100.0
 West Well of Faer Second Coal Mine,China,Guizhou Coalfield Geology Bureau,10.0
 West Well of Faer Second Coal Mine,China,Guizhou Panjiang Coal and Electricity Group,58.0
@@ -718,7 +801,8 @@ West Well of Faer Second Coal Mine,China,Shandong Energy Co Ltd,12.0
 Western Gulf Province_Texas,United States,No informations on company,100.0
 Wilton and Fairhill Coal Projects,Australia,Futura Resources,50.0
 Wilton and Fairhill Coal Projects,Australia,Sojitz Corp,50.0
-Woodford Shale,United States,No informations on company,100.0
+Woodford Shale,United States,Bosque Texas Oil,50.0
+Woodford Shale,United States,Jagged Peak Energy,50.0
 Wucaiwan No.1 Coal Mine,China,Beijing Guotai Xinhua Industrial Company,19.0
 Wucaiwan No.1 Coal Mine,China,Others,6.0
 Wucaiwan No.1 Coal Mine,China,Xinjiang Changyuan Water Group,14.0
@@ -767,7 +851,7 @@ Yingpanhao Coal Mine,China,Shandong Energy Co Ltd,74.5
 Yolotan (Iolotan) South,Turkmenistan,No informations on company,100.0
 Youngs Creek Coal Mine,United States,Navajo Nation,100.0
 Yucatan Platform Offshore,Mexico,Petróleos Mexicanos (PEMEX),100.0
-Yuganskneftegaz,Russia,No informations on company,100.0
+Yuganskneftegaz,Russia,Rosneft,100.0
 Yushuwan Coal Mine,China,Shaanxi Yulin Energy Group Co Ltd,50.0
 Yushuwan Coal Mine,China,Shenmu Coal Company,20.0
 Yushuwan Coal Mine,China,Yanchang Oil and Minerals Administration Hengshan Oil Drilling and Production Company,10.0
@@ -805,7 +889,7 @@ Zubair,Iraq,Korean Gas Corporation,18.8
 Zubair,Iraq,Missan Oil Company,25.0
 Zuluf (CR in field),Saudi Arabia,New project,100.0
 Zuluf (expansion),Saudi Arabia,New project,100.0
-Zuluf,Saudi Arabia,No informations on company,100.0
+Zuluf,Saudi Arabia,Saudi Aramco,100.0
 EACOP,Uganda,TotalEnergies SE,62.0
 EACOP,Uganda,Tanzania Petroleum Development Corporation,15.0
 EACOP,Uganda,Uganda National Oil Company,15.0
