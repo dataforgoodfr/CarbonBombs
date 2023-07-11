@@ -50,6 +50,7 @@ def load_renamed_columns():
         'Latitude':'latitude',
         'Longitude':'longitude',
         'Carbon_bomb_connected':'carbon_bomb_connected',
+        'Logo_URL':'url_logo',
         'Country':'country',
         'World_region':'world_region'
     }
