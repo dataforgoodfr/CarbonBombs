@@ -1,6 +1,6 @@
 ﻿name,headquarters_address,latitude,longitude,carbon_bomb_connected,url_logo,country,world_region
 Azerbaijan,"Azerbaijan, Bakou",40.40926169999999,49.8670924,ACG (Azeri-Chirag-Guneshli Deep Water),https://en.wikipedia.org/wiki/SOCAR#/media/File:State_Oil_Company_of_Azerbaijan_Republic_new_logo.png,Azerbaijan,Asia
-BP P.L.C.,"1 St James's Square, London SW1Y 4PD, United Kingdom",51.5076707,-0.1345114,"ACG (Azeri-Chirag-Guneshli Deep Water),Rumaila North & South",https://www.bp.com/apps/settings/wcm/designs/refresh/bp/images/navigation/bp-logo.svg,United Kingdom,Europe
+BP PLC,"1 St James's Square, London SW1Y 4PD, United Kingdom",51.5076707,-0.1345114,None,None,United Kingdom,Europe
 Equinor ASA,"Forusbeen 50, 4035 Stavanger, Norway",58.8904932,5.7186889,"ACG (Azeri-Chirag-Guneshli Deep Water),Johan Sverdrup,Shtokman,Troll",https://en.wikipedia.org/wiki/Equinor#/media/File:Equinor.svg,Norway,Europe
 Euas Electricity Generation Company,"Eskişehir Yolu 7.Km No:166 Çankaya/Ankara, Turkey",39.9110758,32.7822114,Afşin-Elbistan Coal Mine,https://en.wikipedia.org/wiki/Electricity_Generation_Company_(Turkey)#/media/File:E%C3%9CA%C5%9E_logo.svg,Turkey,Asia
 National Iranian Oil Company,"Hafez Ave, Tehran, Iran",35.7021473,51.4127537,"Agha Jari,Ahwaz Asmari,Ahwaz Bangestan,Gachsaran,Kish Gas Project,Mansouri Bangestan,Marun,Pazanan,South Pars (Phases 20-21),South Pars (Phases 4-5) dry gas,South Pars (Phases 9-10) dry gas",https://en.wikipedia.org/wiki/File:National_Iranian_Oil_Company_logo.svg,Iran,Asia
@@ -138,7 +138,6 @@ Jiaxing Dejian Investment Partnership,"Beijing, China",39.904211,116.407395,Jinj
 Lundin Energy AB,"Hovslagargatan 5, SE-111 48, Stockholm, Sweden",59.3297312,18.0779061,Johan Sverdrup,http://www.lundin-energy.com/wp-content/uploads/2020/08/Lundin-220.svg,Sweden,Europe
 Petoro AS,"Forusbeen 50, 4035 Stavanger, Norway",58.8904932,5.7186889,"Johan Sverdrup,Troll",https://www.petoro.no/s/petoro2019/profile/petroro_logo_blue072.svg?w=192,Norway,Europe
 Aker,"Oksenoyveien 10, Lysaker, Norway",59.9049698,10.6252488,Johan Sverdrup,https://en.wikipedia.org/wiki/Aker_ASA#/media/File:Aker_ASA.svg,Norway,Europe
-BP,"1 St. James's Square, London, SW1Y 4PD, United Kingdom",51.5076707,-0.1345114,"Haynesville/Bossier Shale,Johan Sverdrup,Samotlorneftegaz (TNK-BP)",None,United Kingdom,Europe
 Bumi Resources,"Bakrie Tower, 3rd Floor, Rasuna Epicentrum, Jl. H.R. Rasuna Said, Jakarta, Indonesia",-6.219212,106.8344885,KPC Operation Coal Mine,http://www.bumiresources.com/assets/img/full-logo.png,Indonesia,Asia
 Shell PLC,"Shell Centre, London, SE1 7NA, United Kingdom",51.5039817,-0.1168152,None,https://fr.wikipedia.org/wiki/Shell_(entreprise)#/media/Fichier:Shell_logo.svg,United Kingdom,Europe
 Chevron Corp,"6001 Bollinger Canyon Rd, San Ramon, CA 94583, USA",37.7589028,-121.9598973,None,None,United States,North America
@@ -146,7 +145,7 @@ PJSC LUKOIL,"11 Sretensky Boulevard, Moscow, 101000, Russia",55.76664580000001,3
 National Bank of the Republic of Kazakhstan,"21 ""K"" Kunayev str., 050051, Almaty, Kazakhstan",43.2572612,76.949915,Tengiz,None,Kazakhstan,Asia
 JSC Samruk-Kazyna,"8, Mangilik El avenue, Nur-Sultan, Kazakhstan",51.125086,71.436193,Kashagan,None,Kazakhstan,Asia
 Cooperative KazMunayGaz,"19 Kabanbay Batyr Ave., Nur-Sultan, Kazakhstan",51.1315976,71.4119486,Kashagan,https://www.kmg.kz/local/templates/main/assets/img/animate-logo.svg,Kazakhstan,Asia
-Saudi Aramco,"Dhahran, Eastern Province, Saudi Arabia",26.2361248,50.0393017,"Abqaiq,Berri,Ghawar Ain Dar N,Ghawar Ain Dar S,Ghawar Haradh,Ghawar Hawiyah,Ghawar Shedgum,Ghawar Uthmaniyah,Khafji,Khurais project,Khursaniyah,Manifa (redevelop),Marjan,Qatif project,Safaniya YTF Concession,Safaniya,Shaybah,Zuluf",https://www.aramco.com/images/affiliateLogo.png,Saudi Arabia,Asia
+Saudi Arabian Oil Company (Saudi Aramco),"Dhahran, Eastern Province, Saudi Arabia",26.2361248,50.0393017,None,None,Saudi Arabia,Asia
 Elektroprivreda Srbije,"13-15, 11000 Belgrade, Serbia",44.7930287,20.5398415,Kolubara Mine Complex,https://www.eps.rs/_catalogs/masterpage/Design/img/logo-eps-color.png,Serbia,Europe
 Anhui Xinji Coal and Electricity Group,"Beijing, China",39.904211,116.407395,"Kouzi East Coal Mine,Liuzhuang Coal Mine",None,China,Asia
 China COSCO Shipping Corp Ltd,"No. 358, Dong Da Ming Road, Hongkou District, Shanghai, China",31.24589,121.49222,None,None,China,Asia
