@@ -147,7 +147,10 @@ manual_match_company = {
     "Petroleos Mexicanos":"Petróleos Mexicanos (PEMEX)",
     "Qatargas Operating Company Limited":"QatarEnergy",
     "Gazprom":"Gazprom PJSC",
-    "ROSNEFTEGAZ JSC":"Rosneftegaz AO"
+    "ROSNEFTEGAZ JSC":"Rosneftegaz AO",
+    "Saudi Aramco":"Saudi Arabian Oil Company (Saudi Aramco)",
+    "BP":"BP PLC",
+    "BP P.L.C.":"BP PLC",
 }
 
 # Dictionnary for bank matching between BankTrack (key)
