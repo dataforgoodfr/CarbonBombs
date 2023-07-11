@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CBOT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+    <script src="https://cdn.jsdelivr.net/npm/fastdom@1.0.11/fastdom.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        
+        table {
+            width: 100%;
+        }
+        th, td {
+            text-align: center;
+            padding: 8px;
+        }
+        .mb-2.btns {
+            display:flex;
+            flex-flow:row nowrap;
+            justify-content: space-evenly;
+            min-width:500px;
+        }
+        .mb-2.original {
+            flex-flow: row nowrap;
+        }
+        .mb-2 {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        .mb-2 label {
+            display: flex;
+            flex: 1 0 270px;
+        }
+        .mb-2 input {
+            display: flex;
+            flex: 0 1 100%;
+        }
+        th, td {
+            width: auto;
+        }
+
+        .actions-form {
+            flex-flow: column nowrap;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .form-control {
+            display: flex;
+            flex: 0 auto;
+        }
+        .match {
+            background-color: #c3e6cb !important;
+        }
+        .no-match {
+            background-color: #f8d7da !important;
+        }
+        .match.no-match {
+            background-color: #E8F0FE !important;
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+          transition: background-color 9999s ease-in-out 0s;
+        }
+
+        .invisible {
+            display: none !important;        
+        }
+
+        .unique-tooltip {
+            font-weight:bold;
+            font-size: 1.2em;
+            color:#dc3545;
+            border: 1px solid #dc3545;
+            text-align: center;
+            width:100%;
+            display:block;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            font-size:1.8em;
+          }
+          
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            animation: spin 1s linear infinite;
+
+        }
+          
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+          
+        .message {
+            color: white;
+            margin-left: 10px;
+            display:none;
+        }
+          
+     
+    </style>
+
+
+<body>
+
+    <div class="overlay">
+        <div class="loader"></div>
+        <span class="message">Please wait...</span>
+    </div>
+
+    <div class="container mt-5">
+        
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped" >
+                <thead>
+                    <tr>
+                        <th colspan="2">
+                            <h1 class="mb-4">Carbon Bombs Override Tool</h1>
+                            <h1 class="mb-4" style="font-weight:bold">{{ file }}</h1>
+                        </th>
+                    </tr>
+                    <tr id="addRowToggle">
+                        <th colspan="2">
+                            <div class="mb-1" style="font-weight:bold;">
+                                <button class="btn btn-success " style="font-size:1.3em" 
+                                        onclick="toggleAddRow();return false;">ADD NEW</button>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr id="addRowForm" style="display: none;">
+                        <td colspan="2">
+                            <form action="{{ url_for('add') }}" method="POST">
+                                <div class="mb-1" style="font-weight:bold;padding:1.2em">
+                                    <label for="{{unique_column}}" class="form-label" style="font-weight:bold;font-size:1.5em">NEW NAME</label>
+                                    <input type="text" id="{{unique_column}}" name="{{unique_column}}" class="form-control add" style='text-align:center;font-size:1.3em' required>
+                                </div>
+                                <div class="mb-1">
+                                    <button type="submit" class="btn btn-primary btn-success btn-add" style="font-weight:bold;font-size:1.2em">Add</button>
+                                    <button class="btn btn-secondary"  style="font-size:1.2em"
+                                            onclick="toggleAddRow();return false;">Hide</button>
+                                </div>
+                                <div class="mb-1" style="padding: 0.5em 1.2em">
+                                    <div class="unique-tooltip form-control no-match"  style="display: none;">This name already exists!</div>  
+                                </div>                               
+                            </form>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th colspan="2">
+                            <input type="text" id="filterInput" class="form-control" placeholder="Search..." style="font-size:1.4em;text-align:center;">
+                        </th>
+                    </tr>
+                    <tr style="font-size:1.1em" >
+                        <th>ORIGINAL</th>
+                        <th>MODIFIED</th>
+                    </tr>
+
+                </thead>
+                <tbody  class='invisible'>
+                    {% for index, row in data.iterrows() %}
+                    <tr>
+                        <td>
+                            <div class="actions-form">
+                                {% for column in data.columns %}  
+                                    {% if not column.startswith('original') and not column.startswith('date_') %}                                   
+                                        <div class="mb-2 original">
+                                            <label for="original_{{ column }}_{{ index }}" class="form-label">{{ column }}</label>
+                                            <input type="text" id="original_{{ column }}_{{ index }}" name="original_{{ column }}" class="form-control {% if column != 'ID' %} original {% endif %}" 
+                                            style="text-align:right" value="{{ row['original_'+column] }}" disabled>
+                                        </div>
+                                    {% endif %}    
+                                {% endfor %}
+
+                                <form action="{{ url_for('delete') }}" method="POST">
+                                    <input type="hidden" name="ID" value="{{ row['ID'] }}">
+                                    <input type="hidden" name="original_ID" value="{{ row['original_ID'] }}">
+                                    <div class="mb-2 btns">
+                                        {% if row['original_ID'] == 0 %}
+                                        <button type="submit" class="btn btn-success">Forget addition</button>
+                                        {% elif row['ID'] == 0 %}
+                                        <button type="submit" class="btn btn-success">Forget deletion</button>
+                                        {% elif row['ID'] %}
+                                        <button type="submit" class="btn btn-danger">To be deleted</button>
+                                        <button type="submit" class="btn btn-success btn-revert invisible" formaction="/revert">Forget changes</button>
+                                    {% endif %}
+                                    </div>
+                                </form>
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="actions-form">
+                                <form action="{{ url_for('update') }}" method="POST"> 
+                                    <input type="hidden" name="original_ID" value="{{ row['original_ID'] }}" class="form-control" style="background:none !important" readonly>
+                                    <div class="mb-2" style="flex-flow:row nowrap">                              
+                                        <input type="text" name="ID" value="{{ row['ID'] }}" class="form-control" style="background:none !important" readonly>
+                                    </div> 
+                                    {% for column in data.columns %}  
+                                        {% if column != 'ID' and not column.startswith('original') and not column.startswith('date_')   %}                             
+                                            <div class="mb-2" style="flex-flow:row nowrap">
+                                                <!--<label for="update_{{ column }}" class="form-label">{{ column }}:</label>-->
+                                                <input type="text" name="{{ column }}" class="form-control can-change {% if row['ID'] == 0 %} no-match {% else %} modified match {% endif %} {% if column == unique_column %} unique {% endif %}" 
+                                                    value="{{ row[column] }}" 
+                                                    data-original="{{ row['original_'+column] }}"
+                                                    data-initial="{{ row[column] }}"                                        
+                                                    autocomplete="off"
+                                                    {% if row['ID'] == 0 %} disabled {% endif %} 
+                                                    {% if column == unique_column %} required {% endif %} >
+                                            </div> 
+                                            {% if column == unique_column %} 
+                                            <div class="mb-1" style="padding: 0">
+                                                <div class="unique-tooltip form-control no-match"  style="display: none;font-size:1em;padding: 1em">This name already exists!</div>  
+                                            </div> 
+                                            {% endif %}  
+                                        {% endif %}                                   
+                                    {% endfor %}
+                                    <div class="mb-2 btns">                                         
+                                        {% if row['ID'] == 0 %}            
+                                        <button type="submit" class="btn btn-danger" formaction="/merge"> DELETE ORIGINAL </button>
+                                        {% elif row['original_ID'] == 0 %}
+                                        <button type="submit" class="btn btn-info invisible" formaction="/update" >Remember changes</button> 
+                                        <button type="submit" class="btn btn-warning invisible" formaction="/merge" > ADD ORIGINAL</button>                                    
+                                        {% else %}
+                                        <button type="submit" class="btn btn-info invisible" formaction="/update" >Remember changes</button> 
+                                        <button type="submit" class="btn btn-warning invisible" formaction="/merge" > UPDATE ORIGINAL</button>                                    
+                                        {% endif %}
+                                    </div> 
+                                </form>
+                            </div>
+                        </td>                        
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+    <script>
+        
+        function toggleAddRow() {
+            var addRowForm = document.getElementById('addRowForm');
+            var addRowToggle = document.getElementById('addRowToggle');
+
+            if (addRowForm.style.display === 'none') {
+                addRowForm.style.display = '';
+                addRowToggle.style.display = 'none';
+            } else {
+                addRowForm.style.display = 'none';
+                addRowToggle.style.display = '';
+            }
+        }
+
+        function search(value, filter) {
+            const wordList = filter.split(/\s+/);
+            for (let i = 0; i < wordList.length; i++) {
+              if (value.includes(wordList[i])) {
+                return true;
+              }
+            }
+            return false;
+        }   
+
+        function compareStrings(str1, str2) {
+            return (!str1 || !str2) ? (!str1 && !str2) : (str1 === str2);
+        }
+
+        function uniqueName(input){
+
+            const tooltip = input.closest('form').querySelector('.unique-tooltip');
+            
+            {% if check_unique %}     
+
+                const others = Array.from(document.querySelectorAll('input.modified.unique')).filter(other => {                
+                    return other != input && compareStrings(other.value,input.value)
+                });
+
+                //console.log('others.length:'+ others.length)
+                
+                if (others.length) {
+                    tooltip && (tooltip.style.display = '');
+                    input.closest('form').querySelectorAll('.btn').forEach(btn => btn.disabled=true)
+                    return false;
+                }
+            {% endif %}
+
+
+            tooltip && (tooltip.style.display = 'none');
+            input.closest('form').querySelectorAll('.btn').forEach(btn => btn.disabled=false)
+            return true;
+        }
+
+        function compareValues(input) {
+            // Keep spaces to show difference
+            //if (input.value) {
+            //    input.value = input.value.trim();
+            //}
+
+            const originalValue = input.getAttribute('data-original');
+            const initialValue = input.getAttribute('data-initial');
+
+            let identical = false;
+            if (compareStrings(originalValue, input.value)) {
+                input.classList.remove('no-match');
+                input.classList.add('match');
+
+                identical = compareStrings(initialValue, input.value);
+                if (!identical)
+                    input.classList.add('no-match');
+
+            } else {
+                input.classList.remove('match');
+                input.classList.add('no-match');
+                identical = false;
+            }
+           
+            const noMatch = input.closest('form').querySelector('input.no-match');
+            if (noMatch) {
+                input.closest('form').querySelectorAll(':scope .btn').forEach(btn => btn.classList.remove('invisible'));
+                input.closest('tr').querySelectorAll(':scope .btn-revert').forEach(btn => btn.classList.remove('invisible'));
+            } else {
+                input.closest('form').querySelectorAll(':scope .btn').forEach(btn => btn.classList.add('invisible'));
+                input.closest('tr').querySelectorAll(':scope .btn-revert').forEach(btn => btn.classList.add('invisible'));
+            }
+
+            return identical;
+        }    
+
+        const onadd = (event) => {
+            //console.log('onadd');
+            return uniqueName(event.target); 
+        }
+
+        const oninput = (event) => {
+            console.log('oninput')
+            if (event.target.classList.contains('unique')) {
+                unique = uniqueName(event.target); 
+                //if (!unique) return false;
+            }
+            compareValues(event.target);          
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var filterInput = document.getElementById('filterInput');
+            filterInput.addEventListener('keyup', function() {
+                var filterValue = filterInput.value.toLowerCase();
+                var rows = document.querySelectorAll('tbody tr');
+                rows.forEach(function(row) {
+                    var inputs = row.querySelectorAll('input');
+                    var inputValues = Array.from(inputs).map(function(input) {
+                        return input.value.toLowerCase();
+                    });
+                    if (inputValues.some(function(value) {
+                        return search(value,filterValue);
+                    })) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+
+            const addInput = document.querySelector('input.add');
+            addInput.oninput = event => {
+                return uniqueName(event.target);
+            }
+            addInput.closest('form').onsubmit = function() {
+                return uniqueName(addInput);
+            }
+            
+            fastdom.measure(() => {               
+                const original =  Array.from(document.querySelectorAll('input.original'));
+                const change =  Array.from(document.querySelectorAll('input.can-change'));
+    
+                const nonMatchingInputs = change.map((input, index) => {
+                    return !compareStrings(input.value, original[index].value) ? input : null;
+                }).filter(input => input !== null);
+                
+                fastdom.mutate(() => {
+                    //console.log('Non-matching inputs:', nonMatchingInputs.length);
+                    nonMatchingInputs.forEach(input =>  compareValues(input));
+                    change.filter(input => input.classList.contains('modified')).forEach(input => {
+                        //console.log(input);
+                        input.oninput = oninput
+                        //compareValues(input);
+                    });
+
+                    const unique =  Array.from(document.querySelectorAll('input.unique')).forEach(unique => {
+                        //console.log(input);
+                        uniqueName(unique)
+                        //compareValues(input);
+                    });
+
+                    document.querySelector('.overlay').classList.add('invisible');
+                    document.querySelector('.table tbody').classList.remove('invisible');
+                    
+                });
+            });
+
+        });
+
+     
+    </script>
+</body>
+</html>
