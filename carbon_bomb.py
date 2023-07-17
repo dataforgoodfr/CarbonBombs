@@ -529,7 +529,12 @@ def compute_percentage_multi_sites(raw_line):
     # With raw_line content 2 possibilities : Percentage are indicated or not
     if "%" in raw_line:
         # Case where percentage are indicated
-        companies = ["(".join(x.split("(")[:-1]) for x in raw_line.split('%)')[:-1]]
+        # replace "Fullwidth" char by basic char
+        raw_line = raw_line.replace("，", ",").replace("）", ")").replace("（", "(")
+        # remove useless spaces
+        companies = re.sub("  +", " ", raw_line).replace(" ;", ";").replace(" ,", ",")
+        # split at each percentage
+        companies = ["(".join(x.split("(")[:-1]) for x in companies.split('%)')[:-1]]
         companies = [re.sub(r"[,|;]", "", x).strip() for x in companies]
         percentages = re.findall(r"\(([\d\.]+)%\)", raw_line)
         # Merge percentage of same company into one
