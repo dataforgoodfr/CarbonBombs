@@ -1,4 +1,4 @@
-﻿Company;Address_source_chatGPT
+Company;Address_source_chatGPT
 Azerbaijan;Azerbaijan, Bakou
 BP P.L.C.;1 St James's Square, London SW1Y 4PD, United Kingdom
 Equinor ASA;Forusbeen 50, 4035 Stavanger, Norway
@@ -15,7 +15,6 @@ Suncor Energy Inc.;150 6 Ave SW, Calgary, AB T2P 3E3, Canada
 Teck Resources;Suite 3300, 550 Burrard Street, Vancouver, BC V6C 0B3, Canada
 China National Petroleum Corporation;9 Dongzhimen North Street, Dongcheng District, Beijing, China
 Golden Energy Mines;Sinar Mas Land Plaza Tower II, 7th floor Jl. M.H. Thamrin No. 51, Jakarta, Indonesia
-Jinneng Group;Hongqi Road, Taigu County, Shanxi Province, China
 China ZhenHua Oil Co.;28 Xuanwumenwai Street, Xicheng District, Beijing, China
 Inner Mongolia Huineng Coal and Electricity Group;Beijing, China
 Inner Mongolia Ordos Investment Holding Group;Beijing, China
@@ -48,7 +47,6 @@ Shanxi Chuangrei New Energy Investment Company;Beijing, China
 Kazakhmys Corporation;104a, Abay Ave., Zhezkazgan, Kazakhstan
 Gazprom;16 Nametkina Street, Moscow, Russia
 Inner Mongolia Mengtai Group;Beijing, China
-China Huadian;6 Fuxingmenwai Street, Xicheng District, Beijing, China
 Petrobras;Avenida República do Chile, 65 - Centro, Rio de Janeiro - RJ, Brazil
 Petróleo Brasileiro S.A.;Avenida República do Chile, 65 - Centro, Rio de Janeiro - RJ, Brazil
 QCoal;Level 8, 175 Eagle Street, Brisbane, QLD 4000, Australia
@@ -83,7 +81,7 @@ Petroliam Nasional Berhad;Tower 1, PETRONAS Twin Towers, Kuala Lumpur City Centr
 PTT PLC;555 Vibhavadi Rangsit Road, Chatuchak, Bangkok, Thailand
 PT Pertamina;Jl. Medan Merdeka Timur No. 1A, Jakarta, Indonesia
 Drummond Company;PO Box 10246, Birmingham, AL 35202, USA
-National Oil Corporation;N/A
+National Oil Corporation;
 Repsol SA;Calle Méndez Álvaro, 44, 28045 Madrid, Spain
 OMV Aktiengesellschaft;Trabrennstraße 6-8, 1020 Vienna, Austria
 Tuva Energy Industrial Company;Moscow, Russia
@@ -91,8 +89,6 @@ A-Property;Moscow, Russia
 Thungela Resources Australia;Canberra, Australia
 LX International;Seoul, South Korea
 Russian Coal;Moscow, Russia
-Shaanxi Investment Group;No. 1, Yanta Road, Yanta District, Xi'an, Shaanxi, China
-Shaanxi Coal and Chemical Industry Group;No. 1, Yanta Road, Yanta District, Xi'an, Shaanxi, China
 LG International;20 Yoido-dong, Youngdungpo-gu, Seoul, South Korea
 Titan Infra Energy;Sona Topas Tower, Level 25, Jl. Jend. Sudirman Kav. 26, Jakarta, Indonesia
 Asian American Continental Coal Company;Beijing, China
@@ -118,8 +114,6 @@ Shaanxi Youser Group;Beijing, China
 Shaanxi Yanchang Petroleum Group;No. 1, Yanta Road, Yanta District, Xi'an, Shaanxi, China
 Sonatrach SPA;Djenane El Malik, Hydra, Algiers, Algeria
 Shenmu County State-Owned Assets Operation Company;Beijing, China
-Shaanxi Yulin Energy Group;Beijing, China
-China Development Bank;No. 9 Fuchengmenwai Street, Xicheng District, Beijing, China
 Inner Mongolia Yitai Investment;Beijing, China
 Inner Mongolia Guanglian Minzu Economic Development Company;Beijing, China
 Inner Mongolia Coal Field Geological Bureau;Beijing, China
@@ -137,7 +131,6 @@ Sinopec;22 Chaoyangmen North Street, Chaoyang District, Beijing, China
 Shenergy;No. 2, Lane 728, Zhangyang Road, Pudong New Area, Shanghai, China
 Manshi Group;Beijing, China
 Yankuang Energy;No. 298, Fushan South Road, Zoucheng, Shandong, China
-Glencore;50 Berkeley Street, London W1J 8HD, United Kingdom
 Valiant Resources;Canberra, Australia
 Kolmar;Moscow, Russia
 Indexim Coalindo;Jakarta, Indonesia
@@ -203,7 +196,6 @@ Indian Oil Corporation Limited;IndianOil Bhavan, G-9, Ali Yavar Jung Marg, Bandr
 Indonesia Asahan Aluminium;Jl. MH Thamrin No. 2-4, Jakarta, Indonesia
 Bayan Resources;Menara Bidakara 2, Jl. Jend. Gatot Subroto Kav. 71-73, Jakarta, Indonesia
 Shanxi Coking Coal Group;Taiyuan, Shanxi, China
-China Cinda Asset Management Company;4/F, 7 Financial Street, Xicheng District, Beijing, China
 China Construction Bank;No. 25, Financial Street, Xicheng District, Beijing, China
 Indika Energy;Indika Energy Building, Jl. Jend. Sudirman Kav. 52-53, Jakarta, Indonesia
 GCM Resources;7th Floor, 33 Cavendish Square, London, W1G 0PW, United Kingdom
@@ -212,7 +204,6 @@ ConocoPhillips;925 N Eldridge Pkwy, Houston, TX 77079, USA
 Guangdong Hanjian Holding Company;Beijing, China
 Shanghai Chengrui Investment Company;Beijing, China
 China Kingho Energy Group;No. 1, Qiyi Street, Urumqi, Xinjiang, China
-Huayang New Material Technology Group;Beijing, China
 ITOCHU Corporation;5-1, Kita-Aoyama 2-chome, Minato-ku, Tokyo, Japan
 Iraqi Oil Exploration Company;Baghdad, Iraq
 Qatargas Operating Company Limited;P.O. Box 22666, Doha, Qatar
@@ -234,22 +225,19 @@ Shenmu County State-Owned Asset Management Company;Beijing, China
 Guangdong Jinma Tourism Group;Beijing, China
 Jinneng Group;No. 1 Jinneng Road, Jinzhong, Shanxi, China
 Lu'an Chemical Group;Beijing, China
-Shanxi Coking Coal Group;Taiyuan, Shanxi, China
 Tianjin Energy Investment Group;Tianjin, China
 Sinopec Group;No. 22 Chaoyangmen North Street, Chaoyang District, Beijing, China
 Guangda Holding Company;Beijing, China
-China National Petroleum Corporation;9 Dongzhimen North Street, Dongcheng District, Beijing, China
 Changchun Jijun Trade Company;Beijing, China
 Ningxia State-Owned Assets Company;Beijing, China
 Shanghai Huayi Group;Shanghai, China
 Jiutai Energy;Beijing, China
 Jinchengtai Limited Liability Company Of Chemical Industry of Ordos City;Beijing, China
-Xinjiang Energy Group;No.128 Nanchang Road, Urumqi, Xinjiang, China
 Joint Resources JSC;Astana, Kazakhstan
 FCI Management;Astana, Kazakhstan
 China Cinda Asset Management Company;No. 8 Financial Street, Xicheng District, Beijing, China
 PPL;Two North Ninth Street, Allentown, PA 18101, USA
-PPI;N/A
+PPI;
 Octo Coal;Moscow, Russia
 Inner Mongolia Yitai Group;No. 1 Yitai Avenue, Yitai Industry Park, Ordos, Inner Mongolia, China
 Shanxi Yuedian Energy;Beijing, China
@@ -265,7 +253,6 @@ China Investment Co;Beijing, China
 China Development Bank;No. 17 Financial Street, Xicheng District, Beijing, China
 China Import-Export Bank;30-31F, China EXIM Building, 30 Fuxingmennei Street, Xicheng District, Beijing, China
 Shandong First Geological and Mineral Exploration Institute;Beijing, China
-China Datang;No. 15, Yuetan North Street, Xicheng District, Beijing, China
 Erdenes MGL;Ulaanbaatar 14240, Mongolia
 Sindh Engro Coal Mining Company;16th Floor, The Harbor Front Building, Marine Drive, Block 4, Clifton, Karachi, Pakistan
 Adaro Energy;Menara Karya, 23rd Floor, Jl. H.R. Rasuna Said, Block X-5, Kav. 1-2, Jakarta 12950, Indonesia
@@ -273,7 +260,7 @@ Severstal-Resource;Cherepovets, Vologda Oblast, Russia
 Russkaya Energiya;Moscow, Russia
 ao Holding Investment Company;Beijing, China
 Hongchuang;Beijing, China
-Investment Center;N/A
+Investment Center;
 Langfang Heyuan Investment Center;Beijing, China
 Hebei Weiyuan Group;Beijing, China
 Ningxia Wangwa Coal Industry Company;Beijing, China
@@ -285,7 +272,6 @@ Shanxi Provincial Coal Industry Agency Service Center;Beijing, China
 Beijing Sunshine Ruita Investment Consulting Company;Beijing, China
 Public Power Corporation of Greece S.A;30, Halkokondyli Str., 104 32 Athens, Greece
 Guizhou Panjiang Coal and Electricity Group;Guiyang, Guizhou, China
-Shandong Energy;No. 27 Shanda South Road, Jinan, Shandong, China
 Guizhou Coalfield Geology Bureau;Beijing, China
 Futura Resources;Canberra, Australia
 Sojitz;1-20, Akasaka 6-chome, Minato-ku, Tokyo 107-8655, Japan
@@ -313,11 +299,10 @@ Petroleos Mexicanos;Av. Marina Nacional 329, Col. Petróleos Mexicanos, 11311 Me
 Shenmu Coal Company;Beijing, China
 Yulin Yuyang Coal Company;Beijing, China
 Yanchang Oil and Minerals Administration Hengshan Oil Drilling and Production Company;Beijing, China
-Shanghua Investment Company;N/A
+Shanghua Investment Company;
 Steel Authority of India;Ispat Bhawan, Lodhi Road, New Delhi - 110 003, India
 Rashtriya Ispat Nigam;Administrative Building, B-Block, Visakhapatnam Steel Plant, Visakhapatnam - 530031, India
 NMDC;Khanij Bhavan, Masab Tank, Hyderabad - 500028, India
 NTPC;NTPC Bhawan, SCOPE Complex, Institutional Area, Lodhi Road, New Delhi - 110003, India
-Coal India;Coal India Limited, Coal Bhawan, Premise No-04 MAR, Plot No-AF-III, Action Area-1A, Newtown, Rajarhat, Kolkata-700156, West Bengal, India
 Shenmu State-Owned Assets Operation Company;Beijing, China
 Yulin City Finance Investment Management Company;Beijing, China
