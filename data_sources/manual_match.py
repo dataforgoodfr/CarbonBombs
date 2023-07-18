@@ -151,6 +151,17 @@ manual_match_company = {
     "Saudi Aramco":"Saudi Arabian Oil Company (Saudi Aramco)",
     "BP":"BP PLC",
     "BP P.L.C.":"BP PLC",
+    "Suncor Energy Inc.":"Suncor Energy Inc",
+    "Eni S.P.A.":"Eni SpA",
+    "Korean Gas Corporation":"Korea Gas Corporation (KOGAS)",
+    "Canadian Natural Resources Limited":"Canadian Natural Resources Ltd (CNRL)",
+    "Petroliam Nasional Berhad":"Petroliam Nasional Berhad (Petronas)",
+    "OMV Aktiengesellschaft":"OMV AG",
+    "RWE Power":"RWE AG",
+    "Aker":"Aker BP ASA",
+    "PJSC LUKOIL":"LUKOIL PJSC",
+    "Repsol Exploración S.A.":"Repsol SA",
+    "CLP Group":"CLP Holdings Ltd",
 }
 
 # Dictionnary for bank matching between BankTrack (key)
