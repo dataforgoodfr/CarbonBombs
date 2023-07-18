@@ -124,8 +124,8 @@ def company_involvement_in_carbon_bombs():
     # Extract the percentage using a simple regular expression
     df['percentage'] = df['Parent_company_source_GEM']\
                             .str.extract(r'\(([\d.]+)%\)')
-    # Convert percentage column to float
-    df['percentage'] = df['percentage'].astype(float)
+    # Convert percentage column to float with two decimals
+    df['percentage'] = df['percentage'].astype(float).round(2)
     # Drop Parent_Company column
     df.drop("Parent_company_source_GEM", axis = 1, inplace = True)
     # Rename column name
