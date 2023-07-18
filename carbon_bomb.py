@@ -1353,8 +1353,6 @@ def create_carbon_bombs_table():
 
     df_carbon_bombs = get_information_from_GEM(df_carbon_bombs)
     df_carbon_bombs = complete_GEM_with_ChatGPT(df_carbon_bombs)
-    df_carbon_bombs["Bomb_type"] = "Extraction"
-    
     # Add World region column to the database
     # First need to remap Turkey / Türkiye country
     df_carbon_bombs.replace({'Türkiye': 'Turkey'},inplace = True)
