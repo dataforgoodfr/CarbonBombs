@@ -14,6 +14,7 @@ $ python scrapper.py
 """
 
 import sys
+import itertools
 from credentials import API_KEY
 import pandas as pd
 import awoc
@@ -470,9 +471,19 @@ def scrapping_company_location():
         "Longitude",
     ]
     df_output = pd.DataFrame(columns = columns_dataframe)
-    # Load list company and adress generated with chatGPT
+    # Load list company and merge with adress generated with chatGPT
     file_path = "./data_sources/Data_chatGPT_company_hq_adress.csv"
-    df = pd.read_csv(file_path,sep = ";")
+    df_address = pd.read_csv(file_path,sep = ";")
+    df_cb = pd.read_csv("data_cleaned/carbon_bombs_informations.csv")
+    # Retrieve only the companies name without percentage
+    companies = df_cb["Parent_company_source_GEM"].str.split(';').values
+    companies = list(itertools.chain(*companies))
+    companies = list(map(lambda x: "(".join(x.split('(')[:-1]).strip(),
+                         companies))
+    companies = sorted(list(set(
+        [c for c in companies if c not in ["Others", "other", "New project"]])))
+    df_companies = pd.DataFrame(companies,columns = ["Company"])
+    df = df_companies.merge(df_address, on = "Company", how = "left")
     for _,row in df.iterrows():
         # Create dict relative to one company
         company_info = dict()
@@ -498,24 +509,6 @@ def scrapping_company_location():
     # Rename company column with uniformed Name
     df_output['Company_name'] = (df_output['Company_name'].
                                  replace(uniform_company_name))
-    # Drop perfect duplicates companies
-    df_output = df_output.drop_duplicates().reset_index(drop=True)
-    # Isolate duplicated companies that will be droped
-    duplicates = df_output.loc[df_output.duplicated('Company_name',
-                                                    keep=False)].copy()
-    # Calculates len of adress column
-    duplicates["column_len"]=(duplicates["Address_headquarters_source_chatGPT"]
-                              .apply(len))
-    # Order by Carbon_bomb_connected first (NaN will always be last record) and
-    # column_len (We keep the simpliest address as there is some doubt)
-    duplicates.sort_values(["Company_name","Carbon_bomb_connected","column_len"]
-                           ,inplace=True)
-    duplicates.reset_index(inplace=True)
-    # Get index of column to drop in the main dataframe df_output
-    drop_index = list(duplicates.drop_duplicates("Company_name",keep="last")
-                      ["index"])
-    # Drop those index from df_output
-    df_output.drop(drop_index,inplace = True)
     # Add country associated to the coordinates
     def get_country(lat, long):
         if lat == 0 and long == 0:
