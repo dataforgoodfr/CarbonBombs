@@ -22,6 +22,7 @@ import requests
 from bs4 import BeautifulSoup, SoupStrainer
 from geopy.geocoders import Nominatim
 from data_sources.manual_match import manual_match_bank
+from data_sources.manual_match import manual_match_company
 from data_sources.uniform_company_name import uniform_company_name
 
 
@@ -540,6 +541,12 @@ def scrapping_company_location():
                          'Logo_OtherSource'
                         ]
     df_logos = select_logos(csv_file_company, company_url_field)
+    # Rename company name with manual_matched company. Valid only added after 
+    # commit 98321ecb1f17aa4e54d85743a0a9d30c22e960fe because the name in 
+    # company logo file are fixed but some have changed after this commit
+    # Refactor must be done here.
+    df_logos["Company_name"] = df_logos['Company_name'].replace(
+        manual_match_company)
     # Add logo to the output dataframe
     df_logos = df_logos.reindex(columns=['Company_name','Address_headquarters_source_chatGPT','Logo_URL'])
     df_output = pd.merge(df_output, df_logos,
