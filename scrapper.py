@@ -14,6 +14,7 @@ $ python scrapper.py
 """
 
 import sys
+import itertools
 from credentials import API_KEY
 import pandas as pd
 import awoc
@@ -68,7 +69,6 @@ def select_logos(csv_file, url_field):
         None.
     """
     df = pd.read_csv(csv_file, sep=",")
-
     # Identification of the URL
     if len(url_field)==1 or isinstance(url_field, str):
         df['Logo_URL'] = df.loc[:,url_field]
@@ -76,11 +76,9 @@ def select_logos(csv_file, url_field):
         df['Logo_URL'] = df.loc[:,url_field[0]]
         for i in range(len(url_field)-1):
             df['Logo_URL'] = df['Logo_URL'].fillna(df.loc[:,url_field[i+1]])
-
     # Rows with missing URL removed
     df.dropna(subset = ['Logo_URL'], inplace=True)
     df.reset_index(drop=True, inplace=True)
-
     return df
 
 ##############################################################################
@@ -470,9 +468,25 @@ def scrapping_company_location():
         "Longitude",
     ]
     df_output = pd.DataFrame(columns = columns_dataframe)
-    # Load list company and adress generated with chatGPT
+    # Load list company and merge with adress generated with chatGPT
     file_path = "./data_sources/Data_chatGPT_company_hq_adress.csv"
-    df = pd.read_csv(file_path,sep = ";")
+    df_address = pd.read_csv(file_path,sep = ";")
+    df_cb = pd.read_csv("data_cleaned/carbon_bombs_informations.csv")
+    # Retrieve only the companies name without percentage
+    companies = df_cb["Parent_company_source_GEM"].str.split(';').values
+    companies = list(itertools.chain(*companies))
+    companies = list(map(lambda x: "(".join(x.split('(')[:-1]).strip(),
+                         companies))
+    companies = sorted(list(set(
+        [c for c in companies if c not in ["Others",
+                                           "other",
+                                           "Other",
+                                           "New project",
+                                           "",
+                                           "No informations on company",
+                                           ]])))
+    df_companies = pd.DataFrame(companies,columns = ["Company"])
+    df = df_companies.merge(df_address, on = "Company", how = "left")
     for _,row in df.iterrows():
         # Create dict relative to one company
         company_info = dict()
@@ -500,9 +514,11 @@ def scrapping_company_location():
                                  replace(uniform_company_name))
     # Drop perfect duplicates companies
     df_output = df_output.drop_duplicates().reset_index(drop=True)
-    # Isolate duplicated companies that will be droped
+    # Isolate duplicated companies that will be droped (different address)
     duplicates = df_output.loc[df_output.duplicated('Company_name',
                                                     keep=False)].copy()
+    # Replace NaN values in column Address with ""
+    duplicates["Address_headquarters_source_chatGPT"] = duplicates["Address_headquarters_source_chatGPT"].fillna("")
     # Calculates len of adress column
     duplicates["column_len"]=(duplicates["Address_headquarters_source_chatGPT"]
                               .apply(len))
@@ -538,7 +554,6 @@ def scrapping_company_location():
             continue
         else:
             df_output.at[index, 'World_region'] = world_region.get_country_continent_name(row['Country'])
-
     # Add logo URLs
     # Load list company and logo URL
     csv_file_company = "./data_sources/company_url.csv"
@@ -547,11 +562,16 @@ def scrapping_company_location():
                          'Logo_OtherSource'
                         ]
     df_logos = select_logos(csv_file_company, company_url_field)
+    # Rename company name with manual_matched company. Valid only added after 
+    # commit 98321ecb1f17aa4e54d85743a0a9d30c22e960fe because the name in 
+    # company logo file are fixed but some have changed after this commit
+    # Refactor must be done here.
+    df_logos["Company_name"] = df_logos['Company_name'].replace(
+        uniform_company_name)
     # Add logo to the output dataframe
-    df_logos = df_logos.reindex(columns=['Company_name','Address_headquarters_source_chatGPT','Logo_URL'])
-    df_output = pd.merge(df_output, df_logos,
-                         on=['Company_name','Address_headquarters_source_chatGPT'],
-                         how='left')
+    df_logos = df_logos.reindex(columns=['Company_name','Logo_URL'])
+    df_logos.drop_duplicates(inplace = True)
+    df_output = pd.merge(df_output, df_logos,on='Company_name',how='left')
     return df_output
 
 def add_column_carbon_bombs_connexion(df_company):
