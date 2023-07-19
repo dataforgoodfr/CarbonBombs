@@ -42,8 +42,12 @@ def concat_dataframe_into_excel(fpath: str):
         "data_cleaned/country_informations.csv",
     ]
     # init writer to create excel file with
-    writer = pd.ExcelWriter(fpath, engine="xlsxwriter",
-                            options={'strings_to_urls': False})
+    writer = pd.ExcelWriter(fpath,
+                            engine="xlsxwriter",
+                            engine_kwargs={
+                                'options': {'strings_to_urls': False}
+                                }
+                            )
 
     for csv_fpath in cleaned_datasets_fpaths:
         if os.path.isfile(csv_fpath):
