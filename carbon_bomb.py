@@ -19,6 +19,7 @@ from fuzzywuzzy import fuzz
 from data_sources.manual_match import manual_match_coal
 from data_sources.manual_match import manual_match_gasoil
 from data_sources.manual_data import manual_data_to_add
+from geopy.geocoders import Nominatim
 import time
 import requests
 from bs4 import BeautifulSoup
@@ -1176,7 +1177,7 @@ def complete_GEM_with_ChatGPT(df):
                                               row['Carbon_bomb_description']=='New project') \
                                              else row['Carbon_bomb_description'], axis=1)
                                                     
-    df=df.drop(labels=['Name', 'Start year', 'Description'], axis=1)
+    df=df.drop(labels=['Name', 'Start year', 'Description','Country'], axis=1)
                                                     
     return df        
 
@@ -1350,9 +1351,19 @@ def create_carbon_bombs_table():
     df_carbon_bombs.loc[
         df_carbon_bombs.Carbon_bomb_name_source_CB == "Khafji", "Country_source_CB"
     ] = "Kuwait"
-
+    # Add Chat GPT informations when needed
     df_carbon_bombs = get_information_from_GEM(df_carbon_bombs)
     df_carbon_bombs = complete_GEM_with_ChatGPT(df_carbon_bombs)
+    # Add latitude and longitude if informations not present
+    geolocator = Nominatim(user_agent="my_app")
+    df_missing_coordinates = df[df['Latitude'].isnull() | df['Longitude'].isnull()]
+    for index,rows in df_missing_coordinates.iterrows():
+        country = rows["Country_source_CB"]
+        location = geolocator.geocode(country)
+        latitude = location.latitude
+        longitude = location.longitude
+        df_carbon_bombs.loc[index,"Latitude"]=latitude
+        df_carbon_bombs.loc[index,"Longitude"]=longitude
     # Add World region column to the database
     # First need to remap Turkey / Türkiye country
     df_carbon_bombs.replace({'Türkiye': 'Turkey'},inplace = True)
