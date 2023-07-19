@@ -22,7 +22,6 @@ import requests
 from bs4 import BeautifulSoup, SoupStrainer
 from geopy.geocoders import Nominatim
 from data_sources.manual_match import manual_match_bank
-from data_sources.manual_match import manual_match_company
 from data_sources.uniform_company_name import uniform_company_name
 
 
@@ -70,7 +69,6 @@ def select_logos(csv_file, url_field):
         None.
     """
     df = pd.read_csv(csv_file, sep=",")
-
     # Identification of the URL
     if len(url_field)==1 or isinstance(url_field, str):
         df['Logo_URL'] = df.loc[:,url_field]
@@ -78,11 +76,9 @@ def select_logos(csv_file, url_field):
         df['Logo_URL'] = df.loc[:,url_field[0]]
         for i in range(len(url_field)-1):
             df['Logo_URL'] = df['Logo_URL'].fillna(df.loc[:,url_field[i+1]])
-
     # Rows with missing URL removed
     df.dropna(subset = ['Logo_URL'], inplace=True)
     df.reset_index(drop=True, inplace=True)
-
     return df
 
 ##############################################################################
@@ -482,7 +478,12 @@ def scrapping_company_location():
     companies = list(map(lambda x: "(".join(x.split('(')[:-1]).strip(),
                          companies))
     companies = sorted(list(set(
-        [c for c in companies if c not in ["Others", "other", "New project"]])))
+        [c for c in companies if c not in ["Others",
+                                           "other",
+                                           "New project",
+                                           "",
+                                           "No informations on company",
+                                           ]])))
     df_companies = pd.DataFrame(companies,columns = ["Company"])
     df = df_companies.merge(df_address, on = "Company", how = "left")
     for _,row in df.iterrows():
@@ -532,7 +533,6 @@ def scrapping_company_location():
             continue
         else:
             df_output.at[index, 'World_region'] = world_region.get_country_continent_name(row['Country'])
-
     # Add logo URLs
     # Load list company and logo URL
     csv_file_company = "./data_sources/company_url.csv"
@@ -546,12 +546,11 @@ def scrapping_company_location():
     # company logo file are fixed but some have changed after this commit
     # Refactor must be done here.
     df_logos["Company_name"] = df_logos['Company_name'].replace(
-        manual_match_company)
+        uniform_company_name)
     # Add logo to the output dataframe
-    df_logos = df_logos.reindex(columns=['Company_name','Address_headquarters_source_chatGPT','Logo_URL'])
-    df_output = pd.merge(df_output, df_logos,
-                         on=['Company_name','Address_headquarters_source_chatGPT'],
-                         how='left')
+    df_logos = df_logos.reindex(columns=['Company_name','Logo_URL'])
+    df_logos.drop_duplicates(inplace = True)
+    df_output = pd.merge(df_output, df_logos,on='Company_name',how='left')
     return df_output
 
 def add_column_carbon_bombs_connexion(df_company):
