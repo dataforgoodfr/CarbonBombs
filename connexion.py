@@ -118,7 +118,12 @@ def company_involvement_in_carbon_bombs():
     df = pd.concat([pd.DataFrame(rows) for rows in split_rows])
     df.reset_index(drop=True, inplace=True)
     # Use str.extract() to create new columns
-    df['company'] = df['Parent_company_source_GEM'].str.extract(r'^(.+?)\s+\(')
+
+    df['company'] = df['Parent_company_source_GEM'].apply(
+        lambda x: "(".join(x.split('(')[:-1])
+    )
+    # df['company'] = df['Parent_company_source_GEM'].str.extract(r'^(.+?)\s+\(')
+
     # Clean extra space from company column
     df['company'] = df['company'].str.strip()
     # Extract the percentage using a simple regular expression
@@ -263,6 +268,7 @@ def main_connexion_function():
     # Load BOCC Database
     df_bocc = load_banking_climate_chaos()
     df = company_involvement_in_carbon_bombs()
+
     company_cb_bocc = link_record_CB_BOCC(df)
     # sort dict to avoid change in the saved file
     company_cb_bocc = dict(sorted(company_cb_bocc.items()))
