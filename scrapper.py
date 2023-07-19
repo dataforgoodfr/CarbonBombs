@@ -517,6 +517,8 @@ def scrapping_company_location():
     # Isolate duplicated companies that will be droped (different address)
     duplicates = df_output.loc[df_output.duplicated('Company_name',
                                                     keep=False)].copy()
+    # Replace NaN values in column Address with ""
+    duplicates["Address_headquarters_source_chatGPT"] = duplicates["Address_headquarters_source_chatGPT"].fillna("")
     # Calculates len of adress column
     duplicates["column_len"]=(duplicates["Address_headquarters_source_chatGPT"]
                               .apply(len))

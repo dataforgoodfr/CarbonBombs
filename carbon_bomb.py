@@ -1356,7 +1356,7 @@ def create_carbon_bombs_table():
     df_carbon_bombs = complete_GEM_with_ChatGPT(df_carbon_bombs)
     # Add latitude and longitude if informations not present
     geolocator = Nominatim(user_agent="my_app")
-    df_missing_coordinates = df[df['Latitude'].isnull() | df['Longitude'].isnull()]
+    df_missing_coordinates = df_carbon_bombs[df_carbon_bombs['Latitude'].isnull() | df_carbon_bombs['Longitude'].isnull()]
     for index,rows in df_missing_coordinates.iterrows():
         country = rows["Country_source_CB"]
         location = geolocator.geocode(country)
