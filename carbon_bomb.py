@@ -319,6 +319,7 @@ def create_carbon_bombs_gasoil_table():
         'Operator',
         'Owner',
         'Parent',
+        'Status'
         ]
     df_gasoil_gem_mines = df_gasoil_gem_mines.loc[:,GEM_usefull_columns]
     # Only retain perfect match on Project Name between GEM & CB with a 
@@ -652,7 +653,13 @@ def concatenate_multi_extraction_site(df_gem, list_columns, multi_index,
             list_value_concat.append(value)
         elif elt =="Owner":
             value = [df_gem.loc[index,elt] for index in multi_index]
-            list_value_concat.append(value)  
+            list_value_concat.append(value)
+        elif elt == "Status":
+            value_concat = [df_gem.loc[index,elt] for index in multi_index]
+            value = list(set(value_concat))
+            value = " & ".join(value)
+            list_value_concat.append(value)
+            # print()
         else:
             print(f"No concatenation handle for column name {elt}\n"
                   "Please verfiy list_columns content\n"
@@ -781,6 +788,7 @@ def create_carbon_bombs_coal_table():
         'Operators',
         'Owners',
         'Parent Company',
+        'Status'
         ]
     df_coal_gem_mines = df_coal_gem_mines.loc[:,GEM_usefull_columns]
     # Only retain perfect match on Project Name between GEM & CB with a 
@@ -1253,6 +1261,7 @@ def create_carbon_bombs_table():
         "Operators":"Operators",
         "Owners":"Owners",
         "Parent Company":"Parent_Company",
+        "Status": "Status",
     }
     name_mapping_gasoil = {
         "Project Name":"Carbon_Bomb_Name",
@@ -1265,6 +1274,7 @@ def create_carbon_bombs_table():
         "Owner":"Owners",
         "Parent":"Parent_Company",
         "Unit_concerned":"Multiple_unit_concerned",
+        "Status": "Status",
     }
     # Remap dataframe columns based on previous mapping
     df_coal.rename(columns=name_mapping_coal,inplace=True)
@@ -1285,6 +1295,8 @@ def create_carbon_bombs_table():
                                         .apply(compute_percentage_multi_sites)
     # Drop column Owners (next to decision taken during GEM interview)
     df_carbon_bombs.drop("Owners", axis = 1, inplace = True)
+    # Set status to lower
+    df_carbon_bombs["Status"] = df_carbon_bombs["Status"].str.lower()
     # Remap dataframe columns to display data source
     # Not efficient might be rework (no time for that right now)
     name_mapping_source = {
@@ -1300,6 +1312,7 @@ def create_carbon_bombs_table():
         "Operators":"Operators_source_GEM",
         "Parent_Company":"Parent_company_source_GEM",
         "Multiple_unit_concerned":"Multiple_unit_concerned_source_GEM",
+        "Status": "Status_source_GEM"
     }
     df_carbon_bombs.rename(columns=name_mapping_source,inplace=True)
     # Add chatPGT data for Carbon Bombs that have not data extracted from GEM
@@ -1319,6 +1332,7 @@ def create_carbon_bombs_table():
         "Operators_source_GEM",
         "Parent_company_source_GEM",
         "Multiple_unit_concerned_source_GEM",
+        "Status_source_GEM",
     ]
     df_carbon_bombs = df_carbon_bombs[new_column_order]
     # Fulfill empty values for GEM_ID (GEM) and	GEM_source (GEM) columns
