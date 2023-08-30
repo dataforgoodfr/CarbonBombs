@@ -162,6 +162,9 @@ manual_match_company = {
     "PJSC LUKOIL":"LUKOIL PJSC",
     "Repsol Exploración S.A.":"Repsol SA",
     "CLP Group":"CLP Holdings Ltd",
+    "OXY USA":"Occidental Petroleum Corp",
+    "Occidental Petroleum Corporation":"Occidental Petroleum Corp",
+    "Occidental Permian":"Occidental Petroleum Corp",
 }
 
 # Dictionnary for bank matching between BankTrack (key)
