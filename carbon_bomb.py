@@ -977,11 +977,11 @@ def add_chat_GPT_data(df):
         df.loc[df["temp"].isin(list_na_carbon_bombs),column] = new_values
     # Add columns lat/long/operator_source that define source either come from 
     # GEM database or ChatGPT
-    df["Latitude_longitude_operator_source"] = ""
+    df["Operator_latitude_longitude_source"] = ""
     df.loc[df['GEM_id_source_GEM'].isna(),\
-        "Latitude_longitude_operator_source"] = "Chat GPT"
+        "Operator_latitude_longitude_source"] = "Chat GPT"
     df.loc[~(df['GEM_id_source_GEM'].isna()),\
-        "Latitude_longitude_operator_source"] = "GEM"
+        "Operator_latitude_longitude_source"] = "GEM"
     # Drop temp column from df 
     df.drop("temp",axis = 1, inplace = True)
     return df
@@ -1317,7 +1317,7 @@ def create_carbon_bombs_table():
         "GEM_url_source_GEM",
         "Latitude",
         "Longitude",
-        "Latitude_longitude_operator_source",
+        "Operator_latitude_longitude_source",
         "Operators",
         "Parent_company_source_GEM",
         "Multiple_unit_concerned_source_GEM",
