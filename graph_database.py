@@ -23,7 +23,7 @@ def load_renamed_columns():
         'Latitude':'latitude',
         'Longitude':'longitude',
         'Latitude_longitude_operator_source':'source_for_lat_long_operator',
-        'Operators_source_GEM':'operators',
+        'Operators':'operators',
         'Parent_company_source_GEM':'parent_company',
         'Carbon_bomb_start_year':'start_year',
         'Multiple_unit_concerned_source_GEM':'multiple_unit',

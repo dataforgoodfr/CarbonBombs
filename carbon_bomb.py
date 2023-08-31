@@ -272,7 +272,7 @@ def load_chatGPT_database():
         })
     # Remap some column name to ensure correspondance
     mapping_column = {
-        "Operator":"Operators_source_GEM",
+        "Operator":"Operators",
     }
     df.rename(columns=mapping_column,inplace=True)
     return df
@@ -970,7 +970,7 @@ def add_chat_GPT_data(df):
     list_fulfill_columns =  [
         "Latitude",
         "Longitude",
-        "Operators_source_GEM",
+        "Operators",
     ]
     for column in list_fulfill_columns:
         new_values = list(df_chatgpt[column])
@@ -1275,6 +1275,7 @@ def create_carbon_bombs_table():
     # Clean percentage in column Parent_company
     # Clean data into Parent company columns 
     df_carbon_bombs["Parent_Company"].fillna("",inplace=True)
+    
     df_carbon_bombs['Parent_Company'] = df_carbon_bombs.apply(
         lambda row: row['Operators'] 
         if row['Parent_Company'] == "" 
@@ -1298,7 +1299,7 @@ def create_carbon_bombs_table():
         "GEM_source": "GEM_url_source_GEM",
         "Latitude":"Latitude",
         "Longitude":"Longitude",
-        "Operators":"Operators_source_GEM",
+        "Operators":"Operators",
         "Parent_Company":"Parent_company_source_GEM",
         "Multiple_unit_concerned":"Multiple_unit_concerned_source_GEM",
     }
@@ -1317,7 +1318,7 @@ def create_carbon_bombs_table():
         "Latitude",
         "Longitude",
         "Latitude_longitude_operator_source",
-        "Operators_source_GEM",
+        "Operators",
         "Parent_company_source_GEM",
         "Multiple_unit_concerned_source_GEM",
     ]
@@ -1344,7 +1345,7 @@ def create_carbon_bombs_table():
     agg_columns = [
         "GEM_id_source_GEM",
         "GEM_url_source_GEM",
-        "Operators_source_GEM",
+        "Operators",
         "Parent_company_source_GEM",
         "Multiple_unit_concerned_source_GEM"
     ]
