@@ -1167,7 +1167,7 @@ def complete_GEM_with_ChatGPT(df):
                   right_on=['Name', "Country"],
                   suffixes=('', ''))
     df['Carbon_bomb_description_source'] = df.apply(lambda row: 'ChatGPT' if \
-                                             (row['Carbon_bomb_description']=='No informations available on GEM'\
+                                             (row['Carbon_bomb_description']=='No description available'\
                                               or row['Carbon_bomb_description']=='New project') \
                                               else 'GEM', axis=1)
     df['Carbon_bomb_start_year_source'] = df.apply(lambda row: 'ChatGPT' if \
@@ -1177,7 +1177,7 @@ def complete_GEM_with_ChatGPT(df):
                                             row['Carbon_bomb_start_year'] == 'No start year available' \
                                             else row['Carbon_bomb_start_year'], axis=1)
     df['Carbon_bomb_description'] = df.apply(lambda row: row['Description'] if \
-                                             (row['Carbon_bomb_description']=='No informations available on GEM'\
+                                             (row['Carbon_bomb_description']=='No description available'\
                                               or \
                                               row['Carbon_bomb_description']=='New project') \
                                              else row['Carbon_bomb_description'], axis=1)
