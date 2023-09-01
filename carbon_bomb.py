@@ -1348,8 +1348,8 @@ def create_carbon_bombs_table():
         "Parent_company_source_GEM",
         "Multiple_unit_concerned_source_GEM"
     ]
-    df_carbon_bombs[agg_columns] = df_carbon_bombs[agg_columns].applymap(
-                                                    sort_values_if_not_null)
+    #df_carbon_bombs[agg_columns] = df_carbon_bombs[agg_columns].applymap(
+    #                                                sort_values_if_not_null)
     
     # Specific fix fort Khafji bomb that is set to Kuwait and Saudi Arabia
     # -> attribute this carbon bomb to Kuwait to insure a better repartition 
