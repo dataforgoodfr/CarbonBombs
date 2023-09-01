@@ -107,10 +107,10 @@ def company_involvement_in_carbon_bombs():
     df_carbon_bombs_company = df_carbon_bombs.loc[:,[
         "Carbon_bomb_name_source_CB",
         "Country_source_CB",
-        "Parent_company_source_GEM"]]
+        "temp_connexion_parent"]]
     # Force type of column Parent_Company
-    df_carbon_bombs_company["Parent_company_source_GEM"] = (
-        df_carbon_bombs_company.loc[:,"Parent_company_source_GEM"]
+    df_carbon_bombs_company["temp_connexion_parent"] = (
+        df_carbon_bombs_company.loc[:,"temp_connexion_parent"]
         .astype("str"))
     split_rows = df_carbon_bombs_company.apply(split_column_parent_company,
                                                axis=1)
@@ -119,7 +119,7 @@ def company_involvement_in_carbon_bombs():
     df.reset_index(drop=True, inplace=True)
     # Use str.extract() to create new columns
 
-    df['company'] = df['Parent_company_source_GEM'].apply(
+    df['company'] = df['temp_connexion_parent'].apply(
         lambda x: "(".join(x.split('(')[:-1])
     )
     # df['company'] = df['Parent_company_source_GEM'].str.extract(r'^(.+?)\s+\(')
@@ -127,12 +127,12 @@ def company_involvement_in_carbon_bombs():
     # Clean extra space from company column
     df['company'] = df['company'].str.strip()
     # Extract the percentage using a simple regular expression
-    df['percentage'] = df['Parent_company_source_GEM']\
+    df['percentage'] = df['temp_connexion_parent']\
                             .str.extract(r'\(([\d.]+)%\)')
     # Convert percentage column to float with two decimals
     df['percentage'] = df['percentage'].astype(float).round(2)
     # Drop Parent_Company column
-    df.drop("Parent_company_source_GEM", axis = 1, inplace = True)
+    df.drop("temp_connexion_parent", axis = 1, inplace = True)
     # Rename column name
     df = df.rename(columns={'Carbon_bomb_name_source_CB': 'Carbon_bomb_name',
                             'Country_source_CB':'Country',
