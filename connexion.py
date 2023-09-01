@@ -130,7 +130,9 @@ def company_involvement_in_carbon_bombs():
     df['percentage'] = df['temp_connexion_parent']\
                             .str.extract(r'\(([\d.]+)%\)')
     # Convert percentage column to float with two decimals
-    df['percentage'] = df['percentage'].astype(float).round(2)
+    # Temporary : Fix percentage to 999.9 to avoid taking any risk
+    # df['percentage'] = df['percentage'].astype(float).round(2)
+    df['percentage'] = 999.9
     # Drop Parent_Company column
     df.drop("temp_connexion_parent", axis = 1, inplace = True)
     # Rename column name
