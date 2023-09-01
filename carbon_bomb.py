@@ -322,8 +322,8 @@ def create_carbon_bombs_gasoil_table():
         'Parent',
         ]
     df_gasoil_gem_mines = df_gasoil_gem_mines.loc[:,GEM_usefull_columns]
-    # Duplicate Parent company and Owner column to establish connexion between
-    # carbon_bombsand Company with the legacy algorithm
+    # Duplicate Parent company and Operator column to establish connexion between
+    # carbon_bombs and Company with the legacy algorithm
     df_gasoil_gem_mines["temp_connexion_parent"] = (
         df_gasoil_gem_mines.loc[:,"Parent"])
     df_gasoil_gem_mines["temp_connexion_operator"] = (
