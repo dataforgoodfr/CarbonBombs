@@ -62,13 +62,14 @@ def concat_dataframe_into_excel(fpath: str):
 if __name__ == '__main__':
     # Step1 : Carbon bombs table
     df = create_carbon_bombs_table()
-    df.to_csv("./data_cleaned/carbon_bombs_informations.csv", index=False)
+    df.to_csv("./data_cleaned/carbon_bombs_informations.csv",
+              encoding='utf-8-sig',index=False)
     print("carbon_bombs_informations.csv : done\n")
 
     # Step2 : Connexion between CarbonBombs and Company & Company and Bank
     df_cb, df_bank = main_connexion_function()
     df_cb.to_csv("./data_cleaned/connexion_carbonbombs_company.csv",
-                 index=False)
+                 encoding='utf-8-sig',index=False)
     print("connexion_carbonbombs_company.csv : done\n")
     df_bank.to_csv("./data_cleaned/connexion_bank_company.csv",
                    encoding='utf-8-sig', index=False)
@@ -121,6 +122,6 @@ if __name__ == '__main__':
     # Step6 : Concatenate all csv files into a main Excel file
     concat_dataframe_into_excel(CONCAT_DATA_FILE_PATH)
     # Step7 : Update data into Neo4j folder and database
-    purge_database()
-    update_neo4j()
+    #purge_database()
+    #update_neo4j()
     
