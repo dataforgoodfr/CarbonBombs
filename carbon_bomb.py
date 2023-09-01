@@ -647,16 +647,18 @@ def concatenate_multi_extraction_site(df_gem, list_columns, multi_index,
                 math.isnan(value) else value for value in value_concat]
             value = PROJECT_SEPARATOR.join(value_concat)
             list_value_concat.append(value)
-        elif elt =="temp_connexion_parent":
+        elif elt in ["temp_connexion_parent","temp_connexion_operator"]:
             value_concat = [df_gem.loc[index,elt] for index in multi_index]
             # Filtered nan from raw_percentage list    
             filtered_percentage = ([x for x in value_concat 
                                     if not isinstance(x,float)])
             value = ";".join(filtered_percentage)
             list_value_concat.append(value)
-        elif elt =="temp_connexion_operator":
-            value = [df_gem.loc[index,elt] for index in multi_index]
-            list_value_concat.append(value) 
+
+        # elif elt =="temp_connexion_operator":
+        #     value = [df_gem.loc[index,elt] for index in multi_index]
+        #     list_value_concat.append(value) 
+
         elif elt == "Parent":
             value_concat = [df_gem.loc[index,elt] for index in multi_index]
             # Replace nan values by "None"
@@ -1297,6 +1299,7 @@ def create_carbon_bombs_table():
         else row["temp_connexion_parent"],
         axis=1
     )
+    df_carbon_bombs["temp_connexion_parent"].fillna("",inplace=True)
     df_carbon_bombs["temp_connexion_parent"] = (
         df_carbon_bombs["temp_connexion_parent"]\
             .apply(compute_clean_percentage))
@@ -1338,6 +1341,8 @@ def create_carbon_bombs_table():
         "Operators_source_GEM",
         "Parent_company_source_GEM",
         "Multiple_unit_concerned_source_GEM",
+        "temp_connexion_parent",
+        "temp_connexion_operator"
     ]
     df_carbon_bombs = df_carbon_bombs[new_column_order]
     # Fulfill empty values for GEM_ID (GEM) and	GEM_source (GEM) columns

@@ -78,10 +78,10 @@ def split_column_parent_company(row):
     """
     instance = row['Carbon_bomb_name_source_CB']
     country = row['Country_source_CB']
-    companies = row["Parent_company_source_GEM"].split(';')
+    companies = row["temp_connexion_parent"].split(';')
     carbon_bomb_list_company = ([{'Carbon_bomb_name_source_CB': instance,
                                   'Country_source_CB':country,
-                                 'Parent_company_source_GEM': company} 
+                                 'temp_connexion_parent': company} 
                                  for company in companies])
     return carbon_bomb_list_company
 

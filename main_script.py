@@ -77,7 +77,7 @@ if __name__ == '__main__':
     ### Once we made the connexion we can drop column temp_connexion_parent
     ### and temp connexion_owner from carbon_bombs database
     ### Will be rework later
-    df = pd.read_csv("./data/carbon_bombs_informations.csv")
+    df = pd.read_csv("./data_cleaned/carbon_bombs_informations.csv")
     df.drop(['temp_connexion_parent', 'temp_connexion_operator'],
             axis=1, inplace=True)
     df.to_csv("./data_cleaned/carbon_bombs_informations.csv",
