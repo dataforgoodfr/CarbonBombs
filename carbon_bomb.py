@@ -42,11 +42,10 @@ def load_carbon_bomb_list_database():
     df=df.loc[:,["New","Name","Country","Potential emissions (Gt CO2)","Fuel"]]
     # Make some adjustement on new project column
     df.rename(columns={ df.columns[0]: "New_project" }, inplace = True)
-    df["New_project"].replace(np.nan, False, inplace= True)
-    df.loc[df['New_project']=='*', 'New_project']= True
+    df["New_project"] = np.where(df["New_project"] == '*', 'not started', 'operating')
     # Define column types
     dtype_d = {
-        "New_project": "bool",
+        "New_project": "string",
         "Name": "string",
         "Country": "string",
         "Potential emissions (Gt CO2)": "float",
@@ -63,7 +62,7 @@ def load_carbon_bomb_coal_database():
     -------
     pd.DataFrame:
         A pandas dataframe with the following columns:
-        - New_project (bool): whether the project is new or not.
+        - New_project (str): whether the project is operating or not started.
         - Project Name (str): name of the project.
         - Country (str): country where the project is located.
         - Potential emissions (GtCO2) (float): potential emissions of the 
@@ -83,7 +82,7 @@ def load_carbon_bomb_coal_database():
     "./data_sources/1-s2.0-S0301421522001756-mmc2.xlsx".
     The sheet to be read is "Coal".
     The function filters the columns of interest, renames the 'New' column to 
-    'New_project', changes its values to boolean and sets the desired data 
+    'New_project', changes its values to string and sets the desired data 
     types for the dataframe columns. It also replaces some country names to 
     correspond to GEM database.
     """
@@ -95,11 +94,10 @@ def load_carbon_bomb_coal_database():
                     "Potential emissions (GtCO2)","Fuel"]]
     # Make some adjustement on new project column
     df.rename(columns={ df.columns[0]: "New_project" }, inplace = True)
-    df["New_project"].replace(np.nan, False, inplace= True)
-    df.loc[df['New_project']=='*', 'New_project']= True
+    df["New_project"] = np.where(df["New_project"] == '*', 'not started', 'operating')
     # Define column types
     dtype_d = {
-        "New_project": "bool",
+        "New_project": "string",
         "Project Name": "string",
         "Country": "string",
         "Potential emissions (GtCO2)": "float",
@@ -119,7 +117,7 @@ def load_carbon_bomb_gasoil_database():
     -------
     pd.DataFrame:
         A pandas dataframe with the following columns:
-        - New_project (bool): whether the project is new or not.
+        - New_project (str): whether the project is operating or not started.
         - Project Name (str): name of the project.
         - Country (str): country where the project is located.
         - Potential emissions (GtCO2) (float): potential emissions of the 
@@ -139,7 +137,7 @@ def load_carbon_bomb_gasoil_database():
     "./data_sources/1-s2.0-S0301421522001756-mmc2.xlsx".
     The sheet to be read is "Coal".
     The function filters the columns of interest, renames the 'New' column to 
-    'New_project', changes its values to boolean and sets the desired data 
+    'New_project', changes its values to string and sets the desired data 
     types for the dataframe columns. It also replaces some country
     names to correspond to GEM database.
     """
@@ -153,11 +151,10 @@ def load_carbon_bomb_gasoil_database():
     df["Fuel"] = "Oil&Gas"
     # Make some adjustement on new project column
     df.rename(columns={ df.columns[0]: "New_project" }, inplace = True)
-    df["New_project"].replace(np.nan, False, inplace= True)
-    df.loc[df['New_project']=='*', 'New_project']= True
+    df["New_project"] = np.where(df["New_project"] == '*', 'not started', 'operating')
     # Define column types
     dtype_d = {
-        "New_project": "bool",
+        "New_project": "string",
         "Project Name": "string",
         "Country": "string",
         "Potential emissions (GtCO2)": "float",
@@ -320,6 +317,7 @@ def create_carbon_bombs_gasoil_table():
         'Operator',
         'Owner',
         'Parent',
+        'Status'
         ]
     df_gasoil_gem_mines = df_gasoil_gem_mines.loc[:,GEM_usefull_columns]
     # Duplicate Parent company and Operator column to establish connexion between
@@ -669,6 +667,21 @@ def concatenate_multi_extraction_site(df_gem, list_columns, multi_index,
                                     if not isinstance(x,float)])
             value = PROJECT_SEPARATOR.join(filtered_percentage)
             list_value_concat.append(value) 
+
+        elif elt == "Status":
+            value_concat = [df_gem.loc[index,elt] for index in multi_index]
+            value = list(set(value_concat))
+
+            # handle case when there are multiple status
+            # keep the first one to appear in this list
+            remove_multiple_status = ["operating", "in development", "discovered"]
+            for status in remove_multiple_status:
+                if status in value:
+                    value = [status]
+                    break
+
+            value = " & ".join(value)
+            list_value_concat.append(value)
         else:
             print(f"No concatenation handle for column name {elt}\n"
                   "Please verfiy list_columns content\n"
@@ -797,6 +810,7 @@ def create_carbon_bombs_coal_table():
         'Operators',
         'Owners',
         'Parent Company',
+        'Status'
         ]
     df_coal_gem_mines = df_coal_gem_mines.loc[:,GEM_usefull_columns]
     # Only retain perfect match on Project Name between GEM & CB with a 
@@ -1140,7 +1154,7 @@ def get_information_from_GEM(df):
     url = df['GEM_url_source_GEM'].tolist()
 
     for num, item in enumerate(url):
-        time.sleep(0.2)
+        # time.sleep(0.2)
         if item in ['No informations available on GEM', 'New project','Qcoal']:
             description_ = 'No description available'
             start_year_  = 'No start year available'
@@ -1212,8 +1226,8 @@ def create_carbon_bombs_table():
     --------
     pd.DataFrame:
         A pandas DataFrame with the following columns:
-            - 'New_project (CB)': boolean indicating if the project is new or 
-            not.
+            - 'New_project (CB)': string indicating if the project is operating or 
+            not started.
             - 'Carbon_Bomb_Name (CB)': name of the carbon bomb project.
             - 'Country (CB)': country where the carbon bomb project is located.
             - 'Potential_GtCO2 (CB)': potential emissions of the carbon bomb 
@@ -1272,6 +1286,7 @@ def create_carbon_bombs_table():
         "Operators":"Operators",
         "Owners":"Owners",
         "Parent Company":"Parent_Company",
+        "Status": "Status",
     }
     name_mapping_gasoil = {
         "Project Name":"Carbon_Bomb_Name",
@@ -1284,6 +1299,7 @@ def create_carbon_bombs_table():
         "Owner":"Owners",
         "Parent":"Parent_Company",
         "Unit_concerned":"Multiple_unit_concerned",
+        "Status": "Status",
     }
     # Remap dataframe columns based on previous mapping
     df_coal.rename(columns=name_mapping_coal,inplace=True)
@@ -1307,6 +1323,8 @@ def create_carbon_bombs_table():
     df_carbon_bombs["Parent_Company"].fillna("",inplace=True)
     # Drop column Owners (next to decision taken during GEM interview)
     df_carbon_bombs.drop("Owners", axis = 1, inplace = True)
+    # Set status to lower
+    df_carbon_bombs["Status"] = df_carbon_bombs["Status"].str.lower()
     # Remap dataframe columns to display data source
     # Not efficient might be rework (no time for that right now)
     name_mapping_source = {
@@ -1322,6 +1340,7 @@ def create_carbon_bombs_table():
         "Operators":"Operators_source_GEM",
         "Parent_Company":"Parent_company_source_GEM",
         "Multiple_unit_concerned":"Multiple_unit_concerned_source_GEM",
+        "Status": "Status_source_GEM"
     }
     df_carbon_bombs.rename(columns=name_mapping_source,inplace=True)
     # Add chatPGT data for Carbon Bombs that have not data extracted from GEM
@@ -1342,7 +1361,8 @@ def create_carbon_bombs_table():
         "Parent_company_source_GEM",
         "Multiple_unit_concerned_source_GEM",
         "temp_connexion_parent",
-        "temp_connexion_operator"
+        "temp_connexion_operator",
+        "Status_source_GEM",
     ]
     df_carbon_bombs = df_carbon_bombs[new_column_order]
     # Fulfill empty values for GEM_ID (GEM) and	GEM_source (GEM) columns
@@ -1350,16 +1370,16 @@ def create_carbon_bombs_table():
     # First need to fulfill empty values by np.NaN
     df_carbon_bombs.replace("", np.nan, inplace=True)
     # Secondly fulfill cell with New_project = True and empty GEM_ID value
-    df_carbon_bombs.loc[(df_carbon_bombs["New_project_source_CB"]==True)\
+    df_carbon_bombs.loc[(df_carbon_bombs["New_project_source_CB"]=="operating")\
                          & (df_carbon_bombs['GEM_id_source_GEM'].isna()),\
                          ["Parent_company_source_GEM"]] = "New project (100%)"
-    df_carbon_bombs.loc[(df_carbon_bombs["New_project_source_CB"]==True)\
+    df_carbon_bombs.loc[(df_carbon_bombs["New_project_source_CB"]=="operating")\
                          & (df_carbon_bombs['GEM_id_source_GEM'].isna()),\
                          ["GEM_id_source_GEM",
                           "GEM_url_source_GEM",
                           ]] = "New project"
     # Thirdly fulfill cell with New_project = False and empty GEM_ID value
-    df_carbon_bombs.loc[(df_carbon_bombs["New_project_source_CB"]==False)\
+    df_carbon_bombs.loc[(df_carbon_bombs["New_project_source_CB"]!="operating")\
                          & (df_carbon_bombs['GEM_id_source_GEM'].isna()),\
                          ["GEM_id_source_GEM","GEM_url_source_GEM"]] = (
                         "No informations available on GEM")
