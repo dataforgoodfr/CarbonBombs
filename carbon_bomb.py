@@ -326,10 +326,10 @@ def create_carbon_bombs_gasoil_table():
     # carbon_bombsand Company with the legacy algorithm
     df_gasoil_gem_mines["temp_connexion_parent"] = (
         df_gasoil_gem_mines.loc[:,"Parent"])
-    df_gasoil_gem_mines["temp_connexion_owner"] = (
-        df_gasoil_gem_mines.loc[:,"Owner"])
+    df_gasoil_gem_mines["temp_connexion_operator"] = (
+        df_gasoil_gem_mines.loc[:,"Operator"])
     # Add this new column to the list GEM usefull column
-    GEM_usefull_columns += ["temp_connexion_parent","temp_connexion_owner"]
+    GEM_usefull_columns += ["temp_connexion_parent","temp_connexion_operator"]
     # Only retain perfect match on Project Name between GEM & CB with a 
     # country verification
     df_gasoil_carbon_bombs["temp"] = (df_gasoil_carbon_bombs["Project Name"]+
@@ -654,7 +654,7 @@ def concatenate_multi_extraction_site(df_gem, list_columns, multi_index,
                                     if not isinstance(x,float)])
             value = ";".join(filtered_percentage)
             list_value_concat.append(value)
-        elif elt =="temp_connexion_owner":
+        elif elt =="temp_connexion_operator":
             value = [df_gem.loc[index,elt] for index in multi_index]
             list_value_concat.append(value) 
         elif elt == "Parent":
@@ -1259,7 +1259,7 @@ def create_carbon_bombs_table():
     df_coal["Multiple_unit_concerned"]=""
     # Add temp column ensuring connexion between cb and company
     df_coal["temp_connexion_parent"] = df_coal.loc[:,"Parent Company"]
-    df_coal["temp_connexion_owner"] = df_coal.loc[:,"Owners"]
+    df_coal["temp_connexion_operator"] = df_coal.loc[:,"Operators"]
     name_mapping_coal = {
         "Project Name":"Carbon_Bomb_Name",
         "Country_x":"Country",
@@ -1292,14 +1292,14 @@ def create_carbon_bombs_table():
     # Clean data into Parent company columns 
     df_carbon_bombs["temp_connexion_parent"].fillna("",inplace=True)
     df_carbon_bombs["temp_connexion_parent"] = df_carbon_bombs.apply(
-        lambda row: row["temp_connexion_operators"] 
+        lambda row: row["temp_connexion_operator"] 
         if row["temp_connexion_parent"] == "" 
         else row["temp_connexion_parent"],
         axis=1
     )
     df_carbon_bombs["temp_connexion_parent"] = (
         df_carbon_bombs["temp_connexion_parent"]\
-            .apply(compute_clean_percentage)
+            .apply(compute_clean_percentage))
     # Fill na values of Parent company (May be useless now)
     df_carbon_bombs["Parent_Company"].fillna("",inplace=True)
     # Drop column Owners (next to decision taken during GEM interview)

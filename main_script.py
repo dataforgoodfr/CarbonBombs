@@ -78,10 +78,11 @@ if __name__ == '__main__':
     ### and temp connexion_owner from carbon_bombs database
     ### Will be rework later
     df = pd.read_csv("./data/carbon_bombs_informations.csv")
-    df.drop(['temp_connexion_parent', 'temp_connexion_owner'],
+    df.drop(['temp_connexion_parent', 'temp_connexion_operator'],
             axis=1, inplace=True)
     df.to_csv("./data_cleaned/carbon_bombs_informations.csv",
               encoding='utf-8-sig',index=False)
+    """
     if os.path.isfile("./credentials.py"):
         # Step3 : Scrape bank informations
         URL = 'https://www.banktrack.org/banks'
@@ -131,4 +132,4 @@ if __name__ == '__main__':
     # Step7 : Update data into Neo4j folder and database
     #purge_database()
     #update_neo4j()
-    
+    """
