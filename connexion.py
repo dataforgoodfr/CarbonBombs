@@ -78,10 +78,10 @@ def split_column_parent_company(row):
     """
     instance = row['Carbon_bomb_name_source_CB']
     country = row['Country_source_CB']
-    companies = row["Parent_company_source_GEM"].split(';')
+    companies = row["Companies_involved_source_GEM"].split(';')
     carbon_bomb_list_company = ([{'Carbon_bomb_name_source_CB': instance,
                                   'Country_source_CB':country,
-                                 'Parent_company_source_GEM': company} 
+                                 'Companies_involved_source_GEM': company} 
                                  for company in companies])
     return carbon_bomb_list_company
 
@@ -107,10 +107,10 @@ def company_involvement_in_carbon_bombs():
     df_carbon_bombs_company = df_carbon_bombs.loc[:,[
         "Carbon_bomb_name_source_CB",
         "Country_source_CB",
-        "Parent_company_source_GEM"]]
+        "Companies_involved_source_GEM"]]
     # Force type of column Parent_Company
-    df_carbon_bombs_company["Parent_company_source_GEM"] = (
-        df_carbon_bombs_company.loc[:,"Parent_company_source_GEM"]
+    df_carbon_bombs_company["Companies_involved_source_GEM"] = (
+        df_carbon_bombs_company.loc[:,"Companies_involved_source_GEM"]
         .astype("str"))
     split_rows = df_carbon_bombs_company.apply(split_column_parent_company,
                                                axis=1)
@@ -119,7 +119,7 @@ def company_involvement_in_carbon_bombs():
     df.reset_index(drop=True, inplace=True)
     # Use str.extract() to create new columns
 
-    df['company'] = df['Parent_company_source_GEM'].apply(
+    df['company'] = df['Companies_involved_source_GEM'].apply(
         lambda x: "(".join(x.split('(')[:-1])
     )
     # df['company'] = df['Parent_company_source_GEM'].str.extract(r'^(.+?)\s+\(')
@@ -127,12 +127,12 @@ def company_involvement_in_carbon_bombs():
     # Clean extra space from company column
     df['company'] = df['company'].str.strip()
     # Extract the percentage using a simple regular expression
-    df['percentage'] = df['Parent_company_source_GEM']\
+    df['percentage'] = df['Companies_involved_source_GEM']\
                             .str.extract(r'\(([\d.]+)%\)')
     # Convert percentage column to float with two decimals
     df['percentage'] = df['percentage'].astype(float).round(2)
     # Drop Parent_Company column
-    df.drop("Parent_company_source_GEM", axis = 1, inplace = True)
+    df.drop("Companies_involved_source_GEM", axis = 1, inplace = True)
     # Rename column name
     df = df.rename(columns={'Carbon_bomb_name_source_CB': 'Carbon_bomb_name',
                             'Country_source_CB':'Country',
