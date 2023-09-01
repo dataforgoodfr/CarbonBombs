@@ -65,7 +65,7 @@ if __name__ == '__main__':
     df.to_csv("./data_cleaned/carbon_bombs_informations.csv",
               encoding='utf-8-sig',index=False)
     print("carbon_bombs_informations.csv : done\n")
-
+    
     # Step2 : Connexion between CarbonBombs and Company & Company and Bank
     df_cb, df_bank = main_connexion_function()
     df_cb.to_csv("./data_cleaned/connexion_carbonbombs_company.csv",
@@ -74,7 +74,14 @@ if __name__ == '__main__':
     df_bank.to_csv("./data_cleaned/connexion_bank_company.csv",
                    encoding='utf-8-sig', index=False)
     print("connexion_bank_company.csv : done\n")
-
+    ### Once we made the connexion we can drop column temp_connexion_parent
+    ### and temp connexion_owner from carbon_bombs database
+    ### Will be rework later
+    df = pd.read_csv("./data/carbon_bombs_informations.csv")
+    df.drop(['temp_connexion_parent', 'temp_connexion_owner'],
+            axis=1, inplace=True)
+    df.to_csv("./data_cleaned/carbon_bombs_informations.csv",
+              encoding='utf-8-sig',index=False)
     if os.path.isfile("./credentials.py"):
         # Step3 : Scrape bank informations
         URL = 'https://www.banktrack.org/banks'
