@@ -22,9 +22,10 @@ def load_renamed_columns():
         'GEM_url_source_GEM':'gem_source',
         'Latitude':'latitude',
         'Longitude':'longitude',
-        'Operator_latitude_longitude_source':'source_for_lat_long_operator',
-        'Operators':'operators',
+        'Latitude_longitude_source':'source_for_lat_long',
+        'Operators_source_GEM':'operators',
         'Parent_company_source_GEM':'parent_company',
+        'Companies_involved_source_GEM':'companies',
         'Carbon_bomb_start_year':'start_year',
         'Multiple_unit_concerned_source_GEM':'multiple_unit',
         'World_region' : 'world_region'
