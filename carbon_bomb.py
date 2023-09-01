@@ -949,8 +949,7 @@ def add_chat_GPT_data(df):
     column to indicate the source of the added information (either GEM or 
     ChatGPT).
 
-    The columns that are added from ChatGPT are "Latitude", "Longitude", and 
-    "Operators (GEM)".
+    The columns that are added from ChatGPT are "Latitude", "Longitude".
     """
     df_chatgpt = load_chatGPT_database()
     # Once data from chat GPT is loaded fulfill df for rows with
@@ -970,18 +969,17 @@ def add_chat_GPT_data(df):
     list_fulfill_columns =  [
         "Latitude",
         "Longitude",
-        "Operators",
     ]
     for column in list_fulfill_columns:
         new_values = list(df_chatgpt[column])
         df.loc[df["temp"].isin(list_na_carbon_bombs),column] = new_values
     # Add columns lat/long/operator_source that define source either come from 
     # GEM database or ChatGPT
-    df["Operator_latitude_longitude_source"] = ""
+    df["Latitude_longitude_source"] = ""
     df.loc[df['GEM_id_source_GEM'].isna(),\
-        "Operator_latitude_longitude_source"] = "Chat GPT"
+        "Latitude_longitude_source"] = "Chat GPT"
     df.loc[~(df['GEM_id_source_GEM'].isna()),\
-        "Operator_latitude_longitude_source"] = "GEM"
+        "Latitude_longitude_source"] = "GEM"
     # Drop temp column from df 
     df.drop("temp",axis = 1, inplace = True)
     return df
@@ -1275,8 +1273,7 @@ def create_carbon_bombs_table():
     # Clean percentage in column Parent_company
     # Clean data into Parent company columns 
     df_carbon_bombs["Parent_Company"].fillna("",inplace=True)
-    
-    df_carbon_bombs['Parent_Company'] = df_carbon_bombs.apply(
+    df_carbon_bombs['Companies_involved'] = df_carbon_bombs.apply(
         lambda row: row['Operators'] 
         if row['Parent_Company'] == "" 
         else row['Parent_Company'],
@@ -1299,8 +1296,9 @@ def create_carbon_bombs_table():
         "GEM_source": "GEM_url_source_GEM",
         "Latitude":"Latitude",
         "Longitude":"Longitude",
-        "Operators":"Operators",
+        "Operators":"Operators_source_GEM",
         "Parent_Company":"Parent_company_source_GEM",
+        "Companies_involved":"Companies_involved_source_GEM",
         "Multiple_unit_concerned":"Multiple_unit_concerned_source_GEM",
     }
     df_carbon_bombs.rename(columns=name_mapping_source,inplace=True)
@@ -1317,9 +1315,10 @@ def create_carbon_bombs_table():
         "GEM_url_source_GEM",
         "Latitude",
         "Longitude",
-        "Operator_latitude_longitude_source",
-        "Operators",
+        "Latitude_longitude_source",
+        "Operators_source_GEM",
         "Parent_company_source_GEM",
+        "Companies_involved_source_GEM",
         "Multiple_unit_concerned_source_GEM",
     ]
     df_carbon_bombs = df_carbon_bombs[new_column_order]
