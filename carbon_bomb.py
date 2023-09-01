@@ -10,6 +10,7 @@ To use this script, simply run it from the command line:
 $ python main.py
 """
 import sys
+import math
 import re
 import pandas as pd
 import numpy as np
@@ -319,6 +320,14 @@ def create_carbon_bombs_gasoil_table():
         'Status'
         ]
     df_gasoil_gem_mines = df_gasoil_gem_mines.loc[:,GEM_usefull_columns]
+    # Duplicate Parent company and Operator column to establish connexion between
+    # carbon_bombs and Company with the legacy algorithm
+    df_gasoil_gem_mines["temp_connexion_parent"] = (
+        df_gasoil_gem_mines.loc[:,"Parent"])
+    df_gasoil_gem_mines["temp_connexion_operator"] = (
+        df_gasoil_gem_mines.loc[:,"Operator"])
+    # Add this new column to the list GEM usefull column
+    GEM_usefull_columns += ["temp_connexion_parent","temp_connexion_operator"]
     # Only retain perfect match on Project Name between GEM & CB with a 
     # country verification
     df_gasoil_carbon_bombs["temp"] = (df_gasoil_carbon_bombs["Project Name"]+
@@ -483,7 +492,7 @@ def ponderate_percentage(dict_percentage):
     # Return dict with ponderate percentage
     return dict_percentage
 
-def compute_percentage_multi_sites(raw_line):
+def compute_clean_percentage(raw_line):
     """
     Compute the percentage of involvement of each company mentioned in a given 
     line.
@@ -500,14 +509,14 @@ def compute_percentage_multi_sites(raw_line):
         TypeError: If the input `raw_line` is not a string.
 
     Examples:
-        >>> compute_percentage_multi_sites("ABC (20%), XYZ (80%)")
+        >>> compute_clean_percentage("ABC (20%), XYZ (80%)")
         'ABC (20%); XYZ (80%)'
         
-        >>> compute_percentage_multi_sites("ABC; XYZ; PQR")
+        >>> compute_clean_percentage("ABC; XYZ; PQR")
         'ABC (33.33333333333333%); XYZ (33.33333333333333%); 
         PQR (33.33333333333333%)'
         
-        >>> compute_percentage_multi_sites("")
+        >>> compute_clean_percentage("")
         'No informations on company (100.0%)'
 
     Notes:
@@ -621,36 +630,44 @@ def concatenate_multi_extraction_site(df_gem, list_columns, multi_index,
         ['USA', 'Proj A', 34.05, -118.24, 'A1;A2', 'Unit A;Unit A',
         'http://A;http://A', 'Op A', 'P A', ['Owner A', 'Owner A']]
     """
+    PROJECT_SEPARATOR = "|" # Because it's all about PIPElines
     list_value_concat=list()
     for elt in list_columns:
-        if elt == "Country":
-            value = df_gem.loc[multi_index[0],elt]
-            list_value_concat.append(value)
-        elif elt == "CarbonBombName":
+        if elt == "CarbonBombName":
             list_value_concat.append(project_name)
-        elif elt in ["Latitude","Longitude"]:
+        elif elt in ["Country","Latitude","Longitude"]:
             value = df_gem.loc[multi_index[0],elt]
             list_value_concat.append(value)
-        elif elt in ["Unit ID","Unit name","Wiki URL"]:
+        elif elt in ["Unit ID","Unit name","Wiki URL","Operator","Owner"]:
             value_concat = [df_gem.loc[index,elt] for index in multi_index]
-            value = ";".join(value_concat)
+            # Replace nan values by "None"
+            value_concat = ["None" if isinstance(value, float) and \
+                math.isnan(value) else value for value in value_concat]
+            value = PROJECT_SEPARATOR.join(value_concat)
             list_value_concat.append(value)
-        elif elt =="Operator":
-            # Ensure to delete all duplicate operator from this list
-            value_concat = [df_gem.loc[index,elt] for index in multi_index]
-            unique_list = list(set(value_concat))
-            value = ";".join(unique_list)
-            list_value_concat.append(value)
-        elif elt =="Parent":
+        elif elt in ["temp_connexion_parent","temp_connexion_operator"]:
             value_concat = [df_gem.loc[index,elt] for index in multi_index]
             # Filtered nan from raw_percentage list    
             filtered_percentage = ([x for x in value_concat 
                                     if not isinstance(x,float)])
             value = ";".join(filtered_percentage)
             list_value_concat.append(value)
-        elif elt =="Owner":
-            value = [df_gem.loc[index,elt] for index in multi_index]
-            list_value_concat.append(value)
+
+        # elif elt =="temp_connexion_operator":
+        #     value = [df_gem.loc[index,elt] for index in multi_index]
+        #     list_value_concat.append(value) 
+
+        elif elt == "Parent":
+            value_concat = [df_gem.loc[index,elt] for index in multi_index]
+            # Replace nan values by "None"
+            value_concat = ["None" if isinstance(value, float) and \
+                math.isnan(value) else value for value in value_concat]
+            # Filtered nan from raw_percentage list    
+            filtered_percentage = ([x for x in value_concat 
+                                    if not isinstance(x,float)])
+            value = PROJECT_SEPARATOR.join(filtered_percentage)
+            list_value_concat.append(value) 
+
         elif elt == "Status":
             value_concat = [df_gem.loc[index,elt] for index in multi_index]
             value = list(set(value_concat))
@@ -1237,7 +1254,7 @@ def create_carbon_bombs_table():
     projects.
     - create_carbon_bombs_gasoil_table: creates the gas/oil table of carbon 
     bomb projects.
-    - compute_percentage_multi_sites: computes the percentage of ownership for
+    - compute_clean_percentage: computes the percentage of ownership for
       parent companies that own several carbon bomb projects.
     - add_chat_GPT_data: adds ChatGPT data to carbon bomb projects that are not
       present in the GEM database.
@@ -1256,6 +1273,9 @@ def create_carbon_bombs_table():
     df_gasoil = cancel_duplicated_rename(df_gasoil)
     # Add multiple unit concerned column to Coal Table
     df_coal["Multiple_unit_concerned"]=""
+    # Add temp column ensuring connexion between cb and company
+    df_coal["temp_connexion_parent"] = df_coal.loc[:,"Parent Company"]
+    df_coal["temp_connexion_operator"] = df_coal.loc[:,"Operators"]
     name_mapping_coal = {
         "Project Name":"Carbon_Bomb_Name",
         "Country_x":"Country",
@@ -1288,16 +1308,19 @@ def create_carbon_bombs_table():
     df_carbon_bombs = pd.concat([df_coal,df_gasoil],axis=0)
     # Clean percentage in column Parent_company
     # Clean data into Parent company columns 
-    df_carbon_bombs["Parent_Company"].fillna("",inplace=True)
-    df_carbon_bombs['Parent_Company'] = df_carbon_bombs.apply(
-        lambda row: row['Operators'] 
-        if row['Parent_Company'] == "" 
-        else row['Parent_Company'],
+    df_carbon_bombs["temp_connexion_parent"].fillna("",inplace=True)
+    df_carbon_bombs["temp_connexion_parent"] = df_carbon_bombs.apply(
+        lambda row: row["temp_connexion_operator"] 
+        if row["temp_connexion_parent"] == "" 
+        else row["temp_connexion_parent"],
         axis=1
     )
+    df_carbon_bombs["temp_connexion_parent"].fillna("",inplace=True)
+    df_carbon_bombs["temp_connexion_parent"] = (
+        df_carbon_bombs["temp_connexion_parent"]\
+            .apply(compute_clean_percentage))
+    # Fill na values of Parent company (May be useless now)
     df_carbon_bombs["Parent_Company"].fillna("",inplace=True)
-    df_carbon_bombs["Parent_Company"] = df_carbon_bombs["Parent_Company"]\
-                                        .apply(compute_percentage_multi_sites)
     # Drop column Owners (next to decision taken during GEM interview)
     df_carbon_bombs.drop("Owners", axis = 1, inplace = True)
     # Set status to lower
@@ -1337,6 +1360,8 @@ def create_carbon_bombs_table():
         "Operators_source_GEM",
         "Parent_company_source_GEM",
         "Multiple_unit_concerned_source_GEM",
+        "temp_connexion_parent",
+        "temp_connexion_operator",
         "Status_source_GEM",
     ]
     df_carbon_bombs = df_carbon_bombs[new_column_order]
@@ -1358,6 +1383,10 @@ def create_carbon_bombs_table():
                          & (df_carbon_bombs['GEM_id_source_GEM'].isna()),\
                          ["GEM_id_source_GEM","GEM_url_source_GEM"]] = (
                         "No informations available on GEM")
+    """
+    # This function has been temporary disable due to the fact that now we do 
+    # not calculate ponderate percentage for projects with multiple sites and 
+    # we want to keep the same order when concatening multi-site projects
     # Post process dataset to sort columns with aggregated values
     agg_columns = [
         "GEM_id_source_GEM",
@@ -1368,7 +1397,7 @@ def create_carbon_bombs_table():
     ]
     df_carbon_bombs[agg_columns] = df_carbon_bombs[agg_columns].applymap(
                                                     sort_values_if_not_null)
-    
+    """
     # Specific fix fort Khafji bomb that is set to Kuwait and Saudi Arabia
     # -> attribute this carbon bomb to Kuwait to insure a better repartition 
     # (Kuwait has 3 bombs and Saudi Arabia 23)
