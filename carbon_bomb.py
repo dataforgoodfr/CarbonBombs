@@ -270,7 +270,7 @@ def load_chatGPT_database():
         })
     # Remap some column name to ensure correspondance
     mapping_column = {
-        "Operator":"Operators_source_GEM",
+        "Operator":"Operators",
     }
     df.rename(columns=mapping_column,inplace=True)
     return df
@@ -979,8 +979,7 @@ def add_chat_GPT_data(df):
     column to indicate the source of the added information (either GEM or 
     ChatGPT).
 
-    The columns that are added from ChatGPT are "Latitude", "Longitude", and 
-    "Operators (GEM)".
+    The columns that are added from ChatGPT are "Latitude", "Longitude".
     """
     df_chatgpt = load_chatGPT_database()
     # Once data from chat GPT is loaded fulfill df for rows with
@@ -1000,18 +999,17 @@ def add_chat_GPT_data(df):
     list_fulfill_columns =  [
         "Latitude",
         "Longitude",
-        "Operators_source_GEM",
     ]
     for column in list_fulfill_columns:
         new_values = list(df_chatgpt[column])
         df.loc[df["temp"].isin(list_na_carbon_bombs),column] = new_values
     # Add columns lat/long/operator_source that define source either come from 
     # GEM database or ChatGPT
-    df["Latitude_longitude_operator_source"] = ""
+    df["Latitude_longitude_source"] = ""
     df.loc[df['GEM_id_source_GEM'].isna(),\
-        "Latitude_longitude_operator_source"] = "Chat GPT"
+        "Latitude_longitude_source"] = "Chat GPT"
     df.loc[~(df['GEM_id_source_GEM'].isna()),\
-        "Latitude_longitude_operator_source"] = "GEM"
+        "Latitude_longitude_source"] = "GEM"
     # Drop temp column from df 
     df.drop("temp",axis = 1, inplace = True)
     return df
@@ -1196,21 +1194,22 @@ def complete_GEM_with_ChatGPT(df):
                   left_on=['Carbon_bomb_name_source_CB', "Country_source_CB"],
                   right_on=['Name', "Country"],
                   suffixes=('', ''))
-    df['Carbon_bomb_description_source'] = df.apply(lambda row: 'ChatGPT' if \
-                                             (row['Carbon_bomb_description']=='No informations available on GEM'\
-                                              or row['Carbon_bomb_description']=='New project') \
-                                              else 'GEM', axis=1)
+    df['Carbon_bomb_description_source'] = df.apply(lambda row: 'ChatGPT' if 
+                ((row['Carbon_bomb_description']=='No description available'\
+                or row['Carbon_bomb_description']=='New project') \
+                and not pd.isnull(row['Description'])) else 'GEM', axis=1)
     df['Carbon_bomb_start_year_source'] = df.apply(lambda row: 'ChatGPT' if \
-                                             row['Carbon_bomb_start_year'] == 'No start year available'\
-                                             else 'GEM', axis=1)
+                (row['Carbon_bomb_start_year'] == 'No start year available'\
+                and not pd.isnull(row['Start year'])) else 'GEM', axis=1)
     df['Carbon_bomb_start_year'] = df.apply(lambda row: row['Start year'] if \
-                                            row['Carbon_bomb_start_year'] == 'No start year available' \
-                                            else row['Carbon_bomb_start_year'], axis=1)
+                (row['Carbon_bomb_start_year'] == 'No start year available' \
+                and not pd.isnull(row['Start year'])) \
+                else row['Carbon_bomb_start_year'], axis=1)
     df['Carbon_bomb_description'] = df.apply(lambda row: row['Description'] if \
-                                             (row['Carbon_bomb_description']=='No informations available on GEM'\
-                                              or \
-                                              row['Carbon_bomb_description']=='New project') \
-                                             else row['Carbon_bomb_description'], axis=1)
+                ((row['Carbon_bomb_description']=='No description available'\
+                or row['Carbon_bomb_description']=='New project') \
+                and not pd.isnull(row['Description'])) \
+                else row['Carbon_bomb_description'], axis=1)
                                                     
     df=df.drop(labels=['Name', 'Start year', 'Description','Country'], axis=1)
                                                     
@@ -1308,6 +1307,20 @@ def create_carbon_bombs_table():
     df_carbon_bombs = pd.concat([df_coal,df_gasoil],axis=0)
     # Clean percentage in column Parent_company
     # Clean data into Parent company columns 
+    df_carbon_bombs["Parent_Company"].fillna("",inplace=True)
+    df_carbon_bombs['Companies_involved'] = df_carbon_bombs.apply(
+        lambda row: row['Operators'] 
+        if row['Parent_Company'] == "" 
+        else row['Parent_Company'],
+        axis=1
+    )
+    df_carbon_bombs["Companies_involved"].fillna("",inplace=True)
+    df_carbon_bombs["Companies_involved"] = df_carbon_bombs["Companies_involved"]\
+        .apply(compute_clean_percentage)
+    
+    # Fill na values of Parent company (May be useless now)
+    df_carbon_bombs["Parent_Company"].fillna("",inplace=True)
+
     df_carbon_bombs["temp_connexion_parent"].fillna("",inplace=True)
     df_carbon_bombs["temp_connexion_parent"] = df_carbon_bombs.apply(
         lambda row: row["temp_connexion_operator"] 
@@ -1319,8 +1332,6 @@ def create_carbon_bombs_table():
     df_carbon_bombs["temp_connexion_parent"] = (
         df_carbon_bombs["temp_connexion_parent"]\
             .apply(compute_clean_percentage))
-    # Fill na values of Parent company (May be useless now)
-    df_carbon_bombs["Parent_Company"].fillna("",inplace=True)
     # Drop column Owners (next to decision taken during GEM interview)
     df_carbon_bombs.drop("Owners", axis = 1, inplace = True)
     # Set status to lower
@@ -1339,6 +1350,7 @@ def create_carbon_bombs_table():
         "Longitude":"Longitude",
         "Operators":"Operators_source_GEM",
         "Parent_Company":"Parent_company_source_GEM",
+        "Companies_involved":"Companies_involved_source_GEM",
         "Multiple_unit_concerned":"Multiple_unit_concerned_source_GEM",
         "Status": "Status_source_GEM"
     }
@@ -1356,9 +1368,10 @@ def create_carbon_bombs_table():
         "GEM_url_source_GEM",
         "Latitude",
         "Longitude",
-        "Latitude_longitude_operator_source",
+        "Latitude_longitude_source",
         "Operators_source_GEM",
         "Parent_company_source_GEM",
+        "Companies_involved_source_GEM",
         "Multiple_unit_concerned_source_GEM",
         "temp_connexion_parent",
         "temp_connexion_operator",
@@ -1391,7 +1404,7 @@ def create_carbon_bombs_table():
     agg_columns = [
         "GEM_id_source_GEM",
         "GEM_url_source_GEM",
-        "Operators_source_GEM",
+        "Operators",
         "Parent_company_source_GEM",
         "Multiple_unit_concerned_source_GEM"
     ]

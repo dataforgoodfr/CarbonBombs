@@ -6,6 +6,7 @@ Script that generated dataframe and associated csv file on bank side.
 
 import re
 import pandas as pd
+import numpy as np
 from fuzzywuzzy import fuzz
 from data_sources.manual_match import manual_match_company
 
@@ -78,10 +79,11 @@ def split_column_parent_company(row):
     """
     instance = row['Carbon_bomb_name_source_CB']
     country = row['Country_source_CB']
-    companies = row["temp_connexion_parent"].split(';')
+    # split by | for different unit and ; for different companies
+    companies = row["Companies_involved_source_GEM"].replace("|", ";").split(";")
     carbon_bomb_list_company = ([{'Carbon_bomb_name_source_CB': instance,
                                   'Country_source_CB':country,
-                                 'temp_connexion_parent': company} 
+                                 'Companies_involved_source_GEM': company} 
                                  for company in companies])
     return carbon_bomb_list_company
 
@@ -107,40 +109,48 @@ def company_involvement_in_carbon_bombs():
     df_carbon_bombs_company = df_carbon_bombs.loc[:,[
         "Carbon_bomb_name_source_CB",
         "Country_source_CB",
-        "temp_connexion_parent"]]
+        "Companies_involved_source_GEM",
+    ]]
     # Force type of column Parent_Company
-    df_carbon_bombs_company["temp_connexion_parent"] = (
-        df_carbon_bombs_company.loc[:,"temp_connexion_parent"]
-        .astype("str"))
+    df_carbon_bombs_company["Companies_involved_source_GEM"] = (
+        df_carbon_bombs_company.loc[:,"Companies_involved_source_GEM"].astype("str")
+    )
     split_rows = df_carbon_bombs_company.apply(split_column_parent_company,
                                                axis=1)
     # Create a dataframe with duplicates carbon bombs  
     df = pd.concat([pd.DataFrame(rows) for rows in split_rows])
     df.reset_index(drop=True, inplace=True)
     # Use str.extract() to create new columns
-
-    df['company'] = df['temp_connexion_parent'].apply(
+    
+    df['company'] = df['Companies_involved_source_GEM'].apply(
         lambda x: "(".join(x.split('(')[:-1])
     )
     # df['company'] = df['Parent_company_source_GEM'].str.extract(r'^(.+?)\s+\(')
 
     # Clean extra space from company column
     df['company'] = df['company'].str.strip()
+    df['company'] = np.where(df['company'] == "None", "", df['company'])
+
     # Extract the percentage using a simple regular expression
-    df['percentage'] = df['temp_connexion_parent']\
+    df['percentage'] = df['Companies_involved_source_GEM']\
                             .str.extract(r'\(([\d.]+)%\)')
     # Convert percentage column to float with two decimals
     # Temporary : Fix percentage to 999.9 to avoid taking any risk
     # df['percentage'] = df['percentage'].astype(float).round(2)
-    df['percentage'] = 999.9
+    # df['percentage'] = 999.9
     # Drop Parent_Company column
-    df.drop("temp_connexion_parent", axis = 1, inplace = True)
+    df.drop("Companies_involved_source_GEM", axis = 1, inplace = True)
+    # Drop percentage column to avoid confusion for carbon bombs project
+    # with multiple site (this implies that sum of percentage is more than 100%)
+    df.drop("percentage", axis = 1, inplace = True)
     # Rename column name
     df = df.rename(columns={'Carbon_bomb_name_source_CB': 'Carbon_bomb_name',
                             'Country_source_CB':'Country',
                             'company':'Company',
-                            'percentage':'Percentage',
                             })
+    # drop duplicates
+    df = df.drop_duplicates()
+
     return df
 
 def clean(text):
