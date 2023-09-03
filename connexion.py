@@ -131,6 +131,9 @@ def company_involvement_in_carbon_bombs():
     df['company'] = df['company'].str.strip()
     df['company'] = np.where(df['company'] == "None", "", df['company'])
 
+    # remove Others
+    df = df.loc[~df["company"].str.lower().str.contains("other")]
+
     # Extract the percentage using a simple regular expression
     df['percentage'] = df['Companies_involved_source_GEM']\
                             .str.extract(r'\(([\d.]+)%\)')
