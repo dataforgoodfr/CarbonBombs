@@ -13,7 +13,6 @@ from credentials import NEO4J_URI, NEO4J_USERNAME, NEO4J_PASSWORD
 def load_renamed_columns():
     # create a mapping dictionary for carbon bombs columns
     carbon_bombs_new_column = {
-        'New_project_source_CB': 'new_project',
         'Carbon_bomb_name_source_CB': 'name',
         'Country_source_CB': 'country',
         'Potential_GtCO2_source_CB':'potential_gtco2',
@@ -28,7 +27,11 @@ def load_renamed_columns():
         'Companies_involved_source_GEM':'companies',
         'Carbon_bomb_start_year':'start_year',
         'Multiple_unit_concerned_source_GEM':'multiple_unit',
-        'World_region' : 'world_region'
+        'World_region': 'world_region',
+        'Status_source_CB': 'status_cb',
+        'Status_source_GEM': 'status_gem',
+        'Status_lvl_1': 'status_lvl_1',
+        'Status_lvl_2': 'status_lvl_2',
     }
     banks_new_column = {
         'Bank Name':'name',
@@ -162,7 +165,7 @@ def write_connexions(driver):
             carbon_bomb = row['Carbon_bomb_name']
             company = row['Company']
             country = row['Country']
-            weight = row['Percentage']
+            weight = 1 # row['Percentage']
             session.execute_write(create_interaction_cb_companies,
                                   carbon_bomb, company, country, weight) 
                             
@@ -317,4 +320,6 @@ def update_neo4j():
     
 if __name__ == '__main__':
     purge_database()
+    print("PURGE OK")
     update_neo4j()
+    print("UPDATE NEO4J OK")

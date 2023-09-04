@@ -25,6 +25,8 @@ from data_sources.manual_match import manual_match_bank
 from data_sources.uniform_company_name import uniform_company_name
 
 
+world_region = awoc.AWOC()
+
 # Define the target URL of Bank Track
 # URL = 'https://www.banktrack.org/banks'
 
@@ -293,15 +295,26 @@ def process_raw_info(dict_info):
     clean_dict = dict()
     for elt in dict_info.keys():
         if elt == "Website":
-            clean_dict["Bank Website"] = dict_info[elt].find('a').text
+            if dict_info[elt] == "None":
+                clean_dict["Bank Website"] = "None"
+            else:    
+                clean_dict["Bank Website"] = dict_info[elt].find('a').text
         elif elt == "Headquarters":
-            full_address = dict_info[elt].find_all('div')
-            address = ','.join([full_address[0].text.strip(),
-                                full_address[1].text.strip()])
-            country = full_address[-1].text.strip()
-            clean_dict["Headquarters address"] = address
-            clean_dict["Headquarters country"] = country
+            if dict_info[elt] == "None":
+                clean_dict["Headquarters address"] = "None"
+                clean_dict["Headquarters country"] = "None"
+            else:
+                full_address = dict_info[elt].find_all('div')
+                address = ','.join([full_address[0].text.strip(),
+                                    full_address[1].text.strip()])
+                country = full_address[-1].text.strip()
+                clean_dict["Headquarters address"] = address
+                clean_dict["Headquarters country"] = country
         elif elt == "CEO/chair":
+            if dict_info[elt] == "None":
+                clean_dict["CEO Name"] = "None"
+                clean_dict["Board description"] = "None"
+                continue
             a_tag = dict_info[elt].find('a')
             if a_tag: # a_tag not of NoneType
                 # Extract the URL
@@ -314,6 +327,11 @@ def process_raw_info(dict_info):
                 clean_dict["CEO Name"] = "None"
                 clean_dict["Board description"] = "None"
         elif elt == "Supervisor":
+            if dict_info[elt] == "None":
+                # No information available, fulfill with None 
+                clean_dict["Supervisor Name"] = "None"
+                clean_dict["Supervisor Website"] = "None"
+                continue
             anchor = dict_info[elt].find('a')
             if anchor and not isinstance(anchor,int):
                 clean_dict["Supervisor Name"] = anchor.text
@@ -323,6 +341,10 @@ def process_raw_info(dict_info):
                 clean_dict["Supervisor Name"] = "None"
                 clean_dict["Supervisor Website"] = "None"               
         elif elt == "Ownership":
+            if dict_info[elt] == "None":
+                # No information available, fulfill with None 
+                clean_dict["Shareholder structure source"] = "None"
+                continue
             url = dict_info[elt].find('a')
             if url: # url not of NoneType
                 clean_dict["Shareholder structure source"] = url['href']
@@ -357,6 +379,8 @@ def get_coordinates_google_api(address, api_key = API_KEY):
         (37.4224764, -122.0842499)
 
     """
+    if address.startswith("None"):
+        return 0.0, 0.0
     url = (f'https://maps.googleapis.com/maps/api/geocode/json?'
            f'address={address}&key={api_key}')
     response = requests.get(url)
@@ -372,6 +396,12 @@ def get_coordinates_google_api(address, api_key = API_KEY):
         print(f"API Error for {address}. Please try again later")
         latitude, longitude = 0.0,0.0
     return latitude,longitude
+
+def get_world_region(country):
+    if country == "None":
+        return "None"
+    
+    return world_region.get_country_continent_name(country)
 
 def main_scrapping_function(url):
     """
@@ -434,9 +464,8 @@ def main_scrapping_function(url):
                                         'Russian Federation': 'Russia',
                                         },inplace = True)
     # Add World Region associated to Headquarters country
-    world_region = awoc.AWOC()
-    df["World Region"] = df["Headquarters country"].apply(
-        world_region.get_country_continent_name)
+    df["World Region"] = df["Headquarters country"].apply(get_world_region)
+    
     # Return dataframe with all info on bank companies
     return df
 
@@ -473,7 +502,9 @@ def scrapping_company_location():
     df_address = pd.read_csv(file_path,sep = ";")
     df_cb = pd.read_csv("data_cleaned/carbon_bombs_informations.csv")
     # Retrieve only the companies name without percentage
-    companies = df_cb["Parent_company_source_GEM"].str.split(';').values
+    companies = (
+        df_cb["Companies_involved_source_GEM"].fillna("").str.replace("|", ";", regex=False).str.split(';').values
+    )
     companies = list(itertools.chain(*companies))
     companies = list(map(lambda x: "(".join(x.split('(')[:-1]).strip(),
                          companies))
@@ -535,7 +566,7 @@ def scrapping_company_location():
     # Add country associated to the coordinates
     def get_country(lat, long):
         if lat == 0 and long == 0:
-            pass
+            return ""
         location = geolocator.reverse([lat, long],
                                       exactly_one=True,
                                       language='en')
@@ -543,7 +574,7 @@ def scrapping_company_location():
         country = address.get('country', '')
         return country
     
-    geolocator = Nominatim(user_agent="geoapiExercises")
+    geolocator = Nominatim(user_agent="my_app")
     df_output['Country'] = df_output.apply(lambda row: get_country(
         row['Latitude'],row['Longitude']), axis=1)
     # Add World Region associated to Headquarters country

@@ -519,6 +519,12 @@ def compute_clean_percentage(raw_line):
         >>> compute_clean_percentage("")
         'No informations on company (100.0%)'
 
+        >>> a = compute_clean_percentage("A|B|A")
+        A (100.0%)|B (100.0%)|A (100.0%)
+
+        >>> a = compute_clean_percentage("A (50%);B(50%)|A")
+        A (50.0%);B (50.0%)|A (100.0%)
+
     Notes:
         The function can handle two possibilities:
         1) When the raw_line contains percentages, it calculates and merges the 
@@ -534,58 +540,66 @@ def compute_clean_percentage(raw_line):
     If there is no information about the company, the output line will be 
     'No informations on company (100.0%)'.
     """
-    # With raw_line content 2 possibilities : Percentage are indicated or not
-    if "%" in raw_line:
-        # Case where percentage are indicated
-        # replace "Fullwidth" char by basic char
-        raw_line = raw_line.replace("，", ",").replace("）", ")").replace("（", "(")
-        # remove useless spaces
-        companies = re.sub("  +", " ", raw_line).replace(" ;", ";").replace(" ,", ",")
-        # split at each percentage
-        companies = ["(".join(x.split("(")[:-1]) for x in companies.split('%)')[:-1]]
-        companies = [re.sub(r"[,|;]", "", x).strip() for x in companies]
-        percentages = re.findall(r"\(([\d\.]+)%\)", raw_line)
-        # Merge percentage of same company into one
-        combined_percentages = {}
-        for company, percentage in zip(companies, percentages):
-            if company in combined_percentages:
-                combined_percentages[company] += float(percentage)
+    def _clean_one_unit(raw_line):
+        # With raw_line content 2 possibilities : Percentage are indicated or not
+        if "%" in raw_line:
+            # Case where percentage are indicated
+            # replace "Fullwidth" char by basic char
+            raw_line = raw_line.replace("，", ",").replace("）", ")").replace("（", "(")
+            # remove useless spaces
+            companies = re.sub("  +", " ", raw_line).replace(" ;", ";").replace(" ,", ",")
+
+            # split at each percentage
+            companies = ["(".join(x.split("(")[:-1]) for x in companies.split('%)')[:-1]]
+            companies = [re.sub(r"[,|;]", "", x).strip() for x in companies]
+            percentages = re.findall(r"\(([\d\.]+)%\)", raw_line)
+            # Merge percentage of same company into one
+            combined_percentages = {}
+            for company, percentage in zip(companies, percentages):
+                if company in combined_percentages:
+                    combined_percentages[company] += float(percentage)
+                else:
+                    combined_percentages[company] = float(percentage)
+            # Once percentage are merge 3 possibilities based on the sum 
+            sum_percentage = sum(list(combined_percentages.values()))
+            # Percentage less than 100 percent (We complete by "Others"):
+            if sum_percentage < 100.0 :
+                left_percentage = 100.0 - sum_percentage
+                combined_percentages["Others"] = left_percentage
+            # Percentage equal to 100 percent (No action needed):    
+            elif sum_percentage == 100.0:
+                pass
+            #Percentage more than 100 percent (We ponderate the results)
             else:
-                combined_percentages[company] = float(percentage)
-        # Once percentage are merge 3 possibilities based on the sum 
-        sum_percentage = sum(list(combined_percentages.values()))
-        # Percentage less than 100 percent (We complete by "Others"):
-        if sum_percentage < 100.0 :
-            left_percentage = 100.0 - sum_percentage
-            combined_percentages["Others"] = left_percentage
-        # Percentage equal to 100 percent (No action needed):    
-        elif sum_percentage == 100.0:
-            pass
-        #Percentage more than 100 percent (We ponderate the results)
-        else:
-            combined_percentages = ponderate_percentage(combined_percentages)
-    else: 
-        # Case no percentage are indicated, we defined it based on number of 
-        # compagnies defined into 
-        companies = raw_line.split(";")
-        if companies == ['']:
-            companies = ['No informations on company']
-        # Compute percentage considering each company have the same involvement
-        percentages = [100.0/len(companies) for _ in companies]
-        # Merge percentage of same company into one
-        combined_percentages = {}
-        for company, percentage in zip(companies, percentages):
-            if company in combined_percentages:
-                combined_percentages[company] += float(percentage)
-            else:
-                combined_percentages[company] = float(percentage)
-    # Once combined percentage is defined for each case, defined a clean line
-    clean_line = ""
-    for keys in combined_percentages:
-        company_line = f"{keys} ({combined_percentages[keys]}%);"
-        clean_line = clean_line + company_line
-    clean_line = clean_line[:-1] # Delete last ;
-    return clean_line
+                combined_percentages = ponderate_percentage(combined_percentages)
+        else: 
+            # Case no percentage are indicated, we defined it based on number of 
+            # compagnies defined into 
+            companies = raw_line.split(";")
+            if companies == ['']:
+                companies = ['No informations on company']
+            # Compute percentage considering each company have the same involvement
+            percentages = [100.0/len(companies) for _ in companies]
+            # Merge percentage of same company into one
+            combined_percentages = {}
+            for company, percentage in zip(companies, percentages):
+                if company in combined_percentages:
+                    combined_percentages[company] += float(percentage)
+                else:
+                    combined_percentages[company] = float(percentage)
+        # Once combined percentage is defined for each case, defined a clean line
+        clean_line = ""
+        for keys in combined_percentages:
+            company_line = f"{keys} ({combined_percentages[keys]}%);"
+            clean_line = clean_line + company_line
+        clean_line = clean_line[:-1] # Delete last ;
+        return clean_line
+    
+    clean_line = []
+    for unit_text in raw_line.split("|"):
+        clean_line.append(_clean_one_unit(unit_text))
+    
+    return "|".join(clean_line)
 
 def concatenate_multi_extraction_site(df_gem, list_columns, multi_index,
                                       project_name):
@@ -857,6 +871,8 @@ def create_carbon_bombs_coal_table():
         name, country = row["Project Name"], row["Country"]
         index_gem, name_gem = find_matching_name_for_GEM_coal(name, country,
                                                     df_coal_gem_mines_copy)
+        if index_gem  == 0:
+            continue
         index_gem_no_match.append(index_gem)
         dict_gem_cb_names[name_gem] = name
         # Drop index_gem from df_coal_gem_mines_copy
@@ -951,8 +967,12 @@ def find_matching_name_for_GEM_coal(name, country, df_gem):
     else:
         # No match based on the first word, we use manual_match dictionary
         mine_name_gem = manual_match_coal[name]
-        index_gem = df_gem.loc[df_gem[column_name]==mine_name_gem].index[0]
-        name_gem = df_gem.loc[index_gem,column_name]
+        if mine_name_gem in ["None", ""]:
+            index_gem = 0
+            name_gem = ""
+        else:
+            index_gem = df_gem.loc[df_gem[column_name]==mine_name_gem].index[0]
+            name_gem = df_gem.loc[index_gem,column_name]
     return index_gem, name_gem
 
 def add_chat_GPT_data(df):
@@ -1153,7 +1173,7 @@ def get_information_from_GEM(df):
 
     for num, item in enumerate(url):
         # time.sleep(0.2)
-        if item in ['No informations available on GEM', 'New project','Qcoal']:
+        if item in ['No informations available on GEM','Qcoal']:
             description_ = 'No description available'
             start_year_  = 'No start year available'
         else:
@@ -1196,7 +1216,7 @@ def complete_GEM_with_ChatGPT(df):
                   suffixes=('', ''))
     df['Carbon_bomb_description_source'] = df.apply(lambda row: 'ChatGPT' if 
                 ((row['Carbon_bomb_description']=='No description available'\
-                or row['Carbon_bomb_description']=='New project') \
+                or row['Carbon_bomb_description']=='No informations available on GEM') \
                 and not pd.isnull(row['Description'])) else 'GEM', axis=1)
     df['Carbon_bomb_start_year_source'] = df.apply(lambda row: 'ChatGPT' if \
                 (row['Carbon_bomb_start_year'] == 'No start year available'\
@@ -1207,7 +1227,7 @@ def complete_GEM_with_ChatGPT(df):
                 else row['Carbon_bomb_start_year'], axis=1)
     df['Carbon_bomb_description'] = df.apply(lambda row: row['Description'] if \
                 ((row['Carbon_bomb_description']=='No description available'\
-                or row['Carbon_bomb_description']=='New project') \
+                or row['Carbon_bomb_description']=='No informations available on GEM') \
                 and not pd.isnull(row['Description'])) \
                 else row['Carbon_bomb_description'], axis=1)
                                                     
@@ -1215,6 +1235,8 @@ def complete_GEM_with_ChatGPT(df):
                                                     
     return df        
 
+def add_noise_lat_long(x):
+    return x + (np.random.choice([1, -1]) * np.random.rand() / 10 ) 
 
 def create_carbon_bombs_table():
     """
@@ -1308,12 +1330,21 @@ def create_carbon_bombs_table():
     # Clean percentage in column Parent_company
     # Clean data into Parent company columns 
     df_carbon_bombs["Parent_Company"].fillna("",inplace=True)
+    # update with operators only if no parent companies and only None 
     df_carbon_bombs['Companies_involved'] = df_carbon_bombs.apply(
         lambda row: row['Operators'] 
-        if row['Parent_Company'] == "" 
+        if (
+            row['Parent_Company'] == ""
+        ) or (
+            row['Parent_Company'].replace("|", "").replace("None", "") == ""
+        )
         else row['Parent_Company'],
         axis=1
     )
+    # format Parent_Company with normed separator and clean percentage
+    df_carbon_bombs["Parent_Company"] = df_carbon_bombs["Parent_Company"]\
+        .apply(compute_clean_percentage)
+
     df_carbon_bombs["Companies_involved"].fillna("",inplace=True)
     df_carbon_bombs["Companies_involved"] = df_carbon_bombs["Companies_involved"]\
         .apply(compute_clean_percentage)
@@ -1339,7 +1370,7 @@ def create_carbon_bombs_table():
     # Remap dataframe columns to display data source
     # Not efficient might be rework (no time for that right now)
     name_mapping_source = {
-        "New_project":"New_project_source_CB",
+        "New_project":"Status_source_CB",
         "Carbon_Bomb_Name":"Carbon_bomb_name_source_CB",
         "Country":"Country_source_CB",
         "Potential_GtCO2":"Potential_GtCO2_source_CB",
@@ -1355,11 +1386,13 @@ def create_carbon_bombs_table():
         "Status": "Status_source_GEM"
     }
     df_carbon_bombs.rename(columns=name_mapping_source,inplace=True)
+    df_carbon_bombs["Latitude_longitude_source"] = "GEM"
+
     # Add chatPGT data for Carbon Bombs that have not data extracted from GEM
-    df_carbon_bombs = add_chat_GPT_data(df_carbon_bombs)
+    # df_carbon_bombs = add_chat_GPT_data(df_carbon_bombs)
     # Reorganize column order after chatGPT 
     new_column_order = [
-        "New_project_source_CB",
+        "Status_source_CB",
         "Carbon_bomb_name_source_CB",
         "Country_source_CB",
         "Potential_GtCO2_source_CB",
@@ -1383,16 +1416,16 @@ def create_carbon_bombs_table():
     # First need to fulfill empty values by np.NaN
     df_carbon_bombs.replace("", np.nan, inplace=True)
     # Secondly fulfill cell with New_project = True and empty GEM_ID value
-    df_carbon_bombs.loc[(df_carbon_bombs["New_project_source_CB"]=="operating")\
+    df_carbon_bombs.loc[(df_carbon_bombs["Status_source_CB"]=="operating")\
                          & (df_carbon_bombs['GEM_id_source_GEM'].isna()),\
-                         ["Parent_company_source_GEM"]] = "New project (100%)"
-    df_carbon_bombs.loc[(df_carbon_bombs["New_project_source_CB"]=="operating")\
+                         ["Parent_company_source_GEM"]] = "No informations on company (100.0%)"
+    df_carbon_bombs.loc[(df_carbon_bombs["Status_source_CB"]=="operating")\
                          & (df_carbon_bombs['GEM_id_source_GEM'].isna()),\
                          ["GEM_id_source_GEM",
                           "GEM_url_source_GEM",
-                          ]] = "New project"
+                          ]] = "No informations available on GEM"
     # Thirdly fulfill cell with New_project = False and empty GEM_ID value
-    df_carbon_bombs.loc[(df_carbon_bombs["New_project_source_CB"]!="operating")\
+    df_carbon_bombs.loc[(df_carbon_bombs["Status_source_CB"]!="operating")\
                          & (df_carbon_bombs['GEM_id_source_GEM'].isna()),\
                          ["GEM_id_source_GEM","GEM_url_source_GEM"]] = (
                         "No informations available on GEM")
@@ -1419,10 +1452,35 @@ def create_carbon_bombs_table():
     ] = "Kuwait"
     # Add Chat GPT informations when needed
     df_carbon_bombs = get_information_from_GEM(df_carbon_bombs)
-    df_carbon_bombs = complete_GEM_with_ChatGPT(df_carbon_bombs)
+    # df_carbon_bombs = complete_GEM_with_ChatGPT(df_carbon_bombs)
+
+    # create status column by using Status from GEM and Status from CB if first one is NaN
+    df_carbon_bombs["Status_lvl_1"] = np.where(
+        df_carbon_bombs["Status_source_GEM"].isna(),
+        df_carbon_bombs["Status_source_CB"],
+        df_carbon_bombs["Status_source_GEM"]
+    )
+    df_carbon_bombs["Status_lvl_2"] = df_carbon_bombs["Status_lvl_1"].replace(
+        {
+            "operating": "operating",       
+            "not started": "not started",     
+            "in development": "not started",  
+            "proposed": "not started",        
+            "discovered": "not started",      
+            "shelved": "not started",         
+            "cancelled": "stopped",       
+            "mothballed": "stopped",      
+            "shut in": "stopped",         
+        }
+    )
+
+    df_carbon_bombs = df_carbon_bombs.reset_index(drop=True)
+
     # Add latitude and longitude if informations not present
     geolocator = Nominatim(user_agent="my_app")
-    df_missing_coordinates = df_carbon_bombs[df_carbon_bombs['Latitude'].isnull() | df_carbon_bombs['Longitude'].isnull()]
+    df_missing_coordinates = df_carbon_bombs[
+        df_carbon_bombs['Latitude'].isnull() | df_carbon_bombs['Longitude'].isnull()
+    ]
     for index,rows in df_missing_coordinates.iterrows():
         country = rows["Country_source_CB"]
         location = geolocator.geocode(country)
@@ -1430,6 +1488,20 @@ def create_carbon_bombs_table():
         longitude = location.longitude
         df_carbon_bombs.loc[index,"Latitude"]=latitude
         df_carbon_bombs.loc[index,"Longitude"]=longitude
+        df_carbon_bombs.loc[index,"Latitude_longitude_source"]="Country CB"
+
+    # add noise to dupplicated lat long
+    # it's used for the website to avoid overlapping point on the map
+    np.random.seed(42)
+    lat_long_dup = df_carbon_bombs[["Latitude", "Longitude"]].duplicated(keep=False).values
+
+    df_carbon_bombs.loc[lat_long_dup, "Latitude"] = (
+        df_carbon_bombs.loc[lat_long_dup, "Latitude"].apply(add_noise_lat_long)
+    )
+    df_carbon_bombs.loc[lat_long_dup, "Longitude"] = (
+        df_carbon_bombs.loc[lat_long_dup, "Longitude"].apply(add_noise_lat_long)
+    )
+
     # Add World region column to the database
     # First need to remap Turkey / Türkiye country
     df_carbon_bombs.replace({'Türkiye': 'Turkey'},inplace = True)
@@ -1439,6 +1511,34 @@ def create_carbon_bombs_table():
         world_region.get_country_continent_name)
     # Remap back Turkey / Türkiye country
     df_carbon_bombs.replace({'Turkey':'Türkiye'},inplace = True)
+
+    final_columns_order = [
+        'Carbon_bomb_name_source_CB',
+        'Country_source_CB',
+        'World_region',
+        'Potential_GtCO2_source_CB',
+        'Fuel_type_source_CB',
+        'GEM_id_source_GEM',
+        'GEM_url_source_GEM',
+        'Latitude',
+        'Longitude',
+        'Latitude_longitude_source',
+        'Operators_source_GEM',
+        'Parent_company_source_GEM',
+        'Companies_involved_source_GEM',
+        'Multiple_unit_concerned_source_GEM',
+        'Carbon_bomb_description',
+        'Carbon_bomb_start_year',
+        'Status_source_CB',
+        'Status_source_GEM',
+        'Status_lvl_1',
+        'Status_lvl_2',
+        'temp_connexion_parent',
+        'temp_connexion_operator',
+    ]
+    df_carbon_bombs = df_carbon_bombs[final_columns_order].sort_values(
+        by=['Carbon_bomb_name_source_CB', 'Country_source_CB'], ascending=True
+    )
 
     return df_carbon_bombs
     

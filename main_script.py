@@ -34,9 +34,10 @@ def concat_dataframe_into_excel(fpath: str):
         os.remove(fpath)
 
     cleaned_datasets_fpaths = [
-        "data_cleaned/bank_informations.csv",
         "data_cleaned/carbon_bombs_informations.csv",
+        "data_sources/metadatas.csv",
         "data_cleaned/company_informations.csv",
+        "data_cleaned/bank_informations.csv",
         "data_cleaned/connexion_bank_company.csv",
         "data_cleaned/connexion_carbonbombs_company.csv",
         "data_cleaned/country_informations.csv",
@@ -82,7 +83,6 @@ if __name__ == '__main__':
             axis=1, inplace=True)
     df.to_csv("./data_cleaned/carbon_bombs_informations.csv",
               encoding='utf-8-sig',index=False)
-    """
     if os.path.isfile("./credentials.py"):
         # Step3 : Scrape bank informations
         URL = 'https://www.banktrack.org/banks'
@@ -127,7 +127,7 @@ if __name__ == '__main__':
     df_countries.to_csv("./data_cleaned/country_informations.csv",
                         encoding='utf-8-sig', index=False)
     print("country_informations.csv : done\n")
-    """
+    # """
     # Step6 : Concatenate all csv files into a main Excel file
     concat_dataframe_into_excel(CONCAT_DATA_FILE_PATH)
     # Step7 : Update data into Neo4j folder and database

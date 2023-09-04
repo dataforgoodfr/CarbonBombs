@@ -6,7 +6,7 @@ Abu Dhabi National Oil Company,United Arab Emirates
 Adani Group,India
 Adaro Energy,Indonesia
 Africa Energy Corp.,Canada
-Aker,Norway
+Aker BP ASA,Norway
 Alliance Resource Partners LP,United States
 Amplify Energy Corp,
 Anadarko,
@@ -42,13 +42,13 @@ Bumi Resources,Indonesia
 Burlington Resources,
 CCI,
 CKD Mines,Canada
-CLP Group,China
+CLP Holdings Ltd,China
 CML Exploration,
 CNOOC International,China
 CNOOC Limited,China
 CNOOC Oil Sands Canada,Canada
 CNPC,
-Canadian Natural Resources Limited,Canada
+Canadian Natural Resources Ltd (CNRL),Canada
 Changchun Jijun Trade Company,China
 Chesapeake Operating,
 Chevron Corp,
@@ -90,7 +90,7 @@ Elion Resources Group Ltd,China
 Encana Oil & Gas,
 Endeavor Energy Resources LP,
 Enervest Operating,
-Eni S.P.A.,Italy
+Eni SpA,Italy
 Ensign Operating LLC,
 Equinor ASA,Norway
 Equinor Energy,
@@ -116,7 +116,6 @@ GHA Barnett,
 GVK Group,India
 Galp Energia SGPS S.A.,
 Gazprom PJSC,Russia
-Gazprom dobycha Urengoy,
 Geosouthern Energy,
 Glencore PLC,United Kingdom
 Golden Energy Mines,Indonesia
@@ -182,7 +181,7 @@ Junggar Juli Cultivation Company,China
 Kailuan Group Ltd Liability Corp,China
 Kazakhmys Corporation,Kazakhstan
 Kolmar,Russia
-Korean Gas Corporation (KOGAS),
+Korea Gas Corporation (KOGAS),
 Kuwait Petroleum Corp,Kuwait
 LG International,South Korea
 LX International,South Korea
@@ -221,19 +220,20 @@ Ningxia State-Owned Assets Company,China
 Ningxia State-Owned Capital Operation Group,China
 Ningxia Wangwa Coal Industry Company,China
 Nippon Steel & Sumitomo Metal,
+None,
 Novatek,
-OMV Aktiengesellschaft,Austria
+OMV AG,Austria
 OXY USA,
 Occidental Permian,
 Occidental Petroleum Corp,United States
 Octo Coal,Russia
-Oil and Natural Gas Corporation (ONGC),
+Oil and Natural Gas Corporation Ltd (ONGC),
 Oil and Natural Gas Corporation of India,India
 Ordos Energy Investment and Development Company,China
 PAO NOVATEK,Russia
 PC Venezuela LTD,Venezuela
 PDVSA,Venezuela
-PJSC LUKOIL,Russia
+LUKOIL PJSC,Russia
 POSCO Holdings Inc,South Korea
 PPI,
 PPL Corp,United States
@@ -260,14 +260,13 @@ Qatargas,
 QatarEnergy,Qatar
 R. Lacy Services,
 Rosneftegaz AO,Russia
-RWE Power,Germany
+RWE AG,Germany
 Ramtex Energy,
 Rashtriya Ispat Nigam (RINL),
 Ratio Petroleum,Israel
 Reliance Power Ltd,India
-Repsol Exploración S.A.,Spain
-Repsol Oil & Gas,
 Repsol SA,Spain
+Repsol Oil & Gas,
 Resource Generation Australia,Australia
 RioZim,Zimbabwe
 Rki Energy Resources,
@@ -330,10 +329,10 @@ Sojitz Corp,Japan
 Sonatrach SPA,Algeria
 Stanmore Resources,Australia
 State Grid Corp of China,China
-State Power Investment Corporation (SPIC),
+State Power Investment Corp (SPIC),
 Steel Authority of India (SAIL),
 Suncor,
-Suncor Energy Inc.,Canada
+Suncor Energy Inc,Canada
 Surgutneftegas,
 TEP Barnett USA,
 Talbot Group,United States

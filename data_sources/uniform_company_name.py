@@ -4,7 +4,6 @@ uniform_company_name = {
     "Aker":"Aker BP ASA",
     "Alliance Resource Partners":"Alliance Resource Partners LP",
     "Amplify Energy":"Amplify Energy Corp",
-    "Anhui Xinji Coal and Electricity Group China COSCO Shipping":"Anhui Province Wanbei Coal-Electricity Group Co Ltd",
     "Arch Resources":"Arch Resources Inc",
     "BHP":"BHP Group Ltd",
     "BP":"BP PLC",
