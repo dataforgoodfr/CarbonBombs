@@ -1,3 +1,4 @@
+"""Configuration variables"""
 from os import pardir
 from os.path import abspath
 from os.path import join
@@ -17,6 +18,8 @@ FPATH_SRC_GEM_GASOIL = (
 )
 FPATH_SRC_BOCC = f"{DATA_SOURCE_PATH}/GROUP-Fossil_Fuel_Financing_by_Company_Banking_on_Climate_Chaos_2023.xlsx"
 FPATH_SRC_COMP_URL = f"{DATA_SOURCE_PATH}/company_url.csv"
+FPATH_SRC_COMP_ADDRESS = f"{DATA_SOURCE_PATH}/Data_chatGPT_company_hq_adress.csv"
+FPATH_SRC_COMP_LOGO = f"{DATA_SOURCE_PATH}/company_url.csv"
 FPATH_SRC_METADATAS = f"{DATA_SOURCE_PATH}/metadatas.csv"
 FPATH_SRC_UNDATA_POPU = (
     f"{DATA_SOURCE_PATH}/undata_SYB65_1_202209_Population, Surface Area and Density.csv"
