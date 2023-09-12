@@ -9,6 +9,7 @@ REPO_PATH = abspath(join(join(__file__, pardir), pardir))
 # Path to retrieve or store the data
 DATA_SOURCE_PATH = f"{REPO_PATH}/data_sources"
 DATA_CLEANED_PATH = f"{REPO_PATH}/data_cleaned"
+DATA_NEO4J_PATH = f"{REPO_PATH}/data_neo4j"
 
 # File names of sources
 FPATH_SRC_KHUNE_PAPER = f"{DATA_SOURCE_PATH}/1-s2.0-S0301421522001756-mmc2.xlsx"
@@ -42,6 +43,17 @@ FPATH_OUT_CONX_BANK_COMP = f"{DATA_CLEANED_PATH}/connexion_bank_company.csv"
 FPATH_OUT_CONX_CB_COMP = f"{DATA_CLEANED_PATH}/connexion_carbonbombs_company.csv"
 FPATH_OUT_COUNTRY = f"{DATA_CLEANED_PATH}/country_informations.csv"
 FPATH_OUT_ALL = f"{DATA_CLEANED_PATH}/carbon_bombs_all_datasets.xlsx"
+
+# File names of neo4j data
+FPATH_NEO4J_BANK = f"{DATA_NEO4J_PATH}/bank_informations.csv"
+FPATH_NEO4J_COMP = f"{DATA_NEO4J_PATH}/company_informations.csv"
+FPATH_NEO4J_CB = f"{DATA_NEO4J_PATH}/carbon_bombs_informations.csv"
+FPATH_NEO4J_COUNTRY = f"{DATA_NEO4J_PATH}/country_informations.csv"
+FPATH_NEO4J_CONX_BANK_COMP = f"{DATA_NEO4J_PATH}/connexion_bank_company.csv"
+FPATH_NEO4J_CONX_BANK_COUNTRY = f"{DATA_NEO4J_PATH}/connexion_bank_country.csv"
+FPATH_NEO4J_CONX_CB_COMP = f"{DATA_NEO4J_PATH}/connexion_carbonbombs_company.csv"
+FPATH_NEO4J_CONX_CB_COUNTRY = f"{DATA_NEO4J_PATH}/connexion_carbonbombs_country.csv"
+FPATH_NEO4J_CONX_COMP_COUNTRY = f"{DATA_NEO4J_PATH}/connexion_company_country.csv"
 
 # Specific characters for the project
 PROJECT_SEPARATOR = "|"
