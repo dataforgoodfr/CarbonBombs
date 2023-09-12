@@ -11,4 +11,7 @@ def create_connexion_bank_company_table(use_save_dict=False):
     filtered_company = list(company_cb_bocc.values())
     df_bocc = df_bocc.loc[df_bocc["Company"].isin(filtered_company)]
 
+    # sort df
+    df = df.sort_values(by="Bank", ascending=True)
+
     return df_bocc

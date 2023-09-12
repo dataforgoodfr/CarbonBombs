@@ -193,5 +193,8 @@ def create_banks_table(check_old_df_address=False):
     # Add World Region associated to Headquarters country
     df["World Region"] = df["Headquarters country"].apply(get_world_region)
 
+    # sort df
+    df = df.sort_values(by="Bank Name", ascending=True)
+
     # Return dataframe with all info on bank companies
     return df

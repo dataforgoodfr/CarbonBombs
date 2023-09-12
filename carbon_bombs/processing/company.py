@@ -129,5 +129,7 @@ def create_company_table(check_old_df_address=False):
         "World_region",
         "Logo_URL",
     ]
+    # sort and order df
+    df = df[columns_order].sort_values(by="Company_name", ascending=True)
 
-    return df[columns_order]
+    return df

@@ -9,4 +9,7 @@ def create_connexion_cb_company_table(use_save_dict=False):
 
     df_cb["Company"] = df_cb["Company"].replace(company_cb_bocc)
 
+    # sort df
+    df = df.sort_values(by="Carbon_bomb_name", ascending=True)
+
     return df_cb
