@@ -7,13 +7,13 @@ from fuzzywuzzy import fuzz
 from geopy.geocoders import Nominatim
 
 from carbon_bombs.conf import PROJECT_SEPARATOR
-from carbon_bombs.readers.gem import get_gem_wiki_details
-from carbon_bombs.readers.gem import load_coal_mine_gem_database
-from carbon_bombs.readers.gem import load_gasoil_mine_gem_database
-from carbon_bombs.readers.khune_paper import load_carbon_bomb_coal_database
-from carbon_bombs.readers.khune_paper import load_carbon_bomb_gasoil_database
-from carbon_bombs.readers.manual_match import manual_match_coal
-from carbon_bombs.readers.manual_match import manual_match_gasoil
+from carbon_bombs.io.gem import get_gem_wiki_details
+from carbon_bombs.io.gem import load_coal_mine_gem_database
+from carbon_bombs.io.gem import load_gasoil_mine_gem_database
+from carbon_bombs.io.khune_paper import load_carbon_bomb_coal_database
+from carbon_bombs.io.khune_paper import load_carbon_bomb_gasoil_database
+from carbon_bombs.io.manual_match import manual_match_coal
+from carbon_bombs.io.manual_match import manual_match_gasoil
 
 
 def _match_gem_mines_using_fuzz(name: str, df_gem: pd.DataFrame) -> pd.DataFrame:

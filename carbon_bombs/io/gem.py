@@ -148,7 +148,8 @@ def get_description_from_soup(soup):
         soup: html page
 
     Returns:
-        The project description if available. Else, string 'No description available'."""
+        The project description if available. Else, string 'No description available'.
+    """
     description = str(
         soup.find_all("div", attrs={"class": "mw-parser-output"})[0].find_all("p")[0]
     )

@@ -5,9 +5,11 @@ import pandas as pd
 from fuzzywuzzy import fuzz
 
 from carbon_bombs.conf import PROJECT_SEPARATOR
-from carbon_bombs.readers.banking_climate_chaos import load_banking_climate_chaos
-from carbon_bombs.readers.cleaned import load_carbon_bombs_database
-from carbon_bombs.readers.manual_match import manual_match_company
+from carbon_bombs.io.banking_climate_chaos import load_banking_climate_chaos
+from carbon_bombs.io.cleaned import load_carbon_bombs_database
+from carbon_bombs.io.manual_match import manual_match_company
+from carbon_bombs.io.uniform_company_names import load_uniform_company_names
+from carbon_bombs.io.uniform_company_names import save_uniform_company_names
 
 
 def split_column_parent_company(row):
@@ -159,7 +161,7 @@ def clean(text):
     return text_cleaned
 
 
-def get_companies_match_cb_to_bocc():
+def _get_companies_match_cb_to_bocc():
     """Link companies involved in carbon bombs with those in the banking
     sector.
 
@@ -212,5 +214,27 @@ def get_companies_match_cb_to_bocc():
     for key, value in manual_match_company.items():
         if key not in dict_match:
             dict_match[key] = value
+
+    return dict_match
+
+
+def get_companies_match_cb_to_bocc(use_save_dict=False) -> dict:
+    """_summary_
+
+    Parameters
+    ----------
+    use_save_dict : bool, optional
+        _description_, by default False
+
+    Returns
+    -------
+    dict
+        _description_
+    """
+    if use_save_dict:
+        dict_match = load_uniform_company_names()
+    else:
+        dict_match = _get_companies_match_cb_to_bocc()
+        save_uniform_company_names(dict_match)
 
     return dict_match

@@ -9,7 +9,7 @@ REPO_PATH = abspath(join(join(__file__, pardir), pardir))
 DATA_SOURCE_PATH = f"{REPO_PATH}/data_sources"
 DATA_CLEANED_PATH = f"{REPO_PATH}/data_cleaned"
 
-# Files names of sources
+# File names of sources
 FPATH_SRC_KHUNE_PAPER = f"{DATA_SOURCE_PATH}/1-s2.0-S0301421522001756-mmc2.xlsx"
 FPATH_SRC_GEM_COAL = f"{DATA_SOURCE_PATH}/Global-Coal-Mine-Tracker-April-2023.xlsx"
 FPATH_SRC_GEM_GASOIL = (
@@ -28,7 +28,10 @@ FPATH_SRC_UNDATA_CO2 = (
     f"{DATA_SOURCE_PATH}/undata_SYB65_310_202209_Carbon Dioxide Emission Estimates.csv"
 )
 
-# Files names of outputs
+# File names for output files used during the process
+FPATH_SRC_UNIFORM_COMP_NAMES = f"{DATA_SOURCE_PATH}/uniform_company_names.json"
+
+# File names of outputs
 FPATH_OUT_BANK = f"{DATA_CLEANED_PATH}/bank_informations.csv"
 FPATH_OUT_COMP = f"{DATA_CLEANED_PATH}/company_informations.csv"
 FPATH_OUT_CB = f"{DATA_CLEANED_PATH}/carbon_bombs_informations.csv"
