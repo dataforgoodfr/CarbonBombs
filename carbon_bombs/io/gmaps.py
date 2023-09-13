@@ -3,9 +3,15 @@ import os
 import requests
 from dotenv import load_dotenv
 
+from carbon_bombs.utils.logger import LOGGER
+
+
 load_dotenv()
 
-API_KEY = os.environ["GMAPS_API_KEY"]
+if "GMAPS_API_KEY" in os.environ:
+    API_KEY = os.environ["GMAPS_API_KEY"]
+else:
+    API_KEY = ""
 
 
 def get_coordinates_google_api(address):
@@ -30,10 +36,10 @@ def get_coordinates_google_api(address):
         (37.4224764, -122.0842499)
 
     """
-    if address.startswith("None"):
+    if address.startswith("None") or API_KEY == "":
         return 0.0, 0.0
 
-    print("API CALL for this address:", address)
+    LOGGER.debug(f"Request on GMAPS API for: {address}")
 
     url = f"https://maps.googleapis.com/maps/api/geocode/json?address={address}&key={API_KEY}"
 
@@ -45,10 +51,10 @@ def get_coordinates_google_api(address):
             latitude = loc["lat"]
             longitude = loc["lng"]
         else:
-            print(f"API Error for {address}. Please try again later")
+            LOGGER.error(f"API Error for {address}")
             latitude, longitude = 0.0, 0.0
     else:
-        print(f"API Error for {address}. Please try again later")
+        LOGGER.error(f"API Error for {address}")
         latitude, longitude = 0.0, 0.0
 
     return latitude, longitude

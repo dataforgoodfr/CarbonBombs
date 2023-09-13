@@ -3,6 +3,8 @@ import sys
 import requests
 from bs4 import BeautifulSoup
 
+from carbon_bombs.utils.logger import LOGGER
+
 
 BANKTRACKS_URL = "https://www.banktrack.org/banks"
 
@@ -60,6 +62,7 @@ def scrapping_main_page_bank_track():
          'https://www.examplebanktrack.org/bank/ghi_bank']
     """
     # Send an HTTP request to the target URL
+    LOGGER.debug(f"Request banktracks url: {BANKTRACKS_URL}")
     response = requests.get(BANKTRACKS_URL)
 
     # Check if the request was successful (HTTP status code 200)
@@ -109,6 +112,8 @@ def scrapping_description_bank_page(url):
         'CEO/chair': 'John Doe', 'Supervisor': 'Jane Smith',
         'Ownership': 'Private'}
     """
+    LOGGER.debug(f"Request bank page details of {url}")
+
     # Send an HTTP request to the target URL
     response = requests.get(url)
     # Check if the request was successful (HTTP status code 200)
@@ -131,9 +136,8 @@ def scrapping_description_bank_page(url):
                 # No informations available in About section
                 dict_about_section[info_name] = "None"
     else:
-        print(
-            f"Failed to fetch the page. HTTP status: {response.status_code} "
-            "Please try again later"
+        LOGGER.error(
+            f"Failed to fetch the page for {url}. HTTP status: {response.status_code}."
         )
         return None, {}
 

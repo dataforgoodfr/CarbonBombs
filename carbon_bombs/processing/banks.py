@@ -7,7 +7,7 @@ from carbon_bombs.io.cleaned import load_banks_database
 from carbon_bombs.io.cleaned import load_connexion_bank_company_database
 from carbon_bombs.io.gmaps import get_coordinates_google_api
 from carbon_bombs.io.manual_match import manual_match_bank
-from carbon_bombs.processing.location_utils import get_world_region
+from carbon_bombs.utils.location import get_world_region
 
 
 def process_raw_info(dict_info):

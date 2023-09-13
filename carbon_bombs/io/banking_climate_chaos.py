@@ -1,6 +1,7 @@
 import pandas as pd
 
 from carbon_bombs.conf import FPATH_SRC_BOCC
+from carbon_bombs.utils.logger import LOGGER
 
 
 def load_banking_climate_chaos():
@@ -20,6 +21,7 @@ def load_banking_climate_chaos():
       file path.
     - The sheet name containing the data must be 'Data'.
     """
+    LOGGER.debug("Read Banking On Climate Chaos source")
     file_path = FPATH_SRC_BOCC
     df = pd.read_excel(file_path, sheet_name="Data", engine="openpyxl")
 

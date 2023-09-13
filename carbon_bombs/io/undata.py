@@ -3,6 +3,7 @@ import pandas as pd
 from carbon_bombs.conf import FPATH_SRC_UNDATA_CO2
 from carbon_bombs.conf import FPATH_SRC_UNDATA_GDP
 from carbon_bombs.conf import FPATH_SRC_UNDATA_POPU
+from carbon_bombs.utils.logger import LOGGER
 
 
 def load_undata():
@@ -43,6 +44,7 @@ def load_undata():
         None: However, if the HTTP request fails, it prints an error message
               and terminates the script.
     """
+    LOGGER.error("Read UNData files...")
     # Initiate Dataframe that will gather informations
     columns_dataframe = [
         "Region_Country_Area_ID",
@@ -63,6 +65,7 @@ def load_undata():
     df_undata = pd.DataFrame()
     # Load csv files
     for file in file_paths:
+        LOGGER.error(f"Read UNData file: {file}")
         df = pd.read_csv(file, sep=",", header=1)
 
         # Retrieve the category in the first row of the csv file

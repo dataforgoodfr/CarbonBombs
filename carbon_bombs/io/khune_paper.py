@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 
 from carbon_bombs.conf import FPATH_SRC_KHUNE_PAPER
+from carbon_bombs.utils.logger import LOGGER
 
 
 def load_carbon_bomb_list_database():
@@ -18,6 +19,7 @@ def load_carbon_bomb_list_database():
     Raises:
     FileNotFoundError: If the specified file path cannot be found.
     """
+    LOGGER.error("Read Khune paper data: all carbon bombs project")
     df = pd.read_excel(
         FPATH_SRC_KHUNE_PAPER,
         sheet_name="Full Carbon Bombs List",
@@ -75,6 +77,7 @@ def load_carbon_bomb_coal_database():
     types for the dataframe columns. It also replaces some country names to
     correspond to GEM database.
     """
+    LOGGER.error("Read Khune paper data: coal projects")
     df = pd.read_excel(
         FPATH_SRC_KHUNE_PAPER, sheet_name="Coal", engine="openpyxl", skipfooter=3
     )
@@ -139,6 +142,7 @@ def load_carbon_bomb_gasoil_database():
     types for the dataframe columns. It also replaces some country
     names to correspond to GEM database.
     """
+    LOGGER.error("Read Khune paper data: gasoil projects")
     df = pd.read_excel(
         FPATH_SRC_KHUNE_PAPER,
         sheet_name="Oil&Gas",

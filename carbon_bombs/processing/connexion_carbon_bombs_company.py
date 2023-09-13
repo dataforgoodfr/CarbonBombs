@@ -1,5 +1,5 @@
-from carbon_bombs.processing.connexion_utils import get_companies_involved_in_cb_df
-from carbon_bombs.processing.connexion_utils import get_companies_match_cb_to_bocc
+from carbon_bombs.utils.connexion import get_companies_involved_in_cb_df
+from carbon_bombs.utils.connexion import get_companies_match_cb_to_bocc
 
 
 def create_connexion_cb_company_table(use_save_dict=False):

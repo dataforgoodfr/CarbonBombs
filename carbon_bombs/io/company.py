@@ -4,6 +4,7 @@ import pandas as pd
 from carbon_bombs.conf import FPATH_SRC_COMP_ADDRESS
 from carbon_bombs.conf import FPATH_SRC_COMP_LOGO
 from carbon_bombs.io.uniform_company_names import load_uniform_company_names
+from carbon_bombs.utils.logger import LOGGER
 
 
 def load_company_address_table() -> pd.DataFrame:
@@ -21,6 +22,7 @@ def load_company_address_table() -> pd.DataFrame:
         Company address dataframe with the following columns:
         "Company" and "Address_source_chatGPT"
     """
+    LOGGER.debug("Read company address csv")
     df_address = pd.read_csv(FPATH_SRC_COMP_ADDRESS, sep=";")
 
     match_dict = load_uniform_company_names()
@@ -56,6 +58,7 @@ def load_company_logo() -> pd.DataFrame:
         Dataframe with columns from csv_file and an additional column Logo_URL
         containing the selected URL of logos.
     """
+    LOGGER.debug("Read company logo csv")
     url_field = ["Logo_OfficialWebsite", "Logo_Wikipedia_Large", "Logo_OtherSource"]
     df = pd.read_csv(FPATH_SRC_COMP_LOGO, sep=",")
 

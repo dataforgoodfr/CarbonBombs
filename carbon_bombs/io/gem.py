@@ -25,6 +25,7 @@ from bs4 import BeautifulSoup
 
 from carbon_bombs.conf import FPATH_SRC_GEM_COAL
 from carbon_bombs.conf import FPATH_SRC_GEM_GASOIL
+from carbon_bombs.utils.logger import LOGGER
 
 
 def load_coal_mine_gem_database():
@@ -50,6 +51,7 @@ def load_coal_mine_gem_database():
     "./data_sources/Global-Coal-Mine-Tracker-April-2023.xlsx".
     The sheet to be read is "Global Coal Mine Tracker".
     """
+    LOGGER.debug("Read GEM source: `Global Coal Mine Tracker`")
     df = pd.read_excel(
         FPATH_SRC_GEM_COAL, sheet_name="Global Coal Mine Tracker", engine="openpyxl"
     )
@@ -78,6 +80,7 @@ def load_gasoil_mine_gem_database():
     "./data_sources/Global-Oil-and-Gas-Extraction-Tracker-Feb-2023.xlsx".
     The sheet to be read is "Main data".
     """
+    LOGGER.debug("Read GEM source: `Main data` (gasoil)")
     # Line that must be passed before in order to avoid useless warning
     warnings.filterwarnings("ignore", category=UserWarning, module="openpyxl")
     df = pd.read_excel(FPATH_SRC_GEM_GASOIL, sheet_name="Main data", engine="openpyxl")
@@ -161,6 +164,7 @@ def get_description_from_soup(soup):
 
 
 def get_gem_wiki_details(item):
+    LOGGER.debug(f"Get GEM details of {item}")
     r = requests.get(item)
     soup = BeautifulSoup(r.text, features="html.parser")
     try:

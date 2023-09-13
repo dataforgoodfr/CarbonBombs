@@ -21,6 +21,7 @@ from carbon_bombs.conf import FPATH_OUT_COMP
 from carbon_bombs.conf import FPATH_OUT_CONX_BANK_COMP
 from carbon_bombs.conf import FPATH_OUT_CONX_CB_COMP
 from carbon_bombs.conf import FPATH_OUT_COUNTRY
+from carbon_bombs.utils.logger import LOGGER
 
 load_dotenv()
 
@@ -386,14 +387,18 @@ def update_neo4j():
 
 def purge_database():
     """Purge all Neo4J database"""
+    LOGGER.debug("Connect to driver...")
     driver = GraphDatabase.driver(
         NEO4J_URI, auth=basic_auth(NEO4J_USERNAME, NEO4J_PASSWORD)
     )
+    LOGGER.debug("Driver connected")
 
     def delete_all(tx):
         tx.run("MATCH (n) DETACH DELETE n")
 
+    LOGGER.debug("Start NEO4J purge...")
     with driver.session() as session:
         session.execute_write(delete_all)
+    LOGGER.debug("NEO4J purge done")
 
     driver.close()

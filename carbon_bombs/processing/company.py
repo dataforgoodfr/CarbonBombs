@@ -6,8 +6,8 @@ from carbon_bombs.io.cleaned import load_connexion_cb_company_database
 from carbon_bombs.io.company import load_company_address_table
 from carbon_bombs.io.company import load_company_logo
 from carbon_bombs.io.gmaps import get_coordinates_google_api
-from carbon_bombs.processing.location_utils import get_country_from_geopy
-from carbon_bombs.processing.location_utils import get_world_region
+from carbon_bombs.utils.location import get_country_from_geopy
+from carbon_bombs.utils.location import get_world_region
 
 
 def _get_companies() -> pd.DataFrame:

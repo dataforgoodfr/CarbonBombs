@@ -11,6 +11,7 @@ from carbon_bombs.conf import FPATH_OUT_CONX_BANK_COMP
 from carbon_bombs.conf import FPATH_OUT_CONX_CB_COMP
 from carbon_bombs.conf import FPATH_OUT_COUNTRY
 from carbon_bombs.conf import FPATH_SRC_METADATAS
+from carbon_bombs.utils.logger import LOGGER
 
 
 def load_carbon_bombs_database() -> pd.DataFrame:
@@ -123,7 +124,37 @@ def load_connexion_cb_company_database() -> pd.DataFrame:
     return df
 
 
-def concat_dataframe_into_excel():
+def save_carbon_bombs_table(data: pd.DataFrame):
+    """Save carbon bombs dataset to cleaned directory as CSV"""
+    data.to_csv(FPATH_OUT_CB, encoding="utf-8-sig", index=False)
+
+
+def save_company_table(data: pd.DataFrame):
+    """Save company dataset to cleaned directory as CSV"""
+    data.to_csv(FPATH_OUT_COMP, encoding="utf-8-sig", index=False)
+
+
+def save_bank_table(data: pd.DataFrame):
+    """Save bank dataset to cleaned directory as CSV"""
+    data.to_csv(FPATH_OUT_BANK, encoding="utf-8-sig", index=False)
+
+
+def save_connexion_bank_company_table(data: pd.DataFrame):
+    """Save connexion bank / company dataset to cleaned directory as CSV"""
+    data.to_csv(FPATH_OUT_CONX_BANK_COMP, encoding="utf-8-sig", index=False)
+
+
+def save_connexion_cb_company_table(data: pd.DataFrame):
+    """Save connexion carbon bomb / company dataset to cleaned directory as CSV"""
+    data.to_csv(FPATH_OUT_CONX_CB_COMP, encoding="utf-8-sig", index=False)
+
+
+def save_country_table(data: pd.DataFrame):
+    """Save carbon bombs dataset to cleaned directory as CSV"""
+    data.to_csv(FPATH_OUT_COUNTRY, encoding="utf-8-sig", index=False)
+
+
+def save_dataframes_into_excel():
     """Generate an Excel file into `fpath` that takes all
     datasets path and put it into different sheets
 
