@@ -66,6 +66,20 @@ The 'img' folder stores all images, in particular:
   - Script that downloaded these files: scrapper.py
   - Source of the data: Official websites and Wikipedia. Additional sources can also be used and are referenced in the file company_url.csv
 
+# Install and generate data
+
+To install use this command:
+
+```bash
+pip install -e .
+```
+
+Then you can generate dataset using this command:
+
+```bash
+python scripts/generate_dataset.py
+```
+
 # Code Documentation
 
 Code documentation has been generated using Sphinx Library.

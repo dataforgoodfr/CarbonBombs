@@ -135,6 +135,7 @@ def write_nodes(driver, node_type, node_data):
     """Write all nodes given a node type (bank, country, carbon_bomb or company)
     and its data.
     """
+    LOGGER.debug(f"{node_type} nodes: start writing...")
 
     def _create_nodes(tx, node_type, node_data):
         cypher_query_carbon_bombs = f"MERGE (n:{node_type} " + "{"
@@ -149,12 +150,16 @@ def write_nodes(driver, node_type, node_data):
 
     with driver.session(database="neo4j") as session:
         for _, row in node_data.iterrows():
+            LOGGER.debug(f"{node_type} nodes: write `{row.iloc[0]}`")
             session.execute_write(_create_nodes, node_type, row)
+
+    LOGGER.debug(f"{node_type} nodes: writing done")
 
 
 def _write_connexions_cb_companies(driver):
     """Write connexions between CB nodes and company nodes"""
     ### Carbon Bombs and Companies relationship
+    LOGGER.debug("Start writing connexions between carbon bombs and companies")
     carbonbombs_companies = pd.read_csv(FPATH_OUT_CONX_CB_COMP)
     carbonbombs_companies.to_csv(
         FPATH_NEO4J_CONX_CB_COMP, encoding="utf-8-sig", index=False
@@ -180,14 +185,19 @@ def _write_connexions_cb_companies(driver):
             carbon_bomb = row["Carbon_bomb_name"]
             company = row["Company"]
             country = row["Country"]
+            LOGGER.debug(
+                f"Connexion CB to COMPANY: write `{carbon_bomb}` - `{company}`"
+            )
             weight = 1  # row['Percentage']
             session.execute_write(
                 create_interaction_cb_companies, carbon_bomb, company, country, weight
             )
+    LOGGER.debug("Writing connexions between carbon bombs and companies done")
 
 
 def _write_connexions_bank_companies(driver):
     """Write connexions between bank nodes and company nodes"""
+    LOGGER.debug("Start writing connexions between banks and companies")
     ### Banks and Companies relationship
     banks_companies = pd.read_csv(FPATH_OUT_CONX_BANK_COMP)
     banks_companies.to_csv(
@@ -247,6 +257,7 @@ def _write_connexions_bank_companies(driver):
             year_2021 = row["2021"]
             year_2022 = row["2022"]
             total = row["Grand Total"]
+            LOGGER.debug(f"Connexion BANK to COMPANY: write `{bank}` - `{company}`")
             session.execute_write(
                 create_interaction_banks_companies,
                 bank,
@@ -260,10 +271,12 @@ def _write_connexions_bank_companies(driver):
                 year_2022,
                 total,
             )
+    LOGGER.debug("Writing connexions between banks and companies done")
 
 
 def _write_connexions_cb_country(driver):
     """Write connexions between CB nodes and country nodes"""
+    LOGGER.debug("Start writing connexions between carbon bombs and countries")
     ### Carbon Bombs and Country relationship
     carbonbombs_informations = pd.read_csv(FPATH_OUT_CB)
 
@@ -287,11 +300,17 @@ def _write_connexions_cb_country(driver):
         for _, row in carbonbombs_countries.iterrows():
             carbon_bomb = row["Carbon_bomb"]
             country = row["Country"]
+            LOGGER.debug(
+                f"Connexion CB to COUNTRY: write `{carbon_bomb}` - `{country}`"
+            )
             session.execute_write(create_interaction_cb_countries, carbon_bomb, country)
+
+    LOGGER.debug("Writing connexions between carbon bombs and countries done")
 
 
 def _write_connexions_companies_country(driver):
     """Write connexions between company nodes and company nodes"""
+    LOGGER.debug("Start writing connexions between companies and countries")
     ### Company and Country relationship
     company_informations = pd.read_csv(FPATH_OUT_COMP)
 
@@ -316,13 +335,19 @@ def _write_connexions_companies_country(driver):
         for _, row in companies_countries.iterrows():
             company = row["Company"]
             country = row["Country"]
+            LOGGER.debug(
+                f"Connexion COMPANY to COUNTRY: write `{company}` - `{country}`"
+            )
             session.execute_write(
                 create_interaction_companies_countries, company, country
             )
 
+    LOGGER.debug("Writing connexions between companies and countries done")
+
 
 def _write_connexions_bank_country(driver):
     """Write connexions between bank nodes and country nodes"""
+    LOGGER.debug("Start writing connexions between banks and countries")
     ### Bank and Country relationship
     bank_informations = pd.read_csv(FPATH_OUT_BANK)
 
@@ -347,7 +372,10 @@ def _write_connexions_bank_country(driver):
         for _, row in banks_countries.iterrows():
             bank = row["Bank"]
             country = row["Country"]
+            LOGGER.debug(f"Connexion BANK to COUNTRY: write `{bank}` - `{country}`")
             session.execute_write(create_interaction_banks_countries, bank, country)
+
+    LOGGER.debug("Writing connexions between banks and countries done")
 
 
 def write_connexions(driver):
@@ -361,11 +389,14 @@ def write_connexions(driver):
 
 def update_neo4j():
     """Update CSV for Neo4J, create nodes and connexions"""
+    LOGGER.debug("Update cleaned csv for neo4j and save them")
     carbon_bombs, companies, banks, countries = update_csv_nodes_neo4j()
 
+    LOGGER.debug("Connect to driver...")
     driver = GraphDatabase.driver(
         NEO4J_URI, auth=basic_auth(NEO4J_USERNAME, NEO4J_PASSWORD)
     )
+    LOGGER.debug("Driver connected")
 
     # Define dict to iterate over three types node creation
     dict_nodes = {
@@ -376,10 +407,12 @@ def update_neo4j():
     }
 
     # Iterate throught dictionnary to create each node type
+    LOGGER.debug("Write nodes")
     for node_type, node_data in dict_nodes.items():
         write_nodes(driver, node_type, node_data)
 
     # Define connexion between nodes
+    LOGGER.debug("Write connexions")
     write_connexions(driver)
 
     driver.close()

@@ -8,6 +8,7 @@ from carbon_bombs.io.cleaned import save_connexion_cb_company_table
 from carbon_bombs.io.cleaned import save_country_table
 from carbon_bombs.io.cleaned import save_dataframes_into_excel
 from carbon_bombs.io.gmaps import API_KEY
+from carbon_bombs.io.md5 import generate_checksum_cleaned_datasets
 from carbon_bombs.processing.banks import create_banks_table
 from carbon_bombs.processing.carbon_bombs_info import create_carbon_bombs_table
 from carbon_bombs.processing.company import create_company_table
@@ -26,7 +27,7 @@ from carbon_bombs.utils.logger import get_logger
 @click.option("--start-at-step", default=0, help="start at step")
 def generate_dataset(verbose, start_at_step):
     """"""
-    LOGGER = get_logger(verbose=verbose, name="carbon_bombs")
+    LOGGER = get_logger(verbose=verbose, name="carbon_bombs", log=True)
     LOGGER.info("Start generate dataset script")
 
     # Step 1 : CB table
@@ -107,7 +108,10 @@ def generate_dataset(verbose, start_at_step):
     LOGGER.info("Step 7 - START")
     LOGGER.info("Step 7 - save all dataframes into concatenate excel")
     save_dataframes_into_excel()
+    LOGGER.info("Step 7 - generate checksums")
+    generate_checksum_cleaned_datasets()
     LOGGER.info("Step 7 - DONE")
+    LOGGER.info("Generate dataset script - DONE")
 
 
 if __name__ == "__main__":

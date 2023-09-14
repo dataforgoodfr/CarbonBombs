@@ -1,7 +1,9 @@
+"""Function to process countries information"""
 import pandas as pd
 
 from carbon_bombs.io.cleaned import load_carbon_bombs_database
 from carbon_bombs.io.undata import load_undata
+from carbon_bombs.utils.logger import LOGGER
 
 
 def _get_countries():
@@ -74,6 +76,9 @@ def format_countries_df_with_wanted_series(df_countries: pd.DataFrame) -> pd.Dat
         "Emissions (thousand metric tons of carbon dioxide)": "Emissions_thousand_tons_CO2",
         "Emissions per capita (metric tons of carbon dioxide)": "Emissions_per_capita_tons_CO2",
     }
+    LOGGER.debug(
+        f"Keep only the following informations from UNData: {list(columns_map.keys())}"
+    )
 
     # Keep only some wanted KPI
     df_countries_filtered = df_countries.loc[
@@ -96,6 +101,7 @@ def format_countries_df_with_wanted_series(df_countries: pd.DataFrame) -> pd.Dat
     # Init final countries df
     final_countries_df = df_countries[["Country_source_CB"]].drop_duplicates()
 
+    LOGGER.debug("Add last year found for each information")
     for serie, serie_df in country_year_max_df.groupby("Series"):
         # Pivot dataframe to get values and year into the same row
         serie_df = serie_df.pivot(
@@ -142,13 +148,17 @@ def create_country_table():
     ------
         None.
     """
+    LOGGER.debug("Start creation of countries dataset")
     # Load Dataframe listing unique countries with identified carbon bombs
+    LOGGER.debug("Get country from Carbon bombs dataset")
     df_cb_countries = _get_countries()
 
     # Load UNData with wanted information of countries
+    LOGGER.debug("Load UNData dataset")
     df_undata = load_undata()
 
     # Merge the 2 dataframes on country name column.
+    LOGGER.debug("Merge country from CB with UNData dataframes")
     df_countries = df_cb_countries.merge(
         df_undata,
         left_on="Country_source_CB",
@@ -158,9 +168,11 @@ def create_country_table():
     )
 
     # Format countries df to get on row per country
+    LOGGER.debug("Keep only wanted information from UNData")
     df_countries = format_countries_df_with_wanted_series(df_countries)
 
     # sort df
+    LOGGER.debug("Sort dataset by country")
     df_countries = df_countries.sort_values(by="Country_source_CB")
 
     # Return cleaned dataframe

@@ -1,3 +1,4 @@
+"""Functions to load UNData datasets"""
 import pandas as pd
 
 from carbon_bombs.conf import FPATH_SRC_UNDATA_CO2

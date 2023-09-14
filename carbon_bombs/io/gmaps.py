@@ -1,16 +1,19 @@
+"""Functions to call GMAPS API"""
 import os
 
 import requests
 from dotenv import load_dotenv
 
+from carbon_bombs.conf import REPO_PATH
 from carbon_bombs.utils.logger import LOGGER
 
 
-load_dotenv()
+load_dotenv(f"{REPO_PATH}/.env")
 
 if "GMAPS_API_KEY" in os.environ:
     API_KEY = os.environ["GMAPS_API_KEY"]
 else:
+    LOGGER.warning("No API key found in .env (GMAPS_API_KEY)")
     API_KEY = ""
 
 

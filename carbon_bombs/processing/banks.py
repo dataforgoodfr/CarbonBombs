@@ -8,6 +8,7 @@ from carbon_bombs.io.cleaned import load_connexion_bank_company_database
 from carbon_bombs.io.gmaps import get_coordinates_google_api
 from carbon_bombs.io.manual_match import manual_match_bank
 from carbon_bombs.utils.location import get_world_region
+from carbon_bombs.utils.logger import LOGGER
 
 
 def process_raw_info(dict_info):
@@ -106,6 +107,8 @@ def create_banks_table(check_old_df_address=False):
         1    Another Bank www.anotherbank.com 456 Oak St, Anycity  USA
         ...
     """
+    LOGGER.debug("Start creation of banks dataset")
+    LOGGER.debug("Get banks name connected to companies")
     cnx_bank_comp = load_connexion_bank_company_database()
     banks_in_bocc = cnx_bank_comp["Bank"].unique()
 
@@ -125,6 +128,7 @@ def create_banks_table(check_old_df_address=False):
         "Longitude",
     ]
     df = pd.DataFrame(columns=columns_dataframe)
+    LOGGER.debug("Scrap all banks from banktracks website")
     bank_names, bank_list_url, bank_logos = scrapping_main_page_bank_track()
 
     # Make a remap of bank name based on manual_match_bank in order to have
@@ -136,12 +140,16 @@ def create_banks_table(check_old_df_address=False):
 
     # If we want to check a change of the address then first we load old bank dataframe
     if check_old_df_address:
+        LOGGER.debug(
+            "Load old bank dataset to avoid calling GMAPS API when no change in the address"
+        )
         old_bank_df = load_banks_database()
 
     for bank_name, bank_url, logo in zip(bank_names, bank_list_url, bank_logos):
         # if bank name not in banks find in BOCC then dont scrap the content
         if bank_name not in banks_in_bocc:
             continue
+        LOGGER.debug(f"{bank_name}: found in BOCC banks, scrap details from bank page")
 
         raw_info = scrapping_description_bank_page(bank_url)
         clean_info = process_raw_info(raw_info)
@@ -154,6 +162,7 @@ def create_banks_table(check_old_df_address=False):
             old_raw = old_bank_df.loc[old_bank_df["Source BankTrack"] == bank_url]
             # if no match then get lat, long from GMAPS
             if len(old_raw) == 0:
+                LOGGER.debug(f"{bank_name}: no match found on old bank dataset")
                 lat, long = get_coordinates_google_api(address_maps)
 
             # if match then compare address and use old if addresses are equal
@@ -162,12 +171,17 @@ def create_banks_table(check_old_df_address=False):
                 old_address = f"{old_raw['Headquarters address']}, {old_raw['Headquarters country']}"
 
                 if old_address == address_maps:
+                    LOGGER.debug(
+                        f"{bank_name}: same address found, use old latitude and longitude"
+                    )
                     lat, long = old_raw["Latitude"], old_raw["Longitude"]
 
                 else:
+                    LOGGER.debug(f"{bank_name}: different address found, use GMAPS API")
                     lat, long = get_coordinates_google_api(address_maps)
 
         else:
+            LOGGER.debug(f"{bank_name}: use GMAPS API to find latitude and longitude")
             lat, long = get_coordinates_google_api(address_maps)
 
         clean_info["Latitude"] = lat
@@ -191,9 +205,11 @@ def create_banks_table(check_old_df_address=False):
     )
 
     # Add World Region associated to Headquarters country
+    LOGGER.debug("Get world region using Headquarters country column")
     df["World Region"] = df["Headquarters country"].apply(get_world_region)
 
     # sort df
+    LOGGER.debug("Sort dataset by bank name")
     df = df.sort_values(by="Bank Name", ascending=True)
 
     # Return dataframe with all info on bank companies

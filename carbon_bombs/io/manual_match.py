@@ -1,4 +1,5 @@
-"""
+"""All matching dictionaries defined manually
+
 Script that define dictionnaries objects that allows to make correspondance
 between the differents database.\n
 Pay attention that some Carbon Bombs have beeen renamed with they country in
@@ -19,7 +20,7 @@ Banking on Climate Chaos (BOCC) database\n
 """
 # Dictionnary for Coal Mine only
 manual_match_coal = {
-    "Maritsa Coal Mines": "Troyanavo 3 Coal Mine",
+    "Maritsa Coal Mines": "Troyanovo-North Coal Mine$Troyanovo 1 Coal Mine$Troyanovo 3 Coal Mine",
     "Kaniha Coal Mine": "Gopalji Kaniha Coal Mine",
     "Kerandari BC": "Kerendari Coal Mine",
     "Bankui": "None",

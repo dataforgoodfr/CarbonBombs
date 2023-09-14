@@ -15,8 +15,8 @@ Arch Resources Inc,United States
 Arrowhead Productions,
 Asian American Continental Coal Company,China
 Azerbaijan (OCC) Limited,
-BHP Group Ltd,Australia
 BHP Billiton,
+BHP Group Ltd,Australia
 BP PLC,United Kingdom
 BPX Operating,
 BRG Lone Star,
@@ -51,7 +51,7 @@ CNPC,
 Canadian Natural Resources Ltd (CNRL),Canada
 Changchun Jijun Trade Company,China
 Chesapeake Operating,
-Chevron Corp,
+Chevron Corp,United States
 China COSCO Shipping Corp Ltd,China
 China Chengtong Holdings Group,China
 China Cinda Asset Management,China
@@ -84,6 +84,7 @@ Drummond Company,United States
 EOG Resources Inc,
 Eagleridge Operating,
 El Toro Resources,
+Electricity Generating PCL,
 Elektroprivreda Srbije (EPS),
 Elevation Resources,
 Elion Resources Group Ltd,China
@@ -97,7 +98,6 @@ Equinor Energy,
 Erdenes MGL,Mongolia
 Erdos Chunhui Forest Company,China
 Erdos Jiuyuan Investment Company,China
-Electricity Generating PCL,
 Evraz PLC,United Kingdom
 Exco Operating Co.,
 Exxaro Resources Ltd,South Africa
@@ -143,7 +143,6 @@ Huaihe Energy,China
 Huayang New Material Technology Group Co Ltd,China
 Hubei Yihua Chemical Industry Co Ltd,China
 Huolinhe Coal Industry Group,China
-Inpex Corp,Japan
 ITOCHU Corp,Japan
 Imperial Oil Resources Limited,Canada
 Indexim Coalindo,Indonesia
@@ -161,6 +160,7 @@ Inner Mongolia Mengtai Group Co Ltd,China
 Inner Mongolia Ordos Investment Holding Group,China
 Inner Mongolia Shengli Resource Group,China
 Inner Mongolia Yitai Investment Co Ltd,China
+Inpex Corp,Japan
 Inpex Eagle Ford,
 Integrated Energy Services Corporation,United States
 Iraqi Oil Exploration Company,Iraq
@@ -181,9 +181,10 @@ Junggar Juli Cultivation Company,China
 Kailuan Group Ltd Liability Corp,China
 Kazakhmys Corporation,Kazakhstan
 Kolmar,Russia
-Korea Gas Corporation (KOGAS),
+Korea Gas Corporation (KOGAS),South Korea
 Kuwait Petroleum Corp,Kuwait
 LG International,South Korea
+LUKOIL PJSC,Russia
 LX International,South Korea
 Lakota Energy,
 Langfang Heyuan Investment Center,China
@@ -220,7 +221,6 @@ Ningxia State-Owned Assets Company,China
 Ningxia State-Owned Capital Operation Group,China
 Ningxia Wangwa Coal Industry Company,China
 Nippon Steel & Sumitomo Metal,
-None,
 Novatek,
 OMV AG,Austria
 OXY USA,
@@ -233,20 +233,19 @@ Ordos Energy Investment and Development Company,China
 PAO NOVATEK,Russia
 PC Venezuela LTD,Venezuela
 PDVSA,Venezuela
-LUKOIL PJSC,Russia
 POSCO Holdings Inc,South Korea
 PPI,
 PPL Corp,United States
-Pertamina Persero PT,Indonesia
 PTT PLC,Thailand
 Peabody Energy Corp,United States
 Pembroke Resources,Australia
+Pertamina Persero PT,Indonesia
 Petoro AS,Norway
 PetroChina,
+Petroliam Nasional Berhad (Petronas),Malaysia
 Petróleo Brasileiro SA – Petrobras,Brazil
-Petróleos Mexicanos (PEMEX),Mexico
-Petroliam Nasional Berhad (Petronas),
 Petróleo Brasileiro S.A.,Brazil
+Petróleos Mexicanos (PEMEX),Mexico
 Pioneer Natural Resources Co,
 Pitts Energy Co.,
 Polskie Górnictwo Naftowe i Gazownictwo SA (PGNiG),
@@ -256,17 +255,16 @@ Pré-Sal Petróleo S.A.,Brazil
 Public Power Corporation of Greece S.A,Greece
 QCoal,Australia
 QH Oil Investments LLC,Russia
-Qatargas,
 QatarEnergy,Qatar
+Qatargas,
 R. Lacy Services,
-Rosneftegaz AO,Russia
 RWE AG,Germany
 Ramtex Energy,
 Rashtriya Ispat Nigam (RINL),
 Ratio Petroleum,Israel
 Reliance Power Ltd,India
-Repsol SA,Spain
 Repsol Oil & Gas,
+Repsol SA,Spain
 Resource Generation Australia,Australia
 RioZim,Zimbabwe
 Rki Energy Resources,
@@ -274,6 +272,7 @@ Rockcliff Energy Operating,
 Rockdale Marcellus,
 Rosetta Resources,
 Rosneft,
+Rosneftegaz AO,Russia
 Rothe Investments,South Africa
 Russian Coal,Russia
 Russian Federation Agency for State Property Management,Russia
@@ -365,9 +364,9 @@ Weatherly Oil & Gas,
 Wildhorse Resources,
 Wutongshu Investment Platform Co.,China
 XTO Energy,
+Xin Jiang Guang Hui Industry Investment Group Co Ltd,China
 Xinjiang Changyuan Water Group,China
 Xinjiang Energy Group,China
-Xin Jiang Guang Hui Industry Investment Group Co Ltd,China
 Xinjiang Joinworld Company,China
 Xinjiang Production and Construction Corps,China
 Xinjiang Xinhua Hydropower Investment Company,China

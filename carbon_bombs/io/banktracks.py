@@ -1,3 +1,4 @@
+"""Functions to scrap data of banktracks website"""
 import sys
 
 import requests

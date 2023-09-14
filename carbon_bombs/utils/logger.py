@@ -27,30 +27,6 @@ def get_logging_path():
     -------
     str
         Path to logs
-
-    Examples
-    --------
-
-    Basic usage
-
-    .. code-block:: python
-
-        >>> from packta.utils.logging import get_logging_path
-
-        >>> path = get_logging_path()
-        >>> print(path)
-        C:/Users/USER/AppData/Roaming/.packta.log
-
-    Updating default path
-
-    .. code-block:: python
-
-        >>> from packta.utils import logging
-        >>> logging.FILE_OUT = "/my/custom/path/file.log"
-
-        >>> path = get_logging_path()
-        >>> print(path)
-        /my/custom/path/file.log
     """
     if FILE_OUT is not None:
         # TODO: directory exists ? Nope you suck
@@ -65,7 +41,7 @@ def get_logging_path():
     if ope_system == "Windows":
         log_path = os.getenv("APPDATA")
 
-    file_out = path.join(log_path, ".packta.log")
+    file_out = path.join(log_path, ".carbon_bombs.log")
 
     return file_out
 
@@ -89,26 +65,6 @@ def check_logger(logger):
     ------
     TypeError
         logger must be logging.Logger
-
-    Examples
-    --------
-
-    .. code-block:: python
-
-        >>> from packta.utils.logging import check_logger, get_logger
-
-        >>> logger = get_logger(verbose=10)
-
-        >>> print(check_logger(logger))
-        >>> <Logger logger (DEBUG)>
-
-        >>> print(check_logger("not_a_logger"))
-        `---------------------------------------------------------------------------`
-        TypeError                                 Traceback (most recent call last)
-        <ipython-input-50-d93fd19edab8> in <module>
-            3 logger = get_logger()
-            4 print(check_logger(logger))
-        ----> 5 print(check_logger("not_a_logger"))
     """
     if not isinstance(logger, logging.Logger):
         raise TypeError("logger must be logging.Logger")
@@ -184,7 +140,7 @@ def get_logger(
 
     .. code-block:: python
 
-        >>> from packta.utils.logging import get_logger
+        >>> from carbon_bombs.utils.logger import get_logger
 
         >>> logger = get_logger(verbose=10)
         >>> print(logger)
@@ -276,7 +232,7 @@ def get_logger(
 
     # create formatter
     formatter = logging.Formatter(
-        "%(asctime)s - %(name)s - %(levelname)s - %(funcName)s - %(message)s"
+        "%(asctime)s - %(module)s - %(funcName)s - %(message)s"
     )
 
     # create logger with name variable
@@ -290,7 +246,7 @@ def get_logger(
     handlers = [str(x) for x in logger.handlers]
     # create file handler which logs even debug messages
     if log:
-        fh = logging.FileHandler(file_out)
+        fh = logging.FileHandler(file_out, encoding="utf-8-sig")
         fh.setLevel(LOGGING_LEVEL[level])
         # add the formatter to the handler
         fh.setFormatter(formatter)
@@ -312,4 +268,4 @@ def get_logger(
 
 
 # create custom logger for the project
-LOGGER = get_logger(name="carbon_bombs")
+LOGGER = get_logger(name="carbon_bombs", log=True)

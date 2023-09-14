@@ -1,3 +1,4 @@
+"""Functions to load BOCC dataset"""
 import pandas as pd
 
 from carbon_bombs.conf import FPATH_SRC_BOCC

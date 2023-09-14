@@ -1,7 +1,4 @@
-"""
-Functions to read the Khune Paper dataset
-Source from the paper: https://www.sciencedirect.com/science/article/pii/S0301421522001756
-"""
+"""Functions to read the Khune Paper dataset"""
 import numpy as np
 import pandas as pd
 

@@ -1,3 +1,4 @@
+"""Function to process carbon bombs information"""
 import re
 
 import awoc
@@ -229,7 +230,9 @@ def _find_gem_mines(
             matched_gem_df = _match_gem_mines_using_fuzz(name, df_gem)
 
     if len(matched_gem_df) > 1:
-        LOGGER.debug(f"{fuel}: {name} - multiple mines found for this project")
+        LOGGER.debug(
+            f"{fuel}: {name} - {len(matched_gem_df)} mines found for this project"
+        )
         matched_gem_df = _handle_multiple_gem_mines(
             matched_gem_df,
             keep_first_cols=["Country", "Latitude", "Longitude"],
@@ -245,10 +248,13 @@ def _find_gem_mines(
         )
 
     elif len(matched_gem_df) == 0:
-        LOGGER.debug(f"{fuel}: {name} - no match found")
+        LOGGER.debug(f"{fuel}: {name} - no match found for this project")
         matched_gem_df = pd.DataFrame(
             [[np.NaN] * len(df_gem.columns)], columns=df_gem.columns
         )
+
+    else:
+        LOGGER.debug(f"{fuel}: {name} - one mine found for this project")
 
     # add used mines to avoid putting back the same mine for another project
     used_mines.extend(
@@ -866,19 +872,20 @@ def create_carbon_bombs_table() -> pd.DataFrame:
     - name_mapping_gasoil: maps column names for the gas/oil table.
     - name_mapping_source: maps column names for the final merged table.
     """
+    LOGGER.debug("Start creation of carbon bombs dataset")
+    LOGGER.debug("Load dataframe coal and gasoil")
     df_coal = create_carbon_bombs_coal_table()
     df_gasoil = create_carbon_bombs_gasoil_table()
-    LOGGER.debug("Dataframe coal and gasoil loaded")
 
     # Cancel renaming of project that have the same name but are located in
     # different country (see function load_carbon_bomb_gasoil_database())
     # Only apply for the moment to gasoil dataframe
+    LOGGER.debug("Cancel duplicated project name renaming for gasoil projects")
     df_gasoil = cancel_duplicated_rename(df_gasoil)
-    LOGGER.debug("Duplicated name for gasoil dataframe canceled")
 
     # Merge dataframes
+    LOGGER.debug("Merge coal and gasoil dataframes")
     df_carbon_bombs = pd.concat([df_coal, df_gasoil], axis=0)
-    LOGGER.debug("Coal and gasoil dataframes merged")
 
     # TODO: keep this rule or not ?
     # for Unit_concerned we only want to keep when there are more than one units
@@ -889,8 +896,8 @@ def create_carbon_bombs_table() -> pd.DataFrame:
     )
 
     # Add companies involved column
+    LOGGER.debug("Add companies involved column to CB dataframe")
     df_carbon_bombs = _add_companies_involved(df_carbon_bombs)
-    LOGGER.debug("Companies involved column added to CB dataframe")
 
     # Set status to lower
     df_carbon_bombs["Status"] = df_carbon_bombs["Status"].str.lower()
@@ -913,26 +920,26 @@ def create_carbon_bombs_table() -> pd.DataFrame:
         "Unit_concerned": "Multiple_unit_concerned_source_GEM",
         "Status": "Status_source_GEM",
     }
+    LOGGER.debug("Rename columns for CB dataframe")
     df_carbon_bombs = df_carbon_bombs.rename(columns=name_mapping_source)
-    LOGGER.debug("Columns renamed for CB dataframe")
 
     # Handle missing values by putting text instead
+    LOGGER.debug("Update missing values for GEM columns")
     df_carbon_bombs = _handle_missing_values_gem(df_carbon_bombs)
-    LOGGER.debug("Update missing values for GEM columns done")
 
     # create status column by using Status from GEM and Status from CB if first one is NaN
+    LOGGER.debug("Add new status columns into CB dataframe")
     df_carbon_bombs = _add_custom_status_columns(df_carbon_bombs)
-    LOGGER.debug("New status columns added into CB dataframe")
 
     # Add Lat long source
     df_carbon_bombs["Latitude_longitude_source"] = "GEM"
     # Handle Lat long of country when no lat long found
+    LOGGER.debug("Add country latitude and longitude when no coordinate found")
     df_carbon_bombs = _add_country_lat_long_when_missing(df_carbon_bombs)
-    LOGGER.debug("Country latitude and longitude added when no coordinate found")
 
     # Retrieve description and start year from GEM wiki page
+    LOGGER.debug("Add GEM description and start year columns into CB dataframe")
     df_carbon_bombs = get_information_from_GEM(df_carbon_bombs)
-    LOGGER.debug("GEM description and start year columns added into CB dataframe")
 
     # Specific fix fort Khafji bomb that is set to Kuwait and Saudi Arabia
     # -> attribute this carbon bomb to Kuwait to insure a better repartition
@@ -942,13 +949,13 @@ def create_carbon_bombs_table() -> pd.DataFrame:
     ] = "Kuwait"
 
     # Add World Region associated to Headquarters country
+    LOGGER.debug("Add world region column into CB dataframe")
     world_region = awoc.AWOC()
     df_carbon_bombs["World_region"] = (
         df_carbon_bombs["Country_source_CB"]
         .replace({"Türkiye": "Turkey"})
         .apply(world_region.get_country_continent_name)
     )
-    LOGGER.debug("World region column added into CB dataframe")
 
     # Reorder columns and sort by CB Name and country
     final_columns_order = [
@@ -973,11 +980,9 @@ def create_carbon_bombs_table() -> pd.DataFrame:
         "Status_lvl_1",
         "Status_lvl_2",
     ]
+    LOGGER.debug("Reorder CB dataframe columns and sort dataframe by name and country")
     df_carbon_bombs = df_carbon_bombs[final_columns_order].sort_values(
         by=["Carbon_bomb_name_source_CB", "Country_source_CB"], ascending=True
-    )
-    LOGGER.debug(
-        "CB dataframe columns reorder and dataframe sorted by name and country"
     )
 
     return df_carbon_bombs

@@ -10,6 +10,7 @@ from carbon_bombs.io.cleaned import load_carbon_bombs_database
 from carbon_bombs.io.manual_match import manual_match_company
 from carbon_bombs.io.uniform_company_names import load_uniform_company_names
 from carbon_bombs.io.uniform_company_names import save_uniform_company_names
+from carbon_bombs.utils.logger import LOGGER
 
 
 def split_column_parent_company(row):
@@ -196,7 +197,9 @@ def _get_companies_match_cb_to_bocc():
     df_list_bocc["Company BOCC_cleaned"] = df_list_bocc["Company BOCC"].apply(clean)
 
     dict_match = {}
+    LOGGER.debug("Match CB company name with BOCC name with fuzzy score")
     for company in df_cb["Company"].unique():
+        LOGGER.debug(f"{company}: try matching")
         company_cleaned = clean(company)
         df_list_bocc["fuzzy_score"] = df_list_bocc["Company BOCC_cleaned"].apply(
             lambda x: fuzz.ratio(x, company_cleaned)
@@ -208,6 +211,9 @@ def _get_companies_match_cb_to_bocc():
                 df_list_bocc["fuzzy_score"] == max_fuzz, "Company BOCC"
             ].values[0]
             dict_match[company] = company_matched
+            LOGGER.debug(f"{company}: match found with `{company_matched}`")
+        else:
+            LOGGER.debug(f"{company}: no match found")
 
     # Now we have dictionnary with auto matching, we had the manual match and
     # be cautious about not erasing key present in auto matching dict.
