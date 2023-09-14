@@ -3,14 +3,14 @@ ANZ,Australia
 Agricultural Bank of China,China
 BBVA,Spain
 BNP Paribas,France
-Santander,Spain
+BPCE/Natixis,France
 Bank of America,United States
 Bank of China,China
 Bank of Communications,China
 Bank of Montreal,Canada
 Barclays,United Kingdom
-CaixaBank,Spain
 CIBC,Canada
+CaixaBank,Spain
 China CITIC Bank,China
 China Construction Bank,China
 China Everbright Bank,China
@@ -26,9 +26,9 @@ Danske Bank,Denmark
 Deutsche Bank,Germany
 Goldman Sachs,United States
 HSBC,United Kingdom
+ICBC,China
 ING,Netherlands
 Industrial Bank,China
-ICBC,China
 Intesa Sanpaolo,Italy
 JPMorgan Chase,United States
 KB Financial,South Korea
@@ -36,24 +36,24 @@ Lloyds,United Kingdom
 MUFG,Japan
 Mizuho,Japan
 Morgan Stanley,United States
-NatWest,United Kingdom
 NAB,Australia
-BPCE/Natixis,France
+NatWest,United Kingdom
 Nordea Bank,Finland
 PNC,United States
 Ping An Insurance Group,China
 Postal Savings Bank of China,China
-Rabobank,Netherlands
 RBC,Canada
+Rabobank,Netherlands
+SMBC Group,Japan
+Santander,Spain
 Scotiabank,Canada
 Shanghai Pudong Development Bank,China
 Société Générale,France
 Standard Chartered,United Kingdom
 State Bank of India,India
-SMBC Group,Japan
 TD,Canada
-US Bancorp,United States
 UBS,Switzerland
+US Bancorp,United States
 UniCredit,Italy
 Wells Fargo,United States
-Westpac,Australia
+Westpac,None
