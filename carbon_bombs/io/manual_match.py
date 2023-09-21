@@ -163,6 +163,7 @@ manual_match_company = {
     "PJSC LUKOIL": "LUKOIL PJSC",
     "Repsol Exploración S.A.": "Repsol SA",
     "CLP Group": "CLP Holdings Ltd",
+    "Total Austral SA": "TotalEnergies SE",
 }
 
 # Dictionnary for bank matching between BankTrack (key)
