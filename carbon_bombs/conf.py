@@ -61,3 +61,6 @@ FPATH_CHECKSUM = f"{DATA_CLEANED_PATH}/checksum"
 
 # Specific characters for the project
 PROJECT_SEPARATOR = "|"
+
+# Threshold to put a project as operating
+THRESHOLD_OPERATING_PROJECT = 0.3
