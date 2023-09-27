@@ -1,5 +1,6 @@
 """Function to process carbon bombs information"""
 import re
+from itertools import groupby
 
 import awoc
 import numpy as np
@@ -8,6 +9,7 @@ from fuzzywuzzy import fuzz
 from geopy.geocoders import Nominatim
 
 from carbon_bombs.conf import PROJECT_SEPARATOR
+from carbon_bombs.conf import THRESHOLD_OPERATING_PROJECT
 from carbon_bombs.io.gem import get_gem_wiki_details
 from carbon_bombs.io.gem import load_coal_mine_gem_database
 from carbon_bombs.io.gem import load_gasoil_mine_gem_database
@@ -91,6 +93,10 @@ def _handle_status_column(values: list) -> str:
     str
         Concatenate string of kept status
     """
+    # special rule to force operating if more than THRESHOLD units are operating
+    if (values.count("operating") / len(values)) >= THRESHOLD_OPERATING_PROJECT:
+        return "operating"
+
     values = list(set(values) - {"None"})
 
     # handle case when there are multiple status
