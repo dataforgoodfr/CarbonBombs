@@ -1,88 +1,88 @@
 sheetName,columnName,columnDescription,Source
-bank_informations,Bank Name,Name of the bank,Banktrack
-bank_informations,Bank Website,Url of the bank website,Banktrack
-bank_informations,Headquarters address,Headquarters address of the bank,Banktrack
-bank_informations,Headquarters country,Country of the bank's headquarters,Banktrack
-bank_informations,CEO Name,Bank's Chief Executive Officer,Banktrack
-bank_informations,Board description,Url of the board description,Banktrack
-bank_informations,Supervisor Name,Supervisor name of the bank,Banktrack
-bank_informations,Supervisor Website,Url of the bank's supervisor,Banktrack
-bank_informations,Shareholder structure source,Url of the bank's shareholder structure,Banktrack
-bank_informations,Source BankTrack,Banktrack's url,Banktrack
-bank_informations,Latitude,Latitude of the headquarters address,"Banktrack, Google Maps API"
-bank_informations,Longitude,Longitude of the headquarters address,"Banktrack, Google Maps API"
-bank_informations,Bank logo,Url of the bank's logo,Banktrack
-bank_informations,World Region,World Region of the country's bank,Banktrack
-carbon_bombs_informations,Carbon_bomb_name_source_CB,Name of the carbon bomb project,Carbon Bombs article
-carbon_bombs_informations,Country_source_CB,Country where the carbon bomb is located,Carbon Bombs article
-carbon_bombs_informations,World_region,World Region of the country's carbon bomb project,GEM
-carbon_bombs_informations,Potential_GtCO2_source_CB,"Potential emissions of the carbon bomb project (in Gt of CO2), a carbon bomb should be above 1",Carbon Bombs article
-carbon_bombs_informations,Fuel_type_source_CB,"Type of fuel used by the carbon bomb project. Possible values are : Oil&Gas or Coal.
+bank_data,Bank Name,Name of the bank,Banktrack
+bank_data,Bank Website,Url of the bank website,Banktrack
+bank_data,Headquarters address,Headquarters address of the bank,Banktrack
+bank_data,Headquarters country,Country of the bank's headquarters,Banktrack
+bank_data,CEO Name,Bank's Chief Executive Officer,Banktrack
+bank_data,Board description,Url of the board description,Banktrack
+bank_data,Supervisor Name,Supervisor name of the bank,Banktrack
+bank_data,Supervisor Website,Url of the bank's supervisor,Banktrack
+bank_data,Shareholder structure source,Url of the bank's shareholder structure,Banktrack
+bank_data,Source BankTrack,Banktrack's url,Banktrack
+bank_data,Latitude,Latitude of the headquarters address,"Banktrack, Google Maps API"
+bank_data,Longitude,Longitude of the headquarters address,"Banktrack, Google Maps API"
+bank_data,Bank logo,Url of the bank's logo,Banktrack
+bank_data,World Region,World Region of the country's bank,Banktrack
+carbon_bombs_data,Carbon_bomb_name_source_CB,Name of the carbon bomb project,Carbon Bombs article
+carbon_bombs_data,Country_source_CB,Country where the carbon bomb is located,Carbon Bombs article
+carbon_bombs_data,World_region,World Region of the country's carbon bomb project,GEM
+carbon_bombs_data,Potential_GtCO2_source_CB,"Potential emissions of the carbon bomb project (in Gt of CO2), a carbon bomb should be above 1",Carbon Bombs article
+carbon_bombs_data,Fuel_type_source_CB,"Type of fuel used by the carbon bomb project. Possible values are : Oil&Gas or Coal.
 If Coal then the source is from GEM Coal Mine Tracker, if Oil&Gas then the source if from GEM Oil and Gas Tracker",Carbon Bombs article
-carbon_bombs_informations,GEM_id_source_GEM,"Identifier of the project in Global Energy Monitor.
+carbon_bombs_data,GEM_id_source_GEM,"Identifier of the project in Global Energy Monitor.
 Multiple values are separated by a "";""",GEM
-carbon_bombs_informations,GEM_url_source_GEM,"Url of the project in Global Energy Monitor.
+carbon_bombs_data,GEM_url_source_GEM,"Url of the project in Global Energy Monitor.
 Multiple values are separated by a "";""",GEM
-carbon_bombs_informations,Latitude,Latitude of the carbon bombs project,"GEM, Country.CB"
-carbon_bombs_informations,Longitude,Longitude of the carbon bombs project,"GEM, Google Maps API"
-carbon_bombs_informations,Latitude_longitude_source,"Source of the latitude, longitude. Values can be GEM or country CB (coordinates of the country if we don't have precise information)",
-carbon_bombs_informations,Operators_source_GEM,"Operators of the project according to the GEM database.
+carbon_bombs_data,Latitude,Latitude of the carbon bombs project,"GEM, Country.CB"
+carbon_bombs_data,Longitude,Longitude of the carbon bombs project,"GEM, Google Maps API"
+carbon_bombs_data,Latitude_longitude_source,"Source of the latitude, longitude. Values can be GEM or country CB (coordinates of the country if we don't have precise information)",
+carbon_bombs_data,Operators_source_GEM,"Operators of the project according to the GEM database.
 Multiple values are separated by a "";"" and concatenated projects are separated by |",GEM
-carbon_bombs_informations,Parent_company_source_GEM,"Parent company of the project with percentage of ownership if available.
+carbon_bombs_data,Parent_company_source_GEM,"Parent company of the project with percentage of ownership if available.
 Multiple values are separated by a "";"" and concatenated projects are separated by |",GEM
-carbon_bombs_informations,Companies_involved_source_GEM,"Involved companies is worth Parent_company_source_GEM if this column is filled, Operators_source_GEM if we have no information on the parent companies. It is the column that we use on the platform to generate the links between projects and companies.",
-carbon_bombs_informations,Multiple_unit_concerned_source_GEM,Multiple unit concerned for coal projects only. Concatenated projects are separated by |,GEM
-carbon_bombs_informations,Carbon_bomb_description,Description of the carbon bomb project,GEM
-carbon_bombs_informations,Carbon_bomb_start_year,Year when the carbon bomb project started,GEM
-carbon_bombs_informations,Status_source_CB,Can take two values : not started or operating - It is the status of the project as it was described in the Carbon Bomb research paper used.,Carbon Bombs article
-carbon_bombs_informations,Status_source_GEM,"Can take the following values depending on the status of the project in the GEM database :
+carbon_bombs_data,Companies_involved_source_GEM,"Involved companies is worth Parent_company_source_GEM if this column is filled, Operators_source_GEM if we have no information on the parent companies. It is the column that we use on the platform to generate the links between projects and companies.",
+carbon_bombs_data,Multiple_unit_concerned_source_GEM,Multiple unit concerned for coal projects only. Concatenated projects are separated by |,GEM
+carbon_bombs_data,Carbon_bomb_description,Description of the carbon bomb project,GEM
+carbon_bombs_data,Carbon_bomb_start_year,Year when the carbon bomb project started,GEM
+carbon_bombs_data,Status_source_CB,Can take two values : not started or operating - It is the status of the project as it was described in the Carbon Bomb research paper used.,Carbon Bombs article
+carbon_bombs_data,Status_source_GEM,"Can take the following values depending on the status of the project in the GEM database :
 - Operating : Mines commissioned and in commercial operation
 - Proposed : Mines that have been announced, under exploration, permitted, or under construction, but not yet operating
 - Mothballed : Mines that are currently out of operation but not yet closed
 - Closed : Mines that have closed
-- In Development : Following discovery, the unit is in the process of moving toward commercial production. 
+- In Development : Following discovery, the unit is in the process of moving toward commercial production.
 - Shut in : Operations temporarily shut down; may be restarted.
 - Discovered : A unit is typically considered to be discovered when there has been a well drilled into a particular formation, and it yielded some significant quantity of oil and/or gas. Discovered units are not necessarily economic to exploit. ""
 - Shelved : Projects that have shown no progress in over 2 years
 - Cancelled : A cancellation announcement has been made, or no progress has been observed for at least 4 years
 ",GEM
-carbon_bombs_informations,Status_lvl_1,Worth Status_source_GEM if the project could be matched with a GEM project; Status_source_CB if the project does not exist on GEM.,
-carbon_bombs_informations,Status_lvl_2,"Status have been regrouped to create 3 status categories: 
+carbon_bombs_data,Status_lvl_1,Worth Status_source_GEM if the project could be matched with a GEM project; Status_source_CB if the project does not exist on GEM.,
+carbon_bombs_data,Status_lvl_2,"Status have been regrouped to create 3 status categories:
 - operating : operating
 - not started : in development, discovered, shelved, proposed.
 - stoped : shut in, cancelled, closed, mothballed.",
-company_informations,Company_name,Name of the company,GEM
-company_informations,Address_headquarters_source_chatGPT,Address of the company headquarters obtained by ChatGPT,ChatGPT
-company_informations,Latitude,Latitude of the company headquarters obtained using Google Maps API,"ChatGPT, Google Maps API"
-company_informations,Longitude,Longitude of the company headquarters obtained using Google Maps API,"ChatGPT, Google Maps API"
-company_informations,Carbon_bomb_connected,"List of carbon bombs connected. Multpiple values are separated by a "";""",GEM
-company_informations,Country,Country of the headquarters company,ChatGPT
-company_informations,World_region,World region of the country's company,ChatGPT
-company_informations,Logo_URL,Url of the company's logo,
-connexion_bank_company,Bank,Name of the bank financing a company.,Banking on Climate Chaos
-connexion_bank_company,Company,Name of the company,Banking on Climate Chaos
-connexion_bank_company,2016,Amount of money used to finance the company from the bank in 2016 in USD,Banking on Climate Chaos
-connexion_bank_company,2017,Amount of money used to finance the company from the bank in 2017 in USD,Banking on Climate Chaos
-connexion_bank_company,2018,Amount of money used to finance the company from the bank in 2018 in USD,Banking on Climate Chaos
-connexion_bank_company,2019,Amount of money used to finance the company from the bank in 2019 in USD,Banking on Climate Chaos
-connexion_bank_company,2020,Amount of money used to finance the company from the bank in 2020 in USD,Banking on Climate Chaos
-connexion_bank_company,2021,Amount of money used to finance the company from the bank in 2021 in USD,Banking on Climate Chaos
-connexion_bank_company,2022,Amount of money used to finance the company from the bank in 2022 in USD,Banking on Climate Chaos
-connexion_bank_company,Grand Total,Amount of money used to finance the company from the bank in total in USD,Banking on Climate Chaos
-connexion_carbonbombs_company,Carbon_bomb_name,Name of the carbon bomb project,GEM
-connexion_carbonbombs_company,Country,Country of the carbon bomb project,GEM
-connexion_carbonbombs_company,Company,"Company name associated with the carbon bomb project. Companies are extracted from GEM source.
-To match values in connexion_bank_company sheet, we updated bank names from GEM source to Banking on Climate Chaos source",GEM
-country_informations,Country_source_CB,Country where the carbon bomb is located,Carbon Bombs article
-country_informations,Emissions_per_capita_tons_CO2,Emissions per capita (metric tons of CO2),UNData
-country_informations,Year_Emissions_per_capita_tons_CO2,Source year of emissions per capita,UNData
-country_informations,Emissions_thousand_tons_CO2,Country emissions (thousand metric tons of CO2),UNData
-country_informations,Year_Emissions_thousand_tons_CO2,Source year of country emissions,UNData
-country_informations,GDP_millions_US_dollars,GDP in current prices (millions of USD),UNData
-country_informations,Year_GDP_millions_US_dollars,Source year of GDP in current prices,UNData
-country_informations,GDP_per_capita_US_dollars,GDP per capita (USD),UNData
-country_informations,Year_GDP_per_capita_US_dollars,Source year of GDP per capita,UNData
-country_informations,Population_in_millions,Population mid-year estimates (millions),UNData
-country_informations,Year_Population_in_millions,Source year of population mid-year estimates,UNData
-country_informations,Surface_thousand_km2,Surface area (thousand km2),UNData
-country_informations,Year_Surface_thousand_km2,Source year of surface area,UNData
+company_data,Company_name,Name of the company,GEM
+company_data,Address_headquarters_source_chatGPT,Address of the company headquarters obtained by ChatGPT,ChatGPT
+company_data,Latitude,Latitude of the company headquarters obtained using Google Maps API,"ChatGPT, Google Maps API"
+company_data,Longitude,Longitude of the company headquarters obtained using Google Maps API,"ChatGPT, Google Maps API"
+company_data,Carbon_bomb_connected,"List of carbon bombs connected. Multpiple values are separated by a "";""",GEM
+company_data,Country,Country of the headquarters company,ChatGPT
+company_data,World_region,World region of the country's company,ChatGPT
+company_data,Logo_URL,Url of the company's logo,
+connection_bank_company,Bank,Name of the bank financing a company.,Banking on Climate Chaos
+connection_bank_company,Company,Name of the company,Banking on Climate Chaos
+connection_bank_company,2016,Amount of money used to finance the company from the bank in 2016 in USD,Banking on Climate Chaos
+connection_bank_company,2017,Amount of money used to finance the company from the bank in 2017 in USD,Banking on Climate Chaos
+connection_bank_company,2018,Amount of money used to finance the company from the bank in 2018 in USD,Banking on Climate Chaos
+connection_bank_company,2019,Amount of money used to finance the company from the bank in 2019 in USD,Banking on Climate Chaos
+connection_bank_company,2020,Amount of money used to finance the company from the bank in 2020 in USD,Banking on Climate Chaos
+connection_bank_company,2021,Amount of money used to finance the company from the bank in 2021 in USD,Banking on Climate Chaos
+connection_bank_company,2022,Amount of money used to finance the company from the bank in 2022 in USD,Banking on Climate Chaos
+connection_bank_company,Grand Total,Amount of money used to finance the company from the bank in total in USD,Banking on Climate Chaos
+connection_carbonbombs_company,Carbon_bomb_name,Name of the carbon bomb project,GEM
+connection_carbonbombs_company,Country,Country of the carbon bomb project,GEM
+connection_carbonbombs_company,Company,"Company name associated with the carbon bomb project. Companies are extracted from GEM source.
+To match values in connection_bank_company sheet, we updated bank names from GEM source to Banking on Climate Chaos source",GEM
+country_data,Country_source_CB,Country where the carbon bomb is located,Carbon Bombs article
+country_data,Emissions_per_capita_tons_CO2,Emissions per capita (metric tons of CO2),UNData
+country_data,Year_Emissions_per_capita_tons_CO2,Source year of emissions per capita,UNData
+country_data,Emissions_thousand_tons_CO2,Country emissions (thousand metric tons of CO2),UNData
+country_data,Year_Emissions_thousand_tons_CO2,Source year of country emissions,UNData
+country_data,GDP_millions_US_dollars,GDP in current prices (millions of USD),UNData
+country_data,Year_GDP_millions_US_dollars,Source year of GDP in current prices,UNData
+country_data,GDP_per_capita_US_dollars,GDP per capita (USD),UNData
+country_data,Year_GDP_per_capita_US_dollars,Source year of GDP per capita,UNData
+country_data,Population_in_millions,Population mid-year estimates (millions),UNData
+country_data,Year_Population_in_millions,Source year of population mid-year estimates,UNData
+country_data,Surface_thousand_km2,Surface area (thousand km2),UNData
+country_data,Year_Surface_thousand_km2,Source year of surface area,UNData
