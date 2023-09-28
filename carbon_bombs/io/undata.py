@@ -45,7 +45,7 @@ def load_undata():
         None: However, if the HTTP request fails, it prints an error message
               and terminates the script.
     """
-    LOGGER.error("Read UNData files...")
+    LOGGER.debug("Read UNData files...")
     # Initiate Dataframe that will gather informations
     columns_dataframe = [
         "Region_Country_Area_ID",
@@ -66,7 +66,7 @@ def load_undata():
     df_undata = pd.DataFrame()
     # Load csv files
     for file in file_paths:
-        LOGGER.error(f"Read UNData file: {file}")
+        LOGGER.debug(f"Read UNData file: {file}")
         df = pd.read_csv(file, sep=",", header=1)
 
         # Retrieve the category in the first row of the csv file

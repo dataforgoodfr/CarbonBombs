@@ -18,6 +18,8 @@ from carbon_bombs.io.khune_paper import load_carbon_bomb_gasoil_database
 from carbon_bombs.io.manual_match import manual_match_coal
 from carbon_bombs.io.manual_match import manual_match_gasoil
 from carbon_bombs.utils.logger import LOGGER
+from carbon_bombs.utils.match_company_bocc import _get_companies_match_cb_to_bocc
+from carbon_bombs.utils.match_company_bocc import save_uniform_company_names
 
 
 def _match_gem_mines_using_fuzz(name: str, df_gem: pd.DataFrame) -> pd.DataFrame:
@@ -93,6 +95,7 @@ def _handle_status_column(values: list) -> str:
     str
         Concatenate string of kept status
     """
+    values = list(values)
     # special rule to force operating if more than THRESHOLD units are operating
     if (values.count("operating") / len(values)) >= THRESHOLD_OPERATING_PROJECT:
         return "operating"
@@ -668,27 +671,51 @@ def _add_companies_involved(df_carbon_bombs: pd.DataFrame) -> pd.DataFrame:
     """
     # Clean percentage in column Parent_company
     # Clean data into Parent company columns
-    df_carbon_bombs["Parent_Company"].fillna("", inplace=True)
+    df_carbon_bombs["Parent_company_source_GEM"].fillna("", inplace=True)
     # update with operators only if no parent companies and only None
-    df_carbon_bombs["Companies_involved"] = df_carbon_bombs.apply(
-        lambda row: row["Operators"]
-        if (row["Parent_Company"] == "")
+    df_carbon_bombs["Companies_involved_source_GEM"] = df_carbon_bombs.apply(
+        lambda row: row["Operators_source_GEM"]
+        if (row["Parent_company_source_GEM"] == "")
         or (
-            row["Parent_Company"].replace(PROJECT_SEPARATOR, "").replace("None", "")
+            row["Parent_company_source_GEM"]
+            .replace(PROJECT_SEPARATOR, "")
+            .replace("None", "")
             == ""
         )
-        else row["Parent_Company"],
+        else row["Parent_company_source_GEM"],
         axis=1,
     )
     # format Parent_Company with normed separator and clean percentage
-    df_carbon_bombs["Parent_Company"] = df_carbon_bombs["Parent_Company"].apply(
-        compute_clean_percentage
-    )
+    df_carbon_bombs["Parent_company_source_GEM"] = df_carbon_bombs[
+        "Parent_company_source_GEM"
+    ].apply(compute_clean_percentage)
 
-    df_carbon_bombs["Companies_involved"].fillna("", inplace=True)
-    df_carbon_bombs["Companies_involved"] = df_carbon_bombs["Companies_involved"].apply(
-        compute_clean_percentage
-    )
+    df_carbon_bombs["Companies_involved_source_GEM"].fillna("", inplace=True)
+    df_carbon_bombs["Companies_involved_source_GEM"] = df_carbon_bombs[
+        "Companies_involved_source_GEM"
+    ].apply(compute_clean_percentage)
+
+    # uniform with BOCC companies name
+    dict_match = _get_companies_match_cb_to_bocc(df_carbon_bombs)
+    save_uniform_company_names(dict_match)
+
+    def replace_comp(x):
+        """Replace company names to normalize it"""
+        new_comp = []
+        for projects in x.split(PROJECT_SEPARATOR):
+            new_comp_proj = []
+            for comp_prct in projects.split(";"):
+                comp, prct = comp_prct.rsplit(" (", 1)
+                comp = dict_match[comp] if comp in dict_match else comp
+                new_comp_proj.append(f"{comp} ({prct}")
+
+            new_comp.append(";".join(new_comp_proj))
+
+        return PROJECT_SEPARATOR.join(new_comp)
+
+    df_carbon_bombs["Companies_involved_source_GEM"] = df_carbon_bombs[
+        "Companies_involved_source_GEM"
+    ].apply(replace_comp)
 
     return df_carbon_bombs
 
@@ -893,20 +920,13 @@ def create_carbon_bombs_table() -> pd.DataFrame:
     LOGGER.debug("Merge coal and gasoil dataframes")
     df_carbon_bombs = pd.concat([df_coal, df_gasoil], axis=0)
 
-    # TODO: keep this rule or not ?
+    # Keep as comment in case we need to use it again
     # for Unit_concerned we only want to keep when there are more than one units
-    df_carbon_bombs["Unit_concerned"] = np.where(
-        df_carbon_bombs["Unit_concerned"].str.contains(PROJECT_SEPARATOR, regex=False),
-        df_carbon_bombs["Unit_concerned"],
-        np.NaN,
-    )
-
-    # Add companies involved column
-    LOGGER.debug("Add companies involved column to CB dataframe")
-    df_carbon_bombs = _add_companies_involved(df_carbon_bombs)
-
-    # Set status to lower
-    df_carbon_bombs["Status"] = df_carbon_bombs["Status"].str.lower()
+    # df_carbon_bombs["Unit_concerned"] = np.where(
+    #     df_carbon_bombs["Unit_concerned"].str.contains(PROJECT_SEPARATOR, regex=False),
+    #     df_carbon_bombs["Unit_concerned"],
+    #     np.NaN,
+    # )
 
     # Remap dataframe columns to display data source
     # Not efficient might be rework (no time for that right now)
@@ -922,12 +942,20 @@ def create_carbon_bombs_table() -> pd.DataFrame:
         "Longitude": "Longitude",
         "Operators": "Operators_source_GEM",
         "Parent_Company": "Parent_company_source_GEM",
-        "Companies_involved": "Companies_involved_source_GEM",
-        "Unit_concerned": "Multiple_unit_concerned_source_GEM",
+        "Unit_concerned": "GEM_project_name_source_GEM",
         "Status": "Status_source_GEM",
     }
     LOGGER.debug("Rename columns for CB dataframe")
     df_carbon_bombs = df_carbon_bombs.rename(columns=name_mapping_source)
+
+    # Add companies involved column
+    LOGGER.debug("Add companies involved column to CB dataframe")
+    df_carbon_bombs = _add_companies_involved(df_carbon_bombs)
+
+    # Set status to lower
+    df_carbon_bombs["Status_source_GEM"] = df_carbon_bombs[
+        "Status_source_GEM"
+    ].str.lower()
 
     # Handle missing values by putting text instead
     LOGGER.debug("Update missing values for GEM columns")
@@ -978,7 +1006,7 @@ def create_carbon_bombs_table() -> pd.DataFrame:
         "Operators_source_GEM",
         "Parent_company_source_GEM",
         "Companies_involved_source_GEM",
-        "Multiple_unit_concerned_source_GEM",
+        "GEM_project_name_source_GEM",
         "Carbon_bomb_description",
         "Carbon_bomb_start_year",
         "Status_source_CB",

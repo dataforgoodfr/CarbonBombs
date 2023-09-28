@@ -1,41 +1,57 @@
 ﻿Company,Country
+1776 Energy,
 1849 Energy,
+4P Energy,
 A-Property,Russia
 AGL Energy Ltd,Australia
 Abraxas,
 Abu Dhabi National Oil Company,United Arab Emirates
 Adani Group,India
 Adaro Energy,Indonesia
+Aethon Energy,
 Africa Energy Corp.,Canada
+Ageron Energy,
 Aghorn,
 Aker BP ASA,Norway
+Al-Haj Group of Companies,
 Alliance Resource Partners LP,United States
 Ameredev,
+American Petroleum,
 Amplify Energy Corp,
 Anadarko,
 Anhui Xinji Coal and Electricity Group,China
+Anschutz Exploration Corporation,
 Antero Resources Corp,
 Apache Co.,
 Approach Operating,
 Arcadia Operating,
 Arch Resources Inc,United States
+Armor Lonestar,
 Arrowhead Productions,
 Arsenal Resources,
 Ascent Resources,
 Asian American Continental Coal Company,China
 Aspen Operating,
 Atlantic Resources,
+Atlas Oper Co.,
 Atoka Operating,
+Auterra Operating,
 Avalon TX Operating,
 Azerbaijan (OCC) Limited,
+BBX Operating,
+BCE-Mach,
 BHP Billiton,
 BHP Group Ltd,Australia
 BKV Operations,
 BP PLC,United Kingdom
+BPX (KCS Resources),
+BPX (WSF Operating),
 BPX Operating,
 BRG Lone Star,
 BTA Oil Producers,
-BXP Operating,
+Balidor Oil & Gas,
+Ballard Petroleum,
+Ballard Petroleum Holdings,
 Banner Operating,
 Basa Resources Inc,
 Basra Oil Company,Iraq
@@ -49,19 +65,31 @@ Beijing Guotai Xinhua Industrial Company,China
 Beijing Jingneng Power Company,China
 Beijing Lirui Investment Company,China
 Beijing Sunshine Ruita Investment Consulting Company,China
+Bharat Petroleum Corp Ltd,
 Bin County Coal Company,China
 Binxian Coal Company,China
+Bison Oil & Gas,
 Blackbeard Operating LLC,
 Blackbrush,
+Blue Dome,
 Bluestone,
 Boaz Energy,
 Bold Operating,
+Bonanza Creek Energy,
 Bono Lithihi Investments Group,South Africa
 Bosque Texas Oil,
+Bracken Operating,
+Brazos River Exploration,
 Breitburn Operating,
+Bright Rock Energy,
+Brix Operating,
+Brooks Petroleum,
+Brookston Energy,
 "Brown, H.L. Operating",
+Bruin E&P Operating,
 Bulgarian Energy Holding EAD,Bulgaria
 Bumi Resources,Indonesia
+Burk Royalty Co.,
 Burlington Resources,
 Burnett Oil Co.,
 CBP Operating,
@@ -77,6 +105,7 @@ CNPC,
 CNX Gas Co.,
 COG Operating,
 COG Production,
+CRD Operating,
 Cabot Oil & Gas,
 Caird Operating,
 Callon Petroleum Co,
@@ -84,7 +113,10 @@ Cambrian Management,
 Canadian Natural Resources Ltd (CNRL),Canada
 Capex SA,
 Capitan Energy,
+Carbon Creek Energy,
+Carlyle Group,
 Carrizo,
+Castlerock Operating,
 Centennial Resource,
 Champion Lone Star,
 Changchun Jijun Trade Company,China
@@ -92,6 +124,7 @@ Charger Shale Oil Operating,
 Chesapeake Operating,
 Chevron Argentina SRL,
 Chevron Corp,United States
+Cheyenne Petroleum Co LP,
 Chief Oil & Gas,
 China COSCO Shipping Corp Ltd,China
 China Chengtong Holdings Group,China
@@ -115,40 +148,60 @@ China ZhenHua Oil Co Ltd,China
 Chisholm Energy,
 Cimarex Energy,
 Cimarex Energy Co. of Colorado,
+Cinco Oil & Gas,
 Cinnabar Operating,
 Citation Oil & Gas Corp,
 Clear Fork,
+Clearly Petroleum,
 Coal India Ltd,India
+Cobra Oil & Gas,
 Colgate Operating,
 Compass Energy,
 Comstock Oil & Gas,
+"Comstock Oil & Gas, LP",
+Confluence,
 ConocoPhillips,United States
 Contango Resources,
+Continental Resources,
 Contura Energy,United States
 Cooperative KazMunayGaz,Kazakhstan
+Courson Oil & Gas,
 Covey Park Operating,
+Crescent Point Energy Corp,
+Crestone Peak Resources,
 Crimson Energy,
 Crockett Operating,
 Crown Equipment Co.,
 Crownquest Operating,
 Custer & Wright Operating,
 DE3 Operating,
+Dallas Production,
 Delek Group Ltd,Israel
+Delta Oil & Gas,
+Denbury Onshore,
 Devon Energy Corp,
+Devon Energy Production Company,
 Diamondback E&P,
 Discovery Natural Resources LLC,
 Diversified Production,
 Drummond Company,United States
+Duncan Oil Properties,
 E R Operating Co.,
 EAP Ohio,
+EGH Operating,
 EM Energy Ohio,
 EOG Resources Inc,
+EP Energy Corp,
+EP Energy E&P Company,
 EQT Chap.,
 EQT Production Co.,
+ETX Energy,
 EXCO Resources Inc,
 Eagleridge Operating,
 Earthstone Operating,
+East Texas Exploration,
 Eclipse Resources,
+Ecopetrol S.A.,
 El Toro Resources,
 Eland Energy,
 Electricity Generating PCL,
@@ -159,10 +212,17 @@ Elion Resources Group Ltd,China
 Elk Meadows Resources,
 Elk Petroleum Ltd,
 Elk River Resources,
+Ellora Energy,
+Empresa Operating,
+Enauta Energia SA,
 Encana Oil & Gas,
 Endeavor Energy Resources LP,
+Enel SpA,
+Enerplus Corp,
 Enervest Operating,
+Eni,
 Eni SpA,Italy
+Ensight IV Energy,
 Ensign Operating LLC,
 Epic Permian Operating,
 Equinor ASA,Norway
@@ -170,44 +230,57 @@ Equinor Energy,
 Erdenes MGL,Mongolia
 Erdos Chunhui Forest Company,China
 Erdos Jiuyuan Investment Company,China
+Escondido Resources,
 Evraz PLC,United Kingdom
 Exco Operating Co.,
+Extraction Oil & Gas,
 Exxaro Resources Ltd,South Africa
 Exxon Mobil Corp,United States
-ExxonMobil Exploration Argentina SRL,
 FDL Operating,
 Fasken Oil And Ranch,
 "Faulconer, Vernon E.",
 Felderhoff Production,
+Fletcher Operating,
 Foreland Operating,
 Foresight Energy,United States
-Fortune Resources,
+Former Eni Employees,
 Four Corners Petroleum,
+Freedom Production,
 Fude Life Insurance Company,China
 Fugu State-Owned Asset Management and Operation Company,China
 Fuse Energy,
 Futura Resources,Australia
 GCM Resources,United Kingdom
+GEP Haynesville,
 GHA Barnett,
 GVK Group,India
+Gadeco,
 Galp Energia SGPS S.A.,
 Ganador Operating,
+Gazprom EP International,
 Gazprom PJSC,Russia
 GeoPark Argentina Ltd (Sucursal Argentina),
+Geopark Ltd,
 Geosouthern Energy,
 Glencore PLC,United Kingdom
 Golden Energy Mines,Indonesia
+Goodrich Petroleum Co.,
+Government Holdings (Private) Limited,
 Government of India,India
 Government of North Korea,North Korea
+Government of Pakistan,
+Gran Tierra Energy Inc.,
 Great Western Operating Co.,
 Grenadier Energy,
 Greylock Production,
+Grit Oil & Gas,
 Guangda Holding Company,China
 Guangdong Hanjian Investment Co Ltd,China
 Guangdong Hengjian Investment Holding Co Ltd,China
 Guangdong Jinma Tourism Group,China
 Guanghui Energy Holding Company,China
 Guidon Energy,
+Guindastes Brasil,
 Guizhou Coalfield Geology Bureau,China
 Guizhou Panjiang Coal and Electricity Group,China
 Gujarat State Electricity Corporation,India
@@ -215,34 +288,45 @@ Gulfport Apalachia,
 Gulfport Energy Corp,
 Gulftex Energy,
 Gunn Oil Co.,
+H & L Exploration Company,
 HD Mining International,Canada
 HEXP Operating,
 HG Energy,
 HKSCC Nominees Limited,China
 Hadaway Consult And Engineer,
 Halcon Operating Co.,
+Harbour Energy,
 Harbour Energy PLC,United Kingdom
+Harleton Oil & Gas,
+Hashoo Group,
+Hawkwood Energy,
 Hebei Construction & Investment Group Co Ltd,
 Hebei Weiyuan Group,China
+Helis Oil & Gas Company,
 Henry Resources,
 Hess Bakken Investments,
 Hess Corporation,United States
 Hibernia Resources,
 HighPeak Energy Inc,
+Highmark Energy,
+Highpoint Operating Corp.,
 Hilcorp Energy Co,
 Hillwood O & G Operating Co.,
 Hongchuang (Shenzhen) Investment Center,
 Huaihe Energy,China
 Huayang New Material Technology Group Co Ltd,China
+Hub Power,
 Hubei Yihua Chemical Industry Co Ltd,China
 Hunt Oil Company,
 Huolinhe Coal Industry Group,China
 ITOCHU Corp,Japan
+Impact Exploration & Production,
 Imperial Oil Resources Limited,Canada
 Impetro Operating,
 Independence Resources,
 Indexim Coalindo,Indonesia
 Indian Oil Corp Ltd,India
+Indigo Minerals,
 Indika Energy Tbk PT,Indonesia
 Indonesia Asahan Aluminium Persero PT,Indonesia
 Industrial Development Corporation,South Africa
@@ -261,6 +345,7 @@ Inpex Corp,Japan
 Inpex Eagle Ford,
 Integrated Energy Services Corporation,United States
 Iraqi Oil Exploration Company,Iraq
+Iron Oil Operating,
 JFE Steel,Japan
 JKLM Energy,
 JSC Samruk-Kazyna,Kazakhstan
@@ -277,14 +362,22 @@ Jiutai Energy,China
 Jizhong Energy Group Co Ltd,China
 Joint Resources JSC,Kazakhstan
 Joint-Stock Company “Sovereign Wealth Fund “Samruk Kazyna”,
+Jones Energy Inc,
+Joshi Technologies International Inc.,
 Junggar Juli Cultivation Company,China
 Juno Operating Company,
+KJ Energy,
 Kailuan Group Ltd Liability Corp,China
+Kaiser Francis Oil Co,
 Kaiser-Francis Oil Company,
 Kazakhmys Corporation,Kazakhstan
+Kerr Mcgee Oil & Gas Onshore,
 Kinder Morgan Production Co.,
+Koda Resources Operating,
 Kolmar,Russia
 Korea Gas Corporation (KOGAS),South Korea
+Kraken Development,
+Kraken Operating,
 Kuwait Petroleum Corp,Kuwait
 LG International,South Korea
 LUKOIL PJSC,Russia
@@ -292,31 +385,43 @@ LX International,South Korea
 Lakota Energy,
 Langfang Heyuan Investment Center,China
 Laredo Petroleum,
+Latigo Petroleum,
+Layline Energy,
+Le Norman Operating,
 Legacy Reserves Operating,
+Lewis Petro Properties,
+Liberty Resources,
 Lime Rock Resources,
+Lonestar Operating,
 Lu'an Chemical Group Co Ltd,China
 Luen Mei Group,China
+Lukoil,
 Lundin Energy AB,Sweden
 Luxe Operating,
 MC Mining,South Africa
+MD America Energy,
 MDC Texas Operator,
 Magnolia Oil & Gas Operating,
 Mammoth Exploration,
 Manshi Group,China
 Marathon Oil Corp,
+Mari Petroleum Company Limited,
 Matador Production Company,
+Matrix Petroleum,
 Mccutchin Petroleum Corporation,
 Meco IV,
 Medanito SA,
 Mercury Operating,
 Merit Energy Company,
 Mewbourne Oil Co.,
+Mewbourne Oil Company,
 Mineral Technologies,
 Mineralogy,
 Minerals Development Company Botswana,Botswana
 Ming Kei Energy Investment Company,China
 Ministry of Finance of Uzbekistan,Uzbekistan
 Missan Oil Company,Iraq
+Missouri River Resources,
 Mitsubishi Corp,Japan
 Mitsui & Co. Ltd.,
 Mongoose Energy,
@@ -324,94 +429,151 @@ Moriah Operating,
 Mozambique Rovuma Venture,
 Mubadala Investment Company,United Arab Emirates
 Murchison Oil And Gas,
+Murex Petroleum Corp,
 Murphy E&P. Company,
 NBX Energy,
+NEMAKA,
 NMDC,India
 NTPC Ltd,India
 National Bank of the Republic of Kazakhstan,Kazakhstan
 National Iranian Oil Company,Iran
+National Oil Corporation,
 National Oil Corporation (Libya),
 National Thermal Power Corporation,India
 Navajo Nation,United States
+Navigation Powder River,
+New Century Exploration,
 New Largo Employee & Community Trusts,
+Newfield Production Company,
+Nine Point Energy,
 Ningxia State-Owned Assets Company,China
 Ningxia State-Owned Capital Operation Group,China
 Ningxia Wangwa Coal Industry Company,China
 Nippon Steel & Sumitomo Metal,
+Noble Energy,
+North Silo Resources,
+North Texas Oil & Gas,
 Northeast Natural Energy LLC,
+Northfield Enterprises,
+Northwoods Operating,
 Novatek,
 OMV AG,Austria
+ONGC-Videsh,
+OOO Gazprom dobycha Krasnodar,
 OXY USA,
 OXY USA WTP LP,
+Oakridge Oil And Gas,
 Oasis Petroleum,
 Occidental Permian,
 Occidental Petroleum Corp,United States
 Octo Coal,Russia
+Oil India Ltd,
+Oil and Gas Development Company Limited,
 Oil and Natural Gas Corporation Ltd (ONGC),
 Oil and Natural Gas Corporation of India,India
 Oilstone Energia SA,
 Olympus Energy,
 Ordos Energy Investment and Development Company,China
+Orx Resources,
+Ovintiv Inc,
+Ovintiv Production,
 P.O.&G. Operating,
 PAO NOVATEK,Russia
 PC Venezuela LTD,Venezuela
+PDC Energy Inc,
 PDVSA,Venezuela
+PKN ORLEN,
 POSCO Holdings Inc,South Korea
 PPI,
 PPL Corp,United States
+PPL Employees Empowerment Trust,
+PT Pertamina (Persero),
 PTT PLC,Thailand
 Pa Gen Energy Co.,
 Pacesetter Energy,
+Pakistan Petroleum Limited,
+Palmer Petroleum,
 Pampa Energia SA,
 Pan American Energy Group SL,
+Pantera Energy Company,
 Parallel Petroleum,
+Pardus Oil & Gas Operating,
+Parko Services,
 Parsley Energy Operations,
+Payrock,
 Pdc Permian,
 Peabody Energy Corp,United States
+Peak Powder River Resources,
 Pembroke Resources,Australia
+Penn Virginia Oil & Gas,
 Pennenergy Resources,
 Permian Deep Rock Oil Co.,
 Pertamina Persero PT,Indonesia
+Petco Petroleum Corp.,
 Petoro AS,Norway
+Petro Harvester Operating Company,
+Petro Operating Company,
+Petro-Hunt,
 PetroChina,
+PetroRio S.A.,
+Petrobal Omega 1,
+Petroedge Operating,
 Petrolegacy Energy,
 Petroleos Sudamericanos SA,
 Petroliam Nasional Berhad (Petronas),Malaysia
+Petroquest Energy,
 Petroquimica Comodoro Rivadavia SA,
+Petroshale (US) Inc.,
 Petróleo Brasileiro SA – Petrobras,Brazil
 Petróleo Brasileiro S.A.,Brazil
 Petróleos Mexicanos (PEMEX),Mexico
+Pine Wave Energy Partners Operating,
 Pinon Operating,
 Pioneer Natural Resources Co,
 Pluspetrol SA,
 Point Energy Partners Petro,
+Polaris Operating,
 Polskie Górnictwo Naftowe i Gazownictwo SA (PGNiG),
+Ponderosa TX Operating,
 President Petroleum SA,
+Presidio Petroleum,
 Prime Operating Company,
+PrimeEnergy Resources Corp,
 Primexx Operating Corporation,
+Private Investors,
 Private Resources Limited,
 Private individuals,
+Protege Energy,
 Pré-Sal Petróleo S.A.,Brazil
 Public Power Corporation of Greece S.A,Greece
 QCoal,Australia
 QH Oil Investments LLC,Russia
 QatarEnergy,Qatar
 Qatargas,
+Quanah Panhandle,
 R. Lacy Services,
+RFE Operating,
 RWE AG,Germany
-Ramtex Energy,
 Range Resources Appalachia,
 Rashtriya Ispat Nigam (RINL),
 Ratio Petroleum,Israel
 Reatta Energy,
+Rebellion Energy,
+Recoil Resources Operating,
 Redwood Operating,
 Relentless Permian Operating,
 Reliance Power Ltd,India
+Remnant Energy,
+Remora Operating,
+Renos Land & Minerals Company,
 Repsol Oil & Gas,
 Repsol SA,Spain
 Resolute Natural Resources,
+Resource Energy Can-Am,
 Resource Generation Australia,Australia
 Rice Drilling,
+Ridge Oil Company,
+Rimrock Oil & Gas Williston,
 Ring Energy Inc,
 Rio Oil And Gas (Permian),
 RioZim,Zimbabwe
@@ -419,9 +581,11 @@ Rki Energy Resources,
 Rockcliff Energy Operating,
 Rockdale Marcellus,
 Rocker A Operating Company,
+Rockies Resources Holdings,
 Roff Operating Company,
 Rosehill Operating Company,
 Rosetta Resources,
+Rosewood Resources,
 Rosneft,
 Rosneftegaz AO,Russia
 Rothe Investments,South Africa
@@ -431,7 +595,10 @@ Russian Federation Agency for State Property Management,Russia
 Russkaya Energiya,Russia
 Rutek Alliance,Luxembourg
 SEM Operating Company,
+SHD Oil & Gas,
 SM Energy Co,
+SN EF Maverick,
+SN Operating,
 SWN Production Co.,
 Sabalo Operating,
 Sabinal Energy Operating LLC,
@@ -440,11 +607,16 @@ Sable Permian Resources,
 Saddle Operating,
 Sage Natural Resources,
 Samruk-Energo,Kazakhstan
+Samson Exploration,
 San Jorge Petroleum SA,
+Sanguine Gas Exploration,
 Saudi Arabian Oil Company (Saudi Aramco),Saudi Arabia
 Scala Energy,
+Schlumberger B.V.,
 Scout Energy Management,
+Sea Eagle Ford,
 Seaboard Operating Co.,
+Seek Energy,
 Seneca Resources,
 Seriti,South Africa
 Severstal-Resource,Russia
@@ -472,8 +644,6 @@ Shanxi Yuedian Energy,China
 Shanxi Yujin Trading Company,China
 Shanxi Zhongbo Real Estate Development Company,China
 Shelby Boswell Operator,
-Shell,
-Shell Argentina SA,
 Shell PLC,United Kingdom
 Shendong Tianlong Group,China
 Shenergy Group Co Ltd,China
@@ -485,24 +655,33 @@ Shougang Group Co Ltd,China
 Siberian Business Union-Coal (SBU),
 Siltstone Resources,
 Silver Creek Permian,
+SilverBow Resources Inc,
+Sinclair Oil & Gas Company,
 Sindh Engro Coal Mining Company,Pakistan
 Sinopec,China
 Sinopec Group,China
 Sinopec Oil Sands Partnership,Kazakhstan
+Sklar Exploration Company,
+Slawson Exploration Company,
 Smith Energy Operating Company,
 Snyder Bros,
 Sojitz Corp,Japan
 Sonatrach SPA,Algeria
+Sonerra Resources Corporation,
 Southwest Royalties,
+Southwind Oil & Gas,
 Spur Energy Partners,
 Stanmore Resources,Australia
 Stanolind Production,
 State Grid Corp of China,China
 State Power Investment Corp (SPIC),
 Steel Authority of India (SAIL),
+Stephens & Johnson Operating Co.,
 Steward Energy,
 Strand Energy,
+Strat Land Exploration Company,
 Stronghold Energy,
+Summit Discovery Resources,
 Suncor,
 Suncor Energy Inc,Canada
 Sundown Energy,
@@ -510,58 +689,90 @@ Surge Operating,
 Surgutneftegas,
 Swepi LP,
 TEP Barnett USA,
+TMR Exploration,
 TRP Operating,
 Tabula Rasa Energy,
 Talbot Group,United States
 Tall City Operations,
 Tanos Exploration,
 Tap Rock Operating,
+Tapstone Energy Inc,
 Tatneft,
 Teal Operating,
 Tebian Electric Apparatus (TBEA),
 Teck Resources Ltd,Canada
+Tecolote Energy,
 Tecpetrol SA,
+Tellurian Operating,
+Templar Operating,
 TerraCom Resources,Australia
+Texakoma E&P,
+Texas American Resources Company,
 Texland Petroleum,
 Texxol Operating Company,
+Three Sisters Petroleum,
 Thungela Resources Ltd,Australia
 Tianjin Energy Investment Co Ltd,China
 Tibet Hengyisheng Investment Company,China
+Tidal Petroleum,
+Titan Exploration,
 Titan Infra Energy PT,Indonesia
+Titan Rock E&P,
 Titus Oil & Gas Production,
-Total Austral SA,
 TotalEnergies SE,France
 Treadstone Energy,
+Tri-C Resources,
 Triad Hunter,
 Tribune Resources,
 Trilogy Operating,
 Trinity Operating (USG),
+Trivium Operating,
+True Oil,
 Tug Hill Operating,
 Tuva Energy Industrial Company,Russia
 U. S. Operating,
 U.S. Energy Development Corp.,
+UNIÓN TEMPORAL ISMOCOL-JOSHI-PARKO,
 UPP Operating,
+Unit Petroleum Company,
 United Company RUSAL,Russia
+United Energy Group Ltd,
+Upland Resources,
 Ural Mining Metallurgical Company,Russia
-Urban Oil & Gas Group,
 Uttar Pradesh Rajya Vidyut,India
 Valence Operating Company,
 Valiant Resources,Australia
+Venado Operating Company,
+Verado Energy,
+Verdad Resources,
 Verdugo-Pablo Energy,
 Verdun Oil & Gas,
+Vermilion Energy Inc,
+Vess Oil Corporation,
 Victerra Energy,
+Vietnam Oil and Gas Group,
+Vine Oil & Gas,
+Virtex Operating Company,
 Vista Oil & Gas Argentina SAU,
 WCS Oil & Gas Corporation,
 WPX Energy Permian,
+WPX Energy Williston,
 Wagner Oil Company,
 Walsh Petroleum,
 Weatherly Oil & Gas,
+White Knight Production,
 White Rock Oil & Gas,
+Whiting Oil & Gas Corporation,
 Wildhorse Resources,
 Williams Oil Company,
 Willo Oil & Gas Exploration,
+Winright Resources Operating,
+Wintershall Dea,
 Wintershall Dea Argentina SA,
 Wishbone Texas Operating Co.,
+Wold Energy Partners,
+Woodbine Production Corporation,
+Worldview Capital Management group,
 Wutongshu Investment Platform Co.,China
 XTO Energy,
 XTO Permian Operating,
@@ -591,6 +802,7 @@ Yulin Yuyang Coal Company,China
 Yulin Yuyang District Energy Investment Company,China
 Yuling Mining Group,China
 Zarvona Energy,
+Zavanna,
 Zhejiang Provincial Energy Group Co Ltd,China
 Zhejiang Shenglong Industrial Company,China
 Zhejiang Xinhu Group Holding Company,China

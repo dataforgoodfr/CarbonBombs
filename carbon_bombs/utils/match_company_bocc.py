@@ -53,7 +53,7 @@ def split_column_parent_company(row):
     return carbon_bomb_list_company
 
 
-def get_companies_involved_in_cb_df():
+def get_companies_involved_in_cb_df(df_carbon_bombs=None):
     """
     Loads the carbon bombs database, extracts the Parent Company column and
     splits it into multiple columns to provide detailed company participation
@@ -71,7 +71,8 @@ def get_companies_involved_in_cb_df():
     - The carbon bombs database must be available in the current working
     directory.
     """
-    df_carbon_bombs = load_carbon_bombs_database()
+    if df_carbon_bombs is None:
+        df_carbon_bombs = load_carbon_bombs_database()
     df_carbon_bombs_company = df_carbon_bombs.loc[
         :,
         [
@@ -162,7 +163,7 @@ def clean(text):
     return text_cleaned
 
 
-def _get_companies_match_cb_to_bocc():
+def _get_companies_match_cb_to_bocc(df_cb=None):
     """Link companies involved in carbon bombs with those in the banking
     sector.
 
@@ -183,7 +184,8 @@ def _get_companies_match_cb_to_bocc():
     Raises:
     None
     """
-    df_cb = get_companies_involved_in_cb_df()
+    df_cb = get_companies_involved_in_cb_df(df_cb)
+
     df_bocc = load_banking_climate_chaos()
 
     # Define threshold value in df_cb
