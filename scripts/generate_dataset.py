@@ -23,7 +23,7 @@ from carbon_bombs.utils.logger import get_logger
 
 
 @click.command()
-@click.option("-v", "--verbose", default=50, help="Verbosity level")
+@click.option("-v", "--verbose", default=20, help="Verbosity level")
 @click.option("--start-at-step", default=0, help="start at step")
 def generate_dataset(verbose, start_at_step):
     """"""
@@ -46,7 +46,7 @@ def generate_dataset(verbose, start_at_step):
     if start_at_step <= 2:
         LOGGER.info("Step 2 - START")
         LOGGER.info("Step 2 - create connexion bank - company table started")
-        data_cnx_bank_comp = create_connexion_bank_company_table(use_save_dict=False)
+        data_cnx_bank_comp = create_connexion_bank_company_table(use_save_dict=True)
         LOGGER.info("Step 2 - connexion bank - company table created")
         save_connexion_bank_company_table(data_cnx_bank_comp)
         LOGGER.info("Step 2 - connexion bank - company table saved")

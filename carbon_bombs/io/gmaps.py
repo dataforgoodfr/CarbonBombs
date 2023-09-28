@@ -42,7 +42,7 @@ def get_coordinates_google_api(address):
     if address.startswith("None") or API_KEY == "":
         return 0.0, 0.0
 
-    LOGGER.debug(f"Request on GMAPS API for: {address}")
+    LOGGER.warning(f"Request on GMAPS API for: {address}")
 
     url = f"https://maps.googleapis.com/maps/api/geocode/json?address={address}&key={API_KEY}"
 

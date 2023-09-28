@@ -31,7 +31,7 @@ Multiple values are separated by a "";"" and concatenated projects are separated
 carbon_bombs_data,Parent_company_source_GEM,"Parent company of the project with percentage of ownership if available.
 Multiple values are separated by a "";"" and concatenated projects are separated by |",GEM
 carbon_bombs_data,Companies_involved_source_GEM,"Involved companies is worth Parent_company_source_GEM if this column is filled, Operators_source_GEM if we have no information on the parent companies. It is the column that we use on the platform to generate the links between projects and companies.",
-carbon_bombs_data,Multiple_unit_concerned_source_GEM,Multiple unit concerned for coal projects only. Concatenated projects are separated by |,GEM
+carbon_bombs_data,GEM_project_name_source_GEM,"GEM Unit or mine name. Multiple values are separated by a "";"" and concatenated projects are separated by |",GEM
 carbon_bombs_data,Carbon_bomb_description,Description of the carbon bomb project,GEM
 carbon_bombs_data,Carbon_bomb_start_year,Year when the carbon bomb project started,GEM
 carbon_bombs_data,Status_source_CB,Can take two values : not started or operating - It is the status of the project as it was described in the Carbon Bomb research paper used.,Carbon Bombs article

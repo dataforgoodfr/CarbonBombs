@@ -43,7 +43,7 @@ carbon_bombs_new_column = {
     "Parent_company_source_GEM": "parent_company",
     "Companies_involved_source_GEM": "companies",
     "Carbon_bomb_start_year": "start_year",
-    "Multiple_unit_concerned_source_GEM": "multiple_unit",
+    "GEM_project_name_source_GEM": "multiple_unit",
     "World_region": "world_region",
     "Status_source_CB": "status_cb",
     "Status_source_GEM": "status_gem",

@@ -1,7 +1,7 @@
 """Function to create connexion between carbon bombs and companies"""
-from carbon_bombs.utils.connexion import get_companies_involved_in_cb_df
-from carbon_bombs.utils.connexion import get_companies_match_cb_to_bocc
 from carbon_bombs.utils.logger import LOGGER
+from carbon_bombs.utils.match_company_bocc import get_companies_involved_in_cb_df
+from carbon_bombs.utils.match_company_bocc import get_companies_match_cb_to_bocc
 
 
 def create_connexion_cb_company_table(use_save_dict=False):
