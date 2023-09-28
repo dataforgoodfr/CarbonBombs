@@ -16,8 +16,8 @@ DATA_NEO4J_PATH = f"{REPO_PATH}/data_neo4j"
 FPATH_SRC_KHUNE_PAPER = f"{DATA_SOURCE_PATH}/1-s2.0-S0301421522001756-mmc2.xlsx"
 FPATH_SRC_GEM_COAL = f"{DATA_SOURCE_PATH}/Global-Coal-Mine-Tracker-April-2023.xlsx"
 FPATH_SRC_GEM_GASOIL = (
-    f"{DATA_SOURCE_PATH}/Global-Oil-and-Gas-Extraction-Tracker-Feb-2023.xlsx"
-    # f"{DATA_SOURCE_PATH}/Global-Oil-and-Gas-Extraction-Tracker-July-2023.xlsx"
+    # f"{DATA_SOURCE_PATH}/Global-Oil-and-Gas-Extraction-Tracker-Feb-2023.xlsx"
+    f"{DATA_SOURCE_PATH}/Global-Oil-and-Gas-Extraction-Tracker-July-2023.xlsx"
 )
 FPATH_SRC_BOCC = f"{DATA_SOURCE_PATH}/GROUP-Fossil_Fuel_Financing_by_Company_Banking_on_Climate_Chaos_2023.xlsx"
 FPATH_SRC_COMP_URL = f"{DATA_SOURCE_PATH}/company_url.csv"
