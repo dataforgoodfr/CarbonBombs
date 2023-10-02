@@ -1,4 +1,5 @@
 """Functions to load BOCC dataset"""
+import numpy as np
 import pandas as pd
 
 from carbon_bombs.conf import FPATH_SRC_BOCC
@@ -24,6 +25,16 @@ def load_banking_climate_chaos():
     """
     LOGGER.debug("Read Banking On Climate Chaos source")
     file_path = FPATH_SRC_BOCC
-    df = pd.read_excel(file_path, sheet_name="Data", engine="openpyxl")
+    df = pd.read_excel(file_path, sheet_name="Financing (USD)", engine="openpyxl")
+
+    df["Company"] = np.where(
+        (df["Parent-Level Company "].isna()) | (df["Parent-Level Company "] == 0),
+        df["Company"],
+        df["Parent-Level Company "],
+    )
+    df = df.drop(columns="Parent-Level Company ")
+
+    # TODO : agg
+    df = df.groupby(["Bank", "Company"]).sum().reset_index()
 
     return df
