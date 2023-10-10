@@ -310,6 +310,7 @@ def _init_carbon_bombs_table(fuel: str) -> pd.DataFrame:
             # "Owner": "Owners",
             "Parent": "Parent_Company",
             "Status": "Status",
+            "Production start year": "Carbon_bomb_start_year",
         }
 
     else:
@@ -328,6 +329,7 @@ def _init_carbon_bombs_table(fuel: str) -> pd.DataFrame:
             # "Owners": "Owners",
             "Parent Company": "Parent_Company",
             "Status": "Status",
+            "Opening Year": "Carbon_bomb_start_year",
         }
 
     LOGGER.debug(f"{fuel}: CB and GEM dataframes loaded")
@@ -852,7 +854,15 @@ def get_information_from_GEM(df: pd.DataFrame) -> pd.DataFrame:
         start_year.append(start_year_)
 
     df["Carbon_bomb_description"] = description
-    df["Carbon_bomb_start_year"] = start_year
+    df["Carbon_bomb_start_year"] = np.where(
+        df["Carbon_bomb_start_year"].isna(),
+        start_year,
+        np.where(
+            df["Carbon_bomb_start_year"] == "TBD",
+            "No start year available",
+            df["Carbon_bomb_start_year"],
+        ),
+    )
 
     return df
 
