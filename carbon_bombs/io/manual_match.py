@@ -18,6 +18,51 @@ correspondance between fossil fuel company defined into Parent company column
 of GEM database (dictionnary key) and fossil fuel company defined into
 Banking on Climate Chaos (BOCC) database\n
 """
+import pandas as pd
+
+from carbon_bombs.conf import FPATH_SRC_MANUAL_MATCHING
+from carbon_bombs.conf import SHEETNAME_BANK
+from carbon_bombs.conf import SHEETNAME_COMPANIES
+from carbon_bombs.conf import SHEETNAME_GEM_COAL
+from carbon_bombs.conf import SHEETNAME_GEM_GASOIL
+
+# Dictionnary for Coal Mine only
+match_coal = pd.read_excel(FPATH_SRC_MANUAL_MATCHING, sheet_name=SHEETNAME_GEM_COAL)
+match_coal = (
+    match_coal.fillna("None")
+    .groupby("CarbonBombs KK")
+    .agg(units=("CarbonBombs GEM", lambda x: "$".join(x)))
+)
+manual_match_coal = match_coal["units"].to_dict()
+
+# Dictionnary for Gas and Oil only
+match_gasoil = pd.read_excel(FPATH_SRC_MANUAL_MATCHING, sheet_name=SHEETNAME_GEM_GASOIL)
+match_gasoil = (
+    match_gasoil.fillna("None")
+    .groupby("CarbonBombs KK")
+    .agg(units=("CarbonBombs GEM", lambda x: "$".join(x)))
+)
+manual_match_gasoil = match_gasoil["units"].to_dict()
+
+# Dictionnary for company matching between GEM (Global Energy Monitor) (key)
+# and BOCC (Banking On Climate Chaos) (values)
+match_bank = pd.read_excel(FPATH_SRC_MANUAL_MATCHING, sheet_name=SHEETNAME_BANK)
+manual_match_bank = match_bank.set_index("BankfromBankTracksWebsite")[
+    "BankfromBOCC"
+].to_dict()
+
+# Dictionnary for bank matching between BankTrack (key)
+# and BOCC (Banking On Climate Chaos) (values)
+match_companies = pd.read_excel(
+    FPATH_SRC_MANUAL_MATCHING, sheet_name=SHEETNAME_COMPANIES
+)
+manual_match_company = (
+    match_companies.set_index("Total")["CompanyBOCC (Neo4j real name)"]
+    .dropna()
+    .to_dict()
+)
+
+"""
 # Dictionnary for Coal Mine only
 manual_match_coal = {
     "Maritsa Coal Mines": "Troyanovo-North Coal Mine$Troyanovo 1 Coal Mine$Troyanovo 3 Coal Mine",
@@ -255,3 +300,4 @@ manual_match_bank = {
     "Toronto-Dominion Bank (TD Bank)": "TD",
     "U.S. Bancorp": "US Bancorp",
 }
+"""
