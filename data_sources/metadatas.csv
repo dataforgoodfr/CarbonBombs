@@ -33,7 +33,7 @@ Multiple values are separated by a "";"" and concatenated projects are separated
 carbon_bombs_data,Companies_involved_source_GEM,"Involved companies is worth Parent_company_source_GEM if this column is filled, Operators_source_GEM if we have no information on the parent companies. It is the column that we use on the platform to generate the links between projects and companies.",
 carbon_bombs_data,GEM_project_name_source_GEM,"GEM Unit or mine name. Multiple values are separated by a "";"" and concatenated projects are separated by |",GEM
 carbon_bombs_data,Carbon_bomb_description,Description of the carbon bomb project,GEM
-carbon_bombs_data,Carbon_bomb_start_year,Year when the carbon bomb project started,GEM
+carbon_bombs_data,Carbon_bomb_start_year,"Year when the carbon bomb project started. Please note that within the GEM database, when the starting year spans two consecutive years, only the earlier year is recorded. For instance, if the starting year is denoted as 2022-2023 in the GEM database, we would only record it as 2022 (Example : Saharpur Jamarpani Coal mine)",GEM
 carbon_bombs_data,Status_source_CB,Can take two values : not started or operating - It is the status of the project as it was described in the Carbon Bomb research paper used.,Carbon Bombs article
 carbon_bombs_data,Status_source_GEM,"Can take the following values depending on the status of the project in the GEM database :
 - Operating : Mines commissioned and in commercial operation
