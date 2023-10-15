@@ -18,6 +18,7 @@ correspondance between fossil fuel company defined into Parent company column
 of GEM database (dictionnary key) and fossil fuel company defined into
 Banking on Climate Chaos (BOCC) database\n
 """
+import numpy as np
 import pandas as pd
 
 from carbon_bombs.conf import FPATH_SRC_MANUAL_MATCHING
@@ -25,6 +26,7 @@ from carbon_bombs.conf import SHEETNAME_BANK
 from carbon_bombs.conf import SHEETNAME_COMPANIES
 from carbon_bombs.conf import SHEETNAME_GEM_COAL
 from carbon_bombs.conf import SHEETNAME_GEM_GASOIL
+from carbon_bombs.conf import SHEETNAME_LAT_LONG
 
 # Dictionnary for Coal Mine only
 match_coal = pd.read_excel(FPATH_SRC_MANUAL_MATCHING, sheet_name=SHEETNAME_GEM_COAL)
@@ -36,10 +38,15 @@ match_coal = (
 manual_match_coal = match_coal["units"].to_dict()
 
 # Dictionnary for Gas and Oil only
-match_gasoil = pd.read_excel(FPATH_SRC_MANUAL_MATCHING, sheet_name=SHEETNAME_GEM_GASOIL)
+match_gasoil = pd.read_excel(
+    FPATH_SRC_MANUAL_MATCHING, sheet_name=SHEETNAME_GEM_GASOIL
+).dropna(subset=["CarbonBombs KK"])
+match_gasoil["CB"] = match_gasoil["CarbonBombs KK"] + np.where(
+    match_gasoil["country"].isna(), "", "_" + match_gasoil["country"]
+)
 match_gasoil = (
     match_gasoil.fillna("None")
-    .groupby("CarbonBombs KK")
+    .groupby("CB")
     .agg(units=("CarbonBombs GEM", lambda x: "$".join(x)))
 )
 manual_match_gasoil = match_gasoil["units"].to_dict()
@@ -57,9 +64,14 @@ match_companies = pd.read_excel(
     FPATH_SRC_MANUAL_MATCHING, sheet_name=SHEETNAME_COMPANIES
 )
 manual_match_company = (
-    match_companies.set_index("Total")["CompanyBOCC (Neo4j real name)"]
+    match_companies.set_index("CompanyGEM")["CompanyBOCC (Neo4j real name)"]
     .dropna()
     .to_dict()
+)
+
+# Dataframe to match Latitude Longitude
+manual_match_lat_long = pd.read_excel(
+    FPATH_SRC_MANUAL_MATCHING, sheet_name=SHEETNAME_LAT_LONG
 )
 
 """

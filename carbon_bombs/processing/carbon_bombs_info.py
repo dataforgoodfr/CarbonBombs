@@ -17,6 +17,7 @@ from carbon_bombs.io.khune_paper import load_carbon_bomb_coal_database
 from carbon_bombs.io.khune_paper import load_carbon_bomb_gasoil_database
 from carbon_bombs.io.manual_match import manual_match_coal
 from carbon_bombs.io.manual_match import manual_match_gasoil
+from carbon_bombs.io.manual_match import manual_match_lat_long
 from carbon_bombs.utils.logger import LOGGER
 from carbon_bombs.utils.match_company_bocc import _get_companies_match_cb_to_bocc
 from carbon_bombs.utils.match_company_bocc import save_uniform_company_names
@@ -793,6 +794,36 @@ def add_noise_lat_long(x: float) -> float:
     return x + (np.random.choice([1, -1]) * np.random.rand() / 10)
 
 
+def _add_manual_matching_lat_long(df_carbon_bombs: pd.DataFrame) -> pd.DataFrame:
+    """Set Latitude and Longitude with manual matching"""
+    df_carbon_bombs = df_carbon_bombs.merge(
+        manual_match_lat_long,
+        on=["Carbon_bomb_name_source_CB", "Country_source_CB"],
+        how="left",
+        suffixes=("", "_TMP"),
+    )
+
+    df_carbon_bombs["Latitude"] = np.where(
+        df_carbon_bombs["Latitude_TMP"].isna(),
+        df_carbon_bombs["Latitude"],
+        df_carbon_bombs["Latitude_TMP"],
+    )
+    df_carbon_bombs["Longitude"] = np.where(
+        df_carbon_bombs["Longitude_TMP"].isna(),
+        df_carbon_bombs["Longitude"],
+        df_carbon_bombs["Longitude_TMP"],
+    )
+    df_carbon_bombs["Latitude_longitude_source"] = np.where(
+        df_carbon_bombs["Longitude_TMP"].isna(),
+        df_carbon_bombs["Latitude_longitude_source"],
+        "Manual",
+    )
+
+    df_carbon_bombs = df_carbon_bombs.drop(columns=["Latitude_TMP", "Longitude_TMP"])
+
+    return df_carbon_bombs
+
+
 def _add_country_lat_long_when_missing(df_carbon_bombs: pd.DataFrame) -> pd.DataFrame:
     """Set Latitude and Longitude of Country if this is null.
     It adds a random noise to avoid overlapping on the map for the webapp
@@ -811,7 +842,7 @@ def _add_country_lat_long_when_missing(df_carbon_bombs: pd.DataFrame) -> pd.Data
             f"No coordinates for `{name}` use latitude / longitude of {country}"
         )
 
-        location = geolocator.geocode(country)
+        location = geolocator.geocode({"country": country})
         latitude = location.latitude
         longitude = location.longitude
         df_carbon_bombs.loc[index, "Latitude"] = latitude
@@ -977,6 +1008,11 @@ def create_carbon_bombs_table() -> pd.DataFrame:
 
     # Add Lat long source
     df_carbon_bombs["Latitude_longitude_source"] = "GEM"
+
+    # Add manual matchin Lat long
+    LOGGER.debug("Add manual matching country latitude and longitude")
+    df_carbon_bombs = _add_manual_matching_lat_long(df_carbon_bombs)
+
     # Handle Lat long of country when no lat long found
     LOGGER.debug("Add country latitude and longitude when no coordinate found")
     df_carbon_bombs = _add_country_lat_long_when_missing(df_carbon_bombs)

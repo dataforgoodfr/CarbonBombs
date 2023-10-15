@@ -35,10 +35,11 @@ FPATH_SRC_UNDATA_CO2 = (
 
 # Manual matching source
 FPATH_SRC_MANUAL_MATCHING = f"{DATA_SOURCE_PATH}/Manual matching.xlsx"
-SHEETNAME_GEM_COAL = "NEW_macthGEMCoal"
-SHEETNAME_GEM_GASOIL = "NEW_macthGEMGasoil (keep histor"
+SHEETNAME_GEM_COAL = "macthGEMCoal"
+SHEETNAME_GEM_GASOIL = "macthGEMGasoil"
 SHEETNAME_COMPANIES = "Companies"
 SHEETNAME_BANK = "Bank"
+SHEETNAME_LAT_LONG = "Lat_Long"
 
 # File names for output files used during the process
 FPATH_SRC_UNIFORM_COMP_NAMES = f"{DATA_SOURCE_PATH}/uniform_company_names.json"
