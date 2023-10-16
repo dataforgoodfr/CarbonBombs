@@ -30,10 +30,12 @@ from carbon_bombs.conf import SHEETNAME_LAT_LONG
 
 # Dictionnary for Coal Mine only
 match_coal = pd.read_excel(FPATH_SRC_MANUAL_MATCHING, sheet_name=SHEETNAME_GEM_COAL)
+# Remove match that are not used anymore
+match_coal = match_coal.loc[match_coal["endDate"].isna()]
 match_coal = (
     match_coal.fillna("None")
     .groupby("CarbonBombs KK")
-    .agg(units=("CarbonBombs GEM", lambda x: "$".join(x)))
+    .agg(units=("Mine name", lambda x: "$".join(x)))
 )
 manual_match_coal = match_coal["units"].to_dict()
 
@@ -41,19 +43,23 @@ manual_match_coal = match_coal["units"].to_dict()
 match_gasoil = pd.read_excel(
     FPATH_SRC_MANUAL_MATCHING, sheet_name=SHEETNAME_GEM_GASOIL
 ).dropna(subset=["CarbonBombs KK"])
+# Remove match that are not used anymore
+match_gasoil = match_gasoil.loc[match_gasoil["endDate"].isna()]
 match_gasoil["CB"] = match_gasoil["CarbonBombs KK"] + np.where(
     match_gasoil["country"].isna(), "", "_" + match_gasoil["country"]
 )
 match_gasoil = (
     match_gasoil.fillna("None")
     .groupby("CB")
-    .agg(units=("CarbonBombs GEM", lambda x: "$".join(x)))
+    .agg(units=("Unit name", lambda x: "$".join(x)))
 )
 manual_match_gasoil = match_gasoil["units"].to_dict()
 
 # Dictionnary for company matching between GEM (Global Energy Monitor) (key)
 # and BOCC (Banking On Climate Chaos) (values)
 match_bank = pd.read_excel(FPATH_SRC_MANUAL_MATCHING, sheet_name=SHEETNAME_BANK)
+# Remove match that are not used anymore
+match_bank = match_bank.loc[match_bank["endDate"].isna()]
 manual_match_bank = match_bank.set_index("BankfromBankTracksWebsite")[
     "BankfromBOCC"
 ].to_dict()
@@ -63,6 +69,8 @@ manual_match_bank = match_bank.set_index("BankfromBankTracksWebsite")[
 match_companies = pd.read_excel(
     FPATH_SRC_MANUAL_MATCHING, sheet_name=SHEETNAME_COMPANIES
 )
+# Remove match that are not used anymore
+match_companies = match_companies.loc[match_companies["endDate"].isna()]
 manual_match_company = (
     match_companies.set_index("CompanyGEM")["CompanyBOCC (Neo4j real name)"]
     .dropna()
@@ -73,6 +81,11 @@ manual_match_company = (
 manual_match_lat_long = pd.read_excel(
     FPATH_SRC_MANUAL_MATCHING, sheet_name=SHEETNAME_LAT_LONG
 )
+# Remove match that are not used anymore
+manual_match_lat_long = manual_match_lat_long.loc[
+    manual_match_lat_long["endDate"].isna()
+]
+
 
 """
 # Dictionnary for Coal Mine only
