@@ -52,6 +52,7 @@ FPATH_OUT_CONX_BANK_COMP = f"{DATA_CLEANED_PATH}/connection_bank_company.csv"
 FPATH_OUT_CONX_CB_COMP = f"{DATA_CLEANED_PATH}/connection_carbonbombs_company.csv"
 FPATH_OUT_COUNTRY = f"{DATA_CLEANED_PATH}/country_data.csv"
 FPATH_OUT_ALL = f"{DATA_CLEANED_PATH}/carbon_bombs_all_datasets.xlsx"
+FPATH_RESULT_CHECK = f"{DATA_CLEANED_PATH}/checks_results.txt"
 
 # File names of neo4j data
 FPATH_NEO4J_BANK = f"{DATA_NEO4J_PATH}/banks_data.csv"

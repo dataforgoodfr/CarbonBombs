@@ -1,5 +1,8 @@
 import click
 
+from carbon_bombs.checkers.check_manual_match import check_manual_match
+from carbon_bombs.checkers.check_sources import check_data_sources
+from carbon_bombs.conf import FPATH_RESULT_CHECK
 from carbon_bombs.io.cleaned import save_bank_table
 from carbon_bombs.io.cleaned import save_carbon_bombs_table
 from carbon_bombs.io.cleaned import save_company_table
@@ -29,6 +32,19 @@ def generate_dataset(verbose, start_at_step):
     """"""
     LOGGER = get_logger(verbose=verbose, name="carbon_bombs", log=True)
     LOGGER.info("Start generate dataset script")
+
+    # Step 0 : Check data sources and manual match
+    if start_at_step <= 0:
+        LOGGER.info("Step 0 - START")
+        LOGGER.info("Step 0 - create carbon bombs table started")
+        check_txt = check_data_sources()
+        check_txt += check_manual_match()
+        LOGGER.info(f"Check data sources and manual match result:\n{check_txt}")
+
+        with open(FPATH_RESULT_CHECK, "w") as f:
+            f.write(check_txt)
+
+        LOGGER.info("Step 0 - DONE")
 
     # Step 1 : CB table
     if start_at_step <= 1:
