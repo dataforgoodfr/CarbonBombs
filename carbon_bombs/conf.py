@@ -14,9 +14,8 @@ DATA_NEO4J_PATH = f"{REPO_PATH}/data_neo4j"
 
 # File names of sources
 FPATH_SRC_KHUNE_PAPER = f"{DATA_SOURCE_PATH}/1-s2.0-S0301421522001756-mmc2.xlsx"
-FPATH_SRC_GEM_COAL = f"{DATA_SOURCE_PATH}/Global-Coal-Mine-Tracker-April-2023.xlsx"
+FPATH_SRC_GEM_COAL = f"{DATA_SOURCE_PATH}/Global-Coal-Mine-Tracker-October-2023.xlsx"
 FPATH_SRC_GEM_GASOIL = (
-    # f"{DATA_SOURCE_PATH}/Global-Oil-and-Gas-Extraction-Tracker-Feb-2023.xlsx"
     f"{DATA_SOURCE_PATH}/Global-Oil-and-Gas-Extraction-Tracker-July-2023.xlsx"
 )
 FPATH_SRC_BOCC = f"{DATA_SOURCE_PATH}/GROUP-Fossil_Fuel_Financing_by_Company_Banking_on_Climate_Chaos_2023.xlsx"
@@ -33,6 +32,14 @@ FPATH_SRC_UNDATA_GDP = (
 FPATH_SRC_UNDATA_CO2 = (
     f"{DATA_SOURCE_PATH}/undata_SYB65_310_202209_Carbon Dioxide Emission Estimates.csv"
 )
+
+# Manual matching source
+FPATH_SRC_MANUAL_MATCHING = f"{DATA_SOURCE_PATH}/Manual matching.xlsx"
+SHEETNAME_GEM_COAL = "macthGEMCoal"
+SHEETNAME_GEM_GASOIL = "macthGEMGasoil"
+SHEETNAME_COMPANIES = "Companies"
+SHEETNAME_BANK = "Bank"
+SHEETNAME_LAT_LONG = "Lat_Long"
 
 # File names for output files used during the process
 FPATH_SRC_UNIFORM_COMP_NAMES = f"{DATA_SOURCE_PATH}/uniform_company_names.json"
