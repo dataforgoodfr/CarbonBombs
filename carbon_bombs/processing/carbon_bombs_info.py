@@ -213,7 +213,6 @@ def _find_gem_mines(
     df_gem = df_gem.loc[df_gem["Country"] == country].copy()
 
     # For coal data remove used mines
-    # TODO: check if OK with Matthieu
     if fuel == "coal":
         df_gem = df_gem.loc[~df_gem["GEM_ID"].isin(used_mines)]
 
@@ -365,8 +364,10 @@ def _init_carbon_bombs_table(fuel: str) -> pd.DataFrame:
     df_merge = df_merge.drop(columns="tmp_project_name")
     df_gem = df_gem.drop(columns="tmp_project_name")
 
-    # get filter for CB with no match
-    _filter_no_match = df_merge["Unit_concerned"].isna()
+    # get filter for CB with no match or if the project is in manual match keys
+    _filter_no_match = df_merge["Unit_concerned"].isna() | df_merge[
+        "Project Name"
+    ].isin(manual_match_gasoil.keys())
 
     # retrieve data for CB with no match
     LOGGER.debug(f"{fuel}: retrieve informations for projects with no match start...")

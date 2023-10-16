@@ -402,7 +402,7 @@ Pré-Sal Petróleo S.A.,"Rua Lauro Müller, 116, Sala 2301, Rio de Janeiro, Braz
 Public Power Corporation of Greece S.A,"30, Halkokondyli Str., 104 32 Athens, Greece",37.9861844,23.7289647,West Macedonia Lignite Centre (WMLC),Greece,Europe,
 QCoal,"Level 8, 175 Eagle Street, Brisbane, QLD 4000, Australia",-27.4657999,153.0309008,Byerwen Coal Mine,Australia,Oceania,
 QH Oil Investments LLC,"Moscow, Russia",55.755826,37.6173,"Lensky Basin CBM,Samotlorneftegaz (TNK-BP),Tunguska Basin CBM",Russia,Europe,
-QatarEnergy,"P.O. Box 22666, Doha, Qatar",25.2854473,51.53103979999999,"Al Khaleej Gas project,Collingham Shale,QatarGas 1 LNG T1-T3,QatarGas LNG T12-T13 (NFE-South),QatarGas LNG T8-T11 (NFE-East),Qatargas 2 LNG T4-T5,Rasgas 2 LNG T3-T5,Rasgas 3 LNG T6-T7",Qatar,Asia,https://fr.wikipedia.org/wiki/Qatar_Energy#/media/Fichier:Qatar_Petroleum.jpg
+QatarEnergy,"P.O. Box 22666, Doha, Qatar",25.2854473,51.53103979999999,"Al Khaleej Gas project,Collingham Shale,North Field,QatarGas 1 LNG T1-T3,QatarGas LNG T12-T13 (NFE-South),QatarGas LNG T8-T11 (NFE-East),Qatargas 2 LNG T4-T5,Rasgas 2 LNG T3-T5,Rasgas 3 LNG T6-T7",Qatar,Asia,https://fr.wikipedia.org/wiki/Qatar_Energy#/media/Fichier:Qatar_Petroleum.jpg
 Qatargas,"Ras Laffan Industrial City, Doha, Qatar",25.8827849,51.526945,Barzan,Qatar,Asia,
 R. Lacy Services,"4100 Troup Hwy, Tyler, Texas, United States",32.3049947,-95.2692602,Haynesville/Bossier Shale,United States,North America,
 RFE Operating,"3000 Town Center Blvd, Canonsburg, PA 15317, USA",40.276066,-80.16230759999999,Haynesville/Bossier Shale,United States,North America,
@@ -469,7 +469,7 @@ Shanxi Yuedian Energy,"Beijing, China",39.904211,116.407395,Suancigou Coal Mine,
 Shanxi Yujin Trading Company,"Beijing, China",39.904211,116.407395,Longwan Coal Mine,China,Asia,
 Shanxi Zhongbo Real Estate Development Company,"Beijing, China",39.904211,116.407395,Hongqingliang Coal Mine,China,Asia,
 Shelby Boswell Operator,"712 MAIN ST SUITE 1300. HOUSTON, TX 77002, USA",29.7588659,-95.363778,Haynesville/Bossier Shale,United States,North America,
-Shell PLC,"Shell Centre, London, SE1 7NA, United Kingdom",51.5039817,-0.1168152,"Athabasca Oil Sands Project,Carboniferous Shale,Karachaganak,Kashagan,La Luna Shale,Libra,Lula (X-Tupi),Mero (Libra NW),Sembar Shale,Troll,Vaca Muerta Shale",United Kingdom,Europe,https://fr.wikipedia.org/wiki/Shell_(entreprise)#/media/Fichier:Shell_logo.svg
+Shell PLC,"Shell Centre, London, SE1 7NA, United Kingdom",51.5039817,-0.1168152,"Athabasca Oil Sands Project,Carboniferous Shale,Karachaganak,Kashagan,La Luna Shale,Libra,Lula (X-Tupi),Mero (Libra NW),North Field,Sembar Shale,Troll,Vaca Muerta Shale",United Kingdom,Europe,https://fr.wikipedia.org/wiki/Shell_(entreprise)#/media/Fichier:Shell_logo.svg
 Shendong Tianlong Group,"Beijing, China",39.904211,116.407395,Inner Mongolia Erlintu Coal Mine,China,Asia,
 Shenergy Group Co Ltd,"No. 2, Lane 728, Zhangyang Road, Pudong New Area, Shanghai, China",31.2367942,121.5458768,"Hulusu Coal Mine,Menkeqing Coal Mine",China,Asia,
 Shenmu City State-Owned Assets Operation Co,"China, Beijing",39.904211,116.407395,"Hongliulin Coal Mine,Ningtiaota Coal Mine,Shaanxi Caojiatan Coal Mine,Zhangjiamao Coal Mine",China,Asia,
@@ -518,7 +518,7 @@ Tibet Hengyisheng Investment Company,"Beijing, China",39.904211,116.407395,Dalai
 Titan Exploration,"412 W 15th Street, 11th Floor",40.7418783,-74.0060041,PRB Tight Oil,United States,North America,
 Titan Infra Energy PT,"Sona Topas Tower, Level 25, Jl. Jend. Sudirman Kav. 26, Jakarta, Indonesia",-6.2070754,106.8222951,GAM Coal Mine,Indonesia,Asia,
 Titan Rock E&P,USA,37.09024,-95.712891,Haynesville/Bossier Shale,United States,North America,
-TotalEnergies SE,"2 Place Jean Millier, 92400 Courbevoie, France",48.9214838,2.2720435,"Al Khaleej Gas project,Area-1 Future Phases,Athabasca Oil Sands Project,Collingham Shale,Dolphin,El Sharara,Halfayah,Johan Sverdrup,Libra,Mero (Libra NW),Qatargas 2 LNG T4-T5,Shtokman,Sirte Shale,South Pars (Phases 2-3) dry gas,Tambey Zone (Yamal Megaproject),Tannezuft Shale,Timan - Pechora Basin Offshore,Troll,Umm Shaif/Nasr,Vaca Muerta Shale",France,Europe,https://totalenergies.com/themes/custom/totalenergies_com/dist/img/logo_totalenergies.png
+TotalEnergies SE,"2 Place Jean Millier, 92400 Courbevoie, France",48.9214838,2.2720435,"Al Khaleej Gas project,Area-1 Future Phases,Athabasca Oil Sands Project,Collingham Shale,Dolphin,El Sharara,Halfayah,Johan Sverdrup,Libra,Mero (Libra NW),North Field,Qatargas 2 LNG T4-T5,Shtokman,Sirte Shale,South Pars (Phases 2-3) dry gas,Tambey Zone (Yamal Megaproject),Tannezuft Shale,Timan - Pechora Basin Offshore,Troll,Umm Shaif/Nasr,Vaca Muerta Shale",France,Europe,https://totalenergies.com/themes/custom/totalenergies_com/dist/img/logo_totalenergies.png
 Tribune Resources,Australia,-25.274398,133.775136,Marcellus Shale,Australia,Oceania,
 Trinity Operating (USG),"Houston Texas, USA",29.7604267,-95.3698028,"Austin Chalk Tight,Haynesville/Bossier Shale",United States,North America,
 Trivium Operating,USA,37.09024,-95.712891,Haynesville/Bossier Shale,United States,North America,
