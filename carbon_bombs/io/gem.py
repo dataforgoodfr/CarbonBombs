@@ -74,12 +74,16 @@ def load_gasoil_mine_gem_database():
 def clean_html(raw_html):
     """This function cleans html tag to extract only text.
 
-    Args:
-        raw_html: html code
+    Parameters
+    ----------
+    raw_html:
+        html code
 
-    Returns:
-        Cleaned text without html tag"""
-
+    Returns
+    -------
+    str:
+        Cleaned text without html tag
+    """
     CLEAN = re.compile("<.*?>")
     QUOTE = re.compile("\[[0-9]\]")
     clean_text = re.sub(CLEAN, "", raw_html)
@@ -92,11 +96,16 @@ def clean_html(raw_html):
 def clean_year(string_year):
     """This function cleans a string to extract only 4 digits years.
 
-    Args:
-        string_year: a string to clean
+    Parameters
+    ----------
+    string_year:
+        a string to clean
 
-    Returns:
-        Cleaned year with format YYYY"""
+    Returns
+    -------
+    str:
+        Cleaned year with format YYYY
+    """
 
     YEAR = re.compile("[0-9]{4}")
     # if several years are displayed, I take the first: 2020/2021 => 2020
@@ -110,11 +119,16 @@ def clean_year(string_year):
 def get_start_date_from_soup(soup):
     """This function extract the year field from GEM.
 
-    Args:
-        soup: html page
+    Parameters
+    ----------
+    soup:
+        html page
 
-    Returns:
-        The project start year if available. Else, string 'No start year available'."""
+    Returns
+    -------
+    str:
+        The project start year if available. Else, string 'No start year available'.
+    """
 
     for item in soup.find_all("li"):
         if "start year" in str(item.text).lower():
@@ -130,10 +144,14 @@ def get_start_date_from_soup(soup):
 def get_description_from_soup(soup):
     """This function extract the year field from GEM.
 
-    Args:
-        soup: html page
+    Parameters
+    ----------
+    soup:
+        html page
 
-    Returns:
+    Returns
+    -------
+    str:
         The project description if available. Else, string 'No description available'.
     """
     description = str(
@@ -146,9 +164,10 @@ def get_description_from_soup(soup):
     return description
 
 
-def get_gem_wiki_details(item):
-    LOGGER.debug(f"Get GEM details of {item}")
-    r = requests.get(item)
+def get_gem_wiki_details(url):
+    """Return the description and start year of a GEM project given a wiki url"""
+    LOGGER.debug(f"Get GEM details of {url}")
+    r = requests.get(url)
     soup = BeautifulSoup(r.text, features="html.parser")
     try:
         description = get_description_from_soup(soup)

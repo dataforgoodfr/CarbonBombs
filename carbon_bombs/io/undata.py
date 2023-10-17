@@ -11,11 +11,15 @@ def load_undata():
     """
     Load all csv files downloaded from the UN data website.
 
-    Args:
-        file_paths (list of str): The list of csv file paths.
+    Parameters
+    ----------
+    file_paths: list of str
+        The list of csv file paths.
 
-    Returns:
-        pandas.DataFrame: A DataFrame containing the following columns:
+    Returns
+    -------
+    pandas.DataFrame:
+        A DataFrame containing the following columns:
         - Region_Country_Area_ID (int): A numerical value associated to the
           region/country/area.
         - Region_Country_Area_name (str): The concept refers to the country,
@@ -40,10 +44,6 @@ def load_undata():
           the text or table.
         - Source (str): A specific data set, metadata set, database or
           metadata repository from where data or metadata are available.
-
-    Raises:
-        None: However, if the HTTP request fails, it prints an error message
-              and terminates the script.
     """
     LOGGER.debug("Read UNData files...")
     # Initiate Dataframe that will gather informations

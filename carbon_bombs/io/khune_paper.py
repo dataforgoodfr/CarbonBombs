@@ -10,11 +10,10 @@ def load_carbon_bomb_list_database():
     """
     Load the Carbon Bomb List database.
 
-    Returns:
-    pandas.DataFrame: A dataframe containing the data from the database.
-
-    Raises:
-    FileNotFoundError: If the specified file path cannot be found.
+    Returns
+    -------
+    pandas.DataFrame:
+        A dataframe containing the data from the database.
     """
     LOGGER.debug("Read Khune paper data: all carbon bombs project")
     df = pd.read_excel(
@@ -54,15 +53,8 @@ def load_carbon_bomb_coal_database():
         - Project Name (str): name of the project.
         - Country (str): country where the project is located.
         - Potential emissions (GtCO2) (float): potential emissions of the
-        project.
+          project.
         - Fuel (category): type of fuel used in the project.
-
-    Raises
-    ------
-    FileNotFoundError:
-        If the data file is not found in the specified path.
-    ValueError:
-        If the data file does not contain the expected sheet.
 
     Notes
     -----
@@ -100,6 +92,7 @@ def load_carbon_bomb_coal_database():
     df = df.astype(dtype_d)
 
     # Change country name to correspond to GEM database (only for Russia)
+    # use "Türkiye" since this is the format in the khune paper
     df["Country"] = df["Country"].replace(
         {"Russian Federation": "Russia", "Turkey": "Türkiye"}
     )
@@ -118,16 +111,8 @@ def load_carbon_bomb_gasoil_database():
         - New_project (str): whether the project is operating or not started.
         - Project Name (str): name of the project.
         - Country (str): country where the project is located.
-        - Potential emissions (GtCO2) (float): potential emissions of the
-        project.
+        - Potential emissions (GtCO2) (float): potential emissions of the project.
         - Fuel (category): type of fuel used in the project.
-
-    Raises
-    ------
-    FileNotFoundError:
-        If the data file is not found in the specified path.
-    ValueError:
-        If the data file does not contain the expected sheet.
 
     Notes
     -----
@@ -172,6 +157,7 @@ def load_carbon_bomb_gasoil_database():
     df = df.astype(dtype_d)
 
     # Change country name to correspond to GEM database (only for Russia)
+    # use "Türkiye" since this is the format in the khune paper
     df["Country"] = df["Country"].replace(
         {
             "Russian Federation": "Russia",

@@ -403,71 +403,16 @@ def _init_carbon_bombs_table(fuel: str) -> pd.DataFrame:
 
 
 def create_carbon_bombs_gasoil_table() -> pd.DataFrame:
-    """
-    Combines data from the Global Oil and Gas Extraction Tracker and the Carbon
+    """Combines data from the Global Oil and Gas Extraction Tracker and the Carbon
     Bomb Oil and Gas database to create a table of oil and gas mines matched to
     their corresponding carbon bombs.
-
-    Returns
-    -------
-    pd.DataFrame:
-        A pandas dataframe with columns for the oil and gas mine's name,
-        country, potential emissions (GtCO2), fuel type, latitude, longitude,
-        operator, owner, parent, and the corresponding carbon bomb name.
-
-    Raises
-    ------
-    FileNotFoundError:
-        If one of the data files is not found in the specified path.
-    ValueError:
-        If one of the data files does not contain the expected sheet.
-
-    Notes
-    -----
-    This function uses the load_carbon_bomb_gasoil_database() and
-    load_gasoil_mine_gem_database() functions to read data from two Excel files.
-    The expected file paths are:
-    - "./data_sources/Global-Oil-and-Gas-Extraction-Tracker-Feb-2023.xlsx"
-    - "./data_sources/1-s2.0-S0301421522001756-mmc2.xlsx"
     """
     return _init_carbon_bombs_table(fuel="gasoil")
 
 
 def create_carbon_bombs_coal_table() -> pd.DataFrame:
-    """
-    Creates a pandas DataFrame of coal carbon bombs data matched with
+    """Creates a pandas DataFrame of coal carbon bombs data matched with
     corresponding coal mines data from the GEM database.
-
-    Args:
-        None.
-
-    Returns:
-        pandas.DataFrame: A pandas DataFrame of coal carbon bombs data matched
-        with corresponding coal mines data from the GEM database.
-
-    Raises:
-        None.
-
-    Notes:
-        - Loads two pandas DataFrames from different sources:
-        df_coal_carbon_bombs and df_coal_gem_mines.
-        - Filters columns of interest from df_coal_gem_mines.
-        - Focuses on merge for coal mines between GEM and CB databases.
-        - Only retains perfect match on Project Name between GEM and CB with a
-        country verification.
-        - Drops duplicates based on "Mine Name" column from
-        df_coal_gem_mines_perfect_match DataFrame.
-        - Concatenates non-duplicates and duplicates DataFrames from
-        df_coal_gem_mines_perfect_match.
-        - Adds GEM mines that have no perfect match with carbon bomb.
-        - Uses find_matching_name_for_GEM_coal function to find the right match
-        for the previous step.
-        - Extracts lines from df_coal_gem_mines using the index list of
-        df_carbon_bombs_no_match DataFrame.
-        - Replaces name in df_gem_no_match with the one in carbon bomb.
-        - Merges df_coal_carbon_bombs and df_coal_gem_mines_matched DataFrames
-        based on "Project Name" and "Mine Name".
-        - Drops temporary columns created in previous steps.
     """
     return _init_carbon_bombs_table(fuel="coal")
 
@@ -482,16 +427,20 @@ def cancel_duplicated_rename(df: pd.DataFrame) -> pd.DataFrame:
     the 'Country' column for that row. In these rows, it changes the 'Project'
     value to '<ProjectName>', removing the duplicated country information.
 
-    Args:
-        df (pandas.DataFrame): The input DataFrame, which should contain
-            'Project' and 'Country' columns. 'Project' column values should
-            be strings in the format '<ProjectName>_<Country>'.
+    Parameters
+    ----------
+    df: pandas.DataFrame
+        The input DataFrame, which should contain
+        'Project' and 'Country' columns. 'Project' column values should
+        be strings in the format '<ProjectName>_<Country>'.
 
-    Returns:
-        pandas.DataFrame: The modified DataFrame. It is the same as the input
-            DataFrame, but in rows where the 'Project' and 'Country' matched
-            the pattern and condition, the 'Project' value is replaced by
-            '<ProjectName>'.
+    Returns
+    -------
+    pandas.DataFrame:
+        The modified DataFrame. It is the same as the input
+        DataFrame, but in rows where the 'Project' and 'Country' matched
+        the pattern and condition, the 'Project' value is replaced by
+        '<ProjectName>'.
     """
 
     def match_pattern(row):
@@ -561,41 +510,44 @@ def compute_clean_percentage(raw_line):
     Compute the percentage of involvement of each company mentioned in a given
     line.
 
-    Args:
-        raw_line (str): A string that contains information about the companies
+    Parameters
+    ----------
+    raw_line: str
+        A string that contains information about the companies
         and their involvement.
 
-    Returns:
-        str: A clean line that contains the name of each company and their
+    Returns
+    -------
+    str:
+        A clean line that contains the name of each company and their
         corresponding percentage of involvement.
 
-    Raises:
-        TypeError: If the input `raw_line` is not a string.
+    Examples
+    --------
+    >>> compute_clean_percentage("ABC (20%), XYZ (80%)")
+    'ABC (20%); XYZ (80%)'
 
-    Examples:
-        >>> compute_clean_percentage("ABC (20%), XYZ (80%)")
-        'ABC (20%); XYZ (80%)'
+    >>> compute_clean_percentage("ABC; XYZ; PQR")
+    'ABC (33.33333333333333%); XYZ (33.33333333333333%);
+    PQR (33.33333333333333%)'
 
-        >>> compute_clean_percentage("ABC; XYZ; PQR")
-        'ABC (33.33333333333333%); XYZ (33.33333333333333%);
-        PQR (33.33333333333333%)'
+    >>> compute_clean_percentage("")
+    'No informations on company (100.0%)'
 
-        >>> compute_clean_percentage("")
-        'No informations on company (100.0%)'
+    >>> a = compute_clean_percentage("A|B|A")
+    A (100.0%)|B (100.0%)|A (100.0%)
 
-        >>> a = compute_clean_percentage("A|B|A")
-        A (100.0%)|B (100.0%)|A (100.0%)
+    >>> a = compute_clean_percentage("A (50%);B(50%)|A")
+    A (50.0%);B (50.0%)|A (100.0%)
 
-        >>> a = compute_clean_percentage("A (50%);B(50%)|A")
-        A (50.0%);B (50.0%)|A (100.0%)
-
-    Notes:
-        The function can handle two possibilities:
-        1) When the raw_line contains percentages, it calculates and merges the
-        percentage of involvement for each company and returns a clean line.
-        2) When the raw_line does not contain percentages, it assumes each
-        company has an equal involvement and calculates the percentage
-        accordingly.
+    Notes
+    -----
+    The function can handle two possibilities:
+    1) When the raw_line contains percentages, it calculates and merges the
+    percentage of involvement for each company and returns a clean line.
+    2) When the raw_line does not contain percentages, it assumes each
+    company has an equal involvement and calculates the percentage
+    accordingly.
 
     The input raw_line should be in one of the following formats:
         1) <company_1> (percentage_1%), <company_2> (percentage_2%), ...
@@ -908,48 +860,11 @@ def create_carbon_bombs_table() -> pd.DataFrame:
     Creates a table of carbon bomb projects by merging coal and gas/oil tables,
     remapping columns, cleaning data, and filling missing values.
 
-    Returns:
-    --------
+    Returns
+    -------
     pd.DataFrame:
-        A pandas DataFrame with the following columns:
-            - 'New_project (CB)': string indicating if the project is operating or
-            not started.
-            - 'Carbon_Bomb_Name (CB)': name of the carbon bomb project.
-            - 'Country (CB)': country where the carbon bomb project is located.
-            - 'Potential_GtCO2 (CB)': potential emissions of the carbon bomb
-            project
-              in gigatons of CO2.
-            - 'Fuel_type (CB)': type of fuel used by the carbon bomb project.
-            - 'GEM_ID (GEM)': identifier of the project in the Global Energy
-            Monitor
-              (GEM) database.
-            - 'GEM_source (GEM)': URL of the project page on the GEM database.
-            - 'Latitude': geographic latitude of the project location.
-            - 'Longitude': geographic longitude of the project location.
-            - 'Operators (GEM)': operators of the project according to the GEM
-            database.
-            - 'Parent_Company': parent company of the project, with percentage
-              of ownership if available.
-            - 'Multiple_unit_concerned (manual_match)': multiple unit concerned
-              for coal projects only.
-
-    Notes:
-    ------
-    This function relies on the following helper functions:
-    - create_carbon_bombs_coal_table: creates the coal table of carbon bomb
-    projects.
-    - create_carbon_bombs_gasoil_table: creates the gas/oil table of carbon
-    bomb projects.
-    - compute_clean_percentage: computes the percentage of ownership for
-      parent companies that own several carbon bomb projects.
-    - add_chat_GPT_data: adds ChatGPT data to carbon bomb projects that are not
-      present in the GEM database.
-
-    This function also uses the following mapping dictionaries to rename
-    columns:
-    - name_mapping_coal: maps column names for the coal table.
-    - name_mapping_gasoil: maps column names for the gas/oil table.
-    - name_mapping_source: maps column names for the final merged table.
+        Carbon bombs dataframe. See metadatas to
+        check out all the columns details
     """
     LOGGER.debug("Start creation of carbon bombs dataset")
     LOGGER.debug("Load dataframe coal and gasoil")
@@ -966,13 +881,8 @@ def create_carbon_bombs_table() -> pd.DataFrame:
     LOGGER.debug("Merge coal and gasoil dataframes")
     df_carbon_bombs = pd.concat([df_coal, df_gasoil], axis=0)
 
-    # Keep as comment in case we need to use it again
-    # for Unit_concerned we only want to keep when there are more than one units
-    # df_carbon_bombs["Unit_concerned"] = np.where(
-    #     df_carbon_bombs["Unit_concerned"].str.contains(PROJECT_SEPARATOR, regex=False),
-    #     df_carbon_bombs["Unit_concerned"],
-    #     np.NaN,
-    # )
+    # Replace Türkiye to Turkey
+    df_carbon_bombs = df_carbon_bombs.replace({"Türkiye": "Turkey"})
 
     # Remap dataframe columns to display data source
     # Not efficient might be rework (no time for that right now)

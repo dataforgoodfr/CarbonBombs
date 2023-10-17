@@ -49,19 +49,15 @@ def create_company_table(check_old_df_address=False):
     their corresponding geographic coordinates using the Google Maps API.
 
     Returns:
-        pandas.DataFrame: A DataFrame containing the following columns:
+    pandas.DataFrame:
+        A DataFrame containing the following columns:
         - Company_name (str): Name of the company
         - Address_headquarters_source_chatGPT (str): Address of the company
-            headquarters obtained from chatGPT
+          headquarters obtained from chatGPT
         - Latitude (float): Latitude of the company headquarters obtained using
-            Google Maps
+          Google Maps
         - Longitude (float): Longitude of the company headquarters obtained
-            using Google Maps
-
-    Raises:
-        Exception: If the file path for the chatGPT data is invalid.
-        Exception: If there is an error in obtaining coordinates from the
-        Google Maps API.
+          using Google Maps
     """
     LOGGER.debug("Start creation of company dataset")
     LOGGER.debug("Load companies in CB and companies address datasets")

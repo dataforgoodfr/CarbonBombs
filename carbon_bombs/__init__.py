@@ -1,0 +1,1 @@
+"""Carbon bombs module"""

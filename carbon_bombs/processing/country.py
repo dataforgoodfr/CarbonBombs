@@ -14,7 +14,7 @@ def _get_countries():
     --------
     pd.DataFrame:
         A pandas DataFrame with the following columns:
-            - 'Country (CB)': country where carbon bomb projects are located.
+        - 'Country (CB)': country where carbon bomb projects are located.
 
     Notes:
     ------
@@ -130,23 +130,17 @@ def create_country_table():
     Creates the table of countries extracted from the
     carbon_bombs_informations file.
 
-    Args:
-    -----
-        undata_folder_path (str): The folder path where csv files downloaded
+    Parameters
+    ----------
+    undata_folder_path: str
+        The folder path where csv files downloaded
         from the UN data website are stored.
 
-    Returns:
-    --------
-        pandas.DataFrame: A pandas DataFrame listing unique countries from the
-        carbon_bombs_informations file.
-
-    Raises:
+    Returns
     -------
-        None.
-
-    Notes:
-    ------
-        None.
+    pandas.DataFrame:
+        A pandas DataFrame listing unique countries from the
+        carbon_bombs_informations file.
     """
     LOGGER.debug("Start creation of countries dataset")
     # Load Dataframe listing unique countries with identified carbon bombs

@@ -44,23 +44,19 @@ def scrapping_main_page_bank_track():
     Scrapes the main page of bank track website and extracts URLs of individual
     bank description pages.
 
-    Args:
-        url (str): The URL of the main page to be scraped.
+    Parameters
+    ----------
+    url: str
+        The URL of the main page to be scraped.
 
-    Returns:
-        list: A list of URLs (strings) pointing to individual bank description
-              pages.
-        list: A list of logo urls for each bank
-
-    Raises:
-        None: However, if the HTTP request fails, it prints an error message and
-              terminates the script.
-
-    Example:
-        >>> scrapping_main_page_bank_track("https://www.examplebanktrack.org")
-        ['https://www.examplebanktrack.org/bank/abc_bank',
-         'https://www.examplebanktrack.org/bank/def_bank',
-         'https://www.examplebanktrack.org/bank/ghi_bank']
+    Returns
+    -------
+    list:
+        List of bank names
+    list:
+        A list of URLs (strings) pointing to individual bank description pages.
+    list:
+        A list of logo urls for each bank
     """
     # Send an HTTP request to the target URL
     LOGGER.debug(f"Request banktracks url: {BANKTRACKS_URL}")
@@ -92,26 +88,18 @@ def scrapping_description_bank_page(url):
     Scrapes the specified URL for bank information and returns the bank name
     and a dictionary containing details from the About section.
 
-    Args:
-        url (str): The URL of the bank's page to be scraped.
+    Parameters
+    ----------
+    url: str
+        The URL of the bank's page to be scraped.
 
-    Returns:
-        dict: A dictionary with
-               information from the About section. The dictionary has keys
-               corresponding to the following categories: "Website",
-               "Headquarters", "CEO/chair", "Supervisor", and "Ownership".
-               If information is not available, the value is set to "None".
-
-    Raises:
-        None: However, if the HTTP request fails, it prints an error message and
-              terminates the script.
-
-    Example:
-        >>> fetch_bank_info("https://www.examplebank.org/bank/abc_bank")
-        {'Website': 'www.abcbank.com',
-        'Headquarters': 'New York, NY',
-        'CEO/chair': 'John Doe', 'Supervisor': 'Jane Smith',
-        'Ownership': 'Private'}
+    Returns
+    -------
+    dict:
+        A dictionary with information from the About section. The dictionary has keys
+        corresponding to the following categories: "Website",
+        "Headquarters", "CEO/chair", "Supervisor", and "Ownership".
+        If information is not available, the value is set to "None".
     """
     LOGGER.debug(f"Request bank page details of {url}")
 

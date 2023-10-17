@@ -1,3 +1,4 @@
+"""Utils for location"""
 import awoc
 from geopy.geocoders import Nominatim
 

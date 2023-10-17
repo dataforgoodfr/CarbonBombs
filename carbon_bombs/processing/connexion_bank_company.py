@@ -7,10 +7,9 @@ from carbon_bombs.utils.match_company_bocc import get_companies_match_cb_to_bocc
 def create_connexion_bank_company_table(use_save_dict=False):
     """Create the dataframe of the connexions between banks and companies.
 
-        Banks are found using Banking On Climate Chaos (BOCC) source.
-    _get_companies_match_cb_to_bocc
-        Companies are from the Carbon bombs information source. Then it maps
-        companies that appears in BOCC with the BOCC name to uniform between files.
+    Banks are found using Banking On Climate Chaos (BOCC) source.
+    Companies are from the Carbon bombs information source. Then it maps
+    companies that appears in BOCC with the BOCC name to uniform between files.
     """
     LOGGER.debug("Start creation of connexion between banks and companies dataset")
     # Load BOCC Database

@@ -49,7 +49,7 @@ def _check_manual_match_gem_id(manual_match, fuel):
     for cb, units in manual_match.items():
         for unit in units.split("$"):
             if unit not in names and unit not in ["None", ""]:
-                res_txt += f"GEM {fuel} check: `{cb}` - unit not found: `{unit}`\n"
+                res_txt += f"⚠️ GEM {fuel} check: `{cb}` - unit not found: `{unit}`\n"
 
     return res_txt
 
@@ -73,7 +73,7 @@ def check_manual_match_banks():
     res_txt = ""
     for value in set(manual_match_bank.values()):
         if value not in bocc_df["Bank"].unique():
-            res_txt += f"bank check: `{value}` not in BOCC Bank\n"
+            res_txt += f"⚠️ bank check: `{value}` not in BOCC Bank\n"
 
     return res_txt
 
@@ -86,7 +86,7 @@ def check_manual_match_companies():
     res_txt = ""
     for value in set(manual_match_company.values()):
         if value not in bocc_df["Company"].unique():
-            res_txt += f"company check: `{value}` not in BOCC Companies\n"
+            res_txt += f"⚠️ company check: `{value}` not in BOCC Companies\n"
 
     return res_txt
 
@@ -103,21 +103,21 @@ def check_manual_match():
     if res_gem:
         res += res_gem
     else:
-        res += "GEM check: everything OK\n"
+        res += "✅ GEM check: everything OK\n"
 
     res += "\nCHECK BANK MANUAL MATCH\n"
     res_bank = check_manual_match_banks()
     if res_bank:
         res += res_bank
     else:
-        res += "bank check: everything OK\n"
+        res += "✅ bank check: everything OK\n"
 
     res += "\nCHECK COMPANY MANUAL MATCH\n"
     res_comp = check_manual_match_companies()
     if res_comp:
         res += res_comp
     else:
-        res += "company check: everything OK\n"
+        res += "✅ company check: everything OK\n"
 
     res += "\n"
 

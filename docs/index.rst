@@ -8,9 +8,11 @@ Welcome to Carbon Bombs's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Modules
 
-
+   modules/processing
+   modules/io
+   modules/checkers
 
 Indices and tables
 ==================
