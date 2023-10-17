@@ -157,7 +157,7 @@ def compare_cleaned_datasets():
 
     full_comp.to_csv(FPATH_COMPARISON_DF, index=False)
 
-    res += f"Comparison dataframe saved at: {FPATH_COMPARISON_DF}\n\n"
+    res += "\n"
 
     return res
 
