@@ -1,0 +1,25 @@
+===== Check data sources =====
+
+CHECK BOCC SOURCE
+BOCC check: DATA OK
+
+CHECK GEM SOURCE
+GEM coal check: DATA OK
+GEM gasoil check: DATA OK
+
+===== Check manual match data =====
+
+CHECK GEM MANUAL MATCH
+GEM coal check: `Maritsa Coal Mines` - unit not found: `Troyanovo 3 Coal Mine`
+
+CHECK BANK MANUAL MATCH
+bank check: everything OK
+
+CHECK COMPANY MANUAL MATCH
+company check: `Cimarex Energy ` not in BOCC Companies
+company check: `Ballard Petroleum Holding` not in BOCC Companies
+company check: `BPX Operating` not in BOCC Companies
+company check: `Mewbourne Oil Company` not in BOCC Companies
+company check: `Kaiser Francis Oil Co ` not in BOCC Companies
+company check: `China Cinda Asset Management` not in BOCC Companies
+company check: `COG Operating` not in BOCC Companies

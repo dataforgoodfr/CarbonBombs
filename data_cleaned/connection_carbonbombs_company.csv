@@ -8,17 +8,16 @@ Afşin-Elbistan Coal Mine,Türkiye,Electricity Generating PCL
 Agha Jari,Iran,National Iranian Oil Company
 Ahwaz Asmari,Iran,National Iranian Oil Company
 Ahwaz Bangestan,Iran,National Iranian Oil Company
-Al Khaleej Gas project,Qatar,TotalEnergies SE
-Al Khaleej Gas project,Qatar,QatarEnergy
-Alpha North Coal Mine,Australia,GVK Group
+Al Khaleej Gas project,Qatar,No informations on company
+Alpha North Coal Mine,Australia,No informations on company
 Anadarko Shelf_Oklahoma,United States,No informations on company
 Angren Coal Mine,Uzbekistan,Ministry of Finance of Uzbekistan
-Anjialing Open-Pit Mine,China,China Coal Xinji Energy Co Ltd
 Anjialing Open-Pit Mine,China,HKSCC Nominees Limited
+Anjialing Open-Pit Mine,China,China Coal Xinji Energy Co Ltd
 Antaibao Surface Mine,China,China Coal Xinji Energy Co Ltd
 Antaibao Surface Mine,China,HKSCC Nominees Limited
 Arctic LNG 2 T1-3,Russia,No informations on company
-Area 1 LNG (T1&T2),Mozambique,Mozambique Rovuma Venture
+Area 1 LNG (T1&T2),Mozambique,No informations on company
 Area-1 Future Phases,Mozambique,TotalEnergies SE
 Arshanovsky Coal Mine,Russia,Rutek Alliance
 Asab,United Arab Emirates,No informations on company
@@ -118,8 +117,8 @@ Barnett Shale,United States,BRG Lone Star
 Barnett Shale,United States,Crown Equipment Co.
 Barnett Shale,United States,Eagleridge Operating
 Barnett Shale,United States,Endeavor Energy Resources LP
-Barnett Shale,United States,Enervest Operating
 Barnett Shale,United States,EOG Resources Inc
+Barnett Shale,United States,"Faulconer, Vernon E."
 Barnett Shale,United States,FDL Operating
 Barnett Shale,United States,Felderhoff Production
 Barnett Shale,United States,Fuse Energy
@@ -136,29 +135,29 @@ Barnett Shale,United States,UPP Operating
 Barnett Shale,United States,Exxon Mobil Corp
 Barnett Shale,United States,Hillwood O & G Operating Co.
 Barnett Shale,United States,Bedrock Production
-Barnett Shale,United States,"Faulconer, Vernon E."
+Barnett Shale,United States,Enervest Operating
 Barnett Shale,United States,1849 Energy
 Barnett Shale,United States,Hunt Oil Company
 Barnett Shale,United States,Zarvona Energy
 Barnett Shale,United States,NBX Energy
-Barnett Shale,United States,Citation Oil & Gas Corp
 Barnett Shale,United States,Devon Energy Corp
 Barnett Shale,United States,Merit Energy Company
 Barnett Shale,United States,Scout Energy Management
 Barnett Shale,United States,Petrobal Omega 1
 Barnett Shale,United States,Delta Oil & Gas
 Barnett Shale,United States,Elevation Resources
-Barnett Shale,United States,Arrowhead Productions
-Barnett Shale,United States,Stephens & Johnson Operating Co.
+Barnett Shale,United States,Ridge Oil Company
+Barnett Shale,United States,Citation Oil & Gas Corp
 Barnett Shale,United States,White Knight Production
 Barnett Shale,United States,Oakridge Oil And Gas
-Barnett Shale,United States,Ridge Oil Company
 Barnett Shale,United States,Apache Co.
 Barnett Shale,United States,Basa Resources Inc
+Barnett Shale,United States,Arrowhead Productions
 Barnett Shale,United States,Clearly Petroleum
 Barnett Shale,United States,Brazos River Exploration
 Barnett Shale,United States,North Texas Oil & Gas
 Barnett Shale,United States,Layline Energy
+Barnett Shale,United States,Stephens & Johnson Operating Co.
 Barzan,Qatar,Qatargas
 Basrah Gas project,Iraq,Basra Oil Company
 Basrah Gas project,Iraq,Missan Oil Company
@@ -183,8 +182,8 @@ Bowland Shale,United Kingdom,No informations on company
 Bu Hasa,United Arab Emirates,No informations on company
 Buertai Coal Mine,China,China Energy Investment Corp Ltd
 Buertai Coal Mine,China,HKSCC Nominees Limited
-Buliangou Coal Mine,China,Inner Mongolia Mengtai Group Co Ltd
 Buliangou Coal Mine,China,China Huadian Corp Ltd
+Buliangou Coal Mine,China,Inner Mongolia Mengtai Group Co Ltd
 Buzios (x-Franco),Brazil,Petróleo Brasileiro SA – Petrobras
 Byerwen Coal Mine,Australia,QCoal
 Byerwen Coal Mine,Australia,JFE Steel
@@ -201,15 +200,15 @@ Carboniferous Shale,Kazakhstan,China National Petroleum Corporation (CNPC)
 Carboniferous Shale,Kazakhstan,Exxon Mobil Corp
 Carboniferous Shale,Kazakhstan,Cooperative KazMunayGaz
 Carboniferous Shale,Kazakhstan,China Petrochemical Corporation (Sinopec Group)
-Carboniferous Shale,Kazakhstan,Shell PLC
 Carboniferous Shale,Kazakhstan,LUKOIL PJSC
 Carboniferous Shale,Kazakhstan,Chevron Corp
 Carboniferous Shale,Kazakhstan,Eni SpA
+Carboniferous Shale,Kazakhstan,Shell PLC
 Carboniferous Shale,Kazakhstan,
 Carboniferous Shale,Kazakhstan,Joint-Stock Company “Sovereign Wealth Fund “Samruk Kazyna”
 Carmichael Coal Project,Australia,Adani Group
-Central Arabian Offshore,Bahrain,No informations on company
 Central Arabian Offshore,Iran,No informations on company
+Central Arabian Offshore,Bahrain,No informations on company
 Central Arabian Offshore,Saudi Arabia,No informations on company
 Central Arabian Onshore,Saudi Arabia,No informations on company
 Central Arabian Onshore,Qatar,No informations on company
@@ -222,29 +221,25 @@ Chagannur No.1 Coal Mine,China,China Huarong Asset Management Company
 Chagannur No.1 Coal Mine,China,China Energy Investment Corp Ltd
 Chahasu Coal Mine,China,China Energy Investment Corp Ltd
 Chahasu Coal Mine,China,Hebei Construction & Investment Group Co Ltd
-Changcheng No.3 Coal Mine,China,Shandong Energy Co Ltd
 Changcheng No.3 Coal Mine,China,State Grid Corp of China
+Changcheng No.3 Coal Mine,China,Shandong Energy Co Ltd
 Changcheng No.3 Coal Mine,China,China Huadian Corp Ltd
 Changqing,China,China National Petroleum Corporation (CNPC)
 Chirodzi Coal Mine,Mozambique,Jindal Group
 Christina Lake,Canada,No informations on company
 Chukchi Sea Offshore,United States,No informations on company
-Collingham Shale,South Africa,TotalEnergies SE
-Collingham Shale,South Africa,QatarEnergy
-Collingham Shale,South Africa,Canadian Natural Resources Ltd (CNRL)
-Collingham Shale,South Africa,Africa Energy Corp.
-Collingham Shale,South Africa,
+Collingham Shale,South Africa,No informations on company
 Cumberland Coal Mine,United States,Contura Energy
-DJ Basin Tight Oil,United States,North Silo Resources
-DJ Basin Tight Oil,United States,Samson Exploration
-DJ Basin Tight Oil,United States,EOG Resources Inc
-DJ Basin Tight Oil,United States,Petro Operating Company
-DJ Basin Tight Oil,United States,Kerr Mcgee Oil & Gas Onshore
 DJ Basin Tight Oil,United States,Great Western Operating Co.
 DJ Basin Tight Oil,United States,Bonanza Creek Energy
-DJ Basin Tight Oil,United States,Bayswater Operating
-DJ Basin Tight Oil,United States,Kaiser Francis Oil Co
+DJ Basin Tight Oil,United States,Kerr Mcgee Oil & Gas Onshore
+DJ Basin Tight Oil,United States,Samson Exploration
 DJ Basin Tight Oil,United States,Helis Oil & Gas Company
+DJ Basin Tight Oil,United States,North Silo Resources
+DJ Basin Tight Oil,United States,Bayswater Operating
+DJ Basin Tight Oil,United States,Petro Operating Company
+DJ Basin Tight Oil,United States,Kaiser Francis Oil Co
+DJ Basin Tight Oil,United States,EOG Resources Inc
 DJ Basin Tight Oil,United States,Verdad Resources
 DJ Basin Tight Oil,United States,Noble Energy
 DJ Basin Tight Oil,United States,Highpoint Operating Corp.
@@ -255,45 +250,44 @@ DJ Basin Tight Oil,United States,Bison Oil & Gas
 DJ Basin Tight Oil,United States,PDC Energy Inc
 DJ Basin Tight Oil,United States,Whiting Oil & Gas Corporation
 Dafosi Coal Mine,China,Shaanxi Investment Group Co Ltd
-Dafosi Coal Mine,China,Binxian Coal Company
 Dafosi Coal Mine,China,Shaanxi Coal and Chemical Industry Group Co Ltd
+Dafosi Coal Mine,China,Binxian Coal Company
 Dahaize Coal Mine,China,China Coal Xinji Energy Co Ltd
 Dalaihushuo Coal Mine,China,Jilin Province Coal Industry Group
 Dalaihushuo Coal Mine,China,Tibet Hengyisheng Investment Company
 Dalaihushuo Coal Mine,China,Fude Life Insurance Company
 Daliuta Coal Mine,China,China Energy Investment Corp Ltd
 Daliuta Coal Mine,China,HKSCC Nominees Limited
+Dananhu No. 7 Coal Mine,China,China Energy Investment Corp Ltd
+Dananhu No. 7 Coal Mine,China,China Coal Xinji Energy Co Ltd
 Dananhu No. 7 Coal Mine,China,China Reform Holdings Company
 Dananhu No. 7 Coal Mine,China,China Chengtong Holdings Group
-Dananhu No. 7 Coal Mine,China,China Coal Xinji Energy Co Ltd
-Dananhu No. 7 Coal Mine,China,China Energy Investment Corp Ltd
 Dananhu No.1 Coal Mine,China,China Energy Investment Corp Ltd
 Dananhu West No.2 Coal Mine,China,China Energy Investment Corp Ltd
 Daqing,China,No informations on company
 Dingji Coal Mine,China,Huaihe Energy
 Dingji Coal Mine,China,China Cinda Asset Management
 Dipka Coal Mine,India,Coal India Ltd
-Dolphin,Qatar,Mubadala Investment Company
 Dolphin,Qatar,TotalEnergies SE
+Dolphin,Qatar,Mubadala Investment Company
 Dolphin,Qatar,Occidental Petroleum Corp
 Dongzhouyao Coal Mine,China,Jinneng Holding Group Co Ltd
 Dovletabad-Donmez,Turkmenistan,No informations on company
 Duvernay,Canada,No informations on company
-Eagle Ford Shale,United States,ConocoPhillips
-Eagle Ford Shale,United States,Exco Operating Co.
-Eagle Ford Shale,United States,Exxon Mobil Corp
-Eagle Ford Shale,United States,Murphy E&P. Company
-Eagle Ford Shale,United States,Gulftex Energy
-Eagle Ford Shale,United States,Earthstone Operating
-Eagle Ford Shale,United States,BPX Operating
 Eagle Ford Shale,United States,Recoil Resources Operating
+Eagle Ford Shale,United States,BPX Operating
 Eagle Ford Shale,United States,Marathon Oil Corp
+Eagle Ford Shale,United States,Earthstone Operating
 Eagle Ford Shale,United States,Magnolia Oil & Gas Operating
+Eagle Ford Shale,United States,Murphy E&P. Company
+Eagle Ford Shale,United States,Exxon Mobil Corp
+Eagle Ford Shale,United States,Exco Operating Co.
+Eagle Ford Shale,United States,ConocoPhillips
+Eagle Ford Shale,United States,Gulftex Energy
 Eagle Ford Shale,United States,Equinor ASA
-Eagle Ford Shale,United States,Virtex Operating Company
 Eagle Ford Shale,United States,Devon Energy Corp
 Eagle Ford Shale,United States,Auterra Operating
-Eagle Ford Shale,United States,EOG Resources Inc
+Eagle Ford Shale,United States,Virtex Operating Company
 Eagle Ford Shale,United States,Verdun Oil & Gas
 Eagle Ford Shale,United States,Texas American Resources Company
 Eagle Ford Shale,United States,SilverBow Resources Inc
@@ -302,11 +296,8 @@ Eagle Ford Shale,United States,Ageron Energy
 Eagle Ford Shale,United States,Chesapeake Operating
 Eagle Ford Shale,United States,Apache Co.
 Eagle Ford Shale,Mexico,No informations on company
-East Natuna (x-Natuna D-Alpha),Indonesia,Pertamina Persero PT
-East Natuna (x-Natuna D-Alpha),Indonesia,Petroliam Nasional Berhad (Petronas)
-East Natuna (x-Natuna D-Alpha),Indonesia,PTT PLC
-East Natuna (x-Natuna D-Alpha),Indonesia,Harbour Energy PLC
-East Natuna (x-Natuna D-Alpha),Indonesia,Kuwait Petroleum Corp
+Eagle Ford Shale,United States,EOG Resources Inc
+East Natuna (x-Natuna D-Alpha),Indonesia,No informations on company
 Eastern Gas Program,Russia,Novatek
 El Descanso Coal Mine,Colombia,Drummond Company
 El Sharara,Libya,National Oil Corporation (Libya)
@@ -318,8 +309,8 @@ Elga Coal Mine,Russia,A-Property
 Ensham Coal Mine,Australia,Thungela Resources Ltd
 Ensham Coal Mine,Australia,LX International
 Erkovetskiy Coal Mine,Russia,Russian Coal
-Fengjiata Coal Mine,China,Shaanxi Investment Group Co Ltd
 Fengjiata Coal Mine,China,Shaanxi Coal and Chemical Industry Group Co Ltd
+Fengjiata Coal Mine,China,Shaanxi Investment Group Co Ltd
 Fording River,Canada,Teck Resources Ltd
 GAM Coal Mine,Indonesia,LG International
 GAM Coal Mine,Indonesia,Titan Infra Energy PT
@@ -334,7 +325,7 @@ Gaojialiang No.1 Coal Mine,China,Shougang Group Co Ltd
 Gaotouyao Coal Mine,China,China Huaneng Group Co Ltd
 Gaotouyao Coal Mine,China,Guangdong Hengjian Investment Holding Co Ltd
 Gaotouyao Coal Mine,China,China Energy Investment Corp Ltd
-Gare Pelma Sector II,India,Gujarat State Electricity Corporation
+Gare Pelma Sector II,India,Maharashtra State Power Generation Company Limited
 Garzweiler Coal Mine,Germany,RWE AG
 Gazprom dobycha Nadym,Russia,Gazprom PJSC
 Gazprom dobycha Orenburg,Russia,Gazprom PJSC
@@ -362,20 +353,20 @@ Grootegeluk Coal Mine,South Africa,Exxaro Resources Ltd
 Gulf Coast Centre Offshore,United States,No informations on company
 Gulf Deepwater Offshore,Mexico,No informations on company
 Guojiatan Coal Mine,China,Shaanxi Yulin Energy Group Co Ltd
+Guojiawan Coal Mine,China,Fugu State-Owned Asset Management and Operation Company
 Guojiawan Coal Mine,China,China Energy Investment Corp Ltd
 Guojiawan Coal Mine,China,Shaanxi Coal and Chemical Industry Group Co Ltd
-Guojiawan Coal Mine,China,Fugu State-Owned Asset Management and Operation Company
-Guqiao Coal Mine,China,China Energy Investment Corp Ltd
 Guqiao Coal Mine,China,Huaihe Energy
 Guqiao Coal Mine,China,China Cinda Asset Management
+Guqiao Coal Mine,China,China Energy Investment Corp Ltd
 Haerwusu Surface Mine,China,China Energy Investment Corp Ltd
 Haerwusu Surface Mine,China,HKSCC Nominees Limited
-Halagou Coal Mine,China,China Energy Investment Corp Ltd
 Halagou Coal Mine,China,HKSCC Nominees Limited
+Halagou Coal Mine,China,China Energy Investment Corp Ltd
+Halfayah,Iraq,Basra Oil Company
+Halfayah,Iraq,Petroliam Nasional Berhad (Petronas)
 Halfayah,Iraq,China National Petroleum Corporation (CNPC)
 Halfayah,Iraq,TotalEnergies SE
-Halfayah,Iraq,Petroliam Nasional Berhad (Petronas)
-Halfayah,Iraq,Basra Oil Company
 Hambach Coal Mine,Germany,RWE AG
 Hamilton County Mine No.1,United States,Alliance Resource Partners LP
 Hanglaiwan Coal Mine,China,Shaanxi Youser Group
@@ -384,34 +375,34 @@ Harmaliyah,Saudi Arabia,No informations on company
 Hassi Messaoud,Algeria,Sonatrach SPA
 Hassi R'Mel (Domestic),Algeria,Sonatrach SPA
 Haynesville/Bossier Shale,United States,EGH Operating
-Haynesville/Bossier Shale,United States,Brix Operating
-Haynesville/Bossier Shale,United States,Fortune Resources
-Haynesville/Bossier Shale,United States,Blue Dome
-Haynesville/Bossier Shale,United States,Chesapeake Operating
-Haynesville/Bossier Shale,United States,Pine Wave Energy Partners Operating
-Haynesville/Bossier Shale,United States,Urban Oil & Gas Group
-Haynesville/Bossier Shale,United States,Ellora Energy
-Haynesville/Bossier Shale,United States,Sonerra Resources Corporation
-Haynesville/Bossier Shale,United States,TMR Exploration
 Haynesville/Bossier Shale,United States,Brooks Petroleum
+Haynesville/Bossier Shale,United States,TMR Exploration
+Haynesville/Bossier Shale,United States,Sonerra Resources Corporation
+Haynesville/Bossier Shale,United States,Ellora Energy
+Haynesville/Bossier Shale,United States,Urban Oil & Gas Group
+Haynesville/Bossier Shale,United States,Fortune Resources
+Haynesville/Bossier Shale,United States,Chesapeake Operating
 Haynesville/Bossier Shale,United States,Brookston Energy
+Haynesville/Bossier Shale,United States,Blue Dome
+Haynesville/Bossier Shale,United States,Brix Operating
+Haynesville/Bossier Shale,United States,Pine Wave Energy Partners Operating
 Haynesville/Bossier Shale,United States,Trinity Operating (USG)
-Haynesville/Bossier Shale,United States,Breitburn Operating
+Haynesville/Bossier Shale,United States,Dallas Production
 Haynesville/Bossier Shale,United States,Highmark Energy
 Haynesville/Bossier Shale,United States,Palmer Petroleum
 Haynesville/Bossier Shale,United States,Trivium Operating
 Haynesville/Bossier Shale,United States,Verado Energy
 Haynesville/Bossier Shale,United States,BRG Lone Star
 Haynesville/Bossier Shale,United States,Tellurian Operating
-Haynesville/Bossier Shale,United States,RFE Operating
+Haynesville/Bossier Shale,United States,Vine Oil & Gas
 Haynesville/Bossier Shale,United States,Ensight IV Energy
-Haynesville/Bossier Shale,United States,Goodrich Petroleum Co.
-Haynesville/Bossier Shale,United States,Dallas Production
 Haynesville/Bossier Shale,United States,Merit Energy Company
 Haynesville/Bossier Shale,United States,New Century Exploration
+Haynesville/Bossier Shale,United States,RFE Operating
 Haynesville/Bossier Shale,United States,Titan Rock E&P
+Haynesville/Bossier Shale,United States,Breitburn Operating
 Haynesville/Bossier Shale,United States,Sklar Exploration Company
-Haynesville/Bossier Shale,United States,Vine Oil & Gas
+Haynesville/Bossier Shale,United States,Goodrich Petroleum Co.
 Haynesville/Bossier Shale,United States,GEP Haynesville
 Haynesville/Bossier Shale,United States,Covey Park Operating
 Haynesville/Bossier Shale,United States,Shelby Boswell Operator
@@ -428,12 +419,12 @@ Haynesville/Bossier Shale,United States,Amplify Energy Corp
 Haynesville/Bossier Shale,United States,BP PLC
 Haynesville/Bossier Shale,United States,Indigo Minerals
 Haynesville/Bossier Shale,United States,Chevron Corp
-Haynesville/Bossier Shale,United States,BPX Operating
 Haynesville/Bossier Shale,United States,East Texas Exploration
 Haynesville/Bossier Shale,United States,Harleton Oil & Gas
 Haynesville/Bossier Shale,United States,Exxon Mobil Corp
-Haynesville/Bossier Shale,United States,Valence Operating Company
 Haynesville/Bossier Shale,United States,CCI
+Haynesville/Bossier Shale,United States,Valence Operating Company
+Haynesville/Bossier Shale,United States,BPX Operating
 Haynesville/Bossier Shale,United States,Sheridan Production Company
 Haynesville/Bossier Shale,United States,Sabine Oil & Gas Corporation
 Haynesville/Bossier Shale,United States,Rockcliff Energy Operating
@@ -460,8 +451,8 @@ Hongshuliang Coal Mine,China,Erdos Chunhui Forest Company
 Hongshuliang Coal Mine,China,Junggar Juli Cultivation Company
 Horizon Oil Sands Project,Canada,No informations on company
 Huangling No.2 Coal Mine,China,Industrial and Commercial Bank of China
-Huangling No.2 Coal Mine,China,Shaanxi Coal and Chemical Industry Group Co Ltd
 Huangling No.2 Coal Mine,China,Jiangsu Yueda Group
+Huangling No.2 Coal Mine,China,Shaanxi Coal and Chemical Industry Group Co Ltd
 Huangyuchuan Coal Mine,China,China Energy Investment Corp Ltd
 Huangyuchuan Coal Mine,China,Elion Resources Group Ltd
 Hulusu Coal Mine,China,China Coal Xinji Energy Co Ltd
@@ -494,14 +485,14 @@ Jinjitan Coal Mine,China,Jiaxing Dejian Investment Partnership
 Johan Sverdrup,Norway,BP PLC
 Johan Sverdrup,Norway,TotalEnergies SE
 Johan Sverdrup,Norway,Aker BP ASA
-Johan Sverdrup,Norway,Lundin Energy AB
-Johan Sverdrup,Norway,Equinor ASA
 Johan Sverdrup,Norway,Petoro AS
+Johan Sverdrup,Norway,Equinor ASA
+Johan Sverdrup,Norway,Lundin Energy AB
 KPC Operation Coal Mine,Indonesia,Bumi Resources
 Kaniha Coal Mine,India,Coal India Ltd
-Karachaganak,Kazakhstan,Joint-Stock Company “Sovereign Wealth Fund “Samruk Kazyna”
-Karachaganak,Kazakhstan,Chevron Corp
 Karachaganak,Kazakhstan,LUKOIL PJSC
+Karachaganak,Kazakhstan,Chevron Corp
+Karachaganak,Kazakhstan,Joint-Stock Company “Sovereign Wealth Fund “Samruk Kazyna”
 Karachaganak,Kazakhstan,Shell PLC
 Karachaganak,Kazakhstan,Eni SpA
 Kashagan,Kazakhstan,JSC Samruk-Kazyna
@@ -511,8 +502,8 @@ Kashagan,Kazakhstan,Exxon Mobil Corp
 Kashagan,Kazakhstan,Shell PLC
 Kearl,Canada,No informations on company
 Kerandari BC,India,Government of India
-Khafji,Kuwait,Saudi Arabian Oil Company (Saudi Aramco)
 Khafji,Kuwait,Kuwait Petroleum Corp
+Khafji,Kuwait,Saudi Arabian Oil Company (Saudi Aramco)
 Khurais project,Saudi Arabia,Saudi Arabian Oil Company (Saudi Aramco)
 Khursaniyah,Saudi Arabia,Saudi Arabian Oil Company (Saudi Aramco)
 Kish Gas Project,Iran,National Iranian Oil Company
@@ -525,12 +516,12 @@ Kronprins Christian Offshore,Denmark,No informations on company
 Ku-Maloob-Zaap Project,Mexico,Petróleos Mexicanos (PEMEX)
 Kusmunda Coal Mine,India,Coal India Ltd
 Kuznetsk Depression (Kuzbass) CBM,Russia,No informations on company
-La Luna Shale,Colombia,Parko Services
-La Luna Shale,Venezuela,Shell PLC
-La Luna Shale,Colombia,Joshi Technologies International Inc.
-La Luna Shale,Venezuela,Chevron Corp
 La Luna Shale,Venezuela,NEMAKA
+La Luna Shale,Venezuela,Chevron Corp
 La Luna Shale,Venezuela,PDVSA
+La Luna Shale,Venezuela,Shell PLC
+La Luna Shale,Colombia,Parko Services
+La Luna Shale,Colombia,Joshi Technologies International Inc.
 La Luna Shale,Colombia,UNIÓN TEMPORAL ISMOCOL-JOSHI-PARKO
 La Luna Shale,Venezuela,
 La Luna Shale,Colombia,Occidental Petroleum Corp
@@ -571,17 +562,17 @@ Longmaxi Shale,China,
 Longmaxi Shale,China,Chevron Corp
 Longmaxi Shale,China,China National Petroleum Corporation (CNPC)
 Longmaxi Shale (Sichuan/Changyu),China,China Petrochemical Corporation (Sinopec Group)
-Longwan Coal Mine,China,Shanxi Juhuang Century Investment Company
+Longwan Coal Mine,China,Shanxi Yujin Trading Company
 Longwan Coal Mine,China,Jinneng Holding Group Co Ltd
 Longwan Coal Mine,China,Huayang New Material Technology Group Co Ltd
 Longwan Coal Mine,China,Yangcheng County Yangtai Group Industrial Co Ltd
-Longwan Coal Mine,China,Shanxi Yujin Trading Company
+Longwan Coal Mine,China,Shanxi Juhuang Century Investment Company
 Longwanggou Coal Mine,China,Luen Mei Group
 Longwanggou Coal Mine,China,China Datang Corp
+Lower Zakum,United Arab Emirates,China National Petroleum Corporation (CNPC)
+Lower Zakum,United Arab Emirates,Inpex Corp
 Lower Zakum,United Arab Emirates,Abu Dhabi National Oil Company
 Lower Zakum,United Arab Emirates,Oil and Natural Gas Corporation Ltd (ONGC)
-Lower Zakum,United Arab Emirates,Inpex Corp
-Lower Zakum,United Arab Emirates,China National Petroleum Corporation (CNPC)
 Loy Yang Coal Mine,Australia,AGL Energy Ltd
 Lublin Basin Silurian Shale,Poland,
 Lublin Basin Silurian Shale,Poland,Polskie Górnictwo Naftowe i Gazownictwo SA (PGNiG)
@@ -599,18 +590,19 @@ Majnoon,Iraq,Basra Oil Company
 Mandakini B,India,National Thermal Power Corporation
 Manifa (redevelop),Saudi Arabia,Saudi Arabian Oil Company (Saudi Aramco)
 Mansouri Bangestan,Iran,National Iranian Oil Company
-Marcellus Shale,United States,Tribune Resources
-Marcellus Shale,United States,Repsol SA
-Marcellus Shale,United States,BKV Operations
-Marcellus Shale,United States,Jay-Bee Oil & Gas
-Marcellus Shale,United States,Equinor ASA
-Marcellus Shale,United States,Northeast Natural Energy LLC
 Marcellus Shale,United States,Inflection Energy
 Marcellus Shale,United States,EXCO Resources Inc
+Marcellus Shale,United States,Equinor ASA
+Marcellus Shale,United States,Northeast Natural Energy LLC
+Marcellus Shale,United States,BKV Operations
+Marcellus Shale,United States,Repsol SA
+Marcellus Shale,United States,Tribune Resources
 Marcellus Shale,United States,HG Energy
+Marcellus Shale,United States,Jay-Bee Oil & Gas
 Marcellus Shale,United States,Chesapeake Operating
 Marcellus Shale,United States,CNX Gas Co.
 Marcellus Shale,United States,Antero Resources Corp
+Marcellus Shale,United States,Arsenal Resources
 Marcellus Shale,United States,Olympus Energy
 Marcellus Shale,United States,Range Resources Appalachia
 Marcellus Shale,United States,Snyder Bros
@@ -620,7 +612,6 @@ Marcellus Shale,United States,Exxon Mobil Corp
 Marcellus Shale,United States,Southwestern Energy Co
 Marcellus Shale,United States,Greylock Production
 Marcellus Shale,United States,Gulfport Energy Corp
-Marcellus Shale,United States,Arsenal Resources
 Maritsa Coal Mines,Bulgaria,Bulgarian Energy Holding EAD
 Marjan,Saudi Arabia,Saudi Arabian Oil Company (Saudi Aramco)
 Marun,Iran,National Iranian Oil Company
@@ -631,8 +622,8 @@ Mengcun Coal Mine,China,China Development Bank
 Menilite Shale,Ukraine,No informations on company
 Menkeqing Coal Mine,China,Manshi Group
 Menkeqing Coal Mine,China,Shenergy Group Co Ltd
-Menkeqing Coal Mine,China,China Petrochemical Corporation (Sinopec Group)
 Menkeqing Coal Mine,China,China Coal Xinji Energy Co Ltd
+Menkeqing Coal Mine,China,China Petrochemical Corporation (Sinopec Group)
 Meramec Shale,United States,Unit Corp
 Meramec Shale,United States,Exxon Mobil Corp
 Meramec Shale,United States,Sanguine Gas Exploration
@@ -649,10 +640,10 @@ Muduchaideng Coal Mine,China,Inner Mongolia Boyuan Holdings Group
 Murray River Coal Mine,Canada,HD Mining International
 NLNG Base Project,Nigeria,No informations on company
 Nahr bin Umar,Iraq,Basra Oil Company
-Nalin River No.2 Coal Mine,China,Inner Mongolia Boyuan Holdings Group
 Nalin River No.2 Coal Mine,China,China Coal Xinji Energy Co Ltd
-New Largo Coal Mine,South Africa,New Largo Employee & Community Trusts
+Nalin River No.2 Coal Mine,China,Inner Mongolia Boyuan Holdings Group
 New Largo Coal Mine,South Africa,Industrial Development Corporation
+New Largo Coal Mine,South Africa,New Largo Employee & Community Trusts
 New Largo Coal Mine,South Africa,Seriti
 Ningtiaota Coal Mine,China,Shaanxi Coal and Chemical Industry Group Co Ltd
 Ningtiaota Coal Mine,China,Yulin State-Owned Capital Operation and Management Company
@@ -660,9 +651,9 @@ Ningtiaota Coal Mine,China,Shenmu City State-Owned Assets Operation Co
 Ningxia Hongliu Coal Mine,China,China Energy Investment Corp Ltd
 Ningxia Hongliu Coal Mine,China,Ningxia State-Owned Capital Operation Group
 North Antelope Rochelle Coal Mine,United States,Peabody Energy Corp
+North Field,Qatar,Shell PLC
 North Field,Qatar,TotalEnergies SE
 North Field,Qatar,QatarEnergy
-North Field,Qatar,Shell PLC
 North Field C LNG,Qatar,No informations on company
 North Field E,Qatar,No informations on company
 North Kara Sea Offshore,Russia,No informations on company
@@ -670,42 +661,42 @@ North Slope Onshore,United States,No informations on company
 Oil shale China,China,
 Oil shale China,China,China National Offshore Oil Corp (CNOOC)
 Olive Downs Coal Mine,Australia,Pembroke Resources
+Orinoco Joint Ventures,Venezuela,Indian Oil Corp Ltd
+Orinoco Joint Ventures,Venezuela,PC Venezuela LTD
 Orinoco Joint Ventures,Venezuela,PDVSA
 Orinoco Joint Ventures,Venezuela,Repsol SA
 Orinoco Joint Ventures,Venezuela,Oil and Natural Gas Corporation of India
-Orinoco Joint Ventures,Venezuela,PC Venezuela LTD
-Orinoco Joint Ventures,Venezuela,Indian Oil Corp Ltd
+PRB Tight Oil,United States,Rockies Resources Holdings
 PRB Tight Oil,United States,Peak Powder River Resources
 PRB Tight Oil,United States,Petro-Hunt
 PRB Tight Oil,United States,Rebellion Energy
-PRB Tight Oil,United States,Rockies Resources Holdings
 PRB Tight Oil,United States,Titan Exploration
+PRB Tight Oil,United States,Wold Energy Partners
 PRB Tight Oil,United States,Balidor Oil & Gas
-PRB Tight Oil,United States,Navigation Powder River
 PRB Tight Oil,United States,Bright Rock Energy
 PRB Tight Oil,United States,Chesapeake Operating
 PRB Tight Oil,United States,Renos Land & Minerals Company
+PRB Tight Oil,United States,Navigation Powder River
 PRB Tight Oil,United States,Anadarko
-PRB Tight Oil,United States,Impact Exploration & Production
 PRB Tight Oil,United States,Ballard Petroleum Holdings
-PRB Tight Oil,United States,Carbon Creek Energy
-PRB Tight Oil,United States,Anschutz Exploration Corporation
-PRB Tight Oil,United States,EOG Resources Inc
-PRB Tight Oil,United States,Northwoods Operating
-PRB Tight Oil,United States,Denbury Onshore
-PRB Tight Oil,United States,Vermilion Energy Inc
-PRB Tight Oil,United States,Ballard Petroleum Holding
-PRB Tight Oil,United States,Devon Energy Corp
-PRB Tight Oil,United States,FDL Operating
 PRB Tight Oil,United States,True Oil
-PRB Tight Oil,United States,Wold Energy Partners
 PRB Tight Oil,United States,Contango Resources
+PRB Tight Oil,United States,Carbon Creek Energy
+PRB Tight Oil,United States,Impact Exploration & Production
+PRB Tight Oil,United States,FDL Operating
+PRB Tight Oil,United States,Devon Energy Corp
 PRB Tight Oil,United States,Continental Resources
+PRB Tight Oil,United States,Vermilion Energy Inc
+PRB Tight Oil,United States,Denbury Onshore
+PRB Tight Oil,United States,Ballard Petroleum Holding
+PRB Tight Oil,United States,Northwoods Operating
+PRB Tight Oil,United States,EOG Resources Inc
+PRB Tight Oil,United States,Anschutz Exploration Corporation
 PTBA Coal Mines,Indonesia,Indonesia Asahan Aluminium Persero PT
 Paardekop Coal Mine,South Africa,Glencore PLC
 Pakar North Coal Mine,Indonesia,Bayan Resources Tbk PT
-Pangpangta Coal Mine,China,China Cinda Asset Management
 Pangpangta Coal Mine,China,Shanxi Coking Coal Group Co Ltd
+Pangpangta Coal Mine,China,China Cinda Asset Management
 Pangpangta Coal Mine,China,China Construction Bank
 Parnaiba Onshore,Brazil,No informations on company
 Pars Southwest,Iran,No informations on company
@@ -715,30 +706,30 @@ Peak Downs Coal Mine,Australia,BHP Group Ltd
 Peak Downs Coal Mine,Australia,Mitsubishi Corp
 Pereyaslovskiy Coal Mine,Russia,Russian Coal
 Permian Conventional_Texas,United States,No informations on company
-Permian Delaware Tight,United States,ConocoPhillips
-Permian Delaware Tight,United States,Kaiser Francis Oil Co
 Permian Delaware Tight,United States,Legacy Reserves Operating
+Permian Delaware Tight,United States,Kaiser Francis Oil Co
 Permian Delaware Tight,United States,Spur Energy Partners
 Permian Delaware Tight,United States,Blackbeard Operating LLC
-Permian Delaware Tight,United States,Point Energy Partners Petro
+Permian Delaware Tight,United States,Exxon Mobil Corp
 Permian Delaware Tight,United States,Abraxas
-Permian Delaware Tight,United States,Ameredev
+Permian Delaware Tight,United States,Point Energy Partners Petro
 Permian Delaware Tight,United States,Rio Oil And Gas (Permian)
 Permian Delaware Tight,United States,Tall City Operations
+Permian Delaware Tight,United States,ConocoPhillips
 Permian Delaware Tight,United States,Fasken Oil And Ranch
-Permian Delaware Tight,United States,Sheridan Production Company
-Permian Delaware Tight,United States,Mewbourne Oil Company
+Permian Delaware Tight,United States,Ameredev
+Permian Delaware Tight,United States,Murchison Oil And Gas
+Permian Delaware Tight,United States,Diamondback E&P
 Permian Delaware Tight,United States,Jetta Permian
 Permian Delaware Tight,United States,Capitan Energy
-Permian Delaware Tight,United States,Exxon Mobil Corp
-Permian Delaware Tight,United States,Murchison Oil And Gas
+Permian Delaware Tight,United States,Mewbourne Oil Company
 Permian Delaware Tight,United States,Matador Production Company
 Permian Delaware Tight,United States,EOG Resources Inc
 Permian Delaware Tight,United States,Devon Energy Corp
 Permian Delaware Tight,United States,BTA Oil Producers
 Permian Delaware Tight,United States,Occidental Petroleum Corp
 Permian Delaware Tight,United States,Chevron Corp
-Permian Delaware Tight,United States,Diamondback E&P
+Permian Delaware Tight,United States,Sheridan Production Company
 Permian Midland Tight,United States,Prime Operating Company
 Permian Midland Tight,United States,TRP Operating
 Permian Midland Tight,United States,Bayswater Operating
@@ -866,29 +857,29 @@ Shaqu No.1 Coal Mine,China,Shanxi Coking Coal Group Co Ltd
 Shaqu No.1 Coal Mine,China,China Coal Xinji Energy Co Ltd
 Shaybah,Saudi Arabia,Saudi Arabian Oil Company (Saudi Aramco)
 Shengli,China,China Petrochemical Corporation (Sinopec Group)
+Shengli East No.2 Coal Mine,China,Beijing Energy Holding Co Ltd
+Shengli East No.2 Coal Mine,China,Hebei Construction & Investment Group Co Ltd
 Shengli East No.2 Coal Mine,China,China Datang Corp
 Shengli East No.2 Coal Mine,China,HKSCC Nominees Limited
 Shengli East No.2 Coal Mine,China,Tianjin Energy Investment Co Ltd
-Shengli East No.2 Coal Mine,China,Hebei Construction & Investment Group Co Ltd
-Shengli East No.2 Coal Mine,China,Beijing Energy Holding Co Ltd
 Shengli No.1 Open-Pit Coal Mine,China,China Energy Investment Corp Ltd
 Shengli No.1 Open-Pit Coal Mine,China,China Huaneng Group Co Ltd
 Shenhua Baorixile Surface Coal Mine,China,China Energy Investment Corp Ltd
 Shenhua Baorixile Surface Coal Mine,China,Guangda Holding Company
 Shenhua Baorixile Surface Coal Mine,China,China National Petroleum Corporation (CNPC)
 Shenhua Baorixile Surface Coal Mine,China,Changchun Jijun Trade Company
-Shenhua Bulianta Coal Mine,China,China Energy Investment Corp Ltd
 Shenhua Bulianta Coal Mine,China,HKSCC Nominees Limited
+Shenhua Bulianta Coal Mine,China,China Energy Investment Corp Ltd
 Shenhua Heidaigou Surface Coal Mine,China,China Energy Investment Corp Ltd
 Shenhua Heidaigou Surface Coal Mine,China,China Cinda Asset Management
-Shicaocun Coal Mine,China,Ningxia State-Owned Assets Company
 Shicaocun Coal Mine,China,China Energy Investment Corp Ltd
+Shicaocun Coal Mine,China,Ningxia State-Owned Assets Company
 Shigetai Coal Mine,China,China Energy Investment Corp Ltd
 Shigetai Coal Mine,China,HKSCC Nominees Limited
-Shilawusu Coal Mine,China,Shandong Energy Co Ltd
-Shilawusu Coal Mine,China,Shanghai Huayi Group
 Shilawusu Coal Mine,China,Jiutai Energy
 Shilawusu Coal Mine,China,Jinchengtai Limited Liability Company Of Chemical Industry of Ordos City
+Shilawusu Coal Mine,China,Shandong Energy Co Ltd
+Shilawusu Coal Mine,China,Shanghai Huayi Group
 Shitoumei No.1 Coal Mine,China,Xinjiang Energy Group
 Shtokman,Russia,TotalEnergies SE
 Shtokman,Russia,Equinor ASA
@@ -897,59 +888,58 @@ Shubarkol Coal Mine,Kazakhstan,Joint Resources JSC
 Shubarkol Coal Mine,Kazakhstan,
 Shurapskaya Coal Mine,Russia,Siberian Business Union-Coal (SBU)
 Siarmal Coal Mine,India,Coal India Ltd
-Sihe Coal Mine,China,China Development Bank
 Sihe Coal Mine,China,China Cinda Asset Management
 Sihe Coal Mine,China,Jinneng Holding Group Co Ltd
+Sihe Coal Mine,China,China Development Bank
 Sijiazhuang Coal Mine,China,Huayang New Material Technology Group Co Ltd
+Sirte Shale,Libya,ConocoPhillips
 Sirte Shale,Libya,
 Sirte Shale,Libya,Equinor ASA
 Sirte Shale,Libya,TotalEnergies SE
 Sirte Shale,Libya,Repsol SA
 Sirte Shale,Libya,Hess Corporation
-Sirte Shale,Libya,ConocoPhillips
 Sirte Shale,Libya,Marathon Oil Corp
-Sirte Shale,Libya,OMV AG
+Sirte Shale,Libya,National Oil Corporation
 Sirte Shale,Libya,Wintershall Dea GmbH
 Sirte Shale,Libya,Gazprom PJSC
 Sirte Shale,Libya,Suncor Energy Inc
-Sirte Shale,Libya,National Oil Corporation
+Sirte Shale,Libya,OMV AG
 Sirte Shale,Libya,National Oil Corporation (Libya)
 Sirte Shale,Libya,Eni SpA
-South Pars (Phases 2-3) dry gas,Iran,Petroliam Nasional Berhad (Petronas)
-South Pars (Phases 2-3) dry gas,Iran,Gazprom PJSC
 South Pars (Phases 2-3) dry gas,Iran,TotalEnergies SE
+South Pars (Phases 2-3) dry gas,Iran,Gazprom PJSC
+South Pars (Phases 2-3) dry gas,Iran,Petroliam Nasional Berhad (Petronas)
 South Pars (Phases 20-21),Iran,National Iranian Oil Company
 South Pars (Phases 22-24),Iran,No informations on company
-South Pars (Phases 4-5) dry gas,Iran,Eni SpA
-South Pars (Phases 4-5) dry gas,Iran,PPL Corp
 South Pars (Phases 4-5) dry gas,Iran,PPI
 South Pars (Phases 4-5) dry gas,Iran,National Iranian Oil Company
+South Pars (Phases 4-5) dry gas,Iran,Eni SpA
+South Pars (Phases 4-5) dry gas,Iran,PPL Corp
 South Pars (Phases 9-10) dry gas,Iran,National Iranian Oil Company
 Southeast Uplift Onshore Heilongjiang Province,China,No informations on company
 "Spirit River (Notikewin, Falher, Wilrich)",Canada,No informations on company
 Stepnoy Coal Mine,Russia,Octo Coal
-Suancigou Coal Mine,China,Inner Mongolia Yitai Investment Co Ltd
 Suancigou Coal Mine,China,Shanxi Yuedian Energy
 Suancigou Coal Mine,China,Beijing Jingneng Power Company
+Suancigou Coal Mine,China,Inner Mongolia Yitai Investment Co Ltd
 Sudair Shale,Saudi Arabia,No informations on company
 Sugodinsk-Ogodzhinsky Coal Mine,Russia,A-Property
-Syncrude Mildred Lake/Aurora,Canada,China Petrochemical Corporation (Sinopec Group)
-Syncrude Mildred Lake/Aurora,Canada,China National Offshore Oil Corp (CNOOC)
 Syncrude Mildred Lake/Aurora,Canada,Suncor Energy Inc
 Syncrude Mildred Lake/Aurora,Canada,Imperial Oil Resources Limited
+Syncrude Mildred Lake/Aurora,Canada,China Petrochemical Corporation (Sinopec Group)
+Syncrude Mildred Lake/Aurora,Canada,China National Offshore Oil Corp (CNOOC)
 Talahao Coal Mine,China,Inner Mongolia Yitai Investment Co Ltd
 Talaipalli Coal Mine,India,National Thermal Power Corporation
 Taldinsky Coal Mine,Russia,Ural Mining Metallurgical Company
 Talike District No. 2 Coal Mine,China,Bazhou Dongchen Industry and Trade Company
-Tambey Zone (Yamal Megaproject),Russia,China Import-Export Bank
-Tambey Zone (Yamal Megaproject),Russia,China Investment Co
-Tambey Zone (Yamal Megaproject),Russia,Wutongshu Investment Platform Co.
-Tambey Zone (Yamal Megaproject),Russia,China Development Bank
-Tambey Zone (Yamal Megaproject),Russia,TotalEnergies SE
 Tambey Zone (Yamal Megaproject),Russia,PAO NOVATEK
+Tambey Zone (Yamal Megaproject),Russia,TotalEnergies SE
 Tambey Zone (Yamal Megaproject),Russia,China National Petroleum Corporation (CNPC)
+Tambey Zone (Yamal Megaproject),Russia,Wutongshu Investment Platform Co.
+Tambey Zone (Yamal Megaproject),Russia,China Investment Co
+Tambey Zone (Yamal Megaproject),Russia,China Development Bank
+Tambey Zone (Yamal Megaproject),Russia,China Import-Export Bank
 Tanf Shale,Syria,No informations on company
-Tannezuft Shale,Algeria,BP PLC
 Tannezuft Shale,Algeria,China Petrochemical Corporation (Sinopec Group)
 Tannezuft Shale,Algeria,BHP Group Ltd
 Tannezuft Shale,Algeria,Carlyle Group
@@ -957,13 +947,14 @@ Tannezuft Shale,Algeria,Mubadala Investment Company
 Tannezuft Shale,Algeria,Repsol SA
 Tannezuft Shale,Algeria,Pertamina Persero PT
 Tannezuft Shale,Algeria,Equinor ASA
+Tannezuft Shale,Algeria,BP PLC
 Tannezuft Shale,Algeria,Hess Corporation
-Tannezuft Shale,Algeria,PT Pertamina (Persero)
-Tannezuft Shale,Algeria,Vietnam Oil and Gas Group
 Tannezuft Shale,Algeria,Eni SpA
+Tannezuft Shale,Algeria,Vietnam Oil and Gas Group
 Tannezuft Shale,Algeria,
 Tannezuft Shale,Algeria,Enel SpA
 Tannezuft Shale,Algeria,Worldview Capital Management group
+Tannezuft Shale,Algeria,PT Pertamina (Persero)
 Tannezuft Shale,Algeria,TotalEnergies SE
 Tannezuft Shale,Algeria,Occidental Petroleum Corp
 Tannezuft Shale,Algeria,Sonatrach SPA
@@ -972,53 +963,53 @@ Tanzanian Coastal Offshore,Tanzania,No informations on company
 Taohe Coal Mine,China,Shandong First Geological and Mineral Exploration Institute
 Taran Gaole Coal Mine,China,China Energy Investment Corp Ltd
 Tarim (CNPC),China,China National Petroleum Corporation (CNPC)
-Tashan Coal Mine,China,Jinneng Holding Group Co Ltd
 Tashan Coal Mine,China,China Datang Corp
 Tashan Coal Mine,China,HKSCC Nominees Limited
+Tashan Coal Mine,China,Jinneng Holding Group Co Ltd
 Tavan Tolgoi Coal Mine,Mongolia,Erdenes MGL
 Taymyr Basin CBM,Russia,No informations on company
-Tengiz,Kazakhstan,LUKOIL PJSC
-Tengiz,Kazakhstan,Chevron Corp
-Tengiz,Kazakhstan,Exxon Mobil Corp
 Tengiz,Kazakhstan,Joint-Stock Company “Sovereign Wealth Fund “Samruk Kazyna”
 Tengiz,Kazakhstan,National Bank of the Republic of Kazakhstan
+Tengiz,Kazakhstan,Chevron Corp
+Tengiz,Kazakhstan,Exxon Mobil Corp
+Tengiz,Kazakhstan,LUKOIL PJSC
 Thar Coal Mine,Pakistan,Shanghai Electric Holding Group Co Ltd
 Timan - Pechora Basin Offshore,Russia,Gazprom PJSC
 Timan - Pechora Basin Offshore,Russia,TotalEnergies SE
 Timan - Pechora Basin Offshore,Russia,Equinor ASA
-Timan - Pechora Basin Onshore,Russia,Gazprom PJSC
 Timan - Pechora Basin Onshore,Russia,Lukoil
-Tongxin Coal Mine,China,China Cinda Asset Management
+Timan - Pechora Basin Onshore,Russia,Gazprom PJSC
 Tongxin Coal Mine,China,China Energy Investment Corp Ltd
+Tongxin Coal Mine,China,China Cinda Asset Management
 Tongxin Coal Mine,China,Jinneng Holding Group Co Ltd
+Troll,Norway,ConocoPhillips
+Troll,Norway,TotalEnergies SE
 Troll,Norway,Petoro AS
 Troll,Norway,Equinor ASA
 Troll,Norway,Shell PLC
-Troll,Norway,TotalEnergies SE
-Troll,Norway,ConocoPhillips
-Tunguska Basin CBM,Russia,Russian Federation Agency for State Property Management
-Tunguska Basin CBM,Russia,QH Oil Investments LLC
 Tunguska Basin CBM,Russia,Rosneftegaz AO
 Tunguska Basin CBM,Russia,BP PLC
+Tunguska Basin CBM,Russia,QH Oil Investments LLC
+Tunguska Basin CBM,Russia,Russian Federation Agency for State Property Management
 Tutupan Coal Mine,Indonesia,Adaro Energy
 Ulug-Khem Project,Russia,Severstal-Resource
-Umm Shaif/Nasr,United Arab Emirates,China National Offshore Oil Corp (CNOOC)
+Umm Shaif/Nasr,United Arab Emirates,China National Petroleum Corporation (CNPC)
 Umm Shaif/Nasr,United Arab Emirates,Abu Dhabi National Oil Company
 Umm Shaif/Nasr,United Arab Emirates,Eni SpA
 Umm Shaif/Nasr,United Arab Emirates,TotalEnergies SE
-Umm Shaif/Nasr,United Arab Emirates,China National Petroleum Corporation (CNPC)
+Umm Shaif/Nasr,United Arab Emirates,China National Offshore Oil Corp (CNOOC)
 Upper Zakum,United Arab Emirates,Exxon Mobil Corp
-Upper Zakum,United Arab Emirates,Inpex Corp
 Upper Zakum,United Arab Emirates,Abu Dhabi National Oil Company
+Upper Zakum,United Arab Emirates,Inpex Corp
 Urengoyskoye,Russia,Gazprom PJSC
 Usinsk-1 Coal Mine,Russia,Russkaya Energiya
 Utica Shale,United States,Jay-Bee Oil & Gas
 Utica Shale,United States,JKLM Energy
 Utica Shale,United States,Gulfport Energy Corp
-Utica Shale,United States,Hilcorp Energy Co
+Utica Shale,United States,CNX Gas Co.
 Utica Shale,United States,EQT Corp
 Utica Shale,United States,Antero Resources Corp
-Utica Shale,United States,CNX Gas Co.
+Utica Shale,United States,Hilcorp Energy Co
 Utica Shale,United States,Exxon Mobil Corp
 Utica Shale,United States,Pennenergy Resources
 Utica Shale,United States,Southwestern Energy Co
@@ -1033,12 +1024,12 @@ Vaca Muerta Shale,Argentina,Capex SA
 Vaca Muerta Shale,Argentina,Petroleos Sudamericanos SA
 Vaca Muerta Shale,Argentina,Pampa Energia SA
 Vaca Muerta Shale,Argentina,Vista Oil & Gas Argentina SAU
-Vaca Muerta Shale,Argentina,YPF SA
+Vaca Muerta Shale,Argentina,Tecpetrol SA
 Vaca Muerta Shale,Argentina,TotalEnergies SE
 Vaca Muerta Shale,Argentina,Exxon Mobil Corp
 Vaca Muerta Shale,Argentina,Wintershall Dea GmbH
 Vaca Muerta Shale,Argentina,Medanito SA
-Vaca Muerta Shale,Argentina,Tecpetrol SA
+Vaca Muerta Shale,Argentina,YPF SA
 Vaca Muerta Shale,Argentina,Pan American Energy Group SL
 Vaca Muerta Shale,Argentina,Geopark Ltd
 Vaca Muerta Shale,Argentina,Shell PLC
@@ -1046,8 +1037,8 @@ Valeria Coal Mine,Australia,Glencore PLC
 Velkerri Shale,Australia,No informations on company
 Volga - Urals Onshore,Russia,No informations on company
 Wangjialing Coal Mine,China,Shanxi Coking Coal Group Co Ltd
-Wangjialing Coal Mine,China,China Coal Xinji Energy Co Ltd
 Wangjialing Coal Mine,China,HKSCC Nominees Limited
+Wangjialing Coal Mine,China,China Coal Xinji Energy Co Ltd
 Wangjiata Coal Mine,China,Xin’ao Holding Investment Company
 Wangjiata Coal Mine,China,Hongchuang (Shenzhen) Investment Center
 Wangjiata Coal Mine,China,Langfang Heyuan Investment Center
@@ -1055,15 +1046,15 @@ Wangjiata Coal Mine,China,Hebei Weiyuan Group
 Wangwa Coal Mine,China,Ningxia Wangwa Coal Industry Company
 Wards Well Coal Mine,Australia,Stanmore Resources
 Wards Well Coal Mine,Australia,Mitsubishi Corp
+Weijiamao Open Pit Mine,China,China Securities Finance Corporation
+Weijiamao Open Pit Mine,China,China Energy Investment Corp Ltd
 Weijiamao Open Pit Mine,China,China Huaneng Group Co Ltd
 Weijiamao Open Pit Mine,China,Guangdong Hengjian Investment Holding Co Ltd
-Weijiamao Open Pit Mine,China,China Energy Investment Corp Ltd
-Weijiamao Open Pit Mine,China,China Securities Finance Corporation
-Wenjiazhuang Coal Mine,China,Beijing Sunshine Ruita Investment Consulting Company
 Wenjiazhuang Coal Mine,China,Shanxi Provincial Coal Industry Agency Service Center
-Wenjiazhuang Coal Mine,China,Shanxi Boda Group
-Wenjiazhuang Coal Mine,China,Jinneng Holding Group Co Ltd
 Wenjiazhuang Coal Mine,China,Yang Quan Coal Industry Group
+Wenjiazhuang Coal Mine,China,Jinneng Holding Group Co Ltd
+Wenjiazhuang Coal Mine,China,Shanxi Boda Group
+Wenjiazhuang Coal Mine,China,Beijing Sunshine Ruita Investment Consulting Company
 West Florida Offshore,United States,No informations on company
 West Macedonia Lignite Centre (WMLC),Greece,Public Power Corporation of Greece S.A
 West Siberia Offshore,Russia,Surgutneftegas
@@ -1072,20 +1063,20 @@ West Well of Faer Second Coal Mine,China,Guizhou Panjiang Coal and Electricity G
 West Well of Faer Second Coal Mine,China,Shandong Energy Co Ltd
 West Well of Faer Second Coal Mine,China,Guizhou Coalfield Geology Bureau
 Western Gulf Province_Texas,United States,No informations on company
-Wilton and Fairhill Coal Projects,Australia,Futura Resources
 Wilton and Fairhill Coal Projects,Australia,Sojitz Corp
+Wilton and Fairhill Coal Projects,Australia,Futura Resources
 Woodford Shale,United States,Bosque Texas Oil
 Woodford Shale,United States,Jagged Peak Energy
+Wucaiwan No.1 Coal Mine,China,Beijing Guotai Xinhua Industrial Company
 Wucaiwan No.1 Coal Mine,China,Xinjiang Changyuan Water Group
 Wucaiwan No.1 Coal Mine,China,Xinjiang Xinhua Hydropower Investment Company
-Wucaiwan No.1 Coal Mine,China,Beijing Guotai Xinhua Industrial Company
 Wucaiwan No.1 Coal Mine,China,Xinjiang Energy Group
-Wucaiwan No.1 Surface Mine,China,Zhejiang Shenglong Industrial Company
-Wucaiwan No.1 Surface Mine,China,Xinjiang Energy Group
 Wucaiwan No.1 Surface Mine,China,Hubei Yihua Chemical Industry Co Ltd
+Wucaiwan No.1 Surface Mine,China,Xinjiang Energy Group
+Wucaiwan No.1 Surface Mine,China,Yichang Xinfa Industry Investment Company
+Wucaiwan No.1 Surface Mine,China,Zhejiang Shenglong Industrial Company
 Wucaiwan No.1 Surface Mine,China,Zhejiang Xinhu Group Holding Company
 Wucaiwan No.1 Surface Mine,China,Yichang Caiyuan Investment and Management Company
-Wucaiwan No.1 Surface Mine,China,Yichang Xinfa Industry Investment Company
 Wudong Coal Mine,China,China Energy Investment Corp Ltd
 Xiaobaodang No.1 Coal Mine,China,Shaanxi Coal and Chemical Industry Group Co Ltd
 Xiaobaodang No.1 Coal Mine,China,Shaanxi Investment Group Co Ltd
@@ -1125,17 +1116,17 @@ Yushuwan Coal Mine,China,Shaanxi Yulin Energy Group Co Ltd
 Yushuwan Coal Mine,China,Shenmu Coal Company
 Yushuwan Coal Mine,China,Yulin Yuyang Coal Company
 Yushuwan Coal Mine,China,Yanchang Oil and Minerals Administration Hengshan Oil Drilling and Production Company
-Yuwang No.1 Coal Mine,China,Hebei Construction & Investment Group Co Ltd
-Yuwang No.1 Coal Mine,China,HKSCC Nominees Limited
-Yuwang No.1 Coal Mine,China,Shanghua Investment Company
 Yuwang No.1 Coal Mine,China,China Huaneng Group Co Ltd
-Zambezi Coal Mine,Mozambique,Steel Authority of India (SAIL)
-Zambezi Coal Mine,Mozambique,Rashtriya Ispat Nigam (RINL)
+Yuwang No.1 Coal Mine,China,Shanghua Investment Company
+Yuwang No.1 Coal Mine,China,HKSCC Nominees Limited
+Yuwang No.1 Coal Mine,China,Hebei Construction & Investment Group Co Ltd
+Zambezi Coal Mine,Mozambique,Coal India Ltd
 Zambezi Coal Mine,Mozambique,NMDC
 Zambezi Coal Mine,Mozambique,NTPC Ltd
-Zambezi Coal Mine,Mozambique,Coal India Ltd
-Zaoquan Coal Mine,China,Ningxia State-Owned Capital Operation Group
+Zambezi Coal Mine,Mozambique,Steel Authority of India (SAIL)
+Zambezi Coal Mine,Mozambique,Rashtriya Ispat Nigam (RINL)
 Zaoquan Coal Mine,China,China Energy Investment Corp Ltd
+Zaoquan Coal Mine,China,Ningxia State-Owned Capital Operation Group
 Zhangji Coal Mine,China,Huaihe Energy
 Zhangji Coal Mine,China,China Cinda Asset Management
 Zhangji Coal Mine,China,China Energy Investment Corp Ltd
@@ -1147,10 +1138,10 @@ Zhaoshipan Coal Mine,China,Shaanxi Yulin Energy Group Co Ltd
 Zhong Yu Coal Mine,China,Shanxi Coking Coal Group Co Ltd
 Zhong Yu Coal Mine,China,China Cinda Asset Management
 Zhundong Surface Mine,China,China Energy Investment Corp Ltd
-Zubair,Iraq,Eni SpA
-Zubair,Iraq,Korea Gas Corporation (KOGAS)
 Zubair,Iraq,Missan Oil Company
 Zubair,Iraq,Basra Oil Company
+Zubair,Iraq,Eni SpA
+Zubair,Iraq,Korea Gas Corporation (KOGAS)
 Zuluf,Saudi Arabia,Saudi Arabian Oil Company (Saudi Aramco)
 Zuluf (CR in field),Saudi Arabia,No informations on company
 Zuluf (expansion),Saudi Arabia,No informations on company

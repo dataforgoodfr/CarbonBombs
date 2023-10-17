@@ -218,9 +218,13 @@ def _find_gem_mines(
 
     # Retrieve mine_name from manual match
     if fuel == "gasoil":
-        mine_name = manual_match_gasoil[name] if name in manual_match_gasoil else "None"
+        mine_name = (
+            manual_match_gasoil[name] if name in manual_match_gasoil else "NOT_FOUND"
+        )
     else:
-        mine_name = manual_match_coal[name] if name in manual_match_coal else "None"
+        mine_name = (
+            manual_match_coal[name] if name in manual_match_coal else "NOT_FOUND"
+        )
 
     matched_gem_df = pd.DataFrame(columns=df_gem.columns)
 
@@ -234,7 +238,7 @@ def _find_gem_mines(
 
         # if no match then try to match it on the first name
         # ONLY FOR COAL DATA
-        if len(matched_gem_df) == 0 and fuel == "coal":
+        if len(matched_gem_df) == 0 and fuel == "coal" and mine_name != "None":
             LOGGER.debug(f"{fuel}: {name} - match mine using fuzz score")
             matched_gem_df = _match_gem_mines_using_fuzz(name, df_gem)
 
