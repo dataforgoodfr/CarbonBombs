@@ -15,19 +15,21 @@ def process_raw_info(dict_info):
     """
     Process a dictionary of raw information and return a cleaned dictionary.
 
-    Args:
-        dict_info (dict): A dictionary containing raw information.
+    Parameters
+    ----------
+    dict_info: dict
+        A dictionary containing raw information.
 
-    Returns:
-        dict: A dictionary containing cleaned information.
+    Returns
+    -------
+    dict:
+        A dictionary containing cleaned information.
 
-    Raises:
-        SystemExit: If the function cannot recognize the raw information.
-
-    Example:
-        >>> dict_info = {"Website": "<a href='https://www.example.com'>Example</a>"}
-        >>> process_raw_info(dict_info)
-        {'Bank Website': 'Example'}
+    Examples
+    --------
+    >>> dict_info = {"Website": "<a href='https://www.example.com'>Example</a>"}
+    >>> process_raw_info(dict_info)
+    {'Bank Website': 'Example'}
 
     """
     # Instanciate clean_dict that will contains info extracted from raw

@@ -22,22 +22,24 @@ def get_coordinates_google_api(address):
     Get the latitude and longitude coordinates of an address using Google Maps
     API.
 
-    Args:
-        address (str): The address to look up.
-        api_key (str): The Google Maps API key.
+    Parameters
+    ----------
+    address: str
+        The address to look up.
+    api_key: str
+        The Google Maps API key.
 
-    Returns:
-        tuple: A tuple containing the latitude and longitude coordinates
-               of the address.
+    Returns
+    -------
+    tuple:
+        A tuple containing the latitude and longitude coordinates
+        of the address.
 
-    Raises:
-        SystemExit: If an error occurs with the API call.
-
-    Example:
-        >>> get_coordinates_google_api(
-        ...     "1600 Amphitheatre Parkway, Mountain View, CA")
-        (37.4224764, -122.0842499)
-
+    Examples
+    --------
+    >>> get_coordinates_google_api(
+    ...     "1600 Amphitheatre Parkway, Mountain View, CA")
+    (37.4224764, -122.0842499)
     """
     if address.startswith("None") or API_KEY == "":
         return 0.0, 0.0

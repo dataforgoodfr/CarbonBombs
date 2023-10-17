@@ -43,9 +43,9 @@ def check_bocc_source_updated():
 
     # check if url changed
     if CURRENT_BOCC_DATA_URL != url_data:
-        res_txt += f"BOCC check: URL changed\n"
+        res_txt += f"⚠️BOCC check: URL changed\n"
         res_txt += (
-            f"BOCC check: Please download the new dataset... (url = {url_data})\n"
+            f"⚠️ BOCC check: Please download the new dataset... (url = {url_data})\n"
         )
         return res_txt
 
@@ -69,16 +69,16 @@ def check_bocc_source_updated():
         if not df.equals(old_df):
             comp = df.compare(old_df)
             res_txt += (
-                f"BOCC check: data was updated. (n rows concerned = {len(comp)})\n"
+                f"⚠️ BOCC check: data was updated. (n rows concerned = {len(comp)})\n"
             )
-            res_txt += f"BOCC check: Please download the new dataset... (url = {CURRENT_BOCC_DATA_URL})\n"
+            res_txt += f"⚠️ BOCC check: Please download the new dataset... (url = {CURRENT_BOCC_DATA_URL})\n"
             return res_txt
 
     except Exception as e:
         LOGGER.error(e)
-        return f"ERROR DURING BOCC CHECK: {e}\n"
+        return f"⚠️ ERROR DURING BOCC CHECK: {e}\n"
 
-    return "BOCC check: DATA OK\n"
+    return "✅ BOCC check: DATA OK\n"
 
 
 def _check_gem_source_updated(fuel):
@@ -101,10 +101,10 @@ def _check_gem_source_updated(fuel):
     main = soup.find("main", {"id": "main"})
 
     if word_to_find not in main.text:
-        res_txt += f"GEM {fuel} check: data was updated.\n"
-        res_txt += f"GEM {fuel} check: Please download the new dataset...\n"
+        res_txt += f"⚠️ GEM {fuel} check: data was updated.\n"
+        res_txt += f"⚠️ GEM {fuel} check: Please download the new dataset...\n"
     else:
-        res_txt += f"GEM {fuel} check: DATA OK\n"
+        res_txt += f"✅ GEM {fuel} check: DATA OK\n"
 
     return res_txt
 

@@ -31,6 +31,3 @@ def generate_checksum_cleaned_datasets():
 
     with open(FPATH_CHECKSUM, "w") as f:
         f.write(md5_str)
-
-
-generate_checksum_cleaned_datasets()

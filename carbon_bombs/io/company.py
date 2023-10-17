@@ -49,12 +49,17 @@ def load_company_logo() -> pd.DataFrame:
     df['URL_logo'] = df['Logo_Col1'].fillna(df['Logo_Col2']) \
                                     .fillna(df['Logo_Col3'])
 
-    Args:
-        csv_file (str): The path and name of the CSV file.
-        url_field (str or list): The column or list of columns
-                                 (in priority order) where URLs are located.
+    Parameters
+    ----------
+    csv_file: str
+        The path and name of the CSV file.
+    url_field: str or list
+        The column or list of columns
+        (in priority order) where URLs are located.
 
-    Returns:
+    Returns
+    -------
+    pd.DataFrame:
         Dataframe with columns from csv_file and an additional column Logo_URL
         containing the selected URL of logos.
     """

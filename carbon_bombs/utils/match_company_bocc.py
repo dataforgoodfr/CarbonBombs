@@ -1,3 +1,4 @@
+"""Utils to match company names with BOCC names"""
 import re
 
 import numpy as np
@@ -165,7 +166,7 @@ def clean(text):
 
 def _get_companies_match_cb_to_bocc(df_cb=None):
     """Link companies involved in carbon bombs with those in the banking
-    sector.
+    sector from BOCC data source.
 
     Returns a dictionary with company names as keys and their corresponding
     matches as values.
@@ -174,15 +175,17 @@ def _get_companies_match_cb_to_bocc(df_cb=None):
     "carbon bombs". The function uses fuzzy string matching to match
     company names in both lists and returns a dictionary of matched pairs.
 
-    Parameters:
-    None
+    Parameters
+    ----------
+    df_cb: pd.DataFrame
+        Carbon bombs dataframe. If None it loads from
+        data_cleaned directory
 
-    Returns:
-    dict: A dictionary with company names as keys and their corresponding
-    matches as values.
-
-    Raises:
-    None
+    Returns
+    -------
+    dict:
+        A dictionary with company names as keys and their corresponding
+        matches as values.
     """
     df_cb = get_companies_involved_in_cb_df(df_cb)
 
@@ -220,24 +223,30 @@ def _get_companies_match_cb_to_bocc(df_cb=None):
     # Now we have dictionnary with auto matching, we had the manual match and
     # be cautious about not erasing key present in auto matching dict.
     for key, value in manual_match_company.items():
-        if key not in dict_match:
+        # force manual matching
+        if key in dict_match:
+            dict_match[key] = value
+        elif key in df_cb["Company"].unique():
             dict_match[key] = value
 
     return dict_match
 
 
 def get_companies_match_cb_to_bocc(use_save_dict=False) -> dict:
-    """_summary_
+    """Match company names from GEM Parent company column to
+    BOCC company names.
 
     Parameters
     ----------
     use_save_dict : bool, optional
-        _description_, by default False
+        Whether it use the saved uniform company
+        names JSON file or not, by default False
 
     Returns
     -------
     dict
-        _description_
+        Dictionary that match GEM company names (as key) and
+        BOCC company names (as value)
     """
     if use_save_dict:
         dict_match = load_uniform_company_names()

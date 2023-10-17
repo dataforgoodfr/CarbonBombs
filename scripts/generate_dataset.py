@@ -1,7 +1,11 @@
 import click
 
+from carbon_bombs.checkers.check_cleaned_datasets import check_cleaned_datasets
 from carbon_bombs.checkers.check_manual_match import check_manual_match
 from carbon_bombs.checkers.check_sources import check_data_sources
+from carbon_bombs.checkers.compare_datasets import compare_cleaned_datasets
+from carbon_bombs.checkers.compare_datasets import copy_old_cleaned_datasets
+from carbon_bombs.checkers.compare_datasets import remove_old_cleaned_datasets
 from carbon_bombs.conf import FPATH_RESULT_CHECK
 from carbon_bombs.io.cleaned import save_bank_table
 from carbon_bombs.io.cleaned import save_carbon_bombs_table
@@ -33,18 +37,16 @@ def generate_dataset(verbose, start_at_step):
     LOGGER = get_logger(verbose=verbose, name="carbon_bombs", log=True)
     LOGGER.info("Start generate dataset script")
 
+    LOGGER.info("Copy data cleaned datasets for comparison at the end")
+    copy_old_cleaned_datasets()
+
     # Step 0 : Check data sources and manual match
-    if start_at_step <= 0:
-        LOGGER.info("Step 0 - START")
-        LOGGER.info("Step 0 - create carbon bombs table started")
-        check_txt = check_data_sources()
-        check_txt += check_manual_match()
-        LOGGER.info(f"Check data sources and manual match result:\n{check_txt}")
-
-        with open(FPATH_RESULT_CHECK, "w") as f:
-            f.write(check_txt)
-
-        LOGGER.info("Step 0 - DONE")
+    LOGGER.info("Step 0 - START")
+    LOGGER.info("Step 0 - create carbon bombs table started")
+    check_txt = check_data_sources()
+    check_txt += check_manual_match()
+    LOGGER.info(f"Check data sources and manual match result:\n{check_txt}")
+    LOGGER.info("Step 0 - DONE")
 
     # Step 1 : CB table
     if start_at_step <= 1:
@@ -127,6 +129,21 @@ def generate_dataset(verbose, start_at_step):
     LOGGER.info("Step 7 - generate checksums")
     generate_checksum_cleaned_datasets()
     LOGGER.info("Step 7 - DONE")
+
+    # Step 8 : check cleaned datasets and compare with old ones
+    LOGGER.info("Step 8 - START")
+    LOGGER.info("Step 8 - check cleaned datasets and compare with old")
+    check_txt_end = check_cleaned_datasets()
+    check_txt_end += compare_cleaned_datasets()
+    LOGGER.info(f"Check cleaned datasets and comparison:\n{check_txt_end}")
+
+    check_txt += check_txt_end
+    with open(FPATH_RESULT_CHECK, "w", encoding="utf-8-sig") as f:
+        f.write(check_txt)
+
+    remove_old_cleaned_datasets()
+    LOGGER.info("Step 8 - DONE")
+
     LOGGER.info("Generate dataset script - DONE")
 
 
