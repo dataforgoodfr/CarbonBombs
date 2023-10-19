@@ -732,13 +732,13 @@ def _add_custom_status_columns(df_carbon_bombs: pd.DataFrame) -> pd.DataFrame:
     df_carbon_bombs["Status_lvl_2"] = df_carbon_bombs["Status_lvl_1"].replace(
         {
             "operating": "operating",
+            "mothballed": "operating",
             "not started": "not started",
             "in development": "not started",
             "proposed": "not started",
             "discovered": "not started",
             "shelved": "not started",
             "cancelled": "stopped",
-            "mothballed": "stopped",
             "shut in": "stopped",
         }
     )
