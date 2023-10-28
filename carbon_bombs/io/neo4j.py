@@ -5,6 +5,7 @@ import pandas as pd
 from dotenv import load_dotenv
 from neo4j import basic_auth
 from neo4j import GraphDatabase
+import json 
 
 from carbon_bombs.conf import FPATH_NEO4J_BANK
 from carbon_bombs.conf import FPATH_NEO4J_CB
@@ -435,3 +436,20 @@ def purge_database():
     LOGGER.debug("NEO4J purge done")
 
     driver.close()
+
+
+def create_local_database():
+    """Create local database with companies, banks, countries and carbon bombs"""
+    LOGGER.debug("Update cleaned csv for neo4j and save them")
+    carbon_bombs, companies, banks, countries = update_csv_nodes_neo4j()
+
+    # Define dict to iterate over three types node creation
+    dict_nodes = {
+        "carbon_bomb": carbon_bombs.to_dict(orient='records'),
+        "company": companies.to_dict(orient='records'),
+        "bank": banks.to_dict(orient='records'),
+        "country": countries.to_dict(orient='records'),
+    }
+
+    with open('database.json', 'w') as convert_file: 
+        convert_file.write(json.dumps(dict_nodes))
