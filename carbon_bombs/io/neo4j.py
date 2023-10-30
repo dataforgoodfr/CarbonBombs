@@ -452,5 +452,171 @@ def create_local_database():
         "country": countries.to_dict(orient='records'),
     }
 
+    connexions = create_connexions()
+    dict_nodes.update(connexions)
+
     with open(FPATH_OUT_LOCAL_DATABASE, 'w') as convert_file: 
         convert_file.write(json.dumps(dict_nodes))
+
+def create_connexions():
+    """Create connexions between nodes"""
+    return {
+        "banks_x_companies": create_connexions_banks_x_companies(),
+        "banks_x_countries": create_connexions_banks_x_countries(),
+        "bombs_x_companies": create_connexions_bombs_x_companies(),
+        "bombs_x_countries": create_connexions_bombs_x_countries(),
+        "companies_x_countries": create_connexions_companies_x_countries(),
+    }
+
+def create_connexions_bombs_x_companies():
+    """Create connexions between CB nodes and company nodes"""
+    ### Carbon Bombs and Companies relationship
+    LOGGER.debug("Start creating connexions between carbon bombs and companies")
+    carbonbombs_companies = pd.read_csv(FPATH_OUT_CONX_CB_COMP)
+    carbonbombs_companies.to_csv(
+        FPATH_NEO4J_CONX_CB_COMP, encoding="utf-8-sig", index=False
+    )
+
+    connexions = []
+    for _, row in carbonbombs_companies.iterrows():
+        carbon_bomb = row["Carbon_bomb_name"]
+        company = row["Company"]
+        country = row["Country"]
+        weight = 1 
+        LOGGER.debug(
+            f"Connexion CB to COMPANY: write `{carbon_bomb}` - `{company}`"
+        )
+
+        if type(company) is str:
+            connexions.append({
+                "carbon_bomb": carbon_bomb,
+                "company": company,
+                "country": country,
+                "weight": weight,
+            })
+    LOGGER.debug("Creating connexions between carbon bombs and companies done")
+    return connexions
+
+def create_connexions_banks_x_companies():
+    """Create connexions between bank nodes and company nodes"""
+    LOGGER.debug("Start Creating connexions between banks and companies")
+    ### Banks and Companies relationship
+    banks_companies = pd.read_csv(FPATH_OUT_CONX_BANK_COMP)
+    banks_companies.to_csv(
+        FPATH_NEO4J_CONX_BANK_COMP, encoding="utf-8-sig", index=False
+    )
+
+    connexions = []
+    for _, row in banks_companies.iterrows():
+        bank = row["Bank"]
+        company = row["Company"]
+        LOGGER.debug(f"Connexion BANK to COMPANY: write `{bank}` - `{company}`")
+    
+        if type(company) is str:
+            connexions.append({
+                "bank": bank,
+                "company": company,
+                "year_2016": row["2016"],
+                "year_2017": row["2017"],
+                "year_2018": row["2018"],
+                "year_2019": row["2019"],
+                "year_2020": row["2020"],
+                "year_2021": row["2021"],
+                "year_2022": row["2022"],
+                "total": row["Grand Total"],
+            })
+    LOGGER.debug("Creating connexions between banks and companies done")
+    return connexions
+
+
+def create_connexions_bombs_x_countries():
+    """Create connexions between CB nodes and country nodes"""
+    LOGGER.debug("Start Creating connexions between carbon bombs and countries")
+    ### Carbon Bombs and Country relationship
+    carbonbombs_informations = pd.read_csv(FPATH_OUT_CB)
+
+    filtered_columns = ["Carbon_bomb_name_source_CB", "Country_source_CB"]
+    carbonbombs_countries = carbonbombs_informations[filtered_columns]
+    carbonbombs_countries.columns = ["Carbon_bomb", "Country"]
+
+    carbonbombs_countries.to_csv(
+        FPATH_NEO4J_CONX_CB_COUNTRY, encoding="utf-8-sig", index=False
+    )
+
+    connexions = []
+    for _, row in carbonbombs_countries.iterrows():
+        carbon_bomb = row["Carbon_bomb"]
+        country = row["Country"]
+        LOGGER.debug(
+            f"Connexion CB to COUNTRY: write `{carbon_bomb}` - `{country}`"
+        )
+
+        if type(carbon_bomb) and type(country) is str:
+            connexions.append({
+                "carbon_bomb": carbon_bomb,
+                "country": country,
+            })
+
+    LOGGER.debug("Creating connexions between carbon bombs and countries done")
+    return connexions
+
+def create_connexions_companies_x_countries():
+    """Create connexions between company nodes and company nodes"""
+    LOGGER.debug("Start Creating connexions between companies and countries")
+    ### Company and Country relationship
+    company_informations = pd.read_csv(FPATH_OUT_COMP)
+
+    filtered_columns = ["Company_name", "Country"]
+    companies_countries = company_informations[filtered_columns]
+    companies_countries.columns = ["Company", "Country"]
+
+    companies_countries.to_csv(
+        FPATH_NEO4J_CONX_COMP_COUNTRY, encoding="utf-8-sig", index=False
+    )
+
+    connexions = []
+    for _, row in companies_countries.iterrows():
+        company = row["Company"]
+        country = row["Country"]
+        LOGGER.debug(
+            f"Connexion COMPANY to COUNTRY: write `{company}` - `{country}`"
+        )
+
+        if type(company) and type(country) is str:
+            connexions.append({
+                "company": company,
+                "country": country,
+            })
+
+    LOGGER.debug("Creating connexions between companies and countries done")
+    return connexions
+
+
+def create_connexions_banks_x_countries():
+    """Create connexions between bank nodes and country nodes"""
+    LOGGER.debug("Start Creating connexions between banks and countries")
+    ### Bank and Country relationship
+    bank_informations = pd.read_csv(FPATH_OUT_BANK)
+
+    filtered_columns = ["Bank Name", "Headquarters country"]
+    banks_countries = bank_informations[filtered_columns]
+    banks_countries.columns = ["Bank", "Country"]
+
+    banks_countries.to_csv(
+        FPATH_NEO4J_CONX_BANK_COUNTRY, encoding="utf-8-sig", index=False
+    )
+
+    connexions = []
+    for _, row in banks_countries.iterrows():
+        bank = row["Bank"]
+        country = row["Country"]
+        LOGGER.debug(f"Connexion BANK to COUNTRY: write `{bank}` - `{country}`")
+
+        if type(bank) and type(country) is str:
+            connexions.append({
+                "bank": bank,
+                "country": country,
+            })
+
+    LOGGER.debug("Creating connexions between banks and countries done")
+    return connexions
