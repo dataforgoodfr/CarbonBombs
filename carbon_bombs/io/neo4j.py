@@ -22,6 +22,7 @@ from carbon_bombs.conf import FPATH_OUT_COMP
 from carbon_bombs.conf import FPATH_OUT_CONX_BANK_COMP
 from carbon_bombs.conf import FPATH_OUT_CONX_CB_COMP
 from carbon_bombs.conf import FPATH_OUT_COUNTRY
+from carbon_bombs.conf import FPATH_OUT_LOCAL_DATABASE
 from carbon_bombs.utils.logger import LOGGER
 
 load_dotenv()
@@ -451,5 +452,5 @@ def create_local_database():
         "country": countries.to_dict(orient='records'),
     }
 
-    with open('database.json', 'w') as convert_file: 
+    with open(FPATH_OUT_LOCAL_DATABASE, 'w') as convert_file: 
         convert_file.write(json.dumps(dict_nodes))

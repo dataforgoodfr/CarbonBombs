@@ -66,6 +66,7 @@ FPATH_NEO4J_CONX_BANK_COUNTRY = f"{DATA_NEO4J_PATH}/connection_bank_country.csv"
 FPATH_NEO4J_CONX_CB_COMP = f"{DATA_NEO4J_PATH}/connection_carbonbombs_company.csv"
 FPATH_NEO4J_CONX_CB_COUNTRY = f"{DATA_NEO4J_PATH}/connection_carbonbombs_country.csv"
 FPATH_NEO4J_CONX_COMP_COUNTRY = f"{DATA_NEO4J_PATH}/connection_company_country.csv"
+FPATH_OUT_LOCAL_DATABASE = f"{DATA_NEO4J_PATH}/database.json"
 
 # MD5 checksum file
 FPATH_CHECKSUM = f"{DATA_CLEANED_PATH}/checksum"
