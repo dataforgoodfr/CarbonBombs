@@ -12,6 +12,7 @@ report_gasoil
 working_documents/*
 img/
 docs/modules/generated/*
+database.json
 
 # Editors
 .vscode/
