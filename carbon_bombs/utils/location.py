@@ -1,9 +1,9 @@
 """Utils for location"""
-import awoc
+
+# import awoc
+import country_converter as coco
 from geopy.geocoders import Nominatim
 
-# load world_region to get continent name of a country
-world_region = awoc.AWOC()
 
 # load geolocator from geopy to get country based on lat, long
 geolocator = Nominatim(user_agent="my_app")
@@ -27,7 +27,7 @@ def get_world_region(country: str) -> str:
         return "None"
 
     try:
-        return world_region.get_country_continent_name(country)
+        return coco.convert(names=country, to="Continent")
 
     # If country string does not exist then return empty string
     except NameError:

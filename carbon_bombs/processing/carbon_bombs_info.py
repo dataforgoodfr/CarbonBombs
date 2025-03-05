@@ -1,8 +1,8 @@
 """Function to process carbon bombs information"""
+
 import re
 from itertools import groupby
 
-import awoc
 import numpy as np
 import pandas as pd
 from fuzzywuzzy import fuzz
@@ -18,6 +18,7 @@ from carbon_bombs.io.khune_paper import load_carbon_bomb_gasoil_database
 from carbon_bombs.io.manual_match import manual_match_coal
 from carbon_bombs.io.manual_match import manual_match_gasoil
 from carbon_bombs.io.manual_match import manual_match_lat_long
+from carbon_bombs.utils.location import get_world_region
 from carbon_bombs.utils.logger import LOGGER
 from carbon_bombs.utils.match_company_bocc import _get_companies_match_cb_to_bocc
 from carbon_bombs.utils.match_company_bocc import save_uniform_company_names
@@ -167,7 +168,7 @@ def _handle_multiple_gem_mines(
         [tmp_merge, group_df["Status"].agg(_handle_status_column)], axis=1
     )
 
-    tmp_merge[num_cols] = tmp_merge[num_cols].replace("None", np.NaN)
+    tmp_merge[num_cols] = tmp_merge[num_cols].replace("None", np.nan)
 
     return tmp_merge
 
@@ -263,7 +264,7 @@ def _find_gem_mines(
     elif len(matched_gem_df) == 0:
         LOGGER.debug(f"{fuel}: {name} - no match found for this project")
         matched_gem_df = pd.DataFrame(
-            [[np.NaN] * len(df_gem.columns)], columns=df_gem.columns
+            [[np.nan] * len(df_gem.columns)], columns=df_gem.columns
         )
 
     else:
@@ -634,15 +635,17 @@ def _add_companies_involved(df_carbon_bombs: pd.DataFrame) -> pd.DataFrame:
     df_carbon_bombs["Parent_company_source_GEM"].fillna("", inplace=True)
     # update with operators only if no parent companies and only None
     df_carbon_bombs["Companies_involved_source_GEM"] = df_carbon_bombs.apply(
-        lambda row: row["Operators_source_GEM"]
-        if (row["Parent_company_source_GEM"] == "")
-        or (
-            row["Parent_company_source_GEM"]
-            .replace(PROJECT_SEPARATOR, "")
-            .replace("None", "")
-            == ""
-        )
-        else row["Parent_company_source_GEM"],
+        lambda row: (
+            row["Operators_source_GEM"]
+            if (row["Parent_company_source_GEM"] == "")
+            or (
+                row["Parent_company_source_GEM"]
+                .replace(PROJECT_SEPARATOR, "")
+                .replace("None", "")
+                == ""
+            )
+            else row["Parent_company_source_GEM"]
+        ),
         axis=1,
     )
     # format Parent_Company with normed separator and clean percentage
@@ -686,7 +689,7 @@ def _handle_missing_values_gem(df_carbon_bombs: pd.DataFrame) -> pd.DataFrame:
     """
     # Fulfill empty values for GEM_ID (GEM) and	GEM_source (GEM) columns
     # depending on project status defined in CB source
-    # First need to fulfill empty values by np.NaN
+    # First need to fulfill empty values by np.nan
     df_carbon_bombs = df_carbon_bombs.replace("", np.nan)
 
     # Secondly fulfill cell with New_project = True and empty GEM_ID value
@@ -945,11 +948,10 @@ def create_carbon_bombs_table() -> pd.DataFrame:
 
     # Add World Region associated to Headquarters country
     LOGGER.debug("Add world region column into CB dataframe")
-    world_region = awoc.AWOC()
     df_carbon_bombs["World_region"] = (
         df_carbon_bombs["Country_source_CB"]
         .replace({"Türkiye": "Turkey"})
-        .apply(world_region.get_country_continent_name)
+        .apply(get_world_region)
     )
 
     # Reorder columns and sort by CB Name and country
