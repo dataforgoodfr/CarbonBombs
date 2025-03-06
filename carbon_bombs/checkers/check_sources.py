@@ -1,4 +1,5 @@
 """Function to check if sources were updated or not"""
+
 import os
 
 import pandas as pd
@@ -127,8 +128,8 @@ def check_data_sources():
     """
     res = "===== Check data sources =====\n"
 
-    res += "\nCHECK BOCC SOURCE\n"
-    res += check_bocc_source_updated()
+    # res += "\nCHECK BOCC SOURCE\n"
+    # res += check_bocc_source_updated()
 
     res += "\nCHECK GEM SOURCE\n"
     res += check_gem_source_updated()

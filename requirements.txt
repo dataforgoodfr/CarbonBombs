@@ -1,6 +1,6 @@
-a-world-of-countries
 beautifulsoup4
 click
+country_converter
 fuzzywuzzy
 geopy
 neo4j
