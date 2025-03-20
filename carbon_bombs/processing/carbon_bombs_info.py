@@ -7,6 +7,8 @@ import numpy as np
 import pandas as pd
 from fuzzywuzzy import fuzz
 from geopy.geocoders import Nominatim
+import country_converter as coco
+
 
 from carbon_bombs.conf import PROJECT_SEPARATOR
 from carbon_bombs.conf import THRESHOLD_OPERATING_PROJECT
@@ -154,7 +156,7 @@ def _handle_multiple_gem_mines(
         'GEM_source', 'Operators', 'Owners', 'Parent_Company', 'Status']
     """
     matched_gem_df["tmp"] = ""
-    group_df = matched_gem_df.fillna("None").groupby("tmp")
+    group_df = matched_gem_df.astype(str).fillna("None").groupby("tmp")
 
     # keep only first element
     tmp_merge = group_df[keep_first_cols].agg(lambda x: x.values[0])
@@ -168,7 +170,7 @@ def _handle_multiple_gem_mines(
         [tmp_merge, group_df["Status"].agg(_handle_status_column)], axis=1
     )
 
-    tmp_merge[num_cols] = tmp_merge[num_cols].replace("None", np.nan)
+    tmp_merge[num_cols] = tmp_merge[num_cols].replace("None", np.nan).astype(float)
 
     return tmp_merge
 
@@ -232,7 +234,11 @@ def _find_gem_mines(
     if "$" in mine_name:
         for mine_split in mine_name.split("$"):
             mine_df = df_gem.loc[df_gem["Unit_concerned"] == mine_split]
-            matched_gem_df = pd.concat([matched_gem_df, mine_df])
+
+            if matched_gem_df.empty:
+                matched_gem_df = mine_df.copy()
+            else:
+                matched_gem_df = pd.concat([matched_gem_df, mine_df])
     else:
         # Perfect match on the mine_name
         matched_gem_df = df_gem.loc[df_gem["Unit_concerned"] == mine_name]
@@ -322,19 +328,22 @@ def _init_carbon_bombs_table(fuel: str) -> pd.DataFrame:
         df_cb = load_carbon_bomb_coal_database()
         df_gem = load_coal_mine_gem_database()
 
+        if "Operators" not in df_gem.columns:
+            df_gem["Operators"] = ""
+
         # Keep specific GEM columns and rename it to normalize it with gasoil dataset
         GEM_cols_mapping = {
-            "Mine IDs": "GEM_ID",
-            "Mine Name": "Unit_concerned",
-            "Country": "Country",
-            "GEM Wiki Page (ENG)": "GEM_source",
-            "Latitude": "Latitude",
-            "Longitude": "Longitude",
-            "Operators": "Operators",
+            "GEM Mine ID": "GEM_ID",  # updated, old "Mine IDs"
+            "Mine Name": "Unit_concerned",  # same
+            "Country": "Country",  # same
+            "GEM Wiki URLs": "GEM_source",  # updated, old "GEM Wiki Page (ENG)"
+            "Latitude": "Latitude",  # same
+            "Longitude": "Longitude",  # same
+            "Operators": "Operators",  # not in new dataset
             # "Owners": "Owners",
-            "Parent Company": "Parent_Company",
-            "Status": "Status",
-            "Opening Year": "Carbon_bomb_start_year",
+            "Parent Company": "Parent_Company",  # same
+            "Status": "Status",  # same
+            "Opening Year": "Carbon_bomb_start_year",  # same
         }
 
     LOGGER.debug(f"{fuel}: CB and GEM dataframes loaded")
@@ -632,7 +641,9 @@ def _add_companies_involved(df_carbon_bombs: pd.DataFrame) -> pd.DataFrame:
     """
     # Clean percentage in column Parent_company
     # Clean data into Parent company columns
-    df_carbon_bombs["Parent_company_source_GEM"].fillna("", inplace=True)
+    df_carbon_bombs["Parent_company_source_GEM"] = df_carbon_bombs[
+        "Parent_company_source_GEM"
+    ].fillna("")
     # update with operators only if no parent companies and only None
     df_carbon_bombs["Companies_involved_source_GEM"] = df_carbon_bombs.apply(
         lambda row: (
@@ -653,7 +664,9 @@ def _add_companies_involved(df_carbon_bombs: pd.DataFrame) -> pd.DataFrame:
         "Parent_company_source_GEM"
     ].apply(compute_clean_percentage)
 
-    df_carbon_bombs["Companies_involved_source_GEM"].fillna("", inplace=True)
+    df_carbon_bombs["Companies_involved_source_GEM"] = df_carbon_bombs[
+        "Companies_involved_source_GEM"
+    ].fillna("")
     df_carbon_bombs["Companies_involved_source_GEM"] = df_carbon_bombs[
         "Companies_involved_source_GEM"
     ].apply(compute_clean_percentage)
@@ -791,7 +804,8 @@ def _add_country_lat_long_when_missing(df_carbon_bombs: pd.DataFrame) -> pd.Data
     df_carbon_bombs = df_carbon_bombs.reset_index(drop=True)
 
     # Add latitude and longitude if informations not present
-    geolocator = Nominatim(user_agent="my_app")
+    # geolocator = Nominatim(user_agent="my_app")
+    geolocator = Nominatim(user_agent="my-app_42")
     df_missing_coordinates = df_carbon_bombs[
         df_carbon_bombs["Latitude"].isnull() | df_carbon_bombs["Longitude"].isnull()
     ]
@@ -802,9 +816,28 @@ def _add_country_lat_long_when_missing(df_carbon_bombs: pd.DataFrame) -> pd.Data
             f"No coordinates for `{name}` use latitude / longitude of {country}"
         )
 
-        location = geolocator.geocode({"country": country})
-        latitude = location.latitude
-        longitude = location.longitude
+        # location = geolocator.geocode({"country": country})
+        # latitude = location.latitude
+        # longitude = location.longitude
+
+        country_iso3 = coco.convert(names=country, to="ISO3")
+
+        from carbon_bombs.conf import DATA_SOURCE_PATH
+
+        country_lat_long_df = pd.read_csv(f"{DATA_SOURCE_PATH}/longitude-latitude.csv")
+        country_loc = country_lat_long_df.loc[
+            country_lat_long_df["ISO-ALPHA-3"] == country_iso3
+        ]
+
+        if country_loc.empty:
+            # TODO raise warning no country found
+            LOGGER.info(f"country `{country}`: no lat, long found")
+            latitude = 0
+            longitude = 0
+        else:
+            latitude = country_loc["Latitude"].values[0]
+            longitude = country_loc["Longitude"].values[0]
+
         df_carbon_bombs.loc[index, "Latitude"] = latitude
         df_carbon_bombs.loc[index, "Longitude"] = longitude
         df_carbon_bombs.loc[index, "Latitude_longitude_source"] = "Country CB"

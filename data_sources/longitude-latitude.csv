@@ -1,0 +1,322 @@
+Country,ISO-ALPHA-3,ISO-ALPHA-2,IOC,FIFA,Latitude,Longitude,ISO-Name,Historical,WikiData_ID,WikiData_Latitude,WikiData_Longitude,WikiData_Label,WikiData_Description
+Aruba,ABW,AW,ARU,ARU,12.52111,-69.968338,1,0,Q21203,12.51,-69.97,Aruba,"island country in the Caribbean, part of the Kingdom of the Netherlands"
+Afghanistan,AFG,AF,AFG,AFG,33.93911,67.709953,1,0,Q889,33.00,66.00,Afghanistan,"sovereign state situated at the confluence of Western, Central, and South Asia"
+Angola,AGO,AO,ANG,ANG,-11.202692,17.873887,1,0,Q916,-12.35,17.35,Angola,sovereign state in Africa
+Anguilla,AIA,AI,,AIA,18.220554,-63.068615,1,0,Q25228,18.23,-63.05,Anguilla,British Overseas Territory in the Caribbean
+Åland Islands,ALA,,,,60.250716,20.374146,1,0,Q5689,60.25,20.00,Åland,autonomous region of Finland
+Albania,ALB,AL,ALB,ALB,41.153332,20.168331,1,0,Q222,41.00,20.00,Albania,country in southeastern Europe
+Andorra,AND,AD,AND,AND,42.546245,1.601554,1,0,Q228,42.56,1.56,Andorra,"sovereign microstate between France and Spain, in Western Europe"
+Netherlands Antilles,ANT,AN,AHO,ANT,12.226079,-69.060087,1,0,Q25227,15.00,-66.00,Netherlands Antilles,former country within the Kingdom of the Netherlands
+Netherlands Antilles,ANT,AN,ATO,ANT,12.226079,-69.060087,1,0,Q25227,15.00,-66.00,Netherlands Antilles,former country within the Kingdom of the Netherlands
+Netherlands Antilles,ANT,AN,NAN,ANT,12.226079,-69.060087,1,0,Q25227,15.00,-66.00,Netherlands Antilles,former country within the Kingdom of the Netherlands
+United Arab Emirates,ARE,AE,UAE,UAE,23.424076,53.847818,1,0,Q878,24.40,54.30,United Arab Emirates,sovereign state in Southwest Asia
+Argentina,ARG,AR,ARG,ARG,-38.416097,-63.616672,1,0,Q414,-34.00,-64.00,Argentina,sovereign state in South America
+Armenia,ARM,AM,ARM,ARM,40.069099,45.038189,1,0,Q399,40.38,44.95,Armenia,sovereign state in the South Caucasus region of Eurasia
+American Samoa,ASM,AS,ASA,ASA,-14.270972,-170.132217,1,0,Q16641,-14.29,-170.71,American Samoa,United States territory in the Pacific Ocean
+Antarctica,ATA,AQ,,,-75.250973,-0.071389,1,0,Q51,-90.00,0.00,Antarctica,polar continent in the southern hemisphere
+French Southern Territories,ATF,TF,,,-49.280366,69.348557,1,0,Q129003,-43.00,67.00,French Southern and Antarctic Lands,overseas territory of France
+French Southern and Antarctic Lands,ATF,TF,,,-49.280366,69.348557,0,0,Q129003,-43.00,67.00,French Southern and Antarctic Lands,overseas territory of France
+Antigua and Barbuda,ATG,AG,ANT,ATG,17.060816,-61.796428,1,0,Q781,17.12,-61.85,Antigua and Barbuda,island sovereign state in the Caribbean Sea
+Australia,AUS,AU,AUS,AUS,-25.274398,133.775136,1,0,Q408,-28.00,137.00,Australia,country in Oceania
+Austria,AUT,AT,AUT,AUT,47.516231,14.550072,1,0,Q40,48.00,14.00,Austria,country in Europe
+Azerbaijan,AZE,AZ,AZE,AZE,40.143105,47.576927,1,0,Q227,40.30,47.70,Azerbaijan,country in the Caucasus in Eastern Europe
+Burundi,BDI,BI,BDI,BDI,-3.373056,29.918886,1,0,Q967,-3.67,29.82,Burundi,sovereign state in Africa
+Belgium,BEL,BE,BEL,BEL,50.503887,4.469936,1,0,Q31,50.64,4.67,Belgium,country in western Europe since 1830
+Benin,BEN,BJ,BEN,BEN,9.30769,2.315834,1,0,Q962,8.83,2.18,Benin,sovereign state in Africa
+"Bonaire, Sint Eustatius and Saba",BES,BQ,,,12.183333,-68.233333,1,0,Q27561,12.18,-68.23,Caribbean Netherlands,"grouping of the Caribbean islands of Bonaire, Sint Eustatius, and Saba, part of the Netherlands"
+"Caribbean Netherlands: Bonaire, Sint Eustatius and Saba",BES,BQ,,,12.183333,-68.233333,0,0,Q27561,12.18,-68.23,Caribbean Netherlands,"grouping of the Caribbean islands of Bonaire, Sint Eustatius, and Saba, part of the Netherlands"
+Burkina Faso,BFA,BF,BUR,BFA,12.238333,-1.561593,1,0,Q965,12.27,-2.07,Burkina Faso,sovereign state in Africa
+Bangladesh,BGD,BD,BAN,BAN,23.684994,90.356331,1,0,Q902,24.02,89.87,Bangladesh,sovereign state in South Asia
+Bulgaria,BGR,BG,BUL,BUL,42.733883,25.48583,1,0,Q219,42.75,25.50,Bulgaria,sovereign state in southeastern Europe
+Bahrain,BHR,BH,BRN,BHR,25.930414,50.637772,1,0,Q398,26.07,50.55,Bahrain,sovereign state in Southwest Asia
+Bahamas,BHS,BS,BAH,BAH,25.03428,-77.39628,1,0,Q778,23.70,-76.40,The Bahamas,island sovereign state in the West Indies
+The Bahamas,BHS,BS,BAH,BAH,25.03428,-77.39628,0,0,Q778,23.70,-76.40,The Bahamas,island sovereign state in the West Indies
+Bosnia and Herzegovina,BIH,BA,BIH,BIH,43.915886,17.679076,1,0,Q225,44.00,18.00,Bosnia and Herzegovina,country in southeastern Europe
+Saint Barthélemy,BLM,,,,,,1,0,Q25362,17.90,-62.83,Saint Barthélemy,"overseas collectivity of France, island of the Little Antillas"
+Belarus,BLR,BY,BLR,BLR,53.709807,27.953389,1,0,Q184,53.53,28.05,Belarus,country in eastern Europe
+Belize,BLZ,BZ,BIZ,BLZ,17.189877,-88.49765,1,0,Q242,17.07,-88.70,Belize,sovereign state in Central America
+Bermuda,BMU,BM,BER,BER,32.321384,-64.75737,1,0,Q23635,32.33,-64.75,Bermuda,British overseas territory in the North Atlantic Ocean
+Bolivia,BOL,BO,BOL,BOL,-16.290154,-63.588653,0,0,Q750,-17.06,-64.99,Bolivia,sovereign state in South America
+Bolivia (Plurinational State of),BOL,BO,BOL,BOL,-16.290154,-63.588653,1,0,Q750,-17.06,-64.99,Bolivia,sovereign state in South America
+Brazil,BRA,BR,BRA,BRA,-14.235004,-51.92528,1,0,Q155,-14.00,-53.00,Brazil,country in South America
+Barbados,BRB,BB,BAR,BRB,13.193887,-59.543198,1,0,Q244,13.17,-59.55,Barbados,sovereign state situated on an island in the Western Atlantic Ocean
+Brunei,BRN,BN,BRU,BRU,4.535277,114.727669,0,0,Q921,4.40,114.57,Brunei,sovereign state in Southeast Asia
+Brunei Darussalam,BRN,BN,BRU,BRU,4.535277,114.727669,1,0,Q921,4.40,114.57,Brunei,sovereign state in Southeast Asia
+Bhutan,BTN,BT,BHU,BHU,27.514162,90.433601,1,0,Q917,27.45,90.50,Bhutan,sovereign state in South Asia
+Burma,BUR,MM,BIR,BUR,21.913965,95.956223,0,0,Q836,22.00,96.00,Myanmar,sovereign state in Southeast Asia
+Myanmar,MMR,MM,MYA,MYA,21.913965,95.956223,1,0,Q836,22.00,96.00,Myanmar,sovereign state in Southeast Asia
+Bouvet Island,BVT,BV,,,-54.423199,3.413194,1,0,Q23408,-54.42,3.36,Bouvet Island,Norwegian uninhabited subantarctic volcanic island
+Botswana,BWA,BW,BOT,BOT,-22.328474,24.684866,1,0,Q963,-22.20,23.70,Botswana,sovereign state in Southern Africa
+Central African Republic,CAF,CF,CAF,CTA,6.611111,20.939444,1,0,Q929,6.70,20.90,Central African Republic,sovereign state in Africa
+Canada,CAN,CA,CAN,CAN,56.130366,-106.346771,1,0,Q16,56.00,-109.00,Canada,sovereign state in North America
+Cocos (Keeling) Islands,CCK,CC,,,-12.164165,96.870956,1,0,Q36004,-12.12,96.90,Cocos (Keeling) Islands,territory of Australia in the Indian Ocean
+Switzerland,CHE,CH,SUI,SUI,46.818188,8.227512,1,0,Q39,46.80,8.23,Switzerland,federal state in Western Europe
+Chile,CHL,CL,CHI,CHI,-35.675147,-71.542969,1,0,Q298,-33.00,-71.00,Chile,sovereign state in South America
+China,CHN,CN,CHN,CHN,35.86166,104.195397,1,0,Q148,35.84,103.45,People's Republic of China,state in East Asia
+"China, People's Republic of",CHN,CN,CHN,CHN,35.86166,104.195397,0,0,Q148,35.84,103.45,People's Republic of China,state in East Asia
+Côte d'Ivoire,CIV,CI,CIV,CIV,7.539989,-5.54708,1,0,Q1008,8.00,-6.00,Ivory Coast,sovereign state in West Africa
+Cameroon,CMR,CM,CMR,CMR,7.369722,12.354722,1,0,Q1009,7.00,12.00,Cameroon,sovereign state in West Africa
+"Congo, Democratic Republic of the",COD,CD,COD,COD,-4.038333,21.758664,1,0,Q974,-2.88,23.66,Democratic Republic of the Congo,sovereign state in Central Africa
+Congo [DRC],COD,CD,COD,COD,-4.038333,21.758664,0,0,Q974,-2.88,23.66,Democratic Republic of the Congo,sovereign state in Central Africa
+Zaire,ZAR,,ZAI,ZAI,-4.038333,21.758664,0,1,Q974,-2.88,23.66,Democratic Republic of the Congo,sovereign state in Central Africa
+Congo [Republic],COG,CG,CGO,CGO,-0.228021,15.827659,0,0,Q971,-0.75,15.38,Republic of the Congo,sovereign state in Central Africa
+"Congo, Republic of the",COG,CG,CGO,CGO,-0.228021,15.827659,0,0,Q971,-0.75,15.38,Republic of the Congo,sovereign state in Central Africa
+Congo,COG,CG,CGO,CGO,-0.228021,15.827659,1,0,Q971,-0.75,15.38,Republic of the Congo,sovereign state in Central Africa
+Cook Islands,COK,CK,COK,COK,-21.236736,-159.777671,1,0,Q26988,-21.23,-159.78,Cook Islands,state in the South Pacific Ocean
+Colombia,COL,CO,COL,COL,4.570868,-74.297333,1,0,Q739,4.00,-73.25,Colombia,sovereign state in South America
+Comoros,COM,KM,COM,COM,-11.875001,43.872219,1,0,Q970,-12.23,44.45,Comoros,sovereign state situated on an archipelago in the Indian Ocean off the eastern coast of Africa
+Cape Verde,CPV,CV,CPV,CPV,16.002082,-24.013197,1,0,Q1011,15.92,-24.08,Cape Verde,sovereign state comprising ten islands off the Western coast of Africa
+Costa Rica,CRI,CR,CRC,CRC,9.748917,-83.753428,1,0,Q800,10.00,-84.00,Costa Rica,sovereign state in Central America
+Czechoslovakia,CSK,,TCH,TCH,49.096397,18.11452,0,1,Q33946,50.08,14.42,Czechoslovakia,sovereign state in Central Europe (1918-1992)
+Cuba,CUB,CU,CUB,CUB,21.521757,-77.781167,1,0,Q241,22.00,-79.50,Cuba,sovereign state situated on an island in the Caribbean Sea
+Curaçao,CUW,CW,,CUW,12.186111,-68.989444,1,0,Q25279,12.17,-68.97,Curaçao,"island country in the Caribbean, part of the Kingdom of the Netherlands"
+Christmas Island,CXR,CX,,,-10.447525,105.690449,1,0,Q31063,-10.49,105.63,Christmas Island,Australian external territory in the Indian Ocean
+Cayman Islands,CYM,KY,CAY,CAY,19.513469,-80.566956,1,0,Q5785,19.50,-80.50,Cayman Islands,British overseas territory in the Caribbean
+Cyprus,CYP,CY,CYP,CYP,35.126413,33.429859,1,0,Q229,35.00,33.00,Cyprus,sovereign state situated on an island in the Eastern Mediterranean Sea
+Czech Republic,CZE,CZ,CZE,CZE,49.817492,15.472962,0,0,Q213,49.50,16.00,Czech Republic,country in Central Europe
+Czechia,CZE,CZ,CZE,CZE,49.817492,15.472962,1,0,Q213,49.50,16.00,Czech Republic,country in Central Europe
+East Germany,DDR,DE,GDR,DDR,52.194967,12.515583,0,1,Q16957,52.05,12.39,German Democratic Republic,"1949–1990 country in central Europe, unified into modern Germany"
+German Democratic Republic,DDR,DE,GDR,DDR,52.194967,12.515583,0,1,Q16957,52.05,12.39,German Democratic Republic,"1949–1990 country in central Europe, unified into modern Germany"
+Germany,DEU,DE,GER,GER,51.165691,10.451526,1,0,Q183,51.00,10.00,Germany,country in Central Europe
+West Germany,DEU,DE,FRG,FRG,50.609722,8.068889,0,1,Q713750,50.73,7.10,West Germany,Federal Republic of Germany in the period between its formation on 23 May 1949 and German reunification on 3 October 1990
+Djibouti,DJI,DJ,DJI,DJI,11.825138,42.590275,1,0,Q977,11.80,42.43,Djibouti,sovereign state in Africa
+Dominica,DMA,DM,DMA,DMA,15.414999,-61.370976,1,0,Q784,15.42,-61.33,Dominica,island sovereign state in the Caribbean Sea
+Denmark,DNK,DK,DEN,DEN,56.26392,9.501785,1,0,Q35,56.00,10.00,Denmark,country in northern Europe
+Dominican Republic,DOM,DO,DOM,DOM,18.735693,-70.162651,1,0,Q786,18.80,-70.20,Dominican Republic,island sovereign state in the Caribbean Sea
+Algeria,DZA,DZ,ALG,ALG,28.033886,1.659626,1,0,Q262,28.00,1.00,Algeria,sovereign country in North Africa
+Ecuador,ECU,EC,ECU,ECU,-1.831239,-78.183406,1,0,Q736,-1.00,-78.00,Ecuador,sovereign state in South America
+Egypt,EGY,EG,EGY,EGY,26.820553,30.802498,1,0,Q79,27.00,29.00,Egypt,sovereign state in North Africa and Asia
+Eritrea,ERI,ER,ERI,ERI,15.179384,39.782334,1,0,Q986,15.48,38.25,Eritrea,sovereign state in the Horn of Africa
+Western Sahara,ESH,EH,,,24.215527,-12.885834,1,0,Q6250,25.00,-13.00,Western Sahara,disputed territory in the Maghreb region of North Africa
+Spain,ESP,ES,ESP,ESP,40.463667,-3.74922,1,0,Q29,40.20,-3.50,Spain,country in southwestern Europe
+Estonia,EST,EE,EST,EST,58.595272,25.013607,1,0,Q191,59.00,26.00,Estonia,sovereign state in northeastern Europe
+Ethiopia,ETH,ET,ETH,ETH,9.145,40.489673,1,0,Q115,9.00,40.00,Ethiopia,country in East Africa
+Finland,FIN,FI,FIN,FIN,61.92411,25.748151,1,0,Q33,65.00,27.00,Finland,country in northern Europe
+Fiji,FJI,FJ,FIJ,FIJ,-16.578193,179.414413,1,0,Q712,-18.00,178.00,Fiji,island sovereign state in Oceania
+Falkland Islands,FLK,FK,,,-51.796253,-59.523613,0,0,Q9648,-51.75,-59.00,Falkland Islands,archipelago in the South Atlantic Ocean and British Overseas Territory
+Falkland Islands [Islas Malvinas],FLK,FK,,,-51.796253,-59.523613,0,0,Q9648,-51.75,-59.00,Falkland Islands,archipelago in the South Atlantic Ocean and British Overseas Territory
+Falkland Islands (Malvinas),FLK,FK,,,-51.796253,-59.523613,1,0,Q9648,-51.75,-59.00,Falkland Islands,archipelago in the South Atlantic Ocean and British Overseas Territory
+France,FRA,FR,FRA,FRA,46.227638,2.213749,1,0,Q142,47.00,2.00,France,country in Western Europe
+Faroe Islands,FRO,FO,,FRO,61.892635,-6.911806,1,0,Q4628,61.97,-6.84,Faroe Islands,autonomous constituent country of the Kingdom of Denmark
+Micronesia,FSM,FM,FSM,,7.425554,150.550812,0,0,Q702,6.92,158.18,Federated States of Micronesia,island sovereign state in Oceania
+"Micronesia, Federated States of",FSM,FM,FSM,,7.425554,150.550812,0,0,Q702,6.92,158.18,Federated States of Micronesia,island sovereign state in Oceania
+Micronesia (Federated States of),FSM,FM,FSM,,7.425554,150.550812,1,0,Q702,6.92,158.18,Federated States of Micronesia,island sovereign state in Oceania
+Gabon,GAB,GA,GAB,GAB,-0.803689,11.609444,1,0,Q1000,-0.68,11.50,Gabon,equatorial country in West Africa
+England,GB-ENG,,,ENG,52.537312,-0.845502,0,0,Q21,53.00,-1.00,England,constituent country of the United Kingdom
+Northern Ireland,GB-NIR,,,NIR,54.7,-6.7,0,0,Q26,54.68,-6.75,Northern Ireland,constituent country of the United Kingdom
+Scotland,GB-SCT,,,SCO,56.7,-4.2,0,0,Q22,57.00,-5.00,Scotland,constituent country of the United Kingdom
+Wales,GB-WLS,,,WAL,52.3,-3.6,0,0,Q25,52.35,-3.63,Wales,constituent country of the United Kingdom
+United Kingdom,GBR,GB,GBR,,55.378051,-3.435973,0,0,Q145,54.60,-2.00,United Kingdom,country in Western Europe
+United Kingdom of Great Britain and Northern Ireland,GBR,GB,GBR,,55.378051,-3.435973,1,0,Q145,54.60,-2.00,United Kingdom,country in Western Europe
+Georgia,GEO,GE,GEO,GEO,42.315407,43.356892,1,0,Q230,42.02,43.73,Georgia,country in the Caucasus in Eastern Europe
+Guernsey,GGY,GG,,,49.465691,-2.585278,1,0,Q25230,49.45,-2.58,Guernsey,British Crown dependency comprised of several islands
+Ghana,GHA,GH,GHA,GHA,7.946527,-1.023194,1,0,Q117,8.00,-0.50,Ghana,sovereign state in West Africa
+Gibraltar,GIB,GI,,GIB,36.137741,-5.345374,1,0,Q1410,36.14,-5.35,Gibraltar,British Overseas Territory
+Guinea,GIN,GN,GUI,GUI,9.945587,-9.696645,1,0,Q1006,10.00,-11.00,Guinea,sovereign state in West Africa
+Guadeloupe,GLP,GP,,,16.995971,-62.067641,1,0,Q17012,16.25,-61.58,Guadeloupe,"overseas region and department of France, and island in the Caribbean"
+Gambia,GMB,GM,GAM,GAM,13.443182,-15.310139,1,0,Q1005,13.50,-15.50,The Gambia,sovereign state in West Africa
+The Gambia,GMB,GM,GAM,GAM,13.443182,-15.310139,0,0,Q1005,13.50,-15.50,The Gambia,sovereign state in West Africa
+Guinea-Bissau,GNB,GW,GBS,GNB,11.803749,-15.180413,1,0,Q1007,12.00,-15.00,Guinea-Bissau,sovereign state in Western Africa
+Equatorial Guinea,GNQ,GQ,GEQ,EQG,1.650801,10.267895,1,0,Q983,1.50,10.00,Equatorial Guinea,sovereign state in Africa
+Greece,GRC,GR,GRE,GRE,39.074208,21.824312,1,0,Q41,38.50,23.00,Greece,country in southeastern Europe
+Grenada,GRD,GD,GRN,GRN,12.262776,-61.604171,1,0,Q769,12.12,-61.67,Grenada,island sovereign state in the Caribbean Sea
+Greenland,GRL,GL,,,71.706936,-42.604303,1,0,Q223,72.00,-40.00,Greenland,autonomous country within the Kingdom of Denmark
+Guatemala,GTM,GT,GUA,GUA,15.783471,-90.230759,1,0,Q774,15.50,-90.25,Guatemala,sovereign state in Central America
+French Guiana,GUF,GF,,,3.933889,-53.125782,1,0,Q3769,4.00,-53.00,French Guiana,Overseas department of France in South America
+Guam,GUM,GU,GUM,GUM,13.444304,144.793731,1,0,Q16635,13.50,144.80,Guam,island territory of the United States of America
+Guyana,GUY,GY,GUY,GUY,4.860416,-58.93018,1,0,Q734,5.73,-59.32,Guyana,country in South America
+Hong Kong,HKG,HK,HKG,HKG,22.396428,114.109497,1,0,Q8646,22.28,114.16,Hong Kong,special administrative region of China
+Heard Island and McDonald Islands,HMD,HM,,,-53.08181,73.504158,1,0,Q131198,-53.09,73.52,Heard Island and McDonald Islands,Australian external territory and volcanic group of barren Antarctic islands
+Honduras,HND,HN,HON,HON,15.199999,-86.241905,1,0,Q783,14.63,-86.82,Honduras,sovereign state in Central America
+Croatia,HRV,HR,CRO,CRO,45.1,15.2,1,0,Q224,45.25,15.47,Croatia,country in southeastern Europe
+Haiti,HTI,HT,HAI,HAI,18.971187,-72.285215,1,0,Q790,19.00,-72.80,Haiti,island sovereign state in the Caribbean Sea
+Hungary,HUN,HU,HUN,HUN,47.162494,19.503304,1,0,Q28,47.00,19.00,Hungary,country in Central Europe
+Upper Volta,HVO,,VOL,UPV,12.266667,-2.066667,0,1,Q797422,12.27,-2.07,Republic of Upper Volta,former country (1958-1984) in West Africa
+Indonesia,IDN,ID,INA,IDN,-0.789275,113.921327,1,0,Q252,-2.00,118.00,Indonesia,"sovereign state in Southeast Asia situated on more than 17,000 islands"
+Isle of Man,IMN,IM,,,54.236107,-4.548056,1,0,Q9676,54.24,-4.53,Isle of Man,British Crown dependency
+India,IND,IN,IND,IND,20.593684,78.96288,1,0,Q668,22.80,83.00,India,country in South Asia
+British Indian Ocean Territory,IOT,IO,,,-6.343194,71.876519,1,0,Q43448,-6.00,71.50,British Indian Ocean Territory,overseas territory in the Indian Ocean
+Ireland,IRL,IE,IRL,IRL,53.41291,-8.24389,1,0,Q27,53.00,-8.00,Republic of Ireland,sovereign state in northwestern Europe covering five-sixths of the island of Ireland
+Iran,IRN,IR,IRI,IRN,32.427908,53.688046,0,0,Q794,32.00,53.00,Iran,sovereign state in Western Asia
+Iran (Islamic Republic of),IRN,IR,IRI,IRN,32.427908,53.688046,1,0,Q794,32.00,53.00,Iran,sovereign state in Western Asia
+Iraq,IRQ,IQ,IRQ,IRQ,33.223191,43.679291,1,0,Q796,33.00,43.00,Iraq,sovereign state in western Asia
+Iceland,ISL,IS,ISL,ISL,64.963051,-19.020835,1,0,Q189,65.00,-19.00,Iceland,"sovereign state in Northern Europe, situated on an island in the far North Atlantic Ocean"
+Israel,ISR,IL,ISR,ISR,31.046051,34.851612,1,0,Q801,31.00,35.00,Israel,sovereign state in the Middle East
+Italy,ITA,IT,ITA,ITA,41.87194,12.56738,1,0,Q38,42.50,12.50,Italy,country in Southern Europe
+Jamaica,JAM,JM,JAM,JAM,18.109581,-77.297508,1,0,Q766,18.18,-77.40,Jamaica,island sovereign state in the Caribbean Sea
+Jersey,JEY,JE,,,49.214439,-2.13125,1,0,Q785,49.19,-2.11,Jersey,British Crown dependency in the Channel Islands
+Jordan,JOR,JO,JOR,JOR,30.585164,36.238414,1,0,Q810,31.20,36.50,Jordan,sovereign state in western Asia
+Japan,JPN,JP,JPN,JPN,36.204824,138.252924,1,0,Q17,35.00,136.00,Japan,sovereign state in East Asia
+Kazakhstan,KAZ,KZ,KAZ,KAZ,48.019573,66.923684,1,0,Q232,48.00,68.00,Kazakhstan,sovereign state in Eastern Europe and Central Asia
+Kenya,KEN,KE,KEN,KEN,-0.023559,37.906193,1,0,Q114,0.10,38.00,Kenya,sovereign state in East Africa
+Kyrgyzstan,KGZ,KG,KGZ,KGZ,41.20438,74.766098,1,0,Q813,41.00,75.00,Kyrgyzstan,sovereign state in Central Asia
+Cambodia,KHM,KH,CAM,CAM,12.565679,104.990963,1,0,Q424,12.60,105.00,Cambodia,sovereign state in Southeast Asia
+Kiribati,KIR,KI,KIR,,-3.370417,-168.734039,1,0,Q710,1.47,173.03,Kiribati,island sovereign state in the central Pacific Ocean
+Saint Kitts and Nevis,KNA,KN,SKN,SKN,17.357822,-62.782998,1,0,Q763,17.27,-62.67,Saint Kitts and Nevis,island sovereign state in the Caribbean Sea
+"Korea, Republic of (South)",KOR,KR,KOR,KOR,35.907757,127.766922,0,0,Q884,36.00,128.00,South Korea,sovereign state in East Asia
+South Korea,KOR,KR,KOR,KOR,35.907757,127.766922,0,0,Q884,36.00,128.00,South Korea,sovereign state in East Asia
+"Korea, Republic of",KOR,KR,KOR,KOR,35.907757,127.766922,1,0,Q884,36.00,128.00,South Korea,sovereign state in East Asia
+Kuwait,KWT,KW,KUW,KUW,29.31166,47.481766,1,0,Q817,29.17,47.60,Kuwait,sovereign state in Western Asia
+Laos,LAO,LA,LAO,LAO,19.85627,102.495496,0,0,Q819,18.20,104.10,Laos,sovereign state in Southeast Asia
+Lao People's Democratic Republic,LAO,LA,LAO,LAO,19.85627,102.495496,1,0,Q819,18.20,104.10,Laos,sovereign state in Southeast Asia
+Lebanon,LBN,LB,LBN,LIB,33.854721,35.862285,1,0,Q822,33.83,35.77,Lebanon,sovereign state in Western Asia
+Liberia,LBR,LR,LBR,LBR,6.428055,-9.429499,1,0,Q1014,6.53,-9.75,Liberia,sovereign state in West Africa
+Libya,LBY,LY,LBA,LBY,26.3351,17.228331,1,0,Q1016,27.00,17.00,Libya,sovereign state in north Africa
+Saint Lucia,LCA,LC,LCA,LCA,13.909444,-60.978893,1,0,Q760,13.88,-60.97,Saint Lucia,island sovereign state in the Caribbean Sea
+Liechtenstein,LIE,LI,LIE,LIE,47.166,9.555373,1,0,Q347,47.15,9.55,Liechtenstein,country in Central Europe
+Sri Lanka,LKA,LK,SRI,SRI,7.873054,80.771797,1,0,Q854,7.00,81.00,Sri Lanka,"sovereign state in South Asia, situated on an island in the Indian Ocean"
+Ceylon,,,CEY,CEY,7.873054,80.771797,0,1,Q854,7.00,81.00,Sri Lanka,"sovereign state in South Asia, situated on an island in the Indian Ocean"
+Lesotho,LSO,LS,LES,LES,-29.609988,28.233608,1,0,Q1013,-29.55,28.25,Lesotho,sovereign state in southern Africa
+Lithuania,LTU,LT,LTU,LTU,55.169438,23.881275,1,0,Q37,55.20,24.00,Lithuania,sovereign state in northeastern Europe
+Luxembourg,LUX,LU,LUX,LUX,49.815273,6.129583,1,0,Q32,49.77,6.13,Luxembourg,country in Western Europe
+Latvia,LVA,LV,LAT,LVA,56.879635,24.603189,1,0,Q211,57.00,25.00,Latvia,sovereign state in northeastern Europe
+Macau,MAC,MO,,MAC,22.198745,113.543873,0,0,Q14773,22.17,113.55,Macau,Special Administrative Region of China
+Macao,MAC,MO,,MAC,22.198745,113.543873,1,0,Q14773,22.17,113.55,Macau,Special Administrative Region of China
+Saint Martin (French part),MAF,,,,18.082502,-63.051991,1,0,Q126125,18.08,-63.06,Saint Martin,"French overseas collectivity, part of the island of Saint Martin in the Lesser Antilles"
+Morocco,MAR,MA,MAR,MAR,31.791702,-7.09262,1,0,Q1028,32.00,-6.00,Morocco,sovereign state in North Africa
+Monaco,MCO,MC,MON,,43.750298,7.412841,1,0,Q235,43.73,7.42,Monaco,sovereign city-state on the French Riviera
+Moldova,MDA,MD,MDA,MDA,47.411631,28.369885,0,0,Q217,47.25,28.52,Moldova,sovereign state in southeastern Europe
+"Moldova, Republic of",MDA,MD,MDA,MDA,47.411631,28.369885,1,0,Q217,47.25,28.52,Moldova,sovereign state in southeastern Europe
+Madagascar,MDG,MG,MAD,MAD,-18.766947,46.869107,1,0,Q1019,-20.00,47.00,Madagascar,"island sovereign state off the coast of Southeast Africa, in the Indian Ocean"
+Maldives,MDV,MV,MDV,MDV,3.202778,73.22068,1,0,Q826,4.18,73.51,Maldives,"sovereign state in South Asia, situated on an archipelago in the Arabian Sea"
+Mexico,MEX,MX,MEX,MEX,23.634501,-102.552784,1,0,Q96,23.00,-102.00,Mexico,sovereign state in North America
+Marshall Islands,MHL,MH,MHL,,7.131474,171.184478,1,0,Q709,9.82,169.29,Marshall Islands,island sovereign state in Oceania
+North Macedonia,MKD,MK,MKD,MKD,41.608635,21.745275,1,0,Q221,41.65,21.72,North Macedonia,country in southeastern Europe
+Macedonia [FYROM],MKD,MK,MKD,MKD,41.608635,21.745275,0,0,Q221,41.65,21.72,North Macedonia,country in southeastern Europe
+Mali,MLI,ML,MLI,MLI,17.570692,-3.996166,1,0,Q912,17.00,-4.00,Mali,sovereign state in West Africa
+Malta,MLT,MT,MLT,MLT,35.937496,14.375416,1,0,Q233,35.88,14.50,Malta,sovereign state in Southern Europe situated on an archipelago in the Mediterranean Sea
+Montenegro,MNE,ME,MNE,MNE,42.708678,19.37439,1,0,Q236,42.77,19.22,Montenegro,country in southeastern Europe
+Mongolia,MNG,MN,MGL,MNG,46.862496,103.846656,1,0,Q711,47.00,104.00,Mongolia,sovereign state in East Asia
+Northern Mariana Islands,MNP,MP,,,17.33083,145.38469,1,0,Q16644,16.71,145.78,Northern Mariana Islands,American-dependent insular area in the western Pacific
+Mozambique,MOZ,MZ,MOZ,MOZ,-18.665695,35.529562,1,0,Q1029,-19.00,35.00,Mozambique,sovereign state in Africa
+Mauritania,MRT,MR,MTN,MTN,21.00789,-10.940835,1,0,Q1025,21.00,-11.00,Mauritania,sovereign state in West Africa and North Africa
+Montserrat,MSR,MS,,MSR,16.742498,-62.187366,1,0,Q13353,16.75,-62.20,Montserrat,British overseas territory in the Caribbean
+Martinique,MTQ,MQ,,,14.641528,-61.024174,1,0,Q17054,14.65,-61.02,Martinique,"island in the Lesser Antilles, overseas region and department of France"
+Mauritius,MUS,MU,MRI,MRI,-20.348404,57.552152,1,0,Q1027,-20.20,57.50,Mauritius,island sovereign state off of Africa in the Indian Ocean
+Malawi,MWI,MW,MAW,MWI,-13.254308,34.301525,1,0,Q1020,-13.00,34.00,Malawi,sovereign state in Africa
+Malaysia,MYS,MY,MAS,MAS,4.210484,101.975766,1,0,Q833,3.78,102.31,Malaysia,sovereign state in Southeast Asia
+Mayotte,MYT,YT,,,-12.8275,45.166244,1,0,Q17063,-12.84,45.14,Mayotte,overseas department and region of France
+Namibia,NAM,NA,NAM,NAM,-22.95764,18.49041,1,0,Q1030,-23.00,17.00,Namibia,sovereign state in southern Africa
+New Caledonia,NCL,NC,,NCL,-20.904305,165.618042,1,0,Q33788,-21.25,165.30,New Caledonia,special collectivity of France in the southwest Pacific Ocean
+Niger,NER,NE,NIG,NIG,17.607789,8.081666,1,0,Q1032,17.00,10.00,Niger,sovereign state in western Africa
+Norfolk Island,NFK,NF,,,-29.040835,167.954712,1,0,Q31057,-29.03,167.95,Norfolk Island,"external territory of Australia in the South Pacific Ocean, consisting of the island of the same name plus neighbouring islands"
+Nigeria,NGA,NG,NGR,NGA,9.081999,8.675277,1,0,Q1033,9.00,8.00,Nigeria,sovereign state in West Africa
+Nicaragua,NIC,NI,NCA,NCA,12.865416,-85.207229,1,0,Q811,13.00,-85.00,Nicaragua,sovereign state in Central America
+Niue,NIU,NU,,,-19.054445,-169.867233,1,0,Q34020,-19.05,-169.92,Niue,island country in the South Pacific Ocean
+Netherlands,NLD,NL,NED,NED,52.132633,5.291266,1,0,Q55,52.32,5.55,Netherlands,"country in western Europe, continental part of Kingdom of the Netherlands"
+Norway,NOR,NO,NOR,NOR,60.472024,8.468946,1,0,Q20,65.00,11.00,Norway,country in northern Europe
+Nepal,NPL,NP,NEP,NEP,28.394857,84.124008,1,0,Q837,28.00,84.00,Nepal,sovereign state in South Asia
+Nauru,NRU,NR,NRU,,-0.522778,166.931503,1,0,Q697,-0.53,166.93,Nauru,island sovereign state in Oceania
+New Zealand,NZL,NZ,NZL,NZL,-40.900557,174.885971,1,0,Q664,-41.20,174.00,New Zealand,"sovereign state in Oceania, situated on two main and around 600 smaller islands in the southwestern Pacific Ocean"
+Oman,OMN,OM,OMA,OMA,21.512583,55.923255,1,0,Q842,21.00,57.00,Oman,sovereign state in western Asia
+Pakistan,PAK,PK,PAK,PAK,30.375321,69.345116,1,0,Q843,30.00,71.00,Pakistan,sovereign state in South Asia
+Panama,PAN,PA,PAN,PAN,8.537981,-80.782127,1,0,Q804,8.62,-80.37,Panama,sovereign state in Central America
+Pitcairn Islands,PCN,PN,,,-24.703615,-127.439308,0,0,Q35672,-25.07,-130.10,Pitcairn Islands,British Overseas Territory in the Pacific Ocean
+Pitcairn,PCN,PN,,,-24.703615,-127.439308,1,0,Q35672,-25.07,-130.10,Pitcairn Islands,British Overseas Territory in the Pacific Ocean
+Peru,PER,PE,PER,PER,-9.189967,-75.015152,1,0,Q419,-9.40,-76.00,Peru,sovereign state in South America
+Philippines,PHL,PH,PHI,PHI,12.879721,121.774017,1,0,Q928,12.00,123.00,Philippines,sovereign state in Southeast Asia
+Palau,PLW,PW,PLW,,7.51498,134.58252,1,0,Q695,7.47,134.55,Palau,island sovereign state in Oceania
+Papua New Guinea,PNG,PG,PNG,PNG,-6.314993,143.95555,1,0,Q691,-6.30,147.00,Papua New Guinea,island sovereign state in Oceania
+Poland,POL,PL,POL,POL,51.919438,19.145136,1,0,Q36,52.00,19.00,Poland,country in Central Europe
+Puerto Rico,PRI,PR,PUR,PUR,18.220833,-66.590149,1,0,Q1183,18.25,-66.50,Puerto Rico,unincorporated territory of the United States
+North Korea,PRK,KP,PRK,PRK,40.339852,127.510093,0,0,Q423,40.00,127.00,North Korea,sovereign state in East Asia
+Korea (Democratic People's Republic of),PRK,KP,PRK,PRK,40.339852,127.510093,1,0,Q423,40.00,127.00,North Korea,sovereign state in East Asia
+Portugal,PRT,PT,POR,POR,39.399872,-8.224454,1,0,Q45,38.70,-9.18,Portugal,country in southwestern Europe
+Paraguay,PRY,PY,PAR,PAR,-23.442503,-58.443832,1,0,Q733,-23.50,-58.00,Paraguay,sovereign state in South America
+"Palestine, State of",PSE,PS,PLE,PLE,31.952162,35.233154,1,0,Q407199,31.88,35.20,Palestinian territories,"West Bank, excluding East Jerusalem,  a part of  the State of Israel Capital, in the status of belligerent occupation, supported by international public law and the High Court of Justice of Israel"
+Palestinian Territories,PSE,PS,PLE,PLE,31.952162,35.233154,0,0,Q407199,31.88,35.20,Palestinian territories,"West Bank, excluding East Jerusalem,  a part of  the State of Israel Capital, in the status of belligerent occupation, supported by international public law and the High Court of Justice of Israel"
+French Polynesia,PYF,PF,,TAH,-17.679742,-149.406843,1,0,Q30971,-17.53,-149.57,French Polynesia,French overseas country in the Southern Pacific ocean
+Qatar,QAT,QA,QAT,QAT,25.354826,51.183884,1,0,Q846,25.27,51.21,Qatar,sovereign state in western Asia
+Réunion,REU,RE,,,-21.115141,55.536384,1,0,Q17070,-21.11,55.53,Réunion,"island in the Indian Ocean, overseas region of France"
+Rhodesia,RHO,,RHO,RHO,-19.015438,29.154857,0,1,Q954,-19.00,30.00,Zimbabwe,sovereign state in southern Africa
+Southern Rhodesia,RHO,,RHO,RHO,-19.015438,29.154857,0,1,Q954,-19.00,30.00,Zimbabwe,sovereign state in southern Africa
+Zimbabwe,ZWE,ZW,ZIM,ZIM,-19.015438,29.154857,1,0,Q954,-19.00,30.00,Zimbabwe,sovereign state in southern Africa
+Romania,ROU,RO,ROU,ROU,45.943161,24.96676,1,0,Q218,46.00,25.00,Romania,country in Central and Eastern Europe
+Russian Federation,RUS,RU,RUS,RUS,61.52401,105.318756,1,0,Q159,66.42,94.25,Russia,sovereign state in Eastern Europe and Northern Asia
+Russia,RUS,RU,RUS,RUS,61.52401,105.318756,0,0,Q159,66.42,94.25,Russia,sovereign state in Eastern Europe and Northern Asia
+Rwanda,RWA,RW,RWA,RWA,-1.940278,29.873888,1,0,Q1037,-1.94,29.87,Rwanda,sovereign state in Africa
+Saudi Arabia,SAU,SA,KSA,KSA,23.885942,45.079162,1,0,Q851,23.72,44.12,Saudi Arabia,sovereign state in western Asia
+Serbia and Montenegro,SCG,,SCG,SCG,44.816667,20.466667,0,1,Q37024,44.82,20.47,Serbia and Montenegro,former federal republic in the Balkans following the breakup of Yugoslavia (1992–2006)
+Sudan,SDN,SD,SUD,SDN,12.862807,30.217636,1,0,Q1049,15.00,32.00,Sudan,sovereign state in northeast Africa
+Senegal,SEN,SN,SEN,SEN,14.497401,-14.452362,1,0,Q1041,14.37,-14.28,Senegal,sovereign state in western Africa
+Singapore,SGP,SG,SGP,SIN,1.352083,103.819836,1,0,Q334,1.30,103.80,Singapore,sovereign city-state in Southeast Asia
+South Georgia and the South Sandwich Islands,SGS,GS,,,-54.429579,-36.587909,1,0,Q35086,-54.25,-36.75,South Georgia and the South Sandwich Islands,British overseas territory in the Southern Atlantic Ocean
+"Saint Helena, Ascension and Tristan da Cunha",SHN,SH,,,-24.143474,-10.030696,1,0,Q192184,-15.92,-5.72,"Saint Helena, Ascension and Tristan da Cunha",British overseas territory in the southern Atlantic Ocean
+Saint Helena,SHN,SH,,,-24.143474,-10.030696,0,0,Q192184,-15.92,-5.72,"Saint Helena, Ascension and Tristan da Cunha",British overseas territory in the southern Atlantic Ocean
+Svalbard and Jan Mayen,SJM,SJ,,,77.553604,23.670272,1,0,Q842829,78.64,21.99,Svalbard and Jan Mayen,two parts of Norway under separate jurisdictions
+Solomon Islands,SLB,SB,SOL,SOL,-9.64571,160.156194,1,0,Q685,-9.47,159.82,Solomon Islands,island sovereign state in Oceania
+Sierra Leone,SLE,SL,SLE,SLE,8.460555,-11.779889,1,0,Q1044,8.50,-12.10,Sierra Leone,sovereign state in West Africa
+El Salvador,SLV,SV,ESA,SLV,13.794185,-88.89653,1,0,Q792,13.67,-88.87,El Salvador,sovereign state in Central America
+San Marino,SMR,SM,SMR,SMR,43.94236,12.457777,1,0,Q238,43.93,12.47,San Marino,"sovereign state in southern Europe, enclaved within Italy"
+Somalia,SOM,SO,SOM,SOM,5.152149,46.199616,1,0,Q1045,6.00,47.00,Somalia,sovereign state in Africa
+Saint Pierre and Miquelon,SPM,PM,,,46.941936,-56.27111,1,0,Q34617,46.83,-56.28,Saint Pierre and Miquelon,self-governing territorial overseas collectivity of France
+Serbia,SRB,RS,SRB,SRB,44.016521,21.005859,1,0,Q403,43.95,20.93,Serbia,country in southeastern Europe
+South Sudan,SSD,,SSD,SSD,8,30,1,0,Q958,7.00,30.00,South Sudan,sovereign state in Africa
+São Tomé and Príncipe,STP,ST,STP,STP,0.18636,6.613081,0,0,Q1039,0.32,6.60,São Tomé and Príncipe,island sovereign state in Africa
+Sao Tome and Principe,STP,ST,STP,STP,0.18636,6.613081,1,0,Q1039,0.32,6.60,São Tomé and Príncipe,island sovereign state in Africa
+Soviet Union,SUN,,URS,URS,61.52401,105.318756,0,1,Q15180,65.00,90.00,Soviet Union,federal socialist country in Eastern Europe and Northern Asia (1922–1991)
+Suriname,SUR,SR,SUR,SUR,3.919305,-56.027783,1,0,Q730,4.00,-56.00,Suriname,sovereign state in South America
+Slovakia,SVK,SK,SVK,SVK,48.669026,19.699024,1,0,Q214,49.00,20.00,Slovakia,country in Central Europe
+Slovenia,SVN,SI,SLO,SVN,46.151241,14.995463,1,0,Q215,46.00,15.00,Slovenia,country in Central Europe
+Sweden,SWE,SE,SWE,SWE,60.128161,18.643501,1,0,Q34,61.00,15.00,Sweden,sovereign state in northern Europe
+Eswatini,SWZ,SZ,SWZ,SWZ,-26.522503,31.465866,1,0,Q1050,-26.48,31.43,Eswatini,sovereign state in southern Africa
+Swaziland,SWZ,SZ,SWZ,SWZ,-26.522503,31.465866,0,0,Q1050,-26.48,31.43,Eswatini,sovereign state in southern Africa
+Sint Maarten (Dutch part),SXM,,,,18.04258,-63.056017,1,0,Q26273,18.03,-63.07,Sint Maarten,"country on the Caribbean island of Saint Martin, part of the Kingdom of the Netherlands"
+Seychelles,SYC,SC,SEY,SEY,-4.679574,55.491977,1,0,Q1042,-7.10,52.77,Seychelles,island sovereign state off the eastern coast of Africa
+Syria,SYR,SY,SYR,SYR,34.802075,38.996815,0,0,Q858,35.22,38.58,Syria,sovereign state in western Asia
+Syrian Arab Republic,SYR,SY,SYR,SYR,34.802075,38.996815,1,0,Q858,35.22,38.58,Syria,sovereign state in western Asia
+Turks and Caicos Islands,TCA,TC,,TCA,21.694025,-71.797928,1,0,Q18221,21.78,-71.80,Turks and Caicos Islands,British Overseas Territory in the Caribbean
+Chad,TCD,TD,CHA,CHA,15.454166,18.732207,1,0,Q657,15.47,19.40,Chad,sovereign state in central Africa
+Togo,TGO,TG,TOG,TOG,8.619543,0.824782,1,0,Q945,8.25,1.18,Togo,sovereign state in Africa
+Thailand,THA,TH,THA,THA,15.870032,100.992541,1,0,Q869,14.00,101.00,Thailand,sovereign state in Southeast Asia
+Tajikistan,TJK,TJ,TJK,TJK,38.861034,71.276093,1,0,Q863,38.58,71.37,Tajikistan,sovereign state in Central Asia
+Tokelau,TKL,TK,,,-8.967363,-171.855881,1,0,Q36823,-9.17,-171.83,Tokelau,New Zealand territory in the Pacific Ocean
+Turkmenistan,TKM,TM,TKM,TKM,38.969719,59.556278,1,0,Q874,39.00,60.00,Turkmenistan,sovereign state in Central Asia
+Timor-Leste,TLS,TL,TLS,TLS,-8.874217,125.727539,1,0,Q574,-8.97,125.75,East Timor,sovereign state situated on several islands in Southeast Asia
+Tonga,TON,TO,TGA,TGA,-21.178986,-175.198242,1,0,Q678,-20.59,-174.81,Tonga,"sovereign state in Oceania, situated on an archipelago"
+Trinidad and Tobago,TTO,TT,TTO,TRI,10.691803,-61.222503,1,0,Q754,10.67,-61.52,Trinidad and Tobago,island sovereign state in the Caribbean
+Tunisia,TUN,TN,TUN,TUN,33.886917,9.537499,1,0,Q948,34.00,10.00,Tunisia,sovereign state in Northern Africa
+Turkey,TUR,TR,TUR,TUR,38.963745,35.243322,1,0,Q43,39.00,36.00,Turkey,sovereign state spanning in Europe and Asia
+Tuvalu,TUV,TV,TUV,,-7.109535,177.64933,1,0,Q672,-7.48,178.01,Tuvalu,island sovereign state in Oceania
+Taiwan,TWN,TW,TPE,TPE,23.69781,120.960515,0,0,Q865,24.00,121.00,Taiwan,"democratic republic in East Asia, also known as the Republic of China since 1949"
+"Taiwan, Province of China",TWN,TW,TPE,TPE,23.69781,120.960515,1,0,Q865,24.00,121.00,Taiwan,"democratic republic in East Asia, also known as the Republic of China since 1949"
+Tanzania,TZA,TZ,TAN,TAN,-6.369028,34.888822,0,0,Q924,-6.31,34.85,Tanzania,sovereign state in Africa
+"Tanzania, United Republic of",TZA,TZ,TAN,TAN,-6.369028,34.888822,1,0,Q924,-6.31,34.85,Tanzania,sovereign state in Africa
+Uganda,UGA,UG,UGA,UGA,1.373333,32.290275,1,0,Q1036,1.28,32.39,Uganda,sovereign state in East Africa
+Ukraine,UKR,UA,UKR,UKR,48.379433,31.16558,1,0,Q212,49.00,32.00,Ukraine,sovereign state in Europe
+Uruguay,URY,UY,URU,URU,-32.522779,-55.765835,1,0,Q77,-33.00,-56.00,Uruguay,sovereign state in South America
+United States of America,USA,US,USA,USA,37.09024,-95.712891,1,0,Q30,39.83,-98.58,United States of America,sovereign state in North America
+United States,USA,US,USA,USA,37.09024,-95.712891,0,0,Q30,39.83,-98.58,United States of America,sovereign state in North America
+Uzbekistan,UZB,UZ,UZB,UZB,41.377491,64.585262,1,0,Q265,41.00,66.00,Uzbekistan,sovereign state in Central Asia
+Vatican City,VAT,VA,,,41.902916,12.453389,0,0,Q237,41.90,12.45,Vatican City,"independent city-state enclaved within Rome, Italy under the sovereignty of the Holy See"
+Vatican City State,VAT,VA,,,41.902916,12.453389,0,0,Q237,41.90,12.45,Vatican City,"independent city-state enclaved within Rome, Italy under the sovereignty of the Holy See"
+Holy See,VAT,VA,,,41.902916,12.453389,1,0,Q237,41.90,12.45,Vatican City,"independent city-state enclaved within Rome, Italy under the sovereignty of the Holy See"
+Saint Vincent and the Grenadines,VCT,VC,VIN,VIN,12.984305,-61.287228,1,0,Q757,12.90,-61.23,Saint Vincent and the Grenadines,island sovereign state in the Caribbean Sea
+North Vietnam,VDR,,,VNO,21.028333,105.854167,0,1,Q172640,21.03,105.85,North Vietnam,former socialist republic in Southeast Asia
+"Viet-Nam, Democratic Republic of",VDR,,,VNO,21.028333,105.854167,0,1,Q172640,21.03,105.85,North Vietnam,former socialist republic in Southeast Asia
+Venezuela,VEN,VE,VEN,VEN,6.42375,-66.58973,0,0,Q717,8.00,-67.00,Venezuela,sovereign state in northern South America
+Venezuela (Bolivarian Republic of),VEN,VE,VEN,VEN,6.42375,-66.58973,1,0,Q717,8.00,-67.00,Venezuela,sovereign state in northern South America
+British Virgin Islands,VGB,VG,IVB,VGB,18.420695,-64.639968,0,0,Q25305,18.50,-64.50,British Virgin Islands,British overseas territory in the Caribbean
+Virgin Islands (British),VGB,VG,IVB,VGB,18.420695,-64.639968,1,0,Q25305,18.50,-64.50,British Virgin Islands,British overseas territory in the Caribbean
+U.S. Virgin Islands,VIR,VI,ISV,VIR,18.335765,-64.896335,0,0,Q11703,18.33,-64.83,United States Virgin Islands,group of islands in the Caribbean
+United States Virgin Islands,VIR,VI,ISV,VIR,18.335765,-64.896335,0,0,Q11703,18.33,-64.83,United States Virgin Islands,group of islands in the Caribbean
+Virgin Islands (U.S.),VIR,VI,ISV,VIR,18.335765,-64.896335,1,0,Q11703,18.33,-64.83,United States Virgin Islands,group of islands in the Caribbean
+Viet Nam,VNM,VN,VIE,VIE,14.058324,108.277199,1,0,Q881,16.00,108.00,Vietnam,sovereign state in Southeast Asia
+Vietnam,VNM,VN,VIE,VIE,14.058324,108.277199,0,0,Q881,16.00,108.00,Vietnam,sovereign state in Southeast Asia
+Vanuatu,VUT,VU,VAN,VAN,-15.376706,166.959158,1,0,Q686,-16.63,168.02,Vanuatu,sovereign state situated on an archipelago in the South Pacific Ocean
+Wallis and Futuna,WLF,WF,,,-13.768752,-177.156097,1,0,Q35555,-14.30,-178.11,Wallis and Futuna,overseas collectivity of France
+Samoa,WSM,WS,SAM,SAM,-13.759029,-172.104629,1,0,Q683,-14.00,-172.00,Samoa,sovereign state made up of six islands in the Pacific Ocean
+North Yemen,YEM,,YAR,NYE,15.354722,44.206667,0,1,Q267584,15.35,44.21,Yemen Arab Republic,former country
+Yemen,YEM,YE,YEM,YEM,15.552727,48.516388,1,0,Q805,15.50,48.00,Yemen,sovereign state in western Asia
+South Yemen,YMD,,YMD,SYE,12.8,45.033333,0,1,Q199841,12.80,45.03,South Yemen,1967–1990 country in western Asia
+Yugoslavia,YUG,,YUG,YUG,44.816667,20.45,0,1,Q36704,44.82,20.46,Yugoslavia,1918–1992 country in Southeastern and Central Europe
+"Yugoslavia, Federal Republic of",YUG,,YUG,YUG,44.816667,20.45,0,1,Q838261,44.82,20.47,Federal Republic of Yugoslavia,former Balkans republic country
+South Africa,ZAF,ZA,RSA,RSA,-30.559482,22.937506,1,0,Q258,-29.00,24.00,South Africa,sovereign state in Southern Africa
+Zambia,ZMB,ZM,ZAM,ZAM,-13.133897,27.849332,1,0,Q953,-14.00,28.00,Zambia,sovereign state in Southern Africa
+Kosovo,,XK,KOS,KVX,42.602636,20.902977,0,0,Q1246,42.55,20.83,Kosovo,partially recognized country in southeastern Europe
+British Honduras,,,HBR,BHO,17.189877,-88.49765,0,1,Q1643555,17.07,-88.70,British Honduras,UK possession in Central America between 1862 and 1981
+North Borneo,,,NBO,NBO,5.25,117,0,1,Q16933920,5.25,117.00,North Borneo,former Crown Colony (1946-1963)
+Northern Rhodesia,,,NRH,NRH,-13.133897,27.849332,0,1,Q953903,-14.12,27.63,Northern Rhodesia,protectorate in south central Africa in 1924–1964
+ Australasia,,,ANZ,,-41.00,124.00,0,0,Q45256,-41.00,124.00,Australasia,region of the Pacific Ocean
+ Australasia,,,AUA,,-41.00,124.00,0,0,Q45256,-41.00,124.00,Australasia,region of the Pacific Ocean
+ Bohemia,,,BOH,,49.83,14.33,0,1,Q39193,49.83,14.33,Bohemia,historical region in the Czech Republic

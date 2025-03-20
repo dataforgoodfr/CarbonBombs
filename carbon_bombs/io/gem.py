@@ -1,4 +1,5 @@
 """Functions to load and scrap GEM related datasets"""
+
 import re
 import warnings
 
@@ -11,7 +12,7 @@ from carbon_bombs.conf import FPATH_SRC_GEM_GASOIL
 from carbon_bombs.utils.logger import LOGGER
 
 
-def load_coal_mine_gem_database():
+def load_coal_mine_gem_database_april_2023():
     """
     Loads the Global Coal Mine Tracker database from an Excel file.
 
@@ -37,6 +38,38 @@ def load_coal_mine_gem_database():
     LOGGER.debug("Read GEM source: `Global Coal Mine Tracker`")
     df = pd.read_excel(
         FPATH_SRC_GEM_COAL, sheet_name="Global Coal Mine Tracker", engine="openpyxl"
+    )
+    return df
+
+
+def load_coal_mine_gem_database():
+    """
+    Loads the Global Coal Mine Tracker database from an Excel file.
+
+    Returns
+    -------
+    pd.DataFrame:
+        A pandas dataframe with the data from the "Global Coal Mine Tracker"
+        sheet.
+
+    Raises
+    ------
+    FileNotFoundError:
+        If the data file is not found in the specified path.
+    ValueError:
+        If the data file does not contain the expected sheet.
+
+    Notes
+    -----
+    The data file is expected to be in the following path:
+    "./data_sources/Global-Coal-Mine-Tracker-April-2023.xlsx".
+    The sheet to be read is "Global Coal Mine Tracker".
+    """
+    LOGGER.debug("Read GEM source: `Global Coal Mine Tracker (Non-C`")
+    df = pd.read_excel(
+        FPATH_SRC_GEM_COAL,
+        sheet_name="Global Coal Mine Tracker (Non-C",
+        engine="openpyxl",
     )
     return df
 
@@ -166,6 +199,8 @@ def get_description_from_soup(soup):
 
 def get_gem_wiki_details(url):
     """Return the description and start year of a GEM project given a wiki url"""
+    return "No description available", "No start year available"
+
     LOGGER.debug(f"Get GEM details of {url}")
     r = requests.get(url)
     soup = BeautifulSoup(r.text, features="html.parser")
