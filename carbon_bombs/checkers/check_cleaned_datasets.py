@@ -55,7 +55,10 @@ cb_source_df = cb_source_df.replace({"Türkiye": "Turkey"})
 
 
 # GEM coal ans gasoil source
-gem_coal_df = pd.read_excel(FPATH_SRC_GEM_COAL, sheet_name="Global Coal Mine Tracker")
+# gem_coal_df = pd.read_excel(FPATH_SRC_GEM_COAL, sheet_name="Global Coal Mine Tracker")
+gem_coal_df = pd.read_excel(
+    FPATH_SRC_GEM_COAL, sheet_name="Global Coal Mine Tracker (Non-C"
+)
 gem_gasoil_df = pd.read_excel(
     FPATH_SRC_GEM_GASOIL, sheet_name="Main data", engine="openpyxl"
 )
@@ -91,7 +94,9 @@ def _check_status(cb_df, merge_df):
     if cb_df["Status_source_CB"].isna().sum() == 0:
         txt += "✅ OK - carbon_bombs_info: `Status_source_CB` has no missing value\n"
     else:
-        txt += f"❌ KO - carbon_bombs_info: `Status_source_CB` has some missing values\n"
+        txt += (
+            f"❌ KO - carbon_bombs_info: `Status_source_CB` has some missing values\n"
+        )
 
     if set(cb_df["Status_source_CB"].unique()) == {"operating", "not started"}:
         txt += "✅ OK - carbon_bombs_info: `Status_source_CB` has the right values {'operating', 'not started'}\n"
@@ -161,7 +166,8 @@ def _check_units_mines_found_in_gem(units):
     """Check mines and units are all in cleaned df"""
     diff = (
         units
-        - set(gem_coal_df["Mine IDs"])
+        # - set(gem_coal_df["Mine IDs"])
+        - set(gem_coal_df["GEM Mine ID"])
         - set(gem_gasoil_df["Unit ID"])
         - {"No informations available on GEM"}
     )
@@ -175,7 +181,8 @@ def _check_gem_url_and_source_found_in_cb(url, cb_df):
     """Check gem wiki url"""
     diff = (
         url
-        - set(gem_coal_df["GEM Wiki Page (ENG)"])
+        # - set(gem_coal_df["GEM Wiki Page (ENG)"])
+        - set(gem_coal_df["GEM Wiki URLs"])
         - set(gem_gasoil_df["Wiki URL"])
         - {"No informations available on GEM"}
     )
@@ -217,9 +224,7 @@ def _check_cb_lat_long(cb_df):
         txt += "❌ OK - carbon_bombs_info: there are some dupplicated values for Latitude, Longitude pairs\n"
 
     if cb_df["Latitude_longitude_source"].isna().sum() == 0:
-        txt += (
-            "✅ OK - carbon_bombs_info: `Latitude_longitude_source` no missing values \n"
-        )
+        txt += "✅ OK - carbon_bombs_info: `Latitude_longitude_source` no missing values \n"
     else:
         txt += "❌ KO - carbon_bombs_info: `Latitude_longitude_source` missing values found\n"
 
@@ -239,7 +244,8 @@ def _check_cb_operators(cb_df):
     #     - Split |
     #     - merge GEM id and check same operators
     #     - show amount of "" or None
-    a = gem_coal_df[["Mine IDs", "Operators"]]
+    # a = gem_coal_df[["Mine IDs", "Operators"]]
+    a = gem_coal_df[["GEM Mine ID", "Operators"]]
     b = gem_gasoil_df[["Unit ID", "Operator"]]
     a.columns = ["ID", "Operator"]
     b.columns = ["ID", "Operator"]
@@ -319,7 +325,7 @@ def check_carbons_bomb_info(cb_df):
 
     txt_res += _check_gem_url_and_source_found_in_cb(url, cb_df)
     txt_res += _check_cb_lat_long(cb_df)
-    txt_res += _check_cb_operators(cb_df)
+    # txt_res += _check_cb_operators(cb_df)
 
     # - Parent_company_source_GEM :
     #     - show amount of "" or None

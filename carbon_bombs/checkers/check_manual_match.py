@@ -1,4 +1,5 @@
 """Function to check if manual match data are valid or not"""
+
 import pandas as pd
 
 from carbon_bombs.conf import FPATH_SRC_GEM_COAL
@@ -17,7 +18,10 @@ from carbon_bombs.io.manual_match import manual_match_gasoil
 # ========= #
 
 # GEM source
-gem_coal_df = pd.read_excel(FPATH_SRC_GEM_COAL, sheet_name="Global Coal Mine Tracker")
+# gem_coal_df = pd.read_excel(FPATH_SRC_GEM_COAL, sheet_name="Global Coal Mine Tracker")
+gem_coal_df = pd.read_excel(
+    FPATH_SRC_GEM_COAL, sheet_name="Global Coal Mine Tracker (Non-C"
+)
 gem_gasoil_df = pd.read_excel(
     FPATH_SRC_GEM_GASOIL, sheet_name="Main data", engine="openpyxl"
 )
