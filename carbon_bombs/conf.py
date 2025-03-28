@@ -21,6 +21,9 @@ FPATH_SRC_GEM_COAL = f"{DATA_SOURCE_PATH}/Global-Coal-Mine-Tracker-April-2024.xl
 FPATH_SRC_GEM_GASOIL = (
     f"{DATA_SOURCE_PATH}/Global-Oil-and-Gas-Extraction-Tracker-Feb-2023.xlsx"
 )
+FPATH_SRC_GOGEL_LNG = (
+    f"{DATA_SOURCE_PATH}/LNG-Liquefaction-Projects-from-GOGEL-2024.xlsx"
+)
 FPATH_SRC_BOCC = f"{DATA_SOURCE_PATH}/GROUP-Fossil_Fuel_Financing_by_Company_Banking_on_Climate_Chaos_2023.xlsx"
 FPATH_SRC_COMP_URL = f"{DATA_SOURCE_PATH}/company_url.csv"
 FPATH_SRC_COMP_ADDRESS = f"{DATA_SOURCE_PATH}/Data_chatGPT_company_hq_adress.csv"
