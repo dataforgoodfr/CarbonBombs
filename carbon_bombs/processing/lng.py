@@ -1,4 +1,5 @@
 """Function to process lng informations from GOGEL"""
+
 import pandas as pd
 import numpy as np
 import country_converter as coco
@@ -24,6 +25,8 @@ def create_lng_table():
     """
     LOGGER.debug("Read LNG source: LNG Liquefaction projects")
     df_lng = load_lng_database()
+
+    # TODO: refacto get lat long country in an utils func for here and cb processing
     country_lat_long_df = pd.read_csv(f"{DATA_SOURCE_PATH}/longitude-latitude.csv")
 
     LOGGER.debug("Add LNG project's country location")
