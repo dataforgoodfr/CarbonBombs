@@ -89,3 +89,10 @@ country_data,Population_in_millions,Population mid-year estimates (millions),UND
 country_data,Year_Population_in_millions,Source year of population mid-year estimates,UNData
 country_data,Surface_thousand_km2,Surface area (thousand km2),UNData
 country_data,Year_Surface_thousand_km2,Source year of surface area,UNData
+lng_data,Project_name,Name of the LNG project,GOGEL
+lng_data,Export_capacity_in_Mtpa,Export capacity of the project in million tonnes per annum (Mtpa),GOGEL
+lng_data,Project_status,Current status of the project,GOGEL
+lng_data,Country,Country where the project is located,GOGEL
+lng_data,Companies_involved,Companies participating in the project,GOGEL
+lng_data,Latitude,Latitude coordinate of the project's country location,GOGEL
+lng_data,Longitude,Longitude coordinate of the project's country location,GOGEL

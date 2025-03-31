@@ -10,6 +10,7 @@ from carbon_bombs.conf import FPATH_RESULT_CHECK
 from carbon_bombs.io.cleaned import save_bank_table
 from carbon_bombs.io.cleaned import save_carbon_bombs_table
 from carbon_bombs.io.cleaned import save_company_table
+from carbon_bombs.io.cleaned import save_lng_table
 from carbon_bombs.io.cleaned import save_connexion_bank_company_table
 from carbon_bombs.io.cleaned import save_connexion_cb_company_table
 from carbon_bombs.io.cleaned import save_country_table
@@ -19,6 +20,7 @@ from carbon_bombs.io.md5 import generate_checksum_cleaned_datasets
 from carbon_bombs.processing.banks import create_banks_table
 from carbon_bombs.processing.carbon_bombs_info import create_carbon_bombs_table
 from carbon_bombs.processing.company import create_company_table
+from carbon_bombs.processing.lng import create_lng_table
 from carbon_bombs.processing.connexion_bank_company import (
     create_connexion_bank_company_table,
 )
@@ -122,17 +124,29 @@ def generate_dataset(verbose, start_at_step):
     else:
         LOGGER.info("Step 6 - skipped (create country table)")
 
-    # Step 7 : concat all datasets in the same excel + metadatas
-    LOGGER.info("Step 7 - START")
-    LOGGER.info("Step 7 - save all dataframes into concatenate excel")
-    save_dataframes_into_excel()
-    LOGGER.info("Step 7 - generate checksums")
-    generate_checksum_cleaned_datasets()
-    LOGGER.info("Step 7 - DONE")
+    # Step 7 : LNG table
+    if start_at_step <= 7:
+        LOGGER.info("Step 7 - START")
+        LOGGER.info("Step 7 - create LNG table started")
+        data_lng = create_lng_table()
+        LOGGER.info("Step 7 - LNG table created")
+        save_lng_table(data_lng)
+        LOGGER.info("Step 7 - LNG table saved")
+        LOGGER.info("Step 7 - DONE")
+    else:
+        LOGGER.info("Step 7 - skipped (create LNG table)")
 
-    # Step 8 : check cleaned datasets and compare with old ones
+    # Step 8 : concat all datasets in the same excel + metadatas
     LOGGER.info("Step 8 - START")
-    LOGGER.info("Step 8 - check cleaned datasets and compare with old")
+    LOGGER.info("Step 8 - save all dataframes into concatenate excel")
+    save_dataframes_into_excel()
+    LOGGER.info("Step 8 - generate checksums")
+    generate_checksum_cleaned_datasets()
+    LOGGER.info("Step 8 - DONE")
+
+    # Step 9 : check cleaned datasets and compare with old ones
+    LOGGER.info("Step 9 - START")
+    LOGGER.info("Step 9 - check cleaned datasets and compare with old")
     check_txt_end = check_cleaned_datasets()
     check_txt_end += compare_cleaned_datasets()
     LOGGER.info(f"Check cleaned datasets and comparison:\n{check_txt_end}")
@@ -142,7 +156,7 @@ def generate_dataset(verbose, start_at_step):
         f.write(check_txt)
 
     remove_old_cleaned_datasets()
-    LOGGER.info("Step 8 - DONE")
+    LOGGER.info("Step 9 - DONE")
 
     LOGGER.info("Generate dataset script - DONE")
 

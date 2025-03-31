@@ -7,6 +7,7 @@ from carbon_bombs.conf import FPATH_OUT_ALL
 from carbon_bombs.conf import FPATH_OUT_BANK
 from carbon_bombs.conf import FPATH_OUT_CB
 from carbon_bombs.conf import FPATH_OUT_COMP
+from carbon_bombs.conf import FPATH_OUT_LNG
 from carbon_bombs.conf import FPATH_OUT_CONX_BANK_COMP
 from carbon_bombs.conf import FPATH_OUT_CONX_CB_COMP
 from carbon_bombs.conf import FPATH_OUT_COUNTRY
@@ -154,6 +155,11 @@ def save_country_table(data: pd.DataFrame):
     data.to_csv(FPATH_OUT_COUNTRY, encoding="utf-8-sig", index=False)
 
 
+def save_lng_table(data: pd.DataFrame):
+    """Save lng dataset to cleaned directory as CSV"""
+    data.to_csv(FPATH_OUT_LNG, encoding="utf-8-sig", index=False)
+
+
 def save_dataframes_into_excel():
     """Generate an Excel file into `fpath` that takes all
     datasets path and put it into different sheets
@@ -173,6 +179,7 @@ def save_dataframes_into_excel():
         FPATH_SRC_METADATAS,
         FPATH_OUT_COMP,
         FPATH_OUT_BANK,
+        FPATH_OUT_LNG,
         FPATH_OUT_CONX_BANK_COMP,
         FPATH_OUT_CONX_CB_COMP,
         FPATH_OUT_COUNTRY,
