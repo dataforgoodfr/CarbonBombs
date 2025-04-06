@@ -5,7 +5,7 @@ from carbon_bombs.conf import FPATH_SRC_RYSTAD_GASOIL
 from carbon_bombs.utils.logger import LOGGER
 
 
-def load_gasoil_database():
+def load_gasoil_rystad_database():
     """
     Load Gas & Oil database projects from Rystad.
 
@@ -37,5 +37,7 @@ def load_gasoil_database():
     df = df.rename(columns=renamed_columns)
     # Remove last line if it correponds to sum
     if df.iloc[-1]["Project_name"] == "Sum":
-        return df.iloc[:-1]
+        df = df.iloc[:-1]
+    # Convert "Start_year" to integer because row sum force float type
+    df["Start_year"] = df["Start_year"].astype(int)
     return df

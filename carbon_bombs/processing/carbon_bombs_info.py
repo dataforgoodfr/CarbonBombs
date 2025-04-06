@@ -1,24 +1,25 @@
 """Function to process carbon bombs information"""
 
 import re
-from itertools import groupby
 
 import numpy as np
 import pandas as pd
 from fuzzywuzzy import fuzz
-from geopy.geocoders import Nominatim
 import country_converter as coco
 
 
 from carbon_bombs.conf import PROJECT_SEPARATOR
 from carbon_bombs.conf import THRESHOLD_OPERATING_PROJECT
+from carbon_bombs.conf import DATA_SOURCE_PATH
 from carbon_bombs.io.gem import get_gem_wiki_details
 from carbon_bombs.io.gem import load_coal_mine_gem_database
 from carbon_bombs.io.gem import load_gasoil_mine_gem_database
+from carbon_bombs.io.rystad import load_gasoil_rystad_database
 from carbon_bombs.io.khune_paper import load_carbon_bomb_coal_database
 from carbon_bombs.io.khune_paper import load_carbon_bomb_gasoil_database
 from carbon_bombs.io.manual_match import manual_match_coal
 from carbon_bombs.io.manual_match import manual_match_gasoil
+from carbon_bombs.io.manual_match import manual_match_rystad_gasoil
 from carbon_bombs.io.manual_match import manual_match_lat_long
 from carbon_bombs.utils.location import get_world_region
 from carbon_bombs.utils.logger import LOGGER
@@ -304,7 +305,8 @@ def _init_carbon_bombs_table(fuel: str) -> pd.DataFrame:
         CB and GEM dataframe merged and normalized
     """
     LOGGER.debug(f"{fuel}: Start dataframe initialization")
-
+    # TO DO : Refacto complet de cette fonction pour qu'elle ne soit applicable
+    # uniquement au combustible Coal car plus utilisé pour Gas&Oil
     if fuel == "gasoil":
         df_cb = load_carbon_bomb_gasoil_database()
         df_gem = load_gasoil_mine_gem_database()
@@ -412,12 +414,104 @@ def _init_carbon_bombs_table(fuel: str) -> pd.DataFrame:
     return df_merge
 
 
-def create_carbon_bombs_gasoil_table() -> pd.DataFrame:
-    """Combines data from the Global Oil and Gas Extraction Tracker and the Carbon
-    Bomb Oil and Gas database to create a table of oil and gas mines matched to
-    their corresponding carbon bombs.
+def _clean_project_names_with_iso(df_rystad):
     """
-    return _init_carbon_bombs_table(fuel="gasoil")
+    Cleans the 'Project_name' column in a DataFrame by removing trailing ISO-ALPHA-2 country codes
+    (e.g., ", KE") when they match the corresponding country in the 'Country' column.
+
+    Parameters:
+    ----------
+    df_rystad : pd.DataFrame
+        A DataFrame containing at least the columns 'Project_name' and 'Country'.
+        Example row: "South Lokichar Phase 3, KE" with Country = "Kenya".
+
+    Returns:
+    -------
+    pd.DataFrame
+        The same DataFrame with the 'Project_name' column cleaned: any trailing
+        ", XX" matching the country's ISO code is removed.
+    """
+    # Load the ISO code data
+    country_lat_long_df = pd.read_csv(f"{DATA_SOURCE_PATH}/longitude-latitude.csv")
+    # Create a mapping from country to ISO-ALPHA-2 code
+    country_to_iso = dict(
+        zip(country_lat_long_df["Country"], country_lat_long_df["ISO-ALPHA-2"])
+    )
+
+    # Function to remove ",XX" from project name if XX matches country ISO code
+    def remove_iso_suffix(row):
+        project_name = row["Project_name"]
+        country = row["Country"]
+        iso_code = country_to_iso.get(country)
+        if iso_code and re.search(rf",\s*{iso_code}$", project_name):
+            return re.sub(rf",\s*{iso_code}$", "", project_name)
+        return project_name
+
+    # Apply the function row-wise
+    df_rystad["Project_name"] = df_rystad.apply(remove_iso_suffix, axis=1)
+    return df_rystad
+
+
+def create_carbon_bombs_gasoil_table() -> pd.DataFrame:
+    """
+    Combines data from the Rystad Oil & Gas database and the Carbon Bomb
+    database (K. Khune) to create a table of oil and gas projects. The Carbon
+    Bomb database is used solely to identify which Rystad projects are considered
+    carbon bombs. Projects not identified as carbon bombs are also retained in
+    the output table.
+    """
+    LOGGER.debug("Gas & Oil : Start dataframe initialization")
+    # Load carbon bombs database from K.Khune paper for Gas & Oil project only
+    df_cb = load_carbon_bomb_gasoil_database()
+    # Load Gas & Oil project Database from Rystad
+    df_rystad = load_gasoil_rystad_database()
+    LOGGER.debug("Gas & Oil: CB and Rystad dataframes loaded")
+    # Remove country acronym from Rystad project (format ISO-ALPHA-2)
+    df_rystad = _clean_project_names_with_iso(df_rystad)
+
+    # Create a key based on project name + country to get exact match
+    # Objective of merging = Differentiate in Rystad database Carbon Bombs
+    # projects defined in K.Khune paper from others projects
+    df_cb["tmp_project_name"] = df_cb["Project Name"] + "/" + df_cb["Country"]
+    df_rystad["tmp_project_name"] = (
+        df_rystad["Project_name"] + "/" + df_rystad["Country"]
+    )
+
+    # Merge the Rystad dataframe with Carbon Bombs list to tag CB projects
+    df_rystad = df_rystad.merge(
+        df_cb[["tmp_project_name"]], on="tmp_project_name", how="left", indicator=True
+    )
+    # Create a new column to flag Carbon Bombs directly matched
+    df_rystad["is_carbon_bomb"] = df_rystad["_merge"] == "both"
+
+    # Modify is_carbon_bomb column based on manual match
+    unmatched_cb = df_cb[~df_cb["tmp_project_name"].isin(df_rystad["tmp_project_name"])]
+    for cb_project_name, rystad_project_name in manual_match_rystad_gasoil.items():
+        # Find rows in df_cb that match the CB project name
+        matching_cb_rows = unmatched_cb[unmatched_cb["Project Name"] == cb_project_name]
+        if matching_cb_rows.empty:
+            continue  # Skip if no such CB project found
+
+        # For each match, get the associated country
+        for _, cb_row in matching_cb_rows.iterrows():
+            country = cb_row["Country"]
+            # Now find the corresponding project in df_rystad
+            match_mask = (df_rystad["Project_name"] == rystad_project_name) & (
+                df_rystad["Country"] == country
+            )
+            if match_mask.any():
+                df_rystad.loc[match_mask, "is_carbon_bomb"] = True
+                LOGGER.info(
+                    f"Manual match: Carbon Bomb '{cb_project_name}' ({country}) "
+                    f"matched to Rystad project '{rystad_project_name}'"
+                )
+    # Drop temporary columns used for merging
+    df_rystad.drop(columns=["tmp_project_name", "_merge"], inplace=True)
+
+    return df_rystad
+
+    # TO DO remove this line when we finish integrate Rystad GasOil database
+    # return _init_carbon_bombs_table(fuel="gasoil")
 
 
 def create_carbon_bombs_coal_table() -> pd.DataFrame:
@@ -804,31 +898,20 @@ def _add_country_lat_long_when_missing(df_carbon_bombs: pd.DataFrame) -> pd.Data
     df_carbon_bombs = df_carbon_bombs.reset_index(drop=True)
 
     # Add latitude and longitude if informations not present
-    # geolocator = Nominatim(user_agent="my_app")
-    geolocator = Nominatim(user_agent="my-app_42")
     df_missing_coordinates = df_carbon_bombs[
         df_carbon_bombs["Latitude"].isnull() | df_carbon_bombs["Longitude"].isnull()
     ]
     for index, rows in df_missing_coordinates.iterrows():
-        name = rows["Carbon_bomb_name_source_CB"]
-        country = rows["Country_source_CB"]
+        name = rows["Project_name"]
+        country = rows["Country"]
         LOGGER.debug(
             f"No coordinates for `{name}` use latitude / longitude of {country}"
         )
-
-        # location = geolocator.geocode({"country": country})
-        # latitude = location.latitude
-        # longitude = location.longitude
-
         country_iso3 = coco.convert(names=country, to="ISO3")
-
-        from carbon_bombs.conf import DATA_SOURCE_PATH
-
         country_lat_long_df = pd.read_csv(f"{DATA_SOURCE_PATH}/longitude-latitude.csv")
         country_loc = country_lat_long_df.loc[
             country_lat_long_df["ISO-ALPHA-3"] == country_iso3
         ]
-
         if country_loc.empty:
             # TODO raise warning no country found
             LOGGER.info(f"country `{country}`: no lat, long found")
@@ -840,7 +923,6 @@ def _add_country_lat_long_when_missing(df_carbon_bombs: pd.DataFrame) -> pd.Data
 
         df_carbon_bombs.loc[index, "Latitude"] = latitude
         df_carbon_bombs.loc[index, "Longitude"] = longitude
-        df_carbon_bombs.loc[index, "Latitude_longitude_source"] = "Country CB"
 
     # add noise to dupplicated lat long
     # it's used for the website to avoid overlapping point on the map
@@ -891,6 +973,41 @@ def get_information_from_GEM(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def _determine_gasoil_project_status(row):
+    """
+    Determine the status of a project based on its potential CO2 emissions.
+
+    Since the 'Project_status' information is not available in the Rystad database,
+    we assign a status to each project based on the following logic:
+    - If 'Potential_GtCO2_short_term_expansion' > 0 → add 'short term' to the status list
+    - If 'Potential_GtCO2_long_term_expansion' > 0 → add 'long term' to the status list
+    - If 'Potential_GtCO2_producing' > 0 → add 'producing' to the status list
+
+    A project can have multiple statuses depending on which emission values are greater than zero.
+
+    Parameters:
+        row (pd.Series): A row from the df_gasoil DataFrame.
+
+    Returns:
+        list: A list of statuses assigned to the project.
+
+    Examples:
+        If both short term expansion and producing emissions > 0:
+            → ['short term', 'producing']
+
+        If only long term expansion emissions > 0:
+            → ['long term']
+    """
+    status = []
+    if row["Potential_GtCO2_short_term_expansion"] > 0:
+        status.append("short term")
+    if row["Potential_GtCO2_long_term_expansion"] > 0:
+        status.append("long term")
+    if row["Potential_GtCO2_producing"] > 0:
+        status.append("producing")
+    return status
+
+
 def create_carbon_bombs_table() -> pd.DataFrame:
     """
     Creates a table of carbon bomb projects by merging coal and gas/oil tables,
@@ -910,8 +1027,52 @@ def create_carbon_bombs_table() -> pd.DataFrame:
     # Cancel renaming of project that have the same name but are located in
     # different country (see function load_carbon_bomb_gasoil_database())
     # Only apply for the moment to gasoil dataframe
-    LOGGER.debug("Cancel duplicated project name renaming for gasoil projects")
-    df_gasoil = cancel_duplicated_rename(df_gasoil)
+    # TO DO : See if this function still apply as we now use Rystad source
+    # In my opinion not necessary anymore, as we focus on rystad project
+    # LOGGER.debug("Cancel duplicated project name renaming for gasoil projects")
+    # df_gasoil = cancel_duplicated_rename(df_gasoil)
+
+    # Add 'Project_status' column to df_gasoil dataframe
+    LOGGER.debug("Add gasoil projects status")
+    df_gasoil["Project_status"] = df_gasoil.apply(
+        _determine_gasoil_project_status, axis=1
+    )
+
+    # Add 'Fuel_type' column = "Gas & Oil" to df_gasoil dataframe
+    LOGGER.debug("Add gasoil fuel type")
+    df_gasoil["Fuel_type"] = "Gas & Oil"
+
+    # Select and rename relevant columns in df_coal
+    LOGGER.debug("Select and rename relevant columns in df_coal")
+    renamed_columns = {
+        "Carbon_Bomb_Name": "Project_name",
+        "Country": "Country",
+        "Latitude": "Latitude",
+        "Longitude": "Longitude",
+        "Carbon_bomb_start_year": "Start_year",
+        "Potential_GtCO2": "Potential_GtCO2_total",
+        "Fuel_type": "Fuel_type",
+        "Status": "Project_status",
+    }
+    # Only keep columns of interest for the project
+    df_coal = df_coal.loc[:, renamed_columns.keys()]
+    # Rename columns
+    df_coal = df_coal.rename(columns=renamed_columns)
+
+    # Add columns Potential_GtCO2 for producing, short term and long term units
+    # We fulfill with NA values as we don't have informations from GEM
+    LOGGER.debug("Select and rename relevant columns in df_coal")
+    gtco2_status_columns = [
+        "Potential_GtCO2_producing",
+        "Potential_GtCO2_short_term_expansion",
+        "Potential_GtCO2_long_term_expansion",
+    ]
+    for column in gtco2_status_columns:
+        df_coal[column] = np.nan
+
+    # Add is_carbon_bomb = True to all project in df_coal
+    LOGGER.debug("Add is_carbon_bomb = True to all project in df_coal")
+    df_coal["is_carbon_bomb"] = True
 
     # Merge dataframes
     LOGGER.debug("Merge coal and gasoil dataframes")
@@ -920,99 +1081,80 @@ def create_carbon_bombs_table() -> pd.DataFrame:
     # Replace Türkiye to Turkey
     df_carbon_bombs = df_carbon_bombs.replace({"Türkiye": "Turkey"})
 
-    # Remap dataframe columns to display data source
-    # Not efficient might be rework (no time for that right now)
-    name_mapping_source = {
-        "New_project": "Status_source_CB",
-        "Carbon_Bomb_Name": "Carbon_bomb_name_source_CB",
-        "Country": "Country_source_CB",
-        "Potential_GtCO2": "Potential_GtCO2_source_CB",
-        "Fuel_type": "Fuel_type_source_CB",
-        "GEM_ID": "GEM_id_source_GEM",
-        "GEM_source": "GEM_url_source_GEM",
-        "Latitude": "Latitude",
-        "Longitude": "Longitude",
-        "Operators": "Operators_source_GEM",
-        "Parent_Company": "Parent_company_source_GEM",
-        "Unit_concerned": "GEM_project_name_source_GEM",
-        "Status": "Status_source_GEM",
-    }
-    LOGGER.debug("Rename columns for CB dataframe")
-    df_carbon_bombs = df_carbon_bombs.rename(columns=name_mapping_source)
-
+    # TO DO : See if this column will still be necessary as we define involved
+    # companies into connexion sheet
     # Add companies involved column
-    LOGGER.debug("Add companies involved column to CB dataframe")
-    df_carbon_bombs = _add_companies_involved(df_carbon_bombs)
+    # LOGGER.debug("Add companies involved column to CB dataframe")
+    # df_carbon_bombs = _add_companies_involved(df_carbon_bombs)
 
+    # TO DO : See if still necessary
     # Set status to lower
-    df_carbon_bombs["Status_source_GEM"] = df_carbon_bombs[
-        "Status_source_GEM"
-    ].str.lower()
+    df_carbon_bombs["Project_status"] = df_carbon_bombs["Project_status"].str.lower()
 
+    # TO DO : See if still necessary (normally no)
     # Handle missing values by putting text instead
-    LOGGER.debug("Update missing values for GEM columns")
-    df_carbon_bombs = _handle_missing_values_gem(df_carbon_bombs)
+    # LOGGER.debug("Update missing values for GEM columns")
+    # df_carbon_bombs = _handle_missing_values_gem(df_carbon_bombs)
 
+    # TO DO : See if still necessary (normally no)
     # create status column by using Status from GEM and Status from CB if first one is NaN
-    LOGGER.debug("Add new status columns into CB dataframe")
-    df_carbon_bombs = _add_custom_status_columns(df_carbon_bombs)
+    # LOGGER.debug("Add new status columns into CB dataframe")
+    # df_carbon_bombs = _add_custom_status_columns(df_carbon_bombs)
 
+    # TO DO : See if still necessary (normally no)
     # Add Lat long source
-    df_carbon_bombs["Latitude_longitude_source"] = "GEM"
+    # df_carbon_bombs["Latitude_longitude_source"] = "GEM"
 
+    # TO DO : See if still necessary (normally no)
     # Add manual matchin Lat long
-    LOGGER.debug("Add manual matching country latitude and longitude")
-    df_carbon_bombs = _add_manual_matching_lat_long(df_carbon_bombs)
+    # LOGGER.debug("Add manual matching country latitude and longitude")
+    # df_carbon_bombs = _add_manual_matching_lat_long(df_carbon_bombs)
 
     # Handle Lat long of country when no lat long found
     LOGGER.debug("Add country latitude and longitude when no coordinate found")
     df_carbon_bombs = _add_country_lat_long_when_missing(df_carbon_bombs)
 
+    # TO DO : See if still necessary (normally no)
     # Retrieve description and start year from GEM wiki page
-    LOGGER.debug("Add GEM description and start year columns into CB dataframe")
-    df_carbon_bombs = get_information_from_GEM(df_carbon_bombs)
+    # LOGGER.debug("Add GEM description and start year columns into CB dataframe")
+    # df_carbon_bombs = get_information_from_GEM(df_carbon_bombs)
 
+    # TO DO : See if still necessary (normally no because it specific to Oil&Gas)
     # Specific fix fort Khafji bomb that is set to Kuwait and Saudi Arabia
     # -> attribute this carbon bomb to Kuwait to insure a better repartition
     # (Kuwait has 3 bombs and Saudi Arabia 23)
-    df_carbon_bombs.loc[
-        df_carbon_bombs.Carbon_bomb_name_source_CB == "Khafji", "Country_source_CB"
-    ] = "Kuwait"
+    # df_carbon_bombs.loc[
+    #    df_carbon_bombs.Carbon_bomb_name_source_CB == "Khafji", "Country_source_CB"
+    # ] = "Kuwait"
 
     # Add World Region associated to Headquarters country
     LOGGER.debug("Add world region column into CB dataframe")
     df_carbon_bombs["World_region"] = (
-        df_carbon_bombs["Country_source_CB"]
+        df_carbon_bombs["Country"]
         .replace({"Türkiye": "Turkey"})
         .apply(get_world_region)
     )
 
     # Reorder columns and sort by CB Name and country
     final_columns_order = [
-        "Carbon_bomb_name_source_CB",
-        "Country_source_CB",
+        "Project_name",
+        "Country",
         "World_region",
-        "Potential_GtCO2_source_CB",
-        "Fuel_type_source_CB",
-        "GEM_id_source_GEM",
-        "GEM_url_source_GEM",
         "Latitude",
         "Longitude",
-        "Latitude_longitude_source",
-        "Operators_source_GEM",
-        "Parent_company_source_GEM",
-        "Companies_involved_source_GEM",
-        "GEM_project_name_source_GEM",
-        "Carbon_bomb_description",
-        "Carbon_bomb_start_year",
-        "Status_source_CB",
-        "Status_source_GEM",
-        "Status_lvl_1",
-        "Status_lvl_2",
+        "Start_year",
+        "Project_status",
+        "Potential_GtCO2_total",
+        "Potential_GtCO2_producing",
+        "Potential_GtCO2_short_term_expansion",
+        "Potential_GtCO2_long_term_expansion",
+        "Fuel_type",
+        "is_carbon_bomb",
     ]
+
     LOGGER.debug("Reorder CB dataframe columns and sort dataframe by name and country")
     df_carbon_bombs = df_carbon_bombs[final_columns_order].sort_values(
-        by=["Carbon_bomb_name_source_CB", "Country_source_CB"], ascending=True
+        by=["Country", "Project_name"], ascending=True
     )
 
     return df_carbon_bombs
