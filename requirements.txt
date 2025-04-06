@@ -8,5 +8,6 @@ numpy
 openpyxl
 pandas
 python-dotenv
+python-Levenshtein
 requests
 xlsxwriter
