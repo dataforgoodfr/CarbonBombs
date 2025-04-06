@@ -1074,6 +1074,11 @@ def create_carbon_bombs_table() -> pd.DataFrame:
     LOGGER.debug("Add is_carbon_bomb = True to all project in df_coal")
     df_coal["is_carbon_bomb"] = True
 
+    # Add Data_source column to all project (coal = GEM, Gas&Oil = Rystad)
+    LOGGER.debug("Add Data_source to all project (Gas&Oil = Rystad and Coal = GEM)")
+    df_coal["Data_source"] = "GEM"
+    df_gasoil["Data_source"] = "Rystad"
+
     # Merge dataframes
     LOGGER.debug("Merge coal and gasoil dataframes")
     df_carbon_bombs = pd.concat([df_coal, df_gasoil], axis=0)
@@ -1150,6 +1155,7 @@ def create_carbon_bombs_table() -> pd.DataFrame:
         "Potential_GtCO2_long_term_expansion",
         "Fuel_type",
         "is_carbon_bomb",
+        "Data_source",
     ]
 
     LOGGER.debug("Reorder CB dataframe columns and sort dataframe by name and country")
