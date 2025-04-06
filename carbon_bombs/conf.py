@@ -21,6 +21,7 @@ FPATH_SRC_GEM_COAL = f"{DATA_SOURCE_PATH}/Global-Coal-Mine-Tracker-April-2024.xl
 FPATH_SRC_GEM_GASOIL = (
     f"{DATA_SOURCE_PATH}/Global-Oil-and-Gas-Extraction-Tracker-Feb-2023.xlsx"
 )
+FPATH_SRC_RYSTAD_GASOIL = f"{DATA_SOURCE_PATH}/Extract_modèle_Kenya.xlsx"
 FPATH_SRC_GOGEL_LNG = (
     f"{DATA_SOURCE_PATH}/LNG-Liquefaction-Projects-from-GOGEL-2024.xlsx"
 )
