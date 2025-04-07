@@ -26,6 +26,7 @@ from carbon_bombs.conf import SHEETNAME_BANK
 from carbon_bombs.conf import SHEETNAME_COMPANIES
 from carbon_bombs.conf import SHEETNAME_GEM_COAL
 from carbon_bombs.conf import SHEETNAME_GEM_GASOIL
+from carbon_bombs.conf import SHEETNAME_RYSTAD_GASOIL
 from carbon_bombs.conf import SHEETNAME_LAT_LONG
 
 # Dictionnary for Coal Mine only
@@ -39,7 +40,8 @@ match_coal = (
 )
 manual_match_coal = match_coal["units"].to_dict()
 
-# Dictionnary for Gas and Oil only
+# TO DO Remove this dict when rystad integration is finished
+# Dictionnary for GEM Gas and Oil only
 match_gasoil = pd.read_excel(
     FPATH_SRC_MANUAL_MATCHING, sheet_name=SHEETNAME_GEM_GASOIL
 ).dropna(subset=["CarbonBombs KK"])
@@ -54,6 +56,14 @@ match_gasoil = (
     .agg(units=("Unit name", lambda x: "$".join(x)))
 )
 manual_match_gasoil = match_gasoil["units"].to_dict()
+
+# Dictionnary for Rystad Gas and Oil only
+match_rystad_gasoil = pd.read_excel(
+    FPATH_SRC_MANUAL_MATCHING, sheet_name=SHEETNAME_RYSTAD_GASOIL
+).dropna(subset=["CarbonBombs KK"])
+manual_match_rystad_gasoil = match_rystad_gasoil.set_index("CarbonBombs KK")[
+    "Rystad Unit name"
+].to_dict()
 
 # Dictionnary for company matching between GEM (Global Energy Monitor) (key)
 # and BOCC (Banking On Climate Chaos) (values)

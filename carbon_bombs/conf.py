@@ -21,6 +21,7 @@ FPATH_SRC_GEM_COAL = f"{DATA_SOURCE_PATH}/Global-Coal-Mine-Tracker-April-2024.xl
 FPATH_SRC_GEM_GASOIL = (
     f"{DATA_SOURCE_PATH}/Global-Oil-and-Gas-Extraction-Tracker-Feb-2023.xlsx"
 )
+FPATH_SRC_RYSTAD_GASOIL = f"{DATA_SOURCE_PATH}/Extract_modèle_Kenya.xlsx"
 FPATH_SRC_GOGEL_LNG = (
     f"{DATA_SOURCE_PATH}/LNG-Liquefaction-Projects-from-GOGEL-2024.xlsx"
 )
@@ -43,6 +44,7 @@ FPATH_SRC_UNDATA_CO2 = (
 FPATH_SRC_MANUAL_MATCHING = f"{DATA_SOURCE_PATH}/Manual matching.xlsx"
 SHEETNAME_GEM_COAL = "macthGEMCoal"
 SHEETNAME_GEM_GASOIL = "macthGEMGasoil"
+SHEETNAME_RYSTAD_GASOIL = "matchRystadGasoil"
 SHEETNAME_COMPANIES = "Companies"
 SHEETNAME_BANK = "Bank"
 SHEETNAME_LAT_LONG = "Lat_Long"
