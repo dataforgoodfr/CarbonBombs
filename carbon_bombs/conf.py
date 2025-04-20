@@ -38,6 +38,9 @@ FPATH_SRC_UNDATA_GDP = (
 FPATH_SRC_UNDATA_CO2 = (
     f"{DATA_SOURCE_PATH}/undata_SYB65_310_202209_Carbon Dioxide Emission Estimates.csv"
 )
+FPATH_SRC_RYSTAD_CB = f"{DATA_SOURCE_PATH}/Extract_carbon_bombs_new.xlsx"
+SHEETNAME_RYSTAD_CB_EMISSION = "Carbon_Bombs_1GT"
+SHEETNAME_RYSTAD_CB_COMPANY = "Carbon_Bombs_1GT_Companies"
 
 # Manual matching source
 FPATH_SRC_MANUAL_MATCHING = f"{DATA_SOURCE_PATH}/Manual matching.xlsx"
