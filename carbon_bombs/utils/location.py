@@ -2,6 +2,7 @@
 
 # import awoc
 import country_converter as coco
+import re
 from geopy.geocoders import Nominatim
 
 
@@ -61,3 +62,25 @@ def get_country_from_geopy(lat: float, long: float) -> str:
     address = location.raw["address"]
     country = address.get("country", "")
     return country
+
+
+def clean_project_names_with_iso(df, column_name="Project_name"):
+    """
+    Remove ISO codes from project names in the DataFrame.
+    Example: 'Changqing, CN' -> 'Changqing' when country is China
+    Modifies the DataFrame in place.
+
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        DataFrame containing project names and countries
+    column_name : str, optional
+        Name of the column containing project names, by default "Project_name"
+    """
+    # Match pattern: comma followed by optional space and 2 uppercase letters at the end
+    iso_pattern = r",\s*[A-Z]{2}$"
+
+    # Clean all project names in the DataFrame in place
+    df[column_name] = df[column_name].apply(
+        lambda x: re.sub(iso_pattern, "", x) if re.search(iso_pattern, x) else x
+    )
