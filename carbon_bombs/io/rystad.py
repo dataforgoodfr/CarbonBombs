@@ -38,6 +38,8 @@ def load_rystad_cb_emission_database():
     df = df.loc[:, renamed_columns.keys()]
     # Rename columns
     df = df.rename(columns=renamed_columns)
+    # Remove last row if Project_name = "SUMS"
+    df = df[df["Project_name"] != "SUMS"]
     # Clean project names
     clean_project_names_with_iso(df)
     return df
@@ -69,7 +71,8 @@ def load_rystad_cb_company_database():
     df = df.loc[:, renamed_columns.keys()]
     # Rename columns
     df = df.rename(columns=renamed_columns)
-
+    # Remove row if Project_name = "SUMS"
+    df = df[df["Project_name"] != "SUMS"]
     # Clean project names
     clean_project_names_with_iso(df)
 
