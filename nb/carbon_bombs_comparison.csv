@@ -1,251 +1,251 @@
-project_name_v1;project_name_v2;country_v1;country_v2;emissions_v1;emissions_v2;emissions_difference;emissions_pct_difference;latitude_v1;longitude_v1;latitude_v2;longitude_v2;distance_km;matching_key
-ACG (Azeri-Chirag-Guneshli Deep Water);ACG (Azeri-Chirag-Guneshli Deep Water);Azerbaijan;Azerbaijan;1.660265695;1.02406402182;-0.6362016731800002;-38.32;40.21967;51.09767;40.078129;51.238621;19.779982824738816;acg (azeri-chirag-guneshli deep water)|azerbaijan
-Abqaiq;Abqaiq;Saudi Arabia;Saudi Arabia;1.59282777;2.7430574269999997;1.1502296569999997;72.21;26.1687;49.7841;25.972231;49.76313;21.867514235973385;abqaiq|saudi arabia
-Agha Jari;Agha Jari;Iran;Iran;1.563110231;2.00927765306;0.4461674220599998;28.54;30.8312;49.7596;30.774561;49.791618;6.987062100745161;agha jari|iran
-Ahwaz Asmari;Ahwaz (Ahwaz Asmari);Iran;Iran;2.238284406;1.60886604292;-0.6294183630800001;-28.12;31.215274469273588;48.78837509125032;31.209511;48.948978;15.317495067223522;ahwaz (ahwaz asmari)|iran
-Ahwaz Bangestan;Ahwaz (Bangestan);Iran;Iran;1.433911709;1.638539528766;0.20462781976600009;14.27;31.34142735057041;48.74713671009528;31.05636;50.120682;134.6667693339024;ahwaz (bangestan)|iran
-Al Khaleej Gas project;Al Khaleej Gas project;Qatar;Qatar;1.135307349;0.9857221601999999;-0.14958518880000016;-13.18;25.404764688968577;51.32589149770892;26.252499;51.8078;105.61635880952652;al khaleej gas project|qatar
-Anadarko Shelf_Oklahoma;;United States;;1.817826072;;;;31.7908;-103.4136;;;;anadarko shelf_oklahoma|united states
-Arctic LNG 2 T1-3;;Russia;;1.475579089;;;;64.74675533792778;97.6757031203325;;;;arctic lng 2 t1-3|russia
-Area 1 LNG (T1&T2);;Mozambique;;1.006654597;;;;-11.01534506741382;40.89575176938189;;;;area 1 lng (t1&t2)|mozambique
-Area-1 Future Phases;Area-1 Future Phases;Mozambique;Mozambique;1.022724356;0.9980630858558891;-0.024661270144110792;-2.41;-11.05671034258756;40.78198966379694;-11.645294;40.78595;65.10897648757413;area-1 future phases|mozambique
-Asab;Asab;UAE;UAE;1.373231334;1.72780146218;0.35457012818;25.82;23.464524356836776;53.32383588048137;23.25993;54.253551;97.72343642585292;asab|uae
-Athabasca Oil Sands Project;Athabasca Oil Sands Project;Canada;Canada;1.355853264;1.0757329775569322;-0.28012028644306786;-20.66;55.529;-110.925;57.238041;-111.4379;192.91758854753581;athabasca oil sands project|canada
-Austin Chalk Tight;Austin Chalk Horizontal;United States;United States;1.392828065;2.4406272586998914;1.0477991936998914;75.23;28.30015217;-98.7787202;29.0;-97.800003;123.17249030792439;austin chalk horizontal|united states
-Azadegan;;Iran;;2.278016459;;;;31.1613;47.7945;;;;azadegan|iran
-Bab;Bab;UAE;UAE;4.197033055;3.2933580565800002;-0.9036749984200001;-21.53;23.906393529098427;54.00851187700544;23.80879;53.67017;36.12024847602955;bab|uae
-Bab (Gasco);;UAE;;1.674389775;;;;24.06199695096277;54.01813475103998;;;;bab (gasco)|uae
-Baghdad East;Baghdad East;Iraq;Iraq;2.742460925;2.6109364662;-0.13152445879999997;-4.8;33.382;44.521;33.43343;44.41547;11.353484423524279;baghdad east|iraq
-Bakken Shale;Bakken Shale;United States;United States;5.948592838;5.530049895647663;-0.418542942352337;-7.04;48.75400284;-103.6694762;47.786495;-104.45757;122.45941620997338;bakken shale|united states
-Baltimore Canyon Offshore;;United States;;1.648511699;;;;39.844686833398;-100.54240718303907;;;;baltimore canyon offshore|united states
-Barail Shale;;India;;2.141583711;;;;22.359964050205196;78.76510918367553;;;;barail shale|india
-Barnett Shale;Barnett Shale;United States;United States;1.360879964;1.1208986931349398;-0.23998127086506016;-17.63;33.86578666;-98.83889992;33.174999;-97.566704;140.84786531936393;barnett shale|united states
-Barzan;Barzan;Qatar;Qatar;3.094095108;3.0064737866;-0.0876213213999999;-2.83;25.306226220700992;51.211818432059296;26.252499;51.8078;120.67839484432925;barzan|qatar
-Basrah Gas project;Basrah Gas project;Iraq;Iraq;1.041154291;0.8655773244;-0.1755769666;-16.86;30.501773750915195;47.62559252526773;30.325453;47.66333;19.880284308420418;basrah gas project|iraq
-Beaufort Sea Offshore;;United States;;1.254810599;;;;39.74262669866818;-100.43734725350062;;;;beaufort sea offshore|united states
-Berri;Berri;Saudi Arabia;Saudi Arabia;3.557107777;3.4197179362599996;-0.1373898407400005;-3.86;27.1145;49.6389;27.1269;49.61058;3.1260348213144598;berri|saudi arabia
-Bovanenkovo Zone (Yamal Megaproject);Southern Zone (Yamal Megaproject);Russia;Russia;11.15863625;1.081442890746;-10.077193359254;-90.31;70.49;68.078;69.991051;70.254539;99.22931693462867;southern zone (yamal megaproject)|russia
-Bowland Shale;Bowland Shale;United Kingdom;United Kingdom;1.476082594;0.8370495778500001;-0.6390330161499999;-43.29;54.7023545;-3.2765753;53.589886;-0.55315405;216.7802191471065;bowland shale|united kingdom
-Bu Hasa;Bu Hasa;UAE;UAE;4.915778525;4.6201383750946;-0.29564014990540066;-6.01;23.6139909852162;53.198117555755545;23.531019;53.29528;13.521348517742325;bu hasa|uae
-Buzios (x-Franco);Buzios (x-Franco);Brazil;Brazil;3.638233141;2.9482481824036055;-0.6899849585963946;-18.96;-24.657;-42.498;-24.597;-42.487;6.738722201327652;buzios (x-franco)|brazil
-Cambrian/Silurian Marine Shale;Cambrian/Silurian Marine Shale;China;China;2.367530441;0.9648642200000002;-1.4026662209999998;-59.25;34.94806719788222;104.95947618728778;29.512699;104.86;602.8073900229305;cambrian/silurian marine shale|china
-Campos Offshore;;Brazil;;1.560951299;;;;-10.32682814070147;-53.26957843993451;;;;campos offshore|brazil
-Candeias Shale;Candeias Shale;Brazil;Brazil;1.641797865;1.044726896;-0.597070969;-36.37;-10.26530254614122;-53.29246936182786;-11.548;-37.687;1711.679078216426;candeias shale|brazil
-Carboniferous Shale;Carboniferous Shale;Kazakhstan;Kazakhstan;1.287218515;1.286544838;-0.0006736769999999837;-0.05;48.1012954;66.7780818;49.073002;51.356998;1140.8110168492724;carboniferous shale|kazakhstan
-Central Arabian Offshore;Central Arabian Offshore;Iran;Iran;2.122142874;1.226447979246;-0.8956948947540002;-42.21;32.59326179168417;54.58223387092213;28.696301;50.731499;568.1351413296794;central arabian offshore|iran
-Central Arabian Offshore;Central Arabian Offshore;Saudi Arabia;Saudi Arabia;6.860051661;2.718036054;-4.142015606999999;-60.38;25.570327575808435;42.39481088564463;27.309401;49.717701;755.2437934994178;central arabian offshore|saudi arabia
-Central Arabian Offshore;;Bahrain;;1.411444785;;;;26.1551249;50.5344606;;;;central arabian offshore|bahrain
-Central Arabian Onshore;Central Arabian Onshore;Kuwait;Kuwait;3.597522951;1.32484179;-2.2726811610000004;-63.17;29.338504102550196;47.57742873035417;29.4118;47.5639;8.229748157958449;central arabian onshore|kuwait
-Central Arabian Onshore;Central Arabian Onshore;Saudi Arabia;Saudi Arabia;4.359973713;1.7558547480000004;-2.604118964999999;-59.73;25.651475024938463;42.40298442946872;27.8158;48.366001;639.7737832347045;central arabian onshore|saudi arabia
-Central Arabian Onshore;;Iraq;;2.607423632;;;;33.0955793;44.1749775;;;;central arabian onshore|iraq
-Central Arabian Onshore;;Qatar;;2.217231619;;;;25.380919892516197;51.1825350486009;;;;central arabian onshore|qatar
-Central Uplift Onshore Xinjiang Uygur Autonomous Region;;China;;1.04432647;;;;34.927346800414355;104.9897798457134;;;;central uplift onshore xinjiang uygur autonomous region|china
-Changqing;Changqing;China;China;4.939920283;3.9417593489179;-0.9981609340821;-20.21;37.4467;106.6668;36.19635;107.6328;163.3418893764657;changqing|china
-Christina Lake;Christina Lake;Canada;Canada;1.232128944;1.1760227087400001;-0.056106235259999915;-4.55;61.08402866535078;-107.95780402089514;55.583138;-110.88795;636.1351765124485;christina lake|canada
-Chukchi Sea Offshore;;United States;;2.539277487;;;;39.71409997271603;-100.40986293585888;;;;chukchi sea offshore|united states
-Collingham Shale;Collingham Shale;South Africa;South Africa;1.849888206;1.85029669;0.00040848400000004226;0.02;-28.8166236;24.991639;-31.309999;24.360001;283.02840399693565;collingham shale|south africa
-DJ Basin Tight Oil;DJ Basin Tight Oil;United States;United States;5.852116216;4.125164967222474;-1.7269512487775254;-29.51;40.652082;-104.0780917;40.066002;-102.407;156.15431109059153;dj basin tight oil|united states
-Daqing;Daqing;China;China;2.601815792;2.5700803884662493;-0.031735403533750706;-1.22;34.92453785896824;104.91021597400474;46.620701;125.004;2125.9620479749537;daqing|china
-Dolphin;;Qatar;;1.550235876;;;;26.1938;52.0041;;;;dolphin|qatar
-Dovletabad-Donmez;Dovletabad-Donmez;Turkmenistan;Turkmenistan;1.578094288;0.9325531916800001;-0.6455410963199999;-40.91;39.382869924710896;59.3894108750061;36.473701;61.630798;378.250276761184;dovletabad-donmez|turkmenistan
-Duvernay;Duvernay;Canada;Canada;1.871369296;1.792058761048074;-0.07931053495192586;-4.24;61.01717450898887;-107.90344336568108;54.299999;-117.0;922.6085906195859;duvernay|canada
-Eagle Ford Shale;Eagle Ford Shale;Mexico;Mexico;5.0680294;1.8054022099999998;-3.262627190000001;-64.38;28.126464;-100.43932;28.876699;-100.5952;84.53563970485376;eagle ford shale|mexico
-Eagle Ford Shale;Eagle Ford Shale;United States;United States;5.924247947;7.898088267546816;1.9738403205468167;33.32;30.57697534;-96.40893727;27.98127;-99.826973;439.3818195982786;eagle ford shale|united states
-East Natuna (x-Natuna D-Alpha);;Indonesia;;2.158541118;;;;-2.4833826;117.8902853;;;;east natuna (x-natuna d-alpha)|indonesia
-Eastern Gas Program;Eastern Gas Program;Russia;Russia;4.274058366;3.9644204570539996;-0.30963790894600063;-7.24;67.39;79.405;54.774921;155.78879;4046.2531315703054;eastern gas program|russia
-El Sharara;;Libya;;1.00784607;;;;26.394;11.936;;;;el sharara|libya
-Gachsaran;Gachsaran;Iran;Iran;1.739296877;1.4781430080000002;-0.2611538689999997;-15.01;30.2865;50.7415;30.220091;50.806271;9.646494649614699;gachsaran|iran
-Gazprom dobycha Nadym;Gazprom dobycha Nadym;Russia;Russia;1.286567712;0.7879389750400001;-0.49862873696;-38.76;67.25;74.666667;66.230003;73.830002;119.57620880223251;gazprom dobycha nadym|russia
-Gazprom dobycha Orenburg;Gazprom dobycha Orenburg;Russia;Russia;1.593313222;1.1882820287800002;-0.4050311932199997;-25.42;51.029;55.065;51.630001;54.279999;86.3958884594655;gazprom dobycha orenburg|russia
-Gazprom dobycha Yamburg;Gazprom dobycha Yamburg;Russia;Russia;8.863793695;7.23161094808;-1.6321827469199999;-18.41;68.000833;75.998611;68.166664;76.0;18.496358860663854;gazprom dobycha yamburg|russia
-Ghawar Ain Dar N;;Saudi Arabia;;2.088574939;;;;25.177743114366585;49.18560331227423;;;;ghawar ain dar n|saudi arabia
-Ghawar Ain Dar S;Ghawar Ain Dar S;Saudi Arabia;Saudi Arabia;1.43464453;1.073401062;-0.36124346799999985;-25.18;25.19078921895293;49.19791351044925;25.899059;49.319801;79.41333158814305;ghawar ain dar s|saudi arabia
-Ghawar Haradh;Ghawar Haradh;Saudi Arabia;Saudi Arabia;6.966827829;8.204786018;1.2379581890000004;17.77;25.171349005212964;49.28515918442645;23.823879;49.167389;149.72971994832832;ghawar haradh|saudi arabia
-Ghawar Hawiyah;Ghawar Hawiyah;Saudi Arabia;Saudi Arabia;4.649714459;3.24914443262;-1.40057002638;-30.12;25.244800347497183;49.26395941804002;24.8393;49.17168;45.87385433345094;ghawar hawiyah|saudi arabia
-Ghawar Shedgum;Ghawar Shedgum;Saudi Arabia;Saudi Arabia;5.695002943;5.242382268;-0.45262067500000036;-7.95;25.20079120452993;49.169092768142;25.6896;49.407791;59.23389114064851;ghawar shedgum|saudi arabia
-Ghawar Uthmaniyah;Ghawar Uthmaniyah;Saudi Arabia;Saudi Arabia;19.22190525;10.754391948;-8.467513301999999;-44.05;25.223549425983027;49.18609842590048;25.371889;49.295399;19.778523899322682;ghawar uthmaniyah|saudi arabia
-Goldwyer Shale;Goldwyer Shale;Australia;Australia;4.468806417;2.8188994679986785;-1.6499069490013212;-36.92;-24.77841484250414;134.68724356381577;-18.1;124.1;1322.4486269992003;goldwyer shale|australia
-Gorgon LNG T1-T3;Gorgon LNG T1-T3;Australia;Australia;1.931000175;1.7641982007474581;-0.16680197425254195;-8.64;-24.71492331052776;134.8261149532438;-19.83333;114.4667;2164.3252882312627;gorgon lng t1-t3|australia
-Greater Burgan;Greater Burgan (CR in field);Kuwait;Kuwait;8.341919008;1.0510804980000001;-7.2908385099999995;-87.4;29.07838;47.98141;29.024;47.956001;6.515516024370691;greater burgan (cr in field)|kuwait
-Greater Liza (Liza);;Guyana;;1.002783934;;;;4.8417097;-58.6416891;;;;greater liza (liza)|guyana
-Greater Turbot (Stabroek);Stabroek Future Phases;Guyana;Guyana;1.114423675;1.362418102054;0.247994427054;22.25;7.9904;-57.0997;7.6154952;-56.305107;96.95304766467201;stabroek future phases|guyana
-Gulf Coast Centre Offshore;;United States;;1.106200913;;;;39.81159504642366;-100.42644399660053;;;;gulf coast centre offshore|united states
-Gulf Deepwater Offshore;;Mexico;;2.204840846;;;;23.6585116;-102.0077097;;;;gulf deepwater offshore|mexico
-Halfayah;;Iraq;;1.409043856;;;;31.546;47.451;;;;halfayah|iraq
-Harmaliyah;Harmaliyah;Saudi Arabia;Saudi Arabia;1.028095523;1.081807879174;0.05371235617400005;5.22;25.529970829608747;42.32001753325253;24.562754;49.463478;728.6840592074151;harmaliyah|saudi arabia
-Hassi Messaoud;;Algeria;;1.215923408;;;;31.854;5.8;;;;hassi messaoud|algeria
-Hassi R'Mel (Domestic);Hassi R'Mel (Pipe Export);Algeria;Algeria;2.271542343;1.6750779752;-0.5964643678000001;-26.26;33.064;3.202;32.944698;3.2567;14.184206598691192;hassi r'mel (pipe export)|algeria
-Haynesville/Bossier Shale;Western Haynesville/Bossier Shale;United States;United States;13.20413118;1.7536505999999998;-11.450480579999999;-86.72;31.65403345;-94.04298929;31.13446;-96.340363;225.96246571274798;western haynesville/bossier shale|united states
-Horizon Oil Sands Project;Horizon Oil Sands Project;Canada;Canada;1.989790706;2.1341921203800003;0.14440141438000031;7.26;60.99826889734878;-108.0913323699758;57.3937;-111.7624;452.88250488508845;horizon oil sands project|canada
-Irati Shale;Irati Shale;Brazil;Brazil;2.695278585;2.684220262;-0.01105832299999987;-0.41;-10.353300678215836;-53.25177513505275;-24.413;-54.254002;1559.7168426264816;irati shale|brazil
-Johan Sverdrup;;Norway;;1.073871982;;;;58.8013;2.603;;;;johan sverdrup|norway
-Karachaganak;Karachaganak;Kazakhstan;Kazakhstan;1.207734375;0.7691512390964014;-0.43858313590359865;-36.31;50.8372;52.9707;51.31583;53.259998;56.976652624981334;karachaganak|kazakhstan
-Kashagan;Kashagan;Kazakhstan;Kazakhstan;5.086161261;4.471389478361042;-0.6147717826389583;-12.09;46.486;50.1374;46.392094;52.136513;153.9785641643477;kashagan|kazakhstan
-Kearl;Kearl;Canada;Canada;1.901181774;1.4201384974200002;-0.4810432765799999;-25.3;61.13501855188255;-108.08142857579534;57.389721;-111.0506;450.1722096572058;kearl|canada
-Khafji;;Kuwait;;1.439897189;;;;28.2744;48.8864;;;;khafji|kuwait
-Khurais project;Khurais project;Saudi Arabia;Saudi Arabia;7.634938272;6.659561107540001;-0.9753771644599993;-12.78;25.2028;48.0153;25.009632;48.134026;24.521014844604036;khurais project|saudi arabia
-Khursaniyah;Khursaniyah;Saudi Arabia;Saudi Arabia;2.413255558;1.76871813986;-0.6445374181399999;-26.71;27.0287;48.5437;27.336281;49.057152;61.2400890886606;khursaniyah|saudi arabia
-Kish Gas Project;Kish Gas Project;Iran;Iran;1.193632598;0.8811235816520001;-0.3125090163479999;-26.18;26.5293;53.9434;26.482601;54.114059;17.781549438334746;kish gas project|iran
-Kronprins Christian Offshore;;Denmark;;2.23244534;;;;55.670249;10.3333283;;;;kronprins christian offshore|denmark
-Ku-Maloob-Zaap Project;Ku-Maloob-Zaap Project;Mexico;Mexico;1.960224743;1.0348643110763134;-0.9253604319236866;-47.21;19.5078002;-92.19671584;19.507799;-92.196716;0.00013389535168921863;ku-maloob-zaap project|mexico
-Kuznetsk Depression (Kuzbass) CBM;;Russia;;4.90609548;;;;64.70648552023354;97.7838158728602;;;;kuznetsk depression (kuzbass) cbm|russia
-La Luna Shale;La Luna Shale;Colombia;Colombia;1.616788836;1.5631802309948855;-0.05360860500511455;-3.32;4.099917;-72.9088133;8.1285877;-73.622154;452.4599655503653;la luna shale|colombia
-La Luna Shale;;Venezuela;;1.090522015;;;;8.0018709;-66.1109318;;;;la luna shale|venezuela
-Leningradskoye (Kara Sea);;Russia;;1.800619883;;;;72.718933;65.722145;;;;leningradskoye (kara sea)|russia
-Lensky Basin CBM;;Russia;;2.73771576;;;;64.62267255887363;97.772153585689;;;;lensky basin cbm|russia
-Leviathan;Leviathan;Israel;Israel;1.060241772;0.9474121927799999;-0.11282957922000003;-10.64;33.0014;33.649;33.0;33.639999;0.8553756006404377;leviathan|israel
-Liard Shale;;Canada;;1.201818384;;;;61.09257019816;-107.92167121700273;;;;liard shale|canada
-Libra;;Brazil;;1.891731555;;;;-10.328688258728;-53.27352161192408;;;;libra|brazil
-Llandovery Shale;Llandovery Shale;Brazil;Brazil;4.273465065;3.0090071659999995;-1.2644578990000004;-29.59;-10.34239394345328;-53.13090622618976;-22.576599;-55.458;1376.431859920653;llandovery shale|brazil
-Longmaxi Shale;Longmaxi Shale;China;China;5.691701535;1.1315164500000001;-4.560185085;-80.12;31.3452653501356;105.007307661713;31.0;113.0;762.7506120148923;longmaxi shale|china
-Longmaxi Shale (Sichuan/Changyu);Yaan Slope Onshore Sichuan Province;China;China;2.20989992;4.931716150000001;2.721816230000001;123.16;34.943303967218;105.06413016461543;30.487499;104.028;503.5938489863964;yaan slope onshore sichuan province|china
-Lower Zakum;Lower Zakum;UAE;UAE;2.434419542;1.58199995808;-0.8524195839200002;-35.02;24.834817503279293;53.67707175439654;24.8857;53.711498;6.623671609413588;lower zakum|uae
-Lublin Basin Silurian Shale;;Poland;;5.647084841;;;;52.215933;19.134422;;;;lublin basin silurian shale|poland
-Lula (X-Tupi);Tupi (x-Lula);Brazil;Brazil;2.545775174;1.532574344046;-1.013200829954;-39.8;-25.398;-42.839;-25.449499;-42.738098;11.6441850213257;tupi (x-lula)|brazil
-MZLNG Joint Development (T1-T2);;Mozambique;;1.310175723;;;;-19.302233;34.9144977;;;;mzlng joint development (t1-t2)|mozambique
-Majnoon;Majnoon;Iraq;Iraq;2.468342318;4.00080669768;1.53246437968;62.08;31.224;47.563;31.062634;47.676281;20.899343031654478;majnoon|iraq
-Manifa (redevelop);Manifa (redevelop);Saudi Arabia;Saudi Arabia;5.000284718;4.47525316902;-0.5250315489799995;-10.5;27.7159;48.9834;27.680187;49.027473;5.8787317856382;manifa (redevelop)|saudi arabia
-Mansouri Bangestan;Mansouri Bangestan;Iran;Iran;1.045838888;1.279068288;0.23322939999999992;22.3;30.9289;48.828;30.882229;48.877884;7.036702783934821;mansouri bangestan|iran
-Marcellus Shale;Marcellus Shale;United States;United States;26.71441286;25.74388717541056;-0.9705256845894397;-3.63;40.22485633;-79.91241587;38.421932;-81.006767;221.2876849248608;marcellus shale|united states
-Marjan;Marjan;Saudi Arabia;Saudi Arabia;1.889926075;1.90623582;0.016309745000000042;0.86;28.4389;49.6746;28.440689;49.6362;3.7668712255288956;marjan|saudi arabia
-Marun;Marun;Iran;Iran;2.408543885;1.8334778415800002;-0.5750660434199997;-23.88;31.1217;49.3097;31.03767;49.42667;14.53902333397668;marun|iran
-Menilite Shale;Menilite Shale;Ukraine;Ukraine;1.666673391;1.646285256;-0.02038813499999992;-1.22;49.4871968;31.2718321;49.7258;22.925301;603.5526726135658;menilite shale|ukraine
-Meramec Shale;Meramec Shale;United States;United States;2.439577611;1.5180555889293168;-0.921522022070683;-37.77;35.66986334;-100.3275328;36.2248;-98.671097;161.63427428400647;meramec shale|united states
-Mero (Libra NW);Mero (Libra NW);Brazil;Brazil;1.287024055;1.02127739634;-0.26574665866000013;-20.65;-10.427553475568486;-53.13400159539658;-24.569771;-42.15823;1949.1990473469052;mero (libra nw)|brazil
-Montney Play;Montney Play;Canada;Canada;13.6884891;12.393886641177104;-1.2946024588228955;-9.46;60.98585246518835;-108.08992383433296;56.582699;-118.0709;756.0769592402136;montney play|canada
-NLNG Base Project;;Nigeria;;1.033411352;;;;9.6000359;7.9999721;;;;nlng base project|nigeria
-Nahr bin Umar;Nahr bin Umar;Iraq;Iraq;1.277643431;1.2518376426;-0.02580578840000003;-2.02;30.58;47.531;30.709063;47.689659;20.881288087300995;nahr bin umar|iraq
-North Field;North Field;Qatar;Qatar;11.61275076;11.558473450400001;-0.05427730959999977;-0.47;26.5712;51.8521;26.0833;51.5;64.4808238034598;north field|qatar
-North Field C LNG;;Qatar;;7.768105079;;;;25.340054235028603;51.25254802682415;;;;north field c lng|qatar
-North Field E;North Field E;Qatar;Qatar;4.594474423;4.5750618634;-0.0194125596000001;-0.42;25.40058252526636;51.20145226375591;26.0833;51.5;81.34994285452854;north field e|qatar
-North Kara Sea Offshore;;Russia;;1.176960094;;;;64.59826681609847;97.79713906523637;;;;north kara sea offshore|russia
-North Slope Onshore;North Slope Onshore;United States;United States;2.035951159;0.9086920102889999;-1.1272591487110002;-55.37;39.883504448504894;-100.52288135530986;69.424004;-145.679;4207.506265657084;north slope onshore|united states
-Oil shale China;;China;;1.385461449;;;;34.95509858666302;104.91007158114728;;;;oil shale china|china
-Orinoco Joint Ventures;Orinoco Joint Ventures;Venezuela;Venezuela;6.703396162;2.8528872810372294;-3.8505088809627703;-57.44;8.4187491835152;-64.7395794192658;9.0694132;-63.50885;153.35481648700852;orinoco joint ventures|venezuela
-PRB Tight Oil;PRB Tight Oil;United States;United States;2.770946453;2.1734817801312922;-0.5974646728687079;-21.56;43.56355125;-105.4122725;43.490002;-105.26;14.775195606243853;prb tight oil|united states
-Parnaiba Onshore;;Brazil;;1.998572969;;;;-10.23501021141932;-53.2137520944146;;;;parnaiba onshore|brazil
-Pars Southwest;Pars Southwest;Iran;Iran;1.1092643;1.102885212;-0.006379088000000088;-0.58;32.689871548070634;54.50752073966645;27.268003;51.346481;673.9080284811105;pars southwest|iran
-Pazanan;;Iran;;1.358409167;;;;30.4532;50.1354;;;;pazanan|iran
-Permian Conventional_Texas;Permian Conventional_Texas;United States;United States;2.061829878;1.2724801552967262;-0.789349722703274;-38.28;39.81381823098168;-100.4785471241796;32.353039;-102.5057;847.6781225475256;permian conventional_texas|united states
-Permian Delaware Tight;Permian Delaware Tight;United States;United States;27.80443109;29.711140808664528;1.9067097186645263;6.86;32.16024627;-103.0436454;31.132999;-103.133;114.21674208415521;permian delaware tight|united states
-Permian Midland Tight;Permian Midland Tight;United States;United States;16.62881821;17.314227400420002;0.6854091904200033;4.12;33.38270934;-100.0064432;31.476845;-102.62436;324.46076846999307;permian midland tight|united states
-Project Kuwait;Project Kuwait;Kuwait;Kuwait;4.409493298;1.192358891394;-3.217134406606;-72.96;29.280800865173408;47.40733772122815;29.87775;47.750679;74.06070678145524;project kuwait|kuwait
-QatarGas 1 LNG T1-T3;QatarGas 1 LNG T1-T3;Qatar;Qatar;1.283272558;1.0830156955999999;-0.20025686240000007;-15.61;25.28431884036356;51.284805996683545;26.589939;52.03912;163.1911192314731;qatargas 1 lng t1-t3|qatar
-QatarGas LNG T12-T13 (NFE-South);QatarGas LNG T12-T13 (NFE-South);Qatar;Qatar;1.785210581;1.7470055871099643;-0.03820499389003573;-2.14;25.43086960953891;51.13804306097796;26.07789;51.508282;80.731915101572;qatargas lng t12-t13 (nfe-south)|qatar
-QatarGas LNG T8-T11 (NFE-East);QatarGas LNG T8-T11 (NFE-East);Qatar;Qatar;3.39497532;3.4045707533051215;0.009595433305121581;0.28;25.406659017833807;51.30638490143063;25.894751;51.519619;58.15696337078833;qatargas lng t8-t11 (nfe-east)|qatar
-Qatargas 2 LNG T4-T5;Qatargas 2 LNG T4-T5;Qatar;Qatar;1.828035431;1.5233576885850675;-0.3046777424149325;-16.67;26.3028;51.9223;26.59178;52.001598;32.97984345980207;qatargas 2 lng t4-t5|qatar
-Qatif project;Qatif project;Saudi Arabia;Saudi Arabia;5.066814884;4.6952629316;-0.37155195239999994;-7.33;26.7077;49.9393;26.886623;49.960953;19.94129673054126;qatif project|saudi arabia
-Qurna West;Qurna West;Iraq;Iraq;3.982828932;6.3405192690000005;2.3576903370000006;59.2;30.707083426002583;47.28891919485825;30.634348;47.261993;8.46651971516491;qurna west|iraq
-Qurna West-2;Qurna West-2;Iraq;Iraq;1.598723281;2.3963722614000003;0.7976489804000002;49.89;30.580267988986265;47.37019612595026;30.634348;47.261993;11.983576720220928;qurna west-2|iraq
-Rasgas 2 LNG T3-T5;Rasgas 2 LNG T3-T5;Qatar;Qatar;1.509806372;1.2709410660649794;-0.23886530593502053;-15.82;25.40977690486169;51.30430137738974;26.252499;51.8078;106.134749719881;rasgas 2 lng t3-t5|qatar
-Rasgas 3 LNG T6-T7;Rasgas 3 LNG T6-T7;Qatar;Qatar;1.490692041;1.187646959200071;-0.30304508179992906;-20.33;25.310099908025105;51.32236135625877;26.252499;51.8078;115.19873760843734;rasgas 3 lng t6-t7|qatar
-Ratawi;;Iraq;;1.065138744;;;;30.053;47.307;;;;ratawi|iraq
-Romashkino;Romashkino;Russia;Russia;1.338604935;1.5679088194000002;0.22930388440000016;17.13;54.833612;52.81;54.8507;52.740898;4.829843865546994;romashkino|russia
-Rumaila North & South;Rumaila North & South;Iraq;Iraq;7.761609425;6.7923289584;-0.9692804665999999;-12.49;30.2365;47.4163;30.309965;47.28516;15.018344201367228;rumaila north & south|iraq
-Rusanovskoye (Kara Sea);;Russia;;1.316123949;;;;64.59202824294421;97.68380537733007;;;;rusanovskoye (kara sea)|russia
-Safaniya;Safaniya;Saudi Arabia;Saudi Arabia;11.92614355;12.6239508662;0.6978073161999987;5.85;28.19963279231009;48.82089109969101;28.265499;48.89019;9.97725373323301;safaniya|saudi arabia
-Safaniya YTF Concession;;Saudi Arabia;;1.842871867;;;;28.28069521305312;48.74492314689606;;;;safaniya ytf concession|saudi arabia
-Samotlorneftegaz (TNK-BP);Samotlorneftegaz (TNK-BP);Russia;Russia;1.867807241;1.9041928705853999;0.036385629585399926;1.95;61.167222;76.665556;61.16;77.0;18.020730682688335;samotlorneftegaz (tnk-bp)|russia
-Santos Offshore;Santos Offshore;Brazil;Brazil;4.339841028;1.321259761020001;-3.018581266979999;-69.56;-10.369969484329369;-53.20961765510914;-24.278601;-41.3965;1983.9510632050997;santos offshore|brazil
-Sembar Shale;Sembar Shale;Pakistan;Pakistan;2.840236853;2.4614563900000004;-0.37878046299999957;-13.34;30.3308401;71.247499;25.4128;69.0037;588.0483090856569;sembar shale|pakistan
-SeverEnergia Project;SeverEnergia Project;Russia;Russia;1.099534929;1.037271568906;-0.06226336009400013;-5.66;66.834167;77.248611;66.791389;77.374443;7.304091283337032;severenergia project|russia
-Shaybah;Shaybah;Saudi Arabia;Saudi Arabia;4.268589672;3.696593824;-0.5719958480000003;-13.4;21.7237;53.6572;22.562912;54.038727;100.9185626843758;shaybah|saudi arabia
-Shengli;Shengli;China;China;1.50578136;1.4218566550395948;-0.08392470496040527;-5.57;37.1771;118.4754;37.465446;118.58768;33.51344368594984;shengli|china
-Shtokman;;Russia;;6.135874132;;;;71.794;45.723;;;;shtokman|russia
-Sirte Shale;Sirte Shale;Libya;Libya;1.703281911;1.7024779259999998;-0.0008039850000001181;-0.05;26.8234472;18.1236723;29.562;20.511;383.44744731117964;sirte shale|libya
-South Pars (Phases 2-3) dry gas;;Iran;;1.016274224;;;;26.94041755405312;52.14199022753333;;;;south pars (phases 2-3) dry gas|iran
-South Pars (Phases 20-21);South Pars (Phases 20-21);Iran;Iran;1.017173226;0.8424069858000001;-0.17476624019999987;-17.18;26.93208573438476;52.122312915243945;26.793468;52.179611;16.38052389150672;south pars (phases 20-21)|iran
-South Pars (Phases 22-24);South Pars (Phases 23-28);Iran;Iran;1.04273081;5.330933432;4.288202622;411.25;26.85999201772849;52.15477976323183;26.83333;52.166672;3.181857133042923;south pars (phases 23-28)|iran
-South Pars (Phases 4-5) dry gas;South Pars (Phases 4-5);Iran;Iran;1.100975522;1.0265859442599998;-0.0743895777400001;-6.76;26.881271568153416;52.130418592316126;26.752563;52.131668;14.261533539648736;south pars (phases 4-5)|iran
-South Pars (Phases 9-10) dry gas;;Iran;;1.265006303;;;;26.868855064367978;52.25339399242522;;;;south pars (phases 9-10) dry gas|iran
-Southeast Uplift Onshore Heilongjiang Province;;China;;1.750536451;;;;35.097032462776454;105.09349049942207;;;;southeast uplift onshore heilongjiang province|china
-Spirit River (Notikewin, Falher, Wilrich);Spirit River (Notikewin, Falher, Wilrich);Canada;Canada;2.976203115;1.9701130529161985;-1.0060900620838016;-33.8;61.06828882522202;-108.0446720578356;54.385399;-118.791;979.344580648121;spirit river (notikewin, falher, wilrich)|canada
-Sudair Shale;;Saudi Arabia;;1.032893123;;;;25.65120303337985;42.29500478590038;;;;sudair shale|saudi arabia
-Syncrude Mildred Lake/Aurora;;Canada;;1.184050044;;;;57.056;-111.711;;;;syncrude mildred lake/aurora|canada
-Tambey Zone (Yamal Megaproject);;Russia;;2.474909236;;;;71.235;71.546;;;;tambey zone (yamal megaproject)|russia
-Tanf Shale;Tanf Shale;Syria;Syria;1.363655326;0.9781083960000001;-0.38554692999999984;-28.27;34.6401861;39.0494106;36.208;38.935001;174.25640136895396;tanf shale|syria
-Tannezuft Shale;Tannezuft Shale;Algeria;Algeria;2.347866837;2.162121526;-0.18574531100000025;-7.91;28.0000272;2.9999825;30.950001;8.1260004;594.9403123003386;tannezuft shale|algeria
-Tanzanian Coastal Offshore;Tanzania LNG (Block 1/4 and 2);Tanzania;Tanzania;1.031198167;1.1379534049463775;0.10675523794637742;10.35;-6.5247123;35.7878438;-9.7541704;39.6264;553.599022642829;tanzania lng (block 1/4 and 2)|tanzania
-Tarim (CNPC);Tarim;China;China;1.959883851;2.3785711038771367;0.4186872528771366;21.36;40.9466;82.2528;37.46629;77.30368;576.0319407255073;tarim|china
-Taymyr Basin CBM;;Russia;;1.233321785;;;;64.71528874529139;97.70944142187038;;;;taymyr basin cbm|russia
-Tengiz;Tengiz;Kazakhstan;Kazakhstan;3.357866129;1.9125350377800001;-1.44533109122;-43.04;45.4741;53.0719;46.091789;53.432159;74.15029985533447;tengiz|kazakhstan
-Timan - Pechora Basin Offshore;Timan - Pechora Basin Offshore;Russia;Russia;2.48143889;1.223160402;-1.2582784880000002;-50.71;64.62998604280237;97.7622553746686;69.2603;55.095001;1891.760767861162;timan - pechora basin offshore|russia
-Timan - Pechora Basin Onshore;Timan - Pechora Basin Onshore;Russia;Russia;2.351649692;1.1473045380000002;-1.2043451539999999;-51.21;64.5955569526074;97.78477524668094;66.649597;55.344501;1930.2261550810977;timan - pechora basin onshore|russia
-Troll;Troll;Norway;Norway;1.77210443;1.3252721108555678;-0.4468323191444321;-25.21;60.72052686060313;3.703872965572407;60.759998;3.55;9.476020319234856;troll|norway
-Tunguska Basin CBM;;Russia;;8.843821834;;;;64.6837716873256;97.7528407256006;;;;tunguska basin cbm|russia
-Umm Shaif/Nasr;Umm Shaif/Nasr;UAE;UAE;1.939252733;2.33842264472;0.39916991172000005;20.58;25.377;53.537;25.19978;53.219219;37.5461597040165;umm shaif/nasr|uae
-Upper Zakum;Upper Zakum;UAE;UAE;6.44038252;4.75067133918;-1.6897111808199998;-26.24;24.78791115270512;53.72523058305936;24.8575;53.724152;7.7091454043318155;upper zakum|uae
-Urengoyskoye;Urengoyskoye;Russia;Russia;5.199312832;3.60798234;-1.5913304920000004;-30.61;67.461;77.156;66.660004;76.75;91.05871737752794;urengoyskoye|russia
-Utica Shale;Utica Shale;United States;United States;7.713186851;6.309626257937507;-1.403560593062493;-18.2;40.09991816;-80.95831393;40.83543;-80.076736;110.72569000605681;utica shale|united states
-Vaca Muerta Shale;Vaca Muerta Shale;Argentina;Argentina;5.177782001;12.11550210523496;6.93772010423496;133.99;-38.81729;-68.95311;-38.861626;-68.451477;43.82985726585265;vaca muerta shale|argentina
-Velkerri Shale;Velkerri Shale;Australia;Australia;1.058031183;1.0151680794200002;-0.042863103579999784;-4.05;-24.78077516632136;134.77764957751978;-16.86521;134.37621;877.3736019442014;velkerri shale|australia
-Volga - Urals Onshore;Volga - Urals Onshore;Russia;Russia;1.36763708;1.4398969500000003;0.07225987000000034;5.28;64.76186871385431;97.73826448691504;54.845402;54.573502;2596.5374763398786;volga - urals onshore|russia
-West Florida Offshore;;United States;;1.069261489;;;;39.847165534470136;-100.499945512161;;;;west florida offshore|united states
-West Siberia Offshore;West Siberia Offshore;Russia;Russia;2.856403668;1.282173762;-1.574229906;-55.11;61.7;73.4;72.5812;65.797203;1255.0981417249377;west siberia offshore|russia
-West Siberia Onshore;Lukoil-West Siberia;Russia;Russia;1.1645132;1.9514623537408462;0.7869491537408462;67.58;64.60550156204356;97.71305102357611;60.191944;64.641945;1756.6878256827856;lukoil-west siberia|russia
-Western Gulf Province_Texas;Western Gulf Province_Texas;United States;United States;5.061653121;1.435054558702654;-3.626598562297346;-71.65;39.687485670505794;-100.44976547344294;29.466967;-96.995804;1176.9825176124114;western gulf province_texas|united states
-Woodford Shale;Woodford Shale;United States;United States;3.377142985;2.103638056826477;-1.273504928173523;-37.71;31.6360312;-103.0420571;34.68;-96.139999;726.7497627627537;woodford shale|united states
-Xinjiang (CNPC);Xinjiang;China;China;1.356420308;1.8861278155500896;0.5297075075500897;39.05;34.91059126495723;104.94185833785636;45.619999;85.089996;2056.0701204785873;xinjiang|china
-Yashlar Vostochnyy (East);Yashlar Vostochnyy (East);Turkmenistan;Turkmenistan;2.129145331;2.1157599;-0.013385431000000114;-0.63;39.30607880411048;59.47635425020694;37.220345;63.327976;408.87036590163365;yashlar vostochnyy (east)|turkmenistan
-Yolotan (Iolotan) South;Yolotan (Iolotan) South;Turkmenistan;Turkmenistan;9.548227901;8.7831984;-0.7650295010000008;-8.01;39.35450427804269;59.338196436529245;37.076416;62.463444;372.57933896573456;yolotan (iolotan) south|turkmenistan
-Yucatan Platform Offshore;;Mexico;;1.025798315;;;;19.3991;-92.0532;;;;yucatan platform offshore|mexico
-Yuganskneftegaz;Yuganskneftegaz;Russia;Russia;4.345193315;3.7065139288054008;-0.6386793861945996;-14.7;61.383889;70.486944;60.937309;71.830475;87.79071487375222;yuganskneftegaz|russia
-Zubair;Zubair;Iraq;Iraq;1.679304399;1.6761374640000002;-0.003166934999999871;-0.19;30.386366966923674;47.55943862464137;30.325453;47.66333;12.056674713536971;zubair|iraq
-Zuluf;Zuluf;Saudi Arabia;Saudi Arabia;2.449978206;1.996066351186;-0.453911854814;-18.53;28.611;49.059;28.376431;49.239578;31.439187728539874;zuluf|saudi arabia
-Zuluf (CR in field);Zuluf (CR in field);Saudi Arabia;Saudi Arabia;3.535052229;3.5310284334;-0.004023795600000213;-0.11;25.666972578862627;42.3722601953512;28.375999;49.234001;743.9774940120847;zuluf (cr in field)|saudi arabia
-Zuluf (expansion);Zuluf (expansion);Saudi Arabia;Saudi Arabia;1.833213347;2.330435458;0.49722211100000013;27.12;25.57085285806245;42.38663231568516;28.365999;49.166;740.7294232741143;zuluf (expansion)|saudi arabia
-;ADNOC Sole Risk;;UAE;;3.1507968431999998;;;;;23.875;53.537498;;adnoc sole risk|uae
-;Alaska LNG;;United States;;0.9262517100000001;;;;;60.678741;-151.384;;alaska lng|united states
-;Area 1 LNG (T3-T4);;Mozambique;;0.7910794830949325;;;;;-10.74769;40.955502;;area 1 lng (t3-t4)|mozambique
-;Bovanenkovo Zone (Yamal Megaproject);;Russia;;6.47680662052;;;;;70.400002;68.400002;;bovanenkovo zone (yamal megaproject)|russia
-;Cambay Shale;;India;;1.39006537564;;;;;23.279179;72.61042;;cambay shale|india
-;Cardium Play;;Canada;;0.9944562003859885;;;;;51.676571;-113.8973;;cardium play|canada
-;Fadhili Gas Project;;Saudi Arabia;;1.1615616747599997;;;;;28.145121;49.922642;;fadhili gas project|saudi arabia
-;Forouzan;;Iran;;2.0383147569999998;;;;;28.559349;49.686039;;forouzan|iran
-;Gazprom Dobycha Noyabrsk;;Russia;;1.0317514064399997;;;;;64.43528;75.833328;;gazprom dobycha noyabrsk|russia
-;Gazpromneft-Khantos;;Russia;;0.9603936824447181;;;;;60.627499;75.913612;;gazpromneft-khantos|russia
-;Gazpromneft-NNG;;Russia;;1.3485907870328246;;;;;62.938889;74.347778;;gazpromneft-nng|russia
-;Gazpromneft-Zapolyarye;;Russia;;1.676204153171017;;;;;60.709999;111.84;;gazpromneft-zapolyarye|russia
-;Golshan;;Iran;;0.960856262;;;;;27.327339;51.30954;;golshan|iran
-;Greater Burgan;;Kuwait;;7.36392885452;;;;;28.91667;47.933331;;greater burgan|kuwait
-;Greater Green River Tight Gas;;United States;;0.9386778066901199;;;;;41.16605;-108.0375;;greater green river tight gas|united states
-;Gumai Formation;;Indonesia;;0.9943889160000001;;;;;-2.7402999;103.849;;gumai formation|indonesia
-;Hassi R'Mel (Domestic);;Algeria;;1.6401771583999998;;;;;32.818001;3.2272999;;hassi r'mel (domestic)|algeria
-;Haynesville/Bossier Shale;;United States;;8.987765293032698;;;;;31.5944;-93.464699;;haynesville/bossier shale|united states
-;Iara;;Brazil;;1.101864982568211;;;;;-24.99394;-42.690224;;iara|brazil
-;Jafurah shale gas (Al Hasa);;Saudi Arabia;;1.72933016626;;;;;24.893999;48.630001;;jafurah shale gas (al hasa)|saudi arabia
-;Kirkuk;;Iraq;;1.28221587;;;;;35.628925;44.173664;;kirkuk|iraq
-;Longmaxi Shale (Xi'nan-CNPC);;China;;0.88062417615;;;;;29.649;104.5223;;longmaxi shale (xi'nan-cnpc)|china
-;Maykop Shale;;Azerbaijan;;0.9336816960000002;;;;;40.495998;49.130001;;maykop shale|azerbaijan
-;North Pars LNG;;Iran;;1.354563752;;;;;27.98032;51.26329;;north pars lng|iran
-;North West Shelf LNG;;Australia;;0.8325244913737586;;;;;-19.56518;116.15656;;north west shelf lng|australia
-;Ordos Basin CBM;;China;;0.93993;;;;;37.369999;103.176;;ordos basin cbm|china
-;Ordovician Shale;;China;;0.86555816;;;;;39.486099;83.3311;;ordovician shale|china
-;Oriente PDVSA;;Venezuela;;0.8256003958695525;;;;;9.8666668;-63.333328;;oriente pdvsa|venezuela
-;QatarGas LNG T14-T15 (NFE-West);;Qatar;;1.74732538;;;;;26.152;51.439999;;qatargas lng t14-t15 (nfe-west)|qatar
-;Qatargas 3 LNG T6;;Qatar;;0.9357260570700356;;;;;26.534189;51.946609;;qatargas 3 lng t6|qatar
-;Qatargas 4 LNG T7;;Qatar;;0.7352588999999999;;;;;26.53414;51.972439;;qatargas 4 lng t7|qatar
-;Rospan (TNK-BP);;Russia;;1.08025754586;;;;;66.076385;77.488335;;rospan (tnk-bp)|russia
-;Ruwais LNG T1-T2;;UAE;;1.2255702604;;;;;23.4;54.259998;;ruwais lng t1-t2|uae
-;Sakhalin-3;;Russia;;1.0435874626025998;;;;;51.448597;143.85829;;sakhalin-3|russia
-;Sattapadi Formation;;India;;0.9842038719999999;;;;;11.0141;79.179001;;sattapadi formation|india
-;South East Bab;;UAE;;0.9666779322600001;;;;;23.695168;54.370361;;south east bab|uae
-;South Pars (Phase 13) (ex-Persian LNG);;Iran;;0.7739250125999999;;;;;26.832092;52.401424;;south pars (phase 13) (ex-persian lng)|iran
-;South Pars (Phase 14) (ex-Persian LNG);;Iran;;0.9021583423999999;;;;;26.920822;52.348106;;south pars (phase 14) (ex-persian lng)|iran
-;South Pars (Phase 19);;Iran;;0.921202286;;;;;26.711718;52.074318;;south pars (phase 19)|iran
-;South Pars (Phases 15-16);;Iran;;0.846383492;;;;;26.577534;52.205917;;south pars (phases 15-16)|iran
-;South Pars (Phases 17-18);;Iran;;0.79699713474;;;;;26.788673;52.052807;;south pars (phases 17-18)|iran
-;South Pars (Phases 2-3);;Iran;;0.95705654;;;;;26.638052;52.201023;;south pars (phases 2-3)|iran
-;South Pars (Phases 22-24);;Iran;;1.0051292995999999;;;;;26.74136;52.441589;;south pars (phases 22-24)|iran
-;South Pars (Phases 9-10);;Iran;;0.969543316;;;;;26.813866;52.320473;;south pars (phases 9-10)|iran
-;Tarim Basin Onshore;;China;;1.068083076;;;;;39.686501;81.122498;;tarim basin onshore|china
-;Uinta-Piceance Tight Gas;;United States;;0.9549335491676019;;;;;38.207802;-109.1931;;uinta-piceance tight gas|united states
-;Uinta-Piceance Tight Oil;;United States;;1.0296532510544782;;;;;40.063503;-109.99525;;uinta-piceance tight oil|united states
-;Viking Graben  Offshore;;Norway;;0.9745781315459996;;;;;61.316097;2.8595071;;viking graben  offshore|norway
-;Vostok Oil Project;;Russia;;2.8476511805929023;;;;;67.800003;83.5;;vostok oil project|russia
-;Waha;;Libya;;0.9277204980107702;;;;;29.518333;17.768057;;waha|libya
-;Wasit;;Saudi Arabia;;0.81843428012;;;;;28.148907;49.917828;;wasit|saudi arabia
-;Xi'nan-CNPC;;China;;1.654818948336924;;;;;29.268999;105.1497;;xi'nan-cnpc|china
-;Yanchang;;China;;0.9201508773381459;;;;;31.5;108.5;;yanchang|china
-;Zagros Foldbelt Onshore;;Iran;;1.3632030267954003;;;;;31.6849;50.797199;;zagros foldbelt onshore|iran
-;Zagros Foldbelt Onshore;;Iraq;;1.04686847685;;;;;35.746399;44.813999;;zagros foldbelt onshore|iraq
+project_name_v1;project_name_v2;country_v1;country_v2;emissions_v1;emissions_v2;emissions_difference;new_carbon_bombs_status;has_started_since_v1
+ACG (Azeri-Chirag-Guneshli Deep Water);ACG (Azeri-Chirag-Guneshli Deep Water);Azerbaijan;Azerbaijan;1.660265695;1.02406402182;-0.6362016731800002;Still classified as carbon bomb;Carbon bomb still a project
+Abqaiq;Abqaiq;Saudi Arabia;Saudi Arabia;1.59282777;2.7430574269999997;1.1502296569999997;Still classified as carbon bomb;Carbon bomb still a project
+Agha Jari;Agha Jari;Iran;Iran;1.563110231;2.00927765306;0.4461674220599998;Still classified as carbon bomb;Carbon bomb still a project
+Ahwaz Asmari;Ahwaz (Ahwaz Asmari);Iran;Iran;2.238284406;1.60886604292;-0.6294183630800001;Still classified as carbon bomb;Carbon bomb still a project
+Ahwaz Bangestan;Ahwaz (Bangestan);Iran;Iran;1.433911709;1.638539528766;0.20462781976600009;Still classified as carbon bomb;Carbon bomb still a project
+Al Khaleej Gas project;Al Khaleej Gas project;Qatar;Qatar;1.135307349;0.9857221601999999;-0.14958518880000016;Now below 1 GtCO2 threshold;Carbon bomb still a project
+Anadarko Shelf_Oklahoma;;United States;;1.817826072;;;No longer classified as carbon bomb;Carbon bomb still a project
+Arctic LNG 2 T1-3;;Russia;;1.475579089;;;No longer classified as carbon bomb;Carbon bomb still a project
+Area 1 LNG (T1&T2);;Mozambique;;1.006654597;;;No longer classified as carbon bomb;Carbon bomb still a project
+Area-1 Future Phases;Area-1 Future Phases;Mozambique;Mozambique;1.022724356;0.9980630858558891;-0.024661270144110792;Now below 1 GtCO2 threshold;Carbon bomb still a project
+Asab;Asab;UAE;UAE;1.373231334;1.72780146218;0.35457012818;Still classified as carbon bomb;Carbon bomb still a project
+Athabasca Oil Sands Project;Athabasca Oil Sands Project;Canada;Canada;1.355853264;1.0757329775569322;-0.28012028644306786;Still classified as carbon bomb;Carbon bomb still a project
+Austin Chalk Tight;Austin Chalk Horizontal;United States;United States;1.392828065;2.4406272586998914;1.0477991936998914;Still classified as carbon bomb;Carbon bomb still a project
+Azadegan;;Iran;;2.278016459;;;No longer classified as carbon bomb;Carbon bomb still a project
+Bab;Bab;UAE;UAE;4.197033055;3.2933580565800002;-0.9036749984200001;Still classified as carbon bomb;Carbon bomb still a project
+Bab (Gasco);;UAE;;1.674389775;;;No longer classified as carbon bomb;Carbon bomb still a project
+Baghdad East;Baghdad East;Iraq;Iraq;2.742460925;2.6109364662;-0.13152445879999997;Still classified as carbon bomb;Carbon bomb still a project
+Bakken Shale;Bakken Shale;United States;United States;5.948592838;5.530049895647663;-0.418542942352337;Still classified as carbon bomb;Carbon bomb still a project
+Baltimore Canyon Offshore;;United States;;1.648511699;;;No longer classified as carbon bomb;Carbon bomb still a project
+Barail Shale;;India;;2.141583711;;;No longer classified as carbon bomb;Carbon bomb still a project
+Barnett Shale;Barnett Shale;United States;United States;1.360879964;1.1208986931349398;-0.23998127086506016;Still classified as carbon bomb;Carbon bomb still a project
+Barzan;Barzan;Qatar;Qatar;3.094095108;3.0064737866;-0.0876213213999999;Still classified as carbon bomb;Carbon bomb has started
+Basrah Gas project;Basrah Gas project;Iraq;Iraq;1.041154291;0.8655773244;-0.1755769666;Now below 1 GtCO2 threshold;Carbon bomb still a project
+Beaufort Sea Offshore;;United States;;1.254810599;;;No longer classified as carbon bomb;Carbon bomb still a project
+Berri;Berri;Saudi Arabia;Saudi Arabia;3.557107777;3.4197179362599996;-0.1373898407400005;Still classified as carbon bomb;Carbon bomb still a project
+Bovanenkovo Zone (Yamal Megaproject);Southern Zone (Yamal Megaproject);Russia;Russia;11.15863625;1.081442890746;-10.077193359254;Still classified as carbon bomb;Carbon bomb still a project
+Bowland Shale;Bowland Shale;United Kingdom;United Kingdom;1.476082594;0.8370495778500001;-0.6390330161499999;Now below 1 GtCO2 threshold;Carbon bomb still a project
+Bu Hasa;Bu Hasa;UAE;UAE;4.915778525;4.6201383750946;-0.29564014990540066;Still classified as carbon bomb;Carbon bomb still a project
+Buzios (x-Franco);Buzios (x-Franco);Brazil;Brazil;3.638233141;2.9482481824036055;-0.6899849585963946;Still classified as carbon bomb;Carbon bomb still a project
+Cambrian/Silurian Marine Shale;Cambrian/Silurian Marine Shale;China;China;2.367530441;0.9648642200000002;-1.4026662209999998;Now below 1 GtCO2 threshold;Carbon bomb still a project
+Campos Offshore;;Brazil;;1.560951299;;;No longer classified as carbon bomb;Carbon bomb still a project
+Candeias Shale;Candeias Shale;Brazil;Brazil;1.641797865;1.044726896;-0.597070969;Still classified as carbon bomb;Carbon bomb still a project
+Carboniferous Shale;Carboniferous Shale;Kazakhstan;Kazakhstan;1.287218515;1.286544838;-0.0006736769999999837;Still classified as carbon bomb;Carbon bomb still a project
+Central Arabian Offshore;Central Arabian Offshore;Iran;Iran;2.122142874;1.226447979246;-0.8956948947540002;Still classified as carbon bomb;Carbon bomb still a project
+Central Arabian Offshore;Central Arabian Offshore;Saudi Arabia;Saudi Arabia;6.860051661;2.718036054;-4.142015606999999;Still classified as carbon bomb;Carbon bomb still a project
+Central Arabian Offshore;;Bahrain;;1.411444785;;;No longer classified as carbon bomb;Carbon bomb still a project
+Central Arabian Onshore;Central Arabian Onshore;Kuwait;Kuwait;3.597522951;1.32484179;-2.2726811610000004;Still classified as carbon bomb;Carbon bomb still a project
+Central Arabian Onshore;Central Arabian Onshore;Saudi Arabia;Saudi Arabia;4.359973713;1.7558547480000004;-2.604118964999999;Still classified as carbon bomb;Carbon bomb still a project
+Central Arabian Onshore;;Iraq;;2.607423632;;;No longer classified as carbon bomb;Carbon bomb still a project
+Central Arabian Onshore;;Qatar;;2.217231619;;;No longer classified as carbon bomb;Carbon bomb still a project
+Central Uplift Onshore Xinjiang Uygur Autonomous Region;;China;;1.04432647;;;No longer classified as carbon bomb;Carbon bomb still a project
+Changqing;Changqing;China;China;4.939920283;3.9417593489179;-0.9981609340821;Still classified as carbon bomb;Carbon bomb still a project
+Christina Lake;Christina Lake;Canada;Canada;1.232128944;1.1760227087400001;-0.056106235259999915;Still classified as carbon bomb;Carbon bomb still a project
+Chukchi Sea Offshore;;United States;;2.539277487;;;No longer classified as carbon bomb;Carbon bomb still a project
+Collingham Shale;Collingham Shale;South Africa;South Africa;1.849888206;1.85029669;0.00040848400000004226;Still classified as carbon bomb;Carbon bomb still a project
+DJ Basin Tight Oil;DJ Basin Tight Oil;United States;United States;5.852116216;4.125164967222474;-1.7269512487775254;Still classified as carbon bomb;Carbon bomb still a project
+Daqing;Daqing;China;China;2.601815792;2.5700803884662493;-0.031735403533750706;Still classified as carbon bomb;Carbon bomb still a project
+Dolphin;;Qatar;;1.550235876;;;No longer classified as carbon bomb;Carbon bomb still a project
+Dovletabad-Donmez;Dovletabad-Donmez;Turkmenistan;Turkmenistan;1.578094288;0.9325531916800001;-0.6455410963199999;Now below 1 GtCO2 threshold;Carbon bomb still a project
+Duvernay;Duvernay;Canada;Canada;1.871369296;1.792058761048074;-0.07931053495192586;Still classified as carbon bomb;Carbon bomb still a project
+Eagle Ford Shale;Eagle Ford Shale;Mexico;Mexico;5.0680294;1.8054022099999998;-3.262627190000001;Still classified as carbon bomb;Carbon bomb still a project
+Eagle Ford Shale;Eagle Ford Shale;United States;United States;5.924247947;7.898088267546816;1.9738403205468167;Still classified as carbon bomb;Carbon bomb still a project
+East Natuna (x-Natuna D-Alpha);;Indonesia;;2.158541118;;;No longer classified as carbon bomb;Carbon bomb still a project
+Eastern Gas Program;Eastern Gas Program;Russia;Russia;4.274058366;3.9644204570539996;-0.30963790894600063;Still classified as carbon bomb;Carbon bomb still a project
+El Sharara;;Libya;;1.00784607;;;No longer classified as carbon bomb;Carbon bomb still a project
+Gachsaran;Gachsaran;Iran;Iran;1.739296877;1.4781430080000002;-0.2611538689999997;Still classified as carbon bomb;Carbon bomb still a project
+Gazprom dobycha Nadym;Gazprom dobycha Nadym;Russia;Russia;1.286567712;0.7879389750400001;-0.49862873696;Now below 1 GtCO2 threshold;Carbon bomb still a project
+Gazprom dobycha Orenburg;Gazprom dobycha Orenburg;Russia;Russia;1.593313222;1.1882820287800002;-0.4050311932199997;Still classified as carbon bomb;Carbon bomb still a project
+Gazprom dobycha Yamburg;Gazprom dobycha Yamburg;Russia;Russia;8.863793695;7.23161094808;-1.6321827469199999;Still classified as carbon bomb;Carbon bomb still a project
+Ghawar Ain Dar N;;Saudi Arabia;;2.088574939;;;No longer classified as carbon bomb;Carbon bomb still a project
+Ghawar Ain Dar S;Ghawar Ain Dar S;Saudi Arabia;Saudi Arabia;1.43464453;1.073401062;-0.36124346799999985;Still classified as carbon bomb;Carbon bomb still a project
+Ghawar Haradh;Ghawar Haradh;Saudi Arabia;Saudi Arabia;6.966827829;8.204786018;1.2379581890000004;Still classified as carbon bomb;Carbon bomb still a project
+Ghawar Hawiyah;Ghawar Hawiyah;Saudi Arabia;Saudi Arabia;4.649714459;3.24914443262;-1.40057002638;Still classified as carbon bomb;Carbon bomb still a project
+Ghawar Shedgum;Ghawar Shedgum;Saudi Arabia;Saudi Arabia;5.695002943;5.242382268;-0.45262067500000036;Still classified as carbon bomb;Carbon bomb still a project
+Ghawar Uthmaniyah;Ghawar Uthmaniyah;Saudi Arabia;Saudi Arabia;19.22190525;10.754391948;-8.467513301999999;Still classified as carbon bomb;Carbon bomb still a project
+Goldwyer Shale;Goldwyer Shale;Australia;Australia;4.468806417;2.8188994679986785;-1.6499069490013212;Still classified as carbon bomb;Carbon bomb still a project
+Gorgon LNG T1-T3;Gorgon LNG T1-T3;Australia;Australia;1.931000175;1.7641982007474581;-0.16680197425254195;Still classified as carbon bomb;Carbon bomb still a project
+Greater Burgan;Greater Burgan (CR in field);Kuwait;Kuwait;8.341919008;1.0510804980000001;-7.2908385099999995;Still classified as carbon bomb;Carbon bomb still a project
+Greater Liza (Liza);;Guyana;;1.002783934;;;No longer classified as carbon bomb;Carbon bomb still a project
+Greater Turbot (Stabroek);Stabroek Future Phases;Guyana;Guyana;1.114423675;1.362418102054;0.247994427054;Still classified as carbon bomb;Carbon bomb still a project
+Gulf Coast Centre Offshore;;United States;;1.106200913;;;No longer classified as carbon bomb;Carbon bomb still a project
+Gulf Deepwater Offshore;;Mexico;;2.204840846;;;No longer classified as carbon bomb;Carbon bomb still a project
+Halfayah;;Iraq;;1.409043856;;;No longer classified as carbon bomb;Carbon bomb still a project
+Harmaliyah;Harmaliyah;Saudi Arabia;Saudi Arabia;1.028095523;1.081807879174;0.05371235617400005;Still classified as carbon bomb;Carbon bomb still a project
+Hassi Messaoud;;Algeria;;1.215923408;;;No longer classified as carbon bomb;Carbon bomb still a project
+Hassi R'Mel (Domestic);Hassi R'Mel (Pipe Export);Algeria;Algeria;2.271542343;1.6750779752;-0.5964643678000001;Still classified as carbon bomb;Carbon bomb still a project
+Haynesville/Bossier Shale;Haynesville/Bossier Shale;United States;United States;13.20413118;8.987765293032698;-4.216365886967301;Still classified as carbon bomb;Carbon bomb still a project
+Horizon Oil Sands Project;Horizon Oil Sands Project;Canada;Canada;1.989790706;2.1341921203800003;0.14440141438000031;Still classified as carbon bomb;Carbon bomb still a project
+Irati Shale;Irati Shale;Brazil;Brazil;2.695278585;2.684220262;-0.01105832299999987;Still classified as carbon bomb;Carbon bomb still a project
+Johan Sverdrup;;Norway;;1.073871982;;;No longer classified as carbon bomb;Carbon bomb still a project
+Karachaganak;Karachaganak;Kazakhstan;Kazakhstan;1.207734375;0.7691512390964014;-0.43858313590359865;Now below 1 GtCO2 threshold;Carbon bomb still a project
+Kashagan;Kashagan;Kazakhstan;Kazakhstan;5.086161261;4.471389478361042;-0.6147717826389583;Still classified as carbon bomb;Carbon bomb still a project
+Kearl;Kearl;Canada;Canada;1.901181774;1.4201384974200002;-0.4810432765799999;Still classified as carbon bomb;Carbon bomb still a project
+Khafji;;Kuwait-Saudi Arabia;;1.439897189;;;No longer classified as carbon bomb;Carbon bomb still a project
+Khurais project;Khurais project;Saudi Arabia;Saudi Arabia;7.634938272;6.659561107540001;-0.9753771644599993;Still classified as carbon bomb;Carbon bomb still a project
+Khursaniyah;Khursaniyah;Saudi Arabia;Saudi Arabia;2.413255558;1.76871813986;-0.6445374181399999;Still classified as carbon bomb;Carbon bomb still a project
+Kish Gas Project;Kish Gas Project;Iran;Iran;1.193632598;0.8811235816520001;-0.3125090163479999;Now below 1 GtCO2 threshold;Carbon bomb still a project
+Kronprins Christian Offshore;;Denmark;;2.23244534;;;No longer classified as carbon bomb;Carbon bomb still a project
+Ku-Maloob-Zaap Project;Ku-Maloob-Zaap Project;Mexico;Mexico;1.960224743;1.0348643110763134;-0.9253604319236866;Still classified as carbon bomb;Carbon bomb still a project
+Kuznetsk Depression (Kuzbass) CBM;;Russia;;4.90609548;;;No longer classified as carbon bomb;Carbon bomb still a project
+La Luna Shale;La Luna Shale;Colombia;Colombia;1.616788836;1.5631802309948855;-0.05360860500511455;Still classified as carbon bomb;Carbon bomb still a project
+La Luna Shale;;Venezuela;;1.090522015;;;No longer classified as carbon bomb;Carbon bomb still a project
+Leningradskoye (Kara Sea);;Russia;;1.800619883;;;No longer classified as carbon bomb;Carbon bomb still a project
+Lensky Basin CBM;;Russia;;2.73771576;;;No longer classified as carbon bomb;Carbon bomb still a project
+Leviathan;Leviathan;Israel;Israel;1.060241772;0.9474121927799999;-0.11282957922000003;Now below 1 GtCO2 threshold;Carbon bomb still a project
+Liard Shale;;Canada;;1.201818384;;;No longer classified as carbon bomb;Carbon bomb still a project
+Libra;;Brazil;;1.891731555;;;No longer classified as carbon bomb;Carbon bomb still a project
+Llandovery Shale;Llandovery Shale;Brazil;Brazil;4.273465065;3.0090071659999995;-1.2644578990000004;Still classified as carbon bomb;Carbon bomb still a project
+Longmaxi Shale;Longmaxi Shale;China;China;5.691701535;1.1315164500000001;-4.560185085;Still classified as carbon bomb;Carbon bomb still a project
+Longmaxi Shale (Sichuan/Changyu);Yaan Slope Onshore Sichuan Province;China;China;2.20989992;4.931716150000001;2.721816230000001;Still classified as carbon bomb;Carbon bomb still a project
+Lower Zakum;Lower Zakum;UAE;UAE;2.434419542;1.58199995808;-0.8524195839200002;Still classified as carbon bomb;Carbon bomb still a project
+Lublin Basin Silurian Shale;;Poland;;5.647084841;;;No longer classified as carbon bomb;Carbon bomb still a project
+Lula (X-Tupi);Tupi (x-Lula);Brazil;Brazil;2.545775174;1.532574344046;-1.013200829954;Still classified as carbon bomb;Carbon bomb still a project
+MZLNG Joint Development (T1-T2);;Mozambique;;1.310175723;;;No longer classified as carbon bomb;Carbon bomb still a project
+Majnoon;Majnoon;Iraq;Iraq;2.468342318;4.00080669768;1.53246437968;Still classified as carbon bomb;Carbon bomb still a project
+Manifa (redevelop);Manifa (redevelop);Saudi Arabia;Saudi Arabia;5.000284718;4.47525316902;-0.5250315489799995;Still classified as carbon bomb;Carbon bomb still a project
+Mansouri Bangestan;Mansouri Bangestan;Iran;Iran;1.045838888;1.279068288;0.23322939999999992;Still classified as carbon bomb;Carbon bomb still a project
+Marcellus Shale;Marcellus Shale;United States;United States;26.71441286;25.74388717541056;-0.9705256845894397;Still classified as carbon bomb;Carbon bomb still a project
+Marjan;Marjan;Saudi Arabia;Saudi Arabia;1.889926075;1.90623582;0.016309745000000042;Still classified as carbon bomb;Carbon bomb still a project
+Marun;Marun;Iran;Iran;2.408543885;1.8334778415800002;-0.5750660434199997;Still classified as carbon bomb;Carbon bomb still a project
+Menilite Shale;Menilite Shale;Ukraine;Ukraine;1.666673391;1.646285256;-0.02038813499999992;Still classified as carbon bomb;Carbon bomb still a project
+Meramec Shale;Meramec Shale;United States;United States;2.439577611;1.5180555889293168;-0.921522022070683;Still classified as carbon bomb;Carbon bomb still a project
+Mero (Libra NW);Mero (Libra NW);Brazil;Brazil;1.287024055;1.02127739634;-0.26574665866000013;Still classified as carbon bomb;Carbon bomb still a project
+Montney Play;Montney Play;Canada;Canada;13.6884891;12.393886641177104;-1.2946024588228955;Still classified as carbon bomb;Carbon bomb still a project
+NLNG Base Project;;Nigeria;;1.033411352;;;No longer classified as carbon bomb;Carbon bomb still a project
+Nahr bin Umar;Nahr bin Umar;Iraq;Iraq;1.277643431;1.2518376426;-0.02580578840000003;Still classified as carbon bomb;Carbon bomb still a project
+North Field;North Field;Qatar;Qatar;11.61275076;11.558473450400001;-0.05427730959999977;Still classified as carbon bomb;Carbon bomb still a project
+North Field C LNG;;Qatar;;7.768105079;;;No longer classified as carbon bomb;Carbon bomb still a project
+North Field E;North Field E;Qatar;Qatar;4.594474423;4.5750618634;-0.0194125596000001;Still classified as carbon bomb;Carbon bomb still a project
+North Kara Sea Offshore;;Russia;;1.176960094;;;No longer classified as carbon bomb;Carbon bomb still a project
+North Slope Onshore;North Slope Onshore;United States;United States;2.035951159;0.9086920102889999;-1.1272591487110002;Now below 1 GtCO2 threshold;Carbon bomb still a project
+Oil shale China;;China;;1.385461449;;;No longer classified as carbon bomb;Carbon bomb still a project
+Orinoco Joint Ventures;Orinoco Joint Ventures;Venezuela;Venezuela;6.703396162;2.8528872810372294;-3.8505088809627703;Still classified as carbon bomb;Carbon bomb still a project
+PRB Tight Oil;PRB Tight Oil;United States;United States;2.770946453;2.1734817801312922;-0.5974646728687079;Still classified as carbon bomb;Carbon bomb still a project
+Parnaiba Onshore;;Brazil;;1.998572969;;;No longer classified as carbon bomb;Carbon bomb still a project
+Pars Southwest;Pars Southwest;Iran;Iran;1.1092643;1.102885212;-0.006379088000000088;Still classified as carbon bomb;Carbon bomb still a project
+Pazanan;;Iran;;1.358409167;;;No longer classified as carbon bomb;Carbon bomb still a project
+Permian Conventional_Texas;Permian Conventional_Texas;United States;United States;2.061829878;1.2724801552967262;-0.789349722703274;Still classified as carbon bomb;Carbon bomb still a project
+Permian Delaware Tight;Permian Delaware Tight;United States;United States;27.80443109;29.711140808664528;1.9067097186645263;Still classified as carbon bomb;Carbon bomb still a project
+Permian Midland Tight;Permian Midland Tight;United States;United States;16.62881821;17.314227400420002;0.6854091904200033;Still classified as carbon bomb;Carbon bomb still a project
+Project Kuwait;Project Kuwait;Kuwait;Kuwait;4.409493298;1.192358891394;-3.217134406606;Still classified as carbon bomb;Carbon bomb still a project
+QatarGas 1 LNG T1-T3;QatarGas 1 LNG T1-T3;Qatar;Qatar;1.283272558;1.0830156955999999;-0.20025686240000007;Still classified as carbon bomb;Carbon bomb still a project
+QatarGas LNG T12-T13 (NFE-South);QatarGas LNG T12-T13 (NFE-South);Qatar;Qatar;1.785210581;1.7470055871099643;-0.03820499389003573;Still classified as carbon bomb;Carbon bomb still a project
+QatarGas LNG T8-T11 (NFE-East);QatarGas LNG T8-T11 (NFE-East);Qatar;Qatar;3.39497532;3.4045707533051215;0.009595433305121581;Still classified as carbon bomb;Carbon bomb still a project
+Qatargas 2 LNG T4-T5;Qatargas 2 LNG T4-T5;Qatar;Qatar;1.828035431;1.5233576885850675;-0.3046777424149325;Still classified as carbon bomb;Carbon bomb still a project
+Qatif project;Qatif project;Saudi Arabia;Saudi Arabia;5.066814884;4.6952629316;-0.37155195239999994;Still classified as carbon bomb;Carbon bomb still a project
+Qurna West;Qurna West;Iraq;Iraq;3.982828932;6.3405192690000005;2.3576903370000006;Still classified as carbon bomb;Carbon bomb still a project
+Qurna West-2;Qurna West-2;Iraq;Iraq;1.598723281;2.3963722614000003;0.7976489804000002;Still classified as carbon bomb;Carbon bomb still a project
+Rasgas 2 LNG T3-T5;Rasgas 2 LNG T3-T5;Qatar;Qatar;1.509806372;1.2709410660649794;-0.23886530593502053;Still classified as carbon bomb;Carbon bomb still a project
+Rasgas 3 LNG T6-T7;Rasgas 3 LNG T6-T7;Qatar;Qatar;1.490692041;1.187646959200071;-0.30304508179992906;Still classified as carbon bomb;Carbon bomb still a project
+Ratawi;;Iraq;;1.065138744;;;No longer classified as carbon bomb;Carbon bomb still a project
+Romashkino;Romashkino;Russia;Russia;1.338604935;1.5679088194000002;0.22930388440000016;Still classified as carbon bomb;Carbon bomb still a project
+Rumaila North & South;Rumaila North & South;Iraq;Iraq;7.761609425;6.7923289584;-0.9692804665999999;Still classified as carbon bomb;Carbon bomb still a project
+Rusanovskoye (Kara Sea);;Russia;;1.316123949;;;No longer classified as carbon bomb;Carbon bomb still a project
+Safaniya;Safaniya;Saudi Arabia;Saudi Arabia;11.92614355;12.6239508662;0.6978073161999987;Still classified as carbon bomb;Carbon bomb still a project
+Safaniya YTF Concession;;Saudi Arabia;;1.842871867;;;No longer classified as carbon bomb;Carbon bomb still a project
+Samotlorneftegaz (TNK-BP);Samotlorneftegaz (TNK-BP);Russia;Russia;1.867807241;1.9041928705853999;0.036385629585399926;Still classified as carbon bomb;Carbon bomb still a project
+Santos Offshore;Santos Offshore;Brazil;Brazil;4.339841028;1.321259761020001;-3.018581266979999;Still classified as carbon bomb;Carbon bomb still a project
+Sembar Shale;Sembar Shale;Pakistan;Pakistan;2.840236853;2.4614563900000004;-0.37878046299999957;Still classified as carbon bomb;Carbon bomb still a project
+SeverEnergia Project;SeverEnergia Project;Russia;Russia;1.099534929;1.037271568906;-0.06226336009400013;Still classified as carbon bomb;Carbon bomb still a project
+Shaybah;Shaybah;Saudi Arabia;Saudi Arabia;4.268589672;3.696593824;-0.5719958480000003;Still classified as carbon bomb;Carbon bomb still a project
+Shengli;Shengli;China;China;1.50578136;1.4218566550395948;-0.08392470496040527;Still classified as carbon bomb;Carbon bomb still a project
+Shtokman;;Russia;;6.135874132;;;No longer classified as carbon bomb;Carbon bomb still a project
+Sirte Shale;Sirte Shale;Libya;Libya;1.703281911;1.7024779259999998;-0.0008039850000001181;Still classified as carbon bomb;Carbon bomb still a project
+South Pars (Phases 2-3) dry gas;;Iran;;1.016274224;;;No longer classified as carbon bomb;Carbon bomb still a project
+South Pars (Phases 20-21);South Pars (Phases 20-21);Iran;Iran;1.017173226;0.8424069858000001;-0.17476624019999987;Now below 1 GtCO2 threshold;Carbon bomb still a project
+South Pars (Phases 22-24);South Pars (Phases 23-28);Iran;Iran;1.04273081;5.330933432;4.288202622;Still classified as carbon bomb;Carbon bomb still a project
+South Pars (Phases 4-5) dry gas;South Pars (Phases 4-5);Iran;Iran;1.100975522;1.0265859442599998;-0.0743895777400001;Still classified as carbon bomb;Carbon bomb still a project
+South Pars (Phases 9-10) dry gas;;Iran;;1.265006303;;;No longer classified as carbon bomb;Carbon bomb still a project
+Southeast Uplift Onshore Heilongjiang Province;;China;;1.750536451;;;No longer classified as carbon bomb;Carbon bomb still a project
+Spirit River (Notikewin, Falher, Wilrich);Spirit River (Notikewin, Falher, Wilrich);Canada;Canada;2.976203115;1.9701130529161985;-1.0060900620838016;Still classified as carbon bomb;Carbon bomb still a project
+Sudair Shale;;Saudi Arabia;;1.032893123;;;No longer classified as carbon bomb;Carbon bomb still a project
+Syncrude Mildred Lake/Aurora;;Canada;;1.184050044;;;No longer classified as carbon bomb;Carbon bomb still a project
+Tambey Zone (Yamal Megaproject);;Russia;;2.474909236;;;No longer classified as carbon bomb;Carbon bomb still a project
+Tanf Shale;Tanf Shale;Syria;Syria;1.363655326;0.9781083960000001;-0.38554692999999984;Now below 1 GtCO2 threshold;Carbon bomb still a project
+Tannezuft Shale;Tannezuft Shale;Algeria;Algeria;2.347866837;2.162121526;-0.18574531100000025;Still classified as carbon bomb;Carbon bomb still a project
+Tanzanian Coastal Offshore;Tanzania LNG (Block 1/4 and 2);Tanzania;Tanzania;1.031198167;1.1379534049463775;0.10675523794637742;Still classified as carbon bomb;Carbon bomb still a project
+Tarim (CNPC);Tarim;China;China;1.959883851;2.3785711038771367;0.4186872528771366;Still classified as carbon bomb;Carbon bomb still a project
+Taymyr Basin CBM;;Russia;;1.233321785;;;No longer classified as carbon bomb;Carbon bomb still a project
+Tengiz;Tengiz;Kazakhstan;Kazakhstan;3.357866129;1.9125350377800001;-1.44533109122;Still classified as carbon bomb;Carbon bomb still a project
+Timan - Pechora Basin Offshore;Timan - Pechora Basin Offshore;Russia;Russia;2.48143889;1.223160402;-1.2582784880000002;Still classified as carbon bomb;Carbon bomb still a project
+Timan - Pechora Basin Onshore;Timan - Pechora Basin Onshore;Russia;Russia;2.351649692;1.1473045380000002;-1.2043451539999999;Still classified as carbon bomb;Carbon bomb still a project
+Troll;Troll;Norway;Norway;1.77210443;1.3252721108555678;-0.4468323191444321;Still classified as carbon bomb;Carbon bomb still a project
+Tunguska Basin CBM;;Russia;;8.843821834;;;No longer classified as carbon bomb;Carbon bomb still a project
+Umm Shaif/Nasr;Umm Shaif/Nasr;UAE;UAE;1.939252733;2.33842264472;0.39916991172000005;Still classified as carbon bomb;Carbon bomb still a project
+Upper Zakum;Upper Zakum;UAE;UAE;6.44038252;4.75067133918;-1.6897111808199998;Still classified as carbon bomb;Carbon bomb still a project
+Urengoyskoye;Urengoyskoye;Russia;Russia;5.199312832;3.60798234;-1.5913304920000004;Still classified as carbon bomb;Carbon bomb still a project
+Utica Shale;Utica Shale;United States;United States;7.713186851;6.309626257937507;-1.403560593062493;Still classified as carbon bomb;Carbon bomb still a project
+Vaca Muerta Shale;Vaca Muerta Shale;Argentina;Argentina;5.177782001;12.11550210523496;6.93772010423496;Still classified as carbon bomb;Carbon bomb still a project
+Velkerri Shale;Velkerri Shale;Australia;Australia;1.058031183;1.0151680794200002;-0.042863103579999784;Still classified as carbon bomb;Carbon bomb still a project
+Volga - Urals Onshore;Volga - Urals Onshore;Russia;Russia;1.36763708;1.4398969500000003;0.07225987000000034;Still classified as carbon bomb;Carbon bomb still a project
+West Florida Offshore;;United States;;1.069261489;;;No longer classified as carbon bomb;Carbon bomb still a project
+West Siberia Offshore;West Siberia Offshore;Russia;Russia;2.856403668;1.282173762;-1.574229906;Still classified as carbon bomb;Carbon bomb still a project
+West Siberia Onshore;Lukoil-West Siberia;Russia;Russia;1.1645132;1.9514623537408462;0.7869491537408462;Still classified as carbon bomb;Carbon bomb has started
+Western Gulf Province_Texas;Western Gulf Province_Texas;United States;United States;5.061653121;1.435054558702654;-3.626598562297346;Still classified as carbon bomb;Carbon bomb still a project
+Woodford Shale;Woodford Shale;United States;United States;3.377142985;2.103638056826477;-1.273504928173523;Still classified as carbon bomb;Carbon bomb still a project
+Xinjiang (CNPC);Xinjiang;China;China;1.356420308;1.8861278155500896;0.5297075075500897;Still classified as carbon bomb;Carbon bomb still a project
+Yashlar Vostochnyy (East);Yashlar Vostochnyy (East);Turkmenistan;Turkmenistan;2.129145331;2.1157599;-0.013385431000000114;Still classified as carbon bomb;Carbon bomb still a project
+Yolotan (Iolotan) South;Yolotan (Iolotan) South;Turkmenistan;Turkmenistan;9.548227901;8.7831984;-0.7650295010000008;Still classified as carbon bomb;Carbon bomb still a project
+Yucatan Platform Offshore;;Mexico;;1.025798315;;;No longer classified as carbon bomb;Carbon bomb still a project
+Yuganskneftegaz;Yuganskneftegaz;Russia;Russia;4.345193315;3.7065139288054008;-0.6386793861945996;Still classified as carbon bomb;Carbon bomb still a project
+Zubair;Zubair;Iraq;Iraq;1.679304399;1.6761374640000002;-0.003166934999999871;Still classified as carbon bomb;Carbon bomb still a project
+Zuluf;Zuluf;Saudi Arabia;Saudi Arabia;2.449978206;1.996066351186;-0.453911854814;Still classified as carbon bomb;Carbon bomb still a project
+Zuluf (CR in field);Zuluf (CR in field);Saudi Arabia;Saudi Arabia;3.535052229;3.5310284334;-0.004023795600000213;Still classified as carbon bomb;Carbon bomb still a project
+Zuluf (expansion);Zuluf (expansion);Saudi Arabia;Saudi Arabia;1.833213347;2.330435458;0.49722211100000013;Still classified as carbon bomb;Carbon bomb still a project
+;ADNOC Sole Risk;;UAE;;3.1507968431999998;;Newly identified carbon bomb;Carbon bomb still a project
+;Alaska LNG;;United States;;0.9262517100000001;;Newly identified carbon bomb;Carbon bomb still a project
+;Area 1 LNG (T3-T4);;Mozambique;;0.7910794830949325;;Newly identified carbon bomb;Carbon bomb still a project
+;Bovanenkovo Zone (Yamal Megaproject);;Russia;;6.47680662052;;Newly identified carbon bomb;Carbon bomb still a project
+;Cambay Shale;;India;;1.39006537564;;Newly identified carbon bomb;Carbon bomb still a project
+;Cardium Play;;Canada;;0.9944562003859885;;Newly identified carbon bomb;Carbon bomb still a project
+;Fadhili Gas Project;;Saudi Arabia;;1.1615616747599997;;Newly identified carbon bomb;Carbon bomb still a project
+;Forouzan;;Iran;;2.0383147569999998;;Newly identified carbon bomb;Carbon bomb still a project
+;Gazprom Dobycha Noyabrsk;;Russia;;1.0317514064399997;;Newly identified carbon bomb;Carbon bomb still a project
+;Gazpromneft-Khantos;;Russia;;0.9603936824447181;;Newly identified carbon bomb;Carbon bomb still a project
+;Gazpromneft-NNG;;Russia;;1.3485907870328246;;Newly identified carbon bomb;Carbon bomb still a project
+;Gazpromneft-Zapolyarye;;Russia;;1.676204153171017;;Newly identified carbon bomb;Carbon bomb still a project
+;Golshan;;Iran;;0.960856262;;Newly identified carbon bomb;Carbon bomb still a project
+;Greater Burgan;;Kuwait;;7.36392885452;;Newly identified carbon bomb;Carbon bomb still a project
+;Greater Green River Tight Gas;;United States;;0.9386778066901199;;Newly identified carbon bomb;Carbon bomb still a project
+;Gumai Formation;;Indonesia;;0.9943889160000001;;Newly identified carbon bomb;Carbon bomb still a project
+;Hassi R'Mel (Domestic);;Algeria;;1.6401771583999998;;Newly identified carbon bomb;Carbon bomb still a project
+;Iara;;Brazil;;1.101864982568211;;Newly identified carbon bomb;Carbon bomb still a project
+;Jafurah shale gas (Al Hasa);;Saudi Arabia;;1.72933016626;;Newly identified carbon bomb;Carbon bomb still a project
+;Kirkuk;;Iraq;;1.28221587;;Newly identified carbon bomb;Carbon bomb still a project
+;Longmaxi Shale (Xi'nan-CNPC);;China;;0.88062417615;;Newly identified carbon bomb;Carbon bomb still a project
+;Maykop Shale;;Azerbaijan;;0.9336816960000002;;Newly identified carbon bomb;Carbon bomb still a project
+;North Pars LNG;;Iran;;1.354563752;;Newly identified carbon bomb;Carbon bomb still a project
+;North West Shelf LNG;;Australia;;0.8325244913737586;;Newly identified carbon bomb;Carbon bomb still a project
+;Ordos Basin CBM;;China;;0.93993;;Newly identified carbon bomb;Carbon bomb still a project
+;Ordovician Shale;;China;;0.86555816;;Newly identified carbon bomb;Carbon bomb still a project
+;Oriente PDVSA;;Venezuela;;0.8256003958695525;;Newly identified carbon bomb;Carbon bomb still a project
+;QatarGas LNG T14-T15 (NFE-West);;Qatar;;1.74732538;;Newly identified carbon bomb;Carbon bomb still a project
+;Qatargas 3 LNG T6;;Qatar;;0.9357260570700356;;Newly identified carbon bomb;Carbon bomb still a project
+;Qatargas 4 LNG T7;;Qatar;;0.7352588999999999;;Newly identified carbon bomb;Carbon bomb still a project
+;Rospan (TNK-BP);;Russia;;1.08025754586;;Newly identified carbon bomb;Carbon bomb still a project
+;Ruwais LNG T1-T2;;UAE;;1.2255702604;;Newly identified carbon bomb;Carbon bomb still a project
+;Sakhalin-3;;Russia;;1.0435874626025998;;Newly identified carbon bomb;Carbon bomb still a project
+;Sattapadi Formation;;India;;0.9842038719999999;;Newly identified carbon bomb;Carbon bomb still a project
+;South East Bab;;UAE;;0.9666779322600001;;Newly identified carbon bomb;Carbon bomb still a project
+;South Pars (Phase 13) (ex-Persian LNG);;Iran;;0.7739250125999999;;Newly identified carbon bomb;Carbon bomb still a project
+;South Pars (Phase 14) (ex-Persian LNG);;Iran;;0.9021583423999999;;Newly identified carbon bomb;Carbon bomb still a project
+;South Pars (Phase 19);;Iran;;0.921202286;;Newly identified carbon bomb;Carbon bomb still a project
+;South Pars (Phases 15-16);;Iran;;0.846383492;;Newly identified carbon bomb;Carbon bomb still a project
+;South Pars (Phases 17-18);;Iran;;0.79699713474;;Newly identified carbon bomb;Carbon bomb still a project
+;South Pars (Phases 2-3);;Iran;;0.95705654;;Newly identified carbon bomb;Carbon bomb still a project
+;South Pars (Phases 22-24);;Iran;;1.0051292995999999;;Newly identified carbon bomb;Carbon bomb still a project
+;South Pars (Phases 9-10);;Iran;;0.969543316;;Newly identified carbon bomb;Carbon bomb still a project
+;Tarim Basin Onshore;;China;;1.068083076;;Newly identified carbon bomb;Carbon bomb still a project
+;Uinta-Piceance Tight Gas;;United States;;0.9549335491676019;;Newly identified carbon bomb;Carbon bomb still a project
+;Uinta-Piceance Tight Oil;;United States;;1.0296532510544782;;Newly identified carbon bomb;Carbon bomb still a project
+;Viking Graben  Offshore;;Norway;;0.9745781315459996;;Newly identified carbon bomb;Carbon bomb still a project
+;Vostok Oil Project;;Russia;;2.8476511805929023;;Newly identified carbon bomb;Carbon bomb still a project
+;Waha;;Libya;;0.9277204980107702;;Newly identified carbon bomb;Carbon bomb still a project
+;Wasit;;Saudi Arabia;;0.81843428012;;Newly identified carbon bomb;Carbon bomb still a project
+;Western Haynesville/Bossier Shale;;United States;;1.7536505999999998;;Newly identified carbon bomb;Carbon bomb still a project
+;Xi'nan-CNPC;;China;;1.654818948336924;;Newly identified carbon bomb;Carbon bomb still a project
+;Yanchang;;China;;0.9201508773381459;;Newly identified carbon bomb;Carbon bomb still a project
+;Zagros Foldbelt Onshore;;Iran;;1.3632030267954003;;Newly identified carbon bomb;Carbon bomb still a project
+;Zagros Foldbelt Onshore;;Iraq;;1.04686847685;;Newly identified carbon bomb;Carbon bomb still a project
