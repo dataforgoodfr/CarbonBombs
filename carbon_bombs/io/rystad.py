@@ -67,10 +67,10 @@ def load_rystad_gasoil_emission_database():
         "Latitude": "Latitude",
         "Longitude": "Longitude",
         "Start-up year min asset": "Start_up_year",
-        "Producing  - Potential emissions (GTCO2)": "Producing_potential_emissions_in_GTCO2",
-        "Short term expansion - Potential emissions (GTCO2)": "Short_term_expansion_potential_emissions_in_GTCO2",
-        "Long term expansion - Potential emissions (GTCO2)": "Long_term_expansion_potential_emissions_in_GTCO2",
-        "Total potential emissions (GTCO2)": "Total_potential_emissions_in_GTCO2",
+        "Producing  - Potential emissions": "Producing_potential_emissions",
+        "Short term expansion - Potential emissions": "Short_term_expansion_potential_emissions",
+        "Long term expansion - Potential emissions": "Long_term_expansion_potential_emissions",
+        "Total potential emissions (mtCO2)": "Total_potential_emissions",
     }
     # Only keep columns of interest for the project
     df = df.loc[:, renamed_columns.keys()]
