@@ -4,6 +4,7 @@ import pandas as pd
 from carbon_bombs.conf import FPATH_SRC_RYSTAD_CB
 from carbon_bombs.conf import SHEETNAME_RYSTAD_CB_EMISSION
 from carbon_bombs.conf import SHEETNAME_RYSTAD_CB_COMPANY
+from carbon_bombs.conf import SHEETNAME_RYSTAD_GASOIL_EMISSION
 from carbon_bombs.utils.logger import LOGGER
 from carbon_bombs.utils.location import clean_project_names_with_iso
 
@@ -21,6 +22,43 @@ def load_rystad_cb_emission_database():
     df = pd.read_excel(
         FPATH_SRC_RYSTAD_CB,
         sheet_name=SHEETNAME_RYSTAD_CB_EMISSION,
+        engine="openpyxl",
+    )
+    renamed_columns = {
+        "Project name": "Project_name",
+        "Country": "Country",
+        "Latitude": "Latitude",
+        "Longitude": "Longitude",
+        "Start-up year min asset": "Start_up_year",
+        "Producing  - Potential emissions (GTCO2)": "Producing_potential_emissions_in_GTCO2",
+        "Short term expansion - Potential emissions (GTCO2)": "Short_term_expansion_potential_emissions_in_GTCO2",
+        "Long term expansion - Potential emissions (GTCO2)": "Long_term_expansion_potential_emissions_in_GTCO2",
+        "Total potential emissions (GTCO2)": "Total_potential_emissions_in_GTCO2",
+    }
+    # Only keep columns of interest for the project
+    df = df.loc[:, renamed_columns.keys()]
+    # Rename columns
+    df = df.rename(columns=renamed_columns)
+    # Remove last row if Project_name = "SUMS"
+    df = df[df["Project_name"] != "SUMS"]
+    # Clean project names
+    clean_project_names_with_iso(df)
+    return df
+
+
+def load_rystad_gasoil_emission_database():
+    """
+    Load Gasoil database emission from Rystad.
+
+    Returns
+    -------
+    pandas.DataFrame:
+        A dataframe containing the data from the database.
+    """
+    LOGGER.debug("Read Rystad data: all Gasoil project emissions > 5MTCO2")
+    df = pd.read_excel(
+        FPATH_SRC_RYSTAD_CB,
+        sheet_name=SHEETNAME_RYSTAD_GASOIL_EMISSION,
         engine="openpyxl",
     )
     renamed_columns = {
