@@ -4,6 +4,7 @@ import pandas as pd
 from carbon_bombs.conf import FPATH_SRC_RYSTAD_CB
 from carbon_bombs.conf import SHEETNAME_RYSTAD_CB_EMISSION
 from carbon_bombs.conf import SHEETNAME_RYSTAD_CB_COMPANY
+from carbon_bombs.conf import SHEETNAME_RYSTAD_GASOIL_EMISSION
 from carbon_bombs.utils.logger import LOGGER
 from carbon_bombs.utils.location import clean_project_names_with_iso
 
@@ -38,6 +39,45 @@ def load_rystad_cb_emission_database():
     df = df.loc[:, renamed_columns.keys()]
     # Rename columns
     df = df.rename(columns=renamed_columns)
+    # Remove last row if Project_name = "SUMS"
+    df = df[df["Project_name"] != "SUMS"]
+    # Clean project names
+    clean_project_names_with_iso(df)
+    return df
+
+
+def load_rystad_gasoil_emission_database():
+    """
+    Load Gasoil database emission from Rystad.
+
+    Returns
+    -------
+    pandas.DataFrame:
+        A dataframe containing the data from the database.
+    """
+    LOGGER.debug("Read Rystad data: all Gasoil project emissions > 5MTCO2")
+    df = pd.read_excel(
+        FPATH_SRC_RYSTAD_CB,
+        sheet_name=SHEETNAME_RYSTAD_GASOIL_EMISSION,
+        engine="openpyxl",
+    )
+    renamed_columns = {
+        "Project name": "Project_name",
+        "Country": "Country",
+        "Latitude": "Latitude",
+        "Longitude": "Longitude",
+        "Start-up year min asset": "Start_up_year",
+        "Producing  - Potential emissions": "Producing_potential_emissions",
+        "Short term expansion - Potential emissions": "Short_term_expansion_potential_emissions",
+        "Long term expansion - Potential emissions": "Long_term_expansion_potential_emissions",
+        "Total potential emissions (mtCO2)": "Total_potential_emissions",
+    }
+    # Only keep columns of interest for the project
+    df = df.loc[:, renamed_columns.keys()]
+    # Rename columns
+    df = df.rename(columns=renamed_columns)
+    # Remove last row if Project_name = "SUMS"
+    df = df[df["Project_name"] != "SUMS"]
     # Clean project names
     clean_project_names_with_iso(df)
     return df
@@ -69,7 +109,8 @@ def load_rystad_cb_company_database():
     df = df.loc[:, renamed_columns.keys()]
     # Rename columns
     df = df.rename(columns=renamed_columns)
-
+    # Remove row if Project_name = "SUMS"
+    df = df[df["Project_name"] != "SUMS"]
     # Clean project names
     clean_project_names_with_iso(df)
 
