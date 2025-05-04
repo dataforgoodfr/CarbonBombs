@@ -14,7 +14,7 @@ Athabasca Oil Sands Project;Canada;operating;1.355853264;Athabasca Oil Sands Pro
 Austin Chalk Tight;United States;operating;1.392828065;Austin Chalk Horizontal;United States;producing, short_term_expansion, long_term_expansion;0.27031016614625;0.3210214461818879;1.8492956463717536;2.4406272586998914;1.0477991936998914;Still classified as carbon bomb;False
 Azadegan;Iran;operating;2.278016459;Azadegan;;;;;;;;Now classified as simple gasoil project;False
 Bab;UAE;operating;4.197033055;Bab;UAE;producing, short_term_expansion, long_term_expansion;2.4680016636600004;0.20587373892;0.619482654;3.2933580565800002;-0.9036749984200001;Still classified as carbon bomb;False
-Bab (Gasco);UAE;operating;1.674389775;Bab;UAE;producing, short_term_expansion, long_term_expansion;2.4680016636600004;0.20587373892;0.619482654;3.2933580565800002;1.6189682815800002;Still classified as carbon bomb;False
+Bab (Gasco);UAE;operating;1.674389775;;;;;;;;;No longer classified as carbon bomb;False
 Baghdad East;Iraq;operating;2.742460925;Baghdad East;Iraq;producing, long_term_expansion;0.0334625382;0.0;2.5774739280000003;2.6109364662;-0.13152445879999997;Still classified as carbon bomb;False
 Bakken Shale;United States;operating;5.948592838;Bakken Shale;United States;producing, short_term_expansion, long_term_expansion;1.2372028642180648;0.8877124342667712;3.405134597162826;5.530049895647663;-0.418542942352337;Still classified as carbon bomb;False
 Baltimore Canyon Offshore;United States;not started;1.648511699;;;;;;;;;No longer classified as carbon bomb;False
@@ -58,7 +58,7 @@ Gachsaran;Iran;operating;1.739296877;Gachsaran;Iran;producing, short_term_expans
 Gazprom dobycha Nadym;Russia;operating;1.286567712;Gazprom dobycha Nadym;Russia;producing, short_term_expansion, long_term_expansion;0.78011562022;0.006367085000000001;0.00145626982;0.7879389750400001;-0.49862873696;Now below 1 GtCO2 threshold;False
 Gazprom dobycha Orenburg;Russia;operating;1.593313222;Gazprom dobycha Orenburg;Russia;producing, long_term_expansion;0.20643789014000005;0.0;0.9818441386400001;1.1882820287800002;-0.4050311932199997;Still classified as carbon bomb;False
 Gazprom dobycha Yamburg;Russia;operating;8.863793695;Gazprom dobycha Yamburg;Russia;producing, long_term_expansion;7.23074540128;0.0;0.0008655468000000001;7.23161094808;-1.6321827469199999;Still classified as carbon bomb;False
-Ghawar Ain Dar N;Saudi Arabia;operating;2.088574939;Ghawar Ain Dar S;Saudi Arabia;producing;1.073401062;0.0;0.0;1.073401062;-1.0151738769999998;Still classified as carbon bomb;False
+Ghawar Ain Dar N;Saudi Arabia;operating;2.088574939;;;;;;;;;No longer classified as carbon bomb;False
 Ghawar Ain Dar S;Saudi Arabia;operating;1.43464453;Ghawar Ain Dar S;Saudi Arabia;producing;1.073401062;0.0;0.0;1.073401062;-0.36124346799999985;Still classified as carbon bomb;False
 Ghawar Haradh;Saudi Arabia;operating;6.966827829;Ghawar Haradh;Saudi Arabia;producing;8.204786018;0.0;0.0;8.204786018;1.2379581890000004;Still classified as carbon bomb;False
 Ghawar Hawiyah;Saudi Arabia;operating;4.649714459;Ghawar Hawiyah;Saudi Arabia;producing;3.24914443262;0.0;0.0;3.24914443262;-1.40057002638;Still classified as carbon bomb;False
@@ -116,7 +116,7 @@ Montney Play;Canada;operating;13.6884891;Montney Play;Canada;producing, short_te
 NLNG Base Project;Nigeria;operating;1.033411352;NLNG Base Project;;;;;;;;Now classified as simple gasoil project;False
 Nahr bin Umar;Iraq;operating;1.277643431;Nahr bin Umar;Iraq;producing, long_term_expansion;0.0813455946;0.0;1.170492048;1.2518376426;-0.02580578840000003;Still classified as carbon bomb;False
 North Field;Qatar;not started;11.61275076;North Field;Qatar;long_term_expansion;0.0;0.0;11.558473450400001;11.558473450400001;-0.05427730959999977;Still classified as carbon bomb;False
-North Field C LNG;Qatar;not started;7.768105079;North Field;Qatar;long_term_expansion;0.0;0.0;11.558473450400001;11.558473450400001;3.7903683714000014;Still classified as carbon bomb;False
+North Field C LNG;Qatar;not started;7.768105079;;;;;;;;;No longer classified as carbon bomb;False
 North Field E;Qatar;not started;4.594474423;North Field E;Qatar;long_term_expansion;0.0;0.0;4.5750618634;4.5750618634;-0.0194125596000001;Still classified as carbon bomb;False
 North Kara Sea Offshore;Russia;not started;1.176960094;;;;;;;;;No longer classified as carbon bomb;False
 North Slope Onshore;United States;not started;2.035951159;North Slope Onshore;United States;long_term_expansion;0.0;0.0;0.9086920102889999;0.9086920102889999;-1.1272591487110002;Now below 1 GtCO2 threshold;False
@@ -144,7 +144,7 @@ Romashkino;Russia;operating;1.338604935;Romashkino;Russia;producing;1.5679088194
 Rumaila North & South;Iraq;operating;7.761609425;Rumaila North & South;Iraq;producing;6.7923289584;0.0;0.0;6.7923289584;-0.9692804665999999;Still classified as carbon bomb;False
 Rusanovskoye (Kara Sea);Russia;not started;1.316123949;;;;;;;;;No longer classified as carbon bomb;False
 Safaniya;Saudi Arabia;operating;11.92614355;Safaniya;Saudi Arabia;producing, long_term_expansion;11.6452531062;0.0;0.9786977600000001;12.6239508662;0.6978073161999987;Still classified as carbon bomb;False
-Safaniya YTF Concession;Saudi Arabia;not started;1.842871867;Safaniya;Saudi Arabia;producing, long_term_expansion;11.6452531062;0.0;0.9786977600000001;12.6239508662;10.7810789992;Still classified as carbon bomb;True
+Safaniya YTF Concession;Saudi Arabia;not started;1.842871867;;;;;;;;;No longer classified as carbon bomb;False
 Samotlorneftegaz (TNK-BP);Russia;operating;1.867807241;Samotlorneftegaz (TNK-BP);Russia;producing, long_term_expansion;1.9039908188253998;0.0;0.00020205176000000002;1.9041928705853999;0.036385629585399926;Still classified as carbon bomb;False
 Santos Offshore;Brazil;not started;4.339841028;Santos Offshore;Brazil;long_term_expansion;0.0;0.0;1.321259761020001;1.321259761020001;-3.018581266979999;Still classified as carbon bomb;False
 Sembar Shale;Pakistan;not started;2.840236853;Sembar Shale;Pakistan;long_term_expansion;0.0;0.0;2.4614563900000004;2.4614563900000004;-0.37878046299999957;Still classified as carbon bomb;False
