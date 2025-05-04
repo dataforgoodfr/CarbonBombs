@@ -1,248 +1,248 @@
-project_name_v1;country_v1;total_emissions_v1;project_name_v2;country_v2;project_status_v2;producing_emissions_v2;short_term_emissions_v2;long_term_emissions_v2;total_emissions_v2;total_emissions_difference;new_carbon_bombs_status;has_started_since_v1
-ACG (Azeri-Chirag-Guneshli Deep Water);Azerbaijan;1.660265695;ACG (Azeri-Chirag-Guneshli Deep Water);Azerbaijan;producing, short_term_expansion;0.9844491928199999;0.03961482900000001;0.0;1.02406402182;-0.6362016731800002;Still classified as carbon bomb;False
-Abqaiq;Saudi Arabia;1.59282777;Abqaiq;Saudi Arabia;producing;2.7430574269999997;0.0;0.0;2.7430574269999997;1.1502296569999997;Still classified as carbon bomb;False
-Agha Jari;Iran;1.563110231;Agha Jari;Iran;producing;2.00927765306;0.0;0.0;2.00927765306;0.4461674220599998;Still classified as carbon bomb;False
-Ahwaz Asmari;Iran;2.238284406;Ahwaz (Ahwaz Asmari);Iran;producing, short_term_expansion, long_term_expansion;1.52745697492;0.050668793999999996;0.030740274;1.60886604292;-0.6294183630800001;Still classified as carbon bomb;False
-Ahwaz Bangestan;Iran;1.433911709;Ahwaz (Bangestan);Iran;producing, long_term_expansion;1.386105674766;0.0;0.252433854;1.638539528766;0.20462781976600009;Still classified as carbon bomb;False
-Al Khaleej Gas project;Qatar;1.135307349;Al Khaleej Gas project;Qatar;producing;0.9857221601999999;0.0;0.0;0.9857221601999999;-0.14958518880000016;Now below 1 GtCO2 threshold;False
-Anadarko Shelf_Oklahoma;United States;1.817826072;;;;;;;;;No longer classified as carbon bomb;False
-Arctic LNG 2 T1-3;Russia;1.475579089;;;;;;;;;No longer classified as carbon bomb;False
-Area 1 LNG (T1&T2);Mozambique;1.006654597;;;;;;;;;No longer classified as carbon bomb;False
-Area-1 Future Phases;Mozambique;1.022724356;Area-1 Future Phases;Mozambique;long_term_expansion;0.0;0.0;0.9980630858558891;0.9980630858558891;-0.024661270144110792;Now below 1 GtCO2 threshold;False
-Asab;UAE;1.373231334;Asab;UAE;producing, long_term_expansion;1.19590217138;0.0;0.5318992908;1.72780146218;0.35457012818;Still classified as carbon bomb;False
-Athabasca Oil Sands Project;Canada;1.355853264;Athabasca Oil Sands Project;Canada;producing;1.0757329992;0.0;-2.1643067736e-08;1.0757329775569322;-0.28012028644306786;Still classified as carbon bomb;False
-Austin Chalk Tight;United States;1.392828065;Austin Chalk Horizontal;United States;producing, short_term_expansion, long_term_expansion;0.27031016614625;0.3210214461818879;1.8492956463717536;2.4406272586998914;1.0477991936998914;Still classified as carbon bomb;False
-Azadegan;Iran;2.278016459;Azadegan;;;;;;;;Now classified as simple gasoil project;False
-Bab;UAE;4.197033055;Bab;UAE;producing, short_term_expansion, long_term_expansion;2.4680016636600004;0.20587373892;0.619482654;3.2933580565800002;-0.9036749984200001;Still classified as carbon bomb;False
-Bab (Gasco);UAE;1.674389775;Bab;UAE;producing, short_term_expansion, long_term_expansion;2.4680016636600004;0.20587373892;0.619482654;3.2933580565800002;1.6189682815800002;Still classified as carbon bomb;False
-Baghdad East;Iraq;2.742460925;Baghdad East;Iraq;producing, long_term_expansion;0.0334625382;0.0;2.5774739280000003;2.6109364662;-0.13152445879999997;Still classified as carbon bomb;False
-Bakken Shale;United States;5.948592838;Bakken Shale;United States;producing, short_term_expansion, long_term_expansion;1.2372028642180648;0.8877124342667712;3.405134597162826;5.530049895647663;-0.418542942352337;Still classified as carbon bomb;False
-Baltimore Canyon Offshore;United States;1.648511699;;;;;;;;;No longer classified as carbon bomb;False
-Barail Shale;India;2.141583711;Barail Shale;;;;;;;;Now classified as simple gasoil project;False
-Barnett Shale;United States;1.360879964;Barnett Shale;United States;producing, short_term_expansion, long_term_expansion;0.3880433494388281;0.07131582556000002;0.6615395181361117;1.1208986931349398;-0.23998127086506016;Still classified as carbon bomb;False
-Barzan;Qatar;3.094095108;Barzan;Qatar;producing, long_term_expansion;0.65540987534;0.0;2.35106391126;3.0064737866;-0.0876213213999999;Still classified as carbon bomb;True
-Basrah Gas project;Iraq;1.041154291;Basrah Gas project;Iraq;producing;0.8655773244;0.0;0.0;0.8655773244;-0.1755769666;Now below 1 GtCO2 threshold;False
-Beaufort Sea Offshore;United States;1.254810599;;;;;;;;;No longer classified as carbon bomb;False
-Berri;Saudi Arabia;3.557107777;Berri;Saudi Arabia;producing, short_term_expansion;2.367360224;1.0523577122599999;0.0;3.4197179362599996;-0.1373898407400005;Still classified as carbon bomb;False
-Bovanenkovo Zone (Yamal Megaproject);Russia;11.15863625;Bovanenkovo Zone (Yamal Megaproject);Russia;producing, short_term_expansion, long_term_expansion;0.8468041247400001;1.268817396;4.36118509978;6.47680662052;-4.681829629480001;Still classified as carbon bomb;False
-Bowland Shale;United Kingdom;1.476082594;Bowland Shale;United Kingdom;long_term_expansion;0.0;0.0;0.8370495778500001;0.8370495778500001;-0.6390330161499999;Now below 1 GtCO2 threshold;False
-Bu Hasa;UAE;4.915778525;Bu Hasa;UAE;producing, short_term_expansion, long_term_expansion;2.2646203952746;0.22792152582;2.127596454;4.6201383750946;-0.29564014990540066;Still classified as carbon bomb;False
-Buzios (x-Franco);Brazil;3.638233141;Buzios (x-Franco);Brazil;producing, short_term_expansion, long_term_expansion;1.1071616073500001;1.8410865738700002;1.183605156e-09;2.9482481824036055;-0.6899849585963946;Still classified as carbon bomb;False
-Cambrian/Silurian Marine Shale;China;2.367530441;Cambrian/Silurian Marine Shale;China;long_term_expansion;0.0;0.0;0.9648642200000002;0.9648642200000002;-1.4026662209999998;Now below 1 GtCO2 threshold;False
-Campos Offshore;Brazil;1.560951299;;;;;;;;;No longer classified as carbon bomb;False
-Candeias Shale;Brazil;1.641797865;Candeias Shale;Brazil;long_term_expansion;0.0;0.0;1.044726896;1.044726896;-0.597070969;Still classified as carbon bomb;False
-Carboniferous Shale;Kazakhstan;1.287218515;Carboniferous Shale;Kazakhstan;long_term_expansion;0.0;0.0;1.286544838;1.286544838;-0.0006736769999999837;Still classified as carbon bomb;False
-Central Arabian Offshore;Iran;2.122142874;Central Arabian Offshore;Iran;long_term_expansion;0.0;0.0;1.226447979246;1.226447979246;-0.8956948947540002;Still classified as carbon bomb;False
-Central Arabian Offshore;Saudi Arabia;6.860051661;Central Arabian Offshore;Saudi Arabia;long_term_expansion;0.0;0.0;2.718036054;2.718036054;-4.142015606999999;Still classified as carbon bomb;False
-Central Arabian Offshore;Bahrain;1.411444785;;;;;;;;;No longer classified as carbon bomb;False
-Central Arabian Onshore;Kuwait;3.597522951;Central Arabian Onshore;Kuwait;long_term_expansion;0.0;0.0;1.32484179;1.32484179;-2.2726811610000004;Still classified as carbon bomb;False
-Central Arabian Onshore;Saudi Arabia;4.359973713;Central Arabian Onshore;Saudi Arabia;long_term_expansion;0.0;0.0;1.7558547480000004;1.7558547480000004;-2.604118964999999;Still classified as carbon bomb;False
-Central Arabian Onshore;Iraq;2.607423632;;;;;;;;;No longer classified as carbon bomb;False
-Central Arabian Onshore;Qatar;2.217231619;;;;;;;;;No longer classified as carbon bomb;False
-Central Uplift Onshore Xinjiang Uygur Autonomous Region;China;1.04432647;;;;;;;;;No longer classified as carbon bomb;False
-Changqing;China;4.939920283;Changqing;China;producing, long_term_expansion;3.5636765175436;0.0;0.37808283137430015;3.9417593489179;-0.9981609340821;Still classified as carbon bomb;False
-Christina Lake;Canada;1.232128944;Christina Lake;Canada;producing;1.1760227087400001;0.0;0.0;1.1760227087400001;-0.056106235259999915;Still classified as carbon bomb;False
-Chukchi Sea Offshore;United States;2.539277487;;;;;;;;;No longer classified as carbon bomb;False
-Collingham Shale;South Africa;1.849888206;Collingham Shale;South Africa;long_term_expansion;0.0;0.0;1.85029669;1.85029669;0.00040848400000004226;Still classified as carbon bomb;False
-DJ Basin Tight Oil;United States;5.852116216;DJ Basin Tight Oil;United States;producing, short_term_expansion, long_term_expansion;0.7604118523968598;0.5881906302047741;2.776562484620841;4.125164967222474;-1.7269512487775254;Still classified as carbon bomb;False
-Daqing;China;2.601815792;Daqing;China;producing, short_term_expansion, long_term_expansion;2.4767572177433994;0.0026100061;0.09071316462285002;2.5700803884662493;-0.031735403533750706;Still classified as carbon bomb;False
-Dolphin;Qatar;1.550235876;;;;;;;;;No longer classified as carbon bomb;False
-Dovletabad-Donmez;Turkmenistan;1.578094288;Dovletabad-Donmez;Turkmenistan;producing;0.9325531916800001;0.0;0.0;0.9325531916800001;-0.6455410963199999;Now below 1 GtCO2 threshold;False
-Duvernay;Canada;1.871369296;Duvernay;Canada;producing, short_term_expansion, long_term_expansion;0.1519017755753;0.20221696968705402;1.43794001578572;1.792058761048074;-0.07931053495192586;Still classified as carbon bomb;False
-Eagle Ford Shale;Mexico;5.0680294;Eagle Ford Shale;Mexico;long_term_expansion;0.0;0.0;1.8054022099999998;1.8054022099999998;-3.262627190000001;Still classified as carbon bomb;False
-Eagle Ford Shale;United States;5.924247947;Eagle Ford Shale;United States;producing, short_term_expansion, long_term_expansion;1.17047438417468;0.9400234490483015;5.7875904343238345;7.898088267546816;1.9738403205468167;Still classified as carbon bomb;False
-East Natuna (x-Natuna D-Alpha);Indonesia;2.158541118;;;;;;;;;No longer classified as carbon bomb;False
-Eastern Gas Program;Russia;4.274058366;Eastern Gas Program;Russia;producing, long_term_expansion;2.180723269294;0.0;1.7836971877599999;3.9644204570539996;-0.30963790894600063;Still classified as carbon bomb;False
-El Sharara;Libya;1.00784607;;;;;;;;;No longer classified as carbon bomb;False
-Gachsaran;Iran;1.739296877;Gachsaran;Iran;producing, short_term_expansion;1.4391405540000002;0.039002454;0.0;1.4781430080000002;-0.2611538689999997;Still classified as carbon bomb;False
-Gazprom dobycha Nadym;Russia;1.286567712;Gazprom dobycha Nadym;Russia;producing, short_term_expansion, long_term_expansion;0.78011562022;0.006367085000000001;0.00145626982;0.7879389750400001;-0.49862873696;Now below 1 GtCO2 threshold;False
-Gazprom dobycha Orenburg;Russia;1.593313222;Gazprom dobycha Orenburg;Russia;producing, long_term_expansion;0.20643789014000005;0.0;0.9818441386400001;1.1882820287800002;-0.4050311932199997;Still classified as carbon bomb;False
-Gazprom dobycha Yamburg;Russia;8.863793695;Gazprom dobycha Yamburg;Russia;producing, long_term_expansion;7.23074540128;0.0;0.0008655468000000001;7.23161094808;-1.6321827469199999;Still classified as carbon bomb;False
-Ghawar Ain Dar N;Saudi Arabia;2.088574939;Ghawar Ain Dar S;Saudi Arabia;producing;1.073401062;0.0;0.0;1.073401062;-1.0151738769999998;Still classified as carbon bomb;False
-Ghawar Ain Dar S;Saudi Arabia;1.43464453;Ghawar Ain Dar S;Saudi Arabia;producing;1.073401062;0.0;0.0;1.073401062;-0.36124346799999985;Still classified as carbon bomb;False
-Ghawar Haradh;Saudi Arabia;6.966827829;Ghawar Haradh;Saudi Arabia;producing;8.204786018;0.0;0.0;8.204786018;1.2379581890000004;Still classified as carbon bomb;False
-Ghawar Hawiyah;Saudi Arabia;4.649714459;Ghawar Hawiyah;Saudi Arabia;producing;3.24914443262;0.0;0.0;3.24914443262;-1.40057002638;Still classified as carbon bomb;False
-Ghawar Shedgum;Saudi Arabia;5.695002943;Ghawar Shedgum;Saudi Arabia;producing;5.242382268;0.0;0.0;5.242382268;-0.45262067500000036;Still classified as carbon bomb;False
-Ghawar Uthmaniyah;Saudi Arabia;19.22190525;Ghawar Uthmaniyah;Saudi Arabia;producing;10.754391948;0.0;0.0;10.754391948;-8.467513301999999;Still classified as carbon bomb;False
-Goldwyer Shale;Australia;4.468806417;Goldwyer Shale;Australia;long_term_expansion;0.0;0.0;2.8188994679986785;2.8188994679986785;-1.6499069490013212;Still classified as carbon bomb;False
-Gorgon LNG T1-T3;Australia;1.931000175;Gorgon LNG T1-T3;Australia;producing, long_term_expansion;0.930539167759858;0.0;0.8336590329876;1.7641982007474581;-0.16680197425254195;Still classified as carbon bomb;False
-Greater Burgan;Kuwait;8.341919008;Greater Burgan (CR in field);Kuwait;long_term_expansion;0.0;0.0;1.0510804980000001;1.0510804980000001;-7.2908385099999995;Still classified as carbon bomb;False
-Greater Liza (Liza);Guyana;1.002783934;Greater Liza (Liza);;;;;;;;Now classified as simple gasoil project;False
-Greater Turbot (Stabroek);Guyana;1.114423675;Stabroek Future Phases;Guyana;long_term_expansion;0.0;0.0;1.362418102054;1.362418102054;0.247994427054;Still classified as carbon bomb;False
-Gulf Coast Centre Offshore;United States;1.106200913;;;;;;;;;No longer classified as carbon bomb;False
-Gulf Deepwater Offshore;Mexico;2.204840846;Gulf Deepwater Offshore;;;;;;;;Now classified as simple gasoil project;False
-Halfayah;Iraq;1.409043856;;;;;;;;;No longer classified as carbon bomb;False
-Harmaliyah;Saudi Arabia;1.028095523;Harmaliyah;Saudi Arabia;producing, long_term_expansion;0.7892628791740001;0.0;0.292545;1.081807879174;0.05371235617400005;Still classified as carbon bomb;False
-Hassi Messaoud;Algeria;1.215923408;;;;;;;;;No longer classified as carbon bomb;False
-Hassi R'Mel (Domestic);Algeria;2.271542343;Hassi R'Mel (Pipe Export);Algeria;producing;1.6750779752;0.0;0.0;1.6750779752;-0.5964643678000001;Still classified as carbon bomb;False
-Haynesville/Bossier Shale;United States;13.20413118;Haynesville/Bossier Shale;United States;producing, short_term_expansion, long_term_expansion;0.8057635188337401;1.1819543653523734;7.000047408846585;8.987765293032698;-4.216365886967301;Still classified as carbon bomb;False
-Horizon Oil Sands Project;Canada;1.989790706;Horizon Oil Sands Project;Canada;producing, short_term_expansion, long_term_expansion;1.6182568506600001;0.16132392252000002;0.35461134720000004;2.1341921203800003;0.14440141438000031;Still classified as carbon bomb;False
-Irati Shale;Brazil;2.695278585;Irati Shale;Brazil;long_term_expansion;0.0;0.0;2.684220262;2.684220262;-0.01105832299999987;Still classified as carbon bomb;False
-Johan Sverdrup;Norway;1.073871982;Johan Sverdrup;;;;;;;;Now classified as simple gasoil project;False
-Karachaganak;Kazakhstan;1.207734375;Karachaganak;Kazakhstan;producing, short_term_expansion, long_term_expansion;0.7329732733800001;0.03617587595;2.08976640128682e-06;0.7691512390964014;-0.43858313590359865;Now below 1 GtCO2 threshold;False
-Kashagan;Kazakhstan;5.086161261;Kashagan;Kazakhstan;producing, long_term_expansion;2.3127656106;0.0;2.158623867761041;4.471389478361042;-0.6147717826389583;Still classified as carbon bomb;False
-Kearl;Canada;1.901181774;Kearl;Canada;producing;1.4201384974200002;0.0;0.0;1.4201384974200002;-0.4810432765799999;Still classified as carbon bomb;False
-Khafji;Kuwait-Saudi Arabia;1.439897189;;;;;;;;;No longer classified as carbon bomb;False
-Khurais project;Saudi Arabia;7.634938272;Khurais project;Saudi Arabia;producing;6.659561107540001;0.0;0.0;6.659561107540001;-0.9753771644599993;Still classified as carbon bomb;False
-Khursaniyah;Saudi Arabia;2.413255558;Khursaniyah;Saudi Arabia;producing;1.76871813986;0.0;0.0;1.76871813986;-0.6445374181399999;Still classified as carbon bomb;False
-Kish Gas Project;Iran;1.193632598;Kish Gas Project;Iran;short_term_expansion;0.0;0.8811235816520001;0.0;0.8811235816520001;-0.3125090163479999;Now below 1 GtCO2 threshold;False
-Kronprins Christian Offshore;Denmark;2.23244534;;;;;;;;;No longer classified as carbon bomb;False
-Ku-Maloob-Zaap Project;Mexico;1.960224743;Ku-Maloob-Zaap Project;Mexico;producing, long_term_expansion;1.02931322452;0.0;0.0055510865563132275;1.0348643110763134;-0.9253604319236866;Still classified as carbon bomb;False
-Kuznetsk Depression (Kuzbass) CBM;Russia;4.90609548;;;;;;;;;No longer classified as carbon bomb;False
-La Luna Shale;Colombia;1.616788836;La Luna Shale;Colombia;long_term_expansion;0.0;0.0;1.5631802309948855;1.5631802309948855;-0.05360860500511455;Still classified as carbon bomb;False
-La Luna Shale;Venezuela;1.090522015;;;;;;;;;No longer classified as carbon bomb;False
-Leningradskoye (Kara Sea);Russia;1.800619883;;;;;;;;;No longer classified as carbon bomb;False
-Lensky Basin CBM;Russia;2.73771576;;;;;;;;;No longer classified as carbon bomb;False
-Leviathan;Israel;1.060241772;Leviathan;Israel;producing, short_term_expansion, long_term_expansion;0.6499692655999999;0.2964627021;0.00098022508;0.9474121927799999;-0.11282957922000003;Now below 1 GtCO2 threshold;False
-Liard Shale;Canada;1.201818384;;;;;;;;;No longer classified as carbon bomb;False
-Libra;Brazil;1.891731555;;;;;;;;;No longer classified as carbon bomb;False
-Llandovery Shale;Brazil;4.273465065;Llandovery Shale;Brazil;long_term_expansion;0.0;0.0;3.0090071659999995;3.0090071659999995;-1.2644578990000004;Still classified as carbon bomb;False
-Longmaxi Shale;China;5.691701535;Longmaxi Shale;China;long_term_expansion;0.0;0.0;1.1315164500000001;1.1315164500000001;-4.560185085;Still classified as carbon bomb;False
-Longmaxi Shale (Sichuan/Changyu);China;2.20989992;Yaan Slope Onshore Sichuan Province;China;long_term_expansion;0.0;0.0;4.931716150000001;4.931716150000001;2.721816230000001;Still classified as carbon bomb;False
-Lower Zakum;UAE;2.434419542;Lower Zakum;UAE;producing, short_term_expansion, long_term_expansion;1.1465678952;0.15482006208000001;0.28061200080000004;1.58199995808;-0.8524195839200002;Still classified as carbon bomb;False
-Lublin Basin Silurian Shale;Poland;5.647084841;;;;;;;;;No longer classified as carbon bomb;False
-Lula (X-Tupi);Brazil;2.545775174;Tupi (x-Lula);Brazil;producing, long_term_expansion;1.273440376806;0.0;0.25913396724;1.532574344046;-1.013200829954;Still classified as carbon bomb;False
-MZLNG Joint Development (T1-T2);Mozambique;1.310175723;MZLNG Joint Development (T1-T2);;;;;;;;Now classified as simple gasoil project;False
-Majnoon;Iraq;2.468342318;Majnoon;Iraq;producing, short_term_expansion, long_term_expansion;0.49927708368;0.354912048;3.1466175659999998;4.00080669768;1.53246437968;Still classified as carbon bomb;False
-Manifa (redevelop);Saudi Arabia;5.000284718;Manifa (redevelop);Saudi Arabia;producing;4.47525316902;0.0;0.0;4.47525316902;-0.5250315489799995;Still classified as carbon bomb;False
-Mansouri Bangestan;Iran;1.045838888;Mansouri Bangestan;Iran;producing, long_term_expansion;0.432359802;0.0;0.846708486;1.279068288;0.23322939999999992;Still classified as carbon bomb;False
-Marcellus Shale;United States;26.71441286;Marcellus Shale;United States;producing, short_term_expansion, long_term_expansion;3.93545834477374;2.7343118178952275;19.074117012741592;25.74388717541056;-0.9705256845894397;Still classified as carbon bomb;False
-Marjan;Saudi Arabia;1.889926075;Marjan;Saudi Arabia;producing, short_term_expansion;1.0821952240000001;0.8240405959999999;0.0;1.90623582;0.016309745000000042;Still classified as carbon bomb;False
-Marun;Iran;2.408543885;Marun;Iran;producing, short_term_expansion;1.7584444815800002;0.07503336;0.0;1.8334778415800002;-0.5750660434199997;Still classified as carbon bomb;False
-Menilite Shale;Ukraine;1.666673391;Menilite Shale;Ukraine;long_term_expansion;0.0;0.0;1.646285256;1.646285256;-0.02038813499999992;Still classified as carbon bomb;False
-Meramec Shale;United States;2.439577611;Meramec Shale;United States;producing, short_term_expansion, long_term_expansion;0.4195900912954;0.20707461924191595;0.8913908783920008;1.5180555889293168;-0.921522022070683;Still classified as carbon bomb;False
-Mero (Libra NW);Brazil;1.287024055;Mero (Libra NW);Brazil;producing, short_term_expansion;0.6911522429399999;0.3301251534;0.0;1.02127739634;-0.26574665866000013;Still classified as carbon bomb;False
-Montney Play;Canada;13.6884891;Montney Play;Canada;producing, short_term_expansion, long_term_expansion;1.7935948686296297;1.3862596279899388;9.214032144557535;12.393886641177104;-1.2946024588228955;Still classified as carbon bomb;False
-NLNG Base Project;Nigeria;1.033411352;NLNG Base Project;;;;;;;;Now classified as simple gasoil project;False
-Nahr bin Umar;Iraq;1.277643431;Nahr bin Umar;Iraq;producing, long_term_expansion;0.0813455946;0.0;1.170492048;1.2518376426;-0.02580578840000003;Still classified as carbon bomb;False
-North Field;Qatar;11.61275076;North Field;Qatar;long_term_expansion;0.0;0.0;11.558473450400001;11.558473450400001;-0.05427730959999977;Still classified as carbon bomb;False
-North Field C LNG;Qatar;7.768105079;North Field;Qatar;long_term_expansion;0.0;0.0;11.558473450400001;11.558473450400001;3.7903683714000014;Still classified as carbon bomb;False
-North Field E;Qatar;4.594474423;North Field E;Qatar;long_term_expansion;0.0;0.0;4.5750618634;4.5750618634;-0.0194125596000001;Still classified as carbon bomb;False
-North Kara Sea Offshore;Russia;1.176960094;;;;;;;;;No longer classified as carbon bomb;False
-North Slope Onshore;United States;2.035951159;North Slope Onshore;United States;long_term_expansion;0.0;0.0;0.9086920102889999;0.9086920102889999;-1.1272591487110002;Now below 1 GtCO2 threshold;False
-Oil shale China;China;1.385461449;;;;;;;;;No longer classified as carbon bomb;False
-Orinoco Joint Ventures;Venezuela;6.703396162;Orinoco Joint Ventures;Venezuela;producing, short_term_expansion, long_term_expansion;1.2282942983649647;1.056534246;0.5680587366722647;2.8528872810372294;-3.8505088809627703;Still classified as carbon bomb;False
-PRB Tight Oil;United States;2.770946453;PRB Tight Oil;United States;producing, short_term_expansion, long_term_expansion;0.18139320786508;0.23495827920562407;1.7571302930605883;2.1734817801312922;-0.5974646728687079;Still classified as carbon bomb;False
-Parnaiba Onshore;Brazil;1.998572969;;;;;;;;;No longer classified as carbon bomb;False
-Pars Southwest;Iran;1.1092643;Pars Southwest;Iran;long_term_expansion;0.0;0.0;1.102885212;1.102885212;-0.006379088000000088;Still classified as carbon bomb;False
-Pazanan;Iran;1.358409167;Pazanan;;;;;;;;Now classified as simple gasoil project;False
-Permian Conventional_Texas;United States;2.061829878;Permian Conventional_Texas;United States;producing;1.2724801552967262;0.0;0.0;1.2724801552967262;-0.789349722703274;Still classified as carbon bomb;False
-Permian Delaware Tight;United States;27.80443109;Permian Delaware Tight;United States;producing, short_term_expansion, long_term_expansion;4.573625791238309;4.496890133486525;20.640624883939694;29.711140808664528;1.9067097186645263;Still classified as carbon bomb;False
-Permian Midland Tight;United States;16.62881821;Permian Midland Tight;United States;producing, short_term_expansion, long_term_expansion;5.104154305280001;3.7971993038339997;8.412872114419999;17.314227400420002;0.6854091904200033;Still classified as carbon bomb;False
-Project Kuwait;Kuwait;4.409493298;Project Kuwait;Kuwait;producing;1.192358891394;0.0;0.0;1.192358891394;-3.217134406606;Still classified as carbon bomb;False
-QatarGas 1 LNG T1-T3;Qatar;1.283272558;QatarGas 1 LNG T1-T3;Qatar;producing;1.0830156955999999;0.0;0.0;1.0830156955999999;-0.20025686240000007;Still classified as carbon bomb;False
-QatarGas LNG T12-T13 (NFE-South);Qatar;1.785210581;QatarGas LNG T12-T13 (NFE-South);Qatar;short_term_expansion;0.0;1.7470055871099643;0.0;1.7470055871099643;-0.03820499389003573;Still classified as carbon bomb;False
-QatarGas LNG T8-T11 (NFE-East);Qatar;3.39497532;QatarGas LNG T8-T11 (NFE-East);Qatar;short_term_expansion;0.0;3.4045707533051215;0.0;3.4045707533051215;0.009595433305121581;Still classified as carbon bomb;False
-Qatargas 2 LNG T4-T5;Qatar;1.828035431;Qatargas 2 LNG T4-T5;Qatar;producing;1.5233576885850675;0.0;0.0;1.5233576885850675;-0.3046777424149325;Still classified as carbon bomb;False
-Qatif project;Saudi Arabia;5.066814884;Qatif project;Saudi Arabia;producing;4.6952629316;0.0;0.0;4.6952629316;-0.37155195239999994;Still classified as carbon bomb;False
-Qurna West;Iraq;3.982828932;Qurna West;Iraq;producing, long_term_expansion;2.5369523675999996;0.0;3.803566901400001;6.3405192690000005;2.3576903370000006;Still classified as carbon bomb;False
-Qurna West-2;Iraq;1.598723281;Qurna West-2;Iraq;producing, long_term_expansion;1.2639536154000002;0.0;1.132418646;2.3963722614000003;0.7976489804000002;Still classified as carbon bomb;False
-Rasgas 2 LNG T3-T5;Qatar;1.509806372;Rasgas 2 LNG T3-T5;Qatar;producing;1.2709410660649794;0.0;0.0;1.2709410660649794;-0.23886530593502053;Still classified as carbon bomb;False
-Rasgas 3 LNG T6-T7;Qatar;1.490692041;Rasgas 3 LNG T6-T7;Qatar;producing;1.187646959200071;0.0;0.0;1.187646959200071;-0.30304508179992906;Still classified as carbon bomb;False
-Ratawi;Iraq;1.065138744;Ratawi;;;;;;;;Now classified as simple gasoil project;False
-Romashkino;Russia;1.338604935;Romashkino;Russia;producing;1.5679088194000002;0.0;0.0;1.5679088194000002;0.22930388440000016;Still classified as carbon bomb;False
-Rumaila North & South;Iraq;7.761609425;Rumaila North & South;Iraq;producing;6.7923289584;0.0;0.0;6.7923289584;-0.9692804665999999;Still classified as carbon bomb;False
-Rusanovskoye (Kara Sea);Russia;1.316123949;;;;;;;;;No longer classified as carbon bomb;False
-Safaniya;Saudi Arabia;11.92614355;Safaniya;Saudi Arabia;producing, long_term_expansion;11.6452531062;0.0;0.9786977600000001;12.6239508662;0.6978073161999987;Still classified as carbon bomb;False
-Safaniya YTF Concession;Saudi Arabia;1.842871867;Safaniya;Saudi Arabia;producing, long_term_expansion;11.6452531062;0.0;0.9786977600000001;12.6239508662;10.7810789992;Still classified as carbon bomb;True
-Samotlorneftegaz (TNK-BP);Russia;1.867807241;Samotlorneftegaz (TNK-BP);Russia;producing, long_term_expansion;1.9039908188253998;0.0;0.00020205176000000002;1.9041928705853999;0.036385629585399926;Still classified as carbon bomb;False
-Santos Offshore;Brazil;4.339841028;Santos Offshore;Brazil;long_term_expansion;0.0;0.0;1.321259761020001;1.321259761020001;-3.018581266979999;Still classified as carbon bomb;False
-Sembar Shale;Pakistan;2.840236853;Sembar Shale;Pakistan;long_term_expansion;0.0;0.0;2.4614563900000004;2.4614563900000004;-0.37878046299999957;Still classified as carbon bomb;False
-SeverEnergia Project;Russia;1.099534929;SeverEnergia Project;Russia;producing, short_term_expansion, long_term_expansion;0.970661908786;0.06643681016;0.00017284996;1.037271568906;-0.06226336009400013;Still classified as carbon bomb;False
-Shaybah;Saudi Arabia;4.268589672;Shaybah;Saudi Arabia;producing;3.696593824;0.0;0.0;3.696593824;-0.5719958480000003;Still classified as carbon bomb;False
-Shengli;China;1.50578136;Shengli;China;producing, short_term_expansion, long_term_expansion;1.3023464313630801;0.0127453878;0.10676483587651474;1.4218566550395948;-0.08392470496040527;Still classified as carbon bomb;False
-Shtokman;Russia;6.135874132;;;;;;;;;No longer classified as carbon bomb;False
-Sirte Shale;Libya;1.703281911;Sirte Shale;Libya;long_term_expansion;0.0;0.0;1.7024779259999998;1.7024779259999998;-0.0008039850000001181;Still classified as carbon bomb;False
-South Pars (Phases 2-3) dry gas;Iran;1.016274224;South Pars (Phases 2-3);Iran;producing;0.95705654;0.0;0.0;0.95705654;-0.05921768400000005;Now below 1 GtCO2 threshold;False
-South Pars (Phases 20-21);Iran;1.017173226;South Pars (Phases 20-21);Iran;producing;0.8424069858000001;0.0;0.0;0.8424069858000001;-0.17476624019999987;Now below 1 GtCO2 threshold;False
-South Pars (Phases 22-24);Iran;1.04273081;South Pars (Phases 23-28);Iran;long_term_expansion;0.0;0.0;5.330933432;5.330933432;4.288202622;Still classified as carbon bomb;False
-South Pars (Phases 4-5) dry gas;Iran;1.100975522;South Pars (Phases 4-5);Iran;producing;1.0265859442599998;0.0;0.0;1.0265859442599998;-0.0743895777400001;Still classified as carbon bomb;False
-South Pars (Phases 9-10) dry gas;Iran;1.265006303;South Pars (Phases 9-10);Iran;producing;0.969543316;0.0;0.0;0.969543316;-0.29546298700000007;Now below 1 GtCO2 threshold;False
-Southeast Uplift Onshore Heilongjiang Province;China;1.750536451;Southeast Uplift Onshore Heilongjiang Province;;;;;;;;Now classified as simple gasoil project;False
-Spirit River (Notikewin, Falher, Wilrich);Canada;2.976203115;Spirit River (Notikewin, Falher, Wilrich);Canada;producing, short_term_expansion, long_term_expansion;0.3158945616125999;0.19066168870349995;1.4635568026000987;1.9701130529161985;-1.0060900620838016;Still classified as carbon bomb;False
-Sudair Shale;Saudi Arabia;1.032893123;;;;;;;;;No longer classified as carbon bomb;False
-Syncrude Mildred Lake/Aurora;Canada;1.184050044;Syncrude Mildred Lake/Aurora;;;;;;;;Now classified as simple gasoil project;False
-Tambey Zone (Yamal Megaproject);Russia;2.474909236;Southern Zone (Yamal Megaproject);Russia;long_term_expansion;0.0;0.0;1.081442890746;1.081442890746;-1.3934663452539997;Still classified as carbon bomb;False
-Tanf Shale;Syria;1.363655326;Tanf Shale;Syria;long_term_expansion;0.0;0.0;0.9781083960000001;0.9781083960000001;-0.38554692999999984;Now below 1 GtCO2 threshold;False
-Tannezuft Shale;Algeria;2.347866837;Tannezuft Shale;Algeria;long_term_expansion;0.0;0.0;2.162121526;2.162121526;-0.18574531100000025;Still classified as carbon bomb;False
-Tanzanian Coastal Offshore;Tanzania;1.031198167;Tanzania LNG (Block 1/4 and 2);Tanzania;long_term_expansion;0.0;0.0;1.1379534049463775;1.1379534049463775;0.10675523794637742;Still classified as carbon bomb;False
-Tarim (CNPC);China;1.959883851;Tarim;China;producing, short_term_expansion, long_term_expansion;2.1741013709253996;0.04474785;0.15972188295173745;2.3785711038771367;0.4186872528771366;Still classified as carbon bomb;False
-Taymyr Basin CBM;Russia;1.233321785;;;;;;;;;No longer classified as carbon bomb;False
-Tengiz;Kazakhstan;3.357866129;Tengiz;Kazakhstan;producing, long_term_expansion;1.9124702873800001;0.0;6.47504e-05;1.9125350377800001;-1.44533109122;Still classified as carbon bomb;False
-Timan - Pechora Basin Offshore;Russia;2.48143889;Timan - Pechora Basin Offshore;Russia;long_term_expansion;0.0;0.0;1.223160402;1.223160402;-1.2582784880000002;Still classified as carbon bomb;False
-Timan - Pechora Basin Onshore;Russia;2.351649692;Timan - Pechora Basin Onshore;Russia;long_term_expansion;0.0;0.0;1.1473045380000002;1.1473045380000002;-1.2043451539999999;Still classified as carbon bomb;False
-Troll;Norway;1.77210443;Troll;Norway;producing, short_term_expansion, long_term_expansion;1.1387670185199998;0.146034752065;0.0404703402705679;1.3252721108555678;-0.4468323191444321;Still classified as carbon bomb;False
-Tunguska Basin CBM;Russia;8.843821834;;;;;;;;;No longer classified as carbon bomb;False
-Umm Shaif/Nasr;UAE;1.939252733;Umm Shaif/Nasr;UAE;producing, short_term_expansion, long_term_expansion;1.3498317090199998;0.27908385210000003;0.7095070836;2.33842264472;0.39916991172000005;Still classified as carbon bomb;False
-Upper Zakum;UAE;6.44038252;Upper Zakum;UAE;producing, short_term_expansion, long_term_expansion;4.219918718400001;0.18616297878;0.344589642;4.75067133918;-1.6897111808199998;Still classified as carbon bomb;False
-Urengoyskoye;Russia;5.199312832;Urengoyskoye;Russia;producing, long_term_expansion;0.64398234;0.0;2.964;3.60798234;-1.5913304920000004;Still classified as carbon bomb;False
-Utica Shale;United States;7.713186851;Utica Shale;United States;producing, short_term_expansion, long_term_expansion;0.7269809462073996;0.6181018428125998;4.964543468917507;6.309626257937507;-1.403560593062493;Still classified as carbon bomb;False
-Vaca Muerta Shale;Argentina;5.177782001;Vaca Muerta Shale;Argentina;producing, short_term_expansion, long_term_expansion;0.618029225912814;0.9048501520245402;10.592622727297606;12.11550210523496;6.93772010423496;Still classified as carbon bomb;False
-Velkerri Shale;Australia;1.058031183;Velkerri Shale;Australia;long_term_expansion;0.0;0.0;1.0151680794200002;1.0151680794200002;-0.042863103579999784;Still classified as carbon bomb;False
-Volga - Urals Onshore;Russia;1.36763708;Volga - Urals Onshore;Russia;long_term_expansion;0.0;0.0;1.4398969500000003;1.4398969500000003;0.07225987000000034;Still classified as carbon bomb;False
-West Florida Offshore;United States;1.069261489;;;;;;;;;No longer classified as carbon bomb;False
-West Siberia Offshore;Russia;2.856403668;West Siberia Offshore;Russia;long_term_expansion;0.0;0.0;1.282173762;1.282173762;-1.574229906;Still classified as carbon bomb;False
-West Siberia Onshore;Russia;1.1645132;Lukoil-West Siberia;Russia;producing, short_term_expansion, long_term_expansion;1.4703842097899;0.0017166189546;0.479361524996346;1.9514623537408462;0.7869491537408462;Still classified as carbon bomb;True
-Western Gulf Province_Texas;United States;5.061653121;Western Gulf Province_Texas;United States;producing, short_term_expansion, long_term_expansion;1.3436175626026539;0.0163276449;0.0751093512;1.435054558702654;-3.626598562297346;Still classified as carbon bomb;False
-Woodford Shale;United States;3.377142985;Woodford Shale;United States;producing, short_term_expansion, long_term_expansion;0.5775843165118599;0.29200924567790604;1.2340444946367113;2.103638056826477;-1.273504928173523;Still classified as carbon bomb;False
-Xinjiang (CNPC);China;1.356420308;Xinjiang;China;producing, long_term_expansion;1.8208491736900896;0.0;0.06527864185999996;1.8861278155500896;0.5297075075500897;Still classified as carbon bomb;False
-Yashlar Vostochnyy (East);Turkmenistan;2.129145331;Yashlar Vostochnyy (East);Turkmenistan;long_term_expansion;0.0;0.0;2.1157599;2.1157599;-0.013385431000000114;Still classified as carbon bomb;False
-Yolotan (Iolotan) South;Turkmenistan;9.548227901;Yolotan (Iolotan) South;Turkmenistan;producing, short_term_expansion, long_term_expansion;1.1737041;1.53899715;6.07049715;8.7831984;-0.7650295010000008;Still classified as carbon bomb;False
-Yucatan Platform Offshore;Mexico;1.025798315;;;;;;;;;No longer classified as carbon bomb;False
-Yuganskneftegaz;Russia;4.345193315;Yuganskneftegaz;Russia;producing, long_term_expansion;3.702021692685401;0.0;0.0044922361200000005;3.7065139288054008;-0.6386793861945996;Still classified as carbon bomb;False
-Zubair;Iraq;1.679304399;Zubair;Iraq;producing;1.6761374640000002;0.0;0.0;1.6761374640000002;-0.003166934999999871;Still classified as carbon bomb;False
-Zuluf;Saudi Arabia;2.449978206;Zuluf;Saudi Arabia;producing;1.996066351186;0.0;0.0;1.996066351186;-0.453911854814;Still classified as carbon bomb;False
-Zuluf (CR in field);Saudi Arabia;3.535052229;Zuluf (CR in field);Saudi Arabia;long_term_expansion;0.0;0.0;3.5310284334;3.5310284334;-0.004023795600000213;Still classified as carbon bomb;False
-Zuluf (expansion);Saudi Arabia;1.833213347;Zuluf (expansion);Saudi Arabia;short_term_expansion, long_term_expansion;0.0;1.708514386;0.621921072;2.330435458;0.49722211100000013;Still classified as carbon bomb;False
-;;;ADNOC Sole Risk;UAE;producing;3.1507968431999998;0.0;0.0;3.1507968431999998;;Newly identified carbon bomb;False
-;;;Alaska LNG;United States;long_term_expansion;0.0;0.0;0.9262517100000001;0.9262517100000001;;Newly identified carbon bomb;False
-;;;Area 1 LNG (T3-T4);Mozambique;long_term_expansion;0.0;0.0;0.7910794830949325;0.7910794830949325;;Newly identified carbon bomb;False
-;;;Cambay Shale;India;long_term_expansion;0.0;0.0;1.39006537564;1.39006537564;;Newly identified carbon bomb;False
-;;;Cardium Play;Canada;producing, short_term_expansion, long_term_expansion;0.1334117583588;0.11492876783566597;0.7461156741915225;0.9944562003859885;;Newly identified carbon bomb;False
-;;;Fadhili Gas Project;Saudi Arabia;producing, short_term_expansion;0.5609971697599999;0.6005645049999999;0.0;1.1615616747599997;;Newly identified carbon bomb;False
-;;;Forouzan;Iran;producing, long_term_expansion;0.13267227299999998;0.0;1.905642484;2.0383147569999998;;Newly identified carbon bomb;False
-;;;Gazprom Dobycha Noyabrsk;Russia;producing, short_term_expansion, long_term_expansion;0.9967179099599999;0.00457963342;0.030453863060000003;1.0317514064399997;;Newly identified carbon bomb;False
-;;;Gazpromneft-Khantos;Russia;producing, long_term_expansion;0.9566881056000002;0.0;0.003705576844718;0.9603936824447181;;Newly identified carbon bomb;False
-;;;Gazpromneft-NNG;Russia;producing, short_term_expansion, long_term_expansion;1.3440601441487376;0.00156020454;0.0029704383440868594;1.3485907870328246;;Newly identified carbon bomb;False
-;;;Gazpromneft-Zapolyarye;Russia;producing, short_term_expansion, long_term_expansion;0.34129629625999997;0.1420085176;1.192899339311017;1.676204153171017;;Newly identified carbon bomb;False
-;;;Golshan;Iran;long_term_expansion;0.0;0.0;0.960856262;0.960856262;;Newly identified carbon bomb;False
-;;;Greater Burgan;Kuwait;producing;7.36392885452;0.0;0.0;7.36392885452;;Newly identified carbon bomb;False
-;;;Greater Green River Tight Gas;United States;producing;0.9386778066901199;0.0;0.0;0.9386778066901199;;Newly identified carbon bomb;False
-;;;Gumai Formation;Indonesia;long_term_expansion;0.0;0.0;0.9943889160000001;0.9943889160000001;;Newly identified carbon bomb;False
-;;;Hassi R'Mel (Domestic);Algeria;producing;1.6401771583999998;0.0;0.0;1.6401771583999998;;Newly identified carbon bomb;False
-;;;Iara;Brazil;producing, short_term_expansion, long_term_expansion;0.34046547573999997;0.36665382477;0.394745682058211;1.101864982568211;;Newly identified carbon bomb;False
-;;;Jafurah shale gas (Al Hasa);Saudi Arabia;short_term_expansion, long_term_expansion;0.0;0.455939106;1.27339106026;1.72933016626;;Newly identified carbon bomb;False
-;;;Kirkuk;Iraq;producing, long_term_expansion;0.329909202;0.0;0.952306668;1.28221587;;Newly identified carbon bomb;False
-;;;Longmaxi Shale (Xi'nan-CNPC);China;producing, short_term_expansion, long_term_expansion;0.074431455;0.13756277114999999;0.66862995;0.88062417615;;Newly identified carbon bomb;False
-;;;Maykop Shale;Azerbaijan;long_term_expansion;0.0;0.0;0.9336816960000002;0.9336816960000002;;Newly identified carbon bomb;False
-;;;North Pars LNG;Iran;long_term_expansion;0.0;0.0;1.354563752;1.354563752;;Newly identified carbon bomb;False
-;;;North West Shelf LNG;Australia;producing, short_term_expansion, long_term_expansion;0.17880230673377293;0.024127814220000002;0.6295943704199857;0.8325244913737586;;Newly identified carbon bomb;False
-;;;Ordos Basin CBM;China;long_term_expansion;0.0;0.0;0.93993;0.93993;;Newly identified carbon bomb;False
-;;;Ordovician Shale;China;long_term_expansion;0.0;0.0;0.86555816;0.86555816;;Newly identified carbon bomb;False
-;;;Oriente PDVSA;Venezuela;producing, long_term_expansion;0.8252534401495525;0.0;0.0003469557200000001;0.8256003958695525;;Newly identified carbon bomb;False
-;;;QatarGas LNG T14-T15 (NFE-West);Qatar;short_term_expansion;0.0;1.74732538;0.0;1.74732538;;Newly identified carbon bomb;False
-;;;Qatargas 3 LNG T6;Qatar;producing;0.9357260570700356;0.0;0.0;0.9357260570700356;;Newly identified carbon bomb;False
-;;;Qatargas 4 LNG T7;Qatar;producing;0.7352588999999999;0.0;0.0;0.7352588999999999;;Newly identified carbon bomb;False
-;;;Rospan (TNK-BP);Russia;producing, long_term_expansion;1.0791040130199998;0.0;0.00115353284;1.08025754586;;Newly identified carbon bomb;False
-;;;Ruwais LNG T1-T2;UAE;short_term_expansion;0.0;1.2255702604;0.0;1.2255702604;;Newly identified carbon bomb;False
-;;;Sakhalin-3;Russia;producing, long_term_expansion;0.21303102200000001;0.0;0.8305564406025999;1.0435874626025998;;Newly identified carbon bomb;False
-;;;Sattapadi Formation;India;long_term_expansion;0.0;0.0;0.9842038719999999;0.9842038719999999;;Newly identified carbon bomb;False
-;;;South East Bab;UAE;producing, short_term_expansion;0.5671921323600001;0.39948579990000005;0.0;0.9666779322600001;;Newly identified carbon bomb;False
-;;;South Pars (Phase 13) (ex-Persian LNG);Iran;producing;0.7739250125999999;0.0;0.0;0.7739250125999999;;Newly identified carbon bomb;False
-;;;South Pars (Phase 14) (ex-Persian LNG);Iran;producing;0.9021583423999999;0.0;0.0;0.9021583423999999;;Newly identified carbon bomb;False
-;;;South Pars (Phase 19);Iran;producing;0.921202286;0.0;0.0;0.921202286;;Newly identified carbon bomb;False
-;;;South Pars (Phases 15-16);Iran;producing;0.846383492;0.0;0.0;0.846383492;;Newly identified carbon bomb;False
-;;;South Pars (Phases 17-18);Iran;producing;0.79699713474;0.0;0.0;0.79699713474;;Newly identified carbon bomb;False
-;;;South Pars (Phases 22-24);Iran;producing;1.0051292995999999;0.0;0.0;1.0051292995999999;;Newly identified carbon bomb;False
-;;;Tarim Basin Onshore;China;long_term_expansion;0.0;0.0;1.068083076;1.068083076;;Newly identified carbon bomb;False
-;;;Uinta-Piceance Tight Gas;United States;producing;0.9549335491676019;0.0;0.0;0.9549335491676019;;Newly identified carbon bomb;False
-;;;Uinta-Piceance Tight Oil;United States;producing, short_term_expansion, long_term_expansion;0.15812125532374;0.16944193668000002;0.7020900590507382;1.0296532510544782;;Newly identified carbon bomb;False
-;;;Viking Graben  Offshore;Norway;long_term_expansion;0.0;0.0;0.9745781315459996;0.9745781315459996;;Newly identified carbon bomb;False
-;;;Vostok Oil Project;Russia;producing, short_term_expansion, long_term_expansion;1.425220775586;0.7103314969200001;0.7120989080869023;2.8476511805929023;;Newly identified carbon bomb;False
-;;;Waha;Libya;producing, long_term_expansion;0.8566418250505401;0.0;0.07107867296023003;0.9277204980107702;;Newly identified carbon bomb;False
-;;;Wasit;Saudi Arabia;producing;0.81843428012;0.0;0.0;0.81843428012;;Newly identified carbon bomb;False
-;;;Western Haynesville/Bossier Shale;United States;producing, short_term_expansion, long_term_expansion;0.019297349999999998;0.1108878;1.6234654499999999;1.7536505999999998;;Newly identified carbon bomb;False
-;;;Xi'nan-CNPC;China;producing, short_term_expansion, long_term_expansion;1.5265581271591497;0.056123226;0.07213759517777425;1.654818948336924;;Newly identified carbon bomb;False
-;;;Yanchang;China;producing, short_term_expansion, long_term_expansion;0.8652807955745999;0.04976100000000001;0.0051090817635459996;0.9201508773381459;;Newly identified carbon bomb;False
-;;;Zagros Foldbelt Onshore;Iran;long_term_expansion;0.0;0.0;1.3632030267954003;1.3632030267954003;;Newly identified carbon bomb;False
-;;;Zagros Foldbelt Onshore;Iraq;long_term_expansion;0.0;0.0;1.04686847685;1.04686847685;;Newly identified carbon bomb;False
+project_name_v1;country_v1;project_status_v1;total_emissions_v1;project_name_v2;country_v2;project_status_v2;producing_emissions_v2;short_term_emissions_v2;long_term_emissions_v2;total_emissions_v2;total_emissions_difference;new_carbon_bombs_status;has_started_since_v1
+ACG (Azeri-Chirag-Guneshli Deep Water);Azerbaijan;operating;1.660265695;ACG (Azeri-Chirag-Guneshli Deep Water);Azerbaijan;producing, short_term_expansion;0.9844491928199999;0.03961482900000001;0.0;1.02406402182;-0.6362016731800002;Still classified as carbon bomb;False
+Abqaiq;Saudi Arabia;operating;1.59282777;Abqaiq;Saudi Arabia;producing;2.7430574269999997;0.0;0.0;2.7430574269999997;1.1502296569999997;Still classified as carbon bomb;False
+Agha Jari;Iran;operating;1.563110231;Agha Jari;Iran;producing;2.00927765306;0.0;0.0;2.00927765306;0.4461674220599998;Still classified as carbon bomb;False
+Ahwaz Asmari;Iran;operating;2.238284406;Ahwaz (Ahwaz Asmari);Iran;producing, short_term_expansion, long_term_expansion;1.52745697492;0.050668793999999996;0.030740274;1.60886604292;-0.6294183630800001;Still classified as carbon bomb;False
+Ahwaz Bangestan;Iran;operating;1.433911709;Ahwaz (Bangestan);Iran;producing, long_term_expansion;1.386105674766;0.0;0.252433854;1.638539528766;0.20462781976600009;Still classified as carbon bomb;False
+Al Khaleej Gas project;Qatar;operating;1.135307349;Al Khaleej Gas project;Qatar;producing;0.9857221601999999;0.0;0.0;0.9857221601999999;-0.14958518880000016;Now below 1 GtCO2 threshold;False
+Anadarko Shelf_Oklahoma;United States;operating;1.817826072;;;;;;;;;No longer classified as carbon bomb;False
+Arctic LNG 2 T1-3;Russia;not started;1.475579089;;;;;;;;;No longer classified as carbon bomb;False
+Area 1 LNG (T1&T2);Mozambique;not started;1.006654597;;;;;;;;;No longer classified as carbon bomb;False
+Area-1 Future Phases;Mozambique;not started;1.022724356;Area-1 Future Phases;Mozambique;long_term_expansion;0.0;0.0;0.9980630858558891;0.9980630858558891;-0.024661270144110792;Now below 1 GtCO2 threshold;False
+Asab;UAE;operating;1.373231334;Asab;UAE;producing, long_term_expansion;1.19590217138;0.0;0.5318992908;1.72780146218;0.35457012818;Still classified as carbon bomb;False
+Athabasca Oil Sands Project;Canada;operating;1.355853264;Athabasca Oil Sands Project;Canada;producing;1.0757329992;0.0;-2.1643067736e-08;1.0757329775569322;-0.28012028644306786;Still classified as carbon bomb;False
+Austin Chalk Tight;United States;operating;1.392828065;Austin Chalk Horizontal;United States;producing, short_term_expansion, long_term_expansion;0.27031016614625;0.3210214461818879;1.8492956463717536;2.4406272586998914;1.0477991936998914;Still classified as carbon bomb;False
+Azadegan;Iran;operating;2.278016459;Azadegan;;;;;;;;Now classified as simple gasoil project;False
+Bab;UAE;operating;4.197033055;Bab;UAE;producing, short_term_expansion, long_term_expansion;2.4680016636600004;0.20587373892;0.619482654;3.2933580565800002;-0.9036749984200001;Still classified as carbon bomb;False
+Bab (Gasco);UAE;operating;1.674389775;Bab;UAE;producing, short_term_expansion, long_term_expansion;2.4680016636600004;0.20587373892;0.619482654;3.2933580565800002;1.6189682815800002;Still classified as carbon bomb;False
+Baghdad East;Iraq;operating;2.742460925;Baghdad East;Iraq;producing, long_term_expansion;0.0334625382;0.0;2.5774739280000003;2.6109364662;-0.13152445879999997;Still classified as carbon bomb;False
+Bakken Shale;United States;operating;5.948592838;Bakken Shale;United States;producing, short_term_expansion, long_term_expansion;1.2372028642180648;0.8877124342667712;3.405134597162826;5.530049895647663;-0.418542942352337;Still classified as carbon bomb;False
+Baltimore Canyon Offshore;United States;not started;1.648511699;;;;;;;;;No longer classified as carbon bomb;False
+Barail Shale;India;not started;2.141583711;Barail Shale;;;;;;;;Now classified as simple gasoil project;False
+Barnett Shale;United States;operating;1.360879964;Barnett Shale;United States;producing, short_term_expansion, long_term_expansion;0.3880433494388281;0.07131582556000002;0.6615395181361117;1.1208986931349398;-0.23998127086506016;Still classified as carbon bomb;False
+Barzan;Qatar;not started;3.094095108;Barzan;Qatar;producing, long_term_expansion;0.65540987534;0.0;2.35106391126;3.0064737866;-0.0876213213999999;Still classified as carbon bomb;True
+Basrah Gas project;Iraq;operating;1.041154291;Basrah Gas project;Iraq;producing;0.8655773244;0.0;0.0;0.8655773244;-0.1755769666;Now below 1 GtCO2 threshold;False
+Beaufort Sea Offshore;United States;not started;1.254810599;;;;;;;;;No longer classified as carbon bomb;False
+Berri;Saudi Arabia;operating;3.557107777;Berri;Saudi Arabia;producing, short_term_expansion;2.367360224;1.0523577122599999;0.0;3.4197179362599996;-0.1373898407400005;Still classified as carbon bomb;False
+Bovanenkovo Zone (Yamal Megaproject);Russia;operating;11.15863625;Bovanenkovo Zone (Yamal Megaproject);Russia;producing, short_term_expansion, long_term_expansion;0.8468041247400001;1.268817396;4.36118509978;6.47680662052;-4.681829629480001;Still classified as carbon bomb;False
+Bowland Shale;United Kingdom;not started;1.476082594;Bowland Shale;United Kingdom;long_term_expansion;0.0;0.0;0.8370495778500001;0.8370495778500001;-0.6390330161499999;Now below 1 GtCO2 threshold;False
+Bu Hasa;UAE;operating;4.915778525;Bu Hasa;UAE;producing, short_term_expansion, long_term_expansion;2.2646203952746;0.22792152582;2.127596454;4.6201383750946;-0.29564014990540066;Still classified as carbon bomb;False
+Buzios (x-Franco);Brazil;operating;3.638233141;Buzios (x-Franco);Brazil;producing, short_term_expansion, long_term_expansion;1.1071616073500001;1.8410865738700002;1.183605156e-09;2.9482481824036055;-0.6899849585963946;Still classified as carbon bomb;False
+Cambrian/Silurian Marine Shale;China;not started;2.367530441;Cambrian/Silurian Marine Shale;China;long_term_expansion;0.0;0.0;0.9648642200000002;0.9648642200000002;-1.4026662209999998;Now below 1 GtCO2 threshold;False
+Campos Offshore;Brazil;not started;1.560951299;;;;;;;;;No longer classified as carbon bomb;False
+Candeias Shale;Brazil;not started;1.641797865;Candeias Shale;Brazil;long_term_expansion;0.0;0.0;1.044726896;1.044726896;-0.597070969;Still classified as carbon bomb;False
+Carboniferous Shale;Kazakhstan;not started;1.287218515;Carboniferous Shale;Kazakhstan;long_term_expansion;0.0;0.0;1.286544838;1.286544838;-0.0006736769999999837;Still classified as carbon bomb;False
+Central Arabian Offshore;Iran;not started;2.122142874;Central Arabian Offshore;Iran;long_term_expansion;0.0;0.0;1.226447979246;1.226447979246;-0.8956948947540002;Still classified as carbon bomb;False
+Central Arabian Offshore;Saudi Arabia;not started;6.860051661;Central Arabian Offshore;Saudi Arabia;long_term_expansion;0.0;0.0;2.718036054;2.718036054;-4.142015606999999;Still classified as carbon bomb;False
+Central Arabian Offshore;Bahrain;not started;1.411444785;;;;;;;;;No longer classified as carbon bomb;False
+Central Arabian Onshore;Kuwait;not started;3.597522951;Central Arabian Onshore;Kuwait;long_term_expansion;0.0;0.0;1.32484179;1.32484179;-2.2726811610000004;Still classified as carbon bomb;False
+Central Arabian Onshore;Saudi Arabia;not started;4.359973713;Central Arabian Onshore;Saudi Arabia;long_term_expansion;0.0;0.0;1.7558547480000004;1.7558547480000004;-2.604118964999999;Still classified as carbon bomb;False
+Central Arabian Onshore;Iraq;not started;2.607423632;;;;;;;;;No longer classified as carbon bomb;False
+Central Arabian Onshore;Qatar;not started;2.217231619;;;;;;;;;No longer classified as carbon bomb;False
+Central Uplift Onshore Xinjiang Uygur Autonomous Region;China;not started;1.04432647;;;;;;;;;No longer classified as carbon bomb;False
+Changqing;China;operating;4.939920283;Changqing;China;producing, long_term_expansion;3.5636765175436;0.0;0.37808283137430015;3.9417593489179;-0.9981609340821;Still classified as carbon bomb;False
+Christina Lake;Canada;operating;1.232128944;Christina Lake;Canada;producing;1.1760227087400001;0.0;0.0;1.1760227087400001;-0.056106235259999915;Still classified as carbon bomb;False
+Chukchi Sea Offshore;United States;not started;2.539277487;;;;;;;;;No longer classified as carbon bomb;False
+Collingham Shale;South Africa;not started;1.849888206;Collingham Shale;South Africa;long_term_expansion;0.0;0.0;1.85029669;1.85029669;0.00040848400000004226;Still classified as carbon bomb;False
+DJ Basin Tight Oil;United States;operating;5.852116216;DJ Basin Tight Oil;United States;producing, short_term_expansion, long_term_expansion;0.7604118523968598;0.5881906302047741;2.776562484620841;4.125164967222474;-1.7269512487775254;Still classified as carbon bomb;False
+Daqing;China;operating;2.601815792;Daqing;China;producing, short_term_expansion, long_term_expansion;2.4767572177433994;0.0026100061;0.09071316462285002;2.5700803884662493;-0.031735403533750706;Still classified as carbon bomb;False
+Dolphin;Qatar;operating;1.550235876;;;;;;;;;No longer classified as carbon bomb;False
+Dovletabad-Donmez;Turkmenistan;operating;1.578094288;Dovletabad-Donmez;Turkmenistan;producing;0.9325531916800001;0.0;0.0;0.9325531916800001;-0.6455410963199999;Now below 1 GtCO2 threshold;False
+Duvernay;Canada;operating;1.871369296;Duvernay;Canada;producing, short_term_expansion, long_term_expansion;0.1519017755753;0.20221696968705402;1.43794001578572;1.792058761048074;-0.07931053495192586;Still classified as carbon bomb;False
+Eagle Ford Shale;Mexico;not started;5.0680294;Eagle Ford Shale;Mexico;long_term_expansion;0.0;0.0;1.8054022099999998;1.8054022099999998;-3.262627190000001;Still classified as carbon bomb;False
+Eagle Ford Shale;United States;operating;5.924247947;Eagle Ford Shale;United States;producing, short_term_expansion, long_term_expansion;1.17047438417468;0.9400234490483015;5.7875904343238345;7.898088267546816;1.9738403205468167;Still classified as carbon bomb;False
+East Natuna (x-Natuna D-Alpha);Indonesia;not started;2.158541118;;;;;;;;;No longer classified as carbon bomb;False
+Eastern Gas Program;Russia;operating;4.274058366;Eastern Gas Program;Russia;producing, long_term_expansion;2.180723269294;0.0;1.7836971877599999;3.9644204570539996;-0.30963790894600063;Still classified as carbon bomb;False
+El Sharara;Libya;operating;1.00784607;;;;;;;;;No longer classified as carbon bomb;False
+Gachsaran;Iran;operating;1.739296877;Gachsaran;Iran;producing, short_term_expansion;1.4391405540000002;0.039002454;0.0;1.4781430080000002;-0.2611538689999997;Still classified as carbon bomb;False
+Gazprom dobycha Nadym;Russia;operating;1.286567712;Gazprom dobycha Nadym;Russia;producing, short_term_expansion, long_term_expansion;0.78011562022;0.006367085000000001;0.00145626982;0.7879389750400001;-0.49862873696;Now below 1 GtCO2 threshold;False
+Gazprom dobycha Orenburg;Russia;operating;1.593313222;Gazprom dobycha Orenburg;Russia;producing, long_term_expansion;0.20643789014000005;0.0;0.9818441386400001;1.1882820287800002;-0.4050311932199997;Still classified as carbon bomb;False
+Gazprom dobycha Yamburg;Russia;operating;8.863793695;Gazprom dobycha Yamburg;Russia;producing, long_term_expansion;7.23074540128;0.0;0.0008655468000000001;7.23161094808;-1.6321827469199999;Still classified as carbon bomb;False
+Ghawar Ain Dar N;Saudi Arabia;operating;2.088574939;Ghawar Ain Dar S;Saudi Arabia;producing;1.073401062;0.0;0.0;1.073401062;-1.0151738769999998;Still classified as carbon bomb;False
+Ghawar Ain Dar S;Saudi Arabia;operating;1.43464453;Ghawar Ain Dar S;Saudi Arabia;producing;1.073401062;0.0;0.0;1.073401062;-0.36124346799999985;Still classified as carbon bomb;False
+Ghawar Haradh;Saudi Arabia;operating;6.966827829;Ghawar Haradh;Saudi Arabia;producing;8.204786018;0.0;0.0;8.204786018;1.2379581890000004;Still classified as carbon bomb;False
+Ghawar Hawiyah;Saudi Arabia;operating;4.649714459;Ghawar Hawiyah;Saudi Arabia;producing;3.24914443262;0.0;0.0;3.24914443262;-1.40057002638;Still classified as carbon bomb;False
+Ghawar Shedgum;Saudi Arabia;operating;5.695002943;Ghawar Shedgum;Saudi Arabia;producing;5.242382268;0.0;0.0;5.242382268;-0.45262067500000036;Still classified as carbon bomb;False
+Ghawar Uthmaniyah;Saudi Arabia;operating;19.22190525;Ghawar Uthmaniyah;Saudi Arabia;producing;10.754391948;0.0;0.0;10.754391948;-8.467513301999999;Still classified as carbon bomb;False
+Goldwyer Shale;Australia;not started;4.468806417;Goldwyer Shale;Australia;long_term_expansion;0.0;0.0;2.8188994679986785;2.8188994679986785;-1.6499069490013212;Still classified as carbon bomb;False
+Gorgon LNG T1-T3;Australia;operating;1.931000175;Gorgon LNG T1-T3;Australia;producing, long_term_expansion;0.930539167759858;0.0;0.8336590329876;1.7641982007474581;-0.16680197425254195;Still classified as carbon bomb;False
+Greater Burgan;Kuwait;operating;8.341919008;Greater Burgan (CR in field);Kuwait;long_term_expansion;0.0;0.0;1.0510804980000001;1.0510804980000001;-7.2908385099999995;Still classified as carbon bomb;False
+Greater Liza (Liza);Guyana;operating;1.002783934;Greater Liza (Liza);;;;;;;;Now classified as simple gasoil project;False
+Greater Turbot (Stabroek);Guyana;not started;1.114423675;Stabroek Future Phases;Guyana;long_term_expansion;0.0;0.0;1.362418102054;1.362418102054;0.247994427054;Still classified as carbon bomb;False
+Gulf Coast Centre Offshore;United States;not started;1.106200913;;;;;;;;;No longer classified as carbon bomb;False
+Gulf Deepwater Offshore;Mexico;not started;2.204840846;Gulf Deepwater Offshore;;;;;;;;Now classified as simple gasoil project;False
+Halfayah;Iraq;operating;1.409043856;;;;;;;;;No longer classified as carbon bomb;False
+Harmaliyah;Saudi Arabia;operating;1.028095523;Harmaliyah;Saudi Arabia;producing, long_term_expansion;0.7892628791740001;0.0;0.292545;1.081807879174;0.05371235617400005;Still classified as carbon bomb;False
+Hassi Messaoud;Algeria;operating;1.215923408;;;;;;;;;No longer classified as carbon bomb;False
+Hassi R'Mel (Domestic);Algeria;operating;2.271542343;Hassi R'Mel (Pipe Export);Algeria;producing;1.6750779752;0.0;0.0;1.6750779752;-0.5964643678000001;Still classified as carbon bomb;False
+Haynesville/Bossier Shale;United States;operating;13.20413118;Haynesville/Bossier Shale;United States;producing, short_term_expansion, long_term_expansion;0.8057635188337401;1.1819543653523734;7.000047408846585;8.987765293032698;-4.216365886967301;Still classified as carbon bomb;False
+Horizon Oil Sands Project;Canada;operating;1.989790706;Horizon Oil Sands Project;Canada;producing, short_term_expansion, long_term_expansion;1.6182568506600001;0.16132392252000002;0.35461134720000004;2.1341921203800003;0.14440141438000031;Still classified as carbon bomb;False
+Irati Shale;Brazil;not started;2.695278585;Irati Shale;Brazil;long_term_expansion;0.0;0.0;2.684220262;2.684220262;-0.01105832299999987;Still classified as carbon bomb;False
+Johan Sverdrup;Norway;operating;1.073871982;Johan Sverdrup;;;;;;;;Now classified as simple gasoil project;False
+Karachaganak;Kazakhstan;operating;1.207734375;Karachaganak;Kazakhstan;producing, short_term_expansion, long_term_expansion;0.7329732733800001;0.03617587595;2.08976640128682e-06;0.7691512390964014;-0.43858313590359865;Now below 1 GtCO2 threshold;False
+Kashagan;Kazakhstan;operating;5.086161261;Kashagan;Kazakhstan;producing, long_term_expansion;2.3127656106;0.0;2.158623867761041;4.471389478361042;-0.6147717826389583;Still classified as carbon bomb;False
+Kearl;Canada;operating;1.901181774;Kearl;Canada;producing;1.4201384974200002;0.0;0.0;1.4201384974200002;-0.4810432765799999;Still classified as carbon bomb;False
+Khafji;Kuwait-Saudi Arabia;not started;1.439897189;;;;;;;;;No longer classified as carbon bomb;False
+Khurais project;Saudi Arabia;operating;7.634938272;Khurais project;Saudi Arabia;producing;6.659561107540001;0.0;0.0;6.659561107540001;-0.9753771644599993;Still classified as carbon bomb;False
+Khursaniyah;Saudi Arabia;operating;2.413255558;Khursaniyah;Saudi Arabia;producing;1.76871813986;0.0;0.0;1.76871813986;-0.6445374181399999;Still classified as carbon bomb;False
+Kish Gas Project;Iran;not started;1.193632598;Kish Gas Project;Iran;short_term_expansion;0.0;0.8811235816520001;0.0;0.8811235816520001;-0.3125090163479999;Now below 1 GtCO2 threshold;False
+Kronprins Christian Offshore;Denmark;not started;2.23244534;;;;;;;;;No longer classified as carbon bomb;False
+Ku-Maloob-Zaap Project;Mexico;operating;1.960224743;Ku-Maloob-Zaap Project;Mexico;producing, long_term_expansion;1.02931322452;0.0;0.0055510865563132275;1.0348643110763134;-0.9253604319236866;Still classified as carbon bomb;False
+Kuznetsk Depression (Kuzbass) CBM;Russia;not started;4.90609548;;;;;;;;;No longer classified as carbon bomb;False
+La Luna Shale;Colombia;not started;1.616788836;La Luna Shale;Colombia;long_term_expansion;0.0;0.0;1.5631802309948855;1.5631802309948855;-0.05360860500511455;Still classified as carbon bomb;False
+La Luna Shale;Venezuela;not started;1.090522015;;;;;;;;;No longer classified as carbon bomb;False
+Leningradskoye (Kara Sea);Russia;not started;1.800619883;;;;;;;;;No longer classified as carbon bomb;False
+Lensky Basin CBM;Russia;not started;2.73771576;;;;;;;;;No longer classified as carbon bomb;False
+Leviathan;Israel;operating;1.060241772;Leviathan;Israel;producing, short_term_expansion, long_term_expansion;0.6499692655999999;0.2964627021;0.00098022508;0.9474121927799999;-0.11282957922000003;Now below 1 GtCO2 threshold;False
+Liard Shale;Canada;operating;1.201818384;;;;;;;;;No longer classified as carbon bomb;False
+Libra;Brazil;not started;1.891731555;;;;;;;;;No longer classified as carbon bomb;False
+Llandovery Shale;Brazil;not started;4.273465065;Llandovery Shale;Brazil;long_term_expansion;0.0;0.0;3.0090071659999995;3.0090071659999995;-1.2644578990000004;Still classified as carbon bomb;False
+Longmaxi Shale;China;operating;5.691701535;Longmaxi Shale;China;long_term_expansion;0.0;0.0;1.1315164500000001;1.1315164500000001;-4.560185085;Still classified as carbon bomb;False
+Longmaxi Shale (Sichuan/Changyu);China;operating;2.20989992;Yaan Slope Onshore Sichuan Province;China;long_term_expansion;0.0;0.0;4.931716150000001;4.931716150000001;2.721816230000001;Still classified as carbon bomb;False
+Lower Zakum;UAE;operating;2.434419542;Lower Zakum;UAE;producing, short_term_expansion, long_term_expansion;1.1465678952;0.15482006208000001;0.28061200080000004;1.58199995808;-0.8524195839200002;Still classified as carbon bomb;False
+Lublin Basin Silurian Shale;Poland;not started;5.647084841;;;;;;;;;No longer classified as carbon bomb;False
+Lula (X-Tupi);Brazil;operating;2.545775174;Tupi (x-Lula);Brazil;producing, long_term_expansion;1.273440376806;0.0;0.25913396724;1.532574344046;-1.013200829954;Still classified as carbon bomb;False
+MZLNG Joint Development (T1-T2);Mozambique;not started;1.310175723;MZLNG Joint Development (T1-T2);;;;;;;;Now classified as simple gasoil project;False
+Majnoon;Iraq;operating;2.468342318;Majnoon;Iraq;producing, short_term_expansion, long_term_expansion;0.49927708368;0.354912048;3.1466175659999998;4.00080669768;1.53246437968;Still classified as carbon bomb;False
+Manifa (redevelop);Saudi Arabia;operating;5.000284718;Manifa (redevelop);Saudi Arabia;producing;4.47525316902;0.0;0.0;4.47525316902;-0.5250315489799995;Still classified as carbon bomb;False
+Mansouri Bangestan;Iran;operating;1.045838888;Mansouri Bangestan;Iran;producing, long_term_expansion;0.432359802;0.0;0.846708486;1.279068288;0.23322939999999992;Still classified as carbon bomb;False
+Marcellus Shale;United States;operating;26.71441286;Marcellus Shale;United States;producing, short_term_expansion, long_term_expansion;3.93545834477374;2.7343118178952275;19.074117012741592;25.74388717541056;-0.9705256845894397;Still classified as carbon bomb;False
+Marjan;Saudi Arabia;operating;1.889926075;Marjan;Saudi Arabia;producing, short_term_expansion;1.0821952240000001;0.8240405959999999;0.0;1.90623582;0.016309745000000042;Still classified as carbon bomb;False
+Marun;Iran;operating;2.408543885;Marun;Iran;producing, short_term_expansion;1.7584444815800002;0.07503336;0.0;1.8334778415800002;-0.5750660434199997;Still classified as carbon bomb;False
+Menilite Shale;Ukraine;not started;1.666673391;Menilite Shale;Ukraine;long_term_expansion;0.0;0.0;1.646285256;1.646285256;-0.02038813499999992;Still classified as carbon bomb;False
+Meramec Shale;United States;operating;2.439577611;Meramec Shale;United States;producing, short_term_expansion, long_term_expansion;0.4195900912954;0.20707461924191595;0.8913908783920008;1.5180555889293168;-0.921522022070683;Still classified as carbon bomb;False
+Mero (Libra NW);Brazil;operating;1.287024055;Mero (Libra NW);Brazil;producing, short_term_expansion;0.6911522429399999;0.3301251534;0.0;1.02127739634;-0.26574665866000013;Still classified as carbon bomb;False
+Montney Play;Canada;operating;13.6884891;Montney Play;Canada;producing, short_term_expansion, long_term_expansion;1.7935948686296297;1.3862596279899388;9.214032144557535;12.393886641177104;-1.2946024588228955;Still classified as carbon bomb;False
+NLNG Base Project;Nigeria;operating;1.033411352;NLNG Base Project;;;;;;;;Now classified as simple gasoil project;False
+Nahr bin Umar;Iraq;operating;1.277643431;Nahr bin Umar;Iraq;producing, long_term_expansion;0.0813455946;0.0;1.170492048;1.2518376426;-0.02580578840000003;Still classified as carbon bomb;False
+North Field;Qatar;not started;11.61275076;North Field;Qatar;long_term_expansion;0.0;0.0;11.558473450400001;11.558473450400001;-0.05427730959999977;Still classified as carbon bomb;False
+North Field C LNG;Qatar;not started;7.768105079;North Field;Qatar;long_term_expansion;0.0;0.0;11.558473450400001;11.558473450400001;3.7903683714000014;Still classified as carbon bomb;False
+North Field E;Qatar;not started;4.594474423;North Field E;Qatar;long_term_expansion;0.0;0.0;4.5750618634;4.5750618634;-0.0194125596000001;Still classified as carbon bomb;False
+North Kara Sea Offshore;Russia;not started;1.176960094;;;;;;;;;No longer classified as carbon bomb;False
+North Slope Onshore;United States;not started;2.035951159;North Slope Onshore;United States;long_term_expansion;0.0;0.0;0.9086920102889999;0.9086920102889999;-1.1272591487110002;Now below 1 GtCO2 threshold;False
+Oil shale China;China;operating;1.385461449;;;;;;;;;No longer classified as carbon bomb;False
+Orinoco Joint Ventures;Venezuela;operating;6.703396162;Orinoco Joint Ventures;Venezuela;producing, short_term_expansion, long_term_expansion;1.2282942983649647;1.056534246;0.5680587366722647;2.8528872810372294;-3.8505088809627703;Still classified as carbon bomb;False
+PRB Tight Oil;United States;operating;2.770946453;PRB Tight Oil;United States;producing, short_term_expansion, long_term_expansion;0.18139320786508;0.23495827920562407;1.7571302930605883;2.1734817801312922;-0.5974646728687079;Still classified as carbon bomb;False
+Parnaiba Onshore;Brazil;not started;1.998572969;;;;;;;;;No longer classified as carbon bomb;False
+Pars Southwest;Iran;not started;1.1092643;Pars Southwest;Iran;long_term_expansion;0.0;0.0;1.102885212;1.102885212;-0.006379088000000088;Still classified as carbon bomb;False
+Pazanan;Iran;operating;1.358409167;Pazanan;;;;;;;;Now classified as simple gasoil project;False
+Permian Conventional_Texas;United States;operating;2.061829878;Permian Conventional_Texas;United States;producing;1.2724801552967262;0.0;0.0;1.2724801552967262;-0.789349722703274;Still classified as carbon bomb;False
+Permian Delaware Tight;United States;operating;27.80443109;Permian Delaware Tight;United States;producing, short_term_expansion, long_term_expansion;4.573625791238309;4.496890133486525;20.640624883939694;29.711140808664528;1.9067097186645263;Still classified as carbon bomb;False
+Permian Midland Tight;United States;operating;16.62881821;Permian Midland Tight;United States;producing, short_term_expansion, long_term_expansion;5.104154305280001;3.7971993038339997;8.412872114419999;17.314227400420002;0.6854091904200033;Still classified as carbon bomb;False
+Project Kuwait;Kuwait;operating;4.409493298;Project Kuwait;Kuwait;producing;1.192358891394;0.0;0.0;1.192358891394;-3.217134406606;Still classified as carbon bomb;False
+QatarGas 1 LNG T1-T3;Qatar;operating;1.283272558;QatarGas 1 LNG T1-T3;Qatar;producing;1.0830156955999999;0.0;0.0;1.0830156955999999;-0.20025686240000007;Still classified as carbon bomb;False
+QatarGas LNG T12-T13 (NFE-South);Qatar;not started;1.785210581;QatarGas LNG T12-T13 (NFE-South);Qatar;short_term_expansion;0.0;1.7470055871099643;0.0;1.7470055871099643;-0.03820499389003573;Still classified as carbon bomb;False
+QatarGas LNG T8-T11 (NFE-East);Qatar;not started;3.39497532;QatarGas LNG T8-T11 (NFE-East);Qatar;short_term_expansion;0.0;3.4045707533051215;0.0;3.4045707533051215;0.009595433305121581;Still classified as carbon bomb;False
+Qatargas 2 LNG T4-T5;Qatar;operating;1.828035431;Qatargas 2 LNG T4-T5;Qatar;producing;1.5233576885850675;0.0;0.0;1.5233576885850675;-0.3046777424149325;Still classified as carbon bomb;False
+Qatif project;Saudi Arabia;operating;5.066814884;Qatif project;Saudi Arabia;producing;4.6952629316;0.0;0.0;4.6952629316;-0.37155195239999994;Still classified as carbon bomb;False
+Qurna West;Iraq;operating;3.982828932;Qurna West;Iraq;producing, long_term_expansion;2.5369523675999996;0.0;3.803566901400001;6.3405192690000005;2.3576903370000006;Still classified as carbon bomb;False
+Qurna West-2;Iraq;operating;1.598723281;Qurna West-2;Iraq;producing, long_term_expansion;1.2639536154000002;0.0;1.132418646;2.3963722614000003;0.7976489804000002;Still classified as carbon bomb;False
+Rasgas 2 LNG T3-T5;Qatar;operating;1.509806372;Rasgas 2 LNG T3-T5;Qatar;producing;1.2709410660649794;0.0;0.0;1.2709410660649794;-0.23886530593502053;Still classified as carbon bomb;False
+Rasgas 3 LNG T6-T7;Qatar;operating;1.490692041;Rasgas 3 LNG T6-T7;Qatar;producing;1.187646959200071;0.0;0.0;1.187646959200071;-0.30304508179992906;Still classified as carbon bomb;False
+Ratawi;Iraq;operating;1.065138744;Ratawi;;;;;;;;Now classified as simple gasoil project;False
+Romashkino;Russia;operating;1.338604935;Romashkino;Russia;producing;1.5679088194000002;0.0;0.0;1.5679088194000002;0.22930388440000016;Still classified as carbon bomb;False
+Rumaila North & South;Iraq;operating;7.761609425;Rumaila North & South;Iraq;producing;6.7923289584;0.0;0.0;6.7923289584;-0.9692804665999999;Still classified as carbon bomb;False
+Rusanovskoye (Kara Sea);Russia;not started;1.316123949;;;;;;;;;No longer classified as carbon bomb;False
+Safaniya;Saudi Arabia;operating;11.92614355;Safaniya;Saudi Arabia;producing, long_term_expansion;11.6452531062;0.0;0.9786977600000001;12.6239508662;0.6978073161999987;Still classified as carbon bomb;False
+Safaniya YTF Concession;Saudi Arabia;not started;1.842871867;Safaniya;Saudi Arabia;producing, long_term_expansion;11.6452531062;0.0;0.9786977600000001;12.6239508662;10.7810789992;Still classified as carbon bomb;True
+Samotlorneftegaz (TNK-BP);Russia;operating;1.867807241;Samotlorneftegaz (TNK-BP);Russia;producing, long_term_expansion;1.9039908188253998;0.0;0.00020205176000000002;1.9041928705853999;0.036385629585399926;Still classified as carbon bomb;False
+Santos Offshore;Brazil;not started;4.339841028;Santos Offshore;Brazil;long_term_expansion;0.0;0.0;1.321259761020001;1.321259761020001;-3.018581266979999;Still classified as carbon bomb;False
+Sembar Shale;Pakistan;not started;2.840236853;Sembar Shale;Pakistan;long_term_expansion;0.0;0.0;2.4614563900000004;2.4614563900000004;-0.37878046299999957;Still classified as carbon bomb;False
+SeverEnergia Project;Russia;operating;1.099534929;SeverEnergia Project;Russia;producing, short_term_expansion, long_term_expansion;0.970661908786;0.06643681016;0.00017284996;1.037271568906;-0.06226336009400013;Still classified as carbon bomb;False
+Shaybah;Saudi Arabia;operating;4.268589672;Shaybah;Saudi Arabia;producing;3.696593824;0.0;0.0;3.696593824;-0.5719958480000003;Still classified as carbon bomb;False
+Shengli;China;operating;1.50578136;Shengli;China;producing, short_term_expansion, long_term_expansion;1.3023464313630801;0.0127453878;0.10676483587651474;1.4218566550395948;-0.08392470496040527;Still classified as carbon bomb;False
+Shtokman;Russia;not started;6.135874132;;;;;;;;;No longer classified as carbon bomb;False
+Sirte Shale;Libya;not started;1.703281911;Sirte Shale;Libya;long_term_expansion;0.0;0.0;1.7024779259999998;1.7024779259999998;-0.0008039850000001181;Still classified as carbon bomb;False
+South Pars (Phases 2-3) dry gas;Iran;operating;1.016274224;South Pars (Phases 2-3);Iran;producing;0.95705654;0.0;0.0;0.95705654;-0.05921768400000005;Now below 1 GtCO2 threshold;False
+South Pars (Phases 20-21);Iran;operating;1.017173226;South Pars (Phases 20-21);Iran;producing;0.8424069858000001;0.0;0.0;0.8424069858000001;-0.17476624019999987;Now below 1 GtCO2 threshold;False
+South Pars (Phases 22-24);Iran;operating;1.04273081;South Pars (Phases 23-28);Iran;long_term_expansion;0.0;0.0;5.330933432;5.330933432;4.288202622;Still classified as carbon bomb;False
+South Pars (Phases 4-5) dry gas;Iran;operating;1.100975522;South Pars (Phases 4-5);Iran;producing;1.0265859442599998;0.0;0.0;1.0265859442599998;-0.0743895777400001;Still classified as carbon bomb;False
+South Pars (Phases 9-10) dry gas;Iran;operating;1.265006303;South Pars (Phases 9-10);Iran;producing;0.969543316;0.0;0.0;0.969543316;-0.29546298700000007;Now below 1 GtCO2 threshold;False
+Southeast Uplift Onshore Heilongjiang Province;China;not started;1.750536451;Southeast Uplift Onshore Heilongjiang Province;;;;;;;;Now classified as simple gasoil project;False
+Spirit River (Notikewin, Falher, Wilrich);Canada;operating;2.976203115;Spirit River (Notikewin, Falher, Wilrich);Canada;producing, short_term_expansion, long_term_expansion;0.3158945616125999;0.19066168870349995;1.4635568026000987;1.9701130529161985;-1.0060900620838016;Still classified as carbon bomb;False
+Sudair Shale;Saudi Arabia;not started;1.032893123;;;;;;;;;No longer classified as carbon bomb;False
+Syncrude Mildred Lake/Aurora;Canada;operating;1.184050044;Syncrude Mildred Lake/Aurora;;;;;;;;Now classified as simple gasoil project;False
+Tambey Zone (Yamal Megaproject);Russia;not started;2.474909236;Southern Zone (Yamal Megaproject);Russia;long_term_expansion;0.0;0.0;1.081442890746;1.081442890746;-1.3934663452539997;Still classified as carbon bomb;False
+Tanf Shale;Syria;not started;1.363655326;Tanf Shale;Syria;long_term_expansion;0.0;0.0;0.9781083960000001;0.9781083960000001;-0.38554692999999984;Now below 1 GtCO2 threshold;False
+Tannezuft Shale;Algeria;not started;2.347866837;Tannezuft Shale;Algeria;long_term_expansion;0.0;0.0;2.162121526;2.162121526;-0.18574531100000025;Still classified as carbon bomb;False
+Tanzanian Coastal Offshore;Tanzania;not started;1.031198167;Tanzania LNG (Block 1/4 and 2);Tanzania;long_term_expansion;0.0;0.0;1.1379534049463775;1.1379534049463775;0.10675523794637742;Still classified as carbon bomb;False
+Tarim (CNPC);China;operating;1.959883851;Tarim;China;producing, short_term_expansion, long_term_expansion;2.1741013709253996;0.04474785;0.15972188295173745;2.3785711038771367;0.4186872528771366;Still classified as carbon bomb;False
+Taymyr Basin CBM;Russia;not started;1.233321785;;;;;;;;;No longer classified as carbon bomb;False
+Tengiz;Kazakhstan;operating;3.357866129;Tengiz;Kazakhstan;producing, long_term_expansion;1.9124702873800001;0.0;6.47504e-05;1.9125350377800001;-1.44533109122;Still classified as carbon bomb;False
+Timan - Pechora Basin Offshore;Russia;not started;2.48143889;Timan - Pechora Basin Offshore;Russia;long_term_expansion;0.0;0.0;1.223160402;1.223160402;-1.2582784880000002;Still classified as carbon bomb;False
+Timan - Pechora Basin Onshore;Russia;not started;2.351649692;Timan - Pechora Basin Onshore;Russia;long_term_expansion;0.0;0.0;1.1473045380000002;1.1473045380000002;-1.2043451539999999;Still classified as carbon bomb;False
+Troll;Norway;operating;1.77210443;Troll;Norway;producing, short_term_expansion, long_term_expansion;1.1387670185199998;0.146034752065;0.0404703402705679;1.3252721108555678;-0.4468323191444321;Still classified as carbon bomb;False
+Tunguska Basin CBM;Russia;not started;8.843821834;;;;;;;;;No longer classified as carbon bomb;False
+Umm Shaif/Nasr;UAE;operating;1.939252733;Umm Shaif/Nasr;UAE;producing, short_term_expansion, long_term_expansion;1.3498317090199998;0.27908385210000003;0.7095070836;2.33842264472;0.39916991172000005;Still classified as carbon bomb;False
+Upper Zakum;UAE;operating;6.44038252;Upper Zakum;UAE;producing, short_term_expansion, long_term_expansion;4.219918718400001;0.18616297878;0.344589642;4.75067133918;-1.6897111808199998;Still classified as carbon bomb;False
+Urengoyskoye;Russia;operating;5.199312832;Urengoyskoye;Russia;producing, long_term_expansion;0.64398234;0.0;2.964;3.60798234;-1.5913304920000004;Still classified as carbon bomb;False
+Utica Shale;United States;operating;7.713186851;Utica Shale;United States;producing, short_term_expansion, long_term_expansion;0.7269809462073996;0.6181018428125998;4.964543468917507;6.309626257937507;-1.403560593062493;Still classified as carbon bomb;False
+Vaca Muerta Shale;Argentina;operating;5.177782001;Vaca Muerta Shale;Argentina;producing, short_term_expansion, long_term_expansion;0.618029225912814;0.9048501520245402;10.592622727297606;12.11550210523496;6.93772010423496;Still classified as carbon bomb;False
+Velkerri Shale;Australia;not started;1.058031183;Velkerri Shale;Australia;long_term_expansion;0.0;0.0;1.0151680794200002;1.0151680794200002;-0.042863103579999784;Still classified as carbon bomb;False
+Volga - Urals Onshore;Russia;not started;1.36763708;Volga - Urals Onshore;Russia;long_term_expansion;0.0;0.0;1.4398969500000003;1.4398969500000003;0.07225987000000034;Still classified as carbon bomb;False
+West Florida Offshore;United States;not started;1.069261489;;;;;;;;;No longer classified as carbon bomb;False
+West Siberia Offshore;Russia;not started;2.856403668;West Siberia Offshore;Russia;long_term_expansion;0.0;0.0;1.282173762;1.282173762;-1.574229906;Still classified as carbon bomb;False
+West Siberia Onshore;Russia;not started;1.1645132;Lukoil-West Siberia;Russia;producing, short_term_expansion, long_term_expansion;1.4703842097899;0.0017166189546;0.479361524996346;1.9514623537408462;0.7869491537408462;Still classified as carbon bomb;True
+Western Gulf Province_Texas;United States;operating;5.061653121;Western Gulf Province_Texas;United States;producing, short_term_expansion, long_term_expansion;1.3436175626026539;0.0163276449;0.0751093512;1.435054558702654;-3.626598562297346;Still classified as carbon bomb;False
+Woodford Shale;United States;operating;3.377142985;Woodford Shale;United States;producing, short_term_expansion, long_term_expansion;0.5775843165118599;0.29200924567790604;1.2340444946367113;2.103638056826477;-1.273504928173523;Still classified as carbon bomb;False
+Xinjiang (CNPC);China;operating;1.356420308;Xinjiang;China;producing, long_term_expansion;1.8208491736900896;0.0;0.06527864185999996;1.8861278155500896;0.5297075075500897;Still classified as carbon bomb;False
+Yashlar Vostochnyy (East);Turkmenistan;not started;2.129145331;Yashlar Vostochnyy (East);Turkmenistan;long_term_expansion;0.0;0.0;2.1157599;2.1157599;-0.013385431000000114;Still classified as carbon bomb;False
+Yolotan (Iolotan) South;Turkmenistan;operating;9.548227901;Yolotan (Iolotan) South;Turkmenistan;producing, short_term_expansion, long_term_expansion;1.1737041;1.53899715;6.07049715;8.7831984;-0.7650295010000008;Still classified as carbon bomb;False
+Yucatan Platform Offshore;Mexico;not started;1.025798315;;;;;;;;;No longer classified as carbon bomb;False
+Yuganskneftegaz;Russia;operating;4.345193315;Yuganskneftegaz;Russia;producing, long_term_expansion;3.702021692685401;0.0;0.0044922361200000005;3.7065139288054008;-0.6386793861945996;Still classified as carbon bomb;False
+Zubair;Iraq;operating;1.679304399;Zubair;Iraq;producing;1.6761374640000002;0.0;0.0;1.6761374640000002;-0.003166934999999871;Still classified as carbon bomb;False
+Zuluf;Saudi Arabia;operating;2.449978206;Zuluf;Saudi Arabia;producing;1.996066351186;0.0;0.0;1.996066351186;-0.453911854814;Still classified as carbon bomb;False
+Zuluf (CR in field);Saudi Arabia;not started;3.535052229;Zuluf (CR in field);Saudi Arabia;long_term_expansion;0.0;0.0;3.5310284334;3.5310284334;-0.004023795600000213;Still classified as carbon bomb;False
+Zuluf (expansion);Saudi Arabia;not started;1.833213347;Zuluf (expansion);Saudi Arabia;short_term_expansion, long_term_expansion;0.0;1.708514386;0.621921072;2.330435458;0.49722211100000013;Still classified as carbon bomb;False
+;;;;ADNOC Sole Risk;UAE;producing;3.1507968431999998;0.0;0.0;3.1507968431999998;;Newly identified carbon bomb;False
+;;;;Alaska LNG;United States;long_term_expansion;0.0;0.0;0.9262517100000001;0.9262517100000001;;Newly identified carbon bomb;False
+;;;;Area 1 LNG (T3-T4);Mozambique;long_term_expansion;0.0;0.0;0.7910794830949325;0.7910794830949325;;Newly identified carbon bomb;False
+;;;;Cambay Shale;India;long_term_expansion;0.0;0.0;1.39006537564;1.39006537564;;Newly identified carbon bomb;False
+;;;;Cardium Play;Canada;producing, short_term_expansion, long_term_expansion;0.1334117583588;0.11492876783566597;0.7461156741915225;0.9944562003859885;;Newly identified carbon bomb;False
+;;;;Fadhili Gas Project;Saudi Arabia;producing, short_term_expansion;0.5609971697599999;0.6005645049999999;0.0;1.1615616747599997;;Newly identified carbon bomb;False
+;;;;Forouzan;Iran;producing, long_term_expansion;0.13267227299999998;0.0;1.905642484;2.0383147569999998;;Newly identified carbon bomb;False
+;;;;Gazprom Dobycha Noyabrsk;Russia;producing, short_term_expansion, long_term_expansion;0.9967179099599999;0.00457963342;0.030453863060000003;1.0317514064399997;;Newly identified carbon bomb;False
+;;;;Gazpromneft-Khantos;Russia;producing, long_term_expansion;0.9566881056000002;0.0;0.003705576844718;0.9603936824447181;;Newly identified carbon bomb;False
+;;;;Gazpromneft-NNG;Russia;producing, short_term_expansion, long_term_expansion;1.3440601441487376;0.00156020454;0.0029704383440868594;1.3485907870328246;;Newly identified carbon bomb;False
+;;;;Gazpromneft-Zapolyarye;Russia;producing, short_term_expansion, long_term_expansion;0.34129629625999997;0.1420085176;1.192899339311017;1.676204153171017;;Newly identified carbon bomb;False
+;;;;Golshan;Iran;long_term_expansion;0.0;0.0;0.960856262;0.960856262;;Newly identified carbon bomb;False
+;;;;Greater Burgan;Kuwait;producing;7.36392885452;0.0;0.0;7.36392885452;;Newly identified carbon bomb;False
+;;;;Greater Green River Tight Gas;United States;producing;0.9386778066901199;0.0;0.0;0.9386778066901199;;Newly identified carbon bomb;False
+;;;;Gumai Formation;Indonesia;long_term_expansion;0.0;0.0;0.9943889160000001;0.9943889160000001;;Newly identified carbon bomb;False
+;;;;Hassi R'Mel (Domestic);Algeria;producing;1.6401771583999998;0.0;0.0;1.6401771583999998;;Newly identified carbon bomb;False
+;;;;Iara;Brazil;producing, short_term_expansion, long_term_expansion;0.34046547573999997;0.36665382477;0.394745682058211;1.101864982568211;;Newly identified carbon bomb;False
+;;;;Jafurah shale gas (Al Hasa);Saudi Arabia;short_term_expansion, long_term_expansion;0.0;0.455939106;1.27339106026;1.72933016626;;Newly identified carbon bomb;False
+;;;;Kirkuk;Iraq;producing, long_term_expansion;0.329909202;0.0;0.952306668;1.28221587;;Newly identified carbon bomb;False
+;;;;Longmaxi Shale (Xi'nan-CNPC);China;producing, short_term_expansion, long_term_expansion;0.074431455;0.13756277114999999;0.66862995;0.88062417615;;Newly identified carbon bomb;False
+;;;;Maykop Shale;Azerbaijan;long_term_expansion;0.0;0.0;0.9336816960000002;0.9336816960000002;;Newly identified carbon bomb;False
+;;;;North Pars LNG;Iran;long_term_expansion;0.0;0.0;1.354563752;1.354563752;;Newly identified carbon bomb;False
+;;;;North West Shelf LNG;Australia;producing, short_term_expansion, long_term_expansion;0.17880230673377293;0.024127814220000002;0.6295943704199857;0.8325244913737586;;Newly identified carbon bomb;False
+;;;;Ordos Basin CBM;China;long_term_expansion;0.0;0.0;0.93993;0.93993;;Newly identified carbon bomb;False
+;;;;Ordovician Shale;China;long_term_expansion;0.0;0.0;0.86555816;0.86555816;;Newly identified carbon bomb;False
+;;;;Oriente PDVSA;Venezuela;producing, long_term_expansion;0.8252534401495525;0.0;0.0003469557200000001;0.8256003958695525;;Newly identified carbon bomb;False
+;;;;QatarGas LNG T14-T15 (NFE-West);Qatar;short_term_expansion;0.0;1.74732538;0.0;1.74732538;;Newly identified carbon bomb;False
+;;;;Qatargas 3 LNG T6;Qatar;producing;0.9357260570700356;0.0;0.0;0.9357260570700356;;Newly identified carbon bomb;False
+;;;;Qatargas 4 LNG T7;Qatar;producing;0.7352588999999999;0.0;0.0;0.7352588999999999;;Newly identified carbon bomb;False
+;;;;Rospan (TNK-BP);Russia;producing, long_term_expansion;1.0791040130199998;0.0;0.00115353284;1.08025754586;;Newly identified carbon bomb;False
+;;;;Ruwais LNG T1-T2;UAE;short_term_expansion;0.0;1.2255702604;0.0;1.2255702604;;Newly identified carbon bomb;False
+;;;;Sakhalin-3;Russia;producing, long_term_expansion;0.21303102200000001;0.0;0.8305564406025999;1.0435874626025998;;Newly identified carbon bomb;False
+;;;;Sattapadi Formation;India;long_term_expansion;0.0;0.0;0.9842038719999999;0.9842038719999999;;Newly identified carbon bomb;False
+;;;;South East Bab;UAE;producing, short_term_expansion;0.5671921323600001;0.39948579990000005;0.0;0.9666779322600001;;Newly identified carbon bomb;False
+;;;;South Pars (Phase 13) (ex-Persian LNG);Iran;producing;0.7739250125999999;0.0;0.0;0.7739250125999999;;Newly identified carbon bomb;False
+;;;;South Pars (Phase 14) (ex-Persian LNG);Iran;producing;0.9021583423999999;0.0;0.0;0.9021583423999999;;Newly identified carbon bomb;False
+;;;;South Pars (Phase 19);Iran;producing;0.921202286;0.0;0.0;0.921202286;;Newly identified carbon bomb;False
+;;;;South Pars (Phases 15-16);Iran;producing;0.846383492;0.0;0.0;0.846383492;;Newly identified carbon bomb;False
+;;;;South Pars (Phases 17-18);Iran;producing;0.79699713474;0.0;0.0;0.79699713474;;Newly identified carbon bomb;False
+;;;;South Pars (Phases 22-24);Iran;producing;1.0051292995999999;0.0;0.0;1.0051292995999999;;Newly identified carbon bomb;False
+;;;;Tarim Basin Onshore;China;long_term_expansion;0.0;0.0;1.068083076;1.068083076;;Newly identified carbon bomb;False
+;;;;Uinta-Piceance Tight Gas;United States;producing;0.9549335491676019;0.0;0.0;0.9549335491676019;;Newly identified carbon bomb;False
+;;;;Uinta-Piceance Tight Oil;United States;producing, short_term_expansion, long_term_expansion;0.15812125532374;0.16944193668000002;0.7020900590507382;1.0296532510544782;;Newly identified carbon bomb;False
+;;;;Viking Graben  Offshore;Norway;long_term_expansion;0.0;0.0;0.9745781315459996;0.9745781315459996;;Newly identified carbon bomb;False
+;;;;Vostok Oil Project;Russia;producing, short_term_expansion, long_term_expansion;1.425220775586;0.7103314969200001;0.7120989080869023;2.8476511805929023;;Newly identified carbon bomb;False
+;;;;Waha;Libya;producing, long_term_expansion;0.8566418250505401;0.0;0.07107867296023003;0.9277204980107702;;Newly identified carbon bomb;False
+;;;;Wasit;Saudi Arabia;producing;0.81843428012;0.0;0.0;0.81843428012;;Newly identified carbon bomb;False
+;;;;Western Haynesville/Bossier Shale;United States;producing, short_term_expansion, long_term_expansion;0.019297349999999998;0.1108878;1.6234654499999999;1.7536505999999998;;Newly identified carbon bomb;False
+;;;;Xi'nan-CNPC;China;producing, short_term_expansion, long_term_expansion;1.5265581271591497;0.056123226;0.07213759517777425;1.654818948336924;;Newly identified carbon bomb;False
+;;;;Yanchang;China;producing, short_term_expansion, long_term_expansion;0.8652807955745999;0.04976100000000001;0.0051090817635459996;0.9201508773381459;;Newly identified carbon bomb;False
+;;;;Zagros Foldbelt Onshore;Iran;long_term_expansion;0.0;0.0;1.3632030267954003;1.3632030267954003;;Newly identified carbon bomb;False
+;;;;Zagros Foldbelt Onshore;Iraq;long_term_expansion;0.0;0.0;1.04686847685;1.04686847685;;Newly identified carbon bomb;False
