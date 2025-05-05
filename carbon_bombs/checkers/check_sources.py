@@ -116,7 +116,9 @@ def check_gem_source_updated():
     Return a string explaining if something changed or not.
     """
     res_txt = _check_gem_source_updated(fuel="coal")
-    res_txt += _check_gem_source_updated(fuel="gasoil")
+
+    # remove Gasoil check since use Rystad source
+    # res_txt += _check_gem_source_updated(fuel="gasoil")
 
     return res_txt
 
