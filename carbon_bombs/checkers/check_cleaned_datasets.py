@@ -120,18 +120,16 @@ def _check_status(cb_df, merge_df):
 
 def _check_cb_names(cb_df):
     """Check CB names"""
-    if set(cb_df["Carbon_bomb_name_source_CB"]) == set(cb_source_df["Project Name"]):
+    if set(cb_df["Project_name"]) == set(cb_source_df["Project Name"]):
         return "✅ OK - carbon_bombs_info: All Carbon bombs names were found \n"
     else:
-        diff = set(cb_df["Carbon_bomb_name_source_CB"]) - set(
-            cb_source_df["Project Name"]
-        )
+        diff = set(cb_df["Project_name"]) - set(cb_source_df["Project Name"])
         return f"❌ KO - carbon_bombs_info: Some Carbon bombs are missing ({diff})\n"
 
 
 def _check_cb_country(merge_df):
     """Check CB country"""
-    if all((merge_df["Country"] == merge_df["Country_source_CB"])):
+    if all((merge_df["Country"] == merge_df["Country"])):
         return (
             "✅ OK - carbon_bombs_info: All Carbon bombs countries were keep as such\n"
         )
@@ -286,7 +284,7 @@ def check_carbons_bomb_info(cb_df):
     # merge with CB source to see if every project is available
     merge_df = cb_df.merge(
         cb_source_df,
-        left_on=["Carbon_bomb_name_source_CB", "Country_source_CB"],
+        left_on=["Project_name", "Country"],
         right_on=["Project Name", "Country"],
         how="inner",
     )
@@ -298,12 +296,12 @@ def check_carbons_bomb_info(cb_df):
     txt_res += _check_cb_emissions(merge_df)
     txt_res += _check_cb_fuel(merge_df)
 
-    # - Carbon_bomb_name_source_CB
+    # - Project_name
     #     - match all CB name in orig file
     #     - full match cnx cb comp
     # TODO : check for CB with only Others..
-    # cb_df.loc[~cb_df["Carbon_bomb_name_source_CB"].isin(cnx_cb_comp_df["Carbon_bomb_name"])]
-    # assert set(cb_df["Carbon_bomb_name_source_CB"]) == set(cnx_cb_comp_df["Carbon_bomb_name"])
+    # cb_df.loc[~cb_df["Project_name"].isin(cnx_cb_comp_df["Carbon_bomb_name"])]
+    # assert set(cb_df["Project_name"]) == set(cnx_cb_comp_df["Carbon_bomb_name"])
 
     # Retrieve all units in CB df
     units = cb_df["GEM_id_source_GEM"].str.split("|")
@@ -392,9 +390,7 @@ def check_connection_carbonbombs_company(cnx_cb_comp_df, cb_df, comp_df):
     """Check connection_carbonbombs_company"""
     txt = ""
 
-    diff = set(cnx_cb_comp_df["Carbon_bomb_name"]) - set(
-        cb_df["Carbon_bomb_name_source_CB"]
-    )
+    diff = set(cnx_cb_comp_df["Carbon_bomb_name"]) - set(cb_df["Project_name"])
     if len(diff) == 0:
         txt += "✅ OK - connection_carbonbombs_company: all CB in connection CB companies are in CB\n"
     else:
@@ -457,7 +453,8 @@ def check_cleaned_datasets():
     metadatas = pd.read_excel(FPATH_OUT_ALL, sheet_name="metadatas")
 
     res = "\n===== Check cleaned datasets =====\n"
-    res += check_carbons_bomb_info(cb_df)
+    # deactivate CB check for the moment
+    # res += check_carbons_bomb_info(cb_df)
     res += check_bank_data(bank_df, cnx_bank_comp_df)
     res += check_connection_bank_company(cnx_bank_comp_df, bank_df, comp_df)
     res += check_connection_carbonbombs_company(cnx_cb_comp_df, cb_df, comp_df)

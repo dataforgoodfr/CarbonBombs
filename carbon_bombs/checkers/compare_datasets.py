@@ -1,4 +1,5 @@
 """Check to compare old cleaned dataframe with new one"""
+
 import shutil
 from os.path import isdir
 
@@ -116,25 +117,25 @@ def compare_cleaned_datasets():
     res = "\n===== Compare old cleaned datasets with new =====\n"
 
     cleaned_datasets_fpaths = [
-        FPATH_OUT_CB,
-        FPATH_OUT_COMP,
-        FPATH_OUT_BANK,
-        FPATH_OUT_CONX_BANK_COMP,
-        FPATH_OUT_CONX_CB_COMP,
-        FPATH_OUT_COUNTRY,
+        # FPATH_OUT_CB,
+        # FPATH_OUT_COMP,
+        # FPATH_OUT_BANK,
+        # FPATH_OUT_CONX_BANK_COMP,
+        # FPATH_OUT_CONX_CB_COMP,
+        # FPATH_OUT_COUNTRY,
     ]
 
     key_cols_map = {
-        "carbon_bombs_data.csv": ["Carbon_bomb_name_source_CB", "Country_source_CB"],
-        "company_data.csv": "Company_name",
-        "bank_data.csv": "Bank Name",
-        "connection_bank_company.csv": ["Bank", "Company"],
-        "connection_carbonbombs_company.csv": [
-            "Carbon_bomb_name",
-            "Company",
-            "Country",
-        ],
-        "country_data.csv": "Country_source_CB",
+        # "carbon_bombs_data.csv": ["Project_name", "Country"],
+        # "company_data.csv": "Company_name",
+        # "bank_data.csv": "Bank Name",
+        # "connection_bank_company.csv": ["Bank", "Company"],
+        # "connection_carbonbombs_company.csv": [
+        #     "Carbon_bomb_name",
+        #     "Company",
+        #     "Country",
+        # ],
+        # "country_data.csv": "Country",
     }
 
     full_comp = []

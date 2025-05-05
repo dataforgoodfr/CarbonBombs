@@ -1,4 +1,5 @@
 """Utils to match company names with BOCC names"""
+
 import re
 
 import numpy as np
@@ -37,12 +38,10 @@ def split_column_parent_company(row):
     -----
     - This function requires the pandas library to be installed.
     """
-    instance = row["Carbon_bomb_name_source_CB"]
-    country = row["Country_source_CB"]
+    instance = row["Project_name"]
+    country = row["Country"]
     # split by | for different unit and ; for different companies
-    companies = (
-        row["Companies_involved_source_GEM"].replace(PROJECT_SEPARATOR, ";").split(";")
-    )
+    companies = row["Parent_Company"].replace(PROJECT_SEPARATOR, ";").split(";")
     carbon_bomb_list_company = [
         {
             "Carbon_bomb_name": instance,
@@ -74,19 +73,20 @@ def get_companies_involved_in_cb_df(df_carbon_bombs=None):
     """
     if df_carbon_bombs is None:
         df_carbon_bombs = load_carbon_bombs_database()
+
     df_carbon_bombs_company = df_carbon_bombs.loc[
         :,
         [
-            "Carbon_bomb_name_source_CB",
-            "Country_source_CB",
-            "Companies_involved_source_GEM",
+            "Project_name",
+            "Country",
+            "Parent_Company",
         ],
     ]
 
     # Force type of column Parent_Company
-    df_carbon_bombs_company[
-        "Companies_involved_source_GEM"
-    ] = df_carbon_bombs_company.loc[:, "Companies_involved_source_GEM"].astype("str")
+    df_carbon_bombs_company["Parent_Company"] = df_carbon_bombs_company.loc[
+        :, "Parent_Company"
+    ].astype("str")
 
     split_rows = df_carbon_bombs_company.apply(split_column_parent_company, axis=1)
 
