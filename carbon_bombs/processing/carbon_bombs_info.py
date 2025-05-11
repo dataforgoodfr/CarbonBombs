@@ -20,6 +20,7 @@ from carbon_bombs.io.khune_paper import load_carbon_bomb_gasoil_database
 from carbon_bombs.io.manual_match import manual_match_coal
 from carbon_bombs.io.manual_match import manual_match_gasoil
 from carbon_bombs.io.manual_match import manual_match_lat_long
+from carbon_bombs.io.rystad import load_rystad_cb_database
 from carbon_bombs.utils.location import get_world_region
 from carbon_bombs.utils.logger import LOGGER
 from carbon_bombs.utils.match_company_bocc import _get_companies_match_cb_to_bocc
@@ -167,7 +168,7 @@ def _handle_multiple_gem_mines(
     )
 
     tmp_merge = pd.concat(
-        [tmp_merge, group_df["Status"].agg(_handle_status_column)], axis=1
+        [tmp_merge, group_df["Project_status"].agg(_handle_status_column)], axis=1
     )
 
     tmp_merge[num_cols] = tmp_merge[num_cols].replace("None", np.nan).astype(float)
@@ -259,9 +260,6 @@ def _find_gem_mines(
             concat_cols=[
                 "GEM_ID",
                 "Unit_concerned",
-                "GEM_source",
-                "Operators",
-                # "Owners",
                 "Parent_Company",
             ],
             num_cols=["Latitude", "Longitude"],
@@ -282,149 +280,6 @@ def _find_gem_mines(
     )
 
     return matched_gem_df
-
-
-def _init_carbon_bombs_table(fuel: str) -> pd.DataFrame:
-    """Initialize the CB table for both gasoil and coal data.
-    It merges the CB dataset and GEM dataset using some rules.
-
-    - Try to match on Project Name / Country and Unit Name / Country
-    - If no match then use _find_gem_mines function
-
-    It also normalizes all columns for both coal and gasoil data
-
-    Parameters
-    ----------
-    fuel : str
-        Whether it loads `'gasoil'` or `'coal'` datasets
-
-    Returns
-    -------
-    pd.DataFrame
-        CB and GEM dataframe merged and normalized
-    """
-    LOGGER.debug(f"{fuel}: Start dataframe initialization")
-
-    if fuel == "gasoil":
-        df_cb = load_carbon_bomb_gasoil_database()
-        df_gem = load_gasoil_mine_gem_database()
-
-        # Keep specific GEM columns and rename it to normalize it with coal dataset
-        GEM_cols_mapping = {
-            "Unit ID": "GEM_ID",
-            "Unit name": "Unit_concerned",
-            "Country": "Country",
-            "Wiki URL": "GEM_source",
-            "Latitude": "Latitude",
-            "Longitude": "Longitude",
-            "Operator": "Operators",
-            # "Owner": "Owners",
-            "Parent": "Parent_Company",
-            "Status": "Status",
-            "Production start year": "Carbon_bomb_start_year",
-        }
-
-    else:
-        df_cb = load_carbon_bomb_coal_database()
-        df_gem = load_coal_mine_gem_database()
-
-        if "Operators" not in df_gem.columns:
-            df_gem["Operators"] = ""
-
-        # Keep specific GEM columns and rename it to normalize it with gasoil dataset
-        GEM_cols_mapping = {
-            "GEM Mine ID": "GEM_ID",  # updated, old "Mine IDs"
-            "Mine Name": "Unit_concerned",  # same
-            "Country": "Country",  # same
-            "GEM Wiki URLs": "GEM_source",  # updated, old "GEM Wiki Page (ENG)"
-            "Latitude": "Latitude",  # same
-            "Longitude": "Longitude",  # same
-            "Operators": "Operators",  # not in new dataset
-            # "Owners": "Owners",
-            "Parent Company": "Parent_Company",  # same
-            "Status": "Status",  # same
-            "Opening Year": "Carbon_bomb_start_year",  # same
-        }
-
-    LOGGER.debug(f"{fuel}: CB and GEM dataframes loaded")
-
-    df_gem = df_gem.loc[:, GEM_cols_mapping.keys()]
-    df_gem = df_gem.rename(columns=GEM_cols_mapping)
-    LOGGER.debug(
-        f"{fuel}: keep only wanted columns and rename columns done for GEM dataframe"
-    )
-
-    # create a key based on project name + country to get exact match
-    df_cb["tmp_project_name"] = df_cb["Project Name"] + "/" + df_cb["Country"]
-    df_gem["tmp_project_name"] = df_gem["Unit_concerned"] + "/" + df_gem["Country"]
-
-    df_gem = df_gem.drop_duplicates(subset=["tmp_project_name"])
-
-    # merge CB with exact match of GEM and keep not exact match with empty cells
-    # for the GEM data
-    df_merge = df_cb[
-        [
-            "tmp_project_name",
-            "New_project",
-            "Project Name",
-            "Country",
-            "Potential emissions (GtCO2)",
-            "Fuel",
-        ]
-    ].merge(df_gem, on="tmp_project_name", how="left", suffixes=("_cb", ""))
-    LOGGER.debug(f"{fuel}: merge CB and GEM dataframes by name / country keys")
-
-    # Remove merge column
-    df_merge = df_merge.drop(columns="tmp_project_name")
-    df_gem = df_gem.drop(columns="tmp_project_name")
-
-    # get filter for CB with no match or if the project is in manual match keys
-    _filter_no_match = df_merge["Unit_concerned"].isna() | df_merge[
-        "Project Name"
-    ].isin(manual_match_gasoil.keys())
-
-    # retrieve data for CB with no match
-    LOGGER.debug(f"{fuel}: retrieve informations for projects with no match start...")
-    used_mines = []
-    no_match_df = pd.concat(
-        df_merge.loc[_filter_no_match]
-        .apply(_find_gem_mines, axis=1, df_gem=df_gem, used_mines=used_mines, fuel=fuel)
-        .values
-    )
-    LOGGER.debug(f"{fuel}: retrieve informations for projects with no match done")
-
-    df_merge.loc[_filter_no_match, no_match_df.columns] = no_match_df.values
-    # drop country column (from GEM) since it can be null with the merge
-    # we keep Country_cb that is always completed
-    df_merge = df_merge.drop(columns=["Country"])
-
-    # Rename columns with final format
-    df_merge = df_merge.rename(
-        columns={
-            "New_project": "Status_source_CB",
-            "Project Name": "Carbon_Bomb_Name",
-            "Country_cb": "Country",
-            "Potential emissions (GtCO2)": "Potential_GtCO2",
-            "Fuel": "Fuel_type",
-        }
-    )
-
-    return df_merge
-
-
-def create_carbon_bombs_gasoil_table() -> pd.DataFrame:
-    """Combines data from the Global Oil and Gas Extraction Tracker and the Carbon
-    Bomb Oil and Gas database to create a table of oil and gas mines matched to
-    their corresponding carbon bombs.
-    """
-    return _init_carbon_bombs_table(fuel="gasoil")
-
-
-def create_carbon_bombs_coal_table() -> pd.DataFrame:
-    """Creates a pandas DataFrame of coal carbon bombs data matched with
-    corresponding coal mines data from the GEM database.
-    """
-    return _init_carbon_bombs_table(fuel="coal")
 
 
 def cancel_duplicated_rename(df: pd.DataFrame) -> pd.DataFrame:
@@ -572,7 +427,13 @@ def compute_clean_percentage(raw_line):
         if "%" in raw_line:
             # Case where percentage are indicated
             # replace "Fullwidth" char by basic char
-            raw_line = raw_line.replace("，", ",").replace("）", ")").replace("（", "(")
+            raw_line = (
+                raw_line.replace("，", ",")
+                .replace("）", ")")
+                .replace("（", "(")
+                .replace("]", ")")
+                .replace("[", "(")
+            )
             # remove useless spaces
             companies = (
                 re.sub("  +", " ", raw_line).replace(" ;", ";").replace(" ,", ",")
@@ -641,35 +502,12 @@ def _add_companies_involved(df_carbon_bombs: pd.DataFrame) -> pd.DataFrame:
     """
     # Clean percentage in column Parent_company
     # Clean data into Parent company columns
-    df_carbon_bombs["Parent_company_source_GEM"] = df_carbon_bombs[
-        "Parent_company_source_GEM"
-    ].fillna("")
-    # update with operators only if no parent companies and only None
-    df_carbon_bombs["Companies_involved_source_GEM"] = df_carbon_bombs.apply(
-        lambda row: (
-            row["Operators_source_GEM"]
-            if (row["Parent_company_source_GEM"] == "")
-            or (
-                row["Parent_company_source_GEM"]
-                .replace(PROJECT_SEPARATOR, "")
-                .replace("None", "")
-                == ""
-            )
-            else row["Parent_company_source_GEM"]
-        ),
-        axis=1,
-    )
-    # format Parent_Company with normed separator and clean percentage
-    df_carbon_bombs["Parent_company_source_GEM"] = df_carbon_bombs[
-        "Parent_company_source_GEM"
-    ].apply(compute_clean_percentage)
+    df_carbon_bombs["Parent_Company"] = df_carbon_bombs["Parent_Company"].fillna("")
 
-    df_carbon_bombs["Companies_involved_source_GEM"] = df_carbon_bombs[
-        "Companies_involved_source_GEM"
-    ].fillna("")
-    df_carbon_bombs["Companies_involved_source_GEM"] = df_carbon_bombs[
-        "Companies_involved_source_GEM"
-    ].apply(compute_clean_percentage)
+    # format Parent_Company with normed separator and clean percentage
+    df_carbon_bombs["Parent_Company"] = df_carbon_bombs["Parent_Company"].apply(
+        compute_clean_percentage
+    )
 
     # uniform with BOCC companies name
     dict_match = _get_companies_match_cb_to_bocc(df_carbon_bombs)
@@ -689,9 +527,9 @@ def _add_companies_involved(df_carbon_bombs: pd.DataFrame) -> pd.DataFrame:
 
         return PROJECT_SEPARATOR.join(new_comp)
 
-    df_carbon_bombs["Companies_involved_source_GEM"] = df_carbon_bombs[
-        "Companies_involved_source_GEM"
-    ].apply(replace_comp)
+    df_carbon_bombs["Parent_Company"] = df_carbon_bombs["Parent_Company"].apply(
+        replace_comp
+    )
 
     return df_carbon_bombs
 
@@ -707,25 +545,13 @@ def _handle_missing_values_gem(df_carbon_bombs: pd.DataFrame) -> pd.DataFrame:
 
     # Secondly fulfill cell with New_project = True and empty GEM_ID value
     df_carbon_bombs.loc[
-        (df_carbon_bombs["Status_source_CB"] == "operating")
-        & (df_carbon_bombs["GEM_id_source_GEM"].isna()),
-        ["Parent_company_source_GEM"],
+        (df_carbon_bombs["GEM_ID"].isna()),
+        ["Parent_Company"],
     ] = "No informations on company (100.0%)"
 
     df_carbon_bombs.loc[
-        (df_carbon_bombs["Status_source_CB"] == "operating")
-        & (df_carbon_bombs["GEM_id_source_GEM"].isna()),
-        [
-            "GEM_id_source_GEM",
-            "GEM_url_source_GEM",
-        ],
-    ] = "No informations available on GEM"
-
-    # Thirdly fulfill cell with New_project = False and empty GEM_ID value
-    df_carbon_bombs.loc[
-        (df_carbon_bombs["Status_source_CB"] != "operating")
-        & (df_carbon_bombs["GEM_id_source_GEM"].isna()),
-        ["GEM_id_source_GEM", "GEM_url_source_GEM"],
+        (df_carbon_bombs["GEM_ID"].isna()),
+        ["GEM_ID"],
     ] = "No informations available on GEM"
 
     return df_carbon_bombs
@@ -769,9 +595,19 @@ def add_noise_lat_long(x: float) -> float:
 
 def _add_manual_matching_lat_long(df_carbon_bombs: pd.DataFrame) -> pd.DataFrame:
     """Set Latitude and Longitude with manual matching"""
+
+    print(manual_match_lat_long)
+
+    manual_match_lat_long = manual_match_lat_long.rename(
+        columns={
+            "Carbon_bomb_name_source_CB": "Project_name",
+            "Country_source_CB": "Country",
+        }
+    )
+
     df_carbon_bombs = df_carbon_bombs.merge(
         manual_match_lat_long,
-        on=["Carbon_bomb_name_source_CB", "Country_source_CB"],
+        on=["Project_name", "Country"],
         how="left",
         suffixes=("", "_TMP"),
     )
@@ -810,8 +646,8 @@ def _add_country_lat_long_when_missing(df_carbon_bombs: pd.DataFrame) -> pd.Data
         df_carbon_bombs["Latitude"].isnull() | df_carbon_bombs["Longitude"].isnull()
     ]
     for index, rows in df_missing_coordinates.iterrows():
-        name = rows["Carbon_bomb_name_source_CB"]
-        country = rows["Country_source_CB"]
+        name = rows["Project_name"]
+        country = rows["Country"]
         LOGGER.debug(
             f"No coordinates for `{name}` use latitude / longitude of {country}"
         )
@@ -891,6 +727,256 @@ def get_information_from_GEM(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def _init_carbon_bombs_table(fuel: str) -> pd.DataFrame:
+    """Initialize the CB table for both gasoil and coal data.
+    It merges the CB dataset and GEM dataset using some rules.
+
+    - Try to match on Project Name / Country and Unit Name / Country
+    - If no match then use _find_gem_mines function
+
+    It also normalizes all columns for both coal and gasoil data
+
+    Parameters
+    ----------
+    fuel : str
+        Whether it loads `'gasoil'` or `'coal'` datasets
+
+    Returns
+    -------
+    pd.DataFrame
+        CB and GEM dataframe merged and normalized
+    """
+    LOGGER.debug(f"{fuel}: Start dataframe initialization")
+
+    if fuel == "gasoil":
+        df_cb = load_carbon_bomb_gasoil_database()
+        df_gem = load_gasoil_mine_gem_database()
+
+        # Keep specific GEM columns and rename it to normalize it with coal dataset
+        GEM_cols_mapping = {
+            "Unit ID": "GEM_ID",
+            "Unit name": "Unit_concerned",
+            "Country": "Country",
+            "Latitude": "Latitude",
+            "Longitude": "Longitude",
+            "Parent": "Parent_Company",
+            "Status": "Project_status",
+            "Production start year": "Start_year",
+        }
+
+    else:
+        df_cb = load_carbon_bomb_coal_database()
+        df_gem = load_coal_mine_gem_database()
+
+        # Keep specific GEM columns and rename it to normalize it with gasoil dataset
+        GEM_cols_mapping = {
+            "GEM Mine ID": "GEM_ID",
+            "Mine Name": "Unit_concerned",
+            "Country": "Country",
+            "Latitude": "Latitude",
+            "Longitude": "Longitude",
+            "Parent Company": "Parent_Company",
+            "Status": "Project_status",
+            "Opening Year": "Start_year",
+        }
+
+    LOGGER.debug(f"{fuel}: CB and GEM dataframes loaded")
+
+    df_gem = df_gem.loc[:, GEM_cols_mapping.keys()]
+    df_gem = df_gem.rename(columns=GEM_cols_mapping)
+    LOGGER.debug(
+        f"{fuel}: keep only wanted columns and rename columns done for GEM dataframe"
+    )
+
+    # create a key based on project name + country to get exact match
+    df_cb["tmp_project_name"] = df_cb["Project Name"] + "/" + df_cb["Country"]
+    df_gem["tmp_project_name"] = df_gem["Unit_concerned"] + "/" + df_gem["Country"]
+
+    df_gem = df_gem.drop_duplicates(subset=["tmp_project_name"])
+
+    # merge CB with exact match of GEM and keep not exact match with empty cells
+    # for the GEM data
+    df_merge = df_cb[
+        [
+            "tmp_project_name",
+            "New_project",
+            "Project Name",
+            "Country",
+            "Potential emissions (GtCO2)",
+            "Fuel",
+        ]
+    ].merge(df_gem, on="tmp_project_name", how="left", suffixes=("_cb", ""))
+    LOGGER.debug(f"{fuel}: merge CB and GEM dataframes by name / country keys")
+
+    # Remove merge column
+    df_merge = df_merge.drop(columns="tmp_project_name")
+    df_gem = df_gem.drop(columns="tmp_project_name")
+
+    # get filter for CB with no match or if the project is in manual match keys
+    _filter_no_match = df_merge["Unit_concerned"].isna() | df_merge[
+        "Project Name"
+    ].isin(manual_match_gasoil.keys())
+
+    # retrieve data for CB with no match
+    LOGGER.debug(f"{fuel}: retrieve informations for projects with no match start...")
+    used_mines = []
+    no_match_df = pd.concat(
+        df_merge.loc[_filter_no_match]
+        .apply(_find_gem_mines, axis=1, df_gem=df_gem, used_mines=used_mines, fuel=fuel)
+        .values
+    )
+    LOGGER.debug(f"{fuel}: retrieve informations for projects with no match done")
+
+    df_merge.loc[_filter_no_match, no_match_df.columns] = no_match_df.values
+    # drop country column (from GEM) since it can be null with the merge
+    # we keep Country_cb that is always completed
+    df_merge = df_merge.drop(columns=["Country"])
+
+    # Rename columns with final format
+    df_merge = df_merge.rename(
+        columns={
+            "New_project": "Status_source_CB",
+            "Project Name": "Project_name",
+            "Country_cb": "Country",
+            "Potential emissions (GtCO2)": "Potential_GtCO2_total",
+            "Fuel": "Fuel_type",
+        }
+    )
+
+    LOGGER.debug("Add world region to dataframe")
+    df_merge["World_region"] = (
+        df_merge["Country"]
+        # .replace("UAE", "United Arab Emirates") # UAE cannot be found in get_world_region
+        .apply(get_world_region)
+    )
+
+    df_merge["Data_source"] = "GEM"
+
+    # Replace Türkiye to Turkey
+    df_merge = df_merge.replace({"Türkiye": "Turkey"})
+
+    # Add companies involved column
+    LOGGER.debug("Add companies involved column to CB dataframe")
+    df_merge = _add_companies_involved(df_merge)
+
+    # Set status to lower
+    df_merge["Project_status"] = df_merge["Project_status"].str.lower()
+
+    # Handle missing values by putting text instead
+    LOGGER.debug("Update missing values for GEM columns")
+    df_merge = _handle_missing_values_gem(df_merge)
+
+    # create status column by using Status from GEM and Status from CB if first one is NaN
+    # LOGGER.debug("Add new status columns into CB dataframe")
+    # df_merge = _add_custom_status_columns(df_merge)
+
+    # Add Lat long source
+    df_merge["Latitude_longitude_source"] = "GEM"
+
+    # Add manual matchin Lat long
+    # LOGGER.debug("Add manual matching country latitude and longitude")
+    # df_merge = _add_manual_matching_lat_long(df_merge)
+
+    # Handle Lat long of country when no lat long found
+    LOGGER.debug("Add country latitude and longitude when no coordinate found")
+    df_merge = _add_country_lat_long_when_missing(df_merge)
+
+    # Retrieve description and start year from GEM wiki page
+    # LOGGER.debug("Add GEM description and start year columns into CB dataframe")
+    # df_merge = get_information_from_GEM(df_merge)
+
+    # Specific fix fort Khafji bomb that is set to Kuwait and Saudi Arabia
+    # -> attribute this carbon bomb to Kuwait to insure a better repartition
+    # (Kuwait has 3 bombs and Saudi Arabia 23)
+    df_merge.loc[df_merge.Project_name == "Khafji", "Country"] = "Kuwait"
+
+    # Reorder columns and sort by CB Name and country
+    final_columns_order = [
+        "Project_name",
+        "Country",
+        "World_region",
+        "Latitude",
+        "Longitude",
+        "Start_year",
+        "Project_status",
+        "Potential_GtCO2_total",
+        "Fuel_type",
+        "Data_source",
+        "GEM_ID",
+        "Parent_Company",
+        "Latitude_longitude_source",
+    ]
+
+    LOGGER.debug("Reorder CB dataframe columns and sort dataframe by name and country")
+    df_merge = df_merge[final_columns_order].sort_values(
+        by=["Project_name", "Country"], ascending=True
+    )
+
+    return df_merge
+
+
+def create_carbon_bombs_gasoil_table() -> pd.DataFrame:
+    """Combines data from the Global Oil and Gas Extraction Tracker and the Carbon
+    Bomb Oil and Gas database to create a table of oil and gas mines matched to
+    their corresponding carbon bombs.
+    """
+    rystad_df = load_rystad_cb_database()
+    # Q: should we manual match? --> my opinion: no need we can use the Rystad name
+
+    rystad_df["Start_year"] = rystad_df["Start_year"].astype(int)
+
+    rystad_df["World_region"] = (
+        rystad_df["Country"]
+        .replace(
+            "UAE", "United Arab Emirates"
+        )  # UAE cannot be found in get_world_region
+        .apply(get_world_region)
+    )
+
+    # define status
+    rystad_df["Project_status"] = np.where(
+        rystad_df["Potential_GtCO2_producing"] > 0,
+        "producing",
+        np.where(
+            rystad_df["Potential_GtCO2_short_term_expansion"] > 0,
+            "short term expansion",
+            "long term expansion",
+        ),
+    )
+
+    rystad_df["Fuel_type"] = "Oil&Gas"
+    rystad_df["Data_source"] = "Rystad"
+    rystad_df["Latitude_longitude_source"] = "Rystad"
+
+    columns_sorted = [
+        "Project_name",
+        "Country",
+        "World_region",
+        "Latitude",
+        "Longitude",
+        "Latitude_longitude_source",
+        "Start_year",
+        "Project_status",
+        "Potential_GtCO2_producing",
+        "Potential_GtCO2_short_term_expansion",
+        "Potential_GtCO2_long_term_expansion",
+        "Potential_GtCO2_total",
+        "Fuel_type",
+        "Data_source",
+    ]
+
+    rystad_df = rystad_df[columns_sorted]
+
+    return rystad_df
+
+
+def create_carbon_bombs_coal_table() -> pd.DataFrame:
+    """Creates a pandas DataFrame of coal carbon bombs data matched with
+    corresponding coal mines data from the GEM database.
+    """
+    return _init_carbon_bombs_table(fuel="coal")
+
+
 def create_carbon_bombs_table() -> pd.DataFrame:
     """
     Creates a table of carbon bomb projects by merging coal and gas/oil tables,
@@ -904,115 +990,31 @@ def create_carbon_bombs_table() -> pd.DataFrame:
     """
     LOGGER.debug("Start creation of carbon bombs dataset")
     LOGGER.debug("Load dataframe coal and gasoil")
+
     df_coal = create_carbon_bombs_coal_table()
     df_gasoil = create_carbon_bombs_gasoil_table()
 
-    # Cancel renaming of project that have the same name but are located in
-    # different country (see function load_carbon_bomb_gasoil_database())
-    # Only apply for the moment to gasoil dataframe
-    LOGGER.debug("Cancel duplicated project name renaming for gasoil projects")
-    df_gasoil = cancel_duplicated_rename(df_gasoil)
+    cb_df = pd.concat([df_gasoil, df_coal]).reset_index(drop=True)
 
-    # Merge dataframes
-    LOGGER.debug("Merge coal and gasoil dataframes")
-    df_carbon_bombs = pd.concat([df_coal, df_gasoil], axis=0)
-
-    # Replace Türkiye to Turkey
-    df_carbon_bombs = df_carbon_bombs.replace({"Türkiye": "Turkey"})
-
-    # Remap dataframe columns to display data source
-    # Not efficient might be rework (no time for that right now)
-    name_mapping_source = {
-        "New_project": "Status_source_CB",
-        "Carbon_Bomb_Name": "Carbon_bomb_name_source_CB",
-        "Country": "Country_source_CB",
-        "Potential_GtCO2": "Potential_GtCO2_source_CB",
-        "Fuel_type": "Fuel_type_source_CB",
-        "GEM_ID": "GEM_id_source_GEM",
-        "GEM_source": "GEM_url_source_GEM",
-        "Latitude": "Latitude",
-        "Longitude": "Longitude",
-        "Operators": "Operators_source_GEM",
-        "Parent_Company": "Parent_company_source_GEM",
-        "Unit_concerned": "GEM_project_name_source_GEM",
-        "Status": "Status_source_GEM",
-    }
-    LOGGER.debug("Rename columns for CB dataframe")
-    df_carbon_bombs = df_carbon_bombs.rename(columns=name_mapping_source)
-
-    # Add companies involved column
-    LOGGER.debug("Add companies involved column to CB dataframe")
-    df_carbon_bombs = _add_companies_involved(df_carbon_bombs)
-
-    # Set status to lower
-    df_carbon_bombs["Status_source_GEM"] = df_carbon_bombs[
-        "Status_source_GEM"
-    ].str.lower()
-
-    # Handle missing values by putting text instead
-    LOGGER.debug("Update missing values for GEM columns")
-    df_carbon_bombs = _handle_missing_values_gem(df_carbon_bombs)
-
-    # create status column by using Status from GEM and Status from CB if first one is NaN
-    LOGGER.debug("Add new status columns into CB dataframe")
-    df_carbon_bombs = _add_custom_status_columns(df_carbon_bombs)
-
-    # Add Lat long source
-    df_carbon_bombs["Latitude_longitude_source"] = "GEM"
-
-    # Add manual matchin Lat long
-    LOGGER.debug("Add manual matching country latitude and longitude")
-    df_carbon_bombs = _add_manual_matching_lat_long(df_carbon_bombs)
-
-    # Handle Lat long of country when no lat long found
-    LOGGER.debug("Add country latitude and longitude when no coordinate found")
-    df_carbon_bombs = _add_country_lat_long_when_missing(df_carbon_bombs)
-
-    # Retrieve description and start year from GEM wiki page
-    LOGGER.debug("Add GEM description and start year columns into CB dataframe")
-    df_carbon_bombs = get_information_from_GEM(df_carbon_bombs)
-
-    # Specific fix fort Khafji bomb that is set to Kuwait and Saudi Arabia
-    # -> attribute this carbon bomb to Kuwait to insure a better repartition
-    # (Kuwait has 3 bombs and Saudi Arabia 23)
-    df_carbon_bombs.loc[
-        df_carbon_bombs.Carbon_bomb_name_source_CB == "Khafji", "Country_source_CB"
-    ] = "Kuwait"
-
-    # Add World Region associated to Headquarters country
-    LOGGER.debug("Add world region column into CB dataframe")
-    df_carbon_bombs["World_region"] = (
-        df_carbon_bombs["Country_source_CB"]
-        .replace({"Türkiye": "Turkey"})
-        .apply(get_world_region)
-    )
-
-    # Reorder columns and sort by CB Name and country
-    final_columns_order = [
-        "Carbon_bomb_name_source_CB",
-        "Country_source_CB",
+    final_columns = [
+        "Project_name",
+        "Country",
         "World_region",
-        "Potential_GtCO2_source_CB",
-        "Fuel_type_source_CB",
-        "GEM_id_source_GEM",
-        "GEM_url_source_GEM",
         "Latitude",
         "Longitude",
         "Latitude_longitude_source",
-        "Operators_source_GEM",
-        "Parent_company_source_GEM",
-        "Companies_involved_source_GEM",
-        "GEM_project_name_source_GEM",
-        "Carbon_bomb_description",
-        "Carbon_bomb_start_year",
-        "Status_source_CB",
-        "Status_source_GEM",
-        "Status_lvl_1",
-        "Status_lvl_2",
+        "Start_year",
+        "Project_status",
+        "Potential_GtCO2_total",
+        "Potential_GtCO2_producing",
+        "Potential_GtCO2_short_term_expansion",
+        "Potential_GtCO2_long_term_expansion",
+        "Fuel_type",
+        "Data_source",
+        # 'GEM_ID',
+        "Parent_Company",
     ]
-    LOGGER.debug("Reorder CB dataframe columns and sort dataframe by name and country")
-    df_carbon_bombs = df_carbon_bombs[final_columns_order].sort_values(
-        by=["Carbon_bomb_name_source_CB", "Country_source_CB"], ascending=True
-    )
 
-    return df_carbon_bombs
+    cb_df = cb_df[final_columns]
+
+    return cb_df
