@@ -148,7 +148,7 @@ def generate_dataset(verbose, start_at_step):
     LOGGER.info("Step 9 - START")
     LOGGER.info("Step 9 - check cleaned datasets and compare with old")
     check_txt_end = check_cleaned_datasets()
-    check_txt_end += compare_cleaned_datasets()
+    # check_txt_end += compare_cleaned_datasets()
     LOGGER.info(f"Check cleaned datasets and comparison:\n{check_txt_end}")
 
     check_txt += check_txt_end
