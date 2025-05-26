@@ -1,112 +1,87 @@
 """Functions to read Rystad dataset for Carbon Bombs and Gasoil projects"""
-
 import pandas as pd
 
 from carbon_bombs.conf import FPATH_SRC_RYSTAD_CB
-from carbon_bombs.conf import SHEETNAME_RYSTAD_CB_1GT
 from carbon_bombs.conf import SHEETNAME_RYSTAD_CB_EMISSION
 from carbon_bombs.conf import SHEETNAME_RYSTAD_CB_COMPANY
 from carbon_bombs.conf import SHEETNAME_RYSTAD_GASOIL_EMISSION
+from carbon_bombs.conf import SHEETNAME_RYSTAD_CB_EMISSION_INFERIOR_1GT
 from carbon_bombs.utils.logger import LOGGER
 from carbon_bombs.utils.location import clean_project_names_with_iso
 
 
-def _load_rystad_data(sheet_name):
+def load_rystad_emission_database(sheet_name: str) -> pd.DataFrame:
     """
-    Load Rystad database (same format for different sheets)
+    Load Rystad Carbon Bombs and simple gasoil projects emissions data from Excel.
+
+    Parameters
+    ----------
+    sheet_name : str
+        Name of the sheet to load.
 
     Returns
     -------
-    pandas.DataFrame:
-        A dataframe containing the data from the database.
+    pandas.DataFrame
+        A dataframe containing the data from the specified sheet.
     """
+    if sheet_name == SHEETNAME_RYSTAD_CB_EMISSION:
+        renamed_columns = {
+            "Project name": "Project_name",
+            "Country": "Country",
+            "Latitude": "Latitude",
+            "Longitude": "Longitude",
+            "Start-up year min asset": "Start_up_year",
+            "Producing  - Potential emissions (GTCO2)": "Producing_potential_emissions_in_GTCO2",
+            "Short term expansion - Potential emissions (GTCO2)": "Short_term_expansion_potential_emissions_in_GTCO2",
+            "Long term expansion - Potential emissions (GTCO2)": "Long_term_expansion_potential_emissions_in_GTCO2",
+            "Total potential emissions (GTCO2)": "Total_potential_emissions_in_GTCO2",
+        }
+        log_message = "Read Rystad data: all Carbon Bombs project emissions > 1 GtCO2"
+    elif sheet_name == SHEETNAME_RYSTAD_CB_EMISSION_INFERIOR_1GT:
+        renamed_columns = {
+            "Project name": "Project_name",
+            "Country": "Country",
+            "Latitude": "Latitude",
+            "Longitude": "Longitude",
+            "Start-up year min asset": "Start_up_year",
+            "Producing  - Potential emissions (GTCO2)": "Producing_potential_emissions_in_GTCO2",
+            "Short term expansion - Potential emissions (GTCO2)": "Short_term_expansion_potential_emissions_in_GTCO2",
+            "Long term expansion - Potential emissions (GTCO2)": "Long_term_expansion_potential_emissions_in_GTCO2",
+            "Total potential emissions (GTCO2)": "Total_potential_emissions_in_GTCO2",
+        }
+        log_message = "Read Rystad data: all Carbon Bombs project emissions < 1 GtCO2"
+    elif sheet_name == SHEETNAME_RYSTAD_GASOIL_EMISSION:
+        renamed_columns = {
+            "Project name": "Project_name",
+            "Country": "Country",
+            "Latitude": "Latitude",
+            "Longitude": "Longitude",
+            "Start-up year min asset": "Start_up_year",
+            "Producing  - Potential emissions": "Producing_potential_emissions",
+            "Short term expansion - Potential emissions": "Short_term_expansion_potential_emissions",
+            "Long term expansion - Potential emissions": "Long_term_expansion_potential_emissions",
+            "Total potential emissions (mtCO2)": "Total_potential_emissions",
+        }
+        log_message = "Read Rystad data: all Gasoil project emissions > 5MTCO2"
+    else:
+        raise ValueError(f"Unsupported sheet name: {sheet_name}")
+
+    LOGGER.debug(log_message)
 
     df = pd.read_excel(
         FPATH_SRC_RYSTAD_CB,
         sheet_name=sheet_name,
         engine="openpyxl",
     )
-
-    renamed_columns = {
-        "Project name": "Project_name",
-        "Country": "Country",
-        "Latitude": "Latitude",
-        "Longitude": "Longitude",
-        "Start-up year min asset": "Start_year",
-    }
-
-    if sheet_name != SHEETNAME_RYSTAD_GASOIL_EMISSION:
-        renamed_columns["Producing  - Potential emissions (GTCO2)"] = (
-            "Potential_GtCO2_producing"
-        )
-        renamed_columns["Short term expansion - Potential emissions (GTCO2)"] = (
-            "Potential_GtCO2_short_term_expansion"
-        )
-        renamed_columns["Long term expansion - Potential emissions (GTCO2)"] = (
-            "Potential_GtCO2_long_term_expansion"
-        )
-        renamed_columns["Total potential emissions (GTCO2)"] = "Potential_GtCO2_total"
-    else:
-        renamed_columns["Producing  - Potential emissions"] = (
-            "Potential_mtCO2_producing"
-        )
-        renamed_columns["Short term expansion - Potential emissions"] = (
-            "Potential_mtCO2_short_term_expansion"
-        )
-        renamed_columns["Long term expansion - Potential emissions"] = (
-            "Potential_mtCO2_long_term_expansion"
-        )
-        renamed_columns["Total potential emissions (mtCO2)"] = "Potential_mtCO2_total"
-
-    # Only keep columns of interest for the project
+    # Only keep relevant columns
     df = df.loc[:, renamed_columns.keys()]
     # Rename columns
     df = df.rename(columns=renamed_columns)
-    # Remove last row if Project_name = "SUMS"
+    # Remove total row if applicable
     df = df[df["Project_name"] != "SUMS"]
     # Clean project names
     clean_project_names_with_iso(df)
-
     return df
-
-
-def load_rystad_cb_database():
-    """
-    Load Carbon Bombs database >1GT from Rystad.
-
-    Returns
-    -------
-    pandas.DataFrame:
-        A dataframe containing the data from the database.
-    """
-    LOGGER.debug("Read Rystad data: all Carbon bombs >1GT")
-    return _load_rystad_data(SHEETNAME_RYSTAD_CB_1GT)
-
-
-def load_rystad_cb_emission_database():
-    """
-    Load Carbon Bombs database emission from Rystad.
-
-    Returns
-    -------
-    pandas.DataFrame:
-        A dataframe containing the data from the database.
-    """
-    LOGGER.debug("Read Rystad data: all Carbon Bombs project emissions")
-    return _load_rystad_data(SHEETNAME_RYSTAD_CB_EMISSION)
-
-
-def load_rystad_gasoil_emission_database():
-    """
-    Load Gasoil database emission from Rystad.
-
-    Returns
-    -------
-    pandas.DataFrame:
-        A dataframe containing the data from the database.
-    """
-    LOGGER.debug("Read Rystad data: all Gasoil project emissions > 5MTCO2")
-    return _load_rystad_data(SHEETNAME_RYSTAD_GASOIL_EMISSION)
 
 
 def load_rystad_cb_company_database():

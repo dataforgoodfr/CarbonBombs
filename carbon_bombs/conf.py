@@ -19,7 +19,7 @@ FPATH_SRC_KHUNE_PAPER = f"{DATA_SOURCE_PATH}/1-s2.0-S0301421522001756-mmc2.xlsx"
 # FPATH_SRC_GEM_COAL = f"{DATA_SOURCE_PATH}/Global-Coal-Mine-Tracker-October-2023.xlsx"
 FPATH_SRC_GEM_COAL = f"{DATA_SOURCE_PATH}/Global-Coal-Mine-Tracker-April-2024.xlsx"
 FPATH_SRC_GEM_GASOIL = (
-    f"{DATA_SOURCE_PATH}/Global-Oil-and-Gas-Extraction-Tracker-July-2023.xlsx"
+    f"{DATA_SOURCE_PATH}/Global-Oil-and-Gas-Extraction-Tracker-Feb-2023.xlsx"
 )
 FPATH_SRC_GOGEL_LNG = (
     f"{DATA_SOURCE_PATH}/LNG-Liquefaction-Projects-from-GOGEL-2024.xlsx"
@@ -39,8 +39,8 @@ FPATH_SRC_UNDATA_CO2 = (
     f"{DATA_SOURCE_PATH}/undata_SYB65_310_202209_Carbon Dioxide Emission Estimates.csv"
 )
 FPATH_SRC_RYSTAD_CB = f"{DATA_SOURCE_PATH}/Carbon_Bombs_Projects.xlsx"
-SHEETNAME_RYSTAD_CB_1GT = "Carbon_Bombs_1GT"
-SHEETNAME_RYSTAD_CB_EMISSION = "<1GT (no data publication)"
+SHEETNAME_RYSTAD_CB_EMISSION_INFERIOR_1GT = "V1_method_0.1GT"
+SHEETNAME_RYSTAD_CB_EMISSION = "Carbon_Bombs_1GT"
 SHEETNAME_RYSTAD_CB_COMPANY = "Carbon_Bombs_1GT_Companies"
 SHEETNAME_RYSTAD_GASOIL_EMISSION = "Carbon_Bombs_Projects"
 
