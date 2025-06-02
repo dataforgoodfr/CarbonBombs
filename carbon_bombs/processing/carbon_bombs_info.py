@@ -772,12 +772,16 @@ def _init_carbon_bombs_table(fuel: str) -> pd.DataFrame:
         GEM_cols_mapping = {
             "GEM Mine ID": "GEM_ID",
             "Mine Name": "Unit_concerned",
-            "Country": "Country",
+            "Country / Area": "Country",
             "Latitude": "Latitude",
             "Longitude": "Longitude",
             "Parent Company": "Parent_Company",
             "Status": "Project_status",
             "Opening Year": "Start_year",
+            "Total Reserves (Proven and Probable, Mt)": "Reserves",
+            "Total Resource (Inferred, Indicated, Measured)": "Resources",
+            "Coal Type": "Coal_Type",
+            "Coal Grade": "Coal_Grade",
         }
 
     LOGGER.debug(f"{fuel}: CB and GEM dataframes loaded")
@@ -890,6 +894,10 @@ def _init_carbon_bombs_table(fuel: str) -> pd.DataFrame:
     # (Kuwait has 3 bombs and Saudi Arabia 23)
     df_merge.loc[df_merge.Project_name == "Khafji", "Country"] = "Kuwait"
 
+    df_merge["volume"] = np.where(
+        df_merge["Reserves"].isnull(), df_merge["Resources"], df_merge["Reserves"]
+    )
+
     # Reorder columns and sort by CB Name and country
     final_columns_order = [
         "Project_name",
@@ -905,6 +913,11 @@ def _init_carbon_bombs_table(fuel: str) -> pd.DataFrame:
         "GEM_ID",
         "Parent_Company",
         "Latitude_longitude_source",
+        "Reserves",
+        "Resources",
+        "volume",
+        "Coal_Type",
+        "Coal_Grade",
     ]
 
     LOGGER.debug("Reorder CB dataframe columns and sort dataframe by name and country")

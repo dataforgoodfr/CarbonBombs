@@ -56,9 +56,7 @@ cb_source_df = cb_source_df.replace({"Türkiye": "Turkey"})
 
 # GEM coal ans gasoil source
 # gem_coal_df = pd.read_excel(FPATH_SRC_GEM_COAL, sheet_name="Global Coal Mine Tracker")
-gem_coal_df = pd.read_excel(
-    FPATH_SRC_GEM_COAL, sheet_name="Global Coal Mine Tracker (Non-C"
-)
+gem_coal_df = pd.read_excel(FPATH_SRC_GEM_COAL, sheet_name="GCMT Non-closed Mines")
 gem_gasoil_df = pd.read_excel(
     FPATH_SRC_GEM_GASOIL, sheet_name="Main data", engine="openpyxl"
 )

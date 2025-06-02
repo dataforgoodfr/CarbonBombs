@@ -65,10 +65,10 @@ def load_coal_mine_gem_database():
     "./data_sources/Global-Coal-Mine-Tracker-April-2023.xlsx".
     The sheet to be read is "Global Coal Mine Tracker".
     """
-    LOGGER.debug("Read GEM source: `Global Coal Mine Tracker (Non-C`")
+    LOGGER.debug("Read GEM source: `GCMT Non-closed Mines`")
     df = pd.read_excel(
         FPATH_SRC_GEM_COAL,
-        sheet_name="Global Coal Mine Tracker (Non-C",
+        sheet_name="GCMT Non-closed Mines",
         engine="openpyxl",
     )
     return df
