@@ -17,7 +17,7 @@ DATA_NEO4J_PATH = f"{REPO_PATH}/data_neo4j"
 # File names of sources
 FPATH_SRC_KHUNE_PAPER = f"{DATA_SOURCE_PATH}/1-s2.0-S0301421522001756-mmc2.xlsx"
 # FPATH_SRC_GEM_COAL = f"{DATA_SOURCE_PATH}/Global-Coal-Mine-Tracker-October-2023.xlsx"
-FPATH_SRC_GEM_COAL = f"{DATA_SOURCE_PATH}/Global-Coal-Mine-Tracker-April-2024.xlsx"
+FPATH_SRC_GEM_COAL = f"{DATA_SOURCE_PATH}/Global-Coal-Mine-Tracker-May-2025.xlsx"
 FPATH_SRC_GEM_GASOIL = (
     f"{DATA_SOURCE_PATH}/Global-Oil-and-Gas-Extraction-Tracker-July-2023.xlsx"
 )

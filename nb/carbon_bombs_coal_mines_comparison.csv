@@ -1,0 +1,417 @@
+Project Name;In Paper;In GEM;GEM > 1Gt;Country_gem;Country_paper;year;Project_status_gem;Project_status_paper;Coal_Type_gem;Coal_Type_paper;Reserves (Million tons)_gem;Reserves (Million tons)_paper;total_emissions_gem;total_emissions_paper;details;Source_paper
+Aduunchuluun Coal Mine;False;True;True;Mongolia;;1955;Operating;;Anthracite;;424.0;;1.113;;[Current - Anthracite - 1.113];
+Afşin-Elbistan Coal Mines;True;True;True;Türkiye;Turkey;1979;Operating;Operating;Lignite;Lignite;2652.0;3400.0;4.328;4.08646;[Current - Lignite - 3.187][Expansion - Lignite - 1.141];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Alpha Coal Project;False;True;True;Australia;;;Cancelled;;Subbituminous;;821.0;;1.491;;[New - Subbituminous - 1.491];
+Alpha North Coal Mine;True;False;False;;Australia;;;Proposed;;Subbituminous;;1400.0;;2.542806;;Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Alpha West Coal Project;False;True;True;Australia;;;Cancelled;;Subbituminous;;1800.0;;3.269;;[New - Subbituminous - 3.269];
+Amaam Coal Mine;False;True;True;Russia;;;Shelved;;Bituminous (Met);;521.0;;1.39;;[New - Bituminous (Met) - 1.39];
+Angren Coal Mine;True;True;False;Uzbekistan;Uzbekistan;1948;Operating;Proposed;Lignite;Lignite;700.0;2000.0;0.841;2.4038;[Current - Lignite - 0.841][Expansion - Lignite - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Anjialing Open-Pit Mine;True;True;True;China;China;2006;Operating;Operating;Bituminous;Bituminous;428.0;428.0;1.045;1.04461104;[Current - Bituminous - 1.045];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Antaibao Surface Mine;True;True;True;China;China;1987;Operating;Operating;Bituminous;Bituminous;491.0;491.0;1.198;1.19837388;[Current - Bituminous - 1.198];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Arshanovsky Coal Mine;True;True;True;Russia;Russian Federation;2015;Operating;Operating;Subbituminous;Bituminous;903.0;700.0;1.64;1.708476;[Current - Subbituminous - 1.64][Current - Subbituminous - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+BIB Coal Mine;True;False;False;;Indonesia;;;Operating;;Subbituminous;;591.0;;1.07342739;;Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Ba Leng Coal Mine;True;True;True;China;China;;Proposed;Proposed;Bituminous;Bituminous;741.0;438.96;1.809;1.071360893;[New - Bituminous - 1.809];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Baijia Haizi Coal Mine;True;True;True;China;China;2025;Proposed;Proposed;Bituminous;Bituminous;2033.0;2032.9;4.962;4.961658372;[New - Bituminous - 4.962];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Baishihu Surface Mine;True;True;True;China;China;2017;Operating;Operating;Bituminous;Bituminous;459.0;530.0;1.12;1.2935604;[Expansion - Bituminous - 1.12];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Baitarni West Coal Mine;False;True;True;India;;;Proposed;;Subbituminous;;1097.0;;1.992;;[New - Subbituminous - 1.992];
+Baiyanghe Coal Mine;True;True;True;China;China;2024;Proposed;Proposed;Bituminous;Bituminous;504.0;508.0;1.23;1.23986544;[New - Bituminous - 1.23];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Baiyinhua No.3 Surface Mine;True;True;False;China;China;2007;Operating;Operating;Lignite;Lignite;767.0;1314.0;0.922;1.5792966;[Current - Lignite - 0.922];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Balaram Coal Mine;True;True;False;India;India;1991;Operating;Proposed;Subbituminous;Subbituminous;67.0;756.0;0.122;1.37311524;[Current - Subbituminous - 0.122][Expansion - Subbituminous - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Balasu Coal Mine;True;True;True;China;China;;Proposed;Proposed;Bituminous;Bituminous;2263.0;2622.7;5.523;6.401171436;[New - Bituminous - 5.523];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Banai & Bhalumuda Coal Mine;False;True;True;India;;;Cancelled;;Subbituminous;;1376.0;;2.499;;[New - Subbituminous - 2.499];
+Banhardih Coal Mine;True;True;True;India;India;;Proposed;Proposed;Lignite;n/d;1372.0;553.0;1.649;1.106;[New - Lignite - 1.649];http://www.coalcontroller.gov.in/writereaddata/files/download/coaldirectory/CoalDirectory2018-19.pdf
+Bankui;True;False;False;;India;;;Proposed;;n/d;;800.0;;1.6;;http://www.coalcontroller.gov.in/writereaddata/files/download/coaldirectory/CoalDirectory2016-17.pdf
+Baode Coal Mine;True;True;True;China;China;2002;Operating;Operating;Bituminous;Bituminous;680.0;679.5;3.065;1.65844206;[Expansion - Bituminous - 1.406][Current - Bituminous - 1.66];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Baoqing Chaoyang Surface Coal Mine;False;True;True;China;;2020;Operating;;Lignite;;837.0;;1.006;;[New - Lignite - 1.006];
+Bayangol Coal Mine;False;True;True;China;;2018;Operating;;Bituminous;;636.0;;1.552;;[Current - Bituminous - 1.552];
+Beisky-Zapadniy Coal Mine;True;True;True;Russia;Russian Federation;2023;Operating;Proposed;Subbituminous;Subbituminous;1134.0;1340.0;2.06;2.4338286;[New - Subbituminous - 2.06];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Berenice-Cygnus Coal Mine;True;True;True;South Africa;South Africa;;Proposed;Proposed;Bituminous (Met);Bituminous (Met);402.0;402.0;1.073;1.07242344;[New - Bituminous (Met) - 1.073];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Berezovsky 1 Coal Mine;False;True;True;Russia;;1975;Operating;;Lignite;;3363.0;;4.042;;[Current - Lignite - 4.042];
+Bhakti Energi Persada Coal Mine;False;True;True;Indonesia;;;Proposed;;Subbituminous;;3272.0;;5.943;;[New - Subbituminous - 5.943];
+Binchang Yangjiaping Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;431.0;;1.052;;[New - Bituminous - 1.052];
+Black Thunder Coal Mine;True;True;False;United States;United States;1977;Operating;Operating;Subbituminous;Subbituminous;378.0;747.7;0.687;1.358040033;[Current - Subbituminous - 0.687];https://investor.archrsc.com/static-files/089edfb1-21ad-4445-8815-82059686f9b9
+Blackwater Coal Mine;True;True;False;Australia;Australia;1967;Operating;Operating;Bituminous (Met);Bituminous (Met);200.0;375.0;0.534;1.000395;[Current - Bituminous (Met) - 0.534];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Bogatyr Coal Mine (Kazakhstan);True;True;True;Kazakhstan;Kazakhstan;1970;Operating;Operating;Bituminous;Bituminous;1200.0;3000.0;2.929;7.32204;[Expansion - Bituminous - 0.0][Current - Bituminous - 2.929];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Boikarabelo Coal Mine;True;True;False;South Africa;South Africa;;Cancelled;Proposed;Bituminous;Bituminous;267.0;995.0;0.652;2.4284766;[New - Bituminous - 0.652];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Boli Coal Mine;True;True;True;China;China;2025;Proposed;Proposed;Anthracite;Anthracite;471.0;770.0;1.236;2.0209497;[New - Anthracite - 1.236];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Borly Coal Mines;True;False;False;;Kazakhstan;;;Operating;;Bituminous;;419.0;;1.02264492;;Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Borneo Indobara Coal Mine;False;True;True;Indonesia;;2005;Operating;;Subbituminous;;665.0;;1.208;;[Current - Subbituminous - 1.208];
+Buertai Coal Mine;True;True;False;China;China;2008;Operating;Operating;Bituminous;Bituminous;185.0;1850.0;0.452;4.515258;[Current - Bituminous - 0.452];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Buliangou Coal Mine;True;True;True;China;China;2011;Operating;Operating;Bituminous;Bituminous;535.0;745.7;1.306;1.820015076;[Current - Bituminous - 1.306];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Byerwen Coal Mine;True;True;True;Australia;Australia;2017;Operating;Operating;Bituminous (Met);Bituminous (Met);690.0;690.0;1.841;1.8407268;[Current - Bituminous (Met) - 1.841];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Callan Coking Coal Mine;False;True;True;Australia;;;Proposed;;Bituminous (Met);;570.0;;1.521;;[New - Bituminous (Met) - 1.521];
+Carbon Creek;False;True;True;Canada;;2022;Cancelled;;Bituminous (Met);;451.0;;1.203;;[New - Bituminous (Met) - 1.203];
+Carmichael Coal Project;True;True;True;Australia;Australia;2021;Operating;Proposed;Subbituminous;Subbituminous;880.0;1160.0;20.016;2.1068964;[Current - Subbituminous - 1.598][Expansion - Subbituminous - 18.417][Expansion - Subbituminous - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Cerrejón Coal Mine;True;True;False;Colombia;Colombia;1985;Operating;Operating;Bituminous;Bituminous;310.0;987.0;0.757;2.40895116;[Current - Bituminous - 0.757];https://www.bhp.com/-/media/documents/investors/annual-reports/2020/200915_bhpannualreport2020.pdf
+Chagannur No.1 Coal Mine;True;True;True;China;China;;Proposed;Proposed;Lignite;Lignite;2548.0;1444.8;3.062;1.73650512;[New - Lignite - 3.062];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Chahasu Coal Mine;True;True;True;China;China;2016;Proposed;Operating;Bituminous;Bituminous;1834.0;1724.3;4.476;4.208464524;[New - Bituminous - 4.476];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Changcheng No. 3 Coal Mine;True;True;True;China;China;2024;Operating;Proposed;Bituminous (Met);Bituminous (Met);408.0;421.0;1.089;1.12311012;[New - Bituminous (Met) - 1.089];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Changtan Surface Coal Mine;False;True;True;China;;2021;Proposed;;Bituminous;;1461.0;;3.566;;[New - Bituminous - 3.566];
+Chhendipara Coal Mine;False;True;True;India;;;Shelved;;Subbituminous;;880.0;;1.598;;[New - Subbituminous - 1.598];
+China Stone Coal Mine;False;True;True;Australia;;;Cancelled;;Subbituminous;;3750.0;;6.811;;[Current - Subbituminous - 6.811];
+Chirodzi Coal Mine;True;True;True;Mozambique;Mozambique;2012;Operating;Proposed;Bituminous (Met);Bituminous;700.0;1200.0;5.069;2.928816;[Expansion - Bituminous (Met) - 3.202][Current - Bituminous (Met) - 1.868];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Clifford Coal Mine;False;True;True;Australia;;;Cancelled;;Subbituminous;;630.0;;1.144;;[Current - Subbituminous - 1.144];
+Clyde Park Project;False;True;True;Australia;;;Cancelled;;Subbituminous;;728.0;;1.322;;[Current - Subbituminous - 1.322];
+Columboola Project;False;True;True;Australia;;2023;Cancelled;;Subbituminous;;1217.0;;2.21;;[Current - Subbituminous - 2.21];
+Cumberland Coal Mine;True;True;False;United States;United States;1981;Operating;Operating;Bituminous;Bituminous;176.0;776.0;0.43;1.89396768;[Current - Bituminous - 0.43];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Dabaodang Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;2659.0;;6.49;;[New - Bituminous - 6.49];
+Dafosi Coal Mine;True;True;True;China;China;;Operating;Operating;Bituminous;Bituminous;557.0;557.23;1.359;1.360020116;[Current - Bituminous - 1.359];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Dahaize Coal Mine;True;True;True;China;China;2023;Operating;Proposed;Bituminous;Bituminous;3275.0;3275.1;7.993;7.993471068;[Current - Bituminous - 7.993];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Dajing Mining Area No. 2 Mine;False;True;True;China;;2024;Operating;;Bituminous;;2671.0;;6.519;;[New - Bituminous - 6.519];
+Dalaihushuo Coal Mine;True;True;False;China;China;;Proposed;Proposed;Bituminous;Bituminous;;1178.2;0.0;2.875609176;[New - Bituminous - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Daliuta Coal Mine;True;True;True;China;China;1996;Operating;Operating;Bituminous;Bituminous;495.0;494.6;1.208;1.207160328;[Current - Bituminous - 1.208];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Damoda Coal Mine;False;True;True;India;;1972;Operating;;Bituminous (Met);;712.0;;1.9;;[Current - Bituminous (Met) - 1.9];
+Dananhu No. 1 Coal Mine;True;True;True;China;China;2017;Operating;Operating;Bituminous;Bituminous;2936.0;2936.0;7.166;7.16583648;[Current - Bituminous - 7.166];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Dananhu No. 2 Surface Mine;True;True;True;China;China;2017;Operating;Proposed;Subbituminous;Subbituminous;1513.0;1513.0;2.748;2.74804677;[Current - Subbituminous - 2.748];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Dananhu No. 7 Mine;True;True;True;China;China;2023;Operating;Proposed;Bituminous;Bituminous;1450.0;1488.0;3.539;3.63173184;[Current - Bituminous - 3.539];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Dawson West Coal Mine;False;True;True;Australia;;;Cancelled;;Bituminous (Met);;852.0;;2.273;;[New - Bituminous (Met) - 2.273];
+Deocha-Pachami-Dewanganj-Harinsingha;False;True;True;India;;;Proposed;;Subbituminous;;2102.0;;3.818;;[New - Subbituminous - 3.818];
+Dingji Coal Mine;True;True;True;China;China;2007;Operating;Operating;Bituminous (Met);Bituminous (Met);617.0;625.0;1.646;1.667325;[Current - Bituminous (Met) - 1.646];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Dipka Coal Mine;True;True;False;India;India;1992;Operating;Operating;Lignite;Lignite;165.0;975.0;0.198;1.1718525;[Current - Lignite - 0.198][Expansion - Lignite - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Dongqu Coal Mine;False;True;True;China;;1991;Operating;;Bituminous (Met);;453.0;;1.209;;[Current - Bituminous (Met) - 1.209];
+Dongzhouyao Coal Mine;True;True;True;China;China;2015;Operating;Operating;Bituminous;Bituminous;814.0;882.11;1.987;2.152948235;[Current - Bituminous - 1.987];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Donkin Coal Mine;False;True;True;Canada;;2017;Mothballed;;Bituminous (Met);;481.0;;1.283;;[Current - Bituminous (Met) - 1.283];
+Duerping Coal Mine;False;True;True;China;;1956;Operating;;Bituminous (Met);;421.0;;1.123;;[Current - Bituminous (Met) - 1.123];
+Eagle Downs Coal Project;False;True;True;Australia;;2025;Proposed;;Bituminous (Met);;;;3.042;;[Expansion - Bituminous (Met) - 0.0][New - Bituminous (Met) - 3.042];
+East Well of Sihe Coal Mine;True;True;True;China;China;2002;Operating;Operating;Anthracite;Anthracite;424.0;383.0;1.113;1.00522563;[Current - Anthracite - 1.113];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+El Descanso Coal Mine;True;True;True;Colombia;Colombia;2009;Operating;Operating;Bituminous;Bituminous;1763.0;1700.0;4.303;4.149156;[Current - Bituminous - 4.303];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Elan Coal Mine;False;True;True;Canada;;;Shelved;;Bituminous (Met);;486.0;;1.297;;[New - Bituminous (Met) - 1.297];
+Elegest Coal Mine;True;True;True;Russia;Russian Federation;2026;Shelved;Operating;Bituminous (Met);Bituminous (Met);855.0;855.2;2.281;2.281434144;[New - Bituminous (Met) - 2.281];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Elga Coal Mine;True;False;False;;Russian Federation;;;Proposed;;Bituminous (Met);;1697.558;;4.528609428;;https://www.sec.gov/Archives/edgar/data/1302362/000119312513156601/d485907d20f.htm
+Elginskiy Coal Mine;False;True;True;Russia;;2011;Operating;;Bituminous (Met);;2200.0;;5.87;;[Current - Bituminous (Met) - 5.87][Expansion - Bituminous (Met) - 0.0];
+Ensham Coal Mine;True;True;True;Australia;Australia;1993;Operating;Operating;Subbituminous;Subbituminous;724.0;724.0;1.315;1.31499396;[Current - Subbituminous - 1.315][Extension - Subbituminous - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Erkovetskiy Coal Mine;True;True;False;Russia;Russian Federation;1991;Operating;Operating;Lignite;Subbituminous;504.0;572.0;0.606;1.03891788;[Current - Lignite - 0.606][New - Lignite - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Fengjiata Coal Mine;True;True;True;China;China;2010;Operating;Operating;Bituminous;Bituminous;486.0;486.0;1.186;1.18617048;[Current - Bituminous - 1.186];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Fording River Operations;True;True;False;Canada;Canada;1971;Operating;Operating;Bituminous (Met);coking coal;345.0;387.9;0.92;1.034808588;[Extension - Bituminous (Met) - 0.0][Current - Bituminous (Met) - 0.92];http://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/InformationCircular/BCGS_IC2020-01-01.pdf
+GAM Coal Mine;True;True;True;Indonesia;Indonesia;2012;Operating;Proposed;Bituminous;Bituminous;539.0;539.0;1.316;1.31552652;[Current - Bituminous - 1.316];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Galilee Coal Mine;True;True;True;Australia;Australia;2027;Proposed;Proposed;Subbituminous;Subbituminous;1100.0;1000.0;1.998;1.81629;[New - Subbituminous - 1.998];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Gansu Ningxi No. 1 Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;1012.0;;2.47;;[New - Bituminous - 2.47];
+Gansu Ningxi No. 2 Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;857.0;;2.092;;[New - Bituminous - 2.092];
+Gansu Ningxi No. 3 Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;1637.0;;3.995;;[New - Bituminous - 3.995];
+Gaohe Coal Mine;True;True;False;China;China;2012;Operating;Operating;Bituminous (Met);Bituminous (Met);243.0;575.0;0.648;1.533939;[Current - Bituminous (Met) - 0.648];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Gaojiabao Coal Mine;True;True;True;China;China;;Operating;Operating;Bituminous;Bituminous;445.0;470.0;1.086;1.1471196;[Current - Bituminous - 1.086];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Gaojialiang No.1 Coal Mine;True;True;False;China;China;2010;Operating;Operating;Bituminous;Bituminous;402.0;824.6;0.981;2.012584728;[Current - Bituminous - 0.981];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Gaoping Goudi Coal Mine;False;True;True;China;;;Proposed;;Anthracite;;396.0;;1.039;;[New - Anthracite - 1.039];
+Gaotouyao Coal Mine;True;True;True;China;China;2016;Operating;Operating;Bituminous;Bituminous;633.0;766.4;1.545;1.870537152;[Current - Bituminous - 1.545];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Gare Palma I Opencast Coal Mine;False;True;True;India;;;Proposed;;Subbituminous;;1831.0;;3.326;;[New - Subbituminous - 3.326];
+Gare Palma II Coal Mine;True;True;True;India;India;;Proposed;Proposed;Subbituminous;n/d;1059.0;655.15;1.923;1.3103;[New - Subbituminous - 1.923];http://www.coalcontroller.gov.in/writereaddata/files/download/coaldirectory/CoalDirectory2018-19.pdf
+Garzweiler Coal Mine;True;True;False;Germany;Germany;1940;Operating;Operating;Lignite;Lignite;650.0;1100.0;0.781;1.32209;[Current - Lignite - 0.781];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Gething Coal Mine;True;True;True;Canada;Canada;;Shelved;Proposed;Bituminous (Met);Bituminous (Met);780.0;780.0;2.081;2.0808216;[New - Bituminous (Met) - 2.081];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Gevra Coal Mine;True;True;False;India;India;1981;Operating;Operating;Subbituminous;Subbituminous;318.0;1338.0;0.578;2.43019602;[Current - Subbituminous - 0.578];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Ghogharpalli & Its Dip Extension Block Summary;False;True;True;India;;;Proposed;;Subbituminous;;1288.0;;2.339;;[New - Subbituminous - 2.339];
+Gondbahera Ujheni Coal Mine;False;True;True;India;;;Proposed;;Subbituminous;;673.0;;1.222;;[New - Subbituminous - 1.222];
+Goonyella-Riverside Coal Mine;True;True;True;Australia;Australia;1989;Operating;Operating;Bituminous (Met);Bituminous (Met);448.0;818.0;1.195;2.18219496;[Current - Bituminous (Met) - 1.195];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Gopalji Kaniha Coal Mine;True;True;False;India;India;2010;Operating;Operating;Subbituminous;Subbituminous;71.0;659.0;0.129;1.19693511;[Current - Subbituminous - 0.129];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Greater Soutpansberg Coal Project;True;True;True;South Africa;South Africa;;Proposed;Proposed;Bituminous (Met);Bituminous (Met);1051.0;1051.0;2.804;2.80377372;[New - Bituminous (Met) - 2.804];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Grootegeluk Coal Mine;True;True;True;South Africa;South Africa;1980;Operating;Operating;Bituminous (Met);Bituminous (Met);2521.0;2576.0;6.726;6.87204672;[Current - Bituminous (Met) - 6.726];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Groundhog Coal Mine;False;True;True;Canada;;;Proposed;;Anthracite;;1016.0;;2.667;;[New - Anthracite - 2.667];
+Guandi Coal Mine;False;True;True;China;;1960;Operating;;Bituminous (Met);;634.0;;1.692;;[Current - Bituminous (Met) - 1.692];
+Guizhou Digua No. 2 Coal Mine;False;True;True;China;;;Proposed;;Anthracite;;1104.0;;2.898;;[New - Anthracite - 2.898];
+Guojiatan Coal Mine;True;True;True;China;China;;Proposed;Proposed;Bituminous;Subbituminous;1534.0;1190.0;3.744;2.1613851;[New - Bituminous - 3.744];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Guojiawan Coal Mine;True;True;True;China;China;2018;Operating;Operating;Bituminous;Bituminous;590.0;769.0;1.44;1.87688292;[Current - Bituminous - 1.44];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Guqiao Coal Mine;True;True;True;China;China;2007;Operating;Operating;Bituminous;Bituminous;704.0;831.4;1.718;2.029181352;[Current - Bituminous - 1.718];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Haerwusu Surface Mine;True;True;True;China;China;2008;Operating;Operating;Bituminous;Lignite;1730.0;1731.0;4.222;2.0804889;[Current - Bituminous - 4.222];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Halagou Coal Mine;True;True;True;China;China;2004;Operating;Operating;Bituminous;Bituminous;516.0;516.0;1.259;1.25939088;[Current - Bituminous - 1.259];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Hambach Coal Mine;True;True;True;Germany;Germany;1978;Operating;Operating;Lignite;Lignite;1350.0;1419.0;1.623;1.7054961;[Current - Lignite - 1.623];https://www.ecologic.eu/sites/files/publication/2019/3537-kohlereader_englisch-final.pdf
+Hami Yingma No. 2 Coal Mine;False;True;True;China;;2026;Proposed;;Bituminous;;472.0;;1.152;;[New - Bituminous - 1.152];
+Hamilton Mine No. 1;True;True;False;United States;United States;2014;Operating;Operating;Bituminous;Bituminous;113.8;485.43;0.278;1.184779292;[Current - Bituminous - 0.278];https://www.arlp.com/mines-facilities/illinois-basin/default.aspx#hamiltoncounty
+Hanglaiwan Coal Mine;True;True;True;China;China;2012;Operating;Operating;Bituminous;Bituminous;730.0;729.7;1.782;1.780964196;[Current - Bituminous - 1.782];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Hebei Xingtai Coal Mine West Shaft;False;True;True;China;;2024;Operating;;Bituminous (Met);;2843.1;;7.585;;[Current - Bituminous (Met) - 7.585];
+Henderson County Mine;False;True;True;United States;;1950;Operating;;Bituminous;;414.0;;1.01;;[Current - Bituminous - 1.01];
+Hetaoyu Coal Mine;True;True;True;China;China;2022;Operating;Proposed;Bituminous;Bituminous;1198.0;1229.5;2.924;3.00081606;[Current - Bituminous - 2.924];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Hongdunjie Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;955.0;;2.331;;[New - Bituminous - 2.331];
+Hongliulin Coal Mine;True;True;True;China;China;2011;Operating;Operating;Bituminous;Bituminous;1403.0;1266.0;3.424;3.08990088;[Current - Bituminous - 3.424];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Hongqinghe Coal Mine;True;True;True;China;China;2018;Operating;Operating;Bituminous;Bituminous;2214.0;2338.3;5.404;5.707042044;[Current - Bituminous - 5.404];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Hongqingliang Coal Mine;True;True;True;China;China;2021;Operating;Operating;Bituminous;Bituminous;440.0;810.28;1.074;1.97763419;[Current - Bituminous - 1.074];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Hongshaquan No. 1 Surface Mine;True;True;True;China;China;2018;Operating;Operating;Bituminous;Bituminous;3559.0;3676.0;8.686;8.97193968;[Current - Bituminous - 8.686];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Hongshiqiao Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;1851.0;;4.518;;[New - Bituminous - 4.518];
+Hongshuliang Coal Mine;True;True;True;China;China;2022;Operating;Proposed;Bituminous;Bituminous;421.0;415.43;1.028;1.013931692;[Current - Bituminous - 1.028];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Huale Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;540.0;;2.636;;[Expansion - Bituminous - 1.318][Current - Bituminous - 1.318];
+Huangling No. 2 Coal Mine;True;True;True;China;China;2009;Operating;Operating;Bituminous (Met);Bituminous;558.0;558.0;1.489;1.36189944;[Current - Bituminous (Met) - 1.489];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Huangyuchuan Coal Mine;True;True;True;China;China;2016;Operating;Operating;Bituminous;Bituminous;926.0;926.39;2.26;2.261021545;[Current - Bituminous - 2.26];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Huanxian Mafuchuan Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;614.0;;1.499;;[New - Bituminous - 1.499];
+Hulusu Coal Mine;True;True;True;China;China;2016;Operating;Operating;Bituminous;Bituminous;1624.0;1623.8;3.964;3.963176184;[Current - Bituminous - 3.964];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Hunter Valley North Coal Mine;True;True;True;Australia;Australia;1952;Operating;Operating;Bituminous (Met);Bituminous (Met);395.0;650.0;1.054;1.734018;[Current - Bituminous (Met) - 1.054];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Hunter Valley South Coal Mine;True;True;True;Australia;Australia;1971;Operating;Operating;Bituminous (Met);Bituminous (Met);395.0;440.0;1.054;1.1737968;[Current - Bituminous (Met) - 1.054];https://datagovau.s3.amazonaws.com/bioregionalassessments/BA_ALL/ALL/DATA/Resources/MinesGA_OZMIN_MineralDeposits_v02_20130830/34247a24-d3cf-4a98-bb9d-81671ddb99de.zip
+Huojitu Well Of Daliuta Coal Mine;True;True;True;China;China;2000;Operating;Operating;Bituminous;Subbituminous;643.0;624.0;1.569;1.13336496;[Current - Bituminous - 1.569];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Huolinhe North Surface Mine No. 3;False;True;True;China;;1992;Operating;;Lignite;;938.0;;1.127;;[Current - Lignite - 1.127];
+Huolinhe South Surface Mine;False;True;True;China;;1984;Operating;;Lignite;;1380.0;;1.659;;[Current - Lignite - 1.659];
+Hutton Coal Mine;True;True;True;Australia;Australia;;Cancelled;Proposed;Bituminous (Met);Bituminous (Met);;632.0;14.274;1.68599904;[New - Bituminous (Met) - 0.0][Expansion - Bituminous (Met) - 14.274];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Inaglinskaya-2 Mine;True;False;False;;Russian Federation;;;Proposed;;Bituminous (Met);;648.3;;1.2966;;http://www.kolmar.ru/en/activity/production/enterprises/gok-inaglinskiy/index.php?sphrase_id=2755 20.11.2020
+Inaglinsky Coal Mine 2;False;True;True;Russia;;2025;Proposed;;Bituminous (Met);;648.0;;1.729;;[New - Bituminous (Met) - 1.729];
+Indexim Coalindo Coal Mine;True;True;True;Indonesia;Indonesia;2011;Operating;Operating;Subbituminous;Subbituminous;613.0;613.0;1.113;1.11338577;[Current - Subbituminous - 1.113];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Inner Mongolia Ayanbulu Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;712.82;;1.74;;[New - Bituminous - 1.74];
+Inner Mongolia Bandongliang Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;1532.0;;3.739;;[New - Bituminous - 3.739];
+Inner Mongolia Bayanchaidamu Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;2131.0;;5.201;;[New - Bituminous - 5.201];
+Inner Mongolia Bayannao Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;1336.58;;3.262;;[New - Bituminous - 3.262];
+Inner Mongolia Buriqi Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;1892.0;;4.618;;[New - Bituminous - 4.618];
+Inner Mongolia Chengliang Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;1204.34;;2.939;;[New - Bituminous - 2.939];
+Inner Mongolia Dahaimiao Coal Mine;False;True;True;China;;;Proposed;;Bituminous (Met);;1142.6;;3.048;;[New - Bituminous (Met) - 3.048];
+Inner Mongolia Erlintu Coal Mine;True;True;True;China;China;2021;Operating;Proposed;Bituminous;Bituminous;764.0;913.24;1.865;2.228926603;[Current - Bituminous - 1.865];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Inner Mongolia Galutu Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;874.19;;2.134;;[New - Bituminous - 2.134];
+Inner Mongolia Geliugou Coal Mine;False;True;True;China;;;Proposed;;Bituminous (Met);;1407.03;;3.754;;[New - Bituminous (Met) - 3.754];
+Inner Mongolia Haolaisu Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;2702.0;;6.595;;[New - Bituminous - 6.595];
+Inner Mongolia Houliuwan Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;835.2;;2.038;;[New - Bituminous - 2.038];
+Inner Mongolia Kongdujigou Coal Mine;False;True;True;China;;;Proposed;;Bituminous (Met);;562.0;;1.499;;[New - Bituminous (Met) - 1.499];
+Inner Mongolia Kuitenggou Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;960.65;;2.345;;[New - Bituminous - 2.345];
+Inner Mongolia Laosangou Coal Mine;False;True;True;China;;;Proposed;;Bituminous (Met);;621.33;;1.658;;[New - Bituminous (Met) - 1.658];
+Inner Mongolia Liusangedan Coal Mine;False;True;True;China;;;Proposed;;Bituminous (Met);;1470.24;;3.923;;[New - Bituminous (Met) - 3.923];
+Inner Mongolia Nalinxili Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;1076.98;;2.629;;[New - Bituminous - 2.629];
+Inner Mongolia Shiyangou Coal Mine;False;True;True;China;;;Proposed;;Bituminous (Met);;550.01;;1.467;;[New - Bituminous (Met) - 1.467];
+Inner Mongolia Sinibrag No. 1 Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;2235.0;;5.455;;[New - Bituminous - 5.455];
+Inner Mongolia Sinibrag No. 2 Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;1726.47;;4.214;;[New - Bituminous - 4.214];
+Inner Mongolia Subu'erga Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;1653.0;;4.034;;[New - Bituminous - 4.034];
+Inner Mongolia Tonggelang Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;1121.23;;2.737;;[New - Bituminous - 2.737];
+Inner Mongolia Wudinghe Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;819.46;;2.0;;[New - Bituminous - 2.0];
+Inner Mongolia Xinjie No.1 Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;829.46;;2.024;;[New - Bituminous - 2.024];
+Inner Mongolia Xinjie No.2 Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;717.2;;1.75;;[New - Bituminous - 1.75];
+Inner Mongolia Yingjun No.1 Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;971.0;;2.37;;[New - Bituminous - 2.37];
+Inner Mongolia Yingjun No.2 Coal Mine;False;True;True;China;;;Proposed;;Bituminous (Met);;2042.0;;5.448;;[New - Bituminous (Met) - 5.448];
+Inner Mongolia Yingjun No.3 Coal Mine;False;True;True;China;;2025;Proposed;;Bituminous (Met);;780.0;;2.081;;[New - Bituminous (Met) - 2.081];
+Integrated Belpahar, Lakhanpur, Lilari Coal Mine;True;True;True;India;India;;Proposed;Proposed;Lignite;Lignite;1262.0;1262.0;1.517;1.5167978;[New - Lignite - 1.517];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Jiangjun Gebi No. 2 Coal Mine;True;True;False;China;China;;Operating;Proposed;Bituminous;Bituminous;220.0;3212.0;0.537;7.83946416;[Current - Bituminous - 0.537];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Jilin Gol No. 2 Surface Mine;False;True;True;China;;;Proposed;;Lignite;;1529.0;;1.838;;[New - Lignite - 1.838];
+Jinfeng Coal Mine;False;True;True;China;;2016;Operating;;Bituminous;;462.0;;1.128;;[Current - Bituminous - 1.128];
+Jinjie Coal Mine;True;True;True;China;China;2010;Operating;Operating;Bituminous;Bituminous;1184.0;1578.0;2.89;3.85139304;[Current - Bituminous - 2.89];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Jinjitan Coal Mine;True;True;True;China;China;2018;Operating;Proposed;Bituminous;Bituminous;598.0;898.3;1.46;2.192462844;[Current - Bituminous - 1.46];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+KPC Operation Coal Mine;True;True;True;Indonesia;Indonesia;1991;Operating;Operating;Bituminous;Bituminous (Met);793.0;1160.0;1.935;3.0945552;[Current - Bituminous - 1.935];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Karadon Coal Mine;False;True;True;Türkiye;;1983;Operating;;Bituminous (Met);;406.0;;1.083;;[Current - Bituminous (Met) - 1.083];
+Karazhyra Coal Mine;False;True;True;Kazakhstan;;1967;Operating;;Subbituminous;;1231.0;;2.236;;[Current - Subbituminous - 2.236];
+Kekegai Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;930.0;;2.27;;[New - Bituminous - 2.27];
+Kerendari Coal Mine;True;True;False;India;India;2024;Operating;Proposed;Subbituminous;n/d;284.0;916.52;0.516;1.83304;[New - Subbituminous - 0.516];http://www.coalcontroller.gov.in/writereaddata/files/download/coaldirectory/CoalDirectory2018-19.pdf
+Kirova Coal Mine;False;True;True;Russia;;1935;Operating;;Bituminous (Met);;582.0;;2.404;;[Current - Bituminous (Met) - 1.553][Expansion - Bituminous (Met) - 0.851];
+Kolubara Mine Complex;True;False;False;;Serbia;;;Operating;;Lignite;;2100.0;;2.52399;;https://www.srbijadanas.net/wp-content/uploads/2013/01/SerbiaOreDeposits.pdf page 122
+Kouzi East Coal Mine;True;True;False;China;China;2014;Operating;Operating;Bituminous;Bituminous (Met);357.0;382.0;0.871;1.01906904;[Current - Bituminous - 0.871];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Kuraloi A North Coal Mine;False;True;True;India;;;Proposed;;Subbituminous;;1680.0;;3.051;;[New - Subbituminous - 3.051];
+Kusmunda Coal Mine;True;True;False;India;India;1978;Operating;Operating;Lignite;Lignite;713.0;957.0;0.857;1.1502183;[Expansion - Subbituminous - 0.0][Current - Lignite - 0.857];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Lakhanpur Coal Mine;True;True;False;India;India;1992;Operating;Operating;Lignite;Lignite;118.0;1263.0;0.142;1.5179997;[Current - Lignite - 0.142][Expansion - Lignite - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Lijiahao Coal Mine;True;True;True;China;China;2016;Operating;Operating;Bituminous;Bituminous;607.0;606.0;1.481;1.47905208;[Current - Bituminous - 1.481];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Lingwu Shuangma No. 2 Coal Mine;False;True;True;China;;;Proposed;;Anthracite;;394.0;;1.034;;[New - Anthracite - 1.034];
+Listvianskaya Coal Mine;True;False;False;;Russian Federation;;;Operating;;Bituminous (Met);;895.0;;2.3876094;;Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Liuzhuang Coal Mine;True;True;True;China;China;2007;Operating;Operating;Bituminous;Bituminous;595.0;623.0;1.452;1.52054364;[Current - Bituminous - 1.452];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Longfeng Coal Mine;False;True;True;China;;2022;Operating;;Anthracite;;485.0;;1.273;;[Current - Anthracite - 1.273];
+Longwan Coal Mine;True;True;True;China;China;2026;Proposed;Proposed;Anthracite;Anthracite;395.0;394.67;1.037;1.035854829;[New - Anthracite - 1.037];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Longwanggou Coal Mine;True;True;True;China;China;2020;Operating;Operating;Bituminous;Bituminous;788.0;787.76;1.923;1.922670077;[Current - Bituminous - 1.923];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Loy Yang Coal Mine;True;True;True;Australia;Australia;1982;Operating;Operating;Subbituminous;Subbituminous;1680.0;1680.0;3.051;3.0513672;[Current - Subbituminous - 3.051];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+MC #1 Coal Mine;True;True;True;United States;United States;2012;Operating;Operating;Bituminous;Bituminous;1179.0;1179.0;2.878;2.87756172;[Current - Bituminous - 2.878];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+MHU Coal Mine;True;True;True;Indonesia;Indonesia;1986;Operating;Operating;Subbituminous;Subbituminous;592.0;592.0;1.075;1.07524368;[Current - Subbituminous - 1.075];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Machhakata Coal Mine;False;True;True;India;;;Proposed;;Subbituminous;;1247.0;;2.265;;[New - Subbituminous - 2.265];
+Madaotou Coal Mine;True;True;True;China;China;2017;Operating;Proposed;Lignite;Lignite;1527.0;1527.0;1.835;1.8353013;[Current - Lignite - 1.835];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Maiduoshan mine;False;True;True;China;;2020;Operating;;Bituminous;;1129.0;;2.756;;[Current - Bituminous - 2.756];
+Majialiang Coal Mine;True;True;True;China;China;2016;Operating;Operating;Bituminous;Bituminous;1299.0;1299.0;3.17;3.17044332;[Current - Bituminous - 3.17];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Malan Coal Mine;False;True;True;China;;1990;Operating;;Bituminous (Met);;592.0;;1.579;;[Current - Bituminous (Met) - 1.579];
+Mandakini–B Coal Mine;True;True;True;India;India;;Shelved;Proposed;Subbituminous;n/d;656.0;656.58;1.191;1.31316;[New - Subbituminous - 1.191];http://environmentclearance.nic.in/writereaddata/Online/TOR/22_Feb_2019_1900473301BRPYEH7Pre-feasibilityReport_MandakiniCoalBlock22_02_2019.pdf
+Maojiachuan Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;428.0;;1.045;;[New - Bituminous - 1.045];
+Maritsa Coal Mines;True;False;False;;Bulgaria;;;Operating;;Lignite;;2096.0;;2.5191824;;Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Mataihao Coal Mine;False;True;True;China;;2018;Operating;;Bituminous;;635.0;;1.55;;[Current - Bituminous - 1.55];
+Maules Creek Coal Mine;False;True;True;Australia;;2015;Operating;;Bituminous (Met);;399.0;;1.065;;[Current - Bituminous (Met) - 1.065];
+Mayixi No.1 Coal Mine;False;True;True;China;;2023;Operating;;Bituminous (Met);;1360.0;;6.948;;[Current - Bituminous (Met) - 3.628][Expansion - Bituminous - 3.319];
+Mayrykhsky Coal Mine;False;True;True;Russia;;2016;Operating;;Subbituminous;;220.0;;2.87;;[Expansion - Subbituminous - 2.47][Current - Subbituminous - 0.4];
+Mazino Coal Mine;False;True;True;Iran;;2021;Operating;;Subbituminous;;600.0;;1.09;;[Current - Subbituminous - 1.09];
+Meihuajing Coal Mine;True;True;True;China;China;2011;Operating;Operating;Bituminous;Bituminous;1515.0;1433.0;3.698;3.49749444;[Current - Bituminous - 3.698];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Mengcun Coal Mine;True;True;True;China;China;2022;Operating;Proposed;Bituminous;Bituminous;558.0;558.48;1.362;1.363070966;[Current - Bituminous - 1.362];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Menkeqing Coal Mine;True;True;True;China;China;2020;Operating;Operating;Bituminous;Bituminous;872.0;1510.2;2.128;3.685914936;[Current - Bituminous - 2.128];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Moatize Coal Mine;False;True;True;Mozambique;;2011;Mothballed;;Bituminous (Met);;717.0;;1.913;;[Current - Bituminous (Met) - 1.913];
+Moher Amlohri Coal Mine;True;True;False;India;India;2016;Operating;Operating;Subbituminous;Subbituminous;470.0;575.0;0.854;1.04436675;[Current - Subbituminous - 0.854];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Moranbah South Coal Project;False;True;True;Australia;;;Proposed;;Bituminous (Met);;740.0;;1.974;;[New - Bituminous (Met) - 1.974];
+Morupule Coal Mine;True;True;False;Botswana;Botswana;1973;Operating;Proposed;Subbituminous;Subbituminous;40.0;1200.0;0.073;2.179548;[Current - Subbituminous - 0.073][Expansion - Subbituminous - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Mount Pleasant Coal Mine;True;True;True;Australia;Australia;2018;Operating;Operating;Bituminous;Bituminous;623.0;459.0;1.521;1.12027212;[Expansion - Bituminous - 0.0][Current - Bituminous - 1.521];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Muchesu Coal Mine;False;True;True;Zimbabwe;;2023;Operating;;Bituminous;;2600.0;;6.346;;[Current - Bituminous - 6.346];
+Muduchaideng Coal Mine;True;True;True;China;China;2023;Operating;Proposed;Bituminous;Bituminous;701.0;704.51;1.711;1.719483467;[Current - Bituminous - 1.711];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Murray River Coal Mine;True;True;True;Canada;Canada;2021;Proposed;Proposed;Bituminous (Met);Bituminous (Met);3180.0;3180.0;8.484;8.4833496;[New - Bituminous (Met) - 8.484];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Nalin River No.2 Coal Mine;True;True;True;China;China;2021;Operating;Proposed;Bituminous;Bituminous;711.0;686.17;1.735;1.674721396;[Current - Bituminous - 1.735];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Ncondezi Coal Mine;False;True;True;Mozambique;;2023;Shelved;;Subbituminous;;4700.0;;8.537;;[New - Subbituminous - 8.537];
+New Largo Coal Mine;True;True;False;South Africa;South Africa;2020;Operating;Proposed;Bituminous;Bituminous;;585.0;0.0;1.4277978;[Current - Bituminous - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Ngaka Coal Mine;False;True;True;Tanzania;;2011;Shelved;;Subbituminous;;367.0;;1.333;;[Current - Subbituminous - 0.667][Expansion - Subbituminous - 0.667];
+Ningtiaota Coal Mine;True;True;True;China;China;2013;Operating;Operating;Bituminous;Bituminous;1652.0;1645.0;4.032;4.0149186;[Current - Bituminous - 4.032];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Ningxia Hongliu Coal Mine;True;True;True;China;China;2011;Operating;Operating;Bituminous;Bituminous;1201.0;1188.1;2.931;2.899771908;[Current - Bituminous - 2.931];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+North Antelope Rochelle Coal Mine;True;True;True;United States;United States;1983;Operating;Operating;Subbituminous;Subbituminous;1300.0;1610.0;2.361;2.9242269;[Current - Subbituminous - 2.361];https://www.peabodyenergy.com/Peabody/media/MediaLibrary/Investor%20Info/Annual%20Reports/2019Peabody10-K.pdf?ext=.pdf
+Northern Galilee Coal Project;False;True;True;Australia;;;Proposed;;Subbituminous;;1100.0;;1.998;;[New - Subbituminous - 1.998];
+Okhobrak Coal Mine;False;True;True;China;;2006;Operating;;Bituminous;;677.0;;1.652;;[Current - Bituminous - 1.652];
+Olive Downs Coal Mine;True;True;True;Australia;Australia;2023;Operating;Proposed;Bituminous (Met);Bituminous (Met);527.0;514.0;1.406;1.37120808;[Current - Bituminous (Met) - 1.406];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Ordos Dongping Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;837.0;;2.043;;[New - Bituminous - 2.043];
+Ordos Taohutu Coal Mine;False;True;True;China;;2025;Proposed;;Bituminous;;419.0;;1.023;;[New - Bituminous - 1.023];
+PEB Coal Mine;False;True;True;Indonesia;;2009;Mothballed;;Lignite;;1306.0;;1.57;;[Current - Lignite - 1.57];
+PTBA Coal Mines;True;True;True;Indonesia;Indonesia;1981;Operating;Operating;Bituminous;Bituminous (Met);3018.0;3334.0;7.366;8.89417848;[Current - Bituminous - 7.366];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Paardekop Coal Mine;True;True;True;South Africa;South Africa;;Shelved;Proposed;Bituminous;Bituminous;770.0;695.0;1.879;1.6962726;[New - Bituminous - 1.879];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Pakar North Coal Mine;True;True;True;Indonesia;Indonesia;;Proposed;Proposed;Lignite;Lignite;911.0;911.0;1.095;1.0949309;[New - Lignite - 1.095];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Pangpangta Coal Mine;True;True;True;China;China;2021;Operating;Proposed;Bituminous (Met);Bituminous;732.0;893.51;1.953;2.180771987;[Current - Bituminous (Met) - 1.953];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Pansan Coal Mine;False;True;True;China;;1992;Operating;;Bituminous (Met);;459.0;;1.225;;[Current - Bituminous (Met) - 1.225];
+Pasir Coal Mine;True;True;False;Indonesia;Indonesia;1993;Operating;Operating;Subbituminous;Subbituminous;531.0;537.0;0.964;0.97534773;[Current - Subbituminous - 0.964];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Peak Downs Coal Mine;True;True;True;Australia;Australia;1972;Operating;Operating;Bituminous (Met);Bituminous (Met);938.0;869.0;2.503;2.31824868;[Current - Bituminous (Met) - 2.503][Expansion - Bituminous (Met) - 0.0];https://datagovau.s3.amazonaws.com/bioregionalassessments/BA_ALL/ALL/DATA/Resources/MinesGA_OZMIN_MineralDeposits_v02_20130830/34247a24-d3cf-4a98-bb9d-81671ddb99de.zip
+Pereyaslovskiy Coal Mine;True;True;False;Russia;Russian Federation;1983;Operating;Operating;Lignite;Subbituminous;352.0;900.0;0.423;1.634661;[Current - Lignite - 0.423];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Pervomaisky Coal Mine;True;True;True;Russia;Russian Federation;2012;Mothballed;Proposed;Subbituminous;Bituminous;623.0;629.0;1.132;1.53518772;[Current - Subbituminous - 1.132][Expansion - Subbituminous - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Phonesack Coal Mine;False;True;True;Laos;;2024;Proposed;;Anthracite;;;;2.1;;[Current - Anthracite - 2.1][Expansion - Anthracite - 0.0];
+Phulbari Coal Mine;True;True;True;Bangladesh;Bangladesh;;Proposed;Proposed;Bituminous;Bituminous;572.0;572.0;1.396;1.39606896;[New - Bituminous - 1.396];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Pingshuo East Coal Mine;True;True;True;China;China;2016;Operating;Operating;Bituminous;Subbituminous;1459.0;1459.0;3.561;2.64996711;[Current - Bituminous - 3.561];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Pribbenow Coal Mine;True;True;True;Colombia;Colombia;1995;Operating;Operating;Bituminous;Bituminous;561.0;561.0;1.369;1.36922148;[Current - Bituminous - 1.369];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Prodeco Coal Mine;False;True;True;Colombia;;2017;Mothballed;;Bituminous (Met);;405.0;;1.081;;[Current - Bituminous (Met) - 1.081];
+Qianjiaying Coal Mine;False;True;True;China;;1988;Operating;;Bituminous (Met);;546.0;;1.457;;[Current - Bituminous (Met) - 1.457];
+Qianyangshan Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;682.0;;1.665;;[New - Bituminous - 1.665];
+Qingchunta Coal Mine;True;True;True;China;China;2017;Operating;Operating;Bituminous;Bituminous;583.0;583.24;1.423;1.423502203;[Current - Bituminous - 1.423];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Qinghua No.7 Coal Mine;True;True;False;China;China;;Proposed;Proposed;Bituminous;Bituminous;345.0;1383.0;0.842;3.37546044;[New - Bituminous - 0.842];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Qingshuiying Coal Mine;True;True;True;China;China;2011;Operating;Operating;Bituminous;Bituminous;759.0;749.0;1.852;1.82806932;[Current - Bituminous - 1.852];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Qiyuan Coal Mine;True;True;True;China;China;2024;Proposed;Proposed;Anthracite;Anthracite;1033.0;653.0;2.711;1.71387033;[New - Anthracite - 2.711];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Rajmahal Coal Mine;True;True;False;India;India;1988;Operating;Operating;Subbituminous;Subbituminous;186.0;3211.0;0.338;5.83210719;[Current - Subbituminous - 0.338];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Raspadskaya Coal Mine;True;True;True;Russia;Russian Federation;1973;Operating;Operating;Bituminous (Met);Bituminous (Met);901.0;905.913;2.404;2.416722228;[Current - Bituminous (Met) - 2.404];https://ar2020.evraz.com/en/additional-information/data-on-mineral-reserves
+Red Hill Coal Project;True;True;False;Australia;Australia;2027;Shelved;Proposed;Bituminous (Met);Bituminous (Met);35.0;1711.0;0.093;4.56446892;[New - Bituminous (Met) - 0.093];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Revuboe Coal Mine;True;True;True;Mozambique;Mozambique;;Proposed;Proposed;Bituminous (Met);Bituminous (Met);859.0;519.0;2.292;1.38454668;[New - Bituminous (Met) - 2.292];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+River View Henderson Portal 1;False;True;True;United States;;2024;Operating;;Bituminous;;414.4;;1.011;;[New - Bituminous - 1.011];
+Saebyol Coal Mining Complex;True;True;False;North Korea;North Korea;;Operating;Operating;Lignite;Anthracite;;1230.0;0.0;3.2282703;[Current - Lignite - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Saharpur-Jamarpani Coal Mine;True;True;False;India;India;2028;Proposed;Proposed;Subbituminous;n/d;524.0;524.0;0.952;1.048;[New - Subbituminous - 0.952];http://www.coalcontroller.gov.in/writereaddata/files/download/coaldirectory/CoalDirectory2018-19.pdf
+Sakhigopal B Kankili Coal Mine;False;True;True;India;;2028;Proposed;;Subbituminous;;1257.0;;2.283;;[New - Subbituminous - 2.283];
+San Juan Coal Mine;True;True;False;Colombia;Colombia;2026;Proposed;Proposed;Bituminous;Bituminous;283.0;672.0;0.691;1.64013696;[New - Bituminous - 0.691];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Sandaogou Coal Mine;True;True;True;China;China;;Operating;Operating;Bituminous;Bituminous;927.0;926.9;2.263;2.262266292;[Current - Bituminous - 2.263];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Sangshuping Coal Mine;False;True;True;China;;1977;Operating;;Bituminous;;438.0;;1.069;;[Current - Bituminous - 1.069];
+Sanjiao No.1 Coal Mine;True;True;True;China;China;2025;Proposed;Proposed;Bituminous (Met);Bituminous;434.0;567.29;1.158;1.384573357;[New - Bituminous (Met) - 1.158];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Saraji Coal Mine;False;True;True;Australia;;1974;Operating;;Bituminous (Met);;382.0;;1.019;;[Current - Bituminous (Met) - 1.019];
+Saraji East Coal Mine;True;True;True;Australia;Australia;2024;Proposed;Proposed;Bituminous (Met);Bituminous (Met);1134.0;502.0;3.026;1.33919544;[New - Bituminous (Met) - 3.026];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Sengwa Coal Mine;False;True;True;Zimbabwe;;;Proposed;;Bituminous;;525.0;;1.281;;[New - Bituminous - 1.281];
+Sengwe Colliery;True;False;False;;Zimbabwe;;;Operating;;Coal;;500.0;;1.0;;https://usea.org/sites/default/files/122013_Coal%20prospects%20in%20Botswana,%20Mozambique,%20Zambia,%20Zimbabwe%20and%20Namibia_ccc228.pdf page 60
+Sese Coal Mine;False;True;True;Botswana;;;Shelved;;Subbituminous;;650.0;;1.181;;[New - Subbituminous - 1.181];
+Severny Coal Mine;False;True;True;Kazakhstan;;1955;Operating;;Bituminous;;1300.0;;3.173;;[Current - Bituminous - 3.173][Expansion - Bituminous - 0.0];
+Shaanxi Caojiatan Coal Mine;True;True;True;China;China;2020;Operating;Proposed;Bituminous;Bituminous;1313.0;1367.2;3.205;3.336897696;[Current - Bituminous - 3.205];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Shadunzi Coal Mine;False;True;True;China;;2013;Operating;;Bituminous;;525.0;;1.281;;[Current - Bituminous - 1.281];
+Shajihai No.1 Coal Mine;True;True;True;China;China;2018;Operating;Operating;Bituminous;Bituminous;490.0;490.0;1.196;1.1959332;[Current - Bituminous - 1.196];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Shangwan Coal Mine;True;True;False;China;China;2000;Operating;Operating;Bituminous;Bituminous;83.0;732.0;0.203;1.78657776;[Current - Bituminous - 0.203];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Shangyuquan Coal Mine;True;True;True;China;China;2006;Operating;Operating;Bituminous;Bituminous;571.0;585.4;1.394;1.428774072;[Current - Bituminous - 1.394];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Shanxi Dongda Coal Mine;True;True;True;China;China;2024;Proposed;Proposed;Bituminous (Met);Bituminous;422.0;422.0;1.126;1.02996696;[New - Bituminous (Met) - 1.126];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Shanxi Lu'an Gucheng Coal Mine;True;True;True;China;China;2018;Operating;Operating;Bituminous;Bituminous;717.0;742.15;1.75;1.811350662;[Current - Bituminous - 1.75];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Shanxi Shouyang Hengyuan Coal Mine;False;True;True;China;;1991;Operating;;Anthracite;;655.96;;1.722;;[Current - Anthracite - 1.722];
+Shanxi Xishangzhuang Coal Mine;False;True;True;China;;2025;Proposed;;Anthracite;;528.0;;1.386;;[New - Anthracite - 1.386];
+Shaqu No.1 Coal Mine;True;True;True;China;China;2018;Operating;Operating;Bituminous (Met);Bituminous;889.0;568.0;2.372;1.38630624;[Current - Bituminous (Met) - 2.372];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Shaqu No.2 Coal Mine;False;True;True;China;;2019;Operating;;Bituminous (Met);;404.0;;1.078;;[Current - Bituminous (Met) - 1.078];
+Sheltala Surface Coal Mine;False;True;True;China;;;Shelved;;Bituminous;;496.0;;1.211;;[New - Bituminous - 1.211];
+Shengli East No.2 Coal Mine;True;True;True;China;China;2010;Operating;Operating;Lignite;Lignite;3822.0;3822.0;4.594;4.5936618;[Current - Lignite - 4.594][Expansion - Lignite - 0.0][Expansion - Lignite - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Shengli No.1 Open-Pit Coal Mine;True;True;True;China;China;2013;Operating;Proposed;Lignite;Lignite;1259.0;1342.0;1.513;1.6129498;[Current - Lignite - 1.513];Global Energy Monitor. (2021). Global Coal Mine Tracker (Version No 1) [Data set].
+Shenhua Baorixile Surface Coal Mine;True;True;False;China;China;2009;Operating;Operating;Lignite;Lignite;830.0;1303.0;0.998;1.5660757;[Current - Lignite - 0.998];Global Energy Monitor. (2021). Global Coal Mine Tracker (Version No 1) [Data set].
+Shenhua Bulianta Coal Mine;True;True;True;China;China;2010;Operating;Operating;Bituminous;Subbituminous;1345.0;1224.0;3.283;2.22313896;[Current - Bituminous - 3.283];Global Energy Monitor. (2021). Global Coal Mine Tracker (Version No 1) [Data set].
+Shenhua Heidaigou Surface Coal Mine;True;True;True;China;China;1999;Operating;Operating;Subbituminous;Subbituminous;1498.0;1498.0;2.721;2.72080242;[Current - Subbituminous - 2.721];Global Energy Monitor. (2021). Global Coal Mine Tracker (Version No 1) [Data set].
+Shenhua Heishan Coal Mine;False;True;True;China;;2017;Operating;;Bituminous;;1116.0;;2.724;;[Current - Bituminous - 2.724];
+Shenmu Longde Coal Mine;False;True;True;China;;2013;Operating;;Bituminous;;492.0;;1.201;;[Current - Bituminous - 1.201];
+Shicaocun Coal Mine;True;True;True;China;China;2020;Operating;Operating;Bituminous;Bituminous;597.0;596.71;1.457;1.456378163;[Current - Bituminous - 1.457];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Shigetai Coal Mine;True;True;True;China;China;2006;Operating;Operating;Bituminous;Subbituminous;657.0;657.0;1.604;1.19330253;[Current - Bituminous - 1.604];Global Energy Monitor. (2021). Global Coal Mine Tracker (Version No 1) [Data set].
+Shilawusu Coal Mine;True;True;True;China;China;2019;Operating;Proposed;Bituminous;Bituminous;1591.0;1591.4;3.883;3.884098152;[Current - Bituminous - 3.883];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Shitoumei No.1 Coal Mine;True;True;True;China;China;2022;Operating;Proposed;Bituminous;Bituminous;990.0;990.23;4.833;2.416834556;[Expansion - Bituminous - 2.416][Current - Bituminous - 2.416];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Shiyaodian Coal Mine;False;True;True;China;;2010;Operating;;Bituminous;;488.0;;1.191;;[Current - Bituminous - 1.191];
+Shuangma No.1 Coal Mine;False;True;True;China;;2019;Operating;;Bituminous (Met);;565.0;;1.507;;[Current - Bituminous (Met) - 1.507];
+Shubarkol Premium Coal Mine;True;True;False;Kazakhstan;Kazakhstan;2016;Operating;Operating;Subbituminous;Bituminous;396.0;406.0;0.719;0.99091608;[Current - Subbituminous - 0.719][Expansion - Subbituminous - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Shurapskaya Coal Mine;True;True;True;Russia;Russian Federation;;Cancelled;Proposed;Bituminous;Bituminous;423.0;423.0;1.032;1.03240764;[New - Bituminous - 1.032];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Siarmal Coal Mine;True;True;True;India;India;2023;Operating;Proposed;Lignite;Lignite;1548.0;1548.0;1.861;1.8605412;[New - Lignite - 1.861];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Sijiazhuang Coal Mine;True;True;True;China;China;2013;Operating;Operating;Anthracite;Anthracite;588.0;594.3;1.543;1.559805723;[Current - Anthracite - 1.543];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+South Galilee Coal Project;False;True;True;Australia;;2027;Shelved;;Bituminous;;1179.0;;2.878;;[Current - Bituminous - 2.878];
+Stepnoy Coal Mine;True;True;False;Russia;Russian Federation;1993;Operating;Operating;Subbituminous;Bituminous;;1458.0;0.0;3.55851144;[Current - Subbituminous - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Suancigou Coal Mine;True;True;True;China;China;2010;Operating;Operating;Bituminous;Bituminous;685.0;851.4;1.672;2.077994952;[Current - Bituminous - 1.672];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Sugodinsk-Ogodzhinsky Coal Mine;True;True;True;Russia;Russian Federation;2020;Operating;Proposed;Bituminous;Bituminous;744.0;744.0;1.816;1.81586592;[Current - Bituminous - 1.816][Expansion - Bituminous - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Tabang Project Coal Mines;False;True;True;Indonesia;;2011;Operating;;Subbituminous;;1692.0;;3.073;;[Current - Subbituminous - 3.073];
+Talahao Coal Mine;True;True;True;China;China;2018;Operating;Operating;Bituminous;Bituminous;421.0;531.61;1.028;1.297489895;[Current - Bituminous - 1.028];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Talaipalli Coal Mine;True;True;True;India;India;2019;Operating;Operating;Subbituminous;Subbituminous;844.0;844.0;1.533;1.53294876;[Current - Subbituminous - 1.533];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Taldinsky Coal Mine;True;True;True;Russia;Russian Federation;1986;Operating;Operating;Bituminous;Bituminous;1400.0;900.0;3.417;2.196612;[Current - Bituminous - 3.417];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Talike No. 2 Coal Mine;True;True;False;China;China;2024;Proposed;Proposed;Bituminous;Bituminous;314.0;465.0;0.766;1.1349162;[New - Bituminous - 0.766];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Talwood Coal Mine;False;True;True;Australia;;;Cancelled;;Bituminous (Met);;435.0;;1.161;;[Current - Bituminous (Met) - 1.161];
+Tamnava-West Coal Mine;False;True;True;Serbia;;1994;Operating;;Lignite;;2100.0;;2.524;;[Current - Lignite - 2.524];
+Tangjiahe Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;424.0;;1.035;;[New - Bituminous - 1.035];
+Taohe Coal Mine;True;True;True;China;China;;Proposed;Proposed;Bituminous;Bituminous;579.0;579.14;1.413;1.413495415;[New - Bituminous - 1.413];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Taran Gaole Coal Mine;True;True;True;China;China;2028;Proposed;Proposed;Bituminous;Bituminous;1200.0;1200.0;2.929;2.928816;[New - Bituminous - 2.929];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Tashan Coal Mine;True;True;True;China;China;2008;Operating;Operating;Bituminous (Met);Bituminous (Met);1572.0;3375.0;4.194;9.003555;[Current - Bituminous (Met) - 4.194];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Tavan Tolgoi Coal Mine;True;True;True;Mongolia;Mongolia;2011;Operating;Proposed;Bituminous (Met);Bituminous (Met);7000.0;6009.0;19.743;16.03032948;[Current - Bituminous (Met) - 18.676][Expansion - Bituminous (Met) - 1.067];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Tekono Orbit Persada Mine;False;True;True;Indonesia;;;Proposed;;Subbituminous;;800.0;;1.453;;[New - Subbituminous - 1.453];
+Tevshiin Govi Coal Mine;False;True;True;Mongolia;;;Mothballed;;Lignite;;420.0;;1.01;;[Current - Lignite - 0.505][New - Lignite - 0.505];
+Thar Block I Coal Mine;False;True;True;Pakistan;;2023;Operating;;Lignite;;3566.0;;4.286;;[New - Lignite - 4.286];
+Thar Block II Coal Mine;True;True;True;Pakistan;Pakistan;2019;Operating;Operating;Lignite;Lignite;1584.0;1570.0;1.904;1.886983;[New - Lignite - 1.904][Expansion - Lignite - 0.0][Expansion - Lignite - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Thar Block VI Coal Mine;False;True;True;Pakistan;;;Proposed;;Lignite;;;;1.683;;[New - Lignite - 0.0][Extension - Lignite - 1.683];
+Tian'an No.13 Coal Mine;False;True;True;China;;2002;Operating;;Bituminous (Met);;452.0;;1.206;;[Current - Bituminous (Met) - 1.206];
+Tiwa Abadi Coal Mine;False;True;True;Indonesia;;2021;Operating;;Subbituminous;;706.0;;1.282;;[Current - Subbituminous - 1.282];
+Togara North Coal Project;False;True;True;Australia;;;Cancelled;;Subbituminous;;770.0;;1.399;;[Current - Subbituminous - 1.399];
+Tongxin Coal Mine;True;True;True;China;China;2013;Operating;Operating;Bituminous (Met);Bituminous (Met);681.0;588.0;1.817;1.56861936;[Current - Bituminous (Met) - 1.817];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Tugrugnuur Coal Mine;False;True;True;Mongolia;;;Operating;;Lignite;;3120.0;;3.75;;[Current - Lignite - 3.75];
+Tunbao Coal Mine;False;True;True;China;;2010;Operating;;Bituminous;;597.0;;1.457;;[Current - Bituminous - 1.457];
+Tunlan Coal Mine;False;True;True;China;;2002;Operating;;Bituminous (Met);;431.0;;1.15;;[Current - Bituminous (Met) - 1.15];
+Tutupan Coal Mine;True;True;False;Indonesia;Indonesia;1997;Operating;Operating;Subbituminous;Subbituminous;375.0;602.0;0.681;1.09340658;[Current - Subbituminous - 0.681];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Ulug-Khem Coal Mine;True;True;True;Russia;Russian Federation;2024;Cancelled;Proposed;Bituminous (Met);Bituminous (Met);807.0;807.0;2.153;2.15285004;[New - Bituminous (Met) - 2.153][Expansion - Bituminous (Met) - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Usibelli Coal Mine;False;True;True;United States;;1943;Operating;;Subbituminous;;700.0;;1.271;;[Current - Subbituminous - 1.271];
+Usinsk-1 Coal Mine;True;True;True;Russia;Russian Federation;2020;Cancelled;Proposed;Bituminous (Met);Bituminous (Met);621.0;621.0;1.657;1.65665412;[New - Bituminous (Met) - 1.657];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Valeria Coal Mine;True;True;True;Australia;Australia;2026;Cancelled;Proposed;Bituminous (Met);Bituminous (Met);660.0;762.0;1.761;2.03280264;[New - Bituminous (Met) - 1.761];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Visonta Coal Mine;False;True;True;Hungary;;1964;Operating;;Lignite;;2150.0;;2.584;;[Current - Lignite - 2.584];
+Vista Coal Mine;False;True;True;Canada;;2019;Operating;;Bituminous;;1322.0;;3.227;;[Current - Bituminous - 3.227][Expansion - Subbituminous - 0.0][Expansion - Subbituminous - 0.0];
+Wandoan Coal Project;False;True;True;Australia;;2027;Shelved;;Subbituminous;;846.0;;1.537;;[Current - Subbituminous - 1.537];
+Wangjialing Coal Mine;True;True;True;China;China;2014;Operating;Operating;Bituminous (Met);Bituminous (Met);778.0;1021.0;2.076;2.72374212;[Current - Bituminous (Met) - 2.076];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Wangjiata Coal Mine;True;True;True;China;China;2012;Operating;Operating;Bituminous;Bituminous;580.0;661.0;1.416;1.61328948;[Current - Bituminous - 1.416];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Wangwa Coal Mine;True;True;True;China;China;2021;Operating;Proposed;Bituminous;Bituminous;439.0;439.3;1.071;1.072190724;[Expansion - Bituminous - 1.071];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Wangzhuang Coal Mine;False;True;True;China;;1982;Operating;;Bituminous;;795.0;;1.94;;[Current - Bituminous - 1.94];
+Wards Well Coal Mine;True;True;True;Australia;Australia;2027;Proposed;Proposed;Bituminous (Met);Bituminous (Met);1158.0;1000.0;3.09;2.66772;[New - Bituminous (Met) - 3.09];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Weijiamao Open Pit Mine;True;True;True;China;China;2014;Operating;Operating;Bituminous;Bituminous;691.0;691.0;1.687;1.68650988;[Current - Bituminous - 1.687];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Wenjiazhuang Coal Mine;True;True;False;China;China;2023;Operating;Proposed;Anthracite;Bituminous;158.0;514.27;0.415;1.255168504;[Expansion - Anthracite - 0.415];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+West Macedonia Lignite Centre;True;True;True;Greece;Greece;1957;Operating;Operating;Lignite;Lignite;1500.0;1800.0;1.803;2.16342;[Current - Lignite - 1.803];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+West No. 1 Coal Mine;False;True;True;China;;2024;Proposed;;Lignite;;833.0;;1.001;;[New - Lignite - 1.001];
+West Well of Faer Second Coal Mine;True;True;True;China;China;2023;Operating;Proposed;Bituminous (Met);Bituminous (Met);377.0;377.0;2.012;1.00573044;[Expansion - Bituminous (Met) - 1.006][New - Bituminous (Met) - 1.006];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Wilton Coal Mine;True;True;True;Australia;Australia;2023;Operating;Proposed;Bituminous (Met);Bituminous (Met);2600.0;700.0;6.937;1.867404;[New - Bituminous (Met) - 6.937];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Winchester South Coal Mine;False;True;True;Australia;;;Proposed;;Bituminous (Met);;380.0;;1.014;;[New - Bituminous (Met) - 1.014];
+Wucaiwan No. 4 Coal Mine;False;True;True;China;;2025;Proposed;;Bituminous;;2958.0;;7.22;;[New - Bituminous - 7.22];
+Wucaiwan No.1 Coal Mine;True;True;True;China;China;;Proposed;Proposed;Bituminous;Bituminous;1232.0;1366.9;3.007;3.336165492;[New - Bituminous - 3.007];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Wucaiwan No.1 Surface Mine;True;True;True;China;China;2009;Operating;Operating;Subbituminous;Subbituminous;765.0;765.13;1.389;1.389697968;[Current - Subbituminous - 1.389];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Wudong Coal Mine;True;True;True;China;China;2018;Operating;Operating;Bituminous;Bituminous;510.0;661.0;1.245;1.61328948;[Current - Bituminous - 1.245];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Xiangshui Coal Mine Botu area;False;True;True;China;;2015;Operating;;Bituminous (Met);;486.0;;1.297;;[Current - Bituminous (Met) - 1.297];
+Xiaobaodang No.1 Coal Mine;True;True;True;China;China;2020;Operating;Operating;Bituminous;Bituminous;1550.0;1550.2;3.783;3.783542136;[Current - Bituminous - 3.783];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Xiaobaodang No.2 Coal Mine;True;True;True;China;China;2022;Operating;Proposed;Bituminous;Bituminous;958.0;792.42;2.338;1.934043646;[Current - Bituminous - 2.338];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Xiaohaotu No. 2 Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;696.0;;1.699;;[New - Bituminous - 1.699];
+Xiaojiawa Coal Mine;True;True;True;China;China;2023;Operating;Operating;Bituminous (Met);Bituminous;604.0;724.91;1.611;1.769273339;[Current - Bituminous (Met) - 1.611];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Xiaojihan Coal Mine;True;True;True;China;China;2019;Operating;Operating;Bituminous;Bituminous;1640.0;1893.5;4.003;4.62142758;[Current - Bituminous - 4.003];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Xiaozhuang Coal Mine;True;True;True;China;China;;Operating;Operating;Bituminous;Bituminous;585.0;578.0;1.428;1.41071304;[Current - Bituminous - 1.428];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Xiegou Coal Mine;False;True;True;China;;2021;Operating;;Bituminous (Met);;889.0;;2.372;;[Current - Bituminous (Met) - 2.372];
+Xihongdun Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;2090.0;;5.101;;[New - Bituminous - 5.101];
+Xinjiang Chahaquan No. 1 Surface Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;917.96;;2.24;;[New - Bituminous - 2.24];
+Xinjiang Hongshan Coal Mine;True;True;True;China;China;;Proposed;Proposed;Bituminous;Bituminous;494.0;493.64;1.206;1.204817275;[New - Bituminous - 1.206];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Xinjiang Hongshaquan No. 2 Surface Mine;False;True;True;China;;;Proposed;;Bituminous;;4508.32;;11.003;;[New - Bituminous - 11.003];
+Xinjiang Hoxtolgay Coal Mine;False;True;True;China;;1958;Operating;;Bituminous;;1801.5;;4.397;;[Current - Bituminous - 4.397];
+Xinjiang Jijihu West Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;6133.0;;14.969;;[New - Bituminous - 14.969];
+Xinjiang Malang No. 1 Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;1298.0;;3.168;;[New - Bituminous - 3.168];
+Xinjiang Sha'erhu Mining Area No. 2 Surface Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;945.45;;2.308;;[New - Bituminous - 2.308];
+Xinjiang Sha'erhu Mining Area No. 5 Surface Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;3773.0;;9.209;;[New - Bituminous - 9.209];
+Xinjiang Sha'erhu Mining Area No. 9 Surface Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;526.93;;1.286;;[New - Bituminous - 1.286];
+Xinjiang Shajihai Coal Mine;True;True;True;China;China;2006;Operating;Operating;Bituminous;Bituminous;448.77;470.0;1.095;1.1471196;[Current - Bituminous - 1.095];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Xinjiang Tiaohu No.1 Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;1086.0;;2.651;;[New - Bituminous - 2.651];
+Xinjiang Yibei Mining Area No. 8 Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;578.0;;1.411;;[New - Bituminous - 1.411];
+Xinjiang Yitai Yili Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;762.5;;1.861;;[Expansion - Bituminous - 1.861];
+Xinjiang Zhifang No. 1 Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;563.45;;1.375;;[New - Bituminous - 1.375];
+Xinjing Coal Mine;False;True;True;China;;1997;Operating;;Anthracite;;473.0;;1.241;;[Current - Anthracite - 1.241];
+Xinwen IlI No.1 Coal Mine;True;True;True;China;China;2021;Operating;Proposed;Bituminous;Bituminous;1971.0;1839.1;4.811;4.488654588;[Current - Bituminous - 4.811];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Xinyuan UG Coal Mine;False;True;True;China;;2008;Operating;;Anthracite;;650.0;;3.412;;[Current - Anthracite - 1.706][Expansion - Anthracite - 1.706];
+Xinzhuang Coal Mine;True;True;False;China;China;2024;Operating;Proposed;;Bituminous;915.0;942.16;0.0;2.299511069;[New -  - 0.0];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Xishan Zhongshe Coal Mine;False;True;True;China;;;Shelved;;Bituminous;;19958.0;;48.711;;[New - Bituminous - 48.711];
+Xiwan Surface Coal Mine;True;True;True;China;China;2019;Operating;Operating;Bituminous;Bituminous;627.0;626.71;1.53;1.529598563;[Current - Bituminous - 1.53];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Xiwangzhai Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;1254.0;;3.061;;[New - Bituminous - 3.061];
+Yadian Coal Mine;True;True;True;China;China;2019;Operating;Proposed;Bituminous;Bituminous;611.0;610.75;1.491;1.49064531;[Current - Bituminous - 1.491];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Yalevsky Coal Mine;False;True;True;Russia;;2000;Operating;;Bituminous;;419.0;;1.023;;[Current - Bituminous - 1.023];
+Yallourn Coal Mine;True;True;False;Australia;Australia;1920;Operating;Operating;Lignite;bituminous;463.0;463.0;0.556;1.13003484;[Current - Lignite - 0.556];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Yanbei Coal Mine;False;True;True;China;;1998;Operating;;Bituminous;;431.0;;1.052;;[Current - Bituminous - 1.052];
+Yangchangwan Coal Mine;True;True;True;China;China;2006;Operating;Operating;Bituminous;Bituminous;1002.0;440.0;2.446;1.0738992;[Current - Bituminous - 2.446];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Yangcun Coal Mine;False;True;True;China;;;Shelved;;Bituminous (Met);;384.0;;1.025;;[New - Bituminous (Met) - 1.025];
+Yangjiacun Coal Mine;True;True;True;China;China;2012;Operating;Operating;Bituminous;Bituminous;442.0;442.0;1.079;1.07878056;[Current - Bituminous - 1.079];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Yangquan No. 1 Coal Mine;True;True;True;China;China;1956;Operating;Operating;Anthracite;Anthracite;428.0;461.4;1.123;1.210995054;[Current - Anthracite - 1.123];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Yili No.4 Coal Mine;True;True;True;China;China;2018;Operating;Operating;Bituminous;Bituminous (Met);983.0;968.0;2.399;2.58235296;[Current - Bituminous - 2.399];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Yimin Surface Mine;True;True;False;China;China;1984;Operating;Operating;Lignite;Lignite;455.0;1692.0;0.547;2.0336148;[Current - Lignite - 0.547];Global Energy Monitor. (2021). Global Coal Mine Tracker (Version No 1) [Data set].
+Yingpanhao Coal Mine;True;True;True;China;China;2023;Operating;Proposed;Bituminous;Bituminous;1160.0;1540.5;2.831;3.75986754;[Current - Bituminous - 2.831];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Yinxing No. 1 Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;581.0;;1.418;;[Expansion - Bituminous - 1.418];
+Yishun Coal Mine;False;True;True;China;;1991;Operating;;Bituminous;;893.0;;2.18;;[Current - Bituminous - 2.18];
+Yitai Yili Coal Mine;False;True;True;China;;2024;Proposed;;Bituminous;;825.0;;2.014;;[New - Bituminous - 2.014];
+Youfanghao Coal Mine;False;True;True;China;;2027;Proposed;;Bituminous;;467.0;;1.14;;[New - Bituminous - 1.14];
+Youngs Creek Coal Mine;True;True;False;United States;United States;;Proposed;Proposed;Bituminous (Met);Bituminous (Met);291.0;408.0;0.776;1.08842976;[Recommission - Bituminous (Met) - 0.776];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Yuandatan Coal Mine;False;True;True;China;;2021;Operating;;Bituminous;;550.0;;1.342;;[Current - Bituminous - 1.342];
+Yuanzigou Coal Mine;False;True;True;China;;2024;Operating;;Bituminous;;796.0;;1.943;;[Current - Bituminous - 1.943];
+Yulin Gucheng No.1 Coal Mine;False;True;True;China;;;Proposed;;Bituminous (Met);;434.0;;1.158;;[New - Bituminous (Met) - 1.158];
+Yulin Gucheng No.2 Coal Mine;False;True;True;China;;;Proposed;;Bituminous (Met);;1140.0;;3.042;;[New - Bituminous (Met) - 3.042];
+Yulin Haizetan Coal Mine;False;True;True;China;;;Proposed;;Bituminous;;604.0;;1.474;;[New - Bituminous - 1.474];
+Yushuwan Coal Mine;True;True;False;China;China;2008;Operating;Operating;Bituminous;Bituminous;155.0;1158.0;0.378;2.82630744;[Current - Bituminous - 0.378];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Yuwang No.1 Coal Mine;True;True;True;China;China;2022;Proposed;Proposed;Anthracite;Anthracite;477.0;477.24;1.252;1.252568876;[New - Anthracite - 1.252];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Zambezi Coal Mine;True;True;True;Mozambique;Mozambique;;Proposed;Proposed;Bituminous (Met);Bituminous;1700.0;1700.0;4.536;4.149156;[New - Bituminous (Met) - 4.536];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Zaoquan Coal Mine;True;True;True;China;China;2006;Operating;Operating;Bituminous;Bituminous;526.0;434.0;1.284;1.05925512;[Current - Bituminous - 1.284];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Zashulansky Coal Mine;False;True;True;Russia;;2024;Operating;;Bituminous;;663.0;;1.618;;[New - Bituminous - 1.618][Expansion - Bituminous - 0.0];
+Zhangji Coal Mine;True;True;True;China;China;2001;Operating;Operating;Bituminous (Met);Bituminous (Met);887.0;822.4;2.367;2.193932928;[Current - Bituminous (Met) - 2.367];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Zhangjiamao Coal Mine;True;True;True;China;China;2011;Operating;Operating;Bituminous;Bituminous;543.0;542.6;1.325;1.324312968;[Current - Bituminous - 1.325];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Zhaoshipan Coal Mine;True;True;True;China;China;;Proposed;Proposed;Bituminous;Bituminous;792.0;792.3;1.933;1.933750764;[New - Bituminous - 1.933];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Zhong Yu Coal Mine;True;True;True;China;China;;Proposed;Proposed;Bituminous (Met);Bituminous (Met);514.0;514.15;1.371;1.371608238;[New - Bituminous (Met) - 1.371];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
+Zhujidong Coal Mine;False;True;True;China;;2013;Operating;;Bituminous (Met);;453.0;;1.209;;[Current - Bituminous (Met) - 1.209];
+Zhujixi Coal Mine;False;True;True;China;;2017;Operating;;Bituminous (Met);;396.0;;1.057;;[Current - Bituminous (Met) - 1.057];
+Zhundong South Surface Mine;False;True;True;China;;2017;Operating;;Bituminous;;1779.0;;4.342;;[Current - Bituminous - 4.342];
+Zhundong Surface Mine;True;True;True;China;China;2016;Operating;Proposed;Bituminous;Bituminous;2169.0;1447.0;5.294;3.53166396;[Current - Bituminous - 5.294];Global Energy Monitor. (2021). Global Coal Mine Tracker [Data set].
