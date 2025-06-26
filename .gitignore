@@ -11,6 +11,7 @@ data_sources/LNG-Liquefaction-Projects-from-GOGEL-2024.xlsx
 data_sources/Carbon_bomb_personalDB.csv
 data_sources/Extract_carbon_bombs_new.xlsx
 data_sources/Carbon_Bombs_Projects.xlsx
+data_sources/Temp_companies.xlsx
 data_cleaned/diffGPT_GEM_coal_only.csv
 data_save_tmp/*
 report_gasoil
