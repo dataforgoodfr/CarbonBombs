@@ -66,21 +66,25 @@ def get_country_from_geopy(lat: float, long: float) -> str:
 
 def clean_project_names_with_iso(df, column_name="Project_name"):
     """
-    Remove ISO codes from project names in the DataFrame.
-    Example: 'Changqing, CN' -> 'Changqing' when country is China
-    Modifies the DataFrame in place.
+    Clean the project names by removing ISO codes,
+    while preserving the original values in a new column.
 
     Parameters
     ----------
     df : pandas.DataFrame
-        DataFrame containing project names and countries
+        DataFrame containing project names
     column_name : str, optional
         Name of the column containing project names, by default "Project_name"
     """
     # Match pattern: comma followed by optional space and 2 uppercase letters at the end
     iso_pattern = r",\s*[A-Z]{2}$"
 
-    # Clean all project names in the DataFrame in place
+    # Preserve original values
+    df["Project_name_raw"] = df[column_name]
+
+    # Clean the project name in place
     df[column_name] = df[column_name].apply(
-        lambda x: re.sub(iso_pattern, "", x) if re.search(iso_pattern, x) else x
+        lambda x: re.sub(iso_pattern, "", x)
+        if isinstance(x, str) and re.search(iso_pattern, x)
+        else x
     )
