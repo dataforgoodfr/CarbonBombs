@@ -24,8 +24,11 @@ def get_world_region(country: str) -> str:
     str
         Continent name
     """
-    if country == "None":
+    if country == "None" or country == "Neutral Zone" or country == "Other":
         return "None"
+
+    # Take only the first part before a slash or a dash (if any)
+    country = re.split(r"[/\-]", country)[0].strip()
 
     try:
         return coco.convert(names=country, to="Continent")
@@ -64,7 +67,7 @@ def get_country_from_geopy(lat: float, long: float) -> str:
     return country
 
 
-def clean_project_names_with_iso(df, column_name="Project_name"):
+def clean_project_names_with_iso(df, column_name="project_name"):
     """
     Clean the project names by removing ISO codes,
     while preserving the original values in a new column.
@@ -74,13 +77,13 @@ def clean_project_names_with_iso(df, column_name="Project_name"):
     df : pandas.DataFrame
         DataFrame containing project names
     column_name : str, optional
-        Name of the column containing project names, by default "Project_name"
+        Name of the column containing project names, by default "project_name"
     """
     # Match pattern: comma followed by optional space and 2 uppercase letters at the end
     iso_pattern = r",\s*[A-Z]{2}$"
 
     # Preserve original values
-    df["Project_name_raw"] = df[column_name]
+    df["project_name_raw"] = df[column_name]
 
     # Clean the project name in place
     df[column_name] = df[column_name].apply(

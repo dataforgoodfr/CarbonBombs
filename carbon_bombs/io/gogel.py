@@ -22,14 +22,16 @@ def load_lng_database():
         skiprows=2,
     )
     renamed_columns = {
-        "Name (project)": "Project_name",
-        "Export capacity (Mtpa)": "Export_capacity_in_Mtpa",
-        "Status": "Project_status",
-        "Country": "Country",
-        "Companies involved": "Companies_involved",
+        "Name (project)": "project_name",
+        "Export capacity (Mtpa)": "export_capacity_in_mtpa",
+        "Status": "project_status",
+        "Country": "country",
+        "Companies involved": "companies_involved",
     }
     # Only keep columns of interest for the project
     df = df.loc[:, renamed_columns.keys()]
     # Rename columns
     df = df.rename(columns=renamed_columns)
+    # Replace UAE by United Arab Emirates in country column
+    df["country"] = df["country"].replace("UAE", "United Arab Emirates")
     return df

@@ -30,17 +30,17 @@ def create_lng_table():
     country_lat_long_df = pd.read_csv(f"{DATA_SOURCE_PATH}/longitude-latitude.csv")
 
     LOGGER.debug("Add LNG project's country location")
-    df_lng[["Latitude", "Longitude"]] = df_lng["Country"].apply(
+    df_lng[["latitude", "longitude"]] = df_lng["country"].apply(
         lambda x: pd.Series(_get_lat_long(x, country_lat_long_df))
     )
 
     # Add noise to duplicate lat/long
     np.random.seed(42)
-    lat_long_dup = df_lng.duplicated(subset=["Latitude", "Longitude"], keep=False)
-    df_lng.loc[lat_long_dup, "Latitude"] = df_lng.loc[lat_long_dup, "Latitude"].apply(
+    lat_long_dup = df_lng.duplicated(subset=["latitude", "longitude"], keep=False)
+    df_lng.loc[lat_long_dup, "latitude"] = df_lng.loc[lat_long_dup, "latitude"].apply(
         _add_noise_lat_long
     )
-    df_lng.loc[lat_long_dup, "Longitude"] = df_lng.loc[lat_long_dup, "Longitude"].apply(
+    df_lng.loc[lat_long_dup, "longitude"] = df_lng.loc[lat_long_dup, "longitude"].apply(
         _add_noise_lat_long
     )
     LOGGER.debug("Success adding LNG project's country location")
