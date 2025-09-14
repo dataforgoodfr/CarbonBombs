@@ -27,6 +27,9 @@ def get_world_region(country: str) -> str:
     if country == "None" or country == "Neutral Zone" or country == "Other":
         return "None"
 
+    elif country == "Timor-Leste":
+        return "Asia"
+
     # Take only the first part before a slash or a dash (if any)
     country = re.split(r"[/\-]", country)[0].strip()
 
