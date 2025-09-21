@@ -23,6 +23,8 @@ def load_lng_database():
     )
     renamed_columns = {
         "Name (project)": "project_name",
+        "Other Name": "other_name",
+        "Unit": "unit",
         "Export capacity (Mtpa)": "export_capacity_in_mtpa",
         "Status": "project_status",
         "Country": "country",
@@ -32,6 +34,17 @@ def load_lng_database():
     df = df.loc[:, renamed_columns.keys()]
     # Rename columns
     df = df.rename(columns=renamed_columns)
+
+    # For duplicate name in project_name column we use other_name values
+    mask = df["project_name"].duplicated(keep=False) & df["other_name"].notna()
+    df.loc[mask, "project_name"] = df.loc[mask, "other_name"]
+
+    # If other_name is empty (NaN or ""), concatenate project_name and unit name
+    mask = df["project_name"].duplicated(keep=False)
+    df.loc[mask, "project_name"] = df["project_name"] + " " + df["unit"]
+
+    # Drop column other_name
+    df = df.drop(columns=["other_name", "unit"])
     # Replace UAE by United Arab Emirates in country column
     df["country"] = df["country"].replace("UAE", "United Arab Emirates")
     return df
