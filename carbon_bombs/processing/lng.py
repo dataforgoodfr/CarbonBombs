@@ -25,30 +25,6 @@ def create_lng_table():
     """
     LOGGER.debug("Read LNG source: LNG Liquefaction projects")
     df_lng = load_lng_database()
-
-    # Replace country Senegal/Mauritania for project Greater Tortue Ahmeyim - Phase 1 and Phase 2
-    # To avoid warning on double country
-    # See slack message : https://data-for-good.slack.com/archives/C08C639D8HM/p1755531343983969?thread_ts=1754847139.766209&cid=C08C639D8HM
-    df_lng["country"] = df_lng["country"].replace("Senegal/Mauritania", "Senegal")
-
-    # TODO: refacto get lat long country in an utils func for here and cb processing
-    country_lat_long_df = pd.read_csv(f"{DATA_SOURCE_PATH}/longitude-latitude.csv")
-
-    LOGGER.debug("Add LNG project's country location")
-    df_lng[["latitude", "longitude"]] = df_lng["country"].apply(
-        lambda x: pd.Series(_get_lat_long(x, country_lat_long_df))
-    )
-
-    # Add noise to duplicate lat/long
-    np.random.seed(42)
-    lat_long_dup = df_lng.duplicated(subset=["latitude", "longitude"], keep=False)
-    df_lng.loc[lat_long_dup, "latitude"] = df_lng.loc[lat_long_dup, "latitude"].apply(
-        _add_noise_lat_long
-    )
-    df_lng.loc[lat_long_dup, "longitude"] = df_lng.loc[lat_long_dup, "longitude"].apply(
-        _add_noise_lat_long
-    )
-    LOGGER.debug("Success adding LNG project's country location")
     return df_lng
 
 
