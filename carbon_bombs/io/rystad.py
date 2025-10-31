@@ -4,7 +4,7 @@ import pandas as pd
 from carbon_bombs.conf import FPATH_SRC_RYSTAD_CB
 from carbon_bombs.conf import SHEETNAME_RYSTAD_CB_EMISSION
 from carbon_bombs.conf import SHEETNAME_RYSTAD_CB_COMPANY
-from carbon_bombs.conf import SHEETNAME_RYSTAD_GASOIL_EMISSION
+from carbon_bombs.conf import SHEETNAME_RYSTAD_EXPANSION_EMISSION
 from carbon_bombs.conf import SHEETNAME_RYSTAD_CB_EMISSION_INFERIOR_1GT
 from carbon_bombs.utils.logger import LOGGER
 from carbon_bombs.utils.location import clean_project_names_with_iso
@@ -26,41 +26,41 @@ def load_rystad_emission_database(sheet_name: str) -> pd.DataFrame:
     """
     if sheet_name == SHEETNAME_RYSTAD_CB_EMISSION:
         renamed_columns = {
-            "Project name": "Project_name",
-            "Country": "Country",
-            "Latitude": "Latitude",
-            "Longitude": "Longitude",
-            "Start-up year min asset": "Start_up_year",
-            "Producing  - Potential emissions (GTCO2)": "Producing_potential_emissions_in_GTCO2",
-            "Short term expansion - Potential emissions (GTCO2)": "Short_term_expansion_potential_emissions_in_GTCO2",
-            "Long term expansion - Potential emissions (GTCO2)": "Long_term_expansion_potential_emissions_in_GTCO2",
-            "Total potential emissions (GTCO2)": "Total_potential_emissions_in_GTCO2",
+            "Project name": "project_name",
+            "Country": "country",
+            "Latitude": "latitude",
+            "Longitude": "longitude",
+            "Start-up year min asset": "start_up_year",
+            "Producing  - Potential emissions (GTCO2)": "producing_potential_emissions",
+            "Short term expansion - Potential emissions (GTCO2)": "short_term_expansion_potential_emissions",
+            "Long term expansion - Potential emissions (GTCO2)": "long_term_expansion_potential_emissions",
+            "Total potential emissions (GTCO2)": "total_potential_emissions",
         }
         log_message = "Read Rystad data: all Carbon Bombs project emissions > 1 GtCO2"
     elif sheet_name == SHEETNAME_RYSTAD_CB_EMISSION_INFERIOR_1GT:
         renamed_columns = {
-            "Project name": "Project_name",
-            "Country": "Country",
-            "Latitude": "Latitude",
-            "Longitude": "Longitude",
-            "Start-up year min asset": "Start_up_year",
-            "Producing  - Potential emissions (GTCO2)": "Producing_potential_emissions_in_GTCO2",
-            "Short term expansion - Potential emissions (GTCO2)": "Short_term_expansion_potential_emissions_in_GTCO2",
-            "Long term expansion - Potential emissions (GTCO2)": "Long_term_expansion_potential_emissions_in_GTCO2",
-            "Total potential emissions (GTCO2)": "Total_potential_emissions_in_GTCO2",
+            "Project name": "project_name",
+            "Country": "country",
+            "Latitude": "latitude",
+            "Longitude": "longitude",
+            "Start-up year min asset": "start_up_year",
+            "Producing  - Potential emissions (GTCO2)": "producing_potential_emissions",
+            "Short term expansion - Potential emissions (GTCO2)": "short_term_expansion_potential_emissions",
+            "Long term expansion - Potential emissions (GTCO2)": "long_term_expansion_potential_emissions",
+            "Total potential emissions (GTCO2)": "total_potential_emissions",
         }
         log_message = "Read Rystad data: all Carbon Bombs project emissions < 1 GtCO2"
-    elif sheet_name == SHEETNAME_RYSTAD_GASOIL_EMISSION:
+    elif sheet_name == SHEETNAME_RYSTAD_EXPANSION_EMISSION:
         renamed_columns = {
-            "Project name": "Project_name",
-            "Country": "Country",
-            "Latitude": "Latitude",
-            "Longitude": "Longitude",
-            "Start-up year min asset": "Start_up_year",
-            "Producing  - Potential emissions": "Producing_potential_emissions",
-            "Short term expansion - Potential emissions": "Short_term_expansion_potential_emissions",
-            "Long term expansion - Potential emissions": "Long_term_expansion_potential_emissions",
-            "Total potential emissions (mtCO2)": "Total_potential_emissions",
+            "Project name": "project_name",
+            "Country": "country",
+            "Latitude": "latitude",
+            "Longitude": "longitude",
+            "Start-up year min asset": "start_up_year",
+            "Producing  - Potential emissions": "producing_potential_emissions",
+            "Short term expansion - Potential emissions": "short_term_expansion_potential_emissions",
+            "Long term expansion - Potential emissions": "long_term_expansion_potential_emissions",
+            "Total potential emissions (mtCO2)": "total_potential_emissions",
         }
         log_message = "Read Rystad data: all Gasoil project emissions > 5MTCO2"
     else:
@@ -78,9 +78,11 @@ def load_rystad_emission_database(sheet_name: str) -> pd.DataFrame:
     # Rename columns
     df = df.rename(columns=renamed_columns)
     # Remove total row if applicable
-    df = df[df["Project_name"] != "SUMS"]
+    df = df[df["project_name"] != "SUMS"]
     # Clean project names
     clean_project_names_with_iso(df)
+    # Replace UAE by United Arab Emirates in country column
+    df["country"] = df["country"].replace("UAE", "United Arab Emirates")
     return df
 
 

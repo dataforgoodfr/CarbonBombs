@@ -25,25 +25,6 @@ def create_lng_table():
     """
     LOGGER.debug("Read LNG source: LNG Liquefaction projects")
     df_lng = load_lng_database()
-
-    # TODO: refacto get lat long country in an utils func for here and cb processing
-    country_lat_long_df = pd.read_csv(f"{DATA_SOURCE_PATH}/longitude-latitude.csv")
-
-    LOGGER.debug("Add LNG project's country location")
-    df_lng[["Latitude", "Longitude"]] = df_lng["Country"].apply(
-        lambda x: pd.Series(_get_lat_long(x, country_lat_long_df))
-    )
-
-    # Add noise to duplicate lat/long
-    np.random.seed(42)
-    lat_long_dup = df_lng.duplicated(subset=["Latitude", "Longitude"], keep=False)
-    df_lng.loc[lat_long_dup, "Latitude"] = df_lng.loc[lat_long_dup, "Latitude"].apply(
-        _add_noise_lat_long
-    )
-    df_lng.loc[lat_long_dup, "Longitude"] = df_lng.loc[lat_long_dup, "Longitude"].apply(
-        _add_noise_lat_long
-    )
-    LOGGER.debug("Success adding LNG project's country location")
     return df_lng
 
 

@@ -1,98 +1,72 @@
-sheetName,columnName,columnDescription,Source
-bank_data,Bank Name,Name of the bank,Banktrack
-bank_data,Bank Website,Url of the bank website,Banktrack
-bank_data,Headquarters address,Headquarters address of the bank,Banktrack
-bank_data,Headquarters country,Country of the bank's headquarters,Banktrack
-bank_data,CEO Name,Bank's Chief Executive Officer,Banktrack
-bank_data,Board description,Url of the board description,Banktrack
-bank_data,Supervisor Name,Supervisor name of the bank,Banktrack
-bank_data,Supervisor Website,Url of the bank's supervisor,Banktrack
-bank_data,Shareholder structure source,Url of the bank's shareholder structure,Banktrack
-bank_data,Source BankTrack,Banktrack's url,Banktrack
-bank_data,Latitude,Latitude of the headquarters address,"Banktrack, Google Maps API"
-bank_data,Longitude,Longitude of the headquarters address,"Banktrack, Google Maps API"
-bank_data,Bank logo,Url of the bank's logo,Banktrack
-bank_data,World Region,World Region of the country's bank,Banktrack
-carbon_bombs_data,Carbon_bomb_name_source_CB,Name of the carbon bomb project,Carbon Bombs article
-carbon_bombs_data,Country_source_CB,Country where the carbon bomb is located,Carbon Bombs article
-carbon_bombs_data,World_region,World Region of the country's carbon bomb project,GEM
-carbon_bombs_data,Potential_GtCO2_source_CB,"Potential emissions of the carbon bomb project (in Gt of CO2), a carbon bomb should be above 1",Carbon Bombs article
-carbon_bombs_data,Fuel_type_source_CB,"Type of fuel used by the carbon bomb project. Possible values are : Oil&Gas or Coal.
-If Coal then the source is from GEM Coal Mine Tracker, if Oil&Gas then the source if from GEM Oil and Gas Tracker",Carbon Bombs article
-carbon_bombs_data,GEM_id_source_GEM,"Identifier of the project in Global Energy Monitor.
-Multiple values are separated by a "";""",GEM
-carbon_bombs_data,GEM_url_source_GEM,"Url of the project in Global Energy Monitor.
-Multiple values are separated by a "";""",GEM
-carbon_bombs_data,Latitude,Latitude of the carbon bombs project,"GEM, Country of CB, Manual"
-carbon_bombs_data,Longitude,Longitude of the carbon bombs project,"GEM, Country of CB, Manual"
-carbon_bombs_data,Latitude_longitude_source,"Source of the latitude, longitude. Values can be:
-- GEM : coordinates from the first GEM unit or mine
-- Manual : coordinates defined manually
-- Country CB : coordinates of the country if we don't have precise information",
-carbon_bombs_data,Operators_source_GEM,"Operators of the project according to the GEM database.
-Multiple values are separated by a "";"" and concatenated projects are separated by |",GEM
-carbon_bombs_data,Parent_company_source_GEM,"Parent company of the project with percentage of ownership if available.
-Multiple values are separated by a "";"" and concatenated projects are separated by |",GEM
-carbon_bombs_data,Companies_involved_source_GEM,"Involved companies is worth Parent_company_source_GEM if this column is filled, Operators_source_GEM if we have no information on the parent companies. It is the column that we use on the platform to generate the links between projects and companies.",
-carbon_bombs_data,GEM_project_name_source_GEM,"GEM Unit or mine name. Multiple values are separated by a "";"" and concatenated projects are separated by |",GEM
-carbon_bombs_data,Carbon_bomb_description,Description of the carbon bomb project,GEM
-carbon_bombs_data,Carbon_bomb_start_year,"Year when the carbon bomb project started. Please note that within the GEM database, when the starting year spans two consecutive years, only the earlier year is recorded. For instance, if the starting year is denoted as 2022-2023 in the GEM database, we would only record it as 2022 (Example : Saharpur Jamarpani Coal mine)",GEM
-carbon_bombs_data,Status_source_CB,Can take two values : not started or operating - It is the status of the project as it was described in the Carbon Bomb research paper used.,Carbon Bombs article
-carbon_bombs_data,Status_source_GEM,"Can take the following values depending on the status of the project in the GEM database :
-- Operating : Mines commissioned and in commercial operation
-- Proposed : Mines that have been announced, under exploration, permitted, or under construction, but not yet operating
-- Mothballed : Mines that are currently out of operation but not yet closed
-- Closed : Mines that have closed
-- In Development : Following discovery, the unit is in the process of moving toward commercial production.
-- Shut in : Operations temporarily shut down; may be restarted.
-- Discovered : A unit is typically considered to be discovered when there has been a well drilled into a particular formation, and it yielded some significant quantity of oil and/or gas. Discovered units are not necessarily economic to exploit. ""
-- Shelved : Projects that have shown no progress in over 2 years
-- Cancelled : A cancellation announcement has been made, or no progress has been observed for at least 4 years
-",GEM
-carbon_bombs_data,Status_lvl_1,Worth Status_source_GEM if the project could be matched with a GEM project, Status_source_CB if the project does not exist on GEM.
-carbon_bombs_data,Status_lvl_2,"Status have been regrouped to create 3 status categories:
-- operating : operating
-- not started : in development, discovered, shelved, proposed.
-- stoped : shut in, cancelled, closed, mothballed.",
-company_data,Company_name,Name of the company,GEM
-company_data,Address_headquarters_source_chatGPT,Address of the company headquarters obtained by ChatGPT,ChatGPT
-company_data,Latitude,Latitude of the company headquarters obtained using Google Maps API,"ChatGPT, Google Maps API"
-company_data,Longitude,Longitude of the company headquarters obtained using Google Maps API,"ChatGPT, Google Maps API"
-company_data,Carbon_bomb_connected,"List of carbon bombs connected. Multpiple values are separated by a "";""",GEM
-company_data,Country,Country of the headquarters company,ChatGPT
-company_data,World_region,World region of the country's company,ChatGPT
-company_data,Logo_URL,Url of the company's logo,
-connection_bank_company,Bank,Name of the bank financing a company.,Banking on Climate Chaos
-connection_bank_company,Company,Name of the company,Banking on Climate Chaos
-connection_bank_company,2016,Amount of money used to finance the company from the bank in 2016 in USD,Banking on Climate Chaos
-connection_bank_company,2017,Amount of money used to finance the company from the bank in 2017 in USD,Banking on Climate Chaos
-connection_bank_company,2018,Amount of money used to finance the company from the bank in 2018 in USD,Banking on Climate Chaos
-connection_bank_company,2019,Amount of money used to finance the company from the bank in 2019 in USD,Banking on Climate Chaos
-connection_bank_company,2020,Amount of money used to finance the company from the bank in 2020 in USD,Banking on Climate Chaos
-connection_bank_company,2021,Amount of money used to finance the company from the bank in 2021 in USD,Banking on Climate Chaos
-connection_bank_company,2022,Amount of money used to finance the company from the bank in 2022 in USD,Banking on Climate Chaos
-connection_bank_company,Grand Total,Amount of money used to finance the company from the bank in total in USD,Banking on Climate Chaos
-connection_carbonbombs_company,Carbon_bomb_name,Name of the carbon bomb project,GEM
-connection_carbonbombs_company,Country,Country of the carbon bomb project,GEM
-connection_carbonbombs_company,Company,"Company name associated with the carbon bomb project. Companies are extracted from GEM source.
-To match values in connection_bank_company sheet, we updated bank names from GEM source to Banking on Climate Chaos source",GEM
-country_data,Country_source_CB,Country where the carbon bomb is located,Carbon Bombs article
-country_data,Emissions_per_capita_tons_CO2,Emissions per capita (metric tons of CO2),UNData
-country_data,Year_Emissions_per_capita_tons_CO2,Source year of emissions per capita,UNData
-country_data,Emissions_thousand_tons_CO2,Country emissions (thousand metric tons of CO2),UNData
-country_data,Year_Emissions_thousand_tons_CO2,Source year of country emissions,UNData
-country_data,GDP_millions_US_dollars,GDP in current prices (millions of USD),UNData
-country_data,Year_GDP_millions_US_dollars,Source year of GDP in current prices,UNData
-country_data,GDP_per_capita_US_dollars,GDP per capita (USD),UNData
-country_data,Year_GDP_per_capita_US_dollars,Source year of GDP per capita,UNData
-country_data,Population_in_millions,Population mid-year estimates (millions),UNData
-country_data,Year_Population_in_millions,Source year of population mid-year estimates,UNData
-country_data,Surface_thousand_km2,Surface area (thousand km2),UNData
-country_data,Year_Surface_thousand_km2,Source year of surface area,UNData
-lng_data,Project_name,Name of the LNG project,GOGEL
-lng_data,Export_capacity_in_Mtpa,Export capacity of the project in million tonnes per annum (Mtpa),GOGEL
-lng_data,Project_status,Current status of the project,GOGEL
-lng_data,Country,Country where the project is located,GOGEL
-lng_data,Companies_involved,Companies participating in the project,GOGEL
-lng_data,Latitude,Latitude coordinate of the project's country location,GOGEL
-lng_data,Longitude,Longitude coordinate of the project's country location,GOGEL
+sheet_name;column_name;definition;sources
+gasoil_project_data;project_name;Name of the project;Rystad
+gasoil_project_data;country;Location of the project;Location attributed by Reclaim Finance, primarily based on Rystad database
+gasoil_project_data;latitude;Approximative, location of the project;Global Energy Monitor, Approximation calculated by Reclaim Finance using Rystad's exact latitude
+gasoil_project_data;longitude;Approximative, location of the project;Global Energy Monitor, Approximation calculated by Reclaim Finance using Rystad's exact longitude
+gasoil_project_data;world_region;Continent of the project;Global Energy Monitor, Rystad
+gasoil_project_data;start_year;"For oil and gas : Decade or estimated decade of first oil / first gas of the project
+For coal : estimated started time of the project from GEM database.";Approximation calculated by Reclaim Finance using Rystad's start up year, Global Energy Monitor,
+gasoil_project_data;total_potential_emissions_v1;Estimated remaining lifetime emissions associated with the project, from the original research paper.;Original research paper
+gasoil_project_data;total_potential_emissions;Estimated remaining lifetime emissions associated with the project, from the 2025 update. For Oil and Gas estimations are calculated from Rystad database. For coal, emissions are calculated based on GEM reserves / ressources available information.;Calculation made by Reclaim Finance using Rystad database, Global Energy Monitor
+gasoil_project_data;producing_potential_emissions;Estimated remaining lifetime emissions associated to fields that are currently in operation;Calculation made by Reclaim Finance using Rystad database
+gasoil_project_data;short_term_expansion_potential_emissions;Estimated remaining lifetime emissions associated to fields that are currently under development or field evaluation;Calculation made by Reclaim Finance using Rystad database
+gasoil_project_data;long_term_expansion_potential_emissions;Estimated remaining lifetime emissions associated to fields that are currently discoveries, except field under evaluation;Calculation made by Reclaim Finance using Rystad database
+gasoil_project_data;project_evolution;Breakdown of carbon bombs between 1/ Carbon bombs both in V1 and the update (carbon_bomb_above_1gt), 2/ new carbon bombs (new_identified_carbon_bomb), 3/ Carbon bombs from V1 that will now emit less than 1Gt CO2 (carbon_bomb_now_below_1gt), 4/ Carbon bombs in V1 that do not match our database in the update (project_not_found);Calculation made by Reclaim Finance using Rystad database, Global Energy Monitor
+gasoil_project_data;project_type;Breakdown between Carbon bombs from V1 and 2025 update on one hand and New extraction projects that are not carbon bombs on the other hand;Original research paper, Calculation made by Reclaim Finance using Rystad database
+gasoil_project_data;new_extraction_after_2021;true if the project has new extraction plans after 2021. false if not. Carbon bombs projects can have new extraction expansions, as well as new extraction projects. Only for Oil & gas projects.;Calculation made by Reclaim Finance using Rystad database
+gasoil_project_data;project_status_in_v1;status of the project in the original research paper of Kjell Khune.;original research paper
+gasoil_project_data;project_status;status of the project : operating, operating and expanding, not started.;calculated
+gasoil_project_data;list_of_company_involved;list of parent companies involved in the project, and an intervall of the percentage they own in the project.;Global Energy Monitor, Calculation made by Reclaim Finance using Rystad's participation breakdown
+gasoil_project_data;fuel_type;can take two values : oil and gas or coal.;
+gasoil_project_data;2020_2025_past_emissions;Calculated emissions from cumulated past oil and gas production from 2021 to 2024;Calculation made by Reclaim Finance using Rystad database
+company_data;company;Name of the company;Global Oil and Gas Exit List, Global Energy Monitor, Rystad
+company_data;headquarter_country;Address of the company headquarters.;BOCC
+company_data;latitude;Latitude of the company headquarters.;BOCC
+company_data;longitude;Longitude of the company headquarters.;BOCC
+company_data;world_region;"List of carbon bombs connected. Multpiple values are separated by a "";""";GEM, Rystad
+bank_data;bank_name;Name of the bank;BOCC
+bank_data;bank_website;Url of the bank website;BOCC
+bank_data;headquarters_address;Headquarters address of the bank;BOCC
+bank_data;headquarters_country;Country of the bank's headquarters;BOCC
+bank_data;ceo_name;Bank's Chief Executive Officer;BOCC
+bank_data;board_description;Url of the board description;BOCC
+bank_data;supervisor_name;Supervisor name of the bank;BOCC
+bank_data;supervisor_website;Url of the bank's supervisor;BOCC
+bank_data;shareholder_structure_source;Url of the bank's shareholder structure;BOCC
+bank_data;source_banktrack;Banktrack's url;BOCC
+bank_data;latitude;Latitude of the headquarters address;BOCC
+bank_data;longitude;Longitude of the headquarters address;BOCC
+bank_data;Bank logo;Url of the bank's logo;BOCC
+bank_data;World Region;World Region of the country's bank;BOCC
+connection_bank_company;bank;Name of the bank financing a company.;BOCC
+connection_bank_company;company;Name of the company;BOCC
+connection_bank_company;2021;Adjusted amount of money allocated to the company from the bank in 2021 in millions USD;BOCC
+connection_bank_company;2022;Adjusted amount of money allocated to the company from the bank in 2022 in millions USD;BOCC
+connection_bank_company;2023;Adjusted amount of money allocated to the company from the bank in 2023 in millions USD;BOCC
+connection_bank_company;2024;Adjusted amount of money allocated to the company from the bank in 2024 in millions USD;BOCC
+connection_project_company;project_name;Name of the project;GEM, Rystad
+connection_project_company;company;Company name of companies involved in each specific project;GEM, Rystad
+connection_project_company;gogel_id;Company's ID in the Global Oil and Gas Exit List;BOCC
+connection_project_company;involvement_interval;Intervall percentage of detention of the project;GEM, Rystad
+connection_project_company;project_type;two project type possible : new extraction project, carbon bomb.;Rystad, GEM, Urgevald
+connection_project_company;fuel_type;two fuel type possible : oil & gas or coal.;
+lng_data;project_name;Name of the project;Global Oil and Gas Exit List
+lng_data;export_capacity_in_mtpa;Liquefaction capacity of the project in million tons per annum;Global Oil and Gas Exit List
+lng_data;project_status;Project's development status: commissioning, under construction or proposed;Global Oil and Gas Exit List
+lng_data;country;Location of the project;Global Oil and Gas Exit List
+lng_data;companies_involved;Company names of companies involved in each specific project;Global Oil and Gas Exit List
+lng_data;latitude;Location of the project;Global Energy Monitor
+lng_data;longitude;Location of the project;Global Energy Monitor
+country_data;country;countries in which projects are located.;Rystad, GEM, Global Oil and Gas Exit List
+country_data;Emissions_per_capita_tons_CO2;Emissions per capita (metric tons of CO2);UNData
+country_data;Year_Emissions_per_capita_tons_CO2;Source year of emissions per capita;UNData
+country_data;Emissions_thousand_tons_CO2;Country emissions (thousand metric tons of CO2);UNData
+country_data;Year_Emissions_thousand_tons_CO2;Source year of country emissions;UNData
+country_data;GDP_millions_US_dollars;GDP in current prices (millions of USD);UNData
+country_data;Year_GDP_millions_US_dollars;Source year of GDP in current prices;UNData
+country_data;GDP_per_capita_US_dollars;GDP per capita (USD);UNData
+country_data;Year_GDP_per_capita_US_dollars;Source year of GDP per capita;UNData
+country_data;Population_in_millions;Population mid-year estimates (millions);UNData
+country_data;Year_Population_in_millions;Source year of population mid-year estimates;UNData
+country_data;Surface_thousand_km2;Surface area (thousand km2);UNData
+country_data;Year_Surface_thousand_km2;Source year of surface area;UNData
